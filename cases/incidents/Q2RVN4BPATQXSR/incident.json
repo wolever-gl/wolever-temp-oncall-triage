@@ -1,0 +1,9 @@
+{
+  "incident_id": "Q2RVN4BPATQXSR",
+  "incident_url": "https://growthloop.pagerduty.com/incidents/Q2RVN4BPATQXSR",
+  "imported_at": "2026-05-15T20:58:21.845Z",
+  "source": "pagerduty",
+  "alert_count": 1,
+  "status": "triggered",
+  "refreshed_at": "2026-05-15T21:18:09.978Z"
+}

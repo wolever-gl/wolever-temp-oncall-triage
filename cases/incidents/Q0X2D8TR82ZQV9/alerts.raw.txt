@@ -1,0 +1,15 @@
+Alerts (1)
+----------------
+1. Q0JCB7G5H5G6U4 | triggered | 2026-05-15T07:43:25-07:00
+   untrusted_message: "priceline (default): Exports for audience 18623 failed with states: <(snapshotting_finished,export_processing)>"
+   audience_id: "18623"
+   web_app_url: "https://app.flywheelsoftware.com/v2/dataset_groups/2742/audiences/18623?impersonate_user_id=1078&impersonate_team_id=468"
+   endpoint_id: "app_tiktok_1416"
+   checked_export_run_ids: "18623-tik_tok_19832-scheduled__2026-05-15T00:00:00+00:00"
+   glcli: glcli --env prod bifrost pizza --audience-id 18623 --org-id 370
+   logs: "https://console.cloud.google.com/logs/query;query=resource.type%3D%22k8s_container%22%0A%0AjsonPayload.organization_id%3D%22priceline_370%22%0AjsonPayload.internal_audience_id%3D%2218623%22%0A%0A;summaryFields=jsonPayload%252Fbatch_id:false:32:beginning;timeRange=2026-05-15T14:33:24Z%2F2026-05-15T14:53:24Z?project=flywheel-prod-328213"
+
+Deduped glcli commands by audience
+-----------------------------------
+audience_id 18623:
+  glcli --env prod bifrost pizza --audience-id 18623 --org-id 370

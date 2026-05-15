@@ -1,0 +1,12 @@
+Alerts (1)
+----------------
+1. Q3F5WOSHJ46AB7 | triggered | 2026-05-15T09:33:46-07:00
+   untrusted_message: "76ers (default) - Audience 36351: 0 successfull_exports from pizza tracker found 10 minutes after new export"
+   audience_id: "36351"
+   audience_url: "https://app.flywheelsoftware.com/v2/dataset_groups/338/audiences/36351?impersonate_user_id=244&impersonate_team_id=136"
+   glcli: glcli --env prod bifrost pizza --audience-id 36351 --org-id 131
+
+Deduped glcli commands by audience
+-----------------------------------
+audience_id 36351:
+  glcli --env prod bifrost pizza --audience-id 36351 --org-id 131

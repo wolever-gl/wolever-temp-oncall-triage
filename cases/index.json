@@ -1,0 +1,188 @@
+{
+  "generated_at": "2026-05-15T21:18:10.282Z",
+  "open_count": 13,
+  "groups": [
+    {
+      "group_id": "grp_unknown_org_unknown_destination_unknown_audience_0001",
+      "state": "open",
+      "tags": [
+        "triage:needs_review"
+      ],
+      "title": "unknown_org unknown_destination audience unknown_audience",
+      "summary": "Alerts (1)",
+      "incident_ids": [
+        "Q08B553ANQ9KMI"
+      ],
+      "alert_count": 1,
+      "path": "groups/grp_unknown_org_unknown_destination_unknown_audience_0001/case.md"
+    },
+    {
+      "group_id": "grp_unknown_org_unknown_destination_unknown_audience_0002",
+      "state": "open",
+      "tags": [
+        "triage:needs_review"
+      ],
+      "title": "unknown_org unknown_destination audience unknown_audience",
+      "summary": "Alerts (1)",
+      "incident_ids": [
+        "Q0X2D8TR82ZQV9"
+      ],
+      "alert_count": 1,
+      "path": "groups/grp_unknown_org_unknown_destination_unknown_audience_0002/case.md"
+    },
+    {
+      "group_id": "grp_unknown_org_unknown_destination_unknown_audience_0003",
+      "state": "open",
+      "tags": [
+        "triage:needs_review"
+      ],
+      "title": "unknown_org unknown_destination audience unknown_audience",
+      "summary": "Alerts (1)",
+      "incident_ids": [
+        "Q0Z4MMEOFYDHC7"
+      ],
+      "alert_count": 1,
+      "path": "groups/grp_unknown_org_unknown_destination_unknown_audience_0003/case.md"
+    },
+    {
+      "group_id": "grp_unknown_org_unknown_destination_unknown_audience_0004",
+      "state": "open",
+      "tags": [
+        "triage:needs_review"
+      ],
+      "title": "unknown_org unknown_destination audience unknown_audience",
+      "summary": "Alerts (2)",
+      "incident_ids": [
+        "Q16KSAQEWECSDD"
+      ],
+      "alert_count": 1,
+      "path": "groups/grp_unknown_org_unknown_destination_unknown_audience_0004/case.md"
+    },
+    {
+      "group_id": "grp_unknown_org_unknown_destination_unknown_audience_0005",
+      "state": "open",
+      "tags": [
+        "triage:needs_review"
+      ],
+      "title": "unknown_org unknown_destination audience unknown_audience",
+      "summary": "Alerts (1)",
+      "incident_ids": [
+        "Q1X9CE7BIDK9MV"
+      ],
+      "alert_count": 1,
+      "path": "groups/grp_unknown_org_unknown_destination_unknown_audience_0005/case.md"
+    },
+    {
+      "group_id": "grp_unknown_org_unknown_destination_unknown_audience_0006",
+      "state": "open",
+      "tags": [
+        "triage:needs_review"
+      ],
+      "title": "unknown_org unknown_destination audience unknown_audience",
+      "summary": "Alerts (2)",
+      "incident_ids": [
+        "Q20XI8KK8YWADB"
+      ],
+      "alert_count": 1,
+      "path": "groups/grp_unknown_org_unknown_destination_unknown_audience_0006/case.md"
+    },
+    {
+      "group_id": "grp_unknown_org_unknown_destination_unknown_audience_0007",
+      "state": "open",
+      "tags": [
+        "triage:needs_review"
+      ],
+      "title": "unknown_org unknown_destination audience unknown_audience",
+      "summary": "Alerts (1)",
+      "incident_ids": [
+        "Q28HZS5TYC0NM9"
+      ],
+      "alert_count": 1,
+      "path": "groups/grp_unknown_org_unknown_destination_unknown_audience_0007/case.md"
+    },
+    {
+      "group_id": "grp_unknown_org_unknown_destination_unknown_audience_0008",
+      "state": "open",
+      "tags": [
+        "triage:needs_review"
+      ],
+      "title": "unknown_org unknown_destination audience unknown_audience",
+      "summary": "Alerts (1)",
+      "incident_ids": [
+        "Q29I2IVNNVK80X"
+      ],
+      "alert_count": 1,
+      "path": "groups/grp_unknown_org_unknown_destination_unknown_audience_0008/case.md"
+    },
+    {
+      "group_id": "grp_unknown_org_unknown_destination_unknown_audience_0009",
+      "state": "open",
+      "tags": [
+        "triage:needs_review"
+      ],
+      "title": "unknown_org unknown_destination audience unknown_audience",
+      "summary": "Alerts (1)",
+      "incident_ids": [
+        "Q2CEMYYJ9N4IAX"
+      ],
+      "alert_count": 1,
+      "path": "groups/grp_unknown_org_unknown_destination_unknown_audience_0009/case.md"
+    },
+    {
+      "group_id": "grp_unknown_org_unknown_destination_unknown_audience_0010",
+      "state": "open",
+      "tags": [
+        "triage:needs_review"
+      ],
+      "title": "unknown_org unknown_destination audience unknown_audience",
+      "summary": "Alerts (13)",
+      "incident_ids": [
+        "Q2DJCY3XC2BSBG"
+      ],
+      "alert_count": 1,
+      "path": "groups/grp_unknown_org_unknown_destination_unknown_audience_0010/case.md"
+    },
+    {
+      "group_id": "grp_unknown_org_unknown_destination_unknown_audience_0011",
+      "state": "open",
+      "tags": [
+        "triage:needs_review"
+      ],
+      "title": "unknown_org unknown_destination audience unknown_audience",
+      "summary": "Alerts (1)",
+      "incident_ids": [
+        "Q2RVN4BPATQXSR"
+      ],
+      "alert_count": 1,
+      "path": "groups/grp_unknown_org_unknown_destination_unknown_audience_0011/case.md"
+    },
+    {
+      "group_id": "grp_unknown_org_unknown_destination_unknown_audience_0012",
+      "state": "open",
+      "tags": [
+        "triage:needs_review"
+      ],
+      "title": "unknown_org unknown_destination audience unknown_audience",
+      "summary": "Alerts (1)",
+      "incident_ids": [
+        "Q3GQQRY1UQLBSN"
+      ],
+      "alert_count": 1,
+      "path": "groups/grp_unknown_org_unknown_destination_unknown_audience_0012/case.md"
+    },
+    {
+      "group_id": "grp_unknown_org_unknown_destination_unknown_audience_0013",
+      "state": "open",
+      "tags": [
+        "triage:needs_review"
+      ],
+      "title": "unknown_org unknown_destination audience unknown_audience",
+      "summary": "Alerts (2)",
+      "incident_ids": [
+        "Q3WZUE4915S6J4"
+      ],
+      "alert_count": 1,
+      "path": "groups/grp_unknown_org_unknown_destination_unknown_audience_0013/case.md"
+    }
+  ]
+}

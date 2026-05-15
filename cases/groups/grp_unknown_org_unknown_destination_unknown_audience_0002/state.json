@@ -1,0 +1,23 @@
+{
+  "group_id": "grp_unknown_org_unknown_destination_unknown_audience_0002",
+  "state": "open",
+  "tags": [
+    "triage:needs_review"
+  ],
+  "title": "unknown_org unknown_destination audience unknown_audience",
+  "summary": "Alerts (1)",
+  "deterministic_key": "unknown_org|unknown_destination|audience:unknown|alerts_n_n_q_n_jcb_n_g_n_h_n_g_n_u_n_triggered_time_untrusted_message_priceline_defaul",
+  "grouping_version": 1,
+  "created_at": "2026-05-15T20:58:44.062Z",
+  "updated_at": "2026-05-15T20:58:44.062Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q0X2D8TR82ZQV9",
+      "alert_id": "alert_1"
+    }
+  ],
+  "incident_ids": [
+    "Q0X2D8TR82ZQV9"
+  ],
+  "related_group_ids": []
+}

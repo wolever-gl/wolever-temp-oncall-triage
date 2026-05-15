@@ -1,0 +1,23 @@
+{
+  "group_id": "grp_unknown_org_unknown_destination_unknown_audience_0008",
+  "state": "open",
+  "tags": [
+    "triage:needs_review"
+  ],
+  "title": "unknown_org unknown_destination audience unknown_audience",
+  "summary": "Alerts (1)",
+  "deterministic_key": "unknown_org|unknown_destination|audience:unknown|alerts_n_n_q_n_ljemvw_n_z_n_uui_triggered_time_untrusted_message_chghealthcare_compheal",
+  "grouping_version": 1,
+  "created_at": "2026-05-15T20:58:44.062Z",
+  "updated_at": "2026-05-15T20:58:44.062Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q29I2IVNNVK80X",
+      "alert_id": "alert_1"
+    }
+  ],
+  "incident_ids": [
+    "Q29I2IVNNVK80X"
+  ],
+  "related_group_ids": []
+}

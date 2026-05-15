@@ -1,0 +1,15 @@
+Alerts (1)
+----------------
+1. Q0LJEMVW0Z0UUI | triggered | 2026-05-15T07:41:43-07:00
+   untrusted_message: "chghealthcare (CompHealth): Exports for audience 36059 failed with states: <(snapshotting_finished,export_error)>"
+   audience_id: "36059"
+   web_app_url: "https://app.flywheelsoftware.com/v2/dataset_groups/2062/audiences/36059?impersonate_user_id=1220&impersonate_team_id=549"
+   endpoint_id: "app_marketing_cloud_1135"
+   checked_export_run_ids: "36059-marketing_cloud_21999-scheduled__2026-05-14T16:30:00+00:00"
+   glcli: glcli --env prod bifrost pizza --audience-id 36059 --org-id 395
+   logs: "https://console.cloud.google.com/logs/query;query=resource.type%3D%22k8s_container%22%0A%0AjsonPayload.organization_id%3D%22chghealthcare_395%22%0AjsonPayload.internal_audience_id%3D%2236059%22%0A%0A;summaryFields=jsonPayload%252Fbatch_id:false:32:beginning;timeRange=2026-05-15T14:31:42Z%2F2026-05-15T14:51:42Z?project=flywheel-prod-328213"
+
+Deduped glcli commands by audience
+-----------------------------------
+audience_id 36059:
+  glcli --env prod bifrost pizza --audience-id 36059 --org-id 395
