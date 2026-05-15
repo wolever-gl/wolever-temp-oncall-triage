@@ -1,0 +1,47 @@
+[
+  {
+    "id": "PALT1",
+    "created_at": "2026-05-15T16:05:00Z",
+    "summary": "Audience export failure for 16985",
+    "details": {
+      "org_id": "chghealthcare_395",
+      "org_id_numeric": "395",
+      "audience_id": "16985",
+      "endpoint_id": "marketing_cloud_10988",
+      "export_run_id": "16985-marketing_cloud_10988-scheduled__2026-05-15T16:00:00+00:00",
+      "service": "bifrost",
+      "error": "HTTP SOAP Error Response: Updating an existing Data Extension definition is not allowed when doing an add-only operation.",
+      "glcli": "glcli --env prod bifrost pizza --org-id 395 --audience-id 16985"
+    }
+  },
+  {
+    "id": "PALT2",
+    "created_at": "2026-05-15T16:06:00Z",
+    "summary": "Audience export failure for 16985 duplicate",
+    "details": {
+      "org_id": "chghealthcare_395",
+      "org_id_numeric": "395",
+      "audience_id": "16985",
+      "endpoint_id": "marketing_cloud_10988",
+      "export_run_id": "16985-marketing_cloud_10988-scheduled__2026-05-15T16:00:00+00:00",
+      "service": "bifrost",
+      "error": "HTTP SOAP Error Response: Updating an existing Data Extension definition is not allowed when doing an add-only operation.",
+      "glcli": "glcli --env prod bifrost pizza --org-id 395 --audience-id 16985"
+    }
+  },
+  {
+    "id": "PALT3",
+    "created_at": "2026-05-15T16:07:00Z",
+    "summary": "Audience export failure for 20770",
+    "details": {
+      "org_id": "chghealthcare_395",
+      "org_id_numeric": "395",
+      "audience_id": "20770",
+      "endpoint_id": "marketing_cloud_10988",
+      "export_run_id": "20770-marketing_cloud_10988-scheduled__2026-05-15T16:00:00+00:00",
+      "service": "bifrost",
+      "error": "HTTP SOAP Error Response: Updating an existing Data Extension definition is not allowed when doing an add-only operation.",
+      "glcli": "glcli --env prod bifrost pizza --org-id 395 --audience-id 20770"
+    }
+  }
+]
