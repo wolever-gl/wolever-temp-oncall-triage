@@ -62,6 +62,7 @@ bun run oncall-triage init cases
 bun run oncall-triage import-pd cases --incident Q123ABC
 bun run oncall-triage group cases
 bun run oncall-triage index cases
+bun run oncall-triage sync-pd cases --incident Q123ABC
 ```
 
 Group correction primitives:
@@ -88,6 +89,8 @@ bun run oncall-triage transition cases \
   --tag monitoring:retrying \
   --summary "Later export is processing; recheck after the next monitor window."
 ```
+
+`sync-pd` refreshes stored incident records from PagerDuty, optionally imports explicit incidents, and resolves groups whose attached PagerDuty incidents have all closed externally.
 
 Narrative files and artifacts may be edited directly by agents, but structural
 mutations should go through CLI primitives so indexes, state, and audit logs stay

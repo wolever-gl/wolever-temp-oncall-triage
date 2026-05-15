@@ -1,7 +1,8 @@
 import path from "node:path";
-import type { AlertFact, IncidentRecord } from "./schema";
+import type { AlertFact, IncidentRecord, PagerDutyIncidentStatus } from "./schema";
 
 const PD_BASE = "https://growthloop.pagerduty.com/incidents";
+const PD_API_BASE = "https://api.pagerduty.com";
 const PAGERDUTY_SCRIPT = "/Users/wolever/src/github.com/GrowthLoop/gaia/agents/skills/pagerduty/scripts/pagerduty";
 
 export function parseIncidentId(input: string): string {
@@ -12,6 +13,40 @@ export function parseIncidentId(input: string): string {
 
 export function incidentUrl(input: string): string {
   return input.includes("/incidents/") ? input : `${PD_BASE}/${parseIncidentId(input)}`;
+}
+
+export interface PagerDutyIncidentStatusRecord {
+  incident_id: string;
+  status: PagerDutyIncidentStatus;
+  refreshed_at: string;
+  resolved_at?: string;
+}
+
+export async function fetchPagerDutyIncidentStatus(input: string): Promise<PagerDutyIncidentStatusRecord> {
+  const incident_id = parseIncidentId(input);
+  const token = await pagerDutyApiToken();
+  if (!token) throw new Error("Missing PagerDuty API token secret: gaia-skill-pagerduty/api-token");
+
+  const response = await fetch(`${PD_API_BASE}/incidents/${incident_id}`, {
+    headers: {
+      Accept: "application/vnd.pagerduty+json;version=2",
+      Authorization: `Token token=${token}`,
+    },
+  });
+  if (!response.ok) {
+    throw new Error(`pagerduty status failed (${response.status} ${response.statusText}) for ${incident_id}`);
+  }
+
+  const payload = (await response.json()) as unknown;
+  const incident = isRecord(payload) && isRecord(payload.incident) ? payload.incident : isRecord(payload) ? payload : {};
+  const status = normalizeStatus(stringField(incident, "status"));
+  const resolved_at = stringField(incident, "resolved_at", "last_status_change_at");
+  return {
+    incident_id,
+    status,
+    refreshed_at: new Date().toISOString(),
+    ...(status === "resolved" && resolved_at ? { resolved_at } : {}),
+  };
 }
 
 export async function fetchPagerDutyAlerts(incident: string): Promise<string> {
@@ -39,6 +74,8 @@ export async function loadAlertFacts(input: {
       imported_at: new Date().toISOString(),
       source: input.alertsFile ? "fixture" : "pagerduty",
       alert_count: alerts.length,
+      status: "unknown",
+      refreshed_at: new Date().toISOString(),
     },
     alerts,
     rawText,
@@ -150,6 +187,27 @@ function stringField(obj: Record<string, unknown>, ...keys: string[]): string | 
     if (typeof value === "number") return String(value);
   }
   return undefined;
+}
+
+function normalizeStatus(status: string | undefined): PagerDutyIncidentStatus {
+  const lower = status?.toLowerCase();
+  switch (lower) {
+    case "triggered":
+    case "acknowledged":
+    case "resolved":
+    case "closed":
+      return lower as PagerDutyIncidentStatus;
+    default:
+      return "unknown";
+  }
+}
+
+async function pagerDutyApiToken(): Promise<string | undefined> {
+  return (
+    (await Bun.secrets.get({ service: "gaia-skill-pagerduty", name: "api-token" })) ??
+    (await Bun.secrets.get({ service: "gaia-skill-pagerduty", name: "token" })) ??
+    Bun.env.PAGERDUTY_API_TOKEN
+  );
 }
 
 function matchValue(input: string, regex: RegExp): string | undefined {

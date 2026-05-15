@@ -14,3 +14,4 @@
 - The workspace keeps append-only evidence, decisions, and actions logs alongside `state.json` and `case.md`.
 - Structural mutations go through the CLI; narrative files and artifacts may be edited directly.
 - Merged groups act as deterministic-key redirects to their live target when future matching alerts arrive.
+- `sync-pd` refreshes stored PagerDuty incident records and can close a group when all attached incidents are resolved externally, tagging it `resolved:pd_closed_external`.

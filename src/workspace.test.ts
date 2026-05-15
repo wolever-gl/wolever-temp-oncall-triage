@@ -2,7 +2,8 @@ import { describe, expect, test } from "bun:test";
 import { mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import path from "node:path";
-import { groupImportedAlerts, importPagerDutyIncident, loadAllGroups, mergeGroups, regenerateIndex, splitGroup, transitionGroup } from "./workspace";
+import { groupImportedAlerts, importPagerDutyIncident, loadAllGroups, mergeGroups, readIncidentRecord, regenerateIndex, splitGroup, syncPagerDutyWorkspace, transitionGroup } from "./workspace";
+import type { PagerDutyIncidentStatusRecord } from "./pagerduty";
 
 const fixture = path.resolve(import.meta.dir, "..", "fixtures", "pagerduty-alerts.json");
 
@@ -169,6 +170,64 @@ describe("case workspace", () => {
 
       const index = await regenerateIndex(workspaceDir);
       expect(index.groups).toHaveLength(3);
+    } finally {
+      await rm(workspaceDir, { recursive: true, force: true });
+    }
+  });
+
+  test("sync-pd refreshes incident records and resolves groups when every incident is closed", async () => {
+    const workspaceDir = await mkdtemp(path.join(tmpdir(), "oncall-triage-v2-"));
+    try {
+      const statuses = new Map<string, PagerDutyIncidentStatusRecord>([
+        ["QTEST123", { incident_id: "QTEST123", status: "triggered", refreshed_at: "2026-05-15T16:00:00Z" }],
+        ["QTEST456", { incident_id: "QTEST456", status: "triggered", refreshed_at: "2026-05-15T16:00:00Z" }],
+      ]);
+      const fetchIncidentStatus = async (incident: string): Promise<PagerDutyIncidentStatusRecord> => {
+        const record = statuses.get(incident);
+        if (!record) throw new Error(`Missing fixture for ${incident}`);
+        return record;
+      };
+
+      await importPagerDutyIncident({ workspaceDir, incident: "QTEST123", alertsFile: fixture });
+      await importPagerDutyIncident({ workspaceDir, incident: "QTEST456", alertsFile: fixture });
+      await groupImportedAlerts(workspaceDir);
+
+      statuses.set("QTEST123", {
+        incident_id: "QTEST123",
+        status: "resolved",
+        resolved_at: "2026-05-15T17:00:00Z",
+        refreshed_at: "2026-05-15T17:00:00Z",
+      });
+      statuses.set("QTEST456", {
+        incident_id: "QTEST456",
+        status: "resolved",
+        resolved_at: "2026-05-15T17:01:00Z",
+        refreshed_at: "2026-05-15T17:01:00Z",
+      });
+
+      const result = await syncPagerDutyWorkspace({
+        workspaceDir,
+        fetchIncidentStatus,
+      });
+      expect(result.refreshed).toEqual(["QTEST123", "QTEST456"]);
+      expect(result.resolved_groups).toHaveLength(2);
+
+      const incidents = await Promise.all([
+        readIncidentRecord(workspaceDir, "QTEST123"),
+        readIncidentRecord(workspaceDir, "QTEST456"),
+      ]);
+      expect(incidents.map((incident) => incident.status)).toEqual(["resolved", "resolved"]);
+      expect(incidents[0]?.resolved_at).toBe("2026-05-15T17:00:00Z");
+
+      const groups = await loadAllGroups(workspaceDir);
+      expect(groups).toHaveLength(2);
+      for (const group of groups) {
+        expect(group.state).toBe("resolved");
+        expect(group.tags).toContain("resolved:pd_closed_external");
+        expect(group.summary).toBe("All attached PagerDuty incidents are resolved externally.");
+        const evidence = await readFile(path.join(workspaceDir, "groups", group.group_id, "evidence.jsonl"), "utf8");
+        expect(evidence).toContain("pd_sync");
+      }
     } finally {
       await rm(workspaceDir, { recursive: true, force: true });
     }

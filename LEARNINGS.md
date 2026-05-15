@@ -9,3 +9,4 @@
 - Append-only logs make it easier to understand how a group changed over time.
 - A small CLI for structural changes keeps state transitions consistent without constraining narrative edits.
 - Merge lineage needs redirect behavior; otherwise future imports can reattach to the resolved source group.
+- A PagerDuty sync pass can safely refresh incident status in-place and close groups only when every attached incident has actually resolved upstream.

@@ -24,7 +24,12 @@ export interface IncidentRecord {
   imported_at: string;
   source: "pagerduty" | "fixture";
   alert_count: number;
+  status: PagerDutyIncidentStatus;
+  refreshed_at: string;
+  resolved_at?: string;
 }
+
+export type PagerDutyIncidentStatus = "triggered" | "acknowledged" | "resolved" | "closed" | "unknown";
 
 export interface GroupState {
   group_id: string;

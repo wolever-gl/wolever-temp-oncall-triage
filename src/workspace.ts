@@ -1,8 +1,19 @@
 import path from "node:path";
 import { readFile, writeFile } from "node:fs/promises";
 import { appendJsonl, ensureDir, listDirs, readJson, relativePath, slug, writeJson } from "./fsutil";
-import { loadAlertFacts, parseIncidentId } from "./pagerduty";
-import type { ActionEvent, AlertFact, DecisionEvent, EvidenceEvent, GroupState, IndexGroup, LineageEvent, WorkspaceIndex } from "./schema";
+import { fetchPagerDutyIncidentStatus, loadAlertFacts } from "./pagerduty";
+import type {
+  ActionEvent,
+  AlertFact,
+  DecisionEvent,
+  EvidenceEvent,
+  GroupState,
+  IndexGroup,
+  IncidentRecord,
+  LineageEvent,
+  PagerDutyIncidentStatus,
+  WorkspaceIndex,
+} from "./schema";
 
 export const GROUPING_VERSION = 1;
 
@@ -36,6 +47,106 @@ export async function importPagerDutyIncident(options: {
     alert_count: loaded.alerts.length,
   });
   return { incident_id: loaded.incident.incident_id, alert_count: loaded.alerts.length };
+}
+
+export async function syncPagerDutyWorkspace(options: {
+  workspaceDir: string;
+  incidents?: string[];
+  fetchIncidentStatus?: (incident: string) => Promise<{ incident_id: string; status: PagerDutyIncidentStatus; refreshed_at: string; resolved_at?: string }>;
+}): Promise<{
+  imported: string[];
+  refreshed: string[];
+  resolved_groups: string[];
+}> {
+  await initWorkspace(options.workspaceDir);
+  const imported: string[] = [];
+  const refreshed: string[] = [];
+  const fetchIncidentStatus = options.fetchIncidentStatus ?? fetchPagerDutyIncidentStatus;
+
+  for (const incident of options.incidents ?? []) {
+    const importedIncident = await importPagerDutyIncident({ workspaceDir: options.workspaceDir, incident });
+    imported.push(importedIncident.incident_id);
+  }
+  if (imported.length > 0) await groupImportedAlerts(options.workspaceDir);
+
+  const incidentRecords = await loadIncidentRecords(options.workspaceDir);
+  const previousStatusById = new Map(incidentRecords.map((record) => [record.incident_id, record.status]));
+  const incidentById = new Map(incidentRecords.map((record) => [record.incident_id, record]));
+  for (const record of incidentRecords) {
+    const refreshedRecord = await fetchIncidentStatus(record.incident_id);
+    const nextRecord: IncidentRecord = {
+      ...record,
+      ...refreshedRecord,
+      incident_id: record.incident_id,
+    };
+    await writeIncidentRecord(options.workspaceDir, nextRecord);
+    refreshed.push(record.incident_id);
+    incidentById.set(record.incident_id, nextRecord);
+  }
+
+  const resolved_groups: string[] = [];
+  for (const group of await loadAllGroups(options.workspaceDir)) {
+    if (group.state === "resolved") continue;
+    const groupIncidentStatuses = group.incident_ids.map((incident_id) => incidentById.get(incident_id));
+    if (groupIncidentStatuses.some((record) => !record)) continue;
+    const groupIncidentRecords = groupIncidentStatuses.filter((record): record is IncidentRecord => Boolean(record));
+    const resolvedIncidentRecords = groupIncidentRecords.filter((record) => isResolvedIncident(record.status));
+    if (resolvedIncidentRecords.length === 0) continue;
+
+    const resolvedIds = resolvedIncidentRecords.map((record) => record.incident_id).sort();
+    const openIds = group.incident_ids.filter((incident_id) => !resolvedIds.includes(incident_id));
+    const summary = "All attached PagerDuty incidents are resolved externally.";
+
+    if (resolvedIds.length === group.incident_ids.length) {
+      const updated = await transitionGroup({
+        workspaceDir: options.workspaceDir,
+        groupId: group.group_id,
+        state: "resolved",
+        tag: "resolved:pd_closed_external",
+        summary,
+        actor: "pagerduty-sync",
+      });
+      await appendEvidence(options.workspaceDir, updated.group_id, {
+        ts: new Date().toISOString(),
+        kind: "pd_sync",
+        source: "pagerduty",
+        summary: `${summary} Attached incidents: ${resolvedIds.join(", ")}.`,
+        data: {
+          resolved_incidents: resolvedIds,
+          incident_statuses: groupIncidentStatuses.map((record) => ({ incident_id: record!.incident_id, status: record!.status, resolved_at: record!.resolved_at })),
+        },
+      });
+      resolved_groups.push(updated.group_id);
+      continue;
+    }
+
+    const newlyResolvedIds = resolvedIncidentRecords
+      .filter((record) => !isResolvedIncident(previousStatusById.get(record.incident_id)))
+      .map((record) => record.incident_id)
+      .sort();
+    if (newlyResolvedIds.length === 0) continue;
+
+    await appendEvidence(options.workspaceDir, group.group_id, {
+      ts: new Date().toISOString(),
+      kind: "pd_sync",
+      source: "pagerduty",
+      summary: `PagerDuty status refresh: resolved ${resolvedIds.join(", ")}; still open ${openIds.join(", ")}.`,
+      data: {
+        resolved_incidents: resolvedIds,
+        open_incidents: openIds,
+        newly_resolved_incidents: newlyResolvedIds,
+      },
+    });
+    await appendDecision(options.workspaceDir, group.group_id, {
+      ts: new Date().toISOString(),
+      actor: "pagerduty-sync",
+      decision: "pd_incidents_partially_resolved",
+      rationale: `PagerDuty incidents resolved externally for ${resolvedIds.join(", ")}; remaining incidents still open: ${openIds.join(", ")}.`,
+    });
+  }
+
+  await regenerateIndex(options.workspaceDir);
+  return { imported, refreshed, resolved_groups };
 }
 
 export async function groupImportedAlerts(workspaceDir: string): Promise<{ created: number; attached: number; groups: string[] }> {
@@ -298,12 +409,33 @@ export async function loadAllGroups(workspaceDir: string): Promise<GroupState[]>
   return groups;
 }
 
+export async function loadIncidentRecords(workspaceDir: string): Promise<IncidentRecord[]> {
+  const ids = await listDirs(path.join(workspaceDir, "incidents"));
+  const incidents: IncidentRecord[] = [];
+  for (const id of ids) {
+    try {
+      incidents.push(await readIncidentRecord(workspaceDir, id));
+    } catch (err) {
+      if ((err as NodeJS.ErrnoException).code !== "ENOENT") throw err;
+    }
+  }
+  return incidents;
+}
+
 export async function readGroupState(workspaceDir: string, groupId: string): Promise<GroupState> {
   return readJson<GroupState>(path.join(groupDir(workspaceDir, groupId), "state.json"));
 }
 
 export async function writeGroupState(workspaceDir: string, group: GroupState): Promise<void> {
   await writeJson(path.join(groupDir(workspaceDir, group.group_id), "state.json"), group);
+}
+
+export async function readIncidentRecord(workspaceDir: string, incidentId: string): Promise<IncidentRecord> {
+  return readJson<IncidentRecord>(path.join(workspaceDir, "incidents", incidentId, "incident.json"));
+}
+
+export async function writeIncidentRecord(workspaceDir: string, incident: IncidentRecord): Promise<void> {
+  await writeJson(path.join(workspaceDir, "incidents", incident.incident_id, "incident.json"), incident);
 }
 
 export function deterministicGroupKey(alert: AlertFact): string {
@@ -316,6 +448,10 @@ export function deterministicGroupKey(alert: AlertFact): string {
 
 function destinationFromRun(runId: string | undefined): string | undefined {
   return runId?.split("-")[1];
+}
+
+function isResolvedIncident(status: PagerDutyIncidentStatus | undefined): boolean {
+  return status === "resolved" || status === "closed";
 }
 
 function newGroup(alert: AlertFact, key: string, now: string, ordinal: number): GroupState {
