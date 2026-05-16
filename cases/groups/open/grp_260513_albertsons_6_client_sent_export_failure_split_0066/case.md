@@ -5,13 +5,13 @@
 > Generated file. Do not edit directly; put free-form investigation notes in `notes.md`.
 
 State: `open`
-Tags: `triage:needs_review`, `triage:snapshotting-error`
+Tags: `triage:needs_review`, `triage:snapshotting-error`, `bug:service-quervice`
 Incidents: [Q2EJWG22CER0LA](https://growthloop.pagerduty.com/incidents/Q2EJWG22CER0LA)
 Alerts: 1
 
 ## Current Summary
 
-Needs investigation: audience 8473 client-sent alert has a later LiveRamp scheduled run in snapshotting_error/no_batches, distinct from the older snapshotting-processing monitor.
+Needs platform investigation: audience 8473 snapshotting pre-check failed because Quervice returned repeated 502s/upstream premature close for the 2026-05-13 LiveRamp run; latest Pizza remains snapshotting_error/no_batches with no later success.
 
 ## Alert Scope
 
@@ -39,6 +39,12 @@ Check evidence:
 
 ## Recent Evidence
 
+- Latest Pizza still shows 2026-05-13 run 8473-live_ramp_activation_1649-scheduled__2026-05-13T00:00:00+00:00 in snapshotting_error/no_batches; prior weekly runs from 2026-04-08 through 2026-05-06 were stuck snapshotting_processing/no_batches; last fully successful export_finished run was 2026-04-01.
+  Source: `glcli bifrost pizza`; kind: `pizza`; captured: `2026-05-16T21:44:51.432Z`.
+  Command: `glcli --env albertsons bifrost pizza --audience-id 8473 --org-id 6 --format json`
+- Albertsons logs for the 2026-05-13 audience 8473 run show the snapshotting pre_snapshotting_check repeatedly calling Quervice for internal_audience_id=8473 and receiving 502 Bad Gateway responses after long upstream waits; nginx logged upstream prematurely closed connection while reading response header. This points to a GrowthLoop/Quervice service-side failure path, not client schema or missing field evidence.
+  Source: `gl-client-albertsons`; kind: `gcloud_logs`; captured: `2026-05-16T21:44:51.315Z`.
+  Command: `gcloud logging read timestamp>=2026-05-13T05:45:00Z timestamp<=2026-05-13T06:15:00Z (8473 OR live_ramp_activation_1649 OR A_LR_RMN_FY23ExpPcg_Bags_L26W) --project=gl-client-albertsons`
 - Live Pizza for audience 8473 shows a later 2026-05-13 LiveRamp scheduled run in snapshotting_error/no_batches; no matching #eng-support thread found for audience 8473.
   Source: `glcli bifrost pizza`; kind: `pizza`; captured: `2026-05-16T21:42:17.561Z`.
   Command: `glcli --env albertsons bifrost pizza --audience-id 8473 --org-id 6 --format json`

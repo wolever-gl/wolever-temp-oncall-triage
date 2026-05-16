@@ -1,6 +1,6 @@
 # On-call Triage Cases
 
-Generated: 2026-05-16T21:42:18.841Z
+Generated: 2026-05-16T21:44:52.776Z
 Open groups: 46
 Alert facts: 698
 
@@ -50,7 +50,7 @@ Alert facts: 698
 | `triage:needs_review` | [260515-birchwood_274-salesforce-audience-export-error](groups/open/260515-birchwood_274-salesforce-audience-export-error/case.md) | birchwood (default): Exports for signal 723 failed with states: <(snapshotting_finished,export_error)> | Q3PJ7W2K3Y9LJV | 1 |
 | `triage:needs_review` | [260515-pgatourhq_219-no-batches](groups/open/260515-pgatourhq_219-no-batches/case.md) | pgatourhq (New World Order): Exports for audience 31918 failed with states: <(snapshotting_finished,no_batches)> | Q2DJCY3XC2BSBG | 13 |
 | `triage:needs_review` | [260515-royals_4-snapshotting-error](groups/open/260515-royals_4-snapshotting-error/case.md) | royals (default): Exports for signal 203 failed with states: <(snapshotting_error,no_batches)> | Q08B553ANQ9KMI | 1 |
-| `triage:needs_review`<br>`triage:snapshotting-error` | [grp_260513_albertsons_6_client_sent_export_failure_split_0066](groups/open/grp_260513_albertsons_6_client_sent_export_failure_split_0066/case.md) | Needs investigation: audience 8473 client-sent alert has a later LiveRamp scheduled run in snapshotting_error/no_batches, distinct from the older snapshotting-processing monitor. | Q2EJWG22CER0LA | 1 |
+| `triage:needs_review`<br>`triage:snapshotting-error`<br>`bug:service-quervice` | [grp_260513_albertsons_6_client_sent_export_failure_split_0066](groups/open/grp_260513_albertsons_6_client_sent_export_failure_split_0066/case.md) | Needs platform investigation: audience 8473 snapshotting pre-check failed because Quervice returned repeated 502s/upstream premature close for the 2026-05-13 LiveRamp run; latest Pizza remains snapshotting_error/no_batches with no later success. | Q2EJWG22CER0LA | 1 |
 
 ## Monitoring (5)
 

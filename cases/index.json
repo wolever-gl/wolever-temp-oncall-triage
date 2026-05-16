@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-16T21:42:18.841Z",
+  "generated_at": "2026-05-16T21:44:52.776Z",
   "open_count": 46,
   "groups": [
     {
@@ -525,10 +525,11 @@
       "state": "open",
       "tags": [
         "triage:needs_review",
-        "triage:snapshotting-error"
+        "triage:snapshotting-error",
+        "bug:service-quervice"
       ],
       "title": "albertsons_6 client-sent-export-failure split",
-      "summary": "Needs investigation: audience 8473 client-sent alert has a later LiveRamp scheduled run in snapshotting_error/no_batches, distinct from the older snapshotting-processing monitor.",
+      "summary": "Needs platform investigation: audience 8473 snapshotting pre-check failed because Quervice returned repeated 502s/upstream premature close for the 2026-05-13 LiveRamp run; latest Pizza remains snapshotting_error/no_batches with no later success.",
       "incident_ids": [
         "Q2EJWG22CER0LA"
       ],
