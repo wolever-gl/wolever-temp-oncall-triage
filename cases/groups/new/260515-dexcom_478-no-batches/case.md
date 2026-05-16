@@ -1,5 +1,7 @@
 # dexcom_478 no-batches
 
+> Generated file. Do not edit directly; put free-form investigation notes in `notes.md`.
+
 State: `new`
 Tags: `triage:needs_review`
 Incidents: [Q2RVN4BPATQXSR](https://growthloop.pagerduty.com/incidents/Q2RVN4BPATQXSR)

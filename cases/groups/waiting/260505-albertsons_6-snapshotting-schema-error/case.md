@@ -1,5 +1,7 @@
 # Albertsons snapshotting schema errors
 
+> Generated file. Do not edit directly; put free-form investigation notes in `notes.md`.
+
 State: `waiting`
 Tags: `triage:snapshotting-schema`, `triage:tag_grouped`, `waiting:source-schema`
 Incidents: [Q2T09VCLN9MRZ8](https://growthloop.pagerduty.com/incidents/Q2T09VCLN9MRZ8)

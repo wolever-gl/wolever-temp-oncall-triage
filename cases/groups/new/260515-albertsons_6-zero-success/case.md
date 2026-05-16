@@ -1,5 +1,7 @@
 # albertsons_6 zero-success
 
+> Generated file. Do not edit directly; put free-form investigation notes in `notes.md`.
+
 State: `new`
 Tags: `triage:needs_review`
 Incidents: [Q269WMZF4MKMNL](https://growthloop.pagerduty.com/incidents/Q269WMZF4MKMNL)

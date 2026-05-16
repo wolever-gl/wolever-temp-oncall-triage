@@ -1,5 +1,7 @@
 # albertsons_6 live-ramp export-error
 
+> Generated file. Do not edit directly; put free-form investigation notes in `notes.md`.
+
 State: `open`
 Tags: `triage:needs_review`
 Incidents: [Q38JR11G2ENK2W](https://growthloop.pagerduty.com/incidents/Q38JR11G2ENK2W)

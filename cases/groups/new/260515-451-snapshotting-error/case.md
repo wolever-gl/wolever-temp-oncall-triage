@@ -1,5 +1,7 @@
 # 451 snapshotting-error
 
+> Generated file. Do not edit directly; put free-form investigation notes in `notes.md`.
+
 State: `new`
 Tags: `triage:needs_review`
 Incidents: [Q1UC14QNZK76EZ](https://growthloop.pagerduty.com/incidents/Q1UC14QNZK76EZ)

@@ -1,5 +1,7 @@
 # Albertsons LiveRamp uploads still processing
 
+> Generated file. Do not edit directly; put free-form investigation notes in `notes.md`.
+
 State: `monitoring`
 Tags: `triage:tag_grouped`, `waiting:uploads`
 Incidents: [Q2T09VCLN9MRZ8](https://growthloop.pagerduty.com/incidents/Q2T09VCLN9MRZ8)

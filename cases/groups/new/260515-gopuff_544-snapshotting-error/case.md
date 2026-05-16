@@ -1,5 +1,7 @@
 # gopuff_544 snapshotting-error
 
+> Generated file. Do not edit directly; put free-form investigation notes in `notes.md`.
+
 State: `new`
 Tags: `triage:needs_review`
 Incidents: [Q1X9CE7BIDK9MV](https://growthloop.pagerduty.com/incidents/Q1X9CE7BIDK9MV)

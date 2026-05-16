@@ -1,5 +1,7 @@
 # 378 client-sent-export-failure
 
+> Generated file. Do not edit directly; put free-form investigation notes in `notes.md`.
+
 State: `open`
 Tags: `triage:needs_review`
 Incidents: [Q33KFL1KESEMVC](https://growthloop.pagerduty.com/incidents/Q33KFL1KESEMVC)

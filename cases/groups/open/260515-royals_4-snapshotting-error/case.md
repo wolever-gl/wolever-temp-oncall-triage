@@ -1,5 +1,7 @@
 # royals_4 snapshotting-error
 
+> Generated file. Do not edit directly; put free-form investigation notes in `notes.md`.
+
 State: `open`
 Tags: `triage:needs_review`
 Incidents: [Q08B553ANQ9KMI](https://growthloop.pagerduty.com/incidents/Q08B553ANQ9KMI)

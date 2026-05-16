@@ -1,5 +1,7 @@
 # evgo_402 client-sent-export-failure
 
+> Generated file. Do not edit directly; put free-form investigation notes in `notes.md`.
+
 State: `resolved`
 Tags: `triage:needs_review`, `resolved:retry_succeeded`
 Incidents: [Q22U9UI0BTFNJC](https://growthloop.pagerduty.com/incidents/Q22U9UI0BTFNJC)

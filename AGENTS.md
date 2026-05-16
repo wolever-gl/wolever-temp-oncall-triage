@@ -16,7 +16,10 @@ Use this repo as a case-workspace system, not a spreadsheet workflow.
 - Match rules are the shared mechanism for active grouping keys, aliases, redirects, and ambiguous split keys.
 - Generated cohorts and related groups are navigation aids, not persisted truth, until an agent records an explicit relationship or merge.
 - Agents may write compact PagerDuty breadcrumbs when useful.
-- Keep state in `state.json` and the human summary in `case.md`.
+- Keep state in `state.json`. `case.md` is generated and must not be edited
+  directly.
+- Keep free-form human or agent notes in `notes.md`; generated `case.md`
+  copies `notes.md` into the case view when the notes file is present.
 - Open cases must be self-orienting in `case.md`: include enough alert scope,
   export-check results, and investigation evidence for a human to understand
   what has been looked at without opening every JSON artifact first.

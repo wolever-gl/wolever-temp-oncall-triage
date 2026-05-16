@@ -1,5 +1,7 @@
 # 76ers_131 zero-success
 
+> Generated file. Do not edit directly; put free-form investigation notes in `notes.md`.
+
 State: `resolved`
 Tags: `triage:needs_review`, `resolved:pd_closed_external`
 Incidents: [Q0Z4MMEOFYDHC7](https://growthloop.pagerduty.com/incidents/Q0Z4MMEOFYDHC7)

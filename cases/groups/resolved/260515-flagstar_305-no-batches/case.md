@@ -1,5 +1,7 @@
 # flagstar_305 no-batches
 
+> Generated file. Do not edit directly; put free-form investigation notes in `notes.md`.
+
 State: `resolved`
 Tags: `triage:needs_review`, `resolved:pd_closed_external`
 Incidents: [Q28HZS5TYC0NM9](https://growthloop.pagerduty.com/incidents/Q28HZS5TYC0NM9)

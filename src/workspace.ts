@@ -1039,13 +1039,16 @@ function stateFailureClass(alert: AlertFact): string | undefined {
 }
 
 async function writeCaseMarkdown(workspaceDir: string, group: GroupState): Promise<void> {
-  const [alerts, checks, evidence] = await Promise.all([
+  const [alerts, checks, evidence, notes] = await Promise.all([
     readGroupAlerts(workspaceDir, group),
     readGroupExportChecks(workspaceDir, group),
     readEvidenceEvents(workspaceDir, group.group_id),
+    readGroupNotes(workspaceDir, group.group_id),
   ]);
   const lines = [
     `# ${group.title}`,
+    "",
+    "> Generated file. Do not edit directly; put free-form investigation notes in `notes.md`.",
     "",
     `State: \`${group.state}\``,
     `Tags: ${group.tags.map((tag) => `\`${tag}\``).join(", ") || "none"}`,
@@ -1056,6 +1059,7 @@ async function writeCaseMarkdown(workspaceDir: string, group: GroupState): Promi
     "",
     group.summary || "No summary yet.",
     "",
+    ...(notes ? ["## Notes", "", notes, ""] : []),
     "## Alert Scope",
     "",
     ...renderAlertScope(group, alerts),
@@ -1073,6 +1077,17 @@ async function writeCaseMarkdown(workspaceDir: string, group: GroupState): Promi
   ];
   await moveGroupDirToState(workspaceDir, group.group_id, group.state);
   await writeFile(path.join(groupDirForState(workspaceDir, group.state, group.group_id), "case.md"), lines.join("\n"));
+}
+
+async function readGroupNotes(workspaceDir: string, groupId: string): Promise<string | undefined> {
+  const file = path.join(await findGroupDir(workspaceDir, groupId), "notes.md");
+  try {
+    const notes = (await readFile(file, "utf8")).trim();
+    return notes.length > 0 ? notes : undefined;
+  } catch (err) {
+    if ((err as NodeJS.ErrnoException).code === "ENOENT") return undefined;
+    throw err;
+  }
 }
 
 async function readGroupAlerts(workspaceDir: string, group: GroupState): Promise<AlertFact[]> {
@@ -1422,7 +1437,7 @@ async function moveGroupDirToState(workspaceDir: string, groupId: string, state:
 
 async function copyGroupFiles(from: string, to: string): Promise<void> {
   await ensureDir(to);
-  for (const file of ["state.json", "case.md", "lineage.jsonl", "evidence.jsonl", "decisions.jsonl", "actions.jsonl"]) {
+  for (const file of ["state.json", "case.md", "notes.md", "lineage.jsonl", "evidence.jsonl", "decisions.jsonl", "actions.jsonl"]) {
     const source = path.join(from, file);
     if (await pathExists(source)) await copyFile(source, path.join(to, file));
   }

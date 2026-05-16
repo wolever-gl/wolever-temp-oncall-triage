@@ -1,5 +1,7 @@
 # nerdwallet_373 tik-tok export-processing
 
+> Generated file. Do not edit directly; put free-form investigation notes in `notes.md`.
+
 State: `new`
 Tags: `triage:needs_review`
 Incidents: [Q2CEMYYJ9N4IAX](https://growthloop.pagerduty.com/incidents/Q2CEMYYJ9N4IAX)

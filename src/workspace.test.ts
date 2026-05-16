@@ -234,6 +234,26 @@ console.log(JSON.stringify({
     }
   });
 
+  test("case markdown includes notes markdown but remains generated", async () => {
+    const workspaceDir = await mkdtemp(path.join(tmpdir(), "oncall-triage-v2-"));
+    try {
+      await importPagerDutyIncident({ workspaceDir, incident: "QTEST123", alertsFile: fixture });
+      const grouped = await groupImportedAlerts(workspaceDir);
+      const groupId = grouped.groups[0]!;
+      await writeFile(groupFile(workspaceDir, "new", groupId, "notes.md"), "Agent note: waiting on owner confirmation.\n\n- Evidence looks client-side.\n");
+
+      await regenerateIndex(workspaceDir);
+
+      const caseMarkdown = await readFile(groupFile(workspaceDir, "new", groupId, "case.md"), "utf8");
+      expect(caseMarkdown).toContain("Generated file. Do not edit directly");
+      expect(caseMarkdown).toContain("## Notes");
+      expect(caseMarkdown).toContain("Agent note: waiting on owner confirmation.");
+      expect(caseMarkdown).toContain("- Evidence looks client-side.");
+    } finally {
+      await rm(workspaceDir, { recursive: true, force: true });
+    }
+  });
+
   test("merges groups with lineage and combined refs", async () => {
     const workspaceDir = await mkdtemp(path.join(tmpdir(), "oncall-triage-v2-"));
     try {

@@ -1,5 +1,7 @@
 # Albertsons LiveRamp exports complete
 
+> Generated file. Do not edit directly; put free-form investigation notes in `notes.md`.
+
 State: `resolved`
 Tags: `resolved:export-healthy`, `triage:tag_grouped`
 Incidents: [Q2T09VCLN9MRZ8](https://growthloop.pagerduty.com/incidents/Q2T09VCLN9MRZ8)

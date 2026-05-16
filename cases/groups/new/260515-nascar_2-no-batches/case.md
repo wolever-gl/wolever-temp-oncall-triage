@@ -1,5 +1,7 @@
 # nascar_2 no-batches
 
+> Generated file. Do not edit directly; put free-form investigation notes in `notes.md`.
+
 State: `new`
 Tags: `triage:needs_review`
 Incidents: [Q16KSAQEWECSDD](https://growthloop.pagerduty.com/incidents/Q16KSAQEWECSDD)

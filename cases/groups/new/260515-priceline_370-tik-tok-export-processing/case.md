@@ -1,5 +1,7 @@
 # priceline_370 tik-tok export-processing
 
+> Generated file. Do not edit directly; put free-form investigation notes in `notes.md`.
+
 State: `new`
 Tags: `triage:needs_review`
 Incidents: [Q0X2D8TR82ZQV9](https://growthloop.pagerduty.com/incidents/Q0X2D8TR82ZQV9)

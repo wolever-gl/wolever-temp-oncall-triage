@@ -1,5 +1,7 @@
 # allegro_3 dv360 export-processing
 
+> Generated file. Do not edit directly; put free-form investigation notes in `notes.md`.
+
 State: `new`
 Tags: `triage:needs_review`
 Incidents: [Q2KT0WUDEVL42Q](https://growthloop.pagerduty.com/incidents/Q2KT0WUDEVL42Q)

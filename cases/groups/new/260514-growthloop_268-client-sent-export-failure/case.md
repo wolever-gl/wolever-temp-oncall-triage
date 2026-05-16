@@ -1,5 +1,7 @@
 # growthloop_268 client-sent-export-failure
 
+> Generated file. Do not edit directly; put free-form investigation notes in `notes.md`.
+
 State: `new`
 Tags: `triage:needs_review`
 Incidents: [Q3PW7IHI1KCDWS](https://growthloop.pagerduty.com/incidents/Q3PW7IHI1KCDWS)

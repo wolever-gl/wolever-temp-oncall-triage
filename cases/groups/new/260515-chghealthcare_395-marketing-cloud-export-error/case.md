@@ -1,5 +1,7 @@
 # chghealthcare_395 marketing-cloud export-error
 
+> Generated file. Do not edit directly; put free-form investigation notes in `notes.md`.
+
 State: `new`
 Tags: `triage:needs_review`
 Incidents: [Q29I2IVNNVK80X](https://growthloop.pagerduty.com/incidents/Q29I2IVNNVK80X)

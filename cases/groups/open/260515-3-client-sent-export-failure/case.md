@@ -1,5 +1,7 @@
 # 3 client-sent-export-failure
 
+> Generated file. Do not edit directly; put free-form investigation notes in `notes.md`.
+
 State: `open`
 Tags: `triage:needs_review`
 Incidents: [Q15FI03XBQ4OW5](https://growthloop.pagerduty.com/incidents/Q15FI03XBQ4OW5)

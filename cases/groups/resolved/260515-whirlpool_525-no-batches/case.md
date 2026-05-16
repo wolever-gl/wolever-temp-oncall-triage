@@ -1,5 +1,7 @@
 # whirlpool_525 no-batches
 
+> Generated file. Do not edit directly; put free-form investigation notes in `notes.md`.
+
 State: `resolved`
 Tags: `triage:needs_review`, `resolved:pd_closed_external`
 Incidents: [Q3WZUE4915S6J4](https://growthloop.pagerduty.com/incidents/Q3WZUE4915S6J4)

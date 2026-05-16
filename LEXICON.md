@@ -77,12 +77,14 @@ Invariants:
 ### Case
 
 The set of files that make a group usable by humans and tools: `state.json`,
-`case.md`, append-only logs, and artifacts.
+generated `case.md`, editable `notes.md`, append-only logs, and artifacts.
 
 Invariants:
 
 - `case.md` is a generated narrative view; direct edits may be overwritten by
   CLI operations, so durable evidence should be recorded in structured files.
+- `notes.md` is the free-form editable narrative surface for humans and agents;
+  generated `case.md` includes it when present.
 - Generated `case.md` files must be self-orienting for open cases, including
   alert scope plus the evidence/check results that show what work has started.
 - Structural changes should go through CLI operations and append events.

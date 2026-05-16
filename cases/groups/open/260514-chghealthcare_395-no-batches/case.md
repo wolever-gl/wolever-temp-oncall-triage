@@ -1,5 +1,7 @@
 # chghealthcare_395 no-batches
 
+> Generated file. Do not edit directly; put free-form investigation notes in `notes.md`.
+
 State: `open`
 Tags: `triage:needs_review`
 Incidents: [Q064V2C56CNTCR](https://growthloop.pagerduty.com/incidents/Q064V2C56CNTCR)

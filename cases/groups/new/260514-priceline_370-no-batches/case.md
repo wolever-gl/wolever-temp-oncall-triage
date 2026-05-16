@@ -1,5 +1,7 @@
 # priceline_370 no-batches
 
+> Generated file. Do not edit directly; put free-form investigation notes in `notes.md`.
+
 State: `new`
 Tags: `triage:needs_review`
 Incidents: [Q1YQV4ERKAIVMF](https://growthloop.pagerduty.com/incidents/Q1YQV4ERKAIVMF)
