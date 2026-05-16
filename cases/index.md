@@ -1,6 +1,6 @@
 # On-call Triage Cases
 
-Generated: 2026-05-16T22:50:26.405Z
+Generated: 2026-05-16T22:58:15.952Z
 Open groups: 44
 Alert facts: 698
 
@@ -17,7 +17,7 @@ Alert facts: 698
 | `triage:needs_review` | [260514-allegro_3-dv360-export-processing](groups/new/260514-allegro_3-dv360-export-processing/case.md) | allegro (Marketing): Exports for audience 1156 failed with states: <(snapshotting_finished,export_processing)> | Q2KT0WUDEVL42Q | 13 |
 | `triage:needs_review` | [260515-allegro_3-dv360-export-processing](groups/new/260515-allegro_3-dv360-export-processing/case.md) | allegro (Marketing): Exports for audience 605 failed with states: <(snapshotting_finished,export_processing)> | Q3GQQRY1UQLBSN | 1 |
 
-## Open (25)
+## Open (24)
 
 | Tags | Group | Summary | Incidents | Alerts |
 |---|---|---|---|---:|
@@ -45,9 +45,8 @@ Alert facts: 698
 | `triage:needs_review` | [260515-birchwood_274-salesforce-audience-export-error](groups/open/260515-birchwood_274-salesforce-audience-export-error/case.md) | birchwood (default): Exports for signal 723 failed with states: <(snapshotting_finished,export_error)> | Q3PJ7W2K3Y9LJV | 1 |
 | `triage:needs_review` | [260515-pgatourhq_219-no-batches](groups/open/260515-pgatourhq_219-no-batches/case.md) | pgatourhq (New World Order): Exports for audience 31918 failed with states: <(snapshotting_finished,no_batches)> | Q2DJCY3XC2BSBG | 13 |
 | `triage:needs_review` | [260515-royals_4-snapshotting-error](groups/open/260515-royals_4-snapshotting-error/case.md) | royals (default): Exports for signal 203 failed with states: <(snapshotting_error,no_batches)> | Q08B553ANQ9KMI | 1 |
-| `triage:needs_review`<br>`resolved:recovered`<br>`triage:delta-redrop-review` | [grp_260514_ford_310_dv360_export_error_split_0074](groups/open/grp_260514_ford_310_dv360_export_error_split_0074/case.md) | Needs redrop/retry review: Ford audience 34062 DV360 is a delta export. The failed 2026-05-14 run generated/unloaded delta files and completed unloaded_deltas_write before downstream export_error; later 2026-05-16 success does not prove the failed delta was delivered. | Q1TJJ4MEVOF1W3<br>Q3HWKW0FS3VTHE | 2 |
 
-## Monitoring (7)
+## Monitoring (8)
 
 | Tags | Group | Summary | Incidents | Alerts |
 |---|---|---|---|---:|
@@ -58,6 +57,7 @@ Alert facts: 698
 | `triage:needs_review`<br>`monitoring:export-processing` | [260515-albertsons_6-zero-success-02](groups/monitoring/260515-albertsons_6-zero-success-02/case.md) | Zero-success tagger found 7 attached alerts recovered and the remaining 3 are still export_processing; recheck after the next export monitor window. | Q38JR11G2ENK2W | 10 |
 | `triage:needs_review`<br>`triage:snapshotting-error`<br>`bug:service-quervice`<br>`triage:manual_retry_needed`<br>`monitoring:snapshotting-retry` | [grp_260513_albertsons_6_client_sent_export_failure_split_0066](groups/monitoring/grp_260513_albertsons_6_client_sent_export_failure_split_0066/case.md) | Manual retries were triggered for Albertsons LiveRamp audiences 8473 and 10073. Both latest Pizza rows now show snapshotting_processing/no_batches after retry attempts; monitor until they reach export_finished or terminal failure. 8473 has already shown renewed Quervice 502/503 pre_snapshotting_check errors in logs, while 10073 reached initial Quervice checks successfully. | Q2EJWG22CER0LA<br>Q38JR11G2ENK2W | 2 |
 | `triage:needs_review`<br>`monitoring:export-processing` | [grp_260514_albertsons_6_client_sent_export_failure_split_0068](groups/monitoring/grp_260514_albertsons_6_client_sent_export_failure_split_0068/case.md) | Monitor: audience 12875 has a newer 2026-05-16 run in export_processing after a successful 2026-05-15 run; no manual action needed unless it fails or stalls. | Q38JR11G2ENK2W | 1 |
+| `triage:needs_review`<br>`resolved:recovered`<br>`triage:delta-redrop-review`<br>`monitoring:dv360-redrop-rate-limited` | [grp_260514_ford_310_dv360_export_error_split_0074](groups/monitoring/grp_260514_ford_310_dv360_export_error_split_0074/case.md) | Re-dropped the failed Ford 34062 DV360 delta file into Bifrost. Replacement batch 10d20a20-efd9-43d3-8232-04c6f1a724cd was created and began processing; current logs show DV360 partner rate limiting with Bifrost retries scheduled, so monitor until segments complete and Pizza reflects export_finished. | Q1TJJ4MEVOF1W3<br>Q3HWKW0FS3VTHE | 2 |
 
 ## Waiting (4)
 

@@ -1,17 +1,18 @@
 {
   "group_id": "grp_260514_ford_310_dv360_export_error_split_0074",
-  "state": "open",
+  "state": "monitoring",
   "tags": [
     "triage:needs_review",
     "resolved:recovered",
-    "triage:delta-redrop-review"
+    "triage:delta-redrop-review",
+    "monitoring:dv360-redrop-rate-limited"
   ],
   "title": "ford_310 dv360 export-error split",
-  "summary": "Needs redrop/retry review: Ford audience 34062 DV360 is a delta export. The failed 2026-05-14 run generated/unloaded delta files and completed unloaded_deltas_write before downstream export_error; later 2026-05-16 success does not prove the failed delta was delivered.",
+  "summary": "Re-dropped the failed Ford 34062 DV360 delta file into Bifrost. Replacement batch 10d20a20-efd9-43d3-8232-04c6f1a724cd was created and began processing; current logs show DV360 partner rate limiting with Bifrost retries scheduled, so monitor until segments complete and Pizza reflects export_finished.",
   "deterministic_key": "v3|incident:Q3HWKW0FS3VTHE|org:ford_310|dest:dv360|class:export-error|split|Q2TVZ6ZMW55S6Y",
   "grouping_version": 3,
   "created_at": "2026-05-16T22:38:09.113Z",
-  "updated_at": "2026-05-16T22:50:19.106Z",
+  "updated_at": "2026-05-16T22:58:14.633Z",
   "alert_refs": [
     {
       "incident_id": "Q1TJJ4MEVOF1W3",

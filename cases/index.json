@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-16T22:50:26.405Z",
+  "generated_at": "2026-05-16T22:58:15.952Z",
   "open_count": 44,
   "groups": [
     {
@@ -455,23 +455,6 @@
       "path": "groups/open/260515-royals_4-snapshotting-error/case.md"
     },
     {
-      "group_id": "grp_260514_ford_310_dv360_export_error_split_0074",
-      "state": "open",
-      "tags": [
-        "triage:needs_review",
-        "resolved:recovered",
-        "triage:delta-redrop-review"
-      ],
-      "title": "ford_310 dv360 export-error split",
-      "summary": "Needs redrop/retry review: Ford audience 34062 DV360 is a delta export. The failed 2026-05-14 run generated/unloaded delta files and completed unloaded_deltas_write before downstream export_error; later 2026-05-16 success does not prove the failed delta was delivered.",
-      "incident_ids": [
-        "Q1TJJ4MEVOF1W3",
-        "Q3HWKW0FS3VTHE"
-      ],
-      "alert_count": 2,
-      "path": "groups/open/grp_260514_ford_310_dv360_export_error_split_0074/case.md"
-    },
-    {
       "group_id": "260511-albertsons_6-snapshotting-processing",
       "state": "monitoring",
       "tags": [
@@ -579,6 +562,24 @@
       ],
       "alert_count": 1,
       "path": "groups/monitoring/grp_260514_albertsons_6_client_sent_export_failure_split_0068/case.md"
+    },
+    {
+      "group_id": "grp_260514_ford_310_dv360_export_error_split_0074",
+      "state": "monitoring",
+      "tags": [
+        "triage:needs_review",
+        "resolved:recovered",
+        "triage:delta-redrop-review",
+        "monitoring:dv360-redrop-rate-limited"
+      ],
+      "title": "ford_310 dv360 export-error split",
+      "summary": "Re-dropped the failed Ford 34062 DV360 delta file into Bifrost. Replacement batch 10d20a20-efd9-43d3-8232-04c6f1a724cd was created and began processing; current logs show DV360 partner rate limiting with Bifrost retries scheduled, so monitor until segments complete and Pizza reflects export_finished.",
+      "incident_ids": [
+        "Q1TJJ4MEVOF1W3",
+        "Q3HWKW0FS3VTHE"
+      ],
+      "alert_count": 2,
+      "path": "groups/monitoring/grp_260514_ford_310_dv360_export_error_split_0074/case.md"
     },
     {
       "group_id": "260505-albertsons_6-snapshotting-schema-error",

@@ -4,14 +4,14 @@
 
 > Generated file. Do not edit directly; put free-form investigation notes in `notes.md`.
 
-State: `open`
-Tags: `triage:needs_review`, `resolved:recovered`, `triage:delta-redrop-review`
+State: `monitoring`
+Tags: `triage:needs_review`, `resolved:recovered`, `triage:delta-redrop-review`, `monitoring:dv360-redrop-rate-limited`
 Incidents: [Q1TJJ4MEVOF1W3](https://growthloop.pagerduty.com/incidents/Q1TJJ4MEVOF1W3), [Q3HWKW0FS3VTHE](https://growthloop.pagerduty.com/incidents/Q3HWKW0FS3VTHE)
 Alerts: 2
 
 ## Current Summary
 
-Needs redrop/retry review: Ford audience 34062 DV360 is a delta export. The failed 2026-05-14 run generated/unloaded delta files and completed unloaded_deltas_write before downstream export_error; later 2026-05-16 success does not prove the failed delta was delivered.
+Re-dropped the failed Ford 34062 DV360 delta file into Bifrost. Replacement batch 10d20a20-efd9-43d3-8232-04c6f1a724cd was created and began processing; current logs show DV360 partner rate limiting with Bifrost retries scheduled, so monitor until segments complete and Pizza reflects export_finished.
 
 ## Alert Scope
 
@@ -47,6 +47,9 @@ Check evidence:
 
 ## Recent Evidence
 
+- Approved re-drop of Ford audience 34062 DV360 historical delta file. Bifrost accepted the ingest at 2026-05-16 22:56:21Z, found 1 file matching the metadata pattern, created replacement batch 10d20a20-efd9-43d3-8232-04c6f1a724cd for export run 34062-dv360_20860-scheduled__2026-05-14T00:00:00+00:00, and started DV360 jobs for segments 0-4. Follow-up logs showed Google Audience Partner rate limiting with Bifrost scheduling retries, so this is now active processing/monitoring rather than unresolved manual triage.
+  Source: `glcli bifrost export / gcloud logs`; kind: `remediation`; captured: `2026-05-16T22:58:10.096Z`.
+  Command: `glcli --env prod bifrost export --external-bucket-secret ford_310_external_bucket gs://bkt-tfstate-cdmgl-ext-p/exports/ford_310/dv360/app_dv360_1807/34062__9350017290__20860_20260514004037-000000000000.avro`
 - Delta redrop runbook applies. Scoped logs show Ford audience 34062 DV360 uses export_type=deltas and snapshotting delta tables. The failed 2026-05-14 DV360 run completed delta_history_write_up, unload wrote gs://bkt-tfstate-cdmgl-ext-p/exports/ford_310/dv360/app_dv360_1807/34062__9350017290__20860_20260514004037-*.avro, and unloaded_deltas_write completed with status_code=200 for request b83b3288-9f1a-46a8-9db5-b3efa1750c7e. Pizza still marked that run export_error with 9513 failures. Per snapshotting-delta-recovery, later 2026-05-16 success alone is not sufficient because generated delta files were marked unloaded; this needs human redrop/retry review.
   Source: `flywheel-prod-328213`; kind: `gcloud_logs`; captured: `2026-05-16T22:50:04.373Z`.
   Command: `gcloud logging read scoped to ford_310 audience 34062 dv360_20860 on 2026-05-14 and 2026-05-16`
