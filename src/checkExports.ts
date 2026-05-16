@@ -8,6 +8,14 @@ export interface CheckExportsOptions {
   workspaceDir: string;
   apply?: boolean;
   now?: Date;
+  filters?: {
+    incidentId?: string;
+    orgId?: string;
+    audienceId?: string;
+    destination?: string;
+    state?: string;
+    limit?: number;
+  };
   fetchPizzaRows?: (scope: ExportCheckScope) => Promise<PizzaExportRow[]>;
   onProgress?: (message: string) => void;
 }
@@ -26,7 +34,8 @@ export async function checkExportsWorkspace(options: CheckExportsOptions): Promi
   const now = options.now ?? new Date();
   const nowIso = now.toISOString();
   const existing = new Map((await loadAllExportChecks(options.workspaceDir)).map((check) => [check.check_id, check]));
-  const alerts = await loadAllAlerts(options.workspaceDir);
+  const allAlerts = await loadAllAlerts(options.workspaceDir);
+  const alerts = filterAlerts(allAlerts, options.filters);
   const checks: ExportCheck[] = [];
   let derived = 0;
   options.onProgress?.(`Loaded ${alerts.length} alert fact(s); deriving export checks.`);
@@ -83,6 +92,22 @@ export async function checkExportsWorkspace(options: CheckExportsOptions): Promi
     blocked: allChecks.filter((check) => check.state === "blocked").length,
     not_applicable: allChecks.filter((check) => check.state === "not_applicable").length,
   };
+}
+
+function filterAlerts(alerts: AlertFact[], filters: CheckExportsOptions["filters"]): AlertFact[] {
+  if (!filters) return alerts;
+  const matched = alerts.filter((alert) => {
+    if (filters.incidentId && alert.incident_id !== filters.incidentId) return false;
+    if (filters.orgId && alert.org_id !== filters.orgId) return false;
+    if (filters.audienceId && alert.audience_id !== filters.audienceId) return false;
+    if (filters.destination && alert.destination_type !== filters.destination && alert.destination_product !== filters.destination) return false;
+    if (filters.state) {
+      const tuple = [alert.state_tuple?.snapshotting ?? "", alert.state_tuple?.export ?? ""].filter(Boolean).join("/");
+      if (tuple !== filters.state && alert.state_tuple?.snapshotting !== filters.state && alert.state_tuple?.export !== filters.state) return false;
+    }
+    return true;
+  });
+  return filters.limit ? matched.slice(0, filters.limit) : matched;
 }
 
 export function deriveExportCheck(alert: AlertFact, nowIso: string, previous?: ExportCheck): ExportCheck {

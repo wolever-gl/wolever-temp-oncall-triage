@@ -152,10 +152,16 @@ async function main(argv: string[]): Promise<void> {
     const pizzaRows = pizzaRowsFile ? await loadPizzaRowsFile(pizzaRowsFile) : undefined;
     const progress = (message: string): void => console.log(message);
     const liveFetcher = pizzaRows ? undefined : createLivePizzaFetcher({ onProgress: progress });
+    const filters = alertFiltersFromArgs(args);
+    const limit = optional(args, "limit");
     try {
       const result = await checkExportsWorkspace({
         workspaceDir,
         apply: Boolean(args.apply),
+        filters: {
+          ...filters,
+          ...(limit ? { limit: parsePositiveInteger(limit, "limit") } : {}),
+        },
         fetchPizzaRows: pizzaRows ? async () => pizzaRows : liveFetcher!,
         onProgress: progress,
       });
@@ -220,6 +226,21 @@ function required(args: Record<string, string | string[]>, key: string): string 
   return Array.isArray(value) ? value[0]! : value;
 }
 
+function alertFiltersFromArgs(args: Record<string, string | string[]>): Parameters<typeof queryAlertFacts>[1] {
+  const filters: Parameters<typeof queryAlertFacts>[1] = {};
+  const incident = optional(args, "incident");
+  const org = optional(args, "org");
+  const audience = optional(args, "audience");
+  const destination = optional(args, "destination");
+  const state = optional(args, "state");
+  if (incident) filters.incidentId = incident;
+  if (org) filters.orgId = org;
+  if (audience) filters.audienceId = audience;
+  if (destination) filters.destination = destination;
+  if (state) filters.state = state;
+  return filters;
+}
+
 function parsePositiveInteger(value: string, name: string): number {
   const parsed = Number.parseInt(value, 10);
   if (!Number.isInteger(parsed) || parsed < 1) throw new Error(`--${name} must be a positive integer.`);
@@ -243,7 +264,7 @@ function usageText(): string {
   bun run oncall-triage merge <workspace> --source <id> --target <id> --rationale <text>
   bun run oncall-triage split <workspace> --group <id> --alerts <comma-separated-alert-ids> --rationale <text>
   bun run oncall-triage sync-pd <workspace> [--incident <pd-url-or-id>]
-  bun run oncall-triage check-exports <workspace> [--apply] [--pizza-rows-file <file>]
+  bun run oncall-triage check-exports <workspace> [--apply] [--pizza-rows-file <file>] [--incident <id>] [--org <org_id>] [--audience <id>] [--destination <destination>] [--state <state>] [--limit <n>]
   bun run oncall-triage evidence <workspace> --group <id> --summary <text> [--kind <kind>] [--source <source>]`;
 }
 
