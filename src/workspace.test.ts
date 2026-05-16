@@ -245,6 +245,7 @@ console.log(JSON.stringify({
       await regenerateIndex(workspaceDir);
 
       const caseMarkdown = await readFile(groupFile(workspaceDir, "new", groupId, "case.md"), "utf8");
+      expect(caseMarkdown.startsWith("<!-- AUTO-GENERATED: Do not edit case.md directly.")).toBe(true);
       expect(caseMarkdown).toContain("Generated file. Do not edit directly");
       expect(caseMarkdown).toContain("## Notes");
       expect(caseMarkdown).toContain("Agent note: waiting on owner confirmation.");

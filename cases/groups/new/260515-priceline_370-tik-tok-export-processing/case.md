@@ -1,3 +1,5 @@
+<!-- AUTO-GENERATED: Do not edit case.md directly. Put free-form investigation notes in notes.md. -->
+
 # priceline_370 tik-tok export-processing
 
 > Generated file. Do not edit directly; put free-form investigation notes in `notes.md`.

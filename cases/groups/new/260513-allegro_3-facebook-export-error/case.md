@@ -1,3 +1,5 @@
+<!-- AUTO-GENERATED: Do not edit case.md directly. Put free-form investigation notes in notes.md. -->
+
 # allegro_3 facebook export-error
 
 > Generated file. Do not edit directly; put free-form investigation notes in `notes.md`.

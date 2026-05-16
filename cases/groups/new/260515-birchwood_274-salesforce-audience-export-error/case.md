@@ -1,3 +1,5 @@
+<!-- AUTO-GENERATED: Do not edit case.md directly. Put free-form investigation notes in notes.md. -->
+
 # birchwood_274 salesforce-audience export-error
 
 > Generated file. Do not edit directly; put free-form investigation notes in `notes.md`.

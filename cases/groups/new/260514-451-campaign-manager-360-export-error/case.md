@@ -1,3 +1,5 @@
+<!-- AUTO-GENERATED: Do not edit case.md directly. Put free-form investigation notes in notes.md. -->
+
 # 451 campaign-manager-360 export-error
 
 > Generated file. Do not edit directly; put free-form investigation notes in `notes.md`.

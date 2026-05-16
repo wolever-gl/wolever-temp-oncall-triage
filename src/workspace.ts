@@ -1046,6 +1046,8 @@ async function writeCaseMarkdown(workspaceDir: string, group: GroupState): Promi
     readGroupNotes(workspaceDir, group.group_id),
   ]);
   const lines = [
+    "<!-- AUTO-GENERATED: Do not edit case.md directly. Put free-form investigation notes in notes.md. -->",
+    "",
     `# ${group.title}`,
     "",
     "> Generated file. Do not edit directly; put free-form investigation notes in `notes.md`.",

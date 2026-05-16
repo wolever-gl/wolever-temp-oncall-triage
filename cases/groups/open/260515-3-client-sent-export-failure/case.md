@@ -1,3 +1,5 @@
+<!-- AUTO-GENERATED: Do not edit case.md directly. Put free-form investigation notes in notes.md. -->
+
 # 3 client-sent-export-failure
 
 > Generated file. Do not edit directly; put free-form investigation notes in `notes.md`.
