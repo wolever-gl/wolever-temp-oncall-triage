@@ -1,7 +1,7 @@
 # On-call Triage Cases
 
-Generated: 2026-05-16T22:39:39.437Z
-Open groups: 43
+Generated: 2026-05-16T22:50:26.405Z
+Open groups: 44
 Alert facts: 698
 
 ## New (8)
@@ -17,7 +17,7 @@ Alert facts: 698
 | `triage:needs_review` | [260514-allegro_3-dv360-export-processing](groups/new/260514-allegro_3-dv360-export-processing/case.md) | allegro (Marketing): Exports for audience 1156 failed with states: <(snapshotting_finished,export_processing)> | Q2KT0WUDEVL42Q | 13 |
 | `triage:needs_review` | [260515-allegro_3-dv360-export-processing](groups/new/260515-allegro_3-dv360-export-processing/case.md) | allegro (Marketing): Exports for audience 605 failed with states: <(snapshotting_finished,export_processing)> | Q3GQQRY1UQLBSN | 1 |
 
-## Open (24)
+## Open (25)
 
 | Tags | Group | Summary | Incidents | Alerts |
 |---|---|---|---|---:|
@@ -45,6 +45,7 @@ Alert facts: 698
 | `triage:needs_review` | [260515-birchwood_274-salesforce-audience-export-error](groups/open/260515-birchwood_274-salesforce-audience-export-error/case.md) | birchwood (default): Exports for signal 723 failed with states: <(snapshotting_finished,export_error)> | Q3PJ7W2K3Y9LJV | 1 |
 | `triage:needs_review` | [260515-pgatourhq_219-no-batches](groups/open/260515-pgatourhq_219-no-batches/case.md) | pgatourhq (New World Order): Exports for audience 31918 failed with states: <(snapshotting_finished,no_batches)> | Q2DJCY3XC2BSBG | 13 |
 | `triage:needs_review` | [260515-royals_4-snapshotting-error](groups/open/260515-royals_4-snapshotting-error/case.md) | royals (default): Exports for signal 203 failed with states: <(snapshotting_error,no_batches)> | Q08B553ANQ9KMI | 1 |
+| `triage:needs_review`<br>`resolved:recovered`<br>`triage:delta-redrop-review` | [grp_260514_ford_310_dv360_export_error_split_0074](groups/open/grp_260514_ford_310_dv360_export_error_split_0074/case.md) | Needs redrop/retry review: Ford audience 34062 DV360 is a delta export. The failed 2026-05-14 run generated/unloaded delta files and completed unloaded_deltas_write before downstream export_error; later 2026-05-16 success does not prove the failed delta was delivered. | Q1TJJ4MEVOF1W3<br>Q3HWKW0FS3VTHE | 2 |
 
 ## Monitoring (7)
 
@@ -67,7 +68,7 @@ Alert facts: 698
 | `triage:needs_review`<br>`triage:export-error`<br>`waiting:client_cm360_matchid_config` | [260514-451-campaign-manager-360-export-error](groups/waiting/260514-451-campaign-manager-360-export-error/case.md) | Waiting on ASU/WPP/client configuration: SignalRoute 981 keeps failing CM360 uploads with NOT_FOUND for Floodlight activity/config MatchID lookups; retry alone is unlikely to help until the client confirms/fixes the MatchID/Floodlight identifier setup. | Q3XQABQFPPVNT5 | 2 |
 | `triage:needs_review`<br>`triage:client_schema_missing`<br>`waiting:client_schema` | [260515-gopuff_544-snapshotting-error](groups/waiting/260515-gopuff_544-snapshotting-error/case.md) | Waiting on support/client remediation for missing source column CORE.GOPUFF_ORDER_ITEMS.CLASS in GoPuff Snowflake source schema; support thread opened. | Q1X9CE7BIDK9MV | 1 |
 
-## Resolved (31)
+## Resolved (30)
 
 | Tags | Group | Summary | Incidents | Alerts |
 |---|---|---|---|---:|
@@ -100,5 +101,4 @@ Alert facts: 698
 | `triage:needs_review`<br>`evidence:retry-succeeded` | [grp_260513_ford_310_no_batches_split_0072](groups/resolved/grp_260513_ford_310_no_batches_split_0072/case.md) | Resolved: Ford audience 34010 reddit_ads had a failed-count alert on 2026-05-13, but later 2026-05-14 through 2026-05-16 runs succeeded with zero failures. | Q1TJJ4MEVOF1W3 | 1 |
 | `triage:needs_review`<br>`evidence:retry-succeeded` | [grp_260514_451_campaign_manager_360_export_error_split_0071](groups/resolved/grp_260514_451_campaign_manager_360_export_error_split_0071/case.md) | Resolved: ASU SignalRoute 984 Campaign Manager 360 export has a later export_finished run. | Q3XQABQFPPVNT5 | 1 |
 | `triage:needs_review`<br>`triage:snapshotting-error`<br>`bug:service-quervice`<br>`resolved:merged` | [grp_260514_albertsons_6_client_sent_export_failure_split_0067](groups/resolved/grp_260514_albertsons_6_client_sent_export_failure_split_0067/case.md) | Merged into grp_260513_albertsons_6_client_sent_export_failure_split_0066: Same Albertsons platform failure class: both audience 8473 and 10073 failed LiveRamp snapshotting pre_snapshotting_check with Quervice 502/upstream premature close and no later success. Track as one Quervice service-side investigation. | Q38JR11G2ENK2W | 1 |
-| `triage:needs_review`<br>`resolved:recovered` | [grp_260514_ford_310_client_sent_export_failure_split_0073](groups/resolved/grp_260514_ford_310_client_sent_export_failure_split_0073/case.md) | Resolved: audience 34062 recovered; current Pizza shows the 2026-05-16 DV360 export_finished with zero failures, so the client-sent alert is stale. | Q1TJJ4MEVOF1W3 | 1 |
-| `triage:needs_review`<br>`resolved:recovered` | [grp_260514_ford_310_dv360_export_error_split_0074](groups/resolved/grp_260514_ford_310_dv360_export_error_split_0074/case.md) | Resolved: audience 34062 DV360 recovered; latest 2026-05-16 DV360 run export_finished with zero failures. | Q3HWKW0FS3VTHE | 1 |
+| `triage:needs_review`<br>`resolved:recovered`<br>`resolved:merged` | [grp_260514_ford_310_client_sent_export_failure_split_0073](groups/resolved/grp_260514_ford_310_client_sent_export_failure_split_0073/case.md) | Merged into grp_260514_ford_310_dv360_export_error_split_0074: The client-sent Ford audience 34062 alert is the notification counterpart of the reopened DV360 delta redrop-review case; track the remediation decision in the DV360 case. | Q1TJJ4MEVOF1W3 | 1 |

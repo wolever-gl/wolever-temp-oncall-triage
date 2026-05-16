@@ -5,13 +5,13 @@
 > Generated file. Do not edit directly; put free-form investigation notes in `notes.md`.
 
 State: `resolved`
-Tags: `triage:needs_review`, `resolved:recovered`
+Tags: `triage:needs_review`, `resolved:recovered`, `resolved:merged`
 Incidents: [Q1TJJ4MEVOF1W3](https://growthloop.pagerduty.com/incidents/Q1TJJ4MEVOF1W3)
 Alerts: 1
 
 ## Current Summary
 
-Resolved: audience 34062 recovered; current Pizza shows the 2026-05-16 DV360 export_finished with zero failures, so the client-sent alert is stale.
+Merged into grp_260514_ford_310_dv360_export_error_split_0074: The client-sent Ford audience 34062 alert is the notification counterpart of the reopened DV360 delta redrop-review case; track the remediation decision in the DV360 case.
 
 ## Alert Scope
 
@@ -45,7 +45,7 @@ Check evidence:
 
 ## Next Action
 
-Agent should gather evidence, choose/apply a runbook when appropriate, and update this case.
+Follow target group grp_260514_ford_310_dv360_export_error_split_0074.
 
 ## Decision Trail
 
