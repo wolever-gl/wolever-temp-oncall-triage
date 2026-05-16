@@ -4,14 +4,14 @@
 
 > Generated file. Do not edit directly; put free-form investigation notes in `notes.md`.
 
-State: `open`
-Tags: `triage:needs_review`, `triage:export-error`
+State: `waiting`
+Tags: `triage:needs_review`, `triage:export-error`, `waiting:client_cm360_matchid_config`
 Incidents: [Q3XQABQFPPVNT5](https://growthloop.pagerduty.com/incidents/Q3XQABQFPPVNT5)
 Alerts: 2
 
 ## Current Summary
 
-Needs investigation: ASU SignalRoute 981 Campaign Manager 360 continues to fail; latest Pizza is snapshotting_finished/export_error with 1299 failures.
+Waiting on ASU/WPP/client configuration: SignalRoute 981 keeps failing CM360 uploads with NOT_FOUND for Floodlight activity/config MatchID lookups; retry alone is unlikely to help until the client confirms/fixes the MatchID/Floodlight identifier setup.
 
 ## Alert Scope
 
@@ -47,6 +47,15 @@ Check evidence:
 
 ## Recent Evidence
 
+- #eng-support has an existing ASU CM360 thread for this exact failure family. The thread identifies SignalRoute 981 endpoint app_campaign_manager_360_2130, profile_id 10219464, floodlight_activity_id 414092260, floodlightConfigurationId 9277048, and concludes the likely issue is a mismatch between the MatchID values GrowthLoop uploads and the identifiers ASU/CM360 Floodlight has seen. Support/Eng asked ASU to confirm the correct first-party identifier, hashing/normalization, and Floodlight setup; retrying without that client-side/config resolution is expected to keep failing.
+  Source: `#eng-support`; kind: `slack`; captured: `2026-05-16T22:36:50.490Z`.
+  Links: [ASU CM360 support thread](https://flywheeltechnologies.slack.com/archives/C02J2RJ6VSL/p1778536270359019).
+- Latest-run Bifrost destination logs show both CM360 export segments failed in StandardCM360Service. unique_errors_classes=[NOT_FOUND]; failed_status_sample includes floodlightActivityId=414092260, floodlightConfigurationId=9277048, matchId values, endpoint app_campaign_manager_360_2130. Batch metrics then set segment 0 failed count to 1000 and segment 1 failed count to 299, matching all 1299 Pizza failures.
+  Source: `flywheel-prod-328213 bifrost logs`; kind: `gcloud_logs`; captured: `2026-05-16T22:36:44.666Z`.
+  Command: `gcloud logging read "\"981-campaign_manager_360_object_981-scheduled__2026-05-15T00:00:00+00:00\" AND jsonPayload.message=\"Error report for StandardCM360Service\"" --project=flywheel-prod-328213 --freshness=3d --limit=10 --format=json`
+- Fresh Pizza recheck: SignalRoute 981 still has no recovery. Latest row remains 2026-05-16 00:01:26 UTC, run 981-campaign_manager_360_object_981-scheduled__2026-05-15T00:00:00+00:00, snapshotting_finished/export_error with all 1299 rows failed; daily runs since 2026-04-30 have export_error except one no-delta day.
+  Source: `glcli bifrost pizza`; kind: `pizza`; captured: `2026-05-16T22:36:38.430Z`.
+  Command: `PATH="/Users/wolever/.local/share/mise/installs/gcloud/562.0.0/bin:$PATH" glcli --env prod bifrost pizza --audience-id 981 --org-id 451 --format json`
 - SignalRoute 981 still fails on latest Pizza: 2026-05-16 00:01:26 UTC, run 981-campaign_manager_360_object_981-scheduled__2026-05-15T00:00:00+00:00, snapshotting_finished/export_error with 1299 failures.
   Source: `glcli bifrost pizza`; kind: `pizza`; captured: `2026-05-16T22:09:13.977Z`.
   Command: `glcli --env prod bifrost pizza --audience-id 981 --org-id 451 --format json`

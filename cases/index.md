@@ -1,6 +1,6 @@
 # On-call Triage Cases
 
-Generated: 2026-05-16T22:34:03.553Z
+Generated: 2026-05-16T22:36:55.563Z
 Open groups: 44
 Alert facts: 698
 
@@ -17,14 +17,13 @@ Alert facts: 698
 | `triage:needs_review` | [260514-allegro_3-dv360-export-processing](groups/new/260514-allegro_3-dv360-export-processing/case.md) | allegro (Marketing): Exports for audience 1156 failed with states: <(snapshotting_finished,export_processing)> | Q2KT0WUDEVL42Q | 13 |
 | `triage:needs_review` | [260515-allegro_3-dv360-export-processing](groups/new/260515-allegro_3-dv360-export-processing/case.md) | allegro (Marketing): Exports for audience 605 failed with states: <(snapshotting_finished,export_processing)> | Q3GQQRY1UQLBSN | 1 |
 
-## Open (26)
+## Open (25)
 
 | Tags | Group | Summary | Incidents | Alerts |
 |---|---|---|---|---:|
 | `triage:needs_review` | [260511-allegro_3-dv360-export-error](groups/open/260511-allegro_3-dv360-export-error/case.md) | allegro (Marketing): Exports for audience 731 failed with states: <(snapshotting_finished,export_error)> | Q3HYNV525MK1RW | 8 |
 | `triage:needs_review` | [260513-trumanshow_336-client-sent-export-failure](groups/open/260513-trumanshow_336-client-sent-export-failure/case.md) | trumanshow (Retail & CPG) - Audience 35783: Audience Export failure for 35783 sent to client. | Q12A5QFIM3F9LN | 1 |
 | `triage:needs_review` | [260514-378-client-sent-export-failure](groups/open/260514-378-client-sent-export-failure/case.md) | Cincinnati Reds (default) - SignalRoute 891: SignalRoute Export failure for 891 sent to client. | Q1QD2CX8MRAYBW | 1 |
-| `triage:needs_review`<br>`triage:export-error` | [260514-451-campaign-manager-360-export-error](groups/open/260514-451-campaign-manager-360-export-error/case.md) | Needs investigation: ASU SignalRoute 981 Campaign Manager 360 continues to fail; latest Pizza is snapshotting_finished/export_error with 1299 failures. | Q3XQABQFPPVNT5 | 2 |
 | `triage:needs_review` | [260514-451-client-sent-export-failure](groups/open/260514-451-client-sent-export-failure/case.md) | ASU Enterprise Partners (Alumni) - Audience 26039: Audience Export failure for 26039 sent to client. | Q1UC14QNZK76EZ | 9 |
 | `triage:needs_review`<br>`triage:export-error` | [260514-451-salesforce-audience-export-error](groups/open/260514-451-salesforce-audience-export-error/case.md) | Needs investigation: ASU audience 31982 Salesforce audience export continues to fail; latest Pizza is snapshotting_finished/export_error with 14 failures. | Q3XQABQFPPVNT5 | 2 |
 | `triage:needs_review` | [260514-birchwood_274-client-sent-export-failure](groups/open/260514-birchwood_274-client-sent-export-failure/case.md) | birchwood (default) - SignalRoute 723: SignalRoute Export failure for 723 sent to client. | Q3PJ7W2K3Y9LJV | 1 |
@@ -60,12 +59,13 @@ Alert facts: 698
 | `triage:needs_review`<br>`triage:snapshotting-error`<br>`bug:service-quervice`<br>`triage:manual_retry_needed`<br>`monitoring:snapshotting-retry` | [grp_260513_albertsons_6_client_sent_export_failure_split_0066](groups/monitoring/grp_260513_albertsons_6_client_sent_export_failure_split_0066/case.md) | Manual retries were triggered for Albertsons LiveRamp audiences 8473 and 10073. Both latest Pizza rows now show snapshotting_processing/no_batches after retry attempts; monitor until they reach export_finished or terminal failure. 8473 has already shown renewed Quervice 502/503 pre_snapshotting_check errors in logs, while 10073 reached initial Quervice checks successfully. | Q2EJWG22CER0LA<br>Q38JR11G2ENK2W | 2 |
 | `triage:needs_review`<br>`monitoring:export-processing` | [grp_260514_albertsons_6_client_sent_export_failure_split_0068](groups/monitoring/grp_260514_albertsons_6_client_sent_export_failure_split_0068/case.md) | Monitor: audience 12875 has a newer 2026-05-16 run in export_processing after a successful 2026-05-15 run; no manual action needed unless it fails or stalls. | Q38JR11G2ENK2W | 1 |
 
-## Waiting (3)
+## Waiting (4)
 
 | Tags | Group | Summary | Incidents | Alerts |
 |---|---|---|---|---:|
 | `triage:snapshotting-schema`<br>`triage:tag_grouped`<br>`waiting:source-schema` | [260505-albertsons_6-snapshotting-schema-error](groups/waiting/260505-albertsons_6-snapshotting-schema-error/case.md) | Blocked on Albertsons source/schema remediation: scoped snapshotting logs show missing fields in RFM_Category_Group, and live pizza shows no later successful terminal export for the five alert-scoped runs. | Q2T09VCLN9MRZ8 | 5 |
 | `triage:needs_review`<br>`waiting:client_schema`<br>`triage:client_schema_missing` | [260511-albertsons_6-snapshotting-error](groups/waiting/260511-albertsons_6-snapshotting-error/case.md) | Waiting on support/client remediation: five Albertsons LiveRamp export-run alerts still fail snapshotting with missing_table_field, and three client-sent alerts for the same schema-affected audiences were merged here. | Q2T09VCLN9MRZ8 | 8 |
+| `triage:needs_review`<br>`triage:export-error`<br>`waiting:client_cm360_matchid_config` | [260514-451-campaign-manager-360-export-error](groups/waiting/260514-451-campaign-manager-360-export-error/case.md) | Waiting on ASU/WPP/client configuration: SignalRoute 981 keeps failing CM360 uploads with NOT_FOUND for Floodlight activity/config MatchID lookups; retry alone is unlikely to help until the client confirms/fixes the MatchID/Floodlight identifier setup. | Q3XQABQFPPVNT5 | 2 |
 | `triage:needs_review`<br>`triage:client_schema_missing`<br>`waiting:client_schema` | [260515-gopuff_544-snapshotting-error](groups/waiting/260515-gopuff_544-snapshotting-error/case.md) | Waiting on support/client remediation for missing source column CORE.GOPUFF_ORDER_ITEMS.CLASS in GoPuff Snowflake source schema; support thread opened. | Q1X9CE7BIDK9MV | 1 |
 
 ## Resolved (28)

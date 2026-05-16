@@ -154,21 +154,6 @@
     "path": "groups/open/260514-378-client-sent-export-failure/case.md"
   },
   {
-    "group_id": "260514-451-campaign-manager-360-export-error",
-    "state": "open",
-    "tags": [
-      "triage:needs_review",
-      "triage:export-error"
-    ],
-    "title": "451 campaign-manager-360 export-error",
-    "summary": "Needs investigation: ASU SignalRoute 981 Campaign Manager 360 continues to fail; latest Pizza is snapshotting_finished/export_error with 1299 failures.",
-    "incident_ids": [
-      "Q3XQABQFPPVNT5"
-    ],
-    "alert_count": 2,
-    "path": "groups/open/260514-451-campaign-manager-360-export-error/case.md"
-  },
-  {
     "group_id": "260514-451-client-sent-export-failure",
     "state": "open",
     "tags": [
@@ -618,6 +603,22 @@
     ],
     "alert_count": 8,
     "path": "groups/waiting/260511-albertsons_6-snapshotting-error/case.md"
+  },
+  {
+    "group_id": "260514-451-campaign-manager-360-export-error",
+    "state": "waiting",
+    "tags": [
+      "triage:needs_review",
+      "triage:export-error",
+      "waiting:client_cm360_matchid_config"
+    ],
+    "title": "451 campaign-manager-360 export-error",
+    "summary": "Waiting on ASU/WPP/client configuration: SignalRoute 981 keeps failing CM360 uploads with NOT_FOUND for Floodlight activity/config MatchID lookups; retry alone is unlikely to help until the client confirms/fixes the MatchID/Floodlight identifier setup.",
+    "incident_ids": [
+      "Q3XQABQFPPVNT5"
+    ],
+    "alert_count": 2,
+    "path": "groups/waiting/260514-451-campaign-manager-360-export-error/case.md"
   },
   {
     "group_id": "260515-gopuff_544-snapshotting-error",
