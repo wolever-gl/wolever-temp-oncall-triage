@@ -5,6 +5,12 @@
       "reason": "This laptop cannot access the Allegro Bifrost proxy; skip Pizza/export preflight checks for this environment.",
       "updated_at": "2026-05-16",
       "source": "operator"
+    },
+    "albertsons": {
+      "status": "unavailable",
+      "reason": "This laptop could not connect to the Albertsons Bifrost proxy during preflight; skip Pizza/export preflight checks for this environment.",
+      "updated_at": "2026-05-16",
+      "source": "preflight_observed"
     }
   }
 }

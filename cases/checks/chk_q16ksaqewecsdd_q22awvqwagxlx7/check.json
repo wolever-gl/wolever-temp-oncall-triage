@@ -1,0 +1,68 @@
+{
+  "check_id": "chk_q16ksaqewecsdd_q22awvqwagxlx7",
+  "source": "pagerduty",
+  "incident_id": "Q16KSAQEWECSDD",
+  "alert_id": "Q22AWVQWAGXLX7",
+  "state": "healthy_closed",
+  "scope": {
+    "env": "nascar_aws",
+    "org_id": "2",
+    "audience_id": "125",
+    "destination_type": "dynamics_object",
+    "checked_export_run_ids": [
+      "125-dynamics_object_125-scheduled__2026-05-13T12:15:00+00:00"
+    ],
+    "glcli": "glcli --env nascar_aws bifrost pizza --audience-id 125 --org-id 2"
+  },
+  "scope_key": "nascar_aws|2|125|dynamics_object|unknown_endpoint|125-dynamics_object_125-scheduled__2026-05-13T12:15:00+00:00",
+  "run_evaluations": [
+    {
+      "export_run_id": "125-dynamics_object_125-scheduled__2026-05-13T12:15:00+00:00",
+      "health": "healthy",
+      "match_basis": "checked_export_run_id",
+      "blockers": [],
+      "selected_row": {
+        "export_run_id": "125-dynamics_object_125-scheduled__2026-05-13T12:15:00+00:00",
+        "audience_id": "125",
+        "destination_type": "dynamics_object",
+        "created_at": "2026-05-14T12:16:42.436332+00:00",
+        "snapshotting_state": "snapshotting_finished",
+        "export_state": "no_batches",
+        "failed_export_count": 0,
+        "raw": {
+          "export_state": "no_batches",
+          "successful_add_count": 0,
+          "successful_remove_count": 0,
+          "failed_export_count": 0,
+          "rejected_row_count": 0,
+          "total_row_count": 0,
+          "successful_expanded_add_count": 0,
+          "successful_expanded_remove_count": 0,
+          "failed_expanded_export_count": 0,
+          "rejected_expanded_row_count": 0,
+          "total_expanded_row_count": 0,
+          "enhanced_match_count": 0,
+          "enhanced_row_count": 0,
+          "enhanced_total_records": 0,
+          "total_batch_count": 0,
+          "completed_batch_count": 0,
+          "successful_batch_count": 0,
+          "failed_batch_count": 0,
+          "failure_reason": null,
+          "info": {
+            "internal_audience_id": "125",
+            "export_run_id": "125-dynamics_object_125-scheduled__2026-05-13T12:15:00+00:00",
+            "export_timestamp": "2026-05-14 12:16:42",
+            "created_at": "2026-05-14T12:16:42.436332+00:00"
+          },
+          "snapshotting_state": "snapshotting_finished"
+        }
+      }
+    }
+  ],
+  "blockers": [],
+  "evidence_artifacts": [],
+  "created_at": "2026-05-16T21:05:41.586Z",
+  "updated_at": "2026-05-16T21:05:41.586Z",
+  "closed_at": "2026-05-16T21:05:41.586Z"
+}

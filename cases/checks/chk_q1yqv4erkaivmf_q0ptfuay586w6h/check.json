@@ -1,0 +1,141 @@
+{
+  "check_id": "chk_q1yqv4erkaivmf_q0ptfuay586w6h",
+  "source": "pagerduty",
+  "incident_id": "Q1YQV4ERKAIVMF",
+  "alert_id": "Q0PTFUAY586W6H",
+  "state": "blocked",
+  "scope": {
+    "env": "prod",
+    "org_id": "370",
+    "audience_id": "19033",
+    "destination_type": "big_query",
+    "checked_export_run_ids": [
+      "19033-big_query_14477-scheduled__2026-05-14T00:00:00+00:00",
+      "19033-web_personalization_12538-scheduled__2026-05-14T00:00:00+00:00"
+    ],
+    "glcli": "glcli --env prod bifrost pizza --audience-id 19033 --org-id 370"
+  },
+  "scope_key": "prod|370|19033|big_query|unknown_endpoint|19033-big_query_14477-scheduled__2026-05-14T00:00:00+00:00,19033-web_personalization_12538-scheduled__2026-05-14T00:00:00+00:00",
+  "run_evaluations": [
+    {
+      "export_run_id": "19033-big_query_14477-scheduled__2026-05-14T00:00:00+00:00",
+      "health": "healthy",
+      "match_basis": "checked_export_run_id",
+      "blockers": [],
+      "selected_row": {
+        "export_run_id": "19033-big_query_14477-scheduled__2026-05-14T00:00:00+00:00",
+        "audience_id": "19033",
+        "endpoint_id": "app_bigquery_1349",
+        "destination_type": "big_query",
+        "created_at": "2026-05-14T00:18:18.606477+00:00",
+        "snapshotting_state": "snapshotting_finished",
+        "export_state": "export_finished",
+        "failed_export_count": 0,
+        "raw": {
+          "export_state": "export_finished",
+          "successful_add_count": 8393,
+          "successful_remove_count": 0,
+          "failed_export_count": 0,
+          "rejected_row_count": 0,
+          "total_row_count": 8393,
+          "successful_expanded_add_count": 0,
+          "successful_expanded_remove_count": 0,
+          "failed_expanded_export_count": 0,
+          "rejected_expanded_row_count": 0,
+          "total_expanded_row_count": 8393,
+          "enhanced_match_count": 0,
+          "enhanced_row_count": 0,
+          "enhanced_total_records": 0,
+          "total_batch_count": 1,
+          "completed_batch_count": 1,
+          "successful_batch_count": 1,
+          "failed_batch_count": 0,
+          "failure_reason": null,
+          "info": {
+            "internal_export_id": "25fe88c0c0705244dfff1b907729e75d-20260514001558",
+            "export_run_id": "19033-big_query_14477-scheduled__2026-05-14T00:00:00+00:00",
+            "audience_id": null,
+            "internal_audience_id": "19033",
+            "audience_name": "",
+            "organization_id": "370",
+            "organization_name": "priceline",
+            "platform": "big_query",
+            "endpoint_id": "app_bigquery_1349",
+            "export_timestamp": "2026-05-14 00:15:58",
+            "error_file_uri": "gs://pcln-pl-dataext-prod-growthloop/batch_errors/2df2b561-0f57-442e-8504-660d7cffbd23.csv",
+            "created_at": "2026-05-14T00:18:18.606477+00:00",
+            "export_complete_response": {
+              "internal_export_id": "25fe88c0c0705244dfff1b907729e75d-20260514001558",
+              "success": true,
+              "message": "No streams to commit",
+              "retry": false,
+              "data": {}
+            }
+          },
+          "snapshotting_state": "snapshotting_finished"
+        }
+      }
+    },
+    {
+      "export_run_id": "19033-web_personalization_12538-scheduled__2026-05-14T00:00:00+00:00",
+      "health": "blocked",
+      "match_basis": "checked_export_run_id",
+      "blockers": [
+        "destination_mismatch"
+      ],
+      "selected_row": {
+        "export_run_id": "19033-web_personalization_12538-scheduled__2026-05-14T00:00:00+00:00",
+        "audience_id": "19033",
+        "endpoint_id": "app_web_personalization_1124",
+        "destination_type": "web_personalization",
+        "created_at": "2026-05-14T00:18:12.237399+00:00",
+        "snapshotting_state": "snapshotting_finished",
+        "export_state": "export_finished",
+        "failed_export_count": 0,
+        "raw": {
+          "export_state": "export_finished",
+          "successful_add_count": 8393,
+          "successful_remove_count": 0,
+          "failed_export_count": 0,
+          "rejected_row_count": 0,
+          "total_row_count": 8393,
+          "successful_expanded_add_count": 0,
+          "successful_expanded_remove_count": 0,
+          "failed_expanded_export_count": 0,
+          "rejected_expanded_row_count": 0,
+          "total_expanded_row_count": 8393,
+          "enhanced_match_count": 0,
+          "enhanced_row_count": 0,
+          "enhanced_total_records": 0,
+          "total_batch_count": 1,
+          "completed_batch_count": 1,
+          "successful_batch_count": 1,
+          "failed_batch_count": 0,
+          "failure_reason": null,
+          "info": {
+            "internal_export_id": "99c2a3e1cee195e04b02a3c536b2ae03-20260514001602",
+            "export_run_id": "19033-web_personalization_12538-scheduled__2026-05-14T00:00:00+00:00",
+            "audience_id": null,
+            "internal_audience_id": "19033",
+            "audience_name": "",
+            "organization_id": "370",
+            "organization_name": "priceline",
+            "platform": "web_personalization",
+            "endpoint_id": "app_web_personalization_1124",
+            "export_timestamp": "2026-05-14 00:16:02",
+            "error_file_uri": "gs://pcln-pl-dataext-prod-growthloop/batch_errors/6ea0ac68-7e89-4694-99aa-40e5fb191e81.csv",
+            "created_at": "2026-05-14T00:18:12.237399+00:00",
+            "export_complete_response": null
+          },
+          "snapshotting_state": "snapshotting_finished"
+        }
+      }
+    }
+  ],
+  "blockers": [
+    "destination_mismatch"
+  ],
+  "evidence_artifacts": [],
+  "created_at": "2026-05-16T20:48:51.585Z",
+  "updated_at": "2026-05-16T20:48:51.585Z"
+}

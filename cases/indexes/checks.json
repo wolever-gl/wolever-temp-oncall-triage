@@ -3359,6 +3359,80 @@
     }
   },
   {
+    "check_id": "chk_q0x2d8tr82zqv9_q0jcb7g5h5g6u4",
+    "incident_id": "Q0X2D8TR82ZQV9",
+    "alert_id": "Q0JCB7G5H5G6U4",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "18623",
+      "endpoint_id": "app_tiktok_1416",
+      "destination_type": "tik_tok",
+      "checked_export_run_ids": [
+        "18623-tik_tok_19832-scheduled__2026-05-15T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 18623 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q12a5qfim3f9ln_q05ntdx4nq1hyu",
+    "incident_id": "Q12A5QFIM3F9LN",
+    "alert_id": "Q05NTDX4NQ1HYU",
+    "state": "blocked",
+    "blockers": [
+      "export_error",
+      "export_error"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "336",
+      "audience_id": "36199",
+      "endpoint_id": "app_adobe_experience_platform_2175",
+      "destination_type": "adobe_experience_platform",
+      "checked_export_run_ids": [
+        "36199-adobe_experience_platform_22089-webapp__2026-05-08T13:13:49+00:00",
+        "36199-adobe_experience_platform_22089-webapp__2026-05-08T13:13:49+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 36199 --org-id 336"
+    }
+  },
+  {
+    "check_id": "chk_q12a5qfim3f9ln_q10guo0wfwzcao",
+    "incident_id": "Q12A5QFIM3F9LN",
+    "alert_id": "Q10GUO0WFWZCAO",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "336",
+      "audience_id": "36293",
+      "destination_type": "personalization_api",
+      "checked_export_run_ids": [
+        "36293-personalization_api_22146-webapp__2026-05-13T00:37:15+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 36293 --org-id 336"
+    }
+  },
+  {
+    "check_id": "chk_q12a5qfim3f9ln_q2pyteeb639q4i",
+    "incident_id": "Q12A5QFIM3F9LN",
+    "alert_id": "Q2PYTEEB639Q4I",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "336",
+      "audience_id": "35392",
+      "destination_type": "iterable",
+      "checked_export_run_ids": [
+        "35392-iterable_21441-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 35392 --org-id 336"
+    }
+  },
+  {
     "check_id": "chk_q12a5qfim3f9ln_q3gvov55z30y4r",
     "incident_id": "Q12A5QFIM3F9LN",
     "alert_id": "Q3GVOV55Z30Y4R",
@@ -3558,6 +3632,63 @@
       "audience_id": "5689",
       "checked_export_run_ids": [],
       "glcli": "glcli --env costco bifrost pizza --audience-id 5689 --org-id 3"
+    }
+  },
+  {
+    "check_id": "chk_q16ksaqewecsdd_q1yf7ayawe053m",
+    "incident_id": "Q16KSAQEWECSDD",
+    "alert_id": "Q1YF7AYAWE053M",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "nascar_aws",
+      "org_id": "2",
+      "audience_id": "117",
+      "destination_type": "dynamics_object",
+      "checked_export_run_ids": [
+        "117-dynamics_object_117-scheduled__2026-05-13T12:15:00+00:00"
+      ],
+      "glcli": "glcli --env nascar_aws bifrost pizza --audience-id 117 --org-id 2"
+    }
+  },
+  {
+    "check_id": "chk_q16ksaqewecsdd_q22awvqwagxlx7",
+    "incident_id": "Q16KSAQEWECSDD",
+    "alert_id": "Q22AWVQWAGXLX7",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "nascar_aws",
+      "org_id": "2",
+      "audience_id": "125",
+      "destination_type": "dynamics_object",
+      "checked_export_run_ids": [
+        "125-dynamics_object_125-scheduled__2026-05-13T12:15:00+00:00"
+      ],
+      "glcli": "glcli --env nascar_aws bifrost pizza --audience-id 125 --org-id 2"
+    }
+  },
+  {
+    "check_id": "chk_q1qd2cx8mraybw_q08txnt2toyp3q",
+    "incident_id": "Q1QD2CX8MRAYBW",
+    "alert_id": "Q08TXNT2TOYP3Q",
+    "state": "blocked",
+    "blockers": [
+      "snapshotting_error_requires_review",
+      "snapshotting_error_requires_review",
+      "snapshotting_error_requires_review"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "378",
+      "audience_id": "891",
+      "destination_type": "dynamics_object",
+      "checked_export_run_ids": [
+        "891-dynamics_object_891-scheduled__2026-05-15T12:00:00+00:00",
+        "891-dynamics_object_891-scheduled__2026-05-15T13:00:00+00:00",
+        "891-dynamics_object_891-scheduled__2026-05-15T14:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 891 --org-id 378"
     }
   },
   {
@@ -4053,6 +4184,25 @@
     }
   },
   {
+    "check_id": "chk_q1uc14qnzk76ez_q0bblwstoj1die",
+    "incident_id": "Q1UC14QNZK76EZ",
+    "alert_id": "Q0BBLWSTOJ1DIE",
+    "state": "blocked",
+    "blockers": [
+      "snapshotting_error_requires_review"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "451",
+      "audience_id": "24855",
+      "destination_type": "facebook",
+      "checked_export_run_ids": [
+        "24855-facebook_18293-scheduled__2026-05-15T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 24855 --org-id 451"
+    }
+  },
+  {
     "check_id": "chk_q1uc14qnzk76ez_q0d81k8ytrd37v",
     "incident_id": "Q1UC14QNZK76EZ",
     "alert_id": "Q0D81K8YTRD37V",
@@ -4097,6 +4247,46 @@
       "org_id": "451",
       "audience_id": "25147",
       "checked_export_run_ids": [],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 25147 --org-id 451"
+    }
+  },
+  {
+    "check_id": "chk_q1uc14qnzk76ez_q102pd4gx1c4a2",
+    "incident_id": "Q1UC14QNZK76EZ",
+    "alert_id": "Q102PD4GX1C4A2",
+    "state": "blocked",
+    "blockers": [
+      "snapshotting_error_requires_review",
+      "destination_mismatch"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "451",
+      "audience_id": "25885",
+      "destination_type": "google_adwords",
+      "checked_export_run_ids": [
+        "25885-google_adwords_16088-scheduled__2026-05-15T00:00:00+00:00",
+        "25885-microsoft_ads_16087-scheduled__2026-05-15T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 25885 --org-id 451"
+    }
+  },
+  {
+    "check_id": "chk_q1uc14qnzk76ez_q13ewj3twg2u5c",
+    "incident_id": "Q1UC14QNZK76EZ",
+    "alert_id": "Q13EWJ3TWG2U5C",
+    "state": "blocked",
+    "blockers": [
+      "snapshotting_error_requires_review"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "451",
+      "audience_id": "25147",
+      "destination_type": "marketing_cloud",
+      "checked_export_run_ids": [
+        "25147-marketing_cloud_15450-scheduled__2026-05-15T00:00:00+00:00"
+      ],
       "glcli": "glcli --env prod bifrost pizza --audience-id 25147 --org-id 451"
     }
   },
@@ -4149,6 +4339,37 @@
     }
   },
   {
+    "check_id": "chk_q1uc14qnzk76ez_q1rkueo3q27vxh",
+    "incident_id": "Q1UC14QNZK76EZ",
+    "alert_id": "Q1RKUEO3Q27VXH",
+    "state": "blocked",
+    "blockers": [
+      "snapshotting_error_requires_review",
+      "destination_mismatch",
+      "destination_mismatch",
+      "destination_mismatch",
+      "destination_mismatch",
+      "destination_mismatch",
+      "destination_mismatch"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "451",
+      "audience_id": "26037",
+      "destination_type": "reddit_ads",
+      "checked_export_run_ids": [
+        "26037-reddit_ads_16102-scheduled__2026-05-15T00:00:00+00:00",
+        "26037-linkedin_ads_16093-scheduled__2026-05-15T00:00:00+00:00",
+        "26037-microsoft_ads_16084-scheduled__2026-05-15T00:00:00+00:00",
+        "26037-google_adwords_18971-scheduled__2026-05-15T00:00:00+00:00",
+        "26037-viant_16628-scheduled__2026-05-15T00:00:00+00:00",
+        "26037-google_adwords_16090-scheduled__2026-05-15T00:00:00+00:00",
+        "26037-facebook_16103-scheduled__2026-05-15T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 26037 --org-id 451"
+    }
+  },
+  {
     "check_id": "chk_q1uc14qnzk76ez_q1s3oko4s0kh1m",
     "incident_id": "Q1UC14QNZK76EZ",
     "alert_id": "Q1S3OKO4S0KH1M",
@@ -4197,6 +4418,2847 @@
     }
   },
   {
+    "check_id": "chk_q1uc14qnzk76ez_q2vj695tkn2fpf",
+    "incident_id": "Q1UC14QNZK76EZ",
+    "alert_id": "Q2VJ695TKN2FPF",
+    "state": "blocked",
+    "blockers": [
+      "snapshotting_error_requires_review",
+      "destination_mismatch"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "451",
+      "audience_id": "26039",
+      "destination_type": "viant",
+      "checked_export_run_ids": [
+        "26039-viant_16920-scheduled__2026-05-15T00:00:00+00:00",
+        "26039-google_adwords_18977-scheduled__2026-05-15T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 26039 --org-id 451"
+    }
+  },
+  {
+    "check_id": "chk_q1uc14qnzk76ez_q3qyqwzlehzn1l",
+    "incident_id": "Q1UC14QNZK76EZ",
+    "alert_id": "Q3QYQWZLEHZN1L",
+    "state": "blocked",
+    "blockers": [
+      "snapshotting_error_requires_review"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "451",
+      "audience_id": "25884",
+      "destination_type": "reddit_ads",
+      "checked_export_run_ids": [
+        "25884-reddit_ads_16101-scheduled__2026-05-15T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 25884 --org-id 451"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q00wz1wweqkptm",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q00WZ1WWEQKPTM",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "33819",
+      "destination_type": "google_adwords",
+      "checked_export_run_ids": [
+        "33819-google_adwords_20698-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 33819 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q02nle8nn299pr",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q02NLE8NN299PR",
+    "state": "blocked",
+    "blockers": [
+      "failed_export_count"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "671",
+      "destination_type": "iterable_object",
+      "checked_export_run_ids": [
+        "671-iterable_object_671-scheduled__2026-05-12T17:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 671 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q02t2crnhmdygp",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q02T2CRNHMDYGP",
+    "state": "blocked",
+    "blockers": [
+      "destination_mismatch",
+      "destination_mismatch"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "32411",
+      "destination_type": "facebook",
+      "checked_export_run_ids": [
+        "32411-facebook_19862-scheduled__2026-05-14T00:00:00+00:00",
+        "32411-snapchat_19863-scheduled__2026-05-14T00:00:00+00:00",
+        "32411-tik_tok_19864-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 32411 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q03kgz1pfd2o15",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q03KGZ1PFD2O15",
+    "state": "blocked",
+    "blockers": [
+      "destination_mismatch"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "18486",
+      "destination_type": "microsoft_ads",
+      "checked_export_run_ids": [
+        "18486-microsoft_ads_11776-scheduled__2026-05-14T00:00:00+00:00",
+        "18486-google_adwords_11775-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 18486 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q04m7qqsuex4gp",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q04M7QQSUEX4GP",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "23897",
+      "destination_type": "gam360",
+      "checked_export_run_ids": [
+        "23897-gam360_15464-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 23897 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q04tbdvv318r2n",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q04TBDVV318R2N",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "24019",
+      "destination_type": "gam360",
+      "checked_export_run_ids": [
+        "24019-gam360_15467-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 24019 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q053pdziz78ack",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q053PDZIZ78ACK",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "23722",
+      "destination_type": "gam360",
+      "checked_export_run_ids": [
+        "23722-gam360_15469-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 23722 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q05l0szm3f4dwy",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q05L0SZM3F4DWY",
+    "state": "blocked",
+    "blockers": [
+      "destination_mismatch"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "18485",
+      "destination_type": "google_adwords",
+      "checked_export_run_ids": [
+        "18485-google_adwords_11777-scheduled__2026-05-14T00:00:00+00:00",
+        "18485-microsoft_ads_11778-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 18485 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q05yt5m83l51du",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q05YT5M83L51DU",
+    "state": "blocked",
+    "blockers": [
+      "destination_mismatch"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "18589",
+      "destination_type": "microsoft_ads",
+      "checked_export_run_ids": [
+        "18589-microsoft_ads_11756-scheduled__2026-05-14T00:00:00+00:00",
+        "18589-google_adwords_11755-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 18589 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q066sp19m6sjt4",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q066SP19M6SJT4",
+    "state": "blocked",
+    "blockers": [
+      "destination_mismatch"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "18636",
+      "destination_type": "google_adwords",
+      "checked_export_run_ids": [
+        "18636-google_adwords_11815-scheduled__2026-05-14T00:00:00+00:00",
+        "18636-microsoft_ads_11816-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 18636 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q079o1ajb840zw",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q079O1AJB840ZW",
+    "state": "blocked",
+    "blockers": [
+      "destination_mismatch"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "25912",
+      "destination_type": "big_query",
+      "checked_export_run_ids": [
+        "25912-big_query_16603-scheduled__2026-05-14T00:00:00+00:00",
+        "25912-web_personalization_16602-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 25912 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q09izumjlkg8le",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q09IZUMJLKG8LE",
+    "state": "blocked",
+    "blockers": [
+      "destination_mismatch"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "18630",
+      "destination_type": "google_adwords",
+      "checked_export_run_ids": [
+        "18630-google_adwords_11825-scheduled__2026-05-14T00:00:00+00:00",
+        "18630-microsoft_ads_11826-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 18630 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q09x0g8dsyzqd0",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q09X0G8DSYZQD0",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "23575",
+      "destination_type": "gam360",
+      "checked_export_run_ids": [
+        "23575-gam360_14969-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 23575 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q0au31o7h1teo6",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q0AU31O7H1TEO6",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "15986",
+      "destination_type": "web_personalization",
+      "checked_export_run_ids": [
+        "15986-web_personalization_10389-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 15986 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q0eu1tmiw669yx",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q0EU1TMIW669YX",
+    "state": "blocked",
+    "blockers": [
+      "destination_mismatch"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "18639",
+      "destination_type": "google_adwords",
+      "checked_export_run_ids": [
+        "18639-google_adwords_11809-scheduled__2026-05-14T00:00:00+00:00",
+        "18639-microsoft_ads_11810-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 18639 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q0gx876yh8y9jt",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q0GX876YH8Y9JT",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "24007",
+      "destination_type": "gam360",
+      "checked_export_run_ids": [
+        "24007-gam360_15300-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 24007 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q0hhzl7omypdit",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q0HHZL7OMYPDIT",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "23718",
+      "destination_type": "gam360",
+      "checked_export_run_ids": [
+        "23718-gam360_15282-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 23718 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q0ib56w3pdjixm",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q0IB56W3PDJIXM",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "24020",
+      "destination_type": "gam360",
+      "checked_export_run_ids": [
+        "24020-gam360_15372-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 24020 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q0iqkn726il6a3",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q0IQKN726IL6A3",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "26053",
+      "destination_type": "gam360",
+      "checked_export_run_ids": [
+        "26053-gam360_16145-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 26053 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q0jajgc7s9nniy",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q0JAJGC7S9NNIY",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "23939",
+      "destination_type": "gam360",
+      "checked_export_run_ids": [
+        "23939-gam360_15345-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 23939 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q0jlm52rs33cnu",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q0JLM52RS33CNU",
+    "state": "blocked",
+    "blockers": [
+      "destination_mismatch",
+      "destination_mismatch"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "18631",
+      "destination_type": "reddit_ads",
+      "checked_export_run_ids": [
+        "18631-reddit_ads_14565-scheduled__2026-05-14T00:00:00+00:00",
+        "18631-microsoft_ads_11824-scheduled__2026-05-14T00:00:00+00:00",
+        "18631-google_adwords_11823-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 18631 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q0jtppp2qgght2",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q0JTPPP2QGGHT2",
+    "state": "blocked",
+    "blockers": [
+      "destination_mismatch"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "18626",
+      "destination_type": "microsoft_ads",
+      "checked_export_run_ids": [
+        "18626-microsoft_ads_11835-scheduled__2026-05-14T00:00:00+00:00",
+        "18626-google_adwords_11834-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 18626 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q0jvk1rythe2v0",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q0JVK1RYTHE2V0",
+    "state": "blocked",
+    "blockers": [
+      "destination_mismatch"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "28082",
+      "destination_type": "big_query",
+      "checked_export_run_ids": [
+        "28082-big_query_17153-scheduled__2026-05-14T00:00:00+00:00",
+        "28082-web_personalization_17152-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 28082 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q0lcja8x0f09sr",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q0LCJA8X0F09SR",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "23723",
+      "destination_type": "gam360",
+      "checked_export_run_ids": [
+        "23723-gam360_15394-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 23723 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q0lx2sjf8rzoxg",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q0LX2SJF8RZOXG",
+    "state": "blocked",
+    "blockers": [
+      "failed_export_count"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "767",
+      "destination_type": "iterable_object",
+      "checked_export_run_ids": [
+        "767-iterable_object_767-scheduled__2026-05-12T17:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 767 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q0n7ex531fqy1q",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q0N7EX531FQY1Q",
+    "state": "blocked",
+    "blockers": [
+      "destination_mismatch"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "23075",
+      "destination_type": "web_personalization",
+      "checked_export_run_ids": [
+        "23075-web_personalization_14441-scheduled__2026-05-14T00:00:00+00:00",
+        "23075-big_query_14440-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 23075 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q0nlg99clslyfo",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q0NLG99CLSLYFO",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "23725",
+      "destination_type": "gam360",
+      "checked_export_run_ids": [
+        "23725-gam360_15287-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 23725 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q0o6k40hwqfw1c",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q0O6K40HWQFW1C",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "33824",
+      "destination_type": "google_adwords",
+      "checked_export_run_ids": [
+        "33824-google_adwords_20697-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 33824 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q0ptfuay586w6h",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q0PTFUAY586W6H",
+    "state": "blocked",
+    "blockers": [
+      "destination_mismatch"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "19033",
+      "destination_type": "big_query",
+      "checked_export_run_ids": [
+        "19033-big_query_14477-scheduled__2026-05-14T00:00:00+00:00",
+        "19033-web_personalization_12538-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 19033 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q0qay8fhcazl34",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q0QAY8FHCAZL34",
+    "state": "blocked",
+    "blockers": [
+      "destination_mismatch"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "18477",
+      "destination_type": "google_adwords",
+      "checked_export_run_ids": [
+        "18477-google_adwords_11793-scheduled__2026-05-14T00:00:00+00:00",
+        "18477-microsoft_ads_11794-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 18477 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q0qltbrn1wk7l8",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q0QLTBRN1WK7L8",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "23973",
+      "destination_type": "gam360",
+      "checked_export_run_ids": [
+        "23973-gam360_15698-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 23973 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q0qpl4l8zg8jrd",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q0QPL4L8ZG8JRD",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "23574",
+      "destination_type": "gam360",
+      "checked_export_run_ids": [
+        "23574-gam360_14970-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 23574 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q0si1v4sebbyql",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q0SI1V4SEBBYQL",
+    "state": "blocked",
+    "blockers": [
+      "destination_mismatch"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "28113",
+      "destination_type": "big_query",
+      "checked_export_run_ids": [
+        "28113-big_query_17209-scheduled__2026-05-14T00:00:00+00:00",
+        "28113-web_personalization_17208-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 28113 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q0sm2cvu9ys076",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q0SM2CVU9YS076",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "23760",
+      "destination_type": "gam360",
+      "checked_export_run_ids": [
+        "23760-gam360_15368-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 23760 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q0thqkelk7zal2",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q0THQKELK7ZAL2",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "24002",
+      "destination_type": "gam360",
+      "checked_export_run_ids": [
+        "24002-gam360_15374-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 24002 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q0trgew3kqnrpv",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q0TRGEW3KQNRPV",
+    "state": "blocked",
+    "blockers": [
+      "destination_mismatch"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "18634",
+      "destination_type": "google_adwords",
+      "checked_export_run_ids": [
+        "18634-google_adwords_11819-scheduled__2026-05-14T00:00:00+00:00",
+        "18634-microsoft_ads_11820-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 18634 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q0w9ft08pw70em",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q0W9FT08PW70EM",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "23563",
+      "destination_type": "gam360",
+      "checked_export_run_ids": [
+        "23563-gam360_15459-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 23563 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q0xxhdnpakn2b7",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q0XXHDNPAKN2B7",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "23724",
+      "destination_type": "gam360",
+      "checked_export_run_ids": [
+        "23724-gam360_15286-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 23724 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q0zjervx4huuve",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q0ZJERVX4HUUVE",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "23981",
+      "destination_type": "gam360",
+      "checked_export_run_ids": [
+        "23981-gam360_15306-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 23981 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q114tdsaz4cjfo",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q114TDSAZ4CJFO",
+    "state": "blocked",
+    "blockers": [
+      "destination_mismatch"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "18590",
+      "destination_type": "microsoft_ads",
+      "checked_export_run_ids": [
+        "18590-microsoft_ads_11754-scheduled__2026-05-14T00:00:00+00:00",
+        "18590-google_adwords_11753-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 18590 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q1299yis85mb3t",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q1299YIS85MB3T",
+    "state": "blocked",
+    "blockers": [
+      "failed_export_count"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "680",
+      "destination_type": "iterable_object",
+      "checked_export_run_ids": [
+        "680-iterable_object_680-scheduled__2026-05-12T17:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 680 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q12yccaeyu18g7",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q12YCCAEYU18G7",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "23993",
+      "destination_type": "gam360",
+      "checked_export_run_ids": [
+        "23993-gam360_15305-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 23993 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q13k31y27oywpx",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q13K31Y27OYWPX",
+    "state": "blocked",
+    "blockers": [
+      "destination_mismatch"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "18638",
+      "destination_type": "google_adwords",
+      "checked_export_run_ids": [
+        "18638-google_adwords_11811-scheduled__2026-05-14T00:00:00+00:00",
+        "18638-microsoft_ads_11812-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 18638 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q143g3k1rf7no3",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q143G3K1RF7NO3",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "24616",
+      "destination_type": "gam360",
+      "checked_export_run_ids": [
+        "24616-gam360_15951-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 24616 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q17vx1fgmzccc4",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q17VX1FGMZCCC4",
+    "state": "blocked",
+    "blockers": [
+      "destination_mismatch"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "18632",
+      "destination_type": "google_adwords",
+      "checked_export_run_ids": [
+        "18632-google_adwords_11821-scheduled__2026-05-14T00:00:00+00:00",
+        "18632-microsoft_ads_11822-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 18632 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q187jji58pyov2",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q187JJI58PYOV2",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "24023",
+      "destination_type": "gam360",
+      "checked_export_run_ids": [
+        "24023-gam360_15369-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 24023 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q18lht4qvu885a",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q18LHT4QVU885A",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "23966",
+      "destination_type": "gam360",
+      "checked_export_run_ids": [
+        "23966-gam360_15468-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 23966 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q19580h4hpmzh3",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q19580H4HPMZH3",
+    "state": "blocked",
+    "blockers": [
+      "destination_mismatch"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "18584",
+      "destination_type": "microsoft_ads",
+      "checked_export_run_ids": [
+        "18584-microsoft_ads_11758-scheduled__2026-05-14T00:00:00+00:00",
+        "18584-google_adwords_11757-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 18584 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q1bajk4myzd3wt",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q1BAJK4MYZD3WT",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "28824",
+      "destination_type": "web_personalization",
+      "checked_export_run_ids": [
+        "28824-web_personalization_17623-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 28824 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q1dkf9baw1qe5k",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q1DKF9BAW1QE5K",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "23996",
+      "destination_type": "gam360",
+      "checked_export_run_ids": [
+        "23996-gam360_15304-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 23996 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q1dr6j1e1no2e5",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q1DR6J1E1NO2E5",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "23940",
+      "destination_type": "gam360",
+      "checked_export_run_ids": [
+        "23940-gam360_15461-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 23940 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q1esxaqgdofjwp",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q1ESXAQGDOFJWP",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "27040",
+      "destination_type": "gam360",
+      "checked_export_run_ids": [
+        "27040-gam360_16665-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 27040 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q1fdryk4famd8h",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q1FDRYK4FAMD8H",
+    "state": "blocked",
+    "blockers": [
+      "destination_mismatch"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "23076",
+      "destination_type": "big_query",
+      "checked_export_run_ids": [
+        "23076-big_query_14438-scheduled__2026-05-14T00:00:00+00:00",
+        "23076-web_personalization_14439-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 23076 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q1gf3rjqf5lfb6",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q1GF3RJQF5LFB6",
+    "state": "blocked",
+    "blockers": [
+      "destination_mismatch"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "18625",
+      "destination_type": "microsoft_ads",
+      "checked_export_run_ids": [
+        "18625-microsoft_ads_11837-scheduled__2026-05-14T00:00:00+00:00",
+        "18625-google_adwords_11836-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 18625 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q1i7wr6eu1zyac",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q1I7WR6EU1ZYAC",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "24005",
+      "destination_type": "gam360",
+      "checked_export_run_ids": [
+        "24005-gam360_15309-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 24005 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q1j7s78n62l51b",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q1J7S78N62L51B",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "25972",
+      "destination_type": "gam360",
+      "checked_export_run_ids": [
+        "25972-gam360_16143-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 25972 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q1kotqw8mwl7p8",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q1KOTQW8MWL7P8",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "24022",
+      "destination_type": "gam360",
+      "checked_export_run_ids": [
+        "24022-gam360_15370-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 24022 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q1krl7wnklo5oy",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q1KRL7WNKLO5OY",
+    "state": "blocked",
+    "blockers": [
+      "destination_mismatch"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "18491",
+      "destination_type": "google_adwords",
+      "checked_export_run_ids": [
+        "18491-google_adwords_11767-scheduled__2026-05-14T00:00:00+00:00",
+        "18491-microsoft_ads_11768-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 18491 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q1l7qc33834pqr",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q1L7QC33834PQR",
+    "state": "blocked",
+    "blockers": [
+      "destination_mismatch"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "18627",
+      "destination_type": "microsoft_ads",
+      "checked_export_run_ids": [
+        "18627-microsoft_ads_11832-scheduled__2026-05-14T00:00:00+00:00",
+        "18627-google_adwords_11831-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 18627 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q1mbzbo77ssbrn",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q1MBZBO77SSBRN",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "23997",
+      "destination_type": "gam360",
+      "checked_export_run_ids": [
+        "23997-gam360_15377-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 23997 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q1mh1b4r2gr9vq",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q1MH1B4R2GR9VQ",
+    "state": "blocked",
+    "blockers": [
+      "destination_mismatch"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "18580",
+      "destination_type": "google_adwords",
+      "checked_export_run_ids": [
+        "18580-google_adwords_11763-scheduled__2026-05-14T00:00:00+00:00",
+        "18580-microsoft_ads_11764-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 18580 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q1neimisc39wm2",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q1NEIMISC39WM2",
+    "state": "blocked",
+    "blockers": [
+      "destination_mismatch"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "18473",
+      "destination_type": "microsoft_ads",
+      "checked_export_run_ids": [
+        "18473-microsoft_ads_11802-scheduled__2026-05-14T00:00:00+00:00",
+        "18473-google_adwords_11801-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 18473 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q1nw61glw8u5sr",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q1NW61GLW8U5SR",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "23888",
+      "destination_type": "gam360",
+      "checked_export_run_ids": [
+        "23888-gam360_15391-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 23888 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q1o0w80wgwtl2o",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q1O0W80WGWTL2O",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "25832",
+      "destination_type": "gam360",
+      "checked_export_run_ids": [
+        "25832-gam360_16038-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 25832 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q1poyvnb4kwmlw",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q1POYVNB4KWMLW",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "29387",
+      "destination_type": "web_personalization",
+      "checked_export_run_ids": [
+        "29387-web_personalization_18028-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 29387 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q1q4e907zv9fqm",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q1Q4E907ZV9FQM",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "23726",
+      "destination_type": "gam360",
+      "checked_export_run_ids": [
+        "23726-gam360_15288-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 23726 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q1qg1qnwf7rtw7",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q1QG1QNWF7RTW7",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "23977",
+      "destination_type": "gam360",
+      "checked_export_run_ids": [
+        "23977-gam360_15307-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 23977 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q1r97zgeplc7s1",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q1R97ZGEPLC7S1",
+    "state": "blocked",
+    "blockers": [
+      "destination_mismatch"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "18637",
+      "destination_type": "google_adwords",
+      "checked_export_run_ids": [
+        "18637-google_adwords_11813-scheduled__2026-05-14T00:00:00+00:00",
+        "18637-microsoft_ads_11814-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 18637 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q1vjuyj6endxnn",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q1VJUYJ6ENDXNN",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "23731",
+      "destination_type": "gam360",
+      "checked_export_run_ids": [
+        "23731-gam360_15365-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 23731 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q1vqdant3vvypv",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q1VQDANT3VVYPV",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "15882",
+      "destination_type": "web_personalization",
+      "checked_export_run_ids": [
+        "15882-web_personalization_10333-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 15882 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q1wf81b9ojqxeb",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q1WF81B9OJQXEB",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "23994",
+      "destination_type": "gam360",
+      "checked_export_run_ids": [
+        "23994-gam360_15379-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 23994 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q1wirh14mh9n3j",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q1WIRH14MH9N3J",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "23727",
+      "destination_type": "gam360",
+      "checked_export_run_ids": [
+        "23727-gam360_15289-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 23727 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q1xeba773l9es5",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q1XEBA773L9ES5",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "24021",
+      "destination_type": "gam360",
+      "checked_export_run_ids": [
+        "24021-gam360_15371-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 24021 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q1y7owps5771u4",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q1Y7OWPS5771U4",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "18911",
+      "destination_type": "web_personalization",
+      "checked_export_run_ids": [
+        "18911-web_personalization_12388-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 18911 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q1zc3ilvb1ihoi",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q1ZC3ILVB1IHOI",
+    "state": "blocked",
+    "blockers": [
+      "destination_mismatch"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "26129",
+      "destination_type": "web_personalization",
+      "checked_export_run_ids": [
+        "26129-web_personalization_16412-scheduled__2026-05-14T00:00:00+00:00",
+        "26129-big_query_16536-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 26129 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q1zzaper7wjdqn",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q1ZZAPER7WJDQN",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "23932",
+      "destination_type": "gam360",
+      "checked_export_run_ids": [
+        "23932-gam360_15460-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 23932 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q2008q2qdezwa1",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q2008Q2QDEZWA1",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "23936",
+      "destination_type": "gam360",
+      "checked_export_run_ids": [
+        "23936-gam360_15458-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 23936 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q201o3hpgfqune",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q201O3HPGFQUNE",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "33825",
+      "destination_type": "google_adwords",
+      "checked_export_run_ids": [
+        "33825-google_adwords_20696-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 33825 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q2042bbaxdggju",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q2042BBAXDGGJU",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "24618",
+      "destination_type": "gam360",
+      "checked_export_run_ids": [
+        "24618-gam360_15949-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 24618 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q20t7dggayr5m3",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q20T7DGGAYR5M3",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "33827",
+      "destination_type": "google_adwords",
+      "checked_export_run_ids": [
+        "33827-google_adwords_20694-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 33827 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q21pbseaszkeh4",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q21PBSEASZKEH4",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "23941",
+      "destination_type": "gam360",
+      "checked_export_run_ids": [
+        "23941-gam360_15308-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 23941 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q22g5chlzrmrhs",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q22G5CHLZRMRHS",
+    "state": "blocked",
+    "blockers": [
+      "destination_mismatch"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "18483",
+      "destination_type": "google_adwords",
+      "checked_export_run_ids": [
+        "18483-google_adwords_11781-scheduled__2026-05-14T00:00:00+00:00",
+        "18483-microsoft_ads_11782-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 18483 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q22r92iufyld63",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q22R92IUFYLD63",
+    "state": "blocked",
+    "blockers": [
+      "destination_mismatch"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "18478",
+      "destination_type": "microsoft_ads",
+      "checked_export_run_ids": [
+        "18478-microsoft_ads_11792-scheduled__2026-05-14T00:00:00+00:00",
+        "18478-google_adwords_11791-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 18478 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q22zam9fb09j2z",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q22ZAM9FB09J2Z",
+    "state": "blocked",
+    "blockers": [
+      "destination_mismatch"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "18629",
+      "destination_type": "microsoft_ads",
+      "checked_export_run_ids": [
+        "18629-microsoft_ads_11828-scheduled__2026-05-14T00:00:00+00:00",
+        "18629-google_adwords_11827-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 18629 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q252h6zhij3kk4",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q252H6ZHIJ3KK4",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "23995",
+      "destination_type": "gam360",
+      "checked_export_run_ids": [
+        "23995-gam360_15378-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 23995 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q26ho27013qlij",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q26HO27013QLIJ",
+    "state": "blocked",
+    "blockers": [
+      "failed_export_count"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "783",
+      "destination_type": "iterable_object",
+      "checked_export_run_ids": [
+        "783-iterable_object_783-scheduled__2026-05-12T17:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 783 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q272jhq2xs89p7",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q272JHQ2XS89P7",
+    "state": "blocked",
+    "blockers": [
+      "destination_mismatch"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "19899",
+      "destination_type": "big_query",
+      "checked_export_run_ids": [
+        "19899-big_query_14478-scheduled__2026-05-14T00:00:00+00:00",
+        "19899-web_personalization_12542-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 19899 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q27eo4vgpao1xf",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q27EO4VGPAO1XF",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "24004",
+      "destination_type": "gam360",
+      "checked_export_run_ids": [
+        "24004-gam360_15373-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 24004 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q28rgwbpcf60cs",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q28RGWBPCF60CS",
+    "state": "blocked",
+    "blockers": [
+      "destination_mismatch"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "18475",
+      "destination_type": "microsoft_ads",
+      "checked_export_run_ids": [
+        "18475-microsoft_ads_11798-scheduled__2026-05-14T00:00:00+00:00",
+        "18475-google_adwords_11797-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 18475 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q28yhaav7c90o3",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q28YHAAV7C90O3",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "19016",
+      "destination_type": "web_personalization",
+      "checked_export_run_ids": [
+        "19016-web_personalization_12033-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 19016 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q29i83ini5za9o",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q29I83INI5ZA9O",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "24025",
+      "destination_type": "gam360",
+      "checked_export_run_ids": [
+        "24025-gam360_15194-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 24025 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q2alajawyu8svk",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q2ALAJAWYU8SVK",
+    "state": "blocked",
+    "blockers": [
+      "destination_mismatch"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "18592",
+      "destination_type": "google_adwords",
+      "checked_export_run_ids": [
+        "18592-google_adwords_11749-scheduled__2026-05-14T00:00:00+00:00",
+        "18592-microsoft_ads_11750-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 18592 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q2aurjppkc6dmq",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q2AURJPPKC6DMQ",
+    "state": "blocked",
+    "blockers": [
+      "destination_mismatch"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "18480",
+      "destination_type": "google_adwords",
+      "checked_export_run_ids": [
+        "18480-google_adwords_11787-scheduled__2026-05-14T00:00:00+00:00",
+        "18480-microsoft_ads_11788-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 18480 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q2bvjgwh99zbhk",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q2BVJGWH99ZBHK",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "24299",
+      "destination_type": "gam360",
+      "checked_export_run_ids": [
+        "24299-gam360_15527-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 24299 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q2dqeq8zdpowcc",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q2DQEQ8ZDPOWCC",
+    "state": "blocked",
+    "blockers": [
+      "destination_mismatch"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "18594",
+      "destination_type": "microsoft_ads",
+      "checked_export_run_ids": [
+        "18594-microsoft_ads_11746-scheduled__2026-05-14T00:00:00+00:00",
+        "18594-google_adwords_11745-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 18594 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q2ep9qi01jrjfg",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q2EP9QI01JRJFG",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "19769",
+      "destination_type": "web_personalization",
+      "checked_export_run_ids": [
+        "19769-web_personalization_12409-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 19769 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q2f08tv5k52pnj",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q2F08TV5K52PNJ",
+    "state": "blocked",
+    "blockers": [
+      "destination_mismatch"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "28647",
+      "destination_type": "web_personalization",
+      "checked_export_run_ids": [
+        "28647-web_personalization_17505-scheduled__2026-05-14T00:00:00+00:00",
+        "28647-big_query_17506-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 28647 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q2hdcn3zpnt3wc",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q2HDCN3ZPNT3WC",
+    "state": "blocked",
+    "blockers": [
+      "destination_mismatch"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "18490",
+      "destination_type": "microsoft_ads",
+      "checked_export_run_ids": [
+        "18490-microsoft_ads_11770-scheduled__2026-05-14T00:00:00+00:00",
+        "18490-google_adwords_11769-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 18490 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q2kz363obsf2cb",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q2KZ363OBSF2CB",
+    "state": "blocked",
+    "blockers": [
+      "destination_mismatch"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "18476",
+      "destination_type": "microsoft_ads",
+      "checked_export_run_ids": [
+        "18476-microsoft_ads_11796-scheduled__2026-05-14T00:00:00+00:00",
+        "18476-google_adwords_11795-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 18476 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q2n6cze2elirrc",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q2N6CZE2ELIRRC",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "23721",
+      "destination_type": "gam360",
+      "checked_export_run_ids": [
+        "23721-gam360_15285-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 23721 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q2ns0q9m0h8t7i",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q2NS0Q9M0H8T7I",
+    "state": "blocked",
+    "blockers": [
+      "destination_mismatch"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "18474",
+      "destination_type": "microsoft_ads",
+      "checked_export_run_ids": [
+        "18474-microsoft_ads_11800-scheduled__2026-05-14T00:00:00+00:00",
+        "18474-google_adwords_11799-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 18474 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q2q27bz6da5ub1",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q2Q27BZ6DA5UB1",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "23999",
+      "destination_type": "gam360",
+      "checked_export_run_ids": [
+        "23999-gam360_15302-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 23999 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q2qjiqzn881xuc",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q2QJIQZN881XUC",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "23729",
+      "destination_type": "gam360",
+      "checked_export_run_ids": [
+        "23729-gam360_15291-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 23729 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q2qmzltxm6uk3s",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q2QMZLTXM6UK3S",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "23720",
+      "destination_type": "gam360",
+      "checked_export_run_ids": [
+        "23720-gam360_15284-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 23720 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q2quldzgrs0igq",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q2QULDZGRS0IGQ",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "23728",
+      "destination_type": "gam360",
+      "checked_export_run_ids": [
+        "23728-gam360_15290-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 23728 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q2qvz9j7xtptdy",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q2QVZ9J7XTPTDY",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "481",
+      "destination_type": "iterable_object",
+      "checked_export_run_ids": [
+        "481-iterable_object_481-scheduled__2026-05-12T17:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 481 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q2roahdpsv452b",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q2ROAHDPSV452B",
+    "state": "blocked",
+    "blockers": [
+      "destination_mismatch"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "18471",
+      "destination_type": "google_adwords",
+      "checked_export_run_ids": [
+        "18471-google_adwords_11805-scheduled__2026-05-14T00:00:00+00:00",
+        "18471-microsoft_ads_11806-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 18471 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q2steegnomi50l",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q2STEEGNOMI50L",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "23769",
+      "destination_type": "gam360",
+      "checked_export_run_ids": [
+        "23769-gam360_15528-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 23769 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q2tew0t8pktln1",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q2TEW0T8PKTLN1",
+    "state": "blocked",
+    "blockers": [
+      "failed_export_count"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "751",
+      "destination_type": "iterable_object",
+      "checked_export_run_ids": [
+        "751-iterable_object_751-scheduled__2026-05-12T17:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 751 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q2tjghr0yfusne",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q2TJGHR0YFUSNE",
+    "state": "blocked",
+    "blockers": [
+      "destination_mismatch",
+      "destination_mismatch"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "18583",
+      "destination_type": "microsoft_ads",
+      "checked_export_run_ids": [
+        "18583-microsoft_ads_11759-scheduled__2026-05-14T00:00:00+00:00",
+        "18583-google_adwords_11760-scheduled__2026-05-14T00:00:00+00:00",
+        "18583-reddit_ads_14563-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 18583 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q2uc9okfiknzpx",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q2UC9OKFIKNZPX",
+    "state": "blocked",
+    "blockers": [
+      "destination_mismatch"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "18635",
+      "destination_type": "microsoft_ads",
+      "checked_export_run_ids": [
+        "18635-microsoft_ads_11818-scheduled__2026-05-14T00:00:00+00:00",
+        "18635-google_adwords_11817-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 18635 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q2ufxn636r4sf5",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q2UFXN636R4SF5",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "23719",
+      "destination_type": "gam360",
+      "checked_export_run_ids": [
+        "23719-gam360_15283-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 23719 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q2wa3f7cq0p1mf",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q2WA3F7CQ0P1MF",
+    "state": "blocked",
+    "blockers": [
+      "destination_mismatch"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "18591",
+      "destination_type": "google_adwords",
+      "checked_export_run_ids": [
+        "18591-google_adwords_11751-scheduled__2026-05-14T00:00:00+00:00",
+        "18591-microsoft_ads_11752-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 18591 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q2wln9tnmq3xv1",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q2WLN9TNMQ3XV1",
+    "state": "blocked",
+    "blockers": [
+      "destination_mismatch"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "18593",
+      "destination_type": "google_adwords",
+      "checked_export_run_ids": [
+        "18593-google_adwords_11747-scheduled__2026-05-14T00:00:00+00:00",
+        "18593-microsoft_ads_11748-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 18593 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q2wqo3r944fcfr",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q2WQO3R944FCFR",
+    "state": "blocked",
+    "blockers": [
+      "destination_mismatch"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "18481",
+      "destination_type": "google_adwords",
+      "checked_export_run_ids": [
+        "18481-google_adwords_11785-scheduled__2026-05-14T00:00:00+00:00",
+        "18481-microsoft_ads_11786-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 18481 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q2y2syzbsq1dil",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q2Y2SYZBSQ1DIL",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "23750",
+      "destination_type": "gam360",
+      "checked_export_run_ids": [
+        "23750-gam360_15393-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 23750 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q2ywqxnbfbz6fq",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q2YWQXNBFBZ6FQ",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "35260",
+      "destination_type": "google_adwords",
+      "checked_export_run_ids": [
+        "35260-google_adwords_21359-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 35260 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q2z7o6lg2fjvav",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q2Z7O6LG2FJVAV",
+    "state": "blocked",
+    "blockers": [
+      "destination_mismatch"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "18489",
+      "destination_type": "microsoft_ads",
+      "checked_export_run_ids": [
+        "18489-microsoft_ads_11771-scheduled__2026-05-14T00:00:00+00:00",
+        "18489-google_adwords_11772-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 18489 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q312bwij4io4f0",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q312BWIJ4IO4F0",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "24024",
+      "destination_type": "gam360",
+      "checked_export_run_ids": [
+        "24024-gam360_15367-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 24024 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q32ndkxjt91yif",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q32NDKXJT91YIF",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "19770",
+      "destination_type": "web_personalization",
+      "checked_export_run_ids": [
+        "19770-web_personalization_12437-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 19770 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q345nszvzi983s",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q345NSZVZI983S",
+    "state": "blocked",
+    "blockers": [
+      "destination_mismatch"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "18479",
+      "destination_type": "google_adwords",
+      "checked_export_run_ids": [
+        "18479-google_adwords_11789-scheduled__2026-05-14T00:00:00+00:00",
+        "18479-microsoft_ads_11790-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 18479 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q35zhtufjb1fet",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q35ZHTUFJB1FET",
+    "state": "blocked",
+    "blockers": [
+      "destination_mismatch"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "18472",
+      "destination_type": "google_adwords",
+      "checked_export_run_ids": [
+        "18472-google_adwords_11803-scheduled__2026-05-14T00:00:00+00:00",
+        "18472-microsoft_ads_11804-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 18472 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q36es06e9asoii",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q36ES06E9ASOII",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "19018",
+      "destination_type": "web_personalization",
+      "checked_export_run_ids": [
+        "19018-web_personalization_12031-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 19018 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q37it6ud34sr6s",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q37IT6UD34SR6S",
+    "state": "blocked",
+    "blockers": [
+      "destination_mismatch",
+      "destination_mismatch"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "18624",
+      "destination_type": "microsoft_ads",
+      "checked_export_run_ids": [
+        "18624-microsoft_ads_11839-scheduled__2026-05-14T00:00:00+00:00",
+        "18624-reddit_ads_14564-scheduled__2026-05-14T00:00:00+00:00",
+        "18624-google_adwords_11838-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 18624 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q3aq6uj0qjq1os",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q3AQ6UJ0QJQ1OS",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "26052",
+      "destination_type": "gam360",
+      "checked_export_run_ids": [
+        "26052-gam360_16144-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 26052 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q3b2o17vqxprka",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q3B2O17VQXPRKA",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "24012",
+      "destination_type": "gam360",
+      "checked_export_run_ids": [
+        "24012-gam360_15457-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 24012 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q3d680wmj2b0z6",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q3D680WMJ2B0Z6",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "24246",
+      "destination_type": "gam360",
+      "checked_export_run_ids": [
+        "24246-gam360_15026-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 24246 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q3dhkppjle81uj",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q3DHKPPJLE81UJ",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "25971",
+      "destination_type": "gam360",
+      "checked_export_run_ids": [
+        "25971-gam360_16141-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 25971 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q3dk9cbzfd91q4",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q3DK9CBZFD91Q4",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "27041",
+      "destination_type": "gam360",
+      "checked_export_run_ids": [
+        "27041-gam360_16663-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 27041 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q3dmz30pzcn18p",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q3DMZ30PZCN18P",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "33826",
+      "destination_type": "google_adwords",
+      "checked_export_run_ids": [
+        "33826-google_adwords_20695-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 33826 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q3e5iuhcp23ogs",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q3E5IUHCP23OGS",
+    "state": "blocked",
+    "blockers": [
+      "destination_mismatch"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "18628",
+      "destination_type": "google_adwords",
+      "checked_export_run_ids": [
+        "18628-google_adwords_11829-scheduled__2026-05-14T00:00:00+00:00",
+        "18628-microsoft_ads_11830-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 18628 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q3esq50mnu5sqb",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q3ESQ50MNU5SQB",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "24000",
+      "destination_type": "gam360",
+      "checked_export_run_ids": [
+        "24000-gam360_15376-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 24000 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q3ewgwkycqo6kr",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q3EWGWKYCQO6KR",
+    "state": "blocked",
+    "blockers": [
+      "destination_mismatch"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "18484",
+      "destination_type": "microsoft_ads",
+      "checked_export_run_ids": [
+        "18484-microsoft_ads_11780-scheduled__2026-05-14T00:00:00+00:00",
+        "18484-google_adwords_11779-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 18484 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q3flhocru9wa6s",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q3FLHOCRU9WA6S",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "25768",
+      "destination_type": "gam360",
+      "checked_export_run_ids": [
+        "25768-gam360_16037-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 25768 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q3fvsdsqatpb3i",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q3FVSDSQATPB3I",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "23943",
+      "destination_type": "gam360",
+      "checked_export_run_ids": [
+        "23943-gam360_15344-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 23943 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q3n0dl9pm3m65g",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q3N0DL9PM3M65G",
+    "state": "blocked",
+    "blockers": [
+      "destination_mismatch"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "18582",
+      "destination_type": "microsoft_ads",
+      "checked_export_run_ids": [
+        "18582-microsoft_ads_11762-scheduled__2026-05-14T00:00:00+00:00",
+        "18582-google_adwords_11761-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 18582 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q3nhbr3c98layh",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q3NHBR3C98LAYH",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "23931",
+      "destination_type": "gam360",
+      "checked_export_run_ids": [
+        "23931-gam360_15462-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 23931 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q3qca2xgbrin1o",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q3QCA2XGBRIN1O",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "23988",
+      "destination_type": "gam360",
+      "checked_export_run_ids": [
+        "23988-gam360_15380-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 23988 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q3qztn7l0tmxc3",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q3QZTN7L0TMXC3",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "24026",
+      "destination_type": "gam360",
+      "checked_export_run_ids": [
+        "24026-gam360_15366-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 24026 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q3riyrbkritmty",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q3RIYRBKRITMTY",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "24001",
+      "destination_type": "gam360",
+      "checked_export_run_ids": [
+        "24001-gam360_15375-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 24001 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q3so8nh5t4r9vx",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q3SO8NH5T4R9VX",
+    "state": "blocked",
+    "blockers": [
+      "destination_mismatch"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "18488",
+      "destination_type": "microsoft_ads",
+      "checked_export_run_ids": [
+        "18488-microsoft_ads_11774-scheduled__2026-05-14T00:00:00+00:00",
+        "18488-google_adwords_11773-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 18488 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q3ss2ztsn3ywf0",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q3SS2ZTSN3YWF0",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "23827",
+      "destination_type": "gam360",
+      "checked_export_run_ids": [
+        "23827-gam360_15392-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 23827 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q3t01fvu5ojrua",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q3T01FVU5OJRUA",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "23934",
+      "destination_type": "gam360",
+      "checked_export_run_ids": [
+        "23934-gam360_15346-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 23934 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q3ts2yqpyai79p",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q3TS2YQPYAI79P",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "25967",
+      "destination_type": "gam360",
+      "checked_export_run_ids": [
+        "25967-gam360_16142-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 25967 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q3tx2qalx2rszk",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q3TX2QALX2RSZK",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "23930",
+      "destination_type": "gam360",
+      "checked_export_run_ids": [
+        "23930-gam360_15463-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 23930 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q3v13159npgwu3",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q3V13159NPGWU3",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "19038",
+      "destination_type": "gam360",
+      "checked_export_run_ids": [
+        "19038-gam360_12037-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 19038 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q3vjn3wpot334z",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q3VJN3WPOT334Z",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "19017",
+      "destination_type": "web_personalization",
+      "checked_export_run_ids": [
+        "19017-web_personalization_12032-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 19017 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q3w0stffsiez17",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q3W0STFFSIEZ17",
+    "state": "blocked",
+    "blockers": [
+      "destination_mismatch"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "18482",
+      "destination_type": "microsoft_ads",
+      "checked_export_run_ids": [
+        "18482-microsoft_ads_11784-scheduled__2026-05-14T00:00:00+00:00",
+        "18482-google_adwords_11783-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 18482 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q3x5s80ochxuj4",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q3X5S80OCHXUJ4",
+    "state": "blocked",
+    "blockers": [
+      "destination_mismatch"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "18492",
+      "destination_type": "google_adwords",
+      "checked_export_run_ids": [
+        "18492-google_adwords_11765-scheduled__2026-05-14T00:00:00+00:00",
+        "18492-microsoft_ads_11766-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 18492 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q3xoue2je9haks",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q3XOUE2JE9HAKS",
+    "state": "blocked",
+    "blockers": [
+      "destination_mismatch",
+      "destination_mismatch",
+      "destination_mismatch",
+      "destination_mismatch",
+      "destination_mismatch"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "18623",
+      "destination_type": "tik_tok",
+      "checked_export_run_ids": [
+        "18623-tik_tok_19832-scheduled__2026-05-14T00:00:00+00:00",
+        "18623-snapchat_19833-scheduled__2026-05-14T00:00:00+00:00",
+        "18623-google_adwords_11841-scheduled__2026-05-14T00:00:00+00:00",
+        "18623-facebook_19834-scheduled__2026-05-14T00:00:00+00:00",
+        "18623-microsoft_ads_11840-scheduled__2026-05-14T00:00:00+00:00",
+        "18623-reddit_ads_14566-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 18623 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q1yqv4erkaivmf_q3xva0kticiezt",
+    "incident_id": "Q1YQV4ERKAIVMF",
+    "alert_id": "Q3XVA0KTICIEZT",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "370",
+      "audience_id": "23998",
+      "destination_type": "gam360",
+      "checked_export_run_ids": [
+        "23998-gam360_15303-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 23998 --org-id 370"
+    }
+  },
+  {
+    "check_id": "chk_q20xi8kk8ywadb_q1v8k8gs8ktx2i",
+    "incident_id": "Q20XI8KK8YWADB",
+    "alert_id": "Q1V8K8GS8KTX2I",
+    "state": "blocked",
+    "blockers": [
+      "missing_run_identity"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "174",
+      "audience_id": "36378",
+      "checked_export_run_ids": [],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 36378 --org-id 174"
+    }
+  },
+  {
+    "check_id": "chk_q20xi8kk8ywadb_q34fugoiwl0yyv",
+    "incident_id": "Q20XI8KK8YWADB",
+    "alert_id": "Q34FUGOIWL0YYV",
+    "state": "blocked",
+    "blockers": [
+      "snapshotting_error_requires_review",
+      "snapshotting_error_requires_review"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "174",
+      "audience_id": "23746",
+      "destination_type": "marketing_cloud",
+      "checked_export_run_ids": [
+        "23746-marketing_cloud_14765-scheduled__2026-05-06T00:00:00+00:00",
+        "23746-marketing_cloud_14765-scheduled__2026-05-13T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 23746 --org-id 174"
+    }
+  },
+  {
     "check_id": "chk_q22u9ui0btfnjc_q0k1h7m6l0bbdh",
     "incident_id": "Q22U9UI0BTFNJC",
     "alert_id": "Q0K1H7M6L0BBDH",
@@ -4210,6 +7272,562 @@
       "audience_id": "29790",
       "checked_export_run_ids": [],
       "glcli": "glcli --env prod bifrost pizza --audience-id 29790 --org-id 402"
+    }
+  },
+  {
+    "check_id": "chk_q269wmzf4mkmnl_q0bqkjwvbsb8ay",
+    "incident_id": "Q269WMZF4MKMNL",
+    "alert_id": "Q0BQKJWVBSB8AY",
+    "state": "open",
+    "blockers": [
+      "evidence_unavailable"
+    ],
+    "next_check_at": "2026-05-16T21:19:05.732Z",
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "10685",
+      "checked_export_run_ids": [],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 10685 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q269wmzf4mkmnl_q1e9rq6efi68fv",
+    "incident_id": "Q269WMZF4MKMNL",
+    "alert_id": "Q1E9RQ6EFI68FV",
+    "state": "open",
+    "blockers": [
+      "evidence_unavailable"
+    ],
+    "next_check_at": "2026-05-16T21:19:05.732Z",
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "10684",
+      "checked_export_run_ids": [],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 10684 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q29i2ivnnvk80x_q0ljemvw0z0uui",
+    "incident_id": "Q29I2IVNNVK80X",
+    "alert_id": "Q0LJEMVW0Z0UUI",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "395",
+      "audience_id": "36059",
+      "endpoint_id": "app_marketing_cloud_1135",
+      "destination_type": "marketing_cloud",
+      "checked_export_run_ids": [
+        "36059-marketing_cloud_21999-scheduled__2026-05-14T16:30:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 36059 --org-id 395"
+    }
+  },
+  {
+    "check_id": "chk_q2cemyyj9n4iax_q3qqz6v22uzc2a",
+    "incident_id": "Q2CEMYYJ9N4IAX",
+    "alert_id": "Q3QQZ6V22UZC2A",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "373",
+      "audience_id": "28175",
+      "endpoint_id": "app_tiktok_1899",
+      "destination_type": "tik_tok",
+      "checked_export_run_ids": [
+        "28175-tik_tok_17978-scheduled__2026-05-06T00:00:00+00:00",
+        "28175-tik_tok_17978-scheduled__2026-05-07T00:00:00+00:00",
+        "28175-tik_tok_17978-scheduled__2026-05-08T00:00:00+00:00",
+        "28175-tik_tok_17978-scheduled__2026-05-09T00:00:00+00:00",
+        "28175-tik_tok_17978-scheduled__2026-05-10T00:00:00+00:00",
+        "28175-tik_tok_17978-scheduled__2026-05-11T00:00:00+00:00",
+        "28175-tik_tok_17978-scheduled__2026-05-12T00:00:00+00:00",
+        "28175-tik_tok_17978-scheduled__2026-05-13T00:00:00+00:00",
+        "28175-tik_tok_17978-scheduled__2026-05-14T00:00:00+00:00",
+        "28175-tik_tok_17978-scheduled__2026-05-15T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 28175 --org-id 373"
+    }
+  },
+  {
+    "check_id": "chk_q2djcy3xc2bsbg_q02703iiw4po6c",
+    "incident_id": "Q2DJCY3XC2BSBG",
+    "alert_id": "Q02703IIW4PO6C",
+    "state": "blocked",
+    "blockers": [
+      "destination_mismatch",
+      "destination_mismatch",
+      "destination_mismatch",
+      "destination_mismatch",
+      "destination_mismatch",
+      "destination_mismatch",
+      "destination_mismatch",
+      "destination_mismatch",
+      "destination_mismatch",
+      "destination_mismatch",
+      "destination_mismatch"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "219",
+      "audience_id": "31361",
+      "destination_type": "facebook",
+      "checked_export_run_ids": [
+        "31361-facebook_19913-scheduled__2026-05-13T00:00:00+00:00",
+        "31361-facebook_19085-scheduled__2026-05-13T00:00:00+00:00",
+        "31361-linkedin_ads_19875-scheduled__2026-05-13T00:00:00+00:00",
+        "31361-linkedin_ads_19856-scheduled__2026-05-13T00:00:00+00:00",
+        "31361-linkedin_ads_19331-scheduled__2026-05-13T00:00:00+00:00",
+        "31361-linkedin_ads_20667-scheduled__2026-05-13T00:00:00+00:00",
+        "31361-linkedin_ads_19427-scheduled__2026-05-13T00:00:00+00:00",
+        "31361-facebook_19913-scheduled__2026-05-14T00:00:00+00:00",
+        "31361-linkedin_ads_19856-scheduled__2026-05-14T00:00:00+00:00",
+        "31361-linkedin_ads_20667-scheduled__2026-05-14T00:00:00+00:00",
+        "31361-linkedin_ads_19427-scheduled__2026-05-14T00:00:00+00:00",
+        "31361-linkedin_ads_19875-scheduled__2026-05-14T00:00:00+00:00",
+        "31361-facebook_19085-scheduled__2026-05-14T00:00:00+00:00",
+        "31361-live_ramp_sftp_19086-scheduled__2026-05-14T00:00:00+00:00",
+        "31361-linkedin_ads_19331-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 31361 --org-id 219"
+    }
+  },
+  {
+    "check_id": "chk_q2djcy3xc2bsbg_q0788517neyw5k",
+    "incident_id": "Q2DJCY3XC2BSBG",
+    "alert_id": "Q0788517NEYW5K",
+    "state": "blocked",
+    "blockers": [
+      "destination_mismatch",
+      "destination_mismatch",
+      "destination_mismatch",
+      "destination_mismatch"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "219",
+      "audience_id": "31656",
+      "destination_type": "facebook",
+      "checked_export_run_ids": [
+        "31656-facebook_19290-scheduled__2026-05-13T00:00:00+00:00",
+        "31656-facebook_20031-scheduled__2026-05-13T00:00:00+00:00",
+        "31656-tik_tok_21085-scheduled__2026-05-13T00:00:00+00:00",
+        "31656-tik_tok_21089-scheduled__2026-05-13T00:00:00+00:00",
+        "31656-facebook_21084-scheduled__2026-05-13T00:00:00+00:00",
+        "31656-facebook_19290-scheduled__2026-05-14T00:00:00+00:00",
+        "31656-facebook_21084-scheduled__2026-05-14T00:00:00+00:00",
+        "31656-tik_tok_21089-scheduled__2026-05-14T00:00:00+00:00",
+        "31656-facebook_20031-scheduled__2026-05-14T00:00:00+00:00",
+        "31656-tik_tok_21085-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 31656 --org-id 219"
+    }
+  },
+  {
+    "check_id": "chk_q2djcy3xc2bsbg_q09i74zyevzpsq",
+    "incident_id": "Q2DJCY3XC2BSBG",
+    "alert_id": "Q09I74ZYEVZPSQ",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "219",
+      "audience_id": "31381",
+      "destination_type": "live_ramp_sftp",
+      "checked_export_run_ids": [
+        "31381-live_ramp_sftp_19096-scheduled__2026-04-14T00:00:00+00:00",
+        "31381-live_ramp_sftp_19096-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 31381 --org-id 219"
+    }
+  },
+  {
+    "check_id": "chk_q2djcy3xc2bsbg_q0sbo9kd9fonzw",
+    "incident_id": "Q2DJCY3XC2BSBG",
+    "alert_id": "Q0SBO9KD9FONZW",
+    "state": "blocked",
+    "blockers": [
+      "destination_mismatch",
+      "destination_mismatch",
+      "destination_mismatch",
+      "destination_mismatch",
+      "destination_mismatch",
+      "destination_mismatch",
+      "destination_mismatch",
+      "destination_mismatch",
+      "destination_mismatch",
+      "destination_mismatch",
+      "destination_mismatch",
+      "destination_mismatch"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "219",
+      "audience_id": "31366",
+      "destination_type": "facebook",
+      "checked_export_run_ids": [
+        "31366-facebook_19091-scheduled__2026-04-15T00:00:00+00:00",
+        "31366-linkedin_ads_19332-scheduled__2026-04-15T00:00:00+00:00",
+        "31366-facebook_19091-scheduled__2026-04-16T00:00:00+00:00",
+        "31366-linkedin_ads_19332-scheduled__2026-04-16T00:00:00+00:00",
+        "31366-facebook_20030-scheduled__2026-04-16T00:00:00+00:00",
+        "31366-linkedin_ads_19332-scheduled__2026-04-17T00:00:00+00:00",
+        "31366-facebook_20030-scheduled__2026-04-17T00:00:00+00:00",
+        "31366-facebook_19091-scheduled__2026-04-17T00:00:00+00:00",
+        "31366-linkedin_ads_19332-scheduled__2026-04-18T00:00:00+00:00",
+        "31366-facebook_20030-scheduled__2026-04-18T00:00:00+00:00",
+        "31366-facebook_19091-scheduled__2026-04-18T00:00:00+00:00",
+        "31366-facebook_19091-scheduled__2026-04-19T00:00:00+00:00",
+        "31366-linkedin_ads_19332-scheduled__2026-04-19T00:00:00+00:00",
+        "31366-facebook_20030-scheduled__2026-04-19T00:00:00+00:00",
+        "31366-facebook_19091-scheduled__2026-04-20T00:00:00+00:00",
+        "31366-linkedin_ads_19332-scheduled__2026-04-20T00:00:00+00:00",
+        "31366-facebook_20030-scheduled__2026-04-20T00:00:00+00:00",
+        "31366-linkedin_ads_19332-scheduled__2026-04-21T00:00:00+00:00",
+        "31366-facebook_20030-scheduled__2026-04-21T00:00:00+00:00",
+        "31366-facebook_19091-scheduled__2026-04-21T00:00:00+00:00",
+        "31366-linkedin_ads_19332-scheduled__2026-04-22T00:00:00+00:00",
+        "31366-facebook_20030-scheduled__2026-04-22T00:00:00+00:00",
+        "31366-facebook_19091-scheduled__2026-04-22T00:00:00+00:00",
+        "31366-facebook_19091-scheduled__2026-04-23T00:00:00+00:00",
+        "31366-linkedin_ads_19332-scheduled__2026-04-23T00:00:00+00:00",
+        "31366-facebook_20030-scheduled__2026-04-23T00:00:00+00:00",
+        "31366-facebook_20030-scheduled__2026-05-13T00:00:00+00:00",
+        "31366-facebook_19091-scheduled__2026-05-13T00:00:00+00:00",
+        "31366-linkedin_ads_19332-scheduled__2026-05-13T00:00:00+00:00",
+        "31366-live_ramp_sftp_19095-scheduled__2026-05-14T00:00:00+00:00",
+        "31366-facebook_19091-scheduled__2026-05-14T00:00:00+00:00",
+        "31366-linkedin_ads_19332-scheduled__2026-05-14T00:00:00+00:00",
+        "31366-facebook_20030-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 31366 --org-id 219"
+    }
+  },
+  {
+    "check_id": "chk_q2djcy3xc2bsbg_q1vil2atkpywaw",
+    "incident_id": "Q2DJCY3XC2BSBG",
+    "alert_id": "Q1VIL2ATKPYWAW",
+    "state": "blocked",
+    "blockers": [
+      "destination_mismatch"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "219",
+      "audience_id": "30678",
+      "destination_type": "facebook",
+      "checked_export_run_ids": [
+        "30678-facebook_19071-scheduled__2026-04-12T00:00:00+00:00",
+        "30678-facebook_19071-scheduled__2026-04-13T00:00:00+00:00",
+        "30678-facebook_19071-scheduled__2026-04-15T00:00:00+00:00",
+        "30678-facebook_19071-scheduled__2026-04-17T00:00:00+00:00",
+        "30678-facebook_19071-scheduled__2026-04-23T00:00:00+00:00",
+        "30678-live_ramp_sftp_19072-scheduled__2026-05-13T00:00:00+00:00",
+        "30678-facebook_19071-scheduled__2026-05-13T00:00:00+00:00",
+        "30678-facebook_19071-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 30678 --org-id 219"
+    }
+  },
+  {
+    "check_id": "chk_q2djcy3xc2bsbg_q278x02prsovh4",
+    "incident_id": "Q2DJCY3XC2BSBG",
+    "alert_id": "Q278X02PRSOVH4",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "219",
+      "audience_id": "31918",
+      "destination_type": "facebook",
+      "checked_export_run_ids": [
+        "31918-facebook_19538-scheduled__2026-04-11T00:00:00+00:00",
+        "31918-facebook_19538-scheduled__2026-04-12T00:00:00+00:00",
+        "31918-facebook_19538-scheduled__2026-04-13T00:00:00+00:00",
+        "31918-facebook_19538-scheduled__2026-04-14T00:00:00+00:00",
+        "31918-facebook_19538-scheduled__2026-04-15T00:00:00+00:00",
+        "31918-facebook_19538-scheduled__2026-04-16T00:00:00+00:00",
+        "31918-facebook_19538-scheduled__2026-04-17T00:00:00+00:00",
+        "31918-facebook_19538-scheduled__2026-04-18T00:00:00+00:00",
+        "31918-facebook_19538-scheduled__2026-04-19T00:00:00+00:00",
+        "31918-facebook_19538-scheduled__2026-04-20T00:00:00+00:00",
+        "31918-facebook_19538-scheduled__2026-04-21T00:00:00+00:00",
+        "31918-facebook_19538-scheduled__2026-04-22T00:00:00+00:00",
+        "31918-facebook_19538-scheduled__2026-04-23T00:00:00+00:00",
+        "31918-facebook_19538-scheduled__2026-05-13T00:00:00+00:00",
+        "31918-facebook_19538-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 31918 --org-id 219"
+    }
+  },
+  {
+    "check_id": "chk_q2djcy3xc2bsbg_q2itq0lqy11r6j",
+    "incident_id": "Q2DJCY3XC2BSBG",
+    "alert_id": "Q2ITQ0LQY11R6J",
+    "state": "blocked",
+    "blockers": [
+      "destination_mismatch",
+      "failed_export_count",
+      "export_error",
+      "failed_export_count",
+      "export_error",
+      "destination_mismatch"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "219",
+      "audience_id": "31357",
+      "destination_type": "facebook",
+      "checked_export_run_ids": [
+        "31357-facebook_19080-scheduled__2026-04-11T00:00:00+00:00",
+        "31357-facebook_19080-scheduled__2026-04-12T00:00:00+00:00",
+        "31357-facebook_19080-scheduled__2026-04-13T00:00:00+00:00",
+        "31357-facebook_19080-scheduled__2026-04-14T00:00:00+00:00",
+        "31357-live_ramp_sftp_19081-scheduled__2026-04-14T00:00:00+00:00",
+        "31357-facebook_19080-scheduled__2026-04-15T00:00:00+00:00",
+        "31357-facebook_19080-scheduled__2026-04-16T00:00:00+00:00",
+        "31357-facebook_19080-scheduled__2026-04-17T00:00:00+00:00",
+        "31357-facebook_19080-scheduled__2026-04-18T00:00:00+00:00",
+        "31357-facebook_19080-scheduled__2026-04-19T00:00:00+00:00",
+        "31357-facebook_19080-scheduled__2026-04-20T00:00:00+00:00",
+        "31357-facebook_19080-scheduled__2026-04-21T00:00:00+00:00",
+        "31357-facebook_19080-scheduled__2026-04-22T00:00:00+00:00",
+        "31357-facebook_19080-scheduled__2026-04-23T00:00:00+00:00",
+        "31357-facebook_19080-scheduled__2026-05-13T00:00:00+00:00",
+        "31357-facebook_19080-scheduled__2026-05-14T00:00:00+00:00",
+        "31357-live_ramp_sftp_19081-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 31357 --org-id 219"
+    }
+  },
+  {
+    "check_id": "chk_q2djcy3xc2bsbg_q2jqjtb6t3okca",
+    "incident_id": "Q2DJCY3XC2BSBG",
+    "alert_id": "Q2JQJTB6T3OKCA",
+    "state": "blocked",
+    "blockers": [
+      "destination_mismatch",
+      "destination_mismatch",
+      "destination_mismatch",
+      "destination_mismatch",
+      "destination_mismatch",
+      "destination_mismatch",
+      "destination_mismatch",
+      "destination_mismatch",
+      "destination_mismatch"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "219",
+      "audience_id": "31360",
+      "destination_type": "facebook",
+      "checked_export_run_ids": [
+        "31360-facebook_19084-scheduled__2026-05-13T00:00:00+00:00",
+        "31360-linkedin_ads_20669-scheduled__2026-05-13T00:00:00+00:00",
+        "31360-linkedin_ads_19342-scheduled__2026-05-13T00:00:00+00:00",
+        "31360-linkedin_ads_19855-scheduled__2026-05-13T00:00:00+00:00",
+        "31360-linkedin_ads_19874-scheduled__2026-05-13T00:00:00+00:00",
+        "31360-facebook_19912-scheduled__2026-05-13T00:00:00+00:00",
+        "31360-linkedin_ads_19342-scheduled__2026-05-14T00:00:00+00:00",
+        "31360-linkedin_ads_20669-scheduled__2026-05-14T00:00:00+00:00",
+        "31360-facebook_19084-scheduled__2026-05-14T00:00:00+00:00",
+        "31360-linkedin_ads_19855-scheduled__2026-05-14T00:00:00+00:00",
+        "31360-linkedin_ads_19874-scheduled__2026-05-14T00:00:00+00:00",
+        "31360-facebook_19912-scheduled__2026-05-14T00:00:00+00:00",
+        "31360-live_ramp_sftp_19132-scheduled__2026-05-15T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 31360 --org-id 219"
+    }
+  },
+  {
+    "check_id": "chk_q2djcy3xc2bsbg_q2nht7fc3ci1k6",
+    "incident_id": "Q2DJCY3XC2BSBG",
+    "alert_id": "Q2NHT7FC3CI1K6",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "219",
+      "audience_id": "31374",
+      "destination_type": "facebook",
+      "checked_export_run_ids": [
+        "31374-facebook_19093-scheduled__2026-04-11T00:00:00+00:00",
+        "31374-facebook_19093-scheduled__2026-04-12T00:00:00+00:00",
+        "31374-facebook_19093-scheduled__2026-04-13T00:00:00+00:00",
+        "31374-facebook_19093-scheduled__2026-04-14T00:00:00+00:00",
+        "31374-facebook_19093-scheduled__2026-04-15T00:00:00+00:00",
+        "31374-facebook_19093-scheduled__2026-04-16T00:00:00+00:00",
+        "31374-facebook_19093-scheduled__2026-04-17T00:00:00+00:00",
+        "31374-facebook_19093-scheduled__2026-04-18T00:00:00+00:00",
+        "31374-facebook_19093-scheduled__2026-04-19T00:00:00+00:00",
+        "31374-facebook_19093-scheduled__2026-04-20T00:00:00+00:00",
+        "31374-facebook_19093-scheduled__2026-04-21T00:00:00+00:00",
+        "31374-facebook_19093-scheduled__2026-04-22T00:00:00+00:00",
+        "31374-facebook_19093-scheduled__2026-04-23T00:00:00+00:00",
+        "31374-facebook_19093-scheduled__2026-05-13T00:00:00+00:00",
+        "31374-facebook_19093-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 31374 --org-id 219"
+    }
+  },
+  {
+    "check_id": "chk_q2djcy3xc2bsbg_q2qlb7cn88kwd6",
+    "incident_id": "Q2DJCY3XC2BSBG",
+    "alert_id": "Q2QLB7CN88KWD6",
+    "state": "blocked",
+    "blockers": [
+      "destination_mismatch",
+      "destination_mismatch"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "219",
+      "audience_id": "31343",
+      "destination_type": "facebook",
+      "checked_export_run_ids": [
+        "31343-facebook_19066-scheduled__2026-04-11T00:00:00+00:00",
+        "31343-facebook_19066-scheduled__2026-04-12T00:00:00+00:00",
+        "31343-live_ramp_sftp_19065-scheduled__2026-04-13T00:00:00+00:00",
+        "31343-facebook_19066-scheduled__2026-04-13T00:00:00+00:00",
+        "31343-facebook_19066-scheduled__2026-04-14T00:00:00+00:00",
+        "31343-facebook_19066-scheduled__2026-04-15T00:00:00+00:00",
+        "31343-facebook_19066-scheduled__2026-04-16T00:00:00+00:00",
+        "31343-facebook_19066-scheduled__2026-04-17T00:00:00+00:00",
+        "31343-facebook_19066-scheduled__2026-04-18T00:00:00+00:00",
+        "31343-facebook_19066-scheduled__2026-04-19T00:00:00+00:00",
+        "31343-facebook_19066-scheduled__2026-04-20T00:00:00+00:00",
+        "31343-facebook_19066-scheduled__2026-04-21T00:00:00+00:00",
+        "31343-facebook_19066-scheduled__2026-04-22T00:00:00+00:00",
+        "31343-facebook_19066-scheduled__2026-04-23T00:00:00+00:00",
+        "31343-live_ramp_sftp_19065-scheduled__2026-05-13T00:00:00+00:00",
+        "31343-facebook_19066-scheduled__2026-05-13T00:00:00+00:00",
+        "31343-facebook_19066-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 31343 --org-id 219"
+    }
+  },
+  {
+    "check_id": "chk_q2djcy3xc2bsbg_q2zehmawdz0tge",
+    "incident_id": "Q2DJCY3XC2BSBG",
+    "alert_id": "Q2ZEHMAWDZ0TGE",
+    "state": "blocked",
+    "blockers": [
+      "destination_mismatch",
+      "destination_mismatch"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "219",
+      "audience_id": "31363",
+      "destination_type": "facebook",
+      "checked_export_run_ids": [
+        "31363-facebook_19089-scheduled__2026-04-11T00:00:00+00:00",
+        "31363-facebook_19089-scheduled__2026-04-12T00:00:00+00:00",
+        "31363-facebook_19089-scheduled__2026-04-13T00:00:00+00:00",
+        "31363-facebook_19089-scheduled__2026-04-14T00:00:00+00:00",
+        "31363-live_ramp_sftp_19094-scheduled__2026-04-14T00:00:00+00:00",
+        "31363-facebook_19089-scheduled__2026-04-15T00:00:00+00:00",
+        "31363-facebook_19089-scheduled__2026-04-16T00:00:00+00:00",
+        "31363-facebook_19089-scheduled__2026-04-17T00:00:00+00:00",
+        "31363-facebook_19089-scheduled__2026-04-18T00:00:00+00:00",
+        "31363-facebook_19089-scheduled__2026-04-19T00:00:00+00:00",
+        "31363-facebook_19089-scheduled__2026-04-20T00:00:00+00:00",
+        "31363-facebook_19089-scheduled__2026-04-21T00:00:00+00:00",
+        "31363-facebook_19089-scheduled__2026-04-22T00:00:00+00:00",
+        "31363-facebook_19089-scheduled__2026-04-23T00:00:00+00:00",
+        "31363-facebook_19089-scheduled__2026-05-13T00:00:00+00:00",
+        "31363-live_ramp_sftp_19094-scheduled__2026-05-14T00:00:00+00:00",
+        "31363-facebook_19089-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 31363 --org-id 219"
+    }
+  },
+  {
+    "check_id": "chk_q2djcy3xc2bsbg_q3o6c4vds4gof7",
+    "incident_id": "Q2DJCY3XC2BSBG",
+    "alert_id": "Q3O6C4VDS4GOF7",
+    "state": "healthy_closed",
+    "blockers": [],
+    "scope": {
+      "env": "prod",
+      "org_id": "219",
+      "audience_id": "31338",
+      "destination_type": "live_ramp_sftp",
+      "checked_export_run_ids": [
+        "31338-live_ramp_sftp_19058-scheduled__2026-04-13T00:00:00+00:00",
+        "31338-live_ramp_sftp_19058-scheduled__2026-05-13T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 31338 --org-id 219"
+    }
+  },
+  {
+    "check_id": "chk_q2djcy3xc2bsbg_q3z3figut07hxo",
+    "incident_id": "Q2DJCY3XC2BSBG",
+    "alert_id": "Q3Z3FIGUT07HXO",
+    "state": "blocked",
+    "blockers": [
+      "destination_mismatch",
+      "destination_mismatch",
+      "destination_mismatch",
+      "destination_mismatch",
+      "destination_mismatch",
+      "destination_mismatch",
+      "destination_mismatch",
+      "destination_mismatch",
+      "destination_mismatch",
+      "destination_mismatch",
+      "destination_mismatch",
+      "destination_mismatch",
+      "destination_mismatch",
+      "destination_mismatch",
+      "destination_mismatch",
+      "destination_mismatch",
+      "destination_mismatch"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "219",
+      "audience_id": "31362",
+      "destination_type": "linkedin_ads",
+      "checked_export_run_ids": [
+        "31362-linkedin_ads_19343-scheduled__2026-04-11T00:00:00+00:00",
+        "31362-facebook_19087-scheduled__2026-04-11T00:00:00+00:00",
+        "31362-linkedin_ads_19343-scheduled__2026-04-12T00:00:00+00:00",
+        "31362-facebook_19087-scheduled__2026-04-12T00:00:00+00:00",
+        "31362-facebook_19087-scheduled__2026-04-13T00:00:00+00:00",
+        "31362-linkedin_ads_19343-scheduled__2026-04-13T00:00:00+00:00",
+        "31362-live_ramp_sftp_19088-scheduled__2026-04-14T00:00:00+00:00",
+        "31362-linkedin_ads_19343-scheduled__2026-04-14T00:00:00+00:00",
+        "31362-facebook_19087-scheduled__2026-04-14T00:00:00+00:00",
+        "31362-facebook_19087-scheduled__2026-04-15T00:00:00+00:00",
+        "31362-linkedin_ads_19343-scheduled__2026-04-15T00:00:00+00:00",
+        "31362-facebook_19087-scheduled__2026-04-16T00:00:00+00:00",
+        "31362-linkedin_ads_19343-scheduled__2026-04-16T00:00:00+00:00",
+        "31362-linkedin_ads_19343-scheduled__2026-04-17T00:00:00+00:00",
+        "31362-facebook_19087-scheduled__2026-04-17T00:00:00+00:00",
+        "31362-facebook_19087-scheduled__2026-04-18T00:00:00+00:00",
+        "31362-linkedin_ads_19343-scheduled__2026-04-18T00:00:00+00:00",
+        "31362-facebook_19087-scheduled__2026-04-19T00:00:00+00:00",
+        "31362-linkedin_ads_19343-scheduled__2026-04-19T00:00:00+00:00",
+        "31362-facebook_19087-scheduled__2026-04-20T00:00:00+00:00",
+        "31362-linkedin_ads_19343-scheduled__2026-04-20T00:00:00+00:00",
+        "31362-facebook_19087-scheduled__2026-04-21T00:00:00+00:00",
+        "31362-linkedin_ads_19343-scheduled__2026-04-21T00:00:00+00:00",
+        "31362-linkedin_ads_19343-scheduled__2026-04-22T00:00:00+00:00",
+        "31362-facebook_19087-scheduled__2026-04-22T00:00:00+00:00",
+        "31362-facebook_19087-scheduled__2026-04-23T00:00:00+00:00",
+        "31362-linkedin_ads_19343-scheduled__2026-04-23T00:00:00+00:00",
+        "31362-linkedin_ads_19343-scheduled__2026-05-13T00:00:00+00:00",
+        "31362-facebook_19087-scheduled__2026-05-13T00:00:00+00:00",
+        "31362-linkedin_ads_19343-scheduled__2026-05-14T00:00:00+00:00",
+        "31362-facebook_19087-scheduled__2026-05-14T00:00:00+00:00",
+        "31362-live_ramp_sftp_19088-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 31362 --org-id 219"
     }
   },
   {
@@ -7823,6 +11441,46 @@
     }
   },
   {
+    "check_id": "chk_q3hwkw0fs3vthe_q2tvz6zmw55s6y",
+    "incident_id": "Q3HWKW0FS3VTHE",
+    "alert_id": "Q2TVZ6ZMW55S6Y",
+    "state": "blocked",
+    "blockers": [
+      "missing_pizza_row"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "310",
+      "audience_id": "34062",
+      "endpoint_id": "app_dv360_1807",
+      "destination_type": "dv360",
+      "checked_export_run_ids": [
+        "d9e26d081f921aafeb5f8bdd4bf6d8c5"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 34062 --org-id 310"
+    }
+  },
+  {
+    "check_id": "chk_q3hwkw0fs3vthe_q3q4n4m8uov684",
+    "incident_id": "Q3HWKW0FS3VTHE",
+    "alert_id": "Q3Q4N4M8UOV684",
+    "state": "blocked",
+    "blockers": [
+      "missing_pizza_row"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "310",
+      "audience_id": "32921",
+      "endpoint_id": "app_dv360_1807",
+      "destination_type": "dv360",
+      "checked_export_run_ids": [
+        "4586c1f25f5e00da3db3dcf3da099324"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 32921 --org-id 310"
+    }
+  },
+  {
     "check_id": "chk_q3hynv525mk1rw_q02ktnbyr73t4z",
     "incident_id": "Q3HYNV525MK1RW",
     "alert_id": "Q02KTNBYR73T4Z",
@@ -8067,6 +11725,43 @@
       "audience_id": "723",
       "checked_export_run_ids": [],
       "glcli": "glcli --env prod bifrost pizza --audience-id 723 --org-id 274"
+    }
+  },
+  {
+    "check_id": "chk_q3pj7w2k3y9ljv_q15x94n0mbravv",
+    "incident_id": "Q3PJ7W2K3Y9LJV",
+    "alert_id": "Q15X94N0MBRAVV",
+    "state": "blocked",
+    "blockers": [
+      "failed_export_count",
+      "export_error"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "274",
+      "audience_id": "723",
+      "endpoint_id": "app_salesforce_audience_1406",
+      "destination_type": "salesforce_audience_object",
+      "checked_export_run_ids": [
+        "723-salesforce_audience_object_723-scheduled__2026-05-14T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 723 --org-id 274"
+    }
+  },
+  {
+    "check_id": "chk_q3pw7ihi1kcdws_q14n3ewlbrlvpf",
+    "incident_id": "Q3PW7IHI1KCDWS",
+    "alert_id": "Q14N3EWLBRLVPF",
+    "state": "blocked",
+    "blockers": [
+      "missing_run_identity"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "268",
+      "audience_id": "35826",
+      "checked_export_run_ids": [],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 35826 --org-id 268"
     }
   },
   {

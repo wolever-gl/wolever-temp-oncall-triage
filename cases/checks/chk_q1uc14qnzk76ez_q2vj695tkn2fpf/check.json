@@ -1,0 +1,118 @@
+{
+  "check_id": "chk_q1uc14qnzk76ez_q2vj695tkn2fpf",
+  "source": "pagerduty",
+  "incident_id": "Q1UC14QNZK76EZ",
+  "alert_id": "Q2VJ695TKN2FPF",
+  "state": "blocked",
+  "scope": {
+    "env": "prod",
+    "org_id": "451",
+    "audience_id": "26039",
+    "destination_type": "viant",
+    "checked_export_run_ids": [
+      "26039-viant_16920-scheduled__2026-05-15T00:00:00+00:00",
+      "26039-google_adwords_18977-scheduled__2026-05-15T00:00:00+00:00"
+    ],
+    "glcli": "glcli --env prod bifrost pizza --audience-id 26039 --org-id 451"
+  },
+  "scope_key": "prod|451|26039|viant|unknown_endpoint|26039-viant_16920-scheduled__2026-05-15T00:00:00+00:00,26039-google_adwords_18977-scheduled__2026-05-15T00:00:00+00:00",
+  "run_evaluations": [
+    {
+      "export_run_id": "26039-viant_16920-scheduled__2026-05-15T00:00:00+00:00",
+      "health": "blocked",
+      "match_basis": "checked_export_run_id",
+      "blockers": [
+        "snapshotting_error_requires_review"
+      ],
+      "selected_row": {
+        "export_run_id": "26039-viant_16920-scheduled__2026-05-15T00:00:00+00:00",
+        "audience_id": "26039",
+        "destination_type": "viant",
+        "created_at": "2026-05-15T01:00:26.957613+00:00",
+        "snapshotting_state": "snapshotting_error",
+        "export_state": "no_batches",
+        "failed_export_count": 0,
+        "raw": {
+          "export_state": "no_batches",
+          "successful_add_count": 0,
+          "successful_remove_count": 0,
+          "failed_export_count": 0,
+          "rejected_row_count": 0,
+          "total_row_count": 0,
+          "successful_expanded_add_count": 0,
+          "successful_expanded_remove_count": 0,
+          "failed_expanded_export_count": 0,
+          "rejected_expanded_row_count": 0,
+          "total_expanded_row_count": 0,
+          "enhanced_match_count": 0,
+          "enhanced_row_count": 0,
+          "enhanced_total_records": 0,
+          "total_batch_count": 0,
+          "completed_batch_count": 0,
+          "successful_batch_count": 0,
+          "failed_batch_count": 0,
+          "failure_reason": "Snapshotting failed while running metadata_write_up: Unexpected error",
+          "info": {
+            "internal_audience_id": "26039",
+            "export_run_id": "26039-viant_16920-scheduled__2026-05-15T00:00:00+00:00",
+            "export_timestamp": "2026-05-15 01:00:26",
+            "created_at": "2026-05-15T01:00:26.957613+00:00"
+          },
+          "snapshotting_state": "snapshotting_error"
+        }
+      }
+    },
+    {
+      "export_run_id": "26039-google_adwords_18977-scheduled__2026-05-15T00:00:00+00:00",
+      "health": "blocked",
+      "match_basis": "checked_export_run_id",
+      "blockers": [
+        "destination_mismatch"
+      ],
+      "selected_row": {
+        "export_run_id": "26039-google_adwords_18977-scheduled__2026-05-15T00:00:00+00:00",
+        "audience_id": "26039",
+        "destination_type": "google_adwords",
+        "created_at": "2026-05-15T01:00:35.375009+00:00",
+        "snapshotting_state": "snapshotting_error",
+        "export_state": "no_batches",
+        "failed_export_count": 0,
+        "raw": {
+          "export_state": "no_batches",
+          "successful_add_count": 0,
+          "successful_remove_count": 0,
+          "failed_export_count": 0,
+          "rejected_row_count": 0,
+          "total_row_count": 0,
+          "successful_expanded_add_count": 0,
+          "successful_expanded_remove_count": 0,
+          "failed_expanded_export_count": 0,
+          "rejected_expanded_row_count": 0,
+          "total_expanded_row_count": 0,
+          "enhanced_match_count": 0,
+          "enhanced_row_count": 0,
+          "enhanced_total_records": 0,
+          "total_batch_count": 0,
+          "completed_batch_count": 0,
+          "successful_batch_count": 0,
+          "failed_batch_count": 0,
+          "failure_reason": "Snapshotting failed while running metadata_write_up: Unexpected error",
+          "info": {
+            "internal_audience_id": "26039",
+            "export_run_id": "26039-google_adwords_18977-scheduled__2026-05-15T00:00:00+00:00",
+            "export_timestamp": "2026-05-15 01:00:35",
+            "created_at": "2026-05-15T01:00:35.375009+00:00"
+          },
+          "snapshotting_state": "snapshotting_error"
+        }
+      }
+    }
+  ],
+  "blockers": [
+    "snapshotting_error_requires_review",
+    "destination_mismatch"
+  ],
+  "evidence_artifacts": [],
+  "created_at": "2026-05-16T21:03:40.868Z",
+  "updated_at": "2026-05-16T21:03:40.868Z"
+}

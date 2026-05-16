@@ -1,0 +1,51 @@
+<!-- AUTO-GENERATED: Do not edit case.md directly. Put free-form investigation notes in notes.md. -->
+
+# albertsons_6 zero-success
+
+> Generated file. Do not edit directly; put free-form investigation notes in `notes.md`.
+
+State: `open`
+Tags: `triage:needs_review`
+Incidents: [Q269WMZF4MKMNL](https://growthloop.pagerduty.com/incidents/Q269WMZF4MKMNL)
+Alerts: 2
+
+## Current Summary
+
+albertsons (Albertsons Media) - Audience 10684: 0 successfull_exports from pizza tracker found 10 minutes after new export
+
+## Alert Scope
+
+- Alert facts: 2 imported, 2 linked to this group.
+- Orgs: `albertsons_6`
+- Audiences: `10684`, `10685`
+- Destinations: none
+- State tuples: none
+- Commands seen: `glcli --env albertsons bifrost pizza --audience-id 10684 --org-id 6`, `glcli --env albertsons bifrost pizza --audience-id 10685 --org-id 6`
+
+Representative alerts:
+- Q269WMZF4MKMNL/Q0BQKJWVBSB8AY: 2026-05-15T14:25:24-07:00; albertsons_6; audience 10685. albertsons (Albertsons Media) - Audience 10685: 0 successfull_exports from pizza tracker found 10 minutes after new export
+- Q269WMZF4MKMNL/Q1E9RQ6EFI68FV: 2026-05-15T14:46:08-07:00; albertsons_6; audience 10684. albertsons (Albertsons Media) - Audience 10684: 0 successfull_exports from pizza tracker found 10 minutes after new export
+
+## Export Checks
+
+- Checks: 2.
+- States: `open`=2
+- Blockers seen: `evidence_unavailable`
+
+Check evidence:
+- chk_q269wmzf4mkmnl_q0bqkjwvbsb8ay (Q269WMZF4MKMNL/Q0BQKJWVBSB8AY): state=`open`, next_check_at=`2026-05-16T21:19:05.732Z`.
+  Scope: env=albertsons; org=6; audience=10685.
+  Command: `glcli --env albertsons bifrost pizza --audience-id 10685 --org-id 6`
+  Blockers: `evidence_unavailable`
+- chk_q269wmzf4mkmnl_q1e9rq6efi68fv (Q269WMZF4MKMNL/Q1E9RQ6EFI68FV): state=`open`, next_check_at=`2026-05-16T21:19:05.732Z`.
+  Scope: env=albertsons; org=6; audience=10684.
+  Command: `glcli --env albertsons bifrost pizza --audience-id 10684 --org-id 6`
+  Blockers: `evidence_unavailable`
+
+## Next Action
+
+Agent should gather evidence, choose/apply a runbook when appropriate, and update this case.
+
+## Decision Trail
+
+See `lineage.jsonl`, `decisions.jsonl`, `evidence.jsonl`, and `actions.jsonl` for the durable audit trail.

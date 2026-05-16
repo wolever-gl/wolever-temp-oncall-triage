@@ -1,0 +1,14 @@
+{"ts":"2026-05-16T00:38:01.850Z","actor":"oncall-triage","decision":"created_group","rationale":"Conservative deterministic grouping created a new group for v3|incident:Q2DJCY3XC2BSBG|org:pgatourhq_219|class:no-batches."}
+{"ts":"2026-05-16T00:38:01.850Z","actor":"oncall-triage","decision":"attached_alert_to_existing_group","rationale":"Alert matched deterministic key v3|incident:Q2DJCY3XC2BSBG|org:pgatourhq_219|class:no-batches."}
+{"ts":"2026-05-16T00:38:01.850Z","actor":"oncall-triage","decision":"attached_alert_to_existing_group","rationale":"Alert matched deterministic key v3|incident:Q2DJCY3XC2BSBG|org:pgatourhq_219|class:no-batches."}
+{"ts":"2026-05-16T00:38:01.850Z","actor":"oncall-triage","decision":"attached_alert_to_existing_group","rationale":"Alert matched deterministic key v3|incident:Q2DJCY3XC2BSBG|org:pgatourhq_219|class:no-batches."}
+{"ts":"2026-05-16T00:38:01.850Z","actor":"oncall-triage","decision":"attached_alert_to_existing_group","rationale":"Alert matched deterministic key v3|incident:Q2DJCY3XC2BSBG|org:pgatourhq_219|class:no-batches."}
+{"ts":"2026-05-16T00:38:01.850Z","actor":"oncall-triage","decision":"attached_alert_to_existing_group","rationale":"Alert matched deterministic key v3|incident:Q2DJCY3XC2BSBG|org:pgatourhq_219|class:no-batches."}
+{"ts":"2026-05-16T00:38:01.850Z","actor":"oncall-triage","decision":"attached_alert_to_existing_group","rationale":"Alert matched deterministic key v3|incident:Q2DJCY3XC2BSBG|org:pgatourhq_219|class:no-batches."}
+{"ts":"2026-05-16T00:38:01.850Z","actor":"oncall-triage","decision":"attached_alert_to_existing_group","rationale":"Alert matched deterministic key v3|incident:Q2DJCY3XC2BSBG|org:pgatourhq_219|class:no-batches."}
+{"ts":"2026-05-16T00:38:01.850Z","actor":"oncall-triage","decision":"attached_alert_to_existing_group","rationale":"Alert matched deterministic key v3|incident:Q2DJCY3XC2BSBG|org:pgatourhq_219|class:no-batches."}
+{"ts":"2026-05-16T00:38:01.850Z","actor":"oncall-triage","decision":"attached_alert_to_existing_group","rationale":"Alert matched deterministic key v3|incident:Q2DJCY3XC2BSBG|org:pgatourhq_219|class:no-batches."}
+{"ts":"2026-05-16T00:38:01.850Z","actor":"oncall-triage","decision":"attached_alert_to_existing_group","rationale":"Alert matched deterministic key v3|incident:Q2DJCY3XC2BSBG|org:pgatourhq_219|class:no-batches."}
+{"ts":"2026-05-16T00:38:01.850Z","actor":"oncall-triage","decision":"attached_alert_to_existing_group","rationale":"Alert matched deterministic key v3|incident:Q2DJCY3XC2BSBG|org:pgatourhq_219|class:no-batches."}
+{"ts":"2026-05-16T00:38:01.850Z","actor":"oncall-triage","decision":"attached_alert_to_existing_group","rationale":"Alert matched deterministic key v3|incident:Q2DJCY3XC2BSBG|org:pgatourhq_219|class:no-batches."}
+{"ts":"2026-05-16T21:05:58.740Z","actor":"check-exports","decision":"started_work","rationale":"Export evidence check evaluated alert facts for this group."}

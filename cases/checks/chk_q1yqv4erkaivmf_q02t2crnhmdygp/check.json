@@ -1,0 +1,192 @@
+{
+  "check_id": "chk_q1yqv4erkaivmf_q02t2crnhmdygp",
+  "source": "pagerduty",
+  "incident_id": "Q1YQV4ERKAIVMF",
+  "alert_id": "Q02T2CRNHMDYGP",
+  "state": "blocked",
+  "scope": {
+    "env": "prod",
+    "org_id": "370",
+    "audience_id": "32411",
+    "destination_type": "facebook",
+    "checked_export_run_ids": [
+      "32411-facebook_19862-scheduled__2026-05-14T00:00:00+00:00",
+      "32411-snapchat_19863-scheduled__2026-05-14T00:00:00+00:00",
+      "32411-tik_tok_19864-scheduled__2026-05-14T00:00:00+00:00"
+    ],
+    "glcli": "glcli --env prod bifrost pizza --audience-id 32411 --org-id 370"
+  },
+  "scope_key": "prod|370|32411|facebook|unknown_endpoint|32411-facebook_19862-scheduled__2026-05-14T00:00:00+00:00,32411-snapchat_19863-scheduled__2026-05-14T00:00:00+00:00,32411-tik_tok_19864-scheduled__2026-05-14T00:00:00+00:00",
+  "run_evaluations": [
+    {
+      "export_run_id": "32411-facebook_19862-scheduled__2026-05-14T00:00:00+00:00",
+      "health": "healthy",
+      "match_basis": "checked_export_run_id",
+      "blockers": [],
+      "selected_row": {
+        "export_run_id": "32411-facebook_19862-scheduled__2026-05-14T00:00:00+00:00",
+        "audience_id": "32411",
+        "endpoint_id": "app_facebook_1879",
+        "destination_type": "facebook",
+        "created_at": "2026-05-14T01:25:50.877538+00:00",
+        "snapshotting_state": "snapshotting_finished",
+        "export_state": "export_finished",
+        "failed_export_count": 0,
+        "raw": {
+          "export_state": "export_finished",
+          "successful_add_count": 56443,
+          "successful_remove_count": 57604,
+          "failed_export_count": 0,
+          "rejected_row_count": 0,
+          "total_row_count": 114047,
+          "successful_expanded_add_count": 0,
+          "successful_expanded_remove_count": 0,
+          "failed_expanded_export_count": 0,
+          "rejected_expanded_row_count": 0,
+          "total_expanded_row_count": 114047,
+          "enhanced_match_count": 0,
+          "enhanced_row_count": 0,
+          "enhanced_total_records": 0,
+          "total_batch_count": 1,
+          "completed_batch_count": 1,
+          "successful_batch_count": 1,
+          "failed_batch_count": 0,
+          "failure_reason": null,
+          "info": {
+            "internal_export_id": "f697adbb2c44b400cc42edc1a5d6447a-20260514012351",
+            "export_run_id": "32411-facebook_19862-scheduled__2026-05-14T00:00:00+00:00",
+            "audience_id": "6931932061383",
+            "internal_audience_id": "32411",
+            "audience_name": "",
+            "organization_id": "370",
+            "organization_name": "priceline",
+            "platform": "facebook",
+            "endpoint_id": "app_facebook_1879",
+            "export_timestamp": "2026-05-14 01:23:51",
+            "error_file_uri": "gs://pcln-pl-dataext-prod-growthloop/batch_errors/c5e336c1-e3d5-4ced-ac54-d88eb1594e0c.csv",
+            "created_at": "2026-05-14T01:25:50.877538+00:00",
+            "export_complete_response": null
+          },
+          "snapshotting_state": "snapshotting_finished"
+        }
+      }
+    },
+    {
+      "export_run_id": "32411-snapchat_19863-scheduled__2026-05-14T00:00:00+00:00",
+      "health": "blocked",
+      "match_basis": "checked_export_run_id",
+      "blockers": [
+        "destination_mismatch"
+      ],
+      "selected_row": {
+        "export_run_id": "32411-snapchat_19863-scheduled__2026-05-14T00:00:00+00:00",
+        "audience_id": "32411",
+        "endpoint_id": "app_snapchat_2066",
+        "destination_type": "snapchat",
+        "created_at": "2026-05-14T01:26:14.093074+00:00",
+        "snapshotting_state": "snapshotting_finished",
+        "export_state": "export_finished",
+        "failed_export_count": 0,
+        "raw": {
+          "export_state": "export_finished",
+          "successful_add_count": 56443,
+          "successful_remove_count": 57604,
+          "failed_export_count": 0,
+          "rejected_row_count": 0,
+          "total_row_count": 114047,
+          "successful_expanded_add_count": 0,
+          "successful_expanded_remove_count": 0,
+          "failed_expanded_export_count": 0,
+          "rejected_expanded_row_count": 0,
+          "total_expanded_row_count": 114047,
+          "enhanced_match_count": 0,
+          "enhanced_row_count": 0,
+          "enhanced_total_records": 0,
+          "total_batch_count": 1,
+          "completed_batch_count": 1,
+          "successful_batch_count": 1,
+          "failed_batch_count": 0,
+          "failure_reason": null,
+          "info": {
+            "internal_export_id": "e5e7b8adaa7de3fee4705c46afbdb2f3-20260514012415",
+            "export_run_id": "32411-snapchat_19863-scheduled__2026-05-14T00:00:00+00:00",
+            "audience_id": "6243894894529661",
+            "internal_audience_id": "32411",
+            "audience_name": "",
+            "organization_id": "370",
+            "organization_name": "priceline",
+            "platform": "snapchat",
+            "endpoint_id": "app_snapchat_2066",
+            "export_timestamp": "2026-05-14 01:24:15",
+            "error_file_uri": "gs://pcln-pl-dataext-prod-growthloop/batch_errors/1ecd0d41-bc58-49b8-8290-fb17fb460100.csv",
+            "created_at": "2026-05-14T01:26:14.093074+00:00",
+            "export_complete_response": null
+          },
+          "snapshotting_state": "snapshotting_finished"
+        }
+      }
+    },
+    {
+      "export_run_id": "32411-tik_tok_19864-scheduled__2026-05-14T00:00:00+00:00",
+      "health": "blocked",
+      "match_basis": "checked_export_run_id",
+      "blockers": [
+        "destination_mismatch"
+      ],
+      "selected_row": {
+        "export_run_id": "32411-tik_tok_19864-scheduled__2026-05-14T00:00:00+00:00",
+        "audience_id": "32411",
+        "endpoint_id": "app_tiktok_1416",
+        "destination_type": "tik_tok",
+        "created_at": "2026-05-14T01:26:14.099833+00:00",
+        "snapshotting_state": "snapshotting_finished",
+        "export_state": "export_finished",
+        "failed_export_count": 0,
+        "raw": {
+          "export_state": "export_finished",
+          "successful_add_count": 56443,
+          "successful_remove_count": 57604,
+          "failed_export_count": 0,
+          "rejected_row_count": 0,
+          "total_row_count": 114047,
+          "successful_expanded_add_count": 0,
+          "successful_expanded_remove_count": 0,
+          "failed_expanded_export_count": 0,
+          "rejected_expanded_row_count": 0,
+          "total_expanded_row_count": 114047,
+          "enhanced_match_count": 0,
+          "enhanced_row_count": 0,
+          "enhanced_total_records": 0,
+          "total_batch_count": 1,
+          "completed_batch_count": 1,
+          "successful_batch_count": 1,
+          "failed_batch_count": 0,
+          "failure_reason": null,
+          "info": {
+            "internal_export_id": "66807837169ed51724b9c408546e53f6-20260514012418",
+            "export_run_id": "32411-tik_tok_19864-scheduled__2026-05-14T00:00:00+00:00",
+            "audience_id": "194780630",
+            "internal_audience_id": "32411",
+            "audience_name": "",
+            "organization_id": "370",
+            "organization_name": "priceline",
+            "platform": "tik_tok",
+            "endpoint_id": "app_tiktok_1416",
+            "export_timestamp": "2026-05-14 01:24:18",
+            "error_file_uri": "gs://pcln-pl-dataext-prod-growthloop/batch_errors/c155019d-bc33-4367-819d-d66dedbb9242.csv",
+            "created_at": "2026-05-14T01:26:14.099833+00:00",
+            "export_complete_response": null
+          },
+          "snapshotting_state": "snapshotting_finished"
+        }
+      }
+    }
+  ],
+  "blockers": [
+    "destination_mismatch",
+    "destination_mismatch"
+  ],
+  "evidence_artifacts": [],
+  "created_at": "2026-05-16T20:48:51.585Z",
+  "updated_at": "2026-05-16T20:48:51.585Z"
+}

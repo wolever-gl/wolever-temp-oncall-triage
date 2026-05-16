@@ -1,0 +1,2 @@
+{"ts":"2026-05-16T00:38:01.850Z","actor":"oncall-triage","decision":"created_group","rationale":"Conservative deterministic grouping created a new group for v3|incident:Q20XI8KK8YWADB|org:174|class:zero-success."}
+{"ts":"2026-05-16T21:03:28.743Z","actor":"check-exports","decision":"started_work","rationale":"Export evidence check evaluated alert facts for this group."}

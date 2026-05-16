@@ -1,0 +1,3 @@
+{"ts":"2026-05-16T00:38:01.850Z","actor":"oncall-triage","decision":"created_group","rationale":"Conservative deterministic grouping created a new group for v3|incident:Q0X2D8TR82ZQV9|org:priceline_370|dest:tik-tok|class:export-processing."}
+{"ts":"2026-05-16T21:06:47.559Z","actor":"check-exports","decision":"started_work","rationale":"Export evidence check evaluated alert facts for this group."}
+{"ts":"2026-05-16T21:06:53.054Z","actor":"check-exports","decision":"transitioned_to_resolved","rationale":"Auto-resolved from Pizza export checks: all 1 alert-scoped export check(s) are healthy_closed with no blockers."}

@@ -1,0 +1,23 @@
+{
+  "group_id": "260514-growthloop_268-client-sent-export-failure",
+  "state": "open",
+  "tags": [
+    "triage:needs_review"
+  ],
+  "title": "growthloop_268 client-sent-export-failure",
+  "summary": "growthloop (default) - Audience 35826: Audience Export failure for 35826 sent to client.",
+  "deterministic_key": "v3|incident:Q3PW7IHI1KCDWS|org:growthloop_268|class:client-sent-export-failure",
+  "grouping_version": 3,
+  "created_at": "2026-05-16T00:38:01.850Z",
+  "updated_at": "2026-05-16T20:48:47.552Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q3PW7IHI1KCDWS",
+      "alert_id": "Q14N3EWLBRLVPF"
+    }
+  ],
+  "incident_ids": [
+    "Q3PW7IHI1KCDWS"
+  ],
+  "related_group_ids": []
+}

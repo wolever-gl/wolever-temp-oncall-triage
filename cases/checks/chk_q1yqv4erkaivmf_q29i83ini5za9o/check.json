@@ -1,0 +1,78 @@
+{
+  "check_id": "chk_q1yqv4erkaivmf_q29i83ini5za9o",
+  "source": "pagerduty",
+  "incident_id": "Q1YQV4ERKAIVMF",
+  "alert_id": "Q29I83INI5ZA9O",
+  "state": "healthy_closed",
+  "scope": {
+    "env": "prod",
+    "org_id": "370",
+    "audience_id": "24025",
+    "destination_type": "gam360",
+    "checked_export_run_ids": [
+      "24025-gam360_15194-scheduled__2026-05-14T00:00:00+00:00"
+    ],
+    "glcli": "glcli --env prod bifrost pizza --audience-id 24025 --org-id 370"
+  },
+  "scope_key": "prod|370|24025|gam360|unknown_endpoint|24025-gam360_15194-scheduled__2026-05-14T00:00:00+00:00",
+  "run_evaluations": [
+    {
+      "export_run_id": "24025-gam360_15194-scheduled__2026-05-14T00:00:00+00:00",
+      "health": "healthy",
+      "match_basis": "checked_export_run_id",
+      "blockers": [],
+      "selected_row": {
+        "export_run_id": "24025-gam360_15194-scheduled__2026-05-14T00:00:00+00:00",
+        "audience_id": "24025",
+        "endpoint_id": "app_gam360_1025",
+        "destination_type": "gam360",
+        "created_at": "2026-05-14T01:09:11.299860+00:00",
+        "snapshotting_state": "snapshotting_finished",
+        "export_state": "export_finished",
+        "failed_export_count": 0,
+        "raw": {
+          "export_state": "export_finished",
+          "successful_add_count": 39367,
+          "successful_remove_count": 36524,
+          "failed_export_count": 0,
+          "rejected_row_count": 873,
+          "total_row_count": 76764,
+          "successful_expanded_add_count": 39367,
+          "successful_expanded_remove_count": 36524,
+          "failed_expanded_export_count": 0,
+          "rejected_expanded_row_count": 873,
+          "total_expanded_row_count": 76764,
+          "enhanced_match_count": 0,
+          "enhanced_row_count": 0,
+          "enhanced_total_records": 0,
+          "total_batch_count": 1,
+          "completed_batch_count": 1,
+          "successful_batch_count": 1,
+          "failed_batch_count": 0,
+          "failure_reason": null,
+          "info": {
+            "internal_export_id": "f263dd83621548ac3c7189691b14fc4d-20260514010727",
+            "export_run_id": "24025-gam360_15194-scheduled__2026-05-14T00:00:00+00:00",
+            "audience_id": "9111699412",
+            "internal_audience_id": "24025",
+            "audience_name": "",
+            "organization_id": "370",
+            "organization_name": "priceline",
+            "platform": "gam360",
+            "endpoint_id": "app_gam360_1025",
+            "export_timestamp": "2026-05-14 01:07:27",
+            "error_file_uri": "gs://pcln-pl-dataext-prod-growthloop/batch_errors/697e002b-e318-4da9-a713-62e577477d69.csv",
+            "created_at": "2026-05-14T01:09:11.299860+00:00",
+            "export_complete_response": null
+          },
+          "snapshotting_state": "snapshotting_finished"
+        }
+      }
+    }
+  ],
+  "blockers": [],
+  "evidence_artifacts": [],
+  "created_at": "2026-05-16T20:48:51.585Z",
+  "updated_at": "2026-05-16T20:48:51.585Z",
+  "closed_at": "2026-05-16T20:48:51.585Z"
+}

@@ -1,0 +1,24 @@
+{
+  "group_id": "260515-chghealthcare_395-marketing-cloud-export-error",
+  "state": "resolved",
+  "tags": [
+    "triage:needs_review",
+    "resolved:export-healthy"
+  ],
+  "title": "chghealthcare_395 marketing-cloud export-error",
+  "summary": "Auto-resolved from Pizza export checks: all 1 alert-scoped export check(s) are healthy_closed with no blockers.",
+  "deterministic_key": "v3|incident:Q29I2IVNNVK80X|org:chghealthcare_395|dest:marketing-cloud|class:export-error",
+  "grouping_version": 3,
+  "created_at": "2026-05-16T00:38:01.850Z",
+  "updated_at": "2026-05-16T21:05:40.456Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q29I2IVNNVK80X",
+      "alert_id": "Q0LJEMVW0Z0UUI"
+    }
+  ],
+  "incident_ids": [
+    "Q29I2IVNNVK80X"
+  ],
+  "related_group_ids": []
+}

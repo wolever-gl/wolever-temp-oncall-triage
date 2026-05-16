@@ -1,0 +1,81 @@
+{
+  "check_id": "chk_q1yqv4erkaivmf_q2tew0t8pktln1",
+  "source": "pagerduty",
+  "incident_id": "Q1YQV4ERKAIVMF",
+  "alert_id": "Q2TEW0T8PKTLN1",
+  "state": "blocked",
+  "scope": {
+    "env": "prod",
+    "org_id": "370",
+    "audience_id": "751",
+    "destination_type": "iterable_object",
+    "checked_export_run_ids": [
+      "751-iterable_object_751-scheduled__2026-05-12T17:00:00+00:00"
+    ],
+    "glcli": "glcli --env prod bifrost pizza --audience-id 751 --org-id 370"
+  },
+  "scope_key": "prod|370|751|iterable_object|unknown_endpoint|751-iterable_object_751-scheduled__2026-05-12T17:00:00+00:00",
+  "run_evaluations": [
+    {
+      "export_run_id": "751-iterable_object_751-scheduled__2026-05-12T17:00:00+00:00",
+      "health": "blocked",
+      "match_basis": "checked_export_run_id",
+      "blockers": [
+        "failed_export_count"
+      ],
+      "selected_row": {
+        "export_run_id": "751-iterable_object_751-scheduled__2026-05-12T17:00:00+00:00",
+        "audience_id": "751",
+        "endpoint_id": "app_iterable_1009",
+        "destination_type": "iterable_object",
+        "created_at": "2026-05-13T17:03:24.894914+00:00",
+        "snapshotting_state": "snapshotting_finished",
+        "export_state": "export_finished",
+        "failed_export_count": 209,
+        "raw": {
+          "export_state": "export_finished",
+          "successful_add_count": 152296,
+          "successful_remove_count": 0,
+          "failed_export_count": 209,
+          "rejected_row_count": 0,
+          "total_row_count": 152505,
+          "successful_expanded_add_count": 0,
+          "successful_expanded_remove_count": 0,
+          "failed_expanded_export_count": 0,
+          "rejected_expanded_row_count": 0,
+          "total_expanded_row_count": 152505,
+          "enhanced_match_count": 0,
+          "enhanced_row_count": 0,
+          "enhanced_total_records": 0,
+          "total_batch_count": 1,
+          "completed_batch_count": 1,
+          "successful_batch_count": 1,
+          "failed_batch_count": 0,
+          "failure_reason": null,
+          "info": {
+            "internal_export_id": "6ab961aa25f8db66f04196c8505cae19-20260513170152",
+            "export_run_id": "751-iterable_object_751-scheduled__2026-05-12T17:00:00+00:00",
+            "audience_id": null,
+            "internal_audience_id": "751",
+            "audience_name": "",
+            "organization_id": "370",
+            "organization_name": "priceline",
+            "platform": "iterable_object",
+            "endpoint_id": "app_iterable_1009",
+            "export_timestamp": "2026-05-13 17:01:52",
+            "error_file_uri": "gs://pcln-pl-dataext-prod-growthloop/batch_errors/53e0948a-ee55-4344-ae7b-30981c9845c9.csv",
+            "created_at": "2026-05-13T17:03:24.894914+00:00",
+            "export_complete_response": null
+          },
+          "snapshotting_state": "snapshotting_finished"
+        }
+      }
+    }
+  ],
+  "blockers": [
+    "failed_export_count"
+  ],
+  "evidence_artifacts": [],
+  "created_at": "2026-05-16T20:48:51.585Z",
+  "updated_at": "2026-05-16T20:48:51.585Z"
+}

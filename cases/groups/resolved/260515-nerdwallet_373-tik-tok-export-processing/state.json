@@ -1,0 +1,24 @@
+{
+  "group_id": "260515-nerdwallet_373-tik-tok-export-processing",
+  "state": "resolved",
+  "tags": [
+    "triage:needs_review",
+    "resolved:export-healthy"
+  ],
+  "title": "nerdwallet_373 tik-tok export-processing",
+  "summary": "Auto-resolved from Pizza export checks: all 1 alert-scoped export check(s) are healthy_closed with no blockers.",
+  "deterministic_key": "v3|incident:Q2CEMYYJ9N4IAX|org:nerdwallet_373|dest:tik-tok|class:export-processing",
+  "grouping_version": 3,
+  "created_at": "2026-05-16T00:38:01.850Z",
+  "updated_at": "2026-05-16T21:05:57.670Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q2CEMYYJ9N4IAX",
+      "alert_id": "Q3QQZ6V22UZC2A"
+    }
+  ],
+  "incident_ids": [
+    "Q2CEMYYJ9N4IAX"
+  ],
+  "related_group_ids": []
+}

@@ -98,146 +98,6 @@
     "path": "groups/new/260514-allegro_3-dv360-export-processing/case.md"
   },
   {
-    "group_id": "260514-ford_310-dv360-export-error",
-    "state": "new",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "ford_310 dv360 export-error",
-    "summary": "ford (Marketing Production): Exports for audience 34062 failed with states: <(,export_error)>",
-    "incident_ids": [
-      "Q3HWKW0FS3VTHE"
-    ],
-    "alert_count": 2,
-    "path": "groups/new/260514-ford_310-dv360-export-error/case.md"
-  },
-  {
-    "group_id": "260514-growthloop_268-client-sent-export-failure",
-    "state": "new",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "growthloop_268 client-sent-export-failure",
-    "summary": "growthloop (default) - Audience 35826: Audience Export failure for 35826 sent to client.",
-    "incident_ids": [
-      "Q3PW7IHI1KCDWS"
-    ],
-    "alert_count": 1,
-    "path": "groups/new/260514-growthloop_268-client-sent-export-failure/case.md"
-  },
-  {
-    "group_id": "260514-priceline_370-no-batches",
-    "state": "new",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "priceline_370 no-batches",
-    "summary": "priceline (default): Exports for signal 783 failed with states: <(snapshotting_finished,no_batches)>",
-    "incident_ids": [
-      "Q1YQV4ERKAIVMF"
-    ],
-    "alert_count": 151,
-    "path": "groups/new/260514-priceline_370-no-batches/case.md"
-  },
-  {
-    "group_id": "260514-trumanshow_336-adobe-experience-platform-export-error",
-    "state": "new",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "trumanshow_336 adobe-experience-platform export-error",
-    "summary": "trumanshow (VZN): Exports for audience 36199 failed with states: <(snapshotting_finished,export_error)>",
-    "incident_ids": [
-      "Q12A5QFIM3F9LN"
-    ],
-    "alert_count": 1,
-    "path": "groups/new/260514-trumanshow_336-adobe-experience-platform-export-error/case.md"
-  },
-  {
-    "group_id": "260514-trumanshow_336-no-batches",
-    "state": "new",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "trumanshow_336 no-batches",
-    "summary": "trumanshow (Travel): Exports for audience 36293 failed with states: <(snapshotting_finished,no_batches)>",
-    "incident_ids": [
-      "Q12A5QFIM3F9LN"
-    ],
-    "alert_count": 2,
-    "path": "groups/new/260514-trumanshow_336-no-batches/case.md"
-  },
-  {
-    "group_id": "260515-174-snapshotting-error",
-    "state": "new",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "174 snapshotting-error",
-    "summary": "NJ Devils (default): Exports for audience 23746 failed with states: <(snapshotting_error,no_batches)>",
-    "incident_ids": [
-      "Q20XI8KK8YWADB"
-    ],
-    "alert_count": 1,
-    "path": "groups/new/260515-174-snapshotting-error/case.md"
-  },
-  {
-    "group_id": "260515-174-zero-success",
-    "state": "new",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "174 zero-success",
-    "summary": "NJ Devils (default) - Audience 36378: 0 successfull_exports from pizza tracker found 10 minutes after new export",
-    "incident_ids": [
-      "Q20XI8KK8YWADB"
-    ],
-    "alert_count": 1,
-    "path": "groups/new/260515-174-zero-success/case.md"
-  },
-  {
-    "group_id": "260515-378-snapshotting-error",
-    "state": "new",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "378 snapshotting-error",
-    "summary": "Cincinnati Reds (default): Exports for signal 891 failed with states: <(snapshotting_error,no_batches)>",
-    "incident_ids": [
-      "Q1QD2CX8MRAYBW"
-    ],
-    "alert_count": 1,
-    "path": "groups/new/260515-378-snapshotting-error/case.md"
-  },
-  {
-    "group_id": "260515-451-snapshotting-error",
-    "state": "new",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "451 snapshotting-error",
-    "summary": "ASU Enterprise Partners (Alumni): Exports for audience 26039 failed with states: <(snapshotting_error,no_batches)>",
-    "incident_ids": [
-      "Q1UC14QNZK76EZ"
-    ],
-    "alert_count": 6,
-    "path": "groups/new/260515-451-snapshotting-error/case.md"
-  },
-  {
-    "group_id": "260515-albertsons_6-zero-success",
-    "state": "new",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "albertsons_6 zero-success",
-    "summary": "albertsons (Albertsons Media) - Audience 10684: 0 successfull_exports from pizza tracker found 10 minutes after new export",
-    "incident_ids": [
-      "Q269WMZF4MKMNL"
-    ],
-    "alert_count": 2,
-    "path": "groups/new/260515-albertsons_6-zero-success/case.md"
-  },
-  {
     "group_id": "260515-albertsons_6-zero-success-02",
     "state": "new",
     "tags": [
@@ -264,90 +124,6 @@
     ],
     "alert_count": 1,
     "path": "groups/new/260515-allegro_3-dv360-export-processing/case.md"
-  },
-  {
-    "group_id": "260515-birchwood_274-salesforce-audience-export-error",
-    "state": "new",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "birchwood_274 salesforce-audience export-error",
-    "summary": "birchwood (default): Exports for signal 723 failed with states: <(snapshotting_finished,export_error)>",
-    "incident_ids": [
-      "Q3PJ7W2K3Y9LJV"
-    ],
-    "alert_count": 1,
-    "path": "groups/new/260515-birchwood_274-salesforce-audience-export-error/case.md"
-  },
-  {
-    "group_id": "260515-chghealthcare_395-marketing-cloud-export-error",
-    "state": "new",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "chghealthcare_395 marketing-cloud export-error",
-    "summary": "chghealthcare (CompHealth): Exports for audience 36059 failed with states: <(snapshotting_finished,export_error)>",
-    "incident_ids": [
-      "Q29I2IVNNVK80X"
-    ],
-    "alert_count": 1,
-    "path": "groups/new/260515-chghealthcare_395-marketing-cloud-export-error/case.md"
-  },
-  {
-    "group_id": "260515-nascar_2-no-batches",
-    "state": "new",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "nascar_2 no-batches",
-    "summary": "Nascar (default): Exports for signal 125 failed with states: <(snapshotting_finished,no_batches)>",
-    "incident_ids": [
-      "Q16KSAQEWECSDD"
-    ],
-    "alert_count": 2,
-    "path": "groups/new/260515-nascar_2-no-batches/case.md"
-  },
-  {
-    "group_id": "260515-nerdwallet_373-tik-tok-export-processing",
-    "state": "new",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "nerdwallet_373 tik-tok export-processing",
-    "summary": "NerdWallet ( PerfMarketing-Cards): Exports for audience 28175 failed with states: <(snapshotting_finished,export_processing)>",
-    "incident_ids": [
-      "Q2CEMYYJ9N4IAX"
-    ],
-    "alert_count": 1,
-    "path": "groups/new/260515-nerdwallet_373-tik-tok-export-processing/case.md"
-  },
-  {
-    "group_id": "260515-pgatourhq_219-no-batches",
-    "state": "new",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "pgatourhq_219 no-batches",
-    "summary": "pgatourhq (New World Order): Exports for audience 31918 failed with states: <(snapshotting_finished,no_batches)>",
-    "incident_ids": [
-      "Q2DJCY3XC2BSBG"
-    ],
-    "alert_count": 13,
-    "path": "groups/new/260515-pgatourhq_219-no-batches/case.md"
-  },
-  {
-    "group_id": "260515-priceline_370-tik-tok-export-processing",
-    "state": "new",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "priceline_370 tik-tok export-processing",
-    "summary": "priceline (default): Exports for audience 18623 failed with states: <(snapshotting_finished,export_processing)>",
-    "incident_ids": [
-      "Q0X2D8TR82ZQV9"
-    ],
-    "alert_count": 1,
-    "path": "groups/new/260515-priceline_370-tik-tok-export-processing/case.md"
   },
   {
     "group_id": "260511-albertsons_6-live-ramp-export-error",
@@ -658,6 +434,90 @@
     "path": "groups/open/260514-ford_310-client-sent-export-failure-02/case.md"
   },
   {
+    "group_id": "260514-ford_310-dv360-export-error",
+    "state": "open",
+    "tags": [
+      "triage:needs_review"
+    ],
+    "title": "ford_310 dv360 export-error",
+    "summary": "ford (Marketing Production): Exports for audience 34062 failed with states: <(,export_error)>",
+    "incident_ids": [
+      "Q3HWKW0FS3VTHE"
+    ],
+    "alert_count": 2,
+    "path": "groups/open/260514-ford_310-dv360-export-error/case.md"
+  },
+  {
+    "group_id": "260514-growthloop_268-client-sent-export-failure",
+    "state": "open",
+    "tags": [
+      "triage:needs_review"
+    ],
+    "title": "growthloop_268 client-sent-export-failure",
+    "summary": "growthloop (default) - Audience 35826: Audience Export failure for 35826 sent to client.",
+    "incident_ids": [
+      "Q3PW7IHI1KCDWS"
+    ],
+    "alert_count": 1,
+    "path": "groups/open/260514-growthloop_268-client-sent-export-failure/case.md"
+  },
+  {
+    "group_id": "260514-priceline_370-no-batches",
+    "state": "open",
+    "tags": [
+      "triage:needs_review"
+    ],
+    "title": "priceline_370 no-batches",
+    "summary": "priceline (default): Exports for signal 783 failed with states: <(snapshotting_finished,no_batches)>",
+    "incident_ids": [
+      "Q1YQV4ERKAIVMF"
+    ],
+    "alert_count": 151,
+    "path": "groups/open/260514-priceline_370-no-batches/case.md"
+  },
+  {
+    "group_id": "260514-trumanshow_336-adobe-experience-platform-export-error",
+    "state": "open",
+    "tags": [
+      "triage:needs_review"
+    ],
+    "title": "trumanshow_336 adobe-experience-platform export-error",
+    "summary": "trumanshow (VZN): Exports for audience 36199 failed with states: <(snapshotting_finished,export_error)>",
+    "incident_ids": [
+      "Q12A5QFIM3F9LN"
+    ],
+    "alert_count": 1,
+    "path": "groups/open/260514-trumanshow_336-adobe-experience-platform-export-error/case.md"
+  },
+  {
+    "group_id": "260515-174-snapshotting-error",
+    "state": "open",
+    "tags": [
+      "triage:needs_review"
+    ],
+    "title": "174 snapshotting-error",
+    "summary": "NJ Devils (default): Exports for audience 23746 failed with states: <(snapshotting_error,no_batches)>",
+    "incident_ids": [
+      "Q20XI8KK8YWADB"
+    ],
+    "alert_count": 1,
+    "path": "groups/open/260515-174-snapshotting-error/case.md"
+  },
+  {
+    "group_id": "260515-174-zero-success",
+    "state": "open",
+    "tags": [
+      "triage:needs_review"
+    ],
+    "title": "174 zero-success",
+    "summary": "NJ Devils (default) - Audience 36378: 0 successfull_exports from pizza tracker found 10 minutes after new export",
+    "incident_ids": [
+      "Q20XI8KK8YWADB"
+    ],
+    "alert_count": 1,
+    "path": "groups/open/260515-174-zero-success/case.md"
+  },
+  {
     "group_id": "260515-3-client-sent-export-failure",
     "state": "open",
     "tags": [
@@ -686,6 +546,20 @@
     "path": "groups/open/260515-378-client-sent-export-failure/case.md"
   },
   {
+    "group_id": "260515-378-snapshotting-error",
+    "state": "open",
+    "tags": [
+      "triage:needs_review"
+    ],
+    "title": "378 snapshotting-error",
+    "summary": "Cincinnati Reds (default): Exports for signal 891 failed with states: <(snapshotting_error,no_batches)>",
+    "incident_ids": [
+      "Q1QD2CX8MRAYBW"
+    ],
+    "alert_count": 1,
+    "path": "groups/open/260515-378-snapshotting-error/case.md"
+  },
+  {
     "group_id": "260515-451-client-sent-export-failure",
     "state": "open",
     "tags": [
@@ -698,6 +572,20 @@
     ],
     "alert_count": 1,
     "path": "groups/open/260515-451-client-sent-export-failure/case.md"
+  },
+  {
+    "group_id": "260515-451-snapshotting-error",
+    "state": "open",
+    "tags": [
+      "triage:needs_review"
+    ],
+    "title": "451 snapshotting-error",
+    "summary": "ASU Enterprise Partners (Alumni): Exports for audience 26039 failed with states: <(snapshotting_error,no_batches)>",
+    "incident_ids": [
+      "Q1UC14QNZK76EZ"
+    ],
+    "alert_count": 6,
+    "path": "groups/open/260515-451-snapshotting-error/case.md"
   },
   {
     "group_id": "260515-albertsons_6-live-ramp-export-error",
@@ -714,19 +602,46 @@
     "path": "groups/open/260515-albertsons_6-live-ramp-export-error/case.md"
   },
   {
-    "group_id": "260515-gopuff_544-snapshotting-error",
+    "group_id": "260515-albertsons_6-zero-success",
     "state": "open",
     "tags": [
-      "triage:needs_review",
-      "triage:client_schema_missing"
+      "triage:needs_review"
     ],
-    "title": "gopuff_544 snapshotting-error",
-    "summary": "Blocked by missing source column CORE.GOPUFF_ORDER_ITEMS.CLASS for audience 36168; needs owner/client schema or audience definition fix.",
+    "title": "albertsons_6 zero-success",
+    "summary": "albertsons (Albertsons Media) - Audience 10684: 0 successfull_exports from pizza tracker found 10 minutes after new export",
     "incident_ids": [
-      "Q1X9CE7BIDK9MV"
+      "Q269WMZF4MKMNL"
+    ],
+    "alert_count": 2,
+    "path": "groups/open/260515-albertsons_6-zero-success/case.md"
+  },
+  {
+    "group_id": "260515-birchwood_274-salesforce-audience-export-error",
+    "state": "open",
+    "tags": [
+      "triage:needs_review"
+    ],
+    "title": "birchwood_274 salesforce-audience export-error",
+    "summary": "birchwood (default): Exports for signal 723 failed with states: <(snapshotting_finished,export_error)>",
+    "incident_ids": [
+      "Q3PJ7W2K3Y9LJV"
     ],
     "alert_count": 1,
-    "path": "groups/open/260515-gopuff_544-snapshotting-error/case.md"
+    "path": "groups/open/260515-birchwood_274-salesforce-audience-export-error/case.md"
+  },
+  {
+    "group_id": "260515-pgatourhq_219-no-batches",
+    "state": "open",
+    "tags": [
+      "triage:needs_review"
+    ],
+    "title": "pgatourhq_219 no-batches",
+    "summary": "pgatourhq (New World Order): Exports for audience 31918 failed with states: <(snapshotting_finished,no_batches)>",
+    "incident_ids": [
+      "Q2DJCY3XC2BSBG"
+    ],
+    "alert_count": 13,
+    "path": "groups/open/260515-pgatourhq_219-no-batches/case.md"
   },
   {
     "group_id": "260515-royals_4-snapshotting-error",
@@ -773,6 +688,22 @@
     ],
     "alert_count": 5,
     "path": "groups/waiting/260505-albertsons_6-snapshotting-schema-error/case.md"
+  },
+  {
+    "group_id": "260515-gopuff_544-snapshotting-error",
+    "state": "waiting",
+    "tags": [
+      "triage:needs_review",
+      "triage:client_schema_missing",
+      "waiting:client_schema"
+    ],
+    "title": "gopuff_544 snapshotting-error",
+    "summary": "Waiting on support/client remediation for missing source column CORE.GOPUFF_ORDER_ITEMS.CLASS in GoPuff Snowflake source schema; support thread opened.",
+    "incident_ids": [
+      "Q1X9CE7BIDK9MV"
+    ],
+    "alert_count": 1,
+    "path": "groups/waiting/260515-gopuff_544-snapshotting-error/case.md"
   },
   {
     "group_id": "260504-albertsons_6-liveramp-recovered",
@@ -823,6 +754,21 @@
     "path": "groups/resolved/260511-albertsons_6-liveramp-complete/case.md"
   },
   {
+    "group_id": "260514-trumanshow_336-no-batches",
+    "state": "resolved",
+    "tags": [
+      "triage:needs_review",
+      "resolved:export-healthy"
+    ],
+    "title": "trumanshow_336 no-batches",
+    "summary": "Auto-resolved from Pizza export checks: all 2 alert-scoped export check(s) are healthy_closed with no blockers.",
+    "incident_ids": [
+      "Q12A5QFIM3F9LN"
+    ],
+    "alert_count": 2,
+    "path": "groups/resolved/260514-trumanshow_336-no-batches/case.md"
+  },
+  {
     "group_id": "260515-76ers_131-zero-success",
     "state": "resolved",
     "tags": [
@@ -836,6 +782,21 @@
     ],
     "alert_count": 1,
     "path": "groups/resolved/260515-76ers_131-zero-success/case.md"
+  },
+  {
+    "group_id": "260515-chghealthcare_395-marketing-cloud-export-error",
+    "state": "resolved",
+    "tags": [
+      "triage:needs_review",
+      "resolved:export-healthy"
+    ],
+    "title": "chghealthcare_395 marketing-cloud export-error",
+    "summary": "Auto-resolved from Pizza export checks: all 1 alert-scoped export check(s) are healthy_closed with no blockers.",
+    "incident_ids": [
+      "Q29I2IVNNVK80X"
+    ],
+    "alert_count": 1,
+    "path": "groups/resolved/260515-chghealthcare_395-marketing-cloud-export-error/case.md"
   },
   {
     "group_id": "260515-dexcom_478-no-batches",
@@ -881,6 +842,51 @@
     ],
     "alert_count": 1,
     "path": "groups/resolved/260515-flagstar_305-no-batches/case.md"
+  },
+  {
+    "group_id": "260515-nascar_2-no-batches",
+    "state": "resolved",
+    "tags": [
+      "triage:needs_review",
+      "resolved:export-healthy"
+    ],
+    "title": "nascar_2 no-batches",
+    "summary": "Auto-resolved from Pizza export checks: all 2 alert-scoped export check(s) are healthy_closed with no blockers.",
+    "incident_ids": [
+      "Q16KSAQEWECSDD"
+    ],
+    "alert_count": 2,
+    "path": "groups/resolved/260515-nascar_2-no-batches/case.md"
+  },
+  {
+    "group_id": "260515-nerdwallet_373-tik-tok-export-processing",
+    "state": "resolved",
+    "tags": [
+      "triage:needs_review",
+      "resolved:export-healthy"
+    ],
+    "title": "nerdwallet_373 tik-tok export-processing",
+    "summary": "Auto-resolved from Pizza export checks: all 1 alert-scoped export check(s) are healthy_closed with no blockers.",
+    "incident_ids": [
+      "Q2CEMYYJ9N4IAX"
+    ],
+    "alert_count": 1,
+    "path": "groups/resolved/260515-nerdwallet_373-tik-tok-export-processing/case.md"
+  },
+  {
+    "group_id": "260515-priceline_370-tik-tok-export-processing",
+    "state": "resolved",
+    "tags": [
+      "triage:needs_review",
+      "resolved:export-healthy"
+    ],
+    "title": "priceline_370 tik-tok export-processing",
+    "summary": "Auto-resolved from Pizza export checks: all 1 alert-scoped export check(s) are healthy_closed with no blockers.",
+    "incident_ids": [
+      "Q0X2D8TR82ZQV9"
+    ],
+    "alert_count": 1,
+    "path": "groups/resolved/260515-priceline_370-tik-tok-export-processing/case.md"
   },
   {
     "group_id": "260515-whirlpool_525-no-batches",

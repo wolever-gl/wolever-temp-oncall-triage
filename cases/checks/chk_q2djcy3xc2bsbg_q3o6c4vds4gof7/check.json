@@ -1,0 +1,122 @@
+{
+  "check_id": "chk_q2djcy3xc2bsbg_q3o6c4vds4gof7",
+  "source": "pagerduty",
+  "incident_id": "Q2DJCY3XC2BSBG",
+  "alert_id": "Q3O6C4VDS4GOF7",
+  "state": "healthy_closed",
+  "scope": {
+    "env": "prod",
+    "org_id": "219",
+    "audience_id": "31338",
+    "destination_type": "live_ramp_sftp",
+    "checked_export_run_ids": [
+      "31338-live_ramp_sftp_19058-scheduled__2026-04-13T00:00:00+00:00",
+      "31338-live_ramp_sftp_19058-scheduled__2026-05-13T00:00:00+00:00"
+    ],
+    "glcli": "glcli --env prod bifrost pizza --audience-id 31338 --org-id 219"
+  },
+  "scope_key": "prod|219|31338|live_ramp_sftp|unknown_endpoint|31338-live_ramp_sftp_19058-scheduled__2026-04-13T00:00:00+00:00,31338-live_ramp_sftp_19058-scheduled__2026-05-13T00:00:00+00:00",
+  "run_evaluations": [
+    {
+      "export_run_id": "31338-live_ramp_sftp_19058-scheduled__2026-04-13T00:00:00+00:00",
+      "health": "healthy",
+      "match_basis": "checked_export_run_id",
+      "blockers": [],
+      "selected_row": {
+        "export_run_id": "31338-live_ramp_sftp_19058-scheduled__2026-04-13T00:00:00+00:00",
+        "audience_id": "31338",
+        "destination_type": "live_ramp_sftp",
+        "created_at": "2026-04-13T00:26:07.972509+00:00",
+        "snapshotting_state": "snapshotting_finished_no_deltas",
+        "export_state": "no_batches",
+        "failed_export_count": 0,
+        "raw": {
+          "export_state": "no_batches",
+          "successful_add_count": 0,
+          "successful_remove_count": 0,
+          "failed_export_count": 0,
+          "rejected_row_count": 0,
+          "total_row_count": 0,
+          "successful_expanded_add_count": 0,
+          "successful_expanded_remove_count": 0,
+          "failed_expanded_export_count": 0,
+          "rejected_expanded_row_count": 0,
+          "total_expanded_row_count": 0,
+          "enhanced_match_count": 0,
+          "enhanced_row_count": 0,
+          "enhanced_total_records": 0,
+          "total_batch_count": 0,
+          "completed_batch_count": 0,
+          "successful_batch_count": 0,
+          "failed_batch_count": 0,
+          "failure_reason": null,
+          "info": {
+            "internal_audience_id": "31338",
+            "export_run_id": "31338-live_ramp_sftp_19058-scheduled__2026-04-13T00:00:00+00:00",
+            "export_timestamp": "2026-04-13 00:26:07",
+            "created_at": "2026-04-13T00:26:07.972509+00:00"
+          },
+          "snapshotting_state": "snapshotting_finished_no_deltas"
+        }
+      }
+    },
+    {
+      "export_run_id": "31338-live_ramp_sftp_19058-scheduled__2026-05-13T00:00:00+00:00",
+      "health": "healthy",
+      "match_basis": "checked_export_run_id",
+      "blockers": [],
+      "selected_row": {
+        "export_run_id": "31338-live_ramp_sftp_19058-scheduled__2026-05-13T00:00:00+00:00",
+        "audience_id": "31338",
+        "endpoint_id": "app_liveramp_sftp_1827",
+        "destination_type": "live_ramp_sftp",
+        "created_at": "2026-05-13T00:29:57.185619+00:00",
+        "snapshotting_state": "snapshotting_finished",
+        "export_state": "export_finished",
+        "failed_export_count": 0,
+        "raw": {
+          "export_state": "export_finished",
+          "successful_add_count": 171,
+          "successful_remove_count": 18701,
+          "failed_export_count": 0,
+          "rejected_row_count": 0,
+          "total_row_count": 18872,
+          "successful_expanded_add_count": 0,
+          "successful_expanded_remove_count": 0,
+          "failed_expanded_export_count": 0,
+          "rejected_expanded_row_count": 0,
+          "total_expanded_row_count": 18872,
+          "enhanced_match_count": 0,
+          "enhanced_row_count": 0,
+          "enhanced_total_records": 0,
+          "total_batch_count": 1,
+          "completed_batch_count": 1,
+          "successful_batch_count": 1,
+          "failed_batch_count": 0,
+          "failure_reason": null,
+          "info": {
+            "internal_export_id": "2d51dc2ff61c1af2a8bbe7d62278576d-20260513002748",
+            "export_run_id": "31338-live_ramp_sftp_19058-scheduled__2026-05-13T00:00:00+00:00",
+            "audience_id": null,
+            "internal_audience_id": "31338",
+            "audience_name": "",
+            "organization_id": "219",
+            "organization_name": "pgatourhq",
+            "platform": "live_ramp_sftp",
+            "endpoint_id": "app_liveramp_sftp_1827",
+            "export_timestamp": "2026-05-13 00:27:48",
+            "error_file_uri": "s3://pgatour-datalake-us-east-1-wlda-flywheel/batch_errors/abf513bb-f386-400c-8130-19b466c13a32.csv",
+            "created_at": "2026-05-13T00:29:57.185619+00:00",
+            "export_complete_response": null
+          },
+          "snapshotting_state": "snapshotting_finished"
+        }
+      }
+    }
+  ],
+  "blockers": [],
+  "evidence_artifacts": [],
+  "created_at": "2026-05-16T21:05:58.740Z",
+  "updated_at": "2026-05-16T21:05:58.740Z",
+  "closed_at": "2026-05-16T21:05:58.740Z"
+}

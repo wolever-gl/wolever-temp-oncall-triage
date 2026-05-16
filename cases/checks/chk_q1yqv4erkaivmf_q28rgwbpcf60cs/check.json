@@ -1,0 +1,135 @@
+{
+  "check_id": "chk_q1yqv4erkaivmf_q28rgwbpcf60cs",
+  "source": "pagerduty",
+  "incident_id": "Q1YQV4ERKAIVMF",
+  "alert_id": "Q28RGWBPCF60CS",
+  "state": "blocked",
+  "scope": {
+    "env": "prod",
+    "org_id": "370",
+    "audience_id": "18475",
+    "destination_type": "microsoft_ads",
+    "checked_export_run_ids": [
+      "18475-microsoft_ads_11798-scheduled__2026-05-14T00:00:00+00:00",
+      "18475-google_adwords_11797-scheduled__2026-05-14T00:00:00+00:00"
+    ],
+    "glcli": "glcli --env prod bifrost pizza --audience-id 18475 --org-id 370"
+  },
+  "scope_key": "prod|370|18475|microsoft_ads|unknown_endpoint|18475-microsoft_ads_11798-scheduled__2026-05-14T00:00:00+00:00,18475-google_adwords_11797-scheduled__2026-05-14T00:00:00+00:00",
+  "run_evaluations": [
+    {
+      "export_run_id": "18475-microsoft_ads_11798-scheduled__2026-05-14T00:00:00+00:00",
+      "health": "healthy",
+      "match_basis": "checked_export_run_id",
+      "blockers": [],
+      "selected_row": {
+        "export_run_id": "18475-microsoft_ads_11798-scheduled__2026-05-14T00:00:00+00:00",
+        "audience_id": "18475",
+        "endpoint_id": "app_microsoft_ads_827",
+        "destination_type": "microsoft_ads",
+        "created_at": "2026-05-14T00:23:00.438160+00:00",
+        "snapshotting_state": "snapshotting_finished",
+        "export_state": "export_finished",
+        "failed_export_count": 0,
+        "raw": {
+          "export_state": "export_finished",
+          "successful_add_count": 4383,
+          "successful_remove_count": 4191,
+          "failed_export_count": 0,
+          "rejected_row_count": 0,
+          "total_row_count": 8574,
+          "successful_expanded_add_count": 0,
+          "successful_expanded_remove_count": 0,
+          "failed_expanded_export_count": 0,
+          "rejected_expanded_row_count": 0,
+          "total_expanded_row_count": 8574,
+          "enhanced_match_count": 0,
+          "enhanced_row_count": 0,
+          "enhanced_total_records": 0,
+          "total_batch_count": 1,
+          "completed_batch_count": 1,
+          "successful_batch_count": 1,
+          "failed_batch_count": 0,
+          "failure_reason": null,
+          "info": {
+            "internal_export_id": "d93182ab7ca84a1fcdd71606dbcae73c-20260514002126",
+            "export_run_id": "18475-microsoft_ads_11798-scheduled__2026-05-14T00:00:00+00:00",
+            "audience_id": null,
+            "internal_audience_id": "18475",
+            "audience_name": "",
+            "organization_id": "370",
+            "organization_name": "priceline",
+            "platform": "microsoft_ads",
+            "endpoint_id": "app_microsoft_ads_827",
+            "export_timestamp": "2026-05-14 00:21:26",
+            "error_file_uri": "gs://pcln-pl-dataext-prod-growthloop/batch_errors/70b49078-9883-40a0-928d-64d28bf39879.csv",
+            "created_at": "2026-05-14T00:23:00.438160+00:00",
+            "export_complete_response": null
+          },
+          "snapshotting_state": "snapshotting_finished"
+        }
+      }
+    },
+    {
+      "export_run_id": "18475-google_adwords_11797-scheduled__2026-05-14T00:00:00+00:00",
+      "health": "blocked",
+      "match_basis": "checked_export_run_id",
+      "blockers": [
+        "destination_mismatch"
+      ],
+      "selected_row": {
+        "export_run_id": "18475-google_adwords_11797-scheduled__2026-05-14T00:00:00+00:00",
+        "audience_id": "18475",
+        "endpoint_id": "app_google_adwords_834",
+        "destination_type": "google_adwords",
+        "created_at": "2026-05-14T00:23:19.289869+00:00",
+        "snapshotting_state": "snapshotting_finished",
+        "export_state": "export_finished",
+        "failed_export_count": 0,
+        "raw": {
+          "export_state": "export_finished",
+          "successful_add_count": 1469,
+          "successful_remove_count": 1853,
+          "failed_export_count": 0,
+          "rejected_row_count": 5252,
+          "total_row_count": 8574,
+          "successful_expanded_add_count": 1469,
+          "successful_expanded_remove_count": 1853,
+          "failed_expanded_export_count": 0,
+          "rejected_expanded_row_count": 5252,
+          "total_expanded_row_count": 8574,
+          "enhanced_match_count": 0,
+          "enhanced_row_count": 0,
+          "enhanced_total_records": 0,
+          "total_batch_count": 1,
+          "completed_batch_count": 1,
+          "successful_batch_count": 1,
+          "failed_batch_count": 0,
+          "failure_reason": null,
+          "info": {
+            "internal_export_id": "a21a8090957cc4a5a07cc2d9053c0f7b-20260514002157",
+            "export_run_id": "18475-google_adwords_11797-scheduled__2026-05-14T00:00:00+00:00",
+            "audience_id": "8945672601",
+            "internal_audience_id": "18475",
+            "audience_name": "",
+            "organization_id": "370",
+            "organization_name": "priceline",
+            "platform": "google_adwords",
+            "endpoint_id": "app_google_adwords_834",
+            "export_timestamp": "2026-05-14 00:21:57",
+            "error_file_uri": "gs://pcln-pl-dataext-prod-growthloop/batch_errors/2af1e4da-aaa2-4b0f-a9f3-94f8edba463b.csv",
+            "created_at": "2026-05-14T00:23:19.289869+00:00",
+            "export_complete_response": null
+          },
+          "snapshotting_state": "snapshotting_finished"
+        }
+      }
+    }
+  ],
+  "blockers": [
+    "destination_mismatch"
+  ],
+  "evidence_artifacts": [],
+  "created_at": "2026-05-16T20:48:51.585Z",
+  "updated_at": "2026-05-16T20:48:51.585Z"
+}

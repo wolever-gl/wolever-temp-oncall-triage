@@ -1,0 +1,25 @@
+{
+  "check_id": "chk_q269wmzf4mkmnl_q1e9rq6efi68fv",
+  "source": "pagerduty",
+  "incident_id": "Q269WMZF4MKMNL",
+  "alert_id": "Q1E9RQ6EFI68FV",
+  "state": "open",
+  "scope": {
+    "env": "albertsons",
+    "org_id": "6",
+    "audience_id": "10684",
+    "checked_export_run_ids": [],
+    "glcli": "glcli --env albertsons bifrost pizza --audience-id 10684 --org-id 6"
+  },
+  "scope_key": "albertsons|6|10684|unknown_destination|unknown_endpoint|unknown_run",
+  "run_evaluations": [],
+  "blockers": [
+    "evidence_unavailable"
+  ],
+  "evidence_artifacts": [
+    "pizza_fetch_error:Unable to connect. Is the computer able to access the url?"
+  ],
+  "created_at": "2026-05-16T21:04:05.732Z",
+  "updated_at": "2026-05-16T21:04:05.732Z",
+  "next_check_at": "2026-05-16T21:19:05.732Z"
+}

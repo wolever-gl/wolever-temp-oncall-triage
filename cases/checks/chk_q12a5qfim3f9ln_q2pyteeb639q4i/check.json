@@ -1,0 +1,78 @@
+{
+  "check_id": "chk_q12a5qfim3f9ln_q2pyteeb639q4i",
+  "source": "pagerduty",
+  "incident_id": "Q12A5QFIM3F9LN",
+  "alert_id": "Q2PYTEEB639Q4I",
+  "state": "healthy_closed",
+  "scope": {
+    "env": "prod",
+    "org_id": "336",
+    "audience_id": "35392",
+    "destination_type": "iterable",
+    "checked_export_run_ids": [
+      "35392-iterable_21441-scheduled__2026-05-14T00:00:00+00:00"
+    ],
+    "glcli": "glcli --env prod bifrost pizza --audience-id 35392 --org-id 336"
+  },
+  "scope_key": "prod|336|35392|iterable|unknown_endpoint|35392-iterable_21441-scheduled__2026-05-14T00:00:00+00:00",
+  "run_evaluations": [
+    {
+      "export_run_id": "35392-iterable_21441-scheduled__2026-05-14T00:00:00+00:00",
+      "health": "healthy",
+      "match_basis": "checked_export_run_id",
+      "blockers": [],
+      "selected_row": {
+        "export_run_id": "35392-iterable_21441-scheduled__2026-05-14T00:00:00+00:00",
+        "audience_id": "35392",
+        "endpoint_id": "app_iterable_1526",
+        "destination_type": "iterable",
+        "created_at": "2026-05-14T00:17:49.175153+00:00",
+        "snapshotting_state": "snapshotting_finished",
+        "export_state": "export_finished",
+        "failed_export_count": 0,
+        "raw": {
+          "export_state": "export_finished",
+          "successful_add_count": 0,
+          "successful_remove_count": 0,
+          "failed_export_count": 0,
+          "rejected_row_count": 1,
+          "total_row_count": 1,
+          "successful_expanded_add_count": 0,
+          "successful_expanded_remove_count": 0,
+          "failed_expanded_export_count": 0,
+          "rejected_expanded_row_count": 1,
+          "total_expanded_row_count": 1,
+          "enhanced_match_count": 0,
+          "enhanced_row_count": 0,
+          "enhanced_total_records": 0,
+          "total_batch_count": 1,
+          "completed_batch_count": 1,
+          "successful_batch_count": 1,
+          "failed_batch_count": 0,
+          "failure_reason": null,
+          "info": {
+            "internal_export_id": "b26e9566d9a542e8f910a44b00f49dcb-20260514001700",
+            "export_run_id": "35392-iterable_21441-scheduled__2026-05-14T00:00:00+00:00",
+            "audience_id": "9673659",
+            "internal_audience_id": "35392",
+            "audience_name": "",
+            "organization_id": "336",
+            "organization_name": "trumanshow",
+            "platform": "iterable",
+            "endpoint_id": "app_iterable_1526",
+            "export_timestamp": "2026-05-14 00:17:00",
+            "error_file_uri": "gs://flywheel-prod-328213-temporary/batch_errors/cf0bcd47-95cd-404d-82e3-e401448e7f8b.csv",
+            "created_at": "2026-05-14T00:17:49.175153+00:00",
+            "export_complete_response": null
+          },
+          "snapshotting_state": "snapshotting_finished"
+        }
+      }
+    }
+  ],
+  "blockers": [],
+  "evidence_artifacts": [],
+  "created_at": "2026-05-16T21:03:12.724Z",
+  "updated_at": "2026-05-16T21:03:12.724Z",
+  "closed_at": "2026-05-16T21:03:12.724Z"
+}

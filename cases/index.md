@@ -1,10 +1,10 @@
 # On-call Triage Cases
 
-Generated: 2026-05-16T20:48:21.377Z
-Open groups: 55
+Generated: 2026-05-16T21:06:55.317Z
+Open groups: 50
 Alert facts: 698
 
-## New (25)
+## New (9)
 
 | Tags | Group | Summary | Incidents | Alerts |
 |---|---|---|---|---:|
@@ -15,26 +15,10 @@ Alert facts: 698
 | `triage:needs_review` | [260514-allegro_3-client-sent-export-failure](groups/new/260514-allegro_3-client-sent-export-failure/case.md) | allegro (Marketing) - Audience 302: Audience Export failure for 302 sent to client. | Q2KT0WUDEVL42Q | 37 |
 | `triage:needs_review` | [260514-allegro_3-dv360-export-error](groups/new/260514-allegro_3-dv360-export-error/case.md) | allegro (Marketing): Exports for audience 1277 failed with states: <(snapshotting_finished,export_error)> | Q2KT0WUDEVL42Q | 1 |
 | `triage:needs_review` | [260514-allegro_3-dv360-export-processing](groups/new/260514-allegro_3-dv360-export-processing/case.md) | allegro (Marketing): Exports for audience 1156 failed with states: <(snapshotting_finished,export_processing)> | Q2KT0WUDEVL42Q | 13 |
-| `triage:needs_review` | [260514-ford_310-dv360-export-error](groups/new/260514-ford_310-dv360-export-error/case.md) | ford (Marketing Production): Exports for audience 34062 failed with states: <(,export_error)> | Q3HWKW0FS3VTHE | 2 |
-| `triage:needs_review` | [260514-growthloop_268-client-sent-export-failure](groups/new/260514-growthloop_268-client-sent-export-failure/case.md) | growthloop (default) - Audience 35826: Audience Export failure for 35826 sent to client. | Q3PW7IHI1KCDWS | 1 |
-| `triage:needs_review` | [260514-priceline_370-no-batches](groups/new/260514-priceline_370-no-batches/case.md) | priceline (default): Exports for signal 783 failed with states: <(snapshotting_finished,no_batches)> | Q1YQV4ERKAIVMF | 151 |
-| `triage:needs_review` | [260514-trumanshow_336-adobe-experience-platform-export-error](groups/new/260514-trumanshow_336-adobe-experience-platform-export-error/case.md) | trumanshow (VZN): Exports for audience 36199 failed with states: <(snapshotting_finished,export_error)> | Q12A5QFIM3F9LN | 1 |
-| `triage:needs_review` | [260514-trumanshow_336-no-batches](groups/new/260514-trumanshow_336-no-batches/case.md) | trumanshow (Travel): Exports for audience 36293 failed with states: <(snapshotting_finished,no_batches)> | Q12A5QFIM3F9LN | 2 |
-| `triage:needs_review` | [260515-174-snapshotting-error](groups/new/260515-174-snapshotting-error/case.md) | NJ Devils (default): Exports for audience 23746 failed with states: <(snapshotting_error,no_batches)> | Q20XI8KK8YWADB | 1 |
-| `triage:needs_review` | [260515-174-zero-success](groups/new/260515-174-zero-success/case.md) | NJ Devils (default) - Audience 36378: 0 successfull_exports from pizza tracker found 10 minutes after new export | Q20XI8KK8YWADB | 1 |
-| `triage:needs_review` | [260515-378-snapshotting-error](groups/new/260515-378-snapshotting-error/case.md) | Cincinnati Reds (default): Exports for signal 891 failed with states: <(snapshotting_error,no_batches)> | Q1QD2CX8MRAYBW | 1 |
-| `triage:needs_review` | [260515-451-snapshotting-error](groups/new/260515-451-snapshotting-error/case.md) | ASU Enterprise Partners (Alumni): Exports for audience 26039 failed with states: <(snapshotting_error,no_batches)> | Q1UC14QNZK76EZ | 6 |
-| `triage:needs_review` | [260515-albertsons_6-zero-success](groups/new/260515-albertsons_6-zero-success/case.md) | albertsons (Albertsons Media) - Audience 10684: 0 successfull_exports from pizza tracker found 10 minutes after new export | Q269WMZF4MKMNL | 2 |
 | `triage:needs_review` | [260515-albertsons_6-zero-success-02](groups/new/260515-albertsons_6-zero-success-02/case.md) | albertsons (Albertsons Media) - Audience 12814: 0 successfull_exports from pizza tracker found 10 minutes after new export | Q38JR11G2ENK2W | 10 |
 | `triage:needs_review` | [260515-allegro_3-dv360-export-processing](groups/new/260515-allegro_3-dv360-export-processing/case.md) | allegro (Marketing): Exports for audience 605 failed with states: <(snapshotting_finished,export_processing)> | Q3GQQRY1UQLBSN | 1 |
-| `triage:needs_review` | [260515-birchwood_274-salesforce-audience-export-error](groups/new/260515-birchwood_274-salesforce-audience-export-error/case.md) | birchwood (default): Exports for signal 723 failed with states: <(snapshotting_finished,export_error)> | Q3PJ7W2K3Y9LJV | 1 |
-| `triage:needs_review` | [260515-chghealthcare_395-marketing-cloud-export-error](groups/new/260515-chghealthcare_395-marketing-cloud-export-error/case.md) | chghealthcare (CompHealth): Exports for audience 36059 failed with states: <(snapshotting_finished,export_error)> | Q29I2IVNNVK80X | 1 |
-| `triage:needs_review` | [260515-nascar_2-no-batches](groups/new/260515-nascar_2-no-batches/case.md) | Nascar (default): Exports for signal 125 failed with states: <(snapshotting_finished,no_batches)> | Q16KSAQEWECSDD | 2 |
-| `triage:needs_review` | [260515-nerdwallet_373-tik-tok-export-processing](groups/new/260515-nerdwallet_373-tik-tok-export-processing/case.md) | NerdWallet ( PerfMarketing-Cards): Exports for audience 28175 failed with states: <(snapshotting_finished,export_processing)> | Q2CEMYYJ9N4IAX | 1 |
-| `triage:needs_review` | [260515-pgatourhq_219-no-batches](groups/new/260515-pgatourhq_219-no-batches/case.md) | pgatourhq (New World Order): Exports for audience 31918 failed with states: <(snapshotting_finished,no_batches)> | Q2DJCY3XC2BSBG | 13 |
-| `triage:needs_review` | [260515-priceline_370-tik-tok-export-processing](groups/new/260515-priceline_370-tik-tok-export-processing/case.md) | priceline (default): Exports for audience 18623 failed with states: <(snapshotting_finished,export_processing)> | Q0X2D8TR82ZQV9 | 1 |
 
-## Open (28)
+## Open (38)
 
 | Tags | Group | Summary | Incidents | Alerts |
 |---|---|---|---|---:|
@@ -60,11 +44,21 @@ Alert facts: 698
 | `triage:needs_review` | [260514-evgo_402-client-sent-export-failure](groups/open/260514-evgo_402-client-sent-export-failure/case.md) | EVgo (default) - SignalRoute 373: SignalRoute Export failure for 373 sent to client. | Q157KO5ON9TWGO | 1 |
 | `triage:needs_review` | [260514-ford_310-client-sent-export-failure](groups/open/260514-ford_310-client-sent-export-failure/case.md) | ford (Marketing Production) - Audience 32921: Audience Export failure for 32921 sent to client. | Q1TJJ4MEVOF1W3 | 2 |
 | `triage:needs_review` | [260514-ford_310-client-sent-export-failure-02](groups/open/260514-ford_310-client-sent-export-failure-02/case.md) | ford (Marketing Production) - Audience 34059: Audience Export failure for 34059 sent to client. | Q3HWKW0FS3VTHE | 1 |
+| `triage:needs_review` | [260514-ford_310-dv360-export-error](groups/open/260514-ford_310-dv360-export-error/case.md) | ford (Marketing Production): Exports for audience 34062 failed with states: <(,export_error)> | Q3HWKW0FS3VTHE | 2 |
+| `triage:needs_review` | [260514-growthloop_268-client-sent-export-failure](groups/open/260514-growthloop_268-client-sent-export-failure/case.md) | growthloop (default) - Audience 35826: Audience Export failure for 35826 sent to client. | Q3PW7IHI1KCDWS | 1 |
+| `triage:needs_review` | [260514-priceline_370-no-batches](groups/open/260514-priceline_370-no-batches/case.md) | priceline (default): Exports for signal 783 failed with states: <(snapshotting_finished,no_batches)> | Q1YQV4ERKAIVMF | 151 |
+| `triage:needs_review` | [260514-trumanshow_336-adobe-experience-platform-export-error](groups/open/260514-trumanshow_336-adobe-experience-platform-export-error/case.md) | trumanshow (VZN): Exports for audience 36199 failed with states: <(snapshotting_finished,export_error)> | Q12A5QFIM3F9LN | 1 |
+| `triage:needs_review` | [260515-174-snapshotting-error](groups/open/260515-174-snapshotting-error/case.md) | NJ Devils (default): Exports for audience 23746 failed with states: <(snapshotting_error,no_batches)> | Q20XI8KK8YWADB | 1 |
+| `triage:needs_review` | [260515-174-zero-success](groups/open/260515-174-zero-success/case.md) | NJ Devils (default) - Audience 36378: 0 successfull_exports from pizza tracker found 10 minutes after new export | Q20XI8KK8YWADB | 1 |
 | `triage:needs_review` | [260515-3-client-sent-export-failure](groups/open/260515-3-client-sent-export-failure/case.md) | Costco Non Prod (default) - Audience 5689: Audience Export failure for 5689 sent to client. | Q15FI03XBQ4OW5 | 1 |
 | `triage:needs_review` | [260515-378-client-sent-export-failure](groups/open/260515-378-client-sent-export-failure/case.md) | Cincinnati Reds (default) - Audience 34484: Audience Export failure for 34484 sent to client. | Q33KFL1KESEMVC | 1 |
+| `triage:needs_review` | [260515-378-snapshotting-error](groups/open/260515-378-snapshotting-error/case.md) | Cincinnati Reds (default): Exports for signal 891 failed with states: <(snapshotting_error,no_batches)> | Q1QD2CX8MRAYBW | 1 |
 | `triage:needs_review` | [260515-451-client-sent-export-failure](groups/open/260515-451-client-sent-export-failure/case.md) | ASU Enterprise Partners (General - ASU Data) - SignalRoute 995: SignalRoute Export failure for 995 sent to client. | Q31XLLHUNNMAK9 | 1 |
+| `triage:needs_review` | [260515-451-snapshotting-error](groups/open/260515-451-snapshotting-error/case.md) | ASU Enterprise Partners (Alumni): Exports for audience 26039 failed with states: <(snapshotting_error,no_batches)> | Q1UC14QNZK76EZ | 6 |
 | `triage:needs_review` | [260515-albertsons_6-live-ramp-export-error](groups/open/260515-albertsons_6-live-ramp-export-error/case.md) | albertsons (Albertsons Media): Exports for audience 12862 failed with states: <(snapshotting_finished,export_error)> | Q38JR11G2ENK2W | 1 |
-| `triage:needs_review`<br>`triage:client_schema_missing` | [260515-gopuff_544-snapshotting-error](groups/open/260515-gopuff_544-snapshotting-error/case.md) | Blocked by missing source column CORE.GOPUFF_ORDER_ITEMS.CLASS for audience 36168; needs owner/client schema or audience definition fix. | Q1X9CE7BIDK9MV | 1 |
+| `triage:needs_review` | [260515-albertsons_6-zero-success](groups/open/260515-albertsons_6-zero-success/case.md) | albertsons (Albertsons Media) - Audience 10684: 0 successfull_exports from pizza tracker found 10 minutes after new export | Q269WMZF4MKMNL | 2 |
+| `triage:needs_review` | [260515-birchwood_274-salesforce-audience-export-error](groups/open/260515-birchwood_274-salesforce-audience-export-error/case.md) | birchwood (default): Exports for signal 723 failed with states: <(snapshotting_finished,export_error)> | Q3PJ7W2K3Y9LJV | 1 |
+| `triage:needs_review` | [260515-pgatourhq_219-no-batches](groups/open/260515-pgatourhq_219-no-batches/case.md) | pgatourhq (New World Order): Exports for audience 31918 failed with states: <(snapshotting_finished,no_batches)> | Q2DJCY3XC2BSBG | 13 |
 | `triage:needs_review` | [260515-royals_4-snapshotting-error](groups/open/260515-royals_4-snapshotting-error/case.md) | royals (default): Exports for signal 203 failed with states: <(snapshotting_error,no_batches)> | Q08B553ANQ9KMI | 1 |
 
 ## Monitoring (1)
@@ -73,22 +67,28 @@ Alert facts: 698
 |---|---|---|---|---:|
 | `triage:tag_grouped`<br>`waiting:uploads` | [260512-albertsons_6-liveramp-waiting-uploads](groups/monitoring/260512-albertsons_6-liveramp-waiting-uploads/case.md) | Exports have progress evidence but are not complete yet. | Q2T09VCLN9MRZ8 | 4 |
 
-## Waiting (1)
+## Waiting (2)
 
 | Tags | Group | Summary | Incidents | Alerts |
 |---|---|---|---|---:|
 | `triage:snapshotting-schema`<br>`triage:tag_grouped`<br>`waiting:source-schema` | [260505-albertsons_6-snapshotting-schema-error](groups/waiting/260505-albertsons_6-snapshotting-schema-error/case.md) | Blocked on Albertsons source/schema remediation: scoped snapshotting logs show missing fields in RFM_Category_Group, and live pizza shows no later successful terminal export for the five alert-scoped runs. | Q2T09VCLN9MRZ8 | 5 |
+| `triage:needs_review`<br>`triage:client_schema_missing`<br>`waiting:client_schema` | [260515-gopuff_544-snapshotting-error](groups/waiting/260515-gopuff_544-snapshotting-error/case.md) | Waiting on support/client remediation for missing source column CORE.GOPUFF_ORDER_ITEMS.CLASS in GoPuff Snowflake source schema; support thread opened. | Q1X9CE7BIDK9MV | 1 |
 
-## Resolved (9)
+## Resolved (14)
 
 | Tags | Group | Summary | Incidents | Alerts |
 |---|---|---|---|---:|
 | `resolved:later-export-succeeded`<br>`triage:tag_grouped` | [260504-albertsons_6-liveramp-recovered](groups/resolved/260504-albertsons_6-liveramp-recovered/case.md) | Exports with prior LiveRamp failures have later healthy checked runs. | Q2T09VCLN9MRZ8<br>Q38JR11G2ENK2W | 140 |
 | `triage:needs_review`<br>`evidence:albertsons-liveramp-progress`<br>`resolved:merged` | [260511-albertsons_6-live-ramp-export-processing](groups/resolved/260511-albertsons_6-live-ramp-export-processing/case.md) | Merged into 260512-albertsons_6-liveramp-waiting-uploads: Same alert and same export-in-progress evidence; keep the broader Albertsons LiveRamp uploads monitoring group as the live case. | Q2T09VCLN9MRZ8 | 1 |
 | `resolved:export-healthy`<br>`triage:tag_grouped` | [260511-albertsons_6-liveramp-complete](groups/resolved/260511-albertsons_6-liveramp-complete/case.md) | Checked exports are healthy with no blocking export evidence. | Q2T09VCLN9MRZ8 | 4 |
+| `triage:needs_review`<br>`resolved:export-healthy` | [260514-trumanshow_336-no-batches](groups/resolved/260514-trumanshow_336-no-batches/case.md) | Auto-resolved from Pizza export checks: all 2 alert-scoped export check(s) are healthy_closed with no blockers. | Q12A5QFIM3F9LN | 2 |
 | `triage:needs_review`<br>`resolved:pd_closed_external` | [260515-76ers_131-zero-success](groups/resolved/260515-76ers_131-zero-success/case.md) | All attached PagerDuty incidents are resolved externally. | Q0Z4MMEOFYDHC7 | 1 |
+| `triage:needs_review`<br>`resolved:export-healthy` | [260515-chghealthcare_395-marketing-cloud-export-error](groups/resolved/260515-chghealthcare_395-marketing-cloud-export-error/case.md) | Auto-resolved from Pizza export checks: all 1 alert-scoped export check(s) are healthy_closed with no blockers. | Q29I2IVNNVK80X | 1 |
 | `triage:needs_review`<br>`resolved:retry_succeeded` | [260515-dexcom_478-no-batches](groups/resolved/260515-dexcom_478-no-batches/case.md) | Resolved as retry/false alarm: alert reported snapshotting_finished/no_batches, but live Pizza shows the checked Dexcom Marketing Cloud run and later same-scope scheduled runs completed export_finished with zero failures/rejects. | Q2RVN4BPATQXSR | 1 |
 | `triage:needs_review`<br>`resolved:export-healthy` | [260515-evgo_402-no-batches](groups/resolved/260515-evgo_402-no-batches/case.md) | Resolved as false alarm/export healthy: all nine EVgo Braze alerts were checked in Pizza and the referenced runs are healthy_closed with snapshotting_finished/export_finished and failed=0. | Q157KO5ON9TWGO | 9 |
 | `triage:needs_review`<br>`resolved:pd_closed_external` | [260515-flagstar_305-no-batches](groups/resolved/260515-flagstar_305-no-batches/case.md) | All attached PagerDuty incidents are resolved externally. | Q28HZS5TYC0NM9 | 1 |
+| `triage:needs_review`<br>`resolved:export-healthy` | [260515-nascar_2-no-batches](groups/resolved/260515-nascar_2-no-batches/case.md) | Auto-resolved from Pizza export checks: all 2 alert-scoped export check(s) are healthy_closed with no blockers. | Q16KSAQEWECSDD | 2 |
+| `triage:needs_review`<br>`resolved:export-healthy` | [260515-nerdwallet_373-tik-tok-export-processing](groups/resolved/260515-nerdwallet_373-tik-tok-export-processing/case.md) | Auto-resolved from Pizza export checks: all 1 alert-scoped export check(s) are healthy_closed with no blockers. | Q2CEMYYJ9N4IAX | 1 |
+| `triage:needs_review`<br>`resolved:export-healthy` | [260515-priceline_370-tik-tok-export-processing](groups/resolved/260515-priceline_370-tik-tok-export-processing/case.md) | Auto-resolved from Pizza export checks: all 1 alert-scoped export check(s) are healthy_closed with no blockers. | Q0X2D8TR82ZQV9 | 1 |
 | `triage:needs_review`<br>`resolved:pd_closed_external` | [260515-whirlpool_525-no-batches](groups/resolved/260515-whirlpool_525-no-batches/case.md) | All attached PagerDuty incidents are resolved externally. | Q3WZUE4915S6J4 | 2 |
 | `triage:needs_review`<br>`resolved:retry_succeeded` | [260516-evgo_402-client-sent-export-failure](groups/resolved/260516-evgo_402-client-sent-export-failure/case.md) | Resolved as retry/false alarm: failed Braze run 29790-braze_18238-scheduled__2026-05-16T14:00:00+00:00 hit transient Snowflake connector response-ended-prematurely during snapshotting, but later same-scope scheduled runs at 15:00 and 16:00 UTC completed export_finished with zero failures/rejects. | Q22U9UI0BTFNJC | 1 |
