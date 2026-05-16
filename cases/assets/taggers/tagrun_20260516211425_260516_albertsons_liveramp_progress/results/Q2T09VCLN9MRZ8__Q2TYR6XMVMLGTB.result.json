@@ -1,0 +1,56 @@
+{
+  "annotation": {
+    "ts": "2026-05-16T21:14:25.628Z",
+    "alert_ref": {
+      "incident_id": "Q2T09VCLN9MRZ8",
+      "alert_id": "Q2TYR6XMVMLGTB"
+    },
+    "tags": [
+      "evidence:albertsons-liveramp-progress",
+      "waiting:uploads"
+    ],
+    "decision": "tag",
+    "confidence": "high",
+    "summary": "Audience 10073: export-in-progress (classification=export-in-progress; check=monitoring; healthy_runs=0; monitoring_runs=1; blocked_runs=0).",
+    "source": {
+      "kind": "tagger",
+      "run_id": "tagrun_20260516211425_260516_albertsons_liveramp_progress",
+      "script_sha256": "8d0fa28f1cd4c6528b7a51685c5de7502bb731b48c058d56f237aa2a90fa7820",
+      "script_path": "cases/assets/taggers/tagrun_20260516211425_260516_albertsons_liveramp_progress/260516-albertsons-liveramp-progress.ts"
+    },
+    "evidence": [
+      {
+        "kind": "export_check",
+        "matched": true,
+        "source": "/Users/wolever/Scratch/oncall-triage-v2/cases/checks/chk_q2t09vcln9mrz8_q2tyr6xmvmlgtb/check.json",
+        "summary": "classification=export-in-progress; check=monitoring; healthy_runs=0; monitoring_runs=1; blocked_runs=0",
+        "data": {
+          "classification": "export-in-progress",
+          "check_state": "monitoring",
+          "blockers": [],
+          "checked_export_run_ids": [
+            "10073-live_ramp_activation_2061-scheduled__2026-05-08T00:00:00+00:00"
+          ],
+          "run_evaluations": [
+            {
+              "export_run_id": "10073-live_ramp_activation_2061-scheduled__2026-05-08T00:00:00+00:00",
+              "health": "monitoring",
+              "blockers": [],
+              "export_state": "no_batches",
+              "snapshotting_state": "snapshotting_processing",
+              "failed_export_count": 0,
+              "failure_reason": null,
+              "row_created_at": "2026-05-08T00:22:09.764588+00:00"
+            }
+          ],
+          "updated_at": "2026-05-16T20:23:32.671Z"
+        }
+      }
+    ]
+  },
+  "process": {
+    "stdout": "{\"decision\":\"tag\",\"tags\":[\"evidence:albertsons-liveramp-progress\",\"waiting:uploads\"],\"confidence\":\"high\",\"summary\":\"Audience 10073: export-in-progress (classification=export-in-progress; check=monitoring; healthy_runs=0; monitoring_runs=1; blocked_runs=0).\",\"evidence\":[{\"kind\":\"export_check\",\"matched\":true,\"source\":\"/Users/wolever/Scratch/oncall-triage-v2/cases/checks/chk_q2t09vcln9mrz8_q2tyr6xmvmlgtb/check.json\",\"summary\":\"classification=export-in-progress; check=monitoring; healthy_runs=0; monitoring_runs=1; blocked_runs=0\",\"data\":{\"classification\":\"export-in-progress\",\"check_state\":\"monitoring\",\"blockers\":[],\"checked_export_run_ids\":[\"10073-live_ramp_activation_2061-scheduled__2026-05-08T00:00:00+00:00\"],\"run_evaluations\":[{\"export_run_id\":\"10073-live_ramp_activation_2061-scheduled__2026-05-08T00:00:00+00:00\",\"health\":\"monitoring\",\"blockers\":[],\"export_state\":\"no_batches\",\"snapshotting_state\":\"snapshotting_processing\",\"failed_export_count\":0,\"failure_reason\":null,\"row_created_at\":\"2026-05-08T00:22:09.764588+00:00\"}],\"updated_at\":\"2026-05-16T20:23:32.671Z\"}}]}\n",
+    "stderr": "",
+    "exit_code": 0
+  }
+}

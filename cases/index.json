@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-05-16T21:09:19.337Z",
-  "open_count": 50,
+  "generated_at": "2026-05-16T21:15:42.003Z",
+  "open_count": 47,
   "groups": [
     {
       "group_id": "260513-allegro_3-client-sent-export-failure",
@@ -113,34 +113,6 @@
       ],
       "alert_count": 1,
       "path": "groups/new/260515-allegro_3-dv360-export-processing/case.md"
-    },
-    {
-      "group_id": "260511-albertsons_6-live-ramp-export-error",
-      "state": "open",
-      "tags": [
-        "triage:needs_review"
-      ],
-      "title": "albertsons_6 live-ramp export-error",
-      "summary": "albertsons (Albertsons Media): Exports for audience 12632 failed with states: <(snapshotting_finished,export_error)>",
-      "incident_ids": [
-        "Q2T09VCLN9MRZ8"
-      ],
-      "alert_count": 142,
-      "path": "groups/open/260511-albertsons_6-live-ramp-export-error/case.md"
-    },
-    {
-      "group_id": "260511-albertsons_6-no-batches",
-      "state": "open",
-      "tags": [
-        "triage:needs_review"
-      ],
-      "title": "albertsons_6 no-batches",
-      "summary": "albertsons (Albertsons Media): Exports for audience 2850 failed with states: <(snapshotting_finished,no_batches)>",
-      "incident_ids": [
-        "Q2T09VCLN9MRZ8"
-      ],
-      "alert_count": 1,
-      "path": "groups/open/260511-albertsons_6-no-batches/case.md"
     },
     {
       "group_id": "260511-albertsons_6-snapshotting-error",
@@ -577,20 +549,6 @@
       "path": "groups/open/260515-451-snapshotting-error/case.md"
     },
     {
-      "group_id": "260515-albertsons_6-live-ramp-export-error",
-      "state": "open",
-      "tags": [
-        "triage:needs_review"
-      ],
-      "title": "albertsons_6 live-ramp export-error",
-      "summary": "albertsons (Albertsons Media): Exports for audience 12862 failed with states: <(snapshotting_finished,export_error)>",
-      "incident_ids": [
-        "Q38JR11G2ENK2W"
-      ],
-      "alert_count": 1,
-      "path": "groups/open/260515-albertsons_6-live-ramp-export-error/case.md"
-    },
-    {
       "group_id": "260515-albertsons_6-zero-success",
       "state": "open",
       "tags": [
@@ -725,6 +683,21 @@
       "path": "groups/resolved/260504-albertsons_6-liveramp-recovered/case.md"
     },
     {
+      "group_id": "260511-albertsons_6-live-ramp-export-error",
+      "state": "resolved",
+      "tags": [
+        "triage:needs_review",
+        "resolved:later-export-succeeded"
+      ],
+      "title": "albertsons_6 live-ramp export-error",
+      "summary": "Resolved from Albertsons LiveRamp tagger evidence: all 142 alert-scoped exports are terminal; 139 had later healthy runs after export failure and 3 are export-healthy.",
+      "incident_ids": [
+        "Q2T09VCLN9MRZ8"
+      ],
+      "alert_count": 142,
+      "path": "groups/resolved/260511-albertsons_6-live-ramp-export-error/case.md"
+    },
+    {
       "group_id": "260511-albertsons_6-live-ramp-export-processing",
       "state": "resolved",
       "tags": [
@@ -757,6 +730,21 @@
       "path": "groups/resolved/260511-albertsons_6-liveramp-complete/case.md"
     },
     {
+      "group_id": "260511-albertsons_6-no-batches",
+      "state": "resolved",
+      "tags": [
+        "triage:needs_review",
+        "resolved:export-healthy"
+      ],
+      "title": "albertsons_6 no-batches",
+      "summary": "Resolved from Albertsons LiveRamp tagger evidence: the only alert-scoped export is healthy/export-complete.",
+      "incident_ids": [
+        "Q2T09VCLN9MRZ8"
+      ],
+      "alert_count": 1,
+      "path": "groups/resolved/260511-albertsons_6-no-batches/case.md"
+    },
+    {
       "group_id": "260514-trumanshow_336-no-batches",
       "state": "resolved",
       "tags": [
@@ -785,6 +773,21 @@
       ],
       "alert_count": 1,
       "path": "groups/resolved/260515-76ers_131-zero-success/case.md"
+    },
+    {
+      "group_id": "260515-albertsons_6-live-ramp-export-error",
+      "state": "resolved",
+      "tags": [
+        "triage:needs_review",
+        "resolved:later-export-succeeded"
+      ],
+      "title": "albertsons_6 live-ramp export-error",
+      "summary": "Resolved from Albertsons LiveRamp tagger evidence: the alert had a later healthy run after the export error.",
+      "incident_ids": [
+        "Q38JR11G2ENK2W"
+      ],
+      "alert_count": 1,
+      "path": "groups/resolved/260515-albertsons_6-live-ramp-export-error/case.md"
     },
     {
       "group_id": "260515-chghealthcare_395-marketing-cloud-export-error",
