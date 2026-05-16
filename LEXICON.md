@@ -52,6 +52,28 @@ Invariants:
   rule changes.
 - `state.json` is a materialized current snapshot, not the only audit record.
 
+### Group State
+
+The materialized lifecycle of a group: `new`, `open`, `waiting`, `monitoring`,
+or `resolved`.
+
+Invariants:
+
+- `new` means the alert has been imported and placed into a first-pass group, but
+  no evidence collection or triage work has started.
+- `open` means someone has started work: an agent or human appended evidence,
+  ran a relevant check, began investigation, or explicitly moved the group out
+  of `new`.
+- `waiting` means the blocking issue has already been communicated to the owner
+  who can act on it. The case must include evidence of that communication, such
+  as a Slack message, customer note, ticket, PagerDuty note, or linked handoff.
+- A group with evidence of an external blocker but no communication evidence is
+  still `open`; the agent should report findings and prepare the message or
+  escalation rather than marking it `waiting`.
+- `monitoring` means progress or retry behavior is still expected and a future
+  check is needed.
+- `resolved` requires terminal evidence, not only a plausible explanation.
+
 ### Case
 
 The set of files that make a group usable by humans and tools: `state.json`,
@@ -223,10 +245,19 @@ JSON:
 Invariants:
 
 - Allowed decisions are `tag`, `skip`, and `needs_evidence`.
+- One-off investigation scripts should live under
+  `taggers/one-off/YYMMDD-name.ts`. The date means "this was useful at this
+  time," not "this is a durable rule forever."
+- Reusable taggers should live under `taggers/reusable/` and carry a higher bar
+  for generality, documentation, and tests.
 - A malformed or failing tagger run becomes `needs_evidence`; it does not apply
   tags silently.
 - Taggers should join external evidence back to alert scope: org, audience,
   endpoint, run id, destination, and time window.
+- Classifier taggers should be open-ended. They may emit known evidence tags
+  such as recovered, waiting, export failure, or snapshotting schema error, but
+  they must leave unfamiliar blocker combinations as `needs_evidence` rather
+  than forcing them into today's categories.
 
 ### Related Group
 
@@ -278,6 +309,14 @@ Invariants:
   source where applicable.
 - A broad log search is not incident evidence unless it joins back to alert
   scope.
+- For export checks, `rejected_row_count` is informational by default and is
+  usually not a blocker, even when all rows are rejected. Treat
+  `failed_export_count`, `export_error`, and `snapshotting_error` as the
+  important failure signals unless a domain-specific tagger explicitly says
+  otherwise.
+- For export incidents, prefer the loop: cohort query, per-alert evidence
+  check, tagger classification, then `group --tag`. Do not group the whole
+  cohort merely because alerts share org, destination, or incident.
 
 ### Decision Event
 

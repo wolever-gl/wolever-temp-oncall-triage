@@ -20,7 +20,9 @@ Use this repo as a case-workspace system, not a spreadsheet workflow.
 - Keep append-only `lineage.jsonl`, `evidence.jsonl`, `decisions.jsonl`, `actions.jsonl`, and structural events.
 - Keep `DECISIONS.md`, `LEARNINGS.md`, and `LEXICON.md` current when work changes architecture, behavior, or terminology.
 - Use the CLI for structural mutations. Direct file edits are fine for narrative and artifact files.
-- Current group states are `open`, `waiting`, `monitoring`, and `resolved`.
+- Current group states are `new`, `open`, `waiting`, `monitoring`, and `resolved`.
+- `new` means imported and grouped, but no evidence collection or triage work has started yet. Move a group to `open` when an agent or human begins investigation, appends evidence, runs a relevant check, or otherwise starts work.
+- Move a group to `waiting` only after there is durable evidence that the blocker has been communicated to the owning party. Include that communication evidence in the case when making the transition. If communication has not happened yet, report findings and leave the group `open` unless another state is clearly justified.
 - Use namespaced tags such as `triage:*`, `waiting:*`, `monitoring:*`, and `resolved:*`.
 - No scheduler for now. Use `next_check_at` fields when a future revisit is needed.
 - Runbooks are structured instructions and may include tool functions or scripts.

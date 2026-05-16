@@ -2,7 +2,7 @@ import { describe, expect, test } from "bun:test";
 import { mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import path from "node:path";
-import { groupImportedAlerts, groupTaggedAlerts, importPagerDutyIncident, loadAllGroups, loadMatchRules, mergeGroups, queryAlertFacts, readIncidentRecord, regenerateIndex, runAlertTagger, splitGroup, syncPagerDutyWorkspace, transitionGroup } from "./workspace";
+import { appendEvidence, groupImportedAlerts, groupTaggedAlerts, importPagerDutyIncident, loadAllGroups, loadMatchRules, mergeGroups, queryAlertFacts, readIncidentRecord, regenerateIndex, runAlertTagger, splitGroup, syncPagerDutyWorkspace, transitionGroup } from "./workspace";
 import type { PagerDutyIncidentStatusRecord } from "./pagerduty";
 
 const fixture = path.resolve(import.meta.dir, "..", "fixtures", "pagerduty-alerts.json");
@@ -38,6 +38,10 @@ describe("case workspace", () => {
       expect(alertIndex).toContain("16985");
       const indexMd = await readFile(path.join(workspaceDir, "index.md"), "utf8");
       expect(indexMd).toContain("On-call Triage Cases");
+      expect(indexMd).toContain("## New (1)");
+      expect(indexMd).toContain("groups/new/260515-chghealthcare_395-client-sent-export-failure/case.md");
+      const groupedCase = await readFile(groupFile(workspaceDir, "new", "260515-chghealthcare_395-client-sent-export-failure", "case.md"), "utf8");
+      expect(groupedCase).toContain("State: `new`");
     } finally {
       await rm(workspaceDir, { recursive: true, force: true });
     }
@@ -104,7 +108,7 @@ console.log(JSON.stringify({
 
       const groups = await loadAllGroups(workspaceDir);
       expect(groups.map((group) => group.group_id)).toEqual([grouped.group.group_id]);
-      const decisions = await readFile(path.join(workspaceDir, "groups", grouped.group.group_id, "decisions.jsonl"), "utf8");
+      const decisions = await readFile(groupFile(workspaceDir, "monitoring", grouped.group.group_id, "decisions.jsonl"), "utf8");
       expect(decisions).toContain("created_group_from_tags");
       const matchRules = await loadMatchRules(workspaceDir);
       expect(matchRules.every((rule) => rule.status === "redirect" && rule.target_group_id === grouped.group.group_id)).toBe(true);
@@ -120,6 +124,12 @@ console.log(JSON.stringify({
       const grouped = await groupImportedAlerts(workspaceDir);
       const groupId = grouped.groups[0]!;
 
+      await transitionGroup({
+        workspaceDir,
+        groupId,
+        state: "open",
+        summary: "Investigation started.",
+      });
       const group = await transitionGroup({
         workspaceDir,
         groupId,
@@ -130,8 +140,45 @@ console.log(JSON.stringify({
       expect(group.state).toBe("resolved");
       expect(group.tags).toContain("resolved:retry_succeeded");
 
-      const decisions = await readFile(path.join(workspaceDir, "groups", groupId, "decisions.jsonl"), "utf8");
+      const decisions = await readFile(groupFile(workspaceDir, "resolved", groupId, "decisions.jsonl"), "utf8");
+      expect(decisions).toContain("transitioned_to_open");
       expect(decisions).toContain("transitioned_to_resolved");
+    } finally {
+      await rm(workspaceDir, { recursive: true, force: true });
+    }
+  });
+
+  test("appending evidence refreshes case markdown with investigation details and links", async () => {
+    const workspaceDir = await mkdtemp(path.join(tmpdir(), "oncall-triage-v2-"));
+    try {
+      await importPagerDutyIncident({ workspaceDir, incident: "QTEST123", alertsFile: fixture });
+      const grouped = await groupImportedAlerts(workspaceDir);
+      const groupId = grouped.groups[0]!;
+
+      await appendEvidence(workspaceDir, groupId, {
+        ts: "2026-05-16T17:00:00.000Z",
+        kind: "triage",
+        source: "gcloud scoped logs",
+        summary: "Scoped logs show base_table_not_empty_check_failed for export run 34484-iterable_21078-scheduled__2026-05-16T00:00:00+00:00.",
+        data: {
+          links: [
+            {
+              label: "Scoped run logs",
+              url: "https://console.cloud.google.com/logs/query;query=test?project=flywheel-prod-328213",
+            },
+          ],
+          commands: [
+            "gcloud logging read 'resource.type=\"k8s_container\"' --project=flywheel-prod-328213",
+          ],
+        },
+      });
+
+      const caseMarkdown = await readFile(groupFile(workspaceDir, "open", groupId, "case.md"), "utf8");
+      expect(caseMarkdown).toContain("State: `open`");
+      expect(caseMarkdown).toContain("## Recent Evidence");
+      expect(caseMarkdown).toContain("base_table_not_empty_check_failed");
+      expect(caseMarkdown).toContain("[Scoped run logs](https://console.cloud.google.com/logs/query;query=test?project=flywheel-prod-328213)");
+      expect(caseMarkdown).toContain("gcloud logging read");
     } finally {
       await rm(workspaceDir, { recursive: true, force: true });
     }
@@ -159,8 +206,8 @@ console.log(JSON.stringify({
       expect(result.target.alert_refs).toHaveLength(6);
       expect(result.target.incident_ids).toEqual(["QTEST123", "QTEST456"]);
 
-      const sourceLineage = await readFile(path.join(workspaceDir, "groups", sourceGroupId, "lineage.jsonl"), "utf8");
-      const targetLineage = await readFile(path.join(workspaceDir, "groups", targetGroupId, "lineage.jsonl"), "utf8");
+      const sourceLineage = await readFile(groupFile(workspaceDir, "resolved", sourceGroupId, "lineage.jsonl"), "utf8");
+      const targetLineage = await readFile(groupFile(workspaceDir, "new", targetGroupId, "lineage.jsonl"), "utf8");
       expect(sourceLineage).toContain(`"kind":"merge"`);
       expect(targetLineage).toContain(`"kind":"merge"`);
 
@@ -249,8 +296,8 @@ console.log(JSON.stringify({
       expect(result.created.summary).toBe("One alert needs to stand on its own.");
       expect(result.created.related_group_ids).toContain(source!.group_id);
 
-      const sourceLineage = await readFile(path.join(workspaceDir, "groups", source!.group_id, "lineage.jsonl"), "utf8");
-      const createdLineage = await readFile(path.join(workspaceDir, "groups", result.created.group_id, "lineage.jsonl"), "utf8");
+      const sourceLineage = await readFile(groupFile(workspaceDir, "new", source!.group_id, "lineage.jsonl"), "utf8");
+      const createdLineage = await readFile(groupFile(workspaceDir, "open", result.created.group_id, "lineage.jsonl"), "utf8");
       expect(sourceLineage).toContain(`"kind":"split"`);
       expect(createdLineage).toContain(`"kind":"split"`);
 
@@ -311,7 +358,7 @@ console.log(JSON.stringify({
         expect(group.state).toBe("resolved");
         expect(group.tags).toContain("resolved:pd_closed_external");
         expect(group.summary).toBe("All attached PagerDuty incidents are resolved externally.");
-        const evidence = await readFile(path.join(workspaceDir, "groups", group.group_id, "evidence.jsonl"), "utf8");
+        const evidence = await readFile(groupFile(workspaceDir, "resolved", group.group_id, "evidence.jsonl"), "utf8");
         expect(evidence).toContain("pd_sync");
       }
     } finally {
@@ -319,3 +366,7 @@ console.log(JSON.stringify({
     }
   });
 });
+
+function groupFile(workspaceDir: string, state: string, groupId: string, file: string): string {
+  return path.join(workspaceDir, "groups", state, groupId, file);
+}

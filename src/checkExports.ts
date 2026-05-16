@@ -1,7 +1,7 @@
 import path from "node:path";
 import { readFile } from "node:fs/promises";
 import { ensureDir, listDirs, readJson, slug, writeJson } from "./fsutil";
-import { loadAllAlerts } from "./workspace";
+import { loadAllAlerts, markGroupsStartedForAlerts } from "./workspace";
 import type { AlertFact, ExportCheck, ExportCheckScope, ExportCheckState, ExportRunEvaluation, PizzaExportRow } from "./schema";
 
 export interface CheckExportsOptions {
@@ -80,6 +80,18 @@ export async function checkExportsWorkspace(options: CheckExportsOptions): Promi
     evaluated++;
     await writeExportCheck(options.workspaceDir, evaluatedCheck);
     options.onProgress?.(`${check.check_id}: wrote state=${evaluatedCheck.state}${evaluatedCheck.proposed_state ? ` proposed=${evaluatedCheck.proposed_state}` : ""}${evaluatedCheck.blockers.length > 0 ? ` blockers=${evaluatedCheck.blockers.join(",")}` : ""}.`);
+  }
+
+  if (options.apply && evaluated > 0) {
+    await markGroupsStartedForAlerts(
+      options.workspaceDir,
+      checks.map((check) => ({ incident_id: check.incident_id, alert_id: check.alert_id })),
+      {
+        actor: "check-exports",
+        rationale: "Export evidence check evaluated alert facts for this group.",
+        ts: nowIso,
+      },
+    );
   }
 
   await writeCheckIndex(options.workspaceDir);

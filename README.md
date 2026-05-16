@@ -13,6 +13,34 @@ rails; agents make judgment calls using evidence and runbooks.
 - [LEARNINGS.md](LEARNINGS.md)
 - [LEXICON.md](LEXICON.md)
 
+## How To Triage
+
+Triage is an evidence loop, not a one-shot grouping pass:
+
+1. Refresh the workspace so the agent is looking at current facts. Today that
+   usually means `sync-pd`, any relevant evidence refresh such as
+   `check-exports`, then `index`. A future `refresh` command should wrap the
+   common version of this sequence.
+2. Open `cases/index.md` and take the highest-priority non-resolved group. Start
+   with the top `New` group unless there is a stronger operational reason to
+   continue an `open`, `monitoring`, or `waiting` group.
+3. Ask the agent to decide what to do with that group. The agent should inspect
+   alert facts, prior annotations, case notes, and external evidence; explain
+   the likely situation; and guide the next action.
+4. Take the smallest justified action: collect more evidence, tag alerts, split
+   or merge groups, mark something waiting, resolve a recovered issue, escalate
+   a customer-owned problem, or ask for human judgment.
+5. Regenerate the index.
+6. Before moving on, ask the agent to review how it reached the result. If a
+   tool, runbook, parser, command, lexicon entry, or workflow note would have
+   made the path faster or safer, update the relevant documentation so the next
+   agent benefits.
+7. Repeat.
+
+The important habit is to work one group at a time while keeping alerts
+queryable across group boundaries. Groups are a work queue and coordination
+surface; evidence tags explain why any alert belongs in a remediation path.
+
 ## Mental Model
 
 - **Facts first.** Raw PagerDuty imports are immutable facts. Parsed alert facts
@@ -27,8 +55,9 @@ rails; agents make judgment calls using evidence and runbooks.
   archived tagger scripts against alert facts, inspect the results, then group
   alerts by tag with explicit rationale.
 - **Materialized case files are convenience views.** `state.json` stores the
-  current machine snapshot; `case.md` is the human summary; append-only JSONL
-  files retain structural events, evidence, decisions, lineage, and actions.
+  current machine snapshot; `case.md` is the human summary and includes recent
+  evidence; append-only JSONL files retain structural events, evidence,
+  decisions, lineage, and actions.
 - **Spreadsheet/reporting views are generated.** `index.md` and `index.json`
   are views over the case directories and immutable facts.
 - **Match rules drive attachment.** Active keys, aliases, redirects, and
@@ -66,6 +95,11 @@ cases/
     alert_facts.json
     alert_annotations.jsonl
     group_matches.json
+  taggers/
+    one-off/
+      YYMMDD-investigation-name.ts
+    reusable/
+      reusable-classifier.ts
   assets/
     taggers/
       tagrun_.../
@@ -84,6 +118,7 @@ bun run oncall-triage import-pd cases --incident Q123ABC
 bun run oncall-triage group cases
 bun run oncall-triage tag cases --script ./tagger.ts --org acme_123 --limit 5 --test
 bun run oncall-triage group cases --tag evidence:example --title "Example issue" --summary "..." --rationale "..." --test
+bun run oncall-triage evidence cases --group <group-id> --kind triage --source "gcloud scoped logs" --summary "..." --link "Scoped logs=https://console.cloud.google.com/logs/query;query=...?...project=..."
 bun run oncall-triage index cases
 bun run oncall-triage sync-pd cases --incident Q123ABC
 ```
@@ -95,6 +130,11 @@ remaining silent until completion.
 
 `check-exports` keeps one live Bifrost proxy open per environment for the
 duration of a command run, reuses it across checks, and closes it before exit.
+
+`evidence` appends to `evidence.jsonl` and refreshes `case.md` with a Recent
+Evidence section. Use repeated `--link <label=url>` values for Google Cloud
+Logs, Slack, PagerDuty, or other investigation links, and repeated `--command`
+values for exact commands worth preserving.
 
 `import-pd` validates PagerDuty wrapper alert counts before grouping. If the raw
 wrapper says `Alerts (N)`, the parsed derived facts must contain `N` alert facts
@@ -113,7 +153,7 @@ Evidence-tagged grouping:
 bun run oncall-triage tag cases \
   --org albertsons_6 \
   --destination live-ramp \
-  --script ./taggers/albertsons-liveramp-permission.ts \
+  --script ./taggers/one-off/260516-albertsons-liveramp-progress.ts \
   --tag waiting:uploads \
   --limit 10 \
   --test
@@ -135,6 +175,23 @@ alert annotations. `--test` and `--limit` preview the run without writing
 annotations or assets. `group --tag` moves only alerts with matching annotations
 into the durable group; its `--test` mode previews the target group without
 changing case files.
+
+Most investigation taggers should be treated as one-off evidence collectors.
+Put them under `taggers/one-off/YYMMDD-name.ts` so the filename makes the time
+context explicit and flows into archived tag runs. Use `taggers/reusable/` only
+for scripts that are intentionally general and maintained across incidents.
+
+Common export triage pattern:
+
+1. Query a broad cohort, such as one org and destination.
+2. Run `check-exports` to collect scoped per-alert evidence.
+3. Run a classifier tagger with `--test` first.
+4. Keep known outcomes as separate tags, such as recovered, waiting, export
+   failure, or snapshotting schema error.
+5. Leave unfamiliar blocker combinations as `needs_evidence` until an agent
+   adds a better rule.
+6. Use `group --tag` to create one group per remediation path, not one group
+   for the whole cohort.
 
 Fixture import:
 
@@ -189,10 +246,11 @@ belong in facts, indexes, and group state.
 
 Top-level group states:
 
-- `open`
-- `waiting`
-- `monitoring`
-- `resolved`
+- `new` - imported and grouped, but no evidence collection or triage work has started yet.
+- `open` - work has started and the case is under investigation or ready for an agent/human to decide the next action.
+- `waiting` - blocked on an external owner only after the blocker has been communicated and the case includes durable evidence of that communication.
+- `monitoring` - system progress or retry behavior is underway and a later check is needed.
+- `resolved` - terminal evidence shows the issue is recovered, closed, merged, or otherwise complete.
 
 Tags carry specificity. Prefixes are intentionally lightweight and will evolve:
 

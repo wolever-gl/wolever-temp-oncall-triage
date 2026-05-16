@@ -1,5 +1,5 @@
 import path from "node:path";
-import { copyFile, mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
+import { copyFile, mkdtemp, readFile, rename, rm, writeFile } from "node:fs/promises";
 import { createHash } from "node:crypto";
 import { execFile } from "node:child_process";
 import { promisify } from "node:util";
@@ -26,6 +26,7 @@ import type {
 
 export const GROUPING_VERSION = 3;
 const execFileAsync = promisify(execFile);
+const GROUP_STATE_DIRS: GroupState["state"][] = ["new", "open", "monitoring", "waiting", "resolved"];
 
 export async function initWorkspace(workspaceDir: string): Promise<void> {
   await ensureDir(path.join(workspaceDir, "incidents"));
@@ -516,23 +517,70 @@ export async function groupTaggedAlerts(options: {
 }
 
 export async function appendEvidence(workspaceDir: string, groupId: string, event: EvidenceEvent): Promise<void> {
-  await appendJsonl(path.join(groupDir(workspaceDir, groupId), "evidence.jsonl"), event);
+  await markGroupStarted(workspaceDir, groupId, {
+    ts: event.ts,
+    actor: event.source || "agent",
+    rationale: `Evidence added: ${event.summary}`,
+  });
+  await appendJsonl(path.join(await findGroupDir(workspaceDir, groupId), "evidence.jsonl"), event);
+  await writeCaseMarkdown(workspaceDir, await readGroupState(workspaceDir, groupId));
+}
+
+export async function markGroupsStartedForAlerts(
+  workspaceDir: string,
+  refs: AlertRef[],
+  options: { actor?: string; rationale: string; ts?: string },
+): Promise<string[]> {
+  if (refs.length === 0) return [];
+  await initWorkspace(workspaceDir);
+  const refKeys = new Set(refs.map(refKey));
+  const changed: string[] = [];
+  for (const group of await loadAllGroups(workspaceDir)) {
+    if (group.state !== "new") continue;
+    if (!group.alert_refs.some((ref) => refKeys.has(refKey(ref)))) continue;
+    const updated = await markGroupStarted(workspaceDir, group.group_id, options);
+    if (updated) changed.push(group.group_id);
+  }
+  if (changed.length > 0) await regenerateIndex(workspaceDir);
+  return changed.sort();
+}
+
+async function markGroupStarted(
+  workspaceDir: string,
+  groupId: string,
+  options: { actor?: string; rationale: string; ts?: string },
+): Promise<GroupState | undefined> {
+  const group = await readGroupState(workspaceDir, groupId);
+  if (group.state !== "new") return undefined;
+  const now = options.ts ?? new Date().toISOString();
+  group.state = "open";
+  group.updated_at = now;
+  await writeGroupState(workspaceDir, group);
+  await appendDecision(workspaceDir, group.group_id, {
+    ts: now,
+    actor: options.actor ?? "agent",
+    decision: "started_work",
+    rationale: options.rationale,
+  });
+  await writeCaseMarkdown(workspaceDir, group);
+  return group;
 }
 
 export async function appendDecision(workspaceDir: string, groupId: string, event: DecisionEvent): Promise<void> {
-  await appendJsonl(path.join(groupDir(workspaceDir, groupId), "decisions.jsonl"), event);
+  await appendJsonl(path.join(await findGroupDir(workspaceDir, groupId), "decisions.jsonl"), event);
 }
 
 export async function appendAction(workspaceDir: string, groupId: string, event: ActionEvent): Promise<void> {
-  await appendJsonl(path.join(groupDir(workspaceDir, groupId), "actions.jsonl"), event);
+  await appendJsonl(path.join(await findGroupDir(workspaceDir, groupId), "actions.jsonl"), event);
 }
 
 export async function appendLineage(workspaceDir: string, groupId: string, event: LineageEvent): Promise<void> {
-  await appendJsonl(path.join(groupDir(workspaceDir, groupId), "lineage.jsonl"), event);
+  await appendJsonl(path.join(await findGroupDir(workspaceDir, groupId), "lineage.jsonl"), event);
 }
 
 export async function regenerateIndex(workspaceDir: string): Promise<WorkspaceIndex> {
   await ensureDir(path.join(workspaceDir, "indexes"));
+  await organizeGroupDirectories(workspaceDir);
   const groups = await loadAllGroups(workspaceDir);
   const alerts = await loadAllAlerts(workspaceDir);
   const indexGroups: IndexGroup[] = groups
@@ -546,7 +594,7 @@ export async function regenerateIndex(workspaceDir: string): Promise<WorkspaceIn
       ...(group.next_check_at ? { next_check_at: group.next_check_at } : {}),
       incident_ids: group.incident_ids,
       alert_count: group.alert_refs.length,
-      path: relativePath(workspaceDir, path.join(groupDir(workspaceDir, group.group_id), "case.md")),
+      path: relativePath(workspaceDir, path.join(groupDirForState(workspaceDir, group.state, group.group_id), "case.md")),
     }))
     .sort((a, b) => stateRank(a.state) - stateRank(b.state) || a.group_id.localeCompare(b.group_id));
   const indexAlerts: IndexAlertFact[] = alerts.map(indexAlertFact).sort((a, b) => a.created_at.localeCompare(b.created_at) || a.incident_id.localeCompare(b.incident_id) || a.alert_id.localeCompare(b.alert_id));
@@ -618,7 +666,7 @@ export async function queryAlertFacts(
 }
 
 export async function loadAllGroups(workspaceDir: string): Promise<GroupState[]> {
-  const ids = await listDirs(path.join(workspaceDir, "groups"));
+  const ids = await listGroupIds(workspaceDir);
   const groups: GroupState[] = [];
   for (const id of ids) {
     try {
@@ -644,11 +692,12 @@ export async function loadIncidentRecords(workspaceDir: string): Promise<Inciden
 }
 
 export async function readGroupState(workspaceDir: string, groupId: string): Promise<GroupState> {
-  return readJson<GroupState>(path.join(groupDir(workspaceDir, groupId), "state.json"));
+  return readJson<GroupState>(path.join(await findGroupDir(workspaceDir, groupId), "state.json"));
 }
 
 export async function writeGroupState(workspaceDir: string, group: GroupState): Promise<void> {
-  await writeJson(path.join(groupDir(workspaceDir, group.group_id), "state.json"), group);
+  await moveGroupDirToState(workspaceDir, group.group_id, group.state);
+  await writeJson(path.join(groupDirForState(workspaceDir, group.state, group.group_id), "state.json"), group);
 }
 
 export async function readIncidentRecord(workspaceDir: string, incidentId: string): Promise<IncidentRecord> {
@@ -689,7 +738,7 @@ function newGroup(alert: AlertFact, key: string, now: string, existingGroupIds: 
   const title = [org, grouping.destination, grouping.failureClass].filter(Boolean).join(" ");
   return {
     group_id,
-    state: "open",
+    state: "new",
     tags: ["triage:needs_review"],
     title,
     summary: alert.summary,
@@ -868,7 +917,7 @@ async function moveRefsIntoGroup(options: {
     options.target.related_group_ids = sortedUnique([...options.target.related_group_ids, group.group_id]);
     if (remaining.length === 0) {
       consumedGroupIds.push(group.group_id);
-      await rm(groupDir(options.workspaceDir, group.group_id), { recursive: true, force: true });
+      await rm(await findGroupDir(options.workspaceDir, group.group_id), { recursive: true, force: true });
       continue;
     }
     group.alert_refs = remaining;
@@ -988,6 +1037,7 @@ function stateFailureClass(alert: AlertFact): string | undefined {
 }
 
 async function writeCaseMarkdown(workspaceDir: string, group: GroupState): Promise<void> {
+  const evidence = await readEvidenceEvents(workspaceDir, group.group_id);
   const lines = [
     `# ${group.title}`,
     "",
@@ -1009,7 +1059,85 @@ async function writeCaseMarkdown(workspaceDir: string, group: GroupState): Promi
     "See `lineage.jsonl`, `decisions.jsonl`, `evidence.jsonl`, and `actions.jsonl` for the durable audit trail.",
     "",
   ];
-  await writeFile(path.join(groupDir(workspaceDir, group.group_id), "case.md"), lines.join("\n"));
+  if (evidence.length > 0) {
+    lines.splice(
+      lines.findIndex((line) => line === "## Next Action"),
+      0,
+      "## Recent Evidence",
+      "",
+      ...renderRecentEvidence(evidence),
+      "",
+    );
+  }
+  await moveGroupDirToState(workspaceDir, group.group_id, group.state);
+  await writeFile(path.join(groupDirForState(workspaceDir, group.state, group.group_id), "case.md"), lines.join("\n"));
+}
+
+async function readEvidenceEvents(workspaceDir: string, groupId: string): Promise<EvidenceEvent[]> {
+  const file = path.join(await findGroupDir(workspaceDir, groupId), "evidence.jsonl");
+  try {
+    const content = await readFile(file, "utf8");
+    return content
+      .split("\n")
+      .filter((line) => line.trim().length > 0)
+      .map((line) => JSON.parse(line) as EvidenceEvent);
+  } catch (err) {
+    if ((err as NodeJS.ErrnoException).code === "ENOENT") return [];
+    throw err;
+  }
+}
+
+function renderRecentEvidence(events: EvidenceEvent[]): string[] {
+  const lines: string[] = [];
+  for (const event of events.slice(-5).reverse()) {
+    lines.push(`- ${event.summary}`);
+    lines.push(`  Source: \`${event.source}\`; kind: \`${event.kind}\`; captured: \`${event.ts}\`.`);
+    const detailLines = renderEvidenceData(event.data);
+    for (const detail of detailLines) lines.push(`  ${detail}`);
+  }
+  return lines;
+}
+
+function renderEvidenceData(data: unknown): string[] {
+  if (!data || typeof data !== "object" || Array.isArray(data)) return [];
+  const record = data as Record<string, unknown>;
+  const lines: string[] = [];
+  const links = collectEvidenceLinks(record);
+  if (links.length > 0) lines.push(`Links: ${links.map((link) => `[${link.label}](${link.url})`).join(", ")}.`);
+  const commands = collectStringList(record.commands);
+  for (const command of commands) lines.push(`Command: \`${command}\``);
+  return lines;
+}
+
+function collectEvidenceLinks(record: Record<string, unknown>): { label: string; url: string }[] {
+  const links: { label: string; url: string }[] = [];
+  const addUrl = (label: string, value: unknown) => {
+    if (typeof value === "string" && /^https?:\/\//.test(value)) links.push({ label, url: value });
+  };
+
+  addUrl("Logs", record.logs_url);
+  addUrl("Log query", record.log_url);
+  addUrl("PagerDuty", record.pagerduty_url);
+  addUrl("Slack", record.slack_url);
+
+  const structuredLinks = record.links;
+  if (Array.isArray(structuredLinks)) {
+    for (const link of structuredLinks) {
+      if (!link || typeof link !== "object") continue;
+      const linkRecord = link as Record<string, unknown>;
+      const url = linkRecord.url;
+      if (typeof url !== "string" || !/^https?:\/\//.test(url)) continue;
+      const label = typeof linkRecord.label === "string" && linkRecord.label.trim().length > 0 ? linkRecord.label : "Link";
+      links.push({ label, url });
+    }
+  }
+
+  return links;
+}
+
+function collectStringList(value: unknown): string[] {
+  if (!Array.isArray(value)) return [];
+  return value.filter((item): item is string => typeof item === "string" && item.trim().length > 0);
 }
 
 function renderIndex(index: WorkspaceIndex): string {
@@ -1020,15 +1148,19 @@ function renderIndex(index: WorkspaceIndex): string {
     `Open groups: ${index.open_count}`,
     `Alert facts: ${index.alert_count ?? 0}`,
     "",
-    "| State | Tags | Group | Summary | Incidents | Alerts |",
-    "|---|---|---|---|---|---:|",
   ];
-  for (const group of index.groups) {
-    lines.push(
-      `| \`${group.state}\` | ${group.tags.map((tag) => `\`${tag}\``).join("<br>")} | [${group.group_id}](${group.path}) | ${escapeTable(group.summary)} | ${group.incident_ids.join("<br>")} | ${group.alert_count} |`,
-    );
+  for (const state of GROUP_STATE_DIRS) {
+    const groups = index.groups.filter((group) => group.state === state);
+    if (groups.length === 0) continue;
+    lines.push(`## ${state[0]!.toUpperCase()}${state.slice(1)} (${groups.length})`, "");
+    lines.push("| Tags | Group | Summary | Incidents | Alerts |", "|---|---|---|---|---:|");
+    for (const group of groups) {
+      lines.push(
+        `| ${group.tags.map((tag) => `\`${tag}\``).join("<br>")} | [${group.group_id}](${group.path}) | ${escapeTable(group.summary)} | ${group.incident_ids.join("<br>")} | ${group.alert_count} |`,
+      );
+    }
+    lines.push("");
   }
-  lines.push("");
   return lines.join("\n");
 }
 
@@ -1075,7 +1207,7 @@ async function parseAlertsFromRawIfPresent(rawFile: string, incidentId: string):
 }
 
 function stateRank(state: GroupState["state"]): number {
-  return { open: 0, monitoring: 1, waiting: 2, resolved: 3 }[state];
+  return { new: 0, open: 1, monitoring: 2, waiting: 3, resolved: 4 }[state];
 }
 
 function escapeTable(input: string): string {
@@ -1124,4 +1256,66 @@ function newSplitGroup(
 
 function groupDir(workspaceDir: string, groupId: string): string {
   return path.join(workspaceDir, "groups", groupId);
+}
+
+function groupDirForState(workspaceDir: string, state: GroupState["state"], groupId: string): string {
+  return path.join(workspaceDir, "groups", state, groupId);
+}
+
+async function findGroupDir(workspaceDir: string, groupId: string): Promise<string> {
+  const flat = groupDir(workspaceDir, groupId);
+  if (await pathExists(path.join(flat, "state.json"))) return flat;
+  for (const state of GROUP_STATE_DIRS) {
+    const candidate = groupDirForState(workspaceDir, state, groupId);
+    if (await pathExists(path.join(candidate, "state.json"))) return candidate;
+  }
+  return flat;
+}
+
+async function listGroupIds(workspaceDir: string): Promise<string[]> {
+  const groupsRoot = path.join(workspaceDir, "groups");
+  const direct = (await listDirs(groupsRoot)).filter((id) => !GROUP_STATE_DIRS.includes(id as GroupState["state"]));
+  const nested: string[] = [];
+  for (const state of GROUP_STATE_DIRS) {
+    nested.push(...(await listDirs(path.join(groupsRoot, state))));
+  }
+  return sortedUnique([...direct, ...nested]);
+}
+
+async function organizeGroupDirectories(workspaceDir: string): Promise<void> {
+  for (const state of GROUP_STATE_DIRS) await ensureDir(path.join(workspaceDir, "groups", state));
+  const groups = await loadAllGroups(workspaceDir);
+  for (const group of groups) await moveGroupDirToState(workspaceDir, group.group_id, group.state);
+}
+
+async function moveGroupDirToState(workspaceDir: string, groupId: string, state: GroupState["state"]): Promise<void> {
+  const target = groupDirForState(workspaceDir, state, groupId);
+  await ensureDir(path.dirname(target));
+  const current = await findGroupDir(workspaceDir, groupId);
+  if (current === target) return;
+  if (!(await pathExists(path.join(current, "state.json")))) return;
+  if (await pathExists(path.join(target, "state.json"))) {
+    await copyGroupFiles(current, target);
+    await rm(current, { recursive: true, force: true });
+    return;
+  }
+  await rename(current, target);
+}
+
+async function copyGroupFiles(from: string, to: string): Promise<void> {
+  await ensureDir(to);
+  for (const file of ["state.json", "case.md", "lineage.jsonl", "evidence.jsonl", "decisions.jsonl", "actions.jsonl"]) {
+    const source = path.join(from, file);
+    if (await pathExists(source)) await copyFile(source, path.join(to, file));
+  }
+}
+
+async function pathExists(file: string): Promise<boolean> {
+  try {
+    await readFile(file);
+    return true;
+  } catch (err) {
+    if ((err as NodeJS.ErrnoException).code === "ENOENT") return false;
+    throw err;
+  }
 }

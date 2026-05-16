@@ -110,7 +110,7 @@ async function main(argv: string[]): Promise<void> {
   if (command === "transition") {
     const groupId = required(args, "group");
     const state = required(args, "state") as GroupStateName;
-    if (!["open", "waiting", "monitoring", "resolved"].includes(state)) throw new Error(`Invalid state: ${state}`);
+    if (!["new", "open", "waiting", "monitoring", "resolved"].includes(state)) throw new Error(`Invalid state: ${state}`);
     const summary = required(args, "summary");
     const tag = optional(args, "tag");
     const group = await transitionGroup({
@@ -176,11 +176,14 @@ async function main(argv: string[]): Promise<void> {
   if (command === "evidence") {
     const groupId = required(args, "group");
     const summary = required(args, "summary");
+    const links = values(args, "link").map(parseEvidenceLink);
+    const commands = values(args, "command");
     await appendEvidence(workspaceDir, groupId, {
       ts: new Date().toISOString(),
       kind: optional(args, "kind") ?? "note",
       source: optional(args, "source") ?? "agent",
       summary,
+      ...((links.length > 0 || commands.length > 0) ? { data: { ...(links.length > 0 ? { links } : {}), ...(commands.length > 0 ? { commands } : {}) } } : {}),
     });
     console.log(`Appended evidence to ${groupId}`);
     return;
@@ -247,6 +250,14 @@ function parsePositiveInteger(value: string, name: string): number {
   return parsed;
 }
 
+function parseEvidenceLink(value: string): { label: string; url: string } {
+  const separator = value.indexOf("=");
+  const label = separator >= 0 ? value.slice(0, separator).trim() : "Link";
+  const url = separator >= 0 ? value.slice(separator + 1).trim() : value.trim();
+  if (!/^https?:\/\//.test(url)) throw new Error(`--link must be either <url> or <label>=<url>: ${value}`);
+  return { label: label || "Link", url };
+}
+
 function usage(): void {
   console.log(usageText());
 }
@@ -258,14 +269,14 @@ function usageText(): string {
   bun run oncall-triage alerts <workspace> [--incident <id>] [--org <org_id>] [--audience <id>] [--destination <destination>] [--state <state>]
   bun run oncall-triage tag <workspace> --script <file> [--incident <id>] [--org <org_id>] [--audience <id>] [--destination <destination>] [--state <state>] [--tag <tag>] [--limit <n>] [--test]
   bun run oncall-triage group <workspace>
-  bun run oncall-triage group <workspace> --tag <tag> --title <text> --summary <text> --rationale <text> [--group <id>] [--state <open|waiting|monitoring|resolved>] [--group-tag <tag>] [--limit <n>] [--test]
+  bun run oncall-triage group <workspace> --tag <tag> --title <text> --summary <text> --rationale <text> [--group <id>] [--state <new|open|waiting|monitoring|resolved>] [--group-tag <tag>] [--limit <n>] [--test]
   bun run oncall-triage index <workspace>
-  bun run oncall-triage transition <workspace> --group <id> --state <open|waiting|monitoring|resolved> --summary <text> [--tag <tag>]
+  bun run oncall-triage transition <workspace> --group <id> --state <new|open|waiting|monitoring|resolved> --summary <text> [--tag <tag>]
   bun run oncall-triage merge <workspace> --source <id> --target <id> --rationale <text>
   bun run oncall-triage split <workspace> --group <id> --alerts <comma-separated-alert-ids> --rationale <text>
   bun run oncall-triage sync-pd <workspace> [--incident <pd-url-or-id>]
   bun run oncall-triage check-exports <workspace> [--apply] [--pizza-rows-file <file>] [--incident <id>] [--org <org_id>] [--audience <id>] [--destination <destination>] [--state <state>] [--limit <n>]
-  bun run oncall-triage evidence <workspace> --group <id> --summary <text> [--kind <kind>] [--source <source>]`;
+  bun run oncall-triage evidence <workspace> --group <id> --summary <text> [--kind <kind>] [--source <source>] [--link <label=url>] [--command <command>]`;
 }
 
 main(process.argv.slice(2)).catch((err) => {

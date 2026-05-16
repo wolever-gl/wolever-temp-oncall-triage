@@ -1,4 +1,4 @@
-export type GroupStateName = "open" | "waiting" | "monitoring" | "resolved";
+export type GroupStateName = "new" | "open" | "waiting" | "monitoring" | "resolved";
 
 export interface AlertFact {
   alert_id: string;
