@@ -35,9 +35,13 @@ Use this repo as a case-workspace system, not a spreadsheet workflow.
 - Before manual case investigation, run the export preflight when the case has
   export-alert evidence:
   `bun run oncall-triage check-exports cases --group <group-id> --apply --auto-resolve`.
+  For a full pass across new cases, run
+  `bun run oncall-triage preflight cases --state new`.
   If it resolves the case, stop; if it records blocked or monitoring evidence,
   continue from that generated evidence instead of repeating Pizza checks by
   hand.
+- Respect `cases/env_availability.json`. Do not manually probe environments
+  marked `unavailable`; update that file when local access changes.
 - Agents can explore after the export preflight, then choose a runbook before remediation or resolution.
 - See `LEXICON.md` for canonical terms, invariants, and model boundaries.
 

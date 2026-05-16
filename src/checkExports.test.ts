@@ -105,6 +105,53 @@ describe("check-exports", () => {
     }
   });
 
+  test("skips environments marked unavailable without fetching or starting work", async () => {
+    const workspaceDir = await mkdtemp(path.join(tmpdir(), "oncall-triage-v2-"));
+    try {
+      const alertsFile = path.join(workspaceDir, "alerts.json");
+      await writeFile(
+        alertsFile,
+        JSON.stringify([
+          {
+            id: "PALLEGRO",
+            created_at: "2026-05-15T16:05:00Z",
+            summary: "Exports for audience 731 failed with states: <(snapshotting_finished,export_error)>",
+            details: {
+              org_id: "allegro_3",
+              org_id_numeric: "3",
+              audience_id: "731",
+              checked_export_run_ids: "731-dv360_123-scheduled__2026-05-15T16:00:00+00:00",
+              glcli: "glcli --env allegro bifrost pizza --audience-id 731 --org-id 3",
+            },
+          },
+        ]),
+      );
+      await importPagerDutyIncident({ workspaceDir, incident: "QALLEGRO", alertsFile });
+      const grouped = await groupImportedAlerts(workspaceDir);
+      await writeFile(
+        path.join(workspaceDir, "env_availability.json"),
+        JSON.stringify({ environments: { allegro: { status: "unavailable", reason: "not reachable here" } } }),
+      );
+
+      const result = await checkExportsWorkspace({
+        workspaceDir,
+        apply: true,
+        filters: { alertRefs: (await readGroupState(workspaceDir, grouped.groups[0]!)).alert_refs },
+        fetchPizzaRows: async () => {
+          throw new Error("fetch should not run");
+        },
+      });
+
+      expect(result.evaluated).toBe(0);
+      expect(result.skipped_unavailable).toBe(1);
+      expect(await loadAllExportChecks(workspaceDir)).toHaveLength(0);
+      const group = await readGroupState(workspaceDir, grouped.groups[0]!);
+      expect(group.state).toBe("new");
+    } finally {
+      await rm(workspaceDir, { recursive: true, force: true });
+    }
+  });
+
   test("blocks snapshotting errors and missing run identity", async () => {
     const workspaceDir = await mkdtemp(path.join(tmpdir(), "oncall-triage-v2-"));
     try {

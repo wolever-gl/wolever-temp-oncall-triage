@@ -18,3 +18,8 @@
 - Generated cohorts are a better fit than persisted cohort objects; they help agents navigate bursts without adding another lifecycle to maintain.
 - For export evidence, rejected rows are usually normal and should not be treated as a failure by default. Failed rows, `export_error`, and `snapshotting_error` are the important blockers.
 - A common export triage pattern is: start with a broad related cohort, run scoped evidence checks per alert, classify only evidence-backed outcomes, and group by tags. Known classes should not become a closed taxonomy; unknown blockers should stay visible as `needs_evidence` until a future tagger handles them.
+- Support-team handoff messages should include the affected audience URL from the alert, preserving `impersonate_user_id` and `impersonate_team_id` query params so support can open the exact client context. They should also include a Google Cloud Logs link with an explicit time range and a filter for the selected failing export run; validate the query returns the expected run evidence before sharing the link.
+- Environment access is machine-specific. Track known local Bifrost proxy
+  reachability in `cases/env_availability.json` and make automation consult it;
+  for example this laptop cannot access the `allegro` environment, so export
+  preflight should skip it rather than retry every Allegro alert.

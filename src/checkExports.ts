@@ -24,6 +24,7 @@ export interface CheckExportsOptions {
 export interface CheckExportsResult {
   derived: number;
   evaluated: number;
+  skipped_unavailable: number;
   healthy_closed: number;
   monitoring: number;
   blocked: number;
@@ -45,7 +46,9 @@ export async function checkExportsWorkspace(options: CheckExportsOptions): Promi
   const allAlerts = await loadAllAlerts(options.workspaceDir);
   const alerts = filterAlerts(allAlerts, options.filters);
   const checks: ExportCheck[] = [];
+  const environmentAvailability = await loadEnvironmentAvailability(options.workspaceDir);
   let derived = 0;
+  let skippedUnavailable = 0;
   options.onProgress?.(`Loaded ${alerts.length} alert fact(s); deriving export checks.`);
 
   for (const alert of alerts) {
@@ -57,6 +60,12 @@ export async function checkExportsWorkspace(options: CheckExportsOptions): Promi
 
   let evaluated = 0;
   for (const check of checks) {
+    const unavailable = unavailableEnvironmentReason(environmentAvailability, check.scope.env);
+    if (unavailable) {
+      skippedUnavailable++;
+      options.onProgress?.(`${check.check_id}: skipping env=${check.scope.env} because environment is unavailable: ${unavailable}.`);
+      continue;
+    }
     if (check.state === "healthy_closed" || check.state === "not_applicable") {
       options.onProgress?.(`${check.check_id}: skipping ${check.state}.`);
       await writeExportCheck(options.workspaceDir, check);
@@ -107,11 +116,37 @@ export async function checkExportsWorkspace(options: CheckExportsOptions): Promi
   return {
     derived,
     evaluated,
+    skipped_unavailable: skippedUnavailable,
     healthy_closed: allChecks.filter((check) => check.state === "healthy_closed").length,
     monitoring: allChecks.filter((check) => check.state === "monitoring").length,
     blocked: allChecks.filter((check) => check.state === "blocked").length,
     not_applicable: allChecks.filter((check) => check.state === "not_applicable").length,
   };
+}
+
+interface EnvironmentAvailabilityFile {
+  environments?: Record<string, {
+    status?: "available" | "unavailable";
+    reason?: string;
+    updated_at?: string;
+    source?: string;
+  }>;
+}
+
+async function loadEnvironmentAvailability(workspaceDir: string): Promise<EnvironmentAvailabilityFile> {
+  try {
+    return await readJson<EnvironmentAvailabilityFile>(path.join(workspaceDir, "env_availability.json"));
+  } catch (err) {
+    if ((err as NodeJS.ErrnoException).code === "ENOENT") return {};
+    throw err;
+  }
+}
+
+function unavailableEnvironmentReason(availability: EnvironmentAvailabilityFile, env: string | undefined): string | undefined {
+  if (!env) return undefined;
+  const entry = availability.environments?.[env];
+  if (entry?.status !== "unavailable") return undefined;
+  return entry.reason || "marked unavailable";
 }
 
 function filterAlerts(alerts: AlertFact[], filters: CheckExportsOptions["filters"]): AlertFact[] {

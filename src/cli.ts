@@ -1,7 +1,7 @@
 #!/usr/bin/env bun
 import { autoResolveHealthyExportGroup, checkExportsWorkspace, loadPizzaRowsFile } from "./checkExports";
 import { createLivePizzaFetcher } from "./pizza";
-import { appendEvidence, groupImportedAlerts, groupTaggedAlerts, importPagerDutyIncident, initWorkspace, mergeGroups, queryAlertFacts, readGroupState, regenerateIndex, runAlertTagger, splitGroup, syncPagerDutyWorkspace, transitionGroup } from "./workspace";
+import { appendEvidence, groupImportedAlerts, groupTaggedAlerts, importPagerDutyIncident, initWorkspace, loadAllGroups, mergeGroups, queryAlertFacts, readGroupState, regenerateIndex, runAlertTagger, splitGroup, syncPagerDutyWorkspace, transitionGroup } from "./workspace";
 import type { CheckExportsOptions } from "./checkExports";
 import type { GroupStateName } from "./schema";
 
@@ -174,7 +174,7 @@ async function main(argv: string[]): Promise<void> {
         onProgress: progress,
       });
       console.log(
-        `Checked exports: derived=${result.derived}, evaluated=${result.evaluated}, healthy_closed=${result.healthy_closed}, monitoring=${result.monitoring}, blocked=${result.blocked}, not_applicable=${result.not_applicable}`,
+        `Checked exports: derived=${result.derived}, evaluated=${result.evaluated}, skipped_unavailable=${result.skipped_unavailable}, healthy_closed=${result.healthy_closed}, monitoring=${result.monitoring}, blocked=${result.blocked}, not_applicable=${result.not_applicable}`,
       );
       if (group && args["auto-resolve"]) {
         const resolved = await autoResolveHealthyExportGroup({ workspaceDir, groupId: group.group_id });
@@ -183,6 +183,36 @@ async function main(argv: string[]): Promise<void> {
     } finally {
       await liveFetcher?.close();
     }
+    return;
+  }
+  if (command === "preflight") {
+    const state = (optional(args, "state") ?? "new") as GroupStateName;
+    if (!["new", "open", "waiting", "monitoring", "resolved"].includes(state)) throw new Error(`Invalid state: ${state}`);
+    const progress = (message: string): void => console.log(message);
+    const liveFetcher = createLivePizzaFetcher({ onProgress: progress });
+    let checked = 0;
+    let resolved = 0;
+    try {
+      const groups = (await loadAllGroups(workspaceDir)).filter((group) => group.state === state).sort((a, b) => a.group_id.localeCompare(b.group_id));
+      for (const group of groups) {
+        console.log(`Preflight ${group.group_id}`);
+        const result = await checkExportsWorkspace({
+          workspaceDir,
+          apply: true,
+          filters: { alertRefs: group.alert_refs },
+          fetchPizzaRows: liveFetcher,
+          onProgress: progress,
+        });
+        const auto = await autoResolveHealthyExportGroup({ workspaceDir, groupId: group.group_id });
+        if (auto.resolved) resolved++;
+        checked++;
+        console.log(`Preflight ${group.group_id}: evaluated=${result.evaluated} skipped_unavailable=${result.skipped_unavailable} resolved=${auto.resolved} reason=${auto.reason}`);
+      }
+    } finally {
+      await liveFetcher.close();
+    }
+    const index = await regenerateIndex(workspaceDir);
+    console.log(`Preflight complete: groups=${checked}, resolved=${resolved}, open=${index.open_count}`);
     return;
   }
   if (command === "evidence") {
@@ -287,6 +317,7 @@ function usageText(): string {
   bun run oncall-triage merge <workspace> --source <id> --target <id> --rationale <text>
   bun run oncall-triage split <workspace> --group <id> --alerts <comma-separated-alert-ids> --rationale <text>
   bun run oncall-triage sync-pd <workspace> [--incident <pd-url-or-id>]
+  bun run oncall-triage preflight <workspace> [--state <new|open|waiting|monitoring|resolved>]
   bun run oncall-triage check-exports <workspace> [--apply] [--auto-resolve] [--group <id>] [--pizza-rows-file <file>] [--incident <id>] [--org <org_id>] [--audience <id>] [--destination <destination>] [--state <state>] [--limit <n>]
   bun run oncall-triage evidence <workspace> --group <id> --summary <text> [--kind <kind>] [--source <source>] [--link <label=url>] [--command <command>]`;
 }

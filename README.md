@@ -27,14 +27,15 @@ Triage is an evidence loop, not a one-shot grouping pass:
 3. Before manual investigation, run the case-scoped export preflight:
 
    ```bash
-   bun run oncall-triage check-exports cases --group <group-id> --apply --auto-resolve
+   bun run oncall-triage preflight cases --state new
    ```
 
-   This runs the relevant Pizza checks, records check evidence in the case, and
-   resolves the group automatically when every alert-scoped export check is
-   healthy. If it resolves the case, move on to the next group. If it records
-   `blocked` or `monitoring` evidence, continue investigation from that
-   generated evidence.
+   This runs the relevant Pizza checks for each group, records check evidence in
+   the cases, and resolves a group automatically when every alert-scoped export
+   check is healthy. If it resolves a case, move on to the next group. If it
+   records `blocked` or `monitoring` evidence, continue investigation from that
+   generated evidence. Environments listed as unavailable in
+   `cases/env_availability.json` are skipped instead of probed.
 4. Ask the agent to decide what to do with that group. The agent should inspect
    alert facts, prior annotations, case notes, and external evidence; explain
    the likely situation; and guide the next action.
@@ -131,6 +132,7 @@ bun run oncall-triage import-pd cases --incident Q123ABC
 bun run oncall-triage group cases
 bun run oncall-triage tag cases --script ./tagger.ts --org acme_123 --limit 5 --test
 bun run oncall-triage group cases --tag evidence:example --title "Example issue" --summary "..." --rationale "..." --test
+bun run oncall-triage preflight cases --state new
 bun run oncall-triage check-exports cases --group <group-id> --apply --auto-resolve
 bun run oncall-triage evidence cases --group <group-id> --kind triage --source "gcloud scoped logs" --summary "..." --link "Scoped logs=https://console.cloud.google.com/logs/query;query=...?...project=..."
 bun run oncall-triage index cases
@@ -148,6 +150,13 @@ With `--group <group-id> --apply --auto-resolve`, it acts as the first
 investigation preflight for a case: run Pizza for the group's alert facts,
 write export-check evidence, and resolve the group when every alert-scoped
 check is `healthy_closed`.
+`preflight` runs that case-scoped operation across every group in a selected
+state, defaulting to `new`.
+
+`cases/env_availability.json` records local environment reachability. Mark an
+environment `unavailable` there when the current machine cannot access its
+Bifrost proxy; export preflight skips those environments instead of spending
+retries on known failures.
 
 `case.md` is generated as a human-readable case view and should not be edited
 directly. It should be enough for a human to understand why the case exists,
