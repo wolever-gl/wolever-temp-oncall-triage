@@ -1,15 +1,16 @@
 {
   "group_id": "260511-albertsons_6-snapshotting-processing",
-  "state": "open",
+  "state": "monitoring",
   "tags": [
-    "triage:needs_review"
+    "triage:needs_review",
+    "monitoring:export-processing"
   ],
   "title": "albertsons_6 snapshotting-processing",
-  "summary": "albertsons (Albertsons Media): Exports for audience 10073 failed with states: <(snapshotting_processing,no_batches)>",
+  "summary": "Auto-monitored from Pizza export checks: 3 alert-scoped export check(s) are still processing and 0 are already healthy.",
   "deterministic_key": "v3|incident:Q2T09VCLN9MRZ8|org:albertsons_6|class:snapshotting-processing",
   "grouping_version": 3,
   "created_at": "2026-05-16T16:36:53.567Z",
-  "updated_at": "2026-05-16T16:36:53.567Z",
+  "updated_at": "2026-05-16T21:38:49.957Z",
   "alert_refs": [
     {
       "incident_id": "Q2T09VCLN9MRZ8",

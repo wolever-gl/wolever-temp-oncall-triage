@@ -1,3 +1,4 @@
 {"ts":"2026-05-16T16:36:53.567Z","actor":"oncall-triage","decision":"created_group","rationale":"Conservative deterministic grouping created a new group for v3|incident:Q2T09VCLN9MRZ8|org:albertsons_6|class:snapshotting-processing."}
 {"ts":"2026-05-16T16:36:53.567Z","actor":"oncall-triage","decision":"attached_alert_to_existing_group","rationale":"Alert matched deterministic key v3|incident:Q2T09VCLN9MRZ8|org:albertsons_6|class:snapshotting-processing."}
 {"ts":"2026-05-16T16:36:53.567Z","actor":"oncall-triage","decision":"attached_alert_to_existing_group","rationale":"Alert matched deterministic key v3|incident:Q2T09VCLN9MRZ8|org:albertsons_6|class:snapshotting-processing."}
+{"ts":"2026-05-16T21:38:49.957Z","actor":"check-exports","decision":"transitioned_to_monitoring","rationale":"Auto-monitored from Pizza export checks: 3 alert-scoped export check(s) are still processing and 0 are already healthy."}

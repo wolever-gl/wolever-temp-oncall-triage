@@ -1,6 +1,6 @@
 # On-call Triage Cases
 
-Generated: 2026-05-16T21:37:16.829Z
+Generated: 2026-05-16T21:38:51.148Z
 Open groups: 46
 Alert facts: 698
 
@@ -17,11 +17,10 @@ Alert facts: 698
 | `triage:needs_review` | [260514-allegro_3-dv360-export-processing](groups/new/260514-allegro_3-dv360-export-processing/case.md) | allegro (Marketing): Exports for audience 1156 failed with states: <(snapshotting_finished,export_processing)> | Q2KT0WUDEVL42Q | 13 |
 | `triage:needs_review` | [260515-allegro_3-dv360-export-processing](groups/new/260515-allegro_3-dv360-export-processing/case.md) | allegro (Marketing): Exports for audience 605 failed with states: <(snapshotting_finished,export_processing)> | Q3GQQRY1UQLBSN | 1 |
 
-## Open (32)
+## Open (31)
 
 | Tags | Group | Summary | Incidents | Alerts |
 |---|---|---|---|---:|
-| `triage:needs_review` | [260511-albertsons_6-snapshotting-processing](groups/open/260511-albertsons_6-snapshotting-processing/case.md) | albertsons (Albertsons Media): Exports for audience 10073 failed with states: <(snapshotting_processing,no_batches)> | Q2T09VCLN9MRZ8 | 3 |
 | `triage:needs_review` | [260511-allegro_3-dv360-export-error](groups/open/260511-allegro_3-dv360-export-error/case.md) | allegro (Marketing): Exports for audience 731 failed with states: <(snapshotting_finished,export_error)> | Q3HYNV525MK1RW | 8 |
 | `triage:needs_review` | [260512-albertsons_6-client-sent-export-failure](groups/open/260512-albertsons_6-client-sent-export-failure/case.md) | albertsons (Albertsons Media) - Audience 2189: Audience Export failure for 2189 sent to client. | Q2T09VCLN9MRZ8 | 4 |
 | `triage:needs_review` | [260513-451-client-sent-export-failure](groups/open/260513-451-client-sent-export-failure/case.md) | ASU Enterprise Partners (Restricted) - Audience 31982: Audience Export failure for 31982 sent to client. | Q3XQABQFPPVNT5 | 3 |
@@ -54,10 +53,11 @@ Alert facts: 698
 | `triage:needs_review` | [260515-pgatourhq_219-no-batches](groups/open/260515-pgatourhq_219-no-batches/case.md) | pgatourhq (New World Order): Exports for audience 31918 failed with states: <(snapshotting_finished,no_batches)> | Q2DJCY3XC2BSBG | 13 |
 | `triage:needs_review` | [260515-royals_4-snapshotting-error](groups/open/260515-royals_4-snapshotting-error/case.md) | royals (default): Exports for signal 203 failed with states: <(snapshotting_error,no_batches)> | Q08B553ANQ9KMI | 1 |
 
-## Monitoring (3)
+## Monitoring (4)
 
 | Tags | Group | Summary | Incidents | Alerts |
 |---|---|---|---|---:|
+| `triage:needs_review`<br>`monitoring:export-processing` | [260511-albertsons_6-snapshotting-processing](groups/monitoring/260511-albertsons_6-snapshotting-processing/case.md) | Auto-monitored from Pizza export checks: 3 alert-scoped export check(s) are still processing and 0 are already healthy. | Q2T09VCLN9MRZ8 | 3 |
 | `triage:tag_grouped`<br>`waiting:uploads` | [260512-albertsons_6-liveramp-waiting-uploads](groups/monitoring/260512-albertsons_6-liveramp-waiting-uploads/case.md) | Exports have progress evidence but are not complete yet. | Q2T09VCLN9MRZ8 | 4 |
 | `triage:needs_review`<br>`monitoring:export-processing` | [260513-albertsons_6-zero-success](groups/monitoring/260513-albertsons_6-zero-success/case.md) | Zero-success tagger found the unresolved attached alert is still export_processing while the other alert has recovered; recheck after the next export monitor window. | Q2EJWG22CER0LA | 2 |
 | `triage:needs_review`<br>`monitoring:export-processing` | [260515-albertsons_6-zero-success-02](groups/monitoring/260515-albertsons_6-zero-success-02/case.md) | Zero-success tagger found 7 attached alerts recovered and the remaining 3 are still export_processing; recheck after the next export monitor window. | Q38JR11G2ENK2W | 10 |

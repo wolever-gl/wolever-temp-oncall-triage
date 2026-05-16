@@ -112,20 +112,6 @@
     "path": "groups/new/260515-allegro_3-dv360-export-processing/case.md"
   },
   {
-    "group_id": "260511-albertsons_6-snapshotting-processing",
-    "state": "open",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "albertsons_6 snapshotting-processing",
-    "summary": "albertsons (Albertsons Media): Exports for audience 10073 failed with states: <(snapshotting_processing,no_batches)>",
-    "incident_ids": [
-      "Q2T09VCLN9MRZ8"
-    ],
-    "alert_count": 3,
-    "path": "groups/open/260511-albertsons_6-snapshotting-processing/case.md"
-  },
-  {
     "group_id": "260511-allegro_3-dv360-export-error",
     "state": "open",
     "tags": [
@@ -558,6 +544,21 @@
     ],
     "alert_count": 1,
     "path": "groups/open/260515-royals_4-snapshotting-error/case.md"
+  },
+  {
+    "group_id": "260511-albertsons_6-snapshotting-processing",
+    "state": "monitoring",
+    "tags": [
+      "triage:needs_review",
+      "monitoring:export-processing"
+    ],
+    "title": "albertsons_6 snapshotting-processing",
+    "summary": "Auto-monitored from Pizza export checks: 3 alert-scoped export check(s) are still processing and 0 are already healthy.",
+    "incident_ids": [
+      "Q2T09VCLN9MRZ8"
+    ],
+    "alert_count": 3,
+    "path": "groups/monitoring/260511-albertsons_6-snapshotting-processing/case.md"
   },
   {
     "group_id": "260512-albertsons_6-liveramp-waiting-uploads",
