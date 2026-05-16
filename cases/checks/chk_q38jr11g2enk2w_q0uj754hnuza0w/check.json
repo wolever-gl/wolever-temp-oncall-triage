@@ -3,20 +3,75 @@
   "source": "pagerduty",
   "incident_id": "Q38JR11G2ENK2W",
   "alert_id": "Q0UJ754HNUZA0W",
-  "state": "blocked",
+  "state": "healthy_closed",
   "scope": {
     "env": "albertsons",
     "org_id": "6",
     "audience_id": "12874",
+    "match_strategy": "any_export_after_alert",
+    "alert_created_at": "2026-05-14T13:48:49-07:00",
     "checked_export_run_ids": [],
     "glcli": "glcli --env albertsons bifrost pizza --audience-id 12874 --org-id 6"
   },
   "scope_key": "albertsons|6|12874|unknown_destination|unknown_endpoint|unknown_run",
-  "run_evaluations": [],
-  "blockers": [
-    "missing_run_identity"
+  "run_evaluations": [
+    {
+      "export_run_id": "12874-live_ramp_activation_4607-scheduled__2026-05-16T00:00:00+00:00",
+      "health": "healthy",
+      "match_basis": "any_export_after_alert",
+      "blockers": [],
+      "selected_row": {
+        "export_run_id": "12874-live_ramp_activation_4607-scheduled__2026-05-16T00:00:00+00:00",
+        "audience_id": "12874",
+        "endpoint_id": "app_liveramp_activation_41",
+        "destination_type": "live_ramp_activation",
+        "created_at": "2026-05-16T00:33:54.906547+00:00",
+        "snapshotting_state": "snapshotting_finished",
+        "export_state": "export_finished",
+        "failed_export_count": 0,
+        "raw": {
+          "export_state": "export_finished",
+          "successful_add_count": 2385,
+          "successful_remove_count": 0,
+          "failed_export_count": 0,
+          "rejected_row_count": 0,
+          "total_row_count": 2385,
+          "successful_expanded_add_count": 0,
+          "successful_expanded_remove_count": 0,
+          "failed_expanded_export_count": 0,
+          "rejected_expanded_row_count": 0,
+          "total_expanded_row_count": 2385,
+          "enhanced_match_count": 0,
+          "enhanced_row_count": 0,
+          "enhanced_total_records": 0,
+          "total_batch_count": 1,
+          "completed_batch_count": 1,
+          "successful_batch_count": 1,
+          "failed_batch_count": 0,
+          "failure_reason": null,
+          "info": {
+            "internal_export_id": "12874-live_ramp_activation_4607-scheduled__2026-05-16T00:00:00+00:00-20260516003250",
+            "export_run_id": "12874-live_ramp_activation_4607-scheduled__2026-05-16T00:00:00+00:00",
+            "audience_id": null,
+            "internal_audience_id": "12874",
+            "audience_name": "DANONE_SDDF Summer_BetterForYouDesserts_c",
+            "organization_id": "6",
+            "organization_name": "albertsons",
+            "platform": "live_ramp_activation",
+            "endpoint_id": "app_liveramp_activation_41",
+            "export_timestamp": "2026-05-16 00:32:50",
+            "error_file_uri": "gs://emgi-outbound-prod-bkt-01/batch_errors/6e1f2506-131a-410f-8b42-e072d61165f9.csv",
+            "created_at": "2026-05-16T00:33:54.906547+00:00",
+            "export_complete_response": null
+          },
+          "snapshotting_state": "snapshotting_finished"
+        }
+      }
+    }
   ],
+  "blockers": [],
   "evidence_artifacts": [],
   "created_at": "2026-05-16T21:08:12.256Z",
-  "updated_at": "2026-05-16T23:00:33.708Z"
+  "updated_at": "2026-05-16T23:11:07.319Z",
+  "closed_at": "2026-05-16T23:11:07.319Z"
 }

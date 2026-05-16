@@ -1,6 +1,7 @@
 import path from "node:path";
 import { readFile } from "node:fs/promises";
 import { ensureDir, listDirs, readJson, slug, writeJson } from "./fsutil";
+import { exportCheckStrategy } from "./pagerduty";
 import { appendEvidence, loadAllAlerts, markGroupsStartedForAlerts, readGroupState, transitionGroup } from "./workspace";
 import type { AlertFact, AlertRef, ExportCheck, ExportCheckScope, ExportCheckState, ExportRunEvaluation, PizzaExportRow } from "./schema";
 
@@ -238,9 +239,6 @@ export async function autoMonitorExportGroup(options: {
   if (group.state === "waiting") {
     return { group_id: group.group_id, monitored: false, reason: "already_waiting", healthy_checks: 0, monitoring_checks: 0 };
   }
-  if (group.state === "monitoring") {
-    return { group_id: group.group_id, monitored: false, reason: "already_monitoring", healthy_checks: 0, monitoring_checks: 0 };
-  }
 
   const selected = new Set(group.alert_refs.map(refKey));
   const checks = (await loadAllExportChecks(options.workspaceDir)).filter((check) =>
@@ -293,6 +291,7 @@ export function deriveExportCheck(alert: AlertFact, nowIso: string, previous?: E
 
   const glcli = parseGlcli(alert.source_glcli);
   const checkedRunIds = checkedRunIdsFor(alert);
+  const matchStrategy = alert.export_check_strategy ?? exportCheckStrategy(alert.summary, checkedRunIds);
   const isExportAlert = Boolean(alert.source_glcli || alert.audience_id || alert.state_tuple || checkedRunIds.length > 0);
   const scope: ExportCheckScope = {
     ...(glcli.env ? { env: glcli.env } : {}),
@@ -300,6 +299,8 @@ export function deriveExportCheck(alert: AlertFact, nowIso: string, previous?: E
     ...(glcli.audience_id || alert.audience_id ? { audience_id: glcli.audience_id ?? alert.audience_id } : {}),
     ...(alert.endpoint_id ? { endpoint_id: alert.endpoint_id } : {}),
     ...(alert.destination_type ? { destination_type: alert.destination_type } : {}),
+    match_strategy: matchStrategy,
+    alert_created_at: alert.created_at,
     checked_export_run_ids: checkedRunIds,
     ...(alert.source_glcli ? { glcli: alert.source_glcli } : {}),
   };
@@ -349,6 +350,10 @@ export function evaluateExportCheck(
     };
   }
 
+  if (check.scope.match_strategy === "any_export_after_alert") {
+    return evaluateAnyExportAfterAlertCheck(next, rows, options);
+  }
+
   const runIdsToEvaluate = scopedRunIds(check.scope);
   const runEvaluations = runIdsToEvaluate.map((runId): ExportRunEvaluation => {
     const row = rows.find((candidate) => candidate.export_run_id === runId);
@@ -393,6 +398,93 @@ export function evaluateExportCheck(
   }
   return {
     ...next,
+    blockers: [],
+    run_evaluations: runEvaluations,
+    proposed_state: "healthy_closed",
+  };
+}
+
+function evaluateAnyExportAfterAlertCheck(
+  check: ExportCheck,
+  rows: PizzaExportRow[],
+  options: { apply: boolean; now: Date },
+): ExportCheck {
+  const alertCreatedAt = Date.parse(check.scope.alert_created_at ?? "");
+  if (Number.isNaN(alertCreatedAt)) {
+    return {
+      ...check,
+      state: "blocked",
+      blockers: ["missing_alert_created_at"],
+      run_evaluations: [],
+    };
+  }
+
+  const rowsAfterAlert = rows
+    .filter((row) => rowMatchesScope(row, check.scope))
+    .filter((row) => {
+      const createdAt = Date.parse(row.created_at ?? "");
+      return !Number.isNaN(createdAt) && createdAt > alertCreatedAt;
+    })
+    .sort((left, right) => Date.parse(right.created_at ?? "") - Date.parse(left.created_at ?? ""));
+
+  if (rowsAfterAlert.length === 0) {
+    return {
+      ...check,
+      state: "blocked",
+      blockers: ["missing_export_after_alert"],
+      run_evaluations: [],
+    };
+  }
+
+  const evaluations = rowsAfterAlert.map((row) => evaluateAnyExportRow(row, check.scope));
+  const healthy = evaluations.find((evaluation) => evaluation.health === "healthy");
+  if (healthy) {
+    return closeOrProposeHealthy(check, [healthy], options);
+  }
+
+  const monitoring = evaluations.find((evaluation) => evaluation.health === "monitoring");
+  if (monitoring) {
+    return {
+      ...check,
+      state: "monitoring",
+      blockers: [],
+      run_evaluations: [monitoring],
+      next_check_at: new Date(options.now.getTime() + 15 * 60 * 1000).toISOString(),
+    };
+  }
+
+  const blocked = evaluations[0]!;
+  return {
+    ...check,
+    state: "blocked",
+    blockers: blocked.blockers,
+    run_evaluations: [blocked],
+  };
+}
+
+function evaluateAnyExportRow(row: PizzaExportRow, scope: ExportCheckScope): ExportRunEvaluation {
+  return {
+    ...evaluateRunRow(row.export_run_id, row, scope),
+    match_basis: "any_export_after_alert",
+  };
+}
+
+function closeOrProposeHealthy(
+  check: ExportCheck,
+  runEvaluations: ExportRunEvaluation[],
+  options: { apply: boolean; now: Date },
+): ExportCheck {
+  if (options.apply) {
+    return {
+      ...check,
+      state: "healthy_closed",
+      blockers: [],
+      run_evaluations: runEvaluations,
+      closed_at: options.now.toISOString(),
+    };
+  }
+  return {
+    ...check,
     blockers: [],
     run_evaluations: runEvaluations,
     proposed_state: "healthy_closed",
@@ -482,12 +574,21 @@ function evaluateRunRow(runId: string, row: PizzaExportRow, scope: ExportCheckSc
   };
 }
 
+function rowMatchesScope(row: PizzaExportRow, scope: ExportCheckScope): boolean {
+  const scopeDestination = scope.destination_type;
+  const rowDestination = row.destination_type || destinationFromRun(row.export_run_id);
+  if (scope.audience_id && row.audience_id && scope.audience_id !== row.audience_id) return false;
+  if (scope.endpoint_id && row.endpoint_id && endpointNumericPart(scope.endpoint_id) !== endpointNumericPart(row.endpoint_id)) return false;
+  if (scopeDestination && rowDestination && scopeDestination !== rowDestination) return false;
+  return true;
+}
+
 function scopeBlockers(scope: ExportCheckScope): string[] {
   const blockers: string[] = [];
   if (!scope.env) blockers.push("missing_env");
   if (!scope.org_id) blockers.push("missing_org_id");
   if (!scope.audience_id) blockers.push("missing_audience_id");
-  if (scope.checked_export_run_ids.length === 0) blockers.push("missing_run_identity");
+  if (scope.checked_export_run_ids.length === 0 && scope.match_strategy !== "any_export_after_alert") blockers.push("missing_run_identity");
   return blockers;
 }
 

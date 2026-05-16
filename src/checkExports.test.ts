@@ -199,6 +199,124 @@ describe("check-exports", () => {
     }
   });
 
+  test("explicit any-export checks close from any healthy Pizza row after the alert", async () => {
+    const workspaceDir = await mkdtemp(path.join(tmpdir(), "oncall-triage-v2-"));
+    try {
+      const alertsFile = path.join(workspaceDir, "alerts.json");
+      await writeFile(
+        alertsFile,
+        JSON.stringify([
+          {
+            id: "PZEROSUCCESS",
+            created_at: "2026-05-15T16:05:00Z",
+            summary: "albertsons (Albertsons Media) - Audience 12873: 0 successfull_exports from pizza tracker found 10 minutes after new export",
+            details: {
+              org_id: "albertsons_6",
+              org_id_numeric: "6",
+              audience_id: "12873",
+              glcli: "glcli --env albertsons bifrost pizza --audience-id 12873 --org-id 6",
+            },
+          },
+        ]),
+      );
+      await importPagerDutyIncident({ workspaceDir, incident: "QZERO", alertsFile });
+
+      await checkExportsWorkspace({
+        workspaceDir,
+        apply: true,
+        now: new Date("2026-05-15T17:00:00Z"),
+        fetchPizzaRows: async () => [
+          datedRow("12873-live_ramp_activation_4612-scheduled__2026-05-15T00:00:00+00:00", "12873", "2026-05-15T15:00:00Z", "export_finished"),
+          datedRow("12873-live_ramp_activation_4612-scheduled__2026-05-16T00:00:00+00:00", "12873", "2026-05-16T00:29:57Z", "export_finished"),
+        ],
+      });
+
+      const checks = await loadAllExportChecks(workspaceDir);
+      expect(checks).toHaveLength(1);
+      expect(checks[0]?.scope.match_strategy).toBe("any_export_after_alert");
+      expect(checks[0]?.state).toBe("healthy_closed");
+      expect(checks[0]?.run_evaluations[0]?.match_basis).toBe("any_export_after_alert");
+      expect(checks[0]?.run_evaluations[0]?.export_run_id).toContain("2026-05-16");
+    } finally {
+      await rm(workspaceDir, { recursive: true, force: true });
+    }
+  });
+
+  test("explicit any-export checks monitor processing rows after the alert", async () => {
+    const workspaceDir = await mkdtemp(path.join(tmpdir(), "oncall-triage-v2-"));
+    try {
+      const alertsFile = path.join(workspaceDir, "alerts.json");
+      await writeFile(
+        alertsFile,
+        JSON.stringify([
+          {
+            id: "PCLIENT",
+            created_at: "2026-05-15T16:05:00Z",
+            summary: "albertsons (Albertsons Media) - Audience 12875: Audience Export failure for 12875 sent to client.",
+            details: {
+              org_id: "albertsons_6",
+              org_id_numeric: "6",
+              audience_id: "12875",
+              glcli: "glcli --env albertsons bifrost pizza --audience-id 12875 --org-id 6",
+            },
+          },
+        ]),
+      );
+      await importPagerDutyIncident({ workspaceDir, incident: "QCLIENT", alertsFile });
+
+      await checkExportsWorkspace({
+        workspaceDir,
+        apply: true,
+        now: new Date("2026-05-15T17:00:00Z"),
+        fetchPizzaRows: async () => [
+          datedRow("12875-live_ramp_activation_4613-scheduled__2026-05-16T00:00:00+00:00", "12875", "2026-05-16T00:36:47Z", "export_processing"),
+        ],
+      });
+
+      const checks = await loadAllExportChecks(workspaceDir);
+      expect(checks).toHaveLength(1);
+      expect(checks[0]?.scope.match_strategy).toBe("any_export_after_alert");
+      expect(checks[0]?.state).toBe("monitoring");
+      expect(checks[0]?.run_evaluations[0]?.health).toBe("monitoring");
+    } finally {
+      await rm(workspaceDir, { recursive: true, force: true });
+    }
+  });
+
+  test("monitoring groups refresh evidence instead of returning already_monitoring", async () => {
+    const workspaceDir = await mkdtemp(path.join(tmpdir(), "oncall-triage-v2-"));
+    try {
+      await importPagerDutyIncident({ workspaceDir, incident: "QTEST123", alertsFile: fixture });
+      const grouped = await groupImportedAlerts(workspaceDir);
+      const groupId = grouped.groups[0]!;
+      const group = await readGroupState(workspaceDir, groupId);
+      const rows: PizzaExportRow[] = [
+        healthyRow("16985-marketing_cloud_10988-scheduled__2026-05-15T16:00:00+00:00", "16985"),
+        processingRow("20770-marketing_cloud_10988-scheduled__2026-05-15T16:00:00+00:00", "20770"),
+      ];
+
+      await checkExportsWorkspace({
+        workspaceDir,
+        apply: true,
+        now: new Date("2026-05-15T17:00:00Z"),
+        filters: { alertRefs: group.alert_refs },
+        fetchPizzaRows: async () => rows,
+      });
+      await autoMonitorExportGroup({ workspaceDir, groupId, now: new Date("2026-05-15T17:01:00Z") });
+      const refreshed = await autoMonitorExportGroup({ workspaceDir, groupId, now: new Date("2026-05-15T17:02:00Z") });
+
+      expect(refreshed).toMatchObject({
+        group_id: groupId,
+        monitored: true,
+        reason: "checks_healthy_or_monitoring",
+      });
+      const evidence = await readFile(path.join(workspaceDir, "groups", "monitoring", groupId, "evidence.jsonl"), "utf8");
+      expect(evidence.match(/Auto-monitored from Pizza export checks/g)?.length).toBe(2);
+    } finally {
+      await rm(workspaceDir, { recursive: true, force: true });
+    }
+  });
+
   test("skips environments marked unavailable without fetching or starting work", async () => {
     const workspaceDir = await mkdtemp(path.join(tmpdir(), "oncall-triage-v2-"));
     try {
@@ -327,6 +445,18 @@ function processingRow(export_run_id: string, audience_id: string): PizzaExportR
     destination_type: "marketing_cloud",
     snapshotting_state: "snapshotting_finished",
     export_state: "export_processing",
+    failed_export_count: 0,
+  };
+}
+
+function datedRow(export_run_id: string, audience_id: string, created_at: string, export_state: string): PizzaExportRow {
+  return {
+    export_run_id,
+    audience_id,
+    destination_type: "live_ramp_activation",
+    created_at,
+    snapshotting_state: "snapshotting_finished",
+    export_state,
     failed_export_count: 0,
   };
 }

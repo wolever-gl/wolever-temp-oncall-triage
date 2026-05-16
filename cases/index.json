@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-05-16T23:04:25.571Z",
-  "open_count": 44,
+  "generated_at": "2026-05-16T23:11:31.030Z",
+  "open_count": 43,
   "groups": [
     {
       "group_id": "260513-allegro_3-client-sent-export-failure",
@@ -479,7 +479,7 @@
         "monitoring:export-processing"
       ],
       "title": "Albertsons LiveRamp uploads still processing",
-      "summary": "Monitoring: audience 12719 has recovered; shared Albertsons 8473/10073 retry rows are still processing and 2189 remains unresolved in the related snapshotting case.",
+      "summary": "Auto-monitored from Pizza export checks: 4 alert-scoped export check(s) are still processing and 0 are already healthy.",
       "incident_ids": [
         "Q2T09VCLN9MRZ8"
       ],
@@ -494,7 +494,7 @@
         "monitoring:export-processing"
       ],
       "title": "albertsons_6 client-sent-export-failure",
-      "summary": "Monitoring: Albertsons audiences 11688 and 11820 remain LiveRamp export_processing with zero failures on latest 2026-05-15 runs.",
+      "summary": "Auto-monitored from Pizza export checks: 2 alert-scoped export check(s) are still processing and 0 are already healthy.",
       "incident_ids": [
         "Q2EJWG22CER0LA"
       ],
@@ -550,21 +550,6 @@
       ],
       "alert_count": 2,
       "path": "groups/monitoring/grp_260513_albertsons_6_client_sent_export_failure_split_0066/case.md"
-    },
-    {
-      "group_id": "grp_260514_albertsons_6_client_sent_export_failure_split_0068",
-      "state": "monitoring",
-      "tags": [
-        "triage:needs_review",
-        "monitoring:export-processing"
-      ],
-      "title": "albertsons_6 client-sent-export-failure split",
-      "summary": "Monitoring: audience 12875 remains export_processing with zero failures on the latest 2026-05-16 LiveRamp run.",
-      "incident_ids": [
-        "Q38JR11G2ENK2W"
-      ],
-      "alert_count": 1,
-      "path": "groups/monitoring/grp_260514_albertsons_6_client_sent_export_failure_split_0068/case.md"
     },
     {
       "group_id": "grp_260514_ford_310_dv360_export_error_split_0074",
@@ -1095,6 +1080,22 @@
       ],
       "alert_count": 1,
       "path": "groups/resolved/grp_260514_albertsons_6_client_sent_export_failure_split_0067/case.md"
+    },
+    {
+      "group_id": "grp_260514_albertsons_6_client_sent_export_failure_split_0068",
+      "state": "resolved",
+      "tags": [
+        "triage:needs_review",
+        "monitoring:export-processing",
+        "resolved:export-healthy"
+      ],
+      "title": "albertsons_6 client-sent-export-failure split",
+      "summary": "Auto-resolved from Pizza export checks: all 1 alert-scoped export check(s) are healthy_closed with no blockers.",
+      "incident_ids": [
+        "Q38JR11G2ENK2W"
+      ],
+      "alert_count": 1,
+      "path": "groups/resolved/grp_260514_albertsons_6_client_sent_export_failure_split_0068/case.md"
     },
     {
       "group_id": "grp_260514_ford_310_client_sent_export_failure_split_0073",

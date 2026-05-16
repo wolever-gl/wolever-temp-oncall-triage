@@ -24,6 +24,7 @@ describe("PagerDuty alert parsing", () => {
       org_slug: "albertsons",
       audience_id: "10684",
       source_glcli: "glcli --env albertsons bifrost pizza --audience-id 10684 --org-id 6",
+      export_check_strategy: "any_export_after_alert",
       parser_version: 2,
     });
     expect(alerts[0]?.summary).toContain("0 successfull_exports");
@@ -43,6 +44,7 @@ describe("PagerDuty alert parsing", () => {
       endpoint_id: "app_tiktok_1899",
       destination_type: "tik_tok",
       destination_product: "tik-tok",
+      export_check_strategy: "checked_export_run_ids",
       state_tuple: {
         snapshotting: "snapshotting_finished",
         export: "export_processing",

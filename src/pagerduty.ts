@@ -126,6 +126,7 @@ function normalizeAlert(entry: unknown, idx: number, incident_id: string, incide
   const checked_export_run_ids = splitCsv(stringField(details, "checked_export_run_ids"));
   const parsed_run_ids = checked_export_run_ids.map(parseRunId);
   const state_tuple = parseStateTuple(summary);
+  const export_check_strategy = exportCheckStrategy(summary, checked_export_run_ids);
   if (org_id) alert.org_id = org_id;
   if (org_id_numeric) alert.org_id_numeric = org_id_numeric;
   if (org_id && org_id_numeric) alert.org_id = org_id.includes(`_${org_id_numeric}`) ? org_id : `${org_id}_${org_id_numeric}`;
@@ -134,6 +135,7 @@ function normalizeAlert(entry: unknown, idx: number, incident_id: string, incide
   if (endpoint_id) alert.endpoint_id = endpoint_id;
   if (export_run_id) alert.export_run_id = export_run_id;
   if (checked_export_run_ids.length > 0) alert.checked_export_run_ids = checked_export_run_ids;
+  alert.export_check_strategy = export_check_strategy;
   if (parsed_run_ids.length > 0) alert.parsed_run_ids = parsed_run_ids;
   const destination = firstDefined(parsed_run_ids.map((run) => run.destination_type)) || destinationFromEndpoint(endpoint_id);
   if (destination) {
@@ -173,6 +175,7 @@ function parsePagerDutyWrapperAlerts(rawText: string, incident_id: string, incid
     const checked_export_run_ids = splitCsv(fields.checked_export_run_ids);
     const parsed_run_ids = checked_export_run_ids.map(parseRunId);
     const state_tuple = parseStateTuple(summary);
+    const export_check_strategy = exportCheckStrategy(summary, checked_export_run_ids);
     const endpoint_id = fields.endpoint_id;
     const destination_type = firstDefined(parsed_run_ids.map((run) => run.destination_type)) || destinationFromEndpoint(endpoint_id);
     const audience_id = fields.audience_id ?? audienceFromSummary(summary) ?? audienceFromGlcli(glcli);
@@ -191,6 +194,7 @@ function parsePagerDutyWrapperAlerts(rawText: string, incident_id: string, incid
       ...(audience_id ? { audience_id } : {}),
       ...(endpoint_id ? { endpoint_id } : {}),
       ...(checked_export_run_ids.length > 0 ? { checked_export_run_ids } : {}),
+      export_check_strategy,
       ...(parsed_run_ids.length > 0 ? { parsed_run_ids } : {}),
       ...(destination_type ? { destination_type, destination_product: destinationProduct(destination_type) } : {}),
       ...(state_tuple ? { state_tuple } : {}),
@@ -213,6 +217,7 @@ function parseLooseTextAlerts(rawText: string, incident_id: string, incident_url
     const runId = matchValue(chunk, /\bexport[_ ]run[_ ]id:\s*([a-z0-9_:+.-]+)/i);
     const glcli = chunk.match(/glcli[^\n]+/)?.[0]?.trim();
     const firstLine = chunk.trim().split("\n")[0] ?? "PagerDuty alert";
+    const checkedRunIds = runId ? [runId] : [];
     return {
       alert_id: alertId,
       incident_id,
@@ -224,6 +229,7 @@ function parseLooseTextAlerts(rawText: string, incident_id: string, incident_url
       ...(audience ? { audience_id: audience } : {}),
       ...(endpoint ? { endpoint_id: endpoint } : {}),
       ...(runId ? { export_run_id: runId } : {}),
+      export_check_strategy: exportCheckStrategy(firstLine, checkedRunIds),
       ...(glcli ? { source_glcli: glcli } : {}),
       error_signature: signature(chunk),
       raw: chunk,
@@ -239,6 +245,18 @@ function signature(input: string): string {
     .replace(/\d+/g, "<n>")
     .replace(/\s+/g, " ")
     .slice(0, 120);
+}
+
+export function exportCheckStrategy(
+  summary: string,
+  checkedExportRunIds: string[],
+): NonNullable<AlertFact["export_check_strategy"]> {
+  if (checkedExportRunIds.length > 0) return "checked_export_run_ids";
+  const normalized = summary.toLowerCase();
+  if (normalized.includes("0 successfull_exports from pizza tracker")) return "any_export_after_alert";
+  if (normalized.includes("audience export failure") && normalized.includes("sent to client")) return "any_export_after_alert";
+  if (normalized.includes("signalroute export failure") && normalized.includes("sent to client")) return "any_export_after_alert";
+  return "checked_export_run_ids";
 }
 
 function parseIndentedFields(block: string): Record<string, string> {

@@ -7,11 +7,11 @@
     "monitoring:export-processing"
   ],
   "title": "Albertsons LiveRamp uploads still processing",
-  "summary": "Monitoring: audience 12719 has recovered; shared Albertsons 8473/10073 retry rows are still processing and 2189 remains unresolved in the related snapshotting case.",
+  "summary": "Auto-monitored from Pizza export checks: 4 alert-scoped export check(s) are still processing and 0 are already healthy.",
   "deterministic_key": "tag|260512-albertsons_6-liveramp-waiting-uploads",
   "grouping_version": 3,
   "created_at": "2026-05-16T01:48:36.505Z",
-  "updated_at": "2026-05-16T23:04:10.206Z",
+  "updated_at": "2026-05-16T23:10:54.571Z",
   "alert_refs": [
     {
       "incident_id": "Q2T09VCLN9MRZ8",

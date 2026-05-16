@@ -1312,6 +1312,7 @@ function indexAlertFact(alert: AlertFact): IndexAlertFact {
     ...(alert.endpoint_id ? { endpoint_id: alert.endpoint_id } : {}),
     ...(alert.state_tuple ? { state_tuple: alert.state_tuple } : {}),
     ...(alert.checked_export_run_ids ? { checked_export_run_ids: alert.checked_export_run_ids } : {}),
+    ...(alert.export_check_strategy ? { export_check_strategy: alert.export_check_strategy } : {}),
   };
 }
 

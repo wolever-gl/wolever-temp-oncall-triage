@@ -28,14 +28,13 @@ Representative alerts:
 ## Export Checks
 
 - Checks: 1.
-- States: `blocked`=1
-- Blockers seen: `missing_run_identity`
+- States: `healthy_closed`=1
 
 Check evidence:
-- chk_q1tjj4mevof1w3_q2sybh7w8mgpl4 (Q1TJJ4MEVOF1W3/Q2SYBH7W8MGPL4): state=`blocked`.
+- chk_q1tjj4mevof1w3_q2sybh7w8mgpl4 (Q1TJJ4MEVOF1W3/Q2SYBH7W8MGPL4): state=`healthy_closed`.
   Scope: env=prod; org=310; audience=34062.
   Command: `glcli --env prod bifrost pizza --audience-id 34062 --org-id 310`
-  Blockers: `missing_run_identity`
+  Run 34062-facebook_20861-scheduled__2026-05-16T00:00:00+00:00: health=`healthy`; created=2026-05-16T00:49:52.777650+00:00; snapshotting=snapshotting_finished; export=export_finished; failed=0.
 
 ## Recent Evidence
 

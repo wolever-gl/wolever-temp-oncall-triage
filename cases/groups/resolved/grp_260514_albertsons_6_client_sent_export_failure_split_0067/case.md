@@ -29,13 +29,13 @@ Representative alerts:
 
 - Checks: 1.
 - States: `blocked`=1
-- Blockers seen: `missing_run_identity`
+- Blockers seen: `missing_export_after_alert`
 
 Check evidence:
 - chk_q38jr11g2enk2w_q32j02dn0jryz0 (Q38JR11G2ENK2W/Q32J02DN0JRYZ0): state=`blocked`.
   Scope: env=albertsons; org=6; audience=10073.
   Command: `glcli --env albertsons bifrost pizza --audience-id 10073 --org-id 6`
-  Blockers: `missing_run_identity`
+  Blockers: `missing_export_after_alert`
 
 ## Recent Evidence
 

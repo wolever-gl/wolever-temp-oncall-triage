@@ -11,7 +11,7 @@ Alerts: 2
 
 ## Current Summary
 
-Monitoring: Albertsons audiences 11688 and 11820 remain LiveRamp export_processing with zero failures on latest 2026-05-15 runs.
+Auto-monitored from Pizza export checks: 2 alert-scoped export check(s) are still processing and 0 are already healthy.
 
 ## Alert Scope
 
@@ -29,21 +29,22 @@ Representative alerts:
 ## Export Checks
 
 - Checks: 2.
-- States: `blocked`=2
-- Blockers seen: `missing_run_identity`
+- States: `monitoring`=2
 
 Check evidence:
-- chk_q2ejwg22cer0la_q2s03jxyqd34wm (Q2EJWG22CER0LA/Q2S03JXYQD34WM): state=`blocked`.
+- chk_q2ejwg22cer0la_q2s03jxyqd34wm (Q2EJWG22CER0LA/Q2S03JXYQD34WM): state=`monitoring`, next_check_at=`2026-05-16T23:25:55.908Z`.
   Scope: env=albertsons; org=6; audience=11820.
   Command: `glcli --env albertsons bifrost pizza --audience-id 11820 --org-id 6`
-  Blockers: `missing_run_identity`
-- chk_q2ejwg22cer0la_q311oeq3iz6gpg (Q2EJWG22CER0LA/Q311OEQ3IZ6GPG): state=`blocked`.
+  Run 11820-live_ramp_activation_3695-scheduled__2026-05-15T00:00:00+00:00: health=`monitoring`; created=2026-05-15T04:29:17.918441+00:00; snapshotting=snapshotting_finished; export=export_processing; failed=0.
+- chk_q2ejwg22cer0la_q311oeq3iz6gpg (Q2EJWG22CER0LA/Q311OEQ3IZ6GPG): state=`monitoring`, next_check_at=`2026-05-16T23:25:55.908Z`.
   Scope: env=albertsons; org=6; audience=11688.
   Command: `glcli --env albertsons bifrost pizza --audience-id 11688 --org-id 6`
-  Blockers: `missing_run_identity`
+  Run 11688-live_ramp_activation_3691-scheduled__2026-05-15T00:00:00+00:00: health=`monitoring`; created=2026-05-15T04:26:31.490889+00:00; snapshotting=snapshotting_finished; export=export_processing; failed=0.
 
 ## Recent Evidence
 
+- Auto-monitored from Pizza export checks: 2 alert-scoped export check(s) are still processing and 0 are already healthy.
+  Source: `check-exports`; kind: `export_check`; captured: `2026-05-16T23:11:03.785Z`.
 - Monitoring check-in: audiences 11688 and 11820 remain snapshotting_finished/export_processing with zero failures on latest LiveRamp runs from 2026-05-15. Keep monitoring.
   Source: `monitoring preflight/manual Pizza`; kind: `pizza`; captured: `2026-05-16T23:03:08.001Z`.
   Command: `bun run oncall-triage preflight cases --state monitoring; glcli --env albertsons bifrost pizza --audience-id 11688 --org-id 6; glcli --env albertsons bifrost pizza --audience-id 11820 --org-id 6`

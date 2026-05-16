@@ -16,6 +16,7 @@ export interface AlertFact {
   endpoint_id?: string;
   export_run_id?: string;
   checked_export_run_ids?: string[];
+  export_check_strategy?: "checked_export_run_ids" | "any_export_after_alert";
   parsed_run_ids?: ParsedRunId[];
   destination_type?: string;
   destination_product?: string;
@@ -69,6 +70,8 @@ export interface ExportCheckScope {
   audience_id?: string;
   endpoint_id?: string;
   destination_type?: string;
+  match_strategy?: "checked_export_run_ids" | "any_export_after_alert";
+  alert_created_at?: string;
   checked_export_run_ids: string[];
   glcli?: string;
 }
@@ -76,7 +79,7 @@ export interface ExportCheckScope {
 export interface ExportRunEvaluation {
   export_run_id: string;
   health: "healthy" | "monitoring" | "blocked" | "missing";
-  match_basis: "checked_export_run_id";
+  match_basis: "checked_export_run_id" | "any_export_after_alert";
   blockers: string[];
   selected_row?: PizzaExportRow;
 }
@@ -236,6 +239,7 @@ export interface IndexAlertFact {
   endpoint_id?: string;
   state_tuple?: AlertStateTuple;
   checked_export_run_ids?: string[];
+  export_check_strategy?: "checked_export_run_ids" | "any_export_after_alert";
 }
 
 export interface WorkspaceIndex {

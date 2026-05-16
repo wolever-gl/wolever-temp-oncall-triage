@@ -1,7 +1,7 @@
 # On-call Triage Cases
 
-Generated: 2026-05-16T23:04:25.571Z
-Open groups: 44
+Generated: 2026-05-16T23:11:31.030Z
+Open groups: 43
 Alert facts: 698
 
 ## New (8)
@@ -47,16 +47,15 @@ Alert facts: 698
 | `triage:needs_review` | [260515-pgatourhq_219-no-batches](groups/open/260515-pgatourhq_219-no-batches/case.md) | pgatourhq (New World Order): Exports for audience 31918 failed with states: <(snapshotting_finished,no_batches)> | Q2DJCY3XC2BSBG | 13 |
 | `triage:needs_review` | [260515-royals_4-snapshotting-error](groups/open/260515-royals_4-snapshotting-error/case.md) | royals (default): Exports for signal 203 failed with states: <(snapshotting_error,no_batches)> | Q08B553ANQ9KMI | 1 |
 
-## Monitoring (7)
+## Monitoring (6)
 
 | Tags | Group | Summary | Incidents | Alerts |
 |---|---|---|---|---:|
-| `triage:tag_grouped`<br>`waiting:uploads`<br>`monitoring:export-processing` | [260512-albertsons_6-liveramp-waiting-uploads](groups/monitoring/260512-albertsons_6-liveramp-waiting-uploads/case.md) | Monitoring: audience 12719 has recovered; shared Albertsons 8473/10073 retry rows are still processing and 2189 remains unresolved in the related snapshotting case. | Q2T09VCLN9MRZ8 | 4 |
-| `triage:needs_review`<br>`monitoring:export-processing` | [260513-albertsons_6-client-sent-export-failure](groups/monitoring/260513-albertsons_6-client-sent-export-failure/case.md) | Monitoring: Albertsons audiences 11688 and 11820 remain LiveRamp export_processing with zero failures on latest 2026-05-15 runs. | Q2EJWG22CER0LA | 2 |
+| `triage:tag_grouped`<br>`waiting:uploads`<br>`monitoring:export-processing` | [260512-albertsons_6-liveramp-waiting-uploads](groups/monitoring/260512-albertsons_6-liveramp-waiting-uploads/case.md) | Auto-monitored from Pizza export checks: 4 alert-scoped export check(s) are still processing and 0 are already healthy. | Q2T09VCLN9MRZ8 | 4 |
+| `triage:needs_review`<br>`monitoring:export-processing` | [260513-albertsons_6-client-sent-export-failure](groups/monitoring/260513-albertsons_6-client-sent-export-failure/case.md) | Auto-monitored from Pizza export checks: 2 alert-scoped export check(s) are still processing and 0 are already healthy. | Q2EJWG22CER0LA | 2 |
 | `triage:needs_review`<br>`monitoring:export-processing` | [260513-albertsons_6-zero-success](groups/monitoring/260513-albertsons_6-zero-success/case.md) | Monitoring: audience 12742 has recovered, while audience 12801 remains export_processing with zero failures. | Q2EJWG22CER0LA | 2 |
 | `triage:needs_review`<br>`monitoring:export-processing` | [260515-albertsons_6-zero-success-02](groups/monitoring/260515-albertsons_6-zero-success-02/case.md) | Monitoring: 5 Albertsons zero-success audiences have recovered and 5 remain export_processing with zero failures. | Q38JR11G2ENK2W | 10 |
 | `triage:needs_review`<br>`triage:snapshotting-error`<br>`bug:service-quervice`<br>`triage:manual_retry_needed`<br>`monitoring:snapshotting-retry`<br>`monitoring:retry-processing` | [grp_260513_albertsons_6_client_sent_export_failure_split_0066](groups/monitoring/grp_260513_albertsons_6_client_sent_export_failure_split_0066/case.md) | Monitoring: Albertsons audiences 8473 and 10073 remain snapshotting_processing/no_batches after manual retry attempts. | Q2EJWG22CER0LA<br>Q38JR11G2ENK2W | 2 |
-| `triage:needs_review`<br>`monitoring:export-processing` | [grp_260514_albertsons_6_client_sent_export_failure_split_0068](groups/monitoring/grp_260514_albertsons_6_client_sent_export_failure_split_0068/case.md) | Monitoring: audience 12875 remains export_processing with zero failures on the latest 2026-05-16 LiveRamp run. | Q38JR11G2ENK2W | 1 |
 | `triage:needs_review`<br>`resolved:recovered`<br>`triage:delta-redrop-review`<br>`monitoring:dv360-redrop-rate-limited`<br>`monitoring:dv360-redrop-processing` | [grp_260514_ford_310_dv360_export_error_split_0074](groups/monitoring/grp_260514_ford_310_dv360_export_error_split_0074/case.md) | Monitoring: Ford 34062 DV360 re-drop is now reflected in Pizza as export_processing with zero failures. | Q1TJJ4MEVOF1W3<br>Q3HWKW0FS3VTHE | 2 |
 
 ## Waiting (4)
@@ -68,7 +67,7 @@ Alert facts: 698
 | `triage:needs_review`<br>`triage:export-error`<br>`waiting:client_cm360_matchid_config` | [260514-451-campaign-manager-360-export-error](groups/waiting/260514-451-campaign-manager-360-export-error/case.md) | Waiting on ASU/WPP/client configuration: SignalRoute 981 keeps failing CM360 uploads with NOT_FOUND for Floodlight activity/config MatchID lookups; retry alone is unlikely to help until the client confirms/fixes the MatchID/Floodlight identifier setup. | Q3XQABQFPPVNT5 | 2 |
 | `triage:needs_review`<br>`triage:client_schema_missing`<br>`waiting:client_schema` | [260515-gopuff_544-snapshotting-error](groups/waiting/260515-gopuff_544-snapshotting-error/case.md) | Waiting on support/client remediation for missing source column CORE.GOPUFF_ORDER_ITEMS.CLASS in GoPuff Snowflake source schema; support thread opened. | Q1X9CE7BIDK9MV | 1 |
 
-## Resolved (30)
+## Resolved (31)
 
 | Tags | Group | Summary | Incidents | Alerts |
 |---|---|---|---|---:|
@@ -101,4 +100,5 @@ Alert facts: 698
 | `triage:needs_review`<br>`evidence:retry-succeeded` | [grp_260513_ford_310_no_batches_split_0072](groups/resolved/grp_260513_ford_310_no_batches_split_0072/case.md) | Resolved: Ford audience 34010 reddit_ads had a failed-count alert on 2026-05-13, but later 2026-05-14 through 2026-05-16 runs succeeded with zero failures. | Q1TJJ4MEVOF1W3 | 1 |
 | `triage:needs_review`<br>`evidence:retry-succeeded` | [grp_260514_451_campaign_manager_360_export_error_split_0071](groups/resolved/grp_260514_451_campaign_manager_360_export_error_split_0071/case.md) | Resolved: ASU SignalRoute 984 Campaign Manager 360 export has a later export_finished run. | Q3XQABQFPPVNT5 | 1 |
 | `triage:needs_review`<br>`triage:snapshotting-error`<br>`bug:service-quervice`<br>`resolved:merged` | [grp_260514_albertsons_6_client_sent_export_failure_split_0067](groups/resolved/grp_260514_albertsons_6_client_sent_export_failure_split_0067/case.md) | Merged into grp_260513_albertsons_6_client_sent_export_failure_split_0066: Same Albertsons platform failure class: both audience 8473 and 10073 failed LiveRamp snapshotting pre_snapshotting_check with Quervice 502/upstream premature close and no later success. Track as one Quervice service-side investigation. | Q38JR11G2ENK2W | 1 |
+| `triage:needs_review`<br>`monitoring:export-processing`<br>`resolved:export-healthy` | [grp_260514_albertsons_6_client_sent_export_failure_split_0068](groups/resolved/grp_260514_albertsons_6_client_sent_export_failure_split_0068/case.md) | Auto-resolved from Pizza export checks: all 1 alert-scoped export check(s) are healthy_closed with no blockers. | Q38JR11G2ENK2W | 1 |
 | `triage:needs_review`<br>`resolved:recovered`<br>`resolved:merged` | [grp_260514_ford_310_client_sent_export_failure_split_0073](groups/resolved/grp_260514_ford_310_client_sent_export_failure_split_0073/case.md) | Merged into grp_260514_ford_310_dv360_export_error_split_0074: The client-sent Ford audience 34062 alert is the notification counterpart of the reopened DV360 delta redrop-review case; track the remediation decision in the DV360 case. | Q1TJJ4MEVOF1W3 | 1 |

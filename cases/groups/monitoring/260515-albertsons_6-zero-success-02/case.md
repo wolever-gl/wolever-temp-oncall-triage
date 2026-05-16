@@ -37,50 +37,50 @@ Representative alerts:
 ## Export Checks
 
 - Checks: 10.
-- States: `blocked`=10
-- Blockers seen: `missing_run_identity`
+- States: `blocked`=1, `healthy_closed`=7, `monitoring`=2
+- Blockers seen: `missing_export_after_alert`
 
 Check evidence:
-- chk_q38jr11g2enk2w_q0uj754hnuza0w (Q38JR11G2ENK2W/Q0UJ754HNUZA0W): state=`blocked`.
+- chk_q38jr11g2enk2w_q0uj754hnuza0w (Q38JR11G2ENK2W/Q0UJ754HNUZA0W): state=`healthy_closed`.
   Scope: env=albertsons; org=6; audience=12874.
   Command: `glcli --env albertsons bifrost pizza --audience-id 12874 --org-id 6`
-  Blockers: `missing_run_identity`
-- chk_q38jr11g2enk2w_q0uxytqae5seef (Q38JR11G2ENK2W/Q0UXYTQAE5SEEF): state=`blocked`.
+  Run 12874-live_ramp_activation_4607-scheduled__2026-05-16T00:00:00+00:00: health=`healthy`; created=2026-05-16T00:33:54.906547+00:00; snapshotting=snapshotting_finished; export=export_finished; failed=0.
+- chk_q38jr11g2enk2w_q0uxytqae5seef (Q38JR11G2ENK2W/Q0UXYTQAE5SEEF): state=`healthy_closed`.
   Scope: env=albertsons; org=6; audience=12866.
   Command: `glcli --env albertsons bifrost pizza --audience-id 12866 --org-id 6`
-  Blockers: `missing_run_identity`
-- chk_q38jr11g2enk2w_q0zdiagv3ojula (Q38JR11G2ENK2W/Q0ZDIAGV3OJULA): state=`blocked`.
+  Run 12866-live_ramp_activation_4608-scheduled__2026-05-16T00:00:00+00:00: health=`healthy`; created=2026-05-16T00:34:44.061844+00:00; snapshotting=snapshotting_finished; export=export_finished; failed=0.
+- chk_q38jr11g2enk2w_q0zdiagv3ojula (Q38JR11G2ENK2W/Q0ZDIAGV3OJULA): state=`monitoring`, next_check_at=`2026-05-16T23:26:07.319Z`.
   Scope: env=albertsons; org=6; audience=12814.
   Command: `glcli --env albertsons bifrost pizza --audience-id 12814 --org-id 6`
-  Blockers: `missing_run_identity`
-- chk_q38jr11g2enk2w_q1qonb2zkns7pv (Q38JR11G2ENK2W/Q1QONB2ZKNS7PV): state=`blocked`.
+  Run 12814-live_ramp_activation_4621-webapp__2026-05-15T19:36:57+00:00: health=`monitoring`; created=2026-05-15T19:52:26.324863+00:00; snapshotting=snapshotting_finished; export=export_processing; failed=0.
+- chk_q38jr11g2enk2w_q1qonb2zkns7pv (Q38JR11G2ENK2W/Q1QONB2ZKNS7PV): state=`healthy_closed`.
   Scope: env=albertsons; org=6; audience=12875.
   Command: `glcli --env albertsons bifrost pizza --audience-id 12875 --org-id 6`
-  Blockers: `missing_run_identity`
-- chk_q38jr11g2enk2w_q24005uuw7icks (Q38JR11G2ENK2W/Q24005UUW7ICKS): state=`blocked`.
+  Run 12875-live_ramp_activation_4613-scheduled__2026-05-15T00:00:00+00:00: health=`healthy`; created=2026-05-15T05:15:46.851851+00:00; snapshotting=snapshotting_finished; export=export_finished; failed=0.
+- chk_q38jr11g2enk2w_q24005uuw7icks (Q38JR11G2ENK2W/Q24005UUW7ICKS): state=`healthy_closed`.
   Scope: env=albertsons; org=6; audience=12862.
   Command: `glcli --env albertsons bifrost pizza --audience-id 12862 --org-id 6`
-  Blockers: `missing_run_identity`
+  Run 12862-live_ramp_activation_4610-scheduled__2026-05-16T00:00:00+00:00: health=`healthy`; created=2026-05-16T00:59:11.963412+00:00; snapshotting=snapshotting_finished; export=export_finished; failed=0.
 - chk_q38jr11g2enk2w_q2m2bhx98mhzq4 (Q38JR11G2ENK2W/Q2M2BHX98MHZQ4): state=`blocked`.
   Scope: env=albertsons; org=6; audience=12878.
   Command: `glcli --env albertsons bifrost pizza --audience-id 12878 --org-id 6`
-  Blockers: `missing_run_identity`
-- chk_q38jr11g2enk2w_q2otoa7jsd823s (Q38JR11G2ENK2W/Q2OTOA7JSD823S): state=`blocked`.
+  Blockers: `missing_export_after_alert`
+- chk_q38jr11g2enk2w_q2otoa7jsd823s (Q38JR11G2ENK2W/Q2OTOA7JSD823S): state=`healthy_closed`.
   Scope: env=albertsons; org=6; audience=12873.
   Command: `glcli --env albertsons bifrost pizza --audience-id 12873 --org-id 6`
-  Blockers: `missing_run_identity`
-- chk_q38jr11g2enk2w_q3o67ytdvsankl (Q38JR11G2ENK2W/Q3O67YTDVSANKL): state=`blocked`.
+  Run 12873-live_ramp_activation_4612-scheduled__2026-05-16T00:00:00+00:00: health=`healthy`; created=2026-05-16T00:29:57.063553+00:00; snapshotting=snapshotting_finished; export=export_finished; failed=0.
+- chk_q38jr11g2enk2w_q3o67ytdvsankl (Q38JR11G2ENK2W/Q3O67YTDVSANKL): state=`healthy_closed`.
   Scope: env=albertsons; org=6; audience=12865.
   Command: `glcli --env albertsons bifrost pizza --audience-id 12865 --org-id 6`
-  Blockers: `missing_run_identity`
-- chk_q38jr11g2enk2w_q3wnloqe86qywa (Q38JR11G2ENK2W/Q3WNLOQE86QYWA): state=`blocked`.
+  Run 12865-live_ramp_activation_4611-scheduled__2026-05-16T00:00:00+00:00: health=`healthy`; created=2026-05-16T00:32:34.985698+00:00; snapshotting=snapshotting_finished; export=export_finished; failed=0.
+- chk_q38jr11g2enk2w_q3wnloqe86qywa (Q38JR11G2ENK2W/Q3WNLOQE86QYWA): state=`monitoring`, next_check_at=`2026-05-16T23:26:07.319Z`.
   Scope: env=albertsons; org=6; audience=12810.
   Command: `glcli --env albertsons bifrost pizza --audience-id 12810 --org-id 6`
-  Blockers: `missing_run_identity`
-- chk_q38jr11g2enk2w_q3wxbz7nhk8ajm (Q38JR11G2ENK2W/Q3WXBZ7NHK8AJM): state=`blocked`.
+  Run 12810-live_ramp_activation_4619-webapp__2026-05-15T19:35:09+00:00: health=`monitoring`; created=2026-05-15T19:52:19.573516+00:00; snapshotting=snapshotting_finished; export=export_processing; failed=0.
+- chk_q38jr11g2enk2w_q3wxbz7nhk8ajm (Q38JR11G2ENK2W/Q3WXBZ7NHK8AJM): state=`healthy_closed`.
   Scope: env=albertsons; org=6; audience=12876.
   Command: `glcli --env albertsons bifrost pizza --audience-id 12876 --org-id 6`
-  Blockers: `missing_run_identity`
+  Run 12876-live_ramp_activation_4606-scheduled__2026-05-15T00:00:00+00:00: health=`healthy`; created=2026-05-15T03:42:10.155084+00:00; snapshotting=snapshotting_finished; export=export_finished; failed=0.
 
 ## Recent Evidence
 

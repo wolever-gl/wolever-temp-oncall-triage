@@ -11,7 +11,7 @@ Alerts: 4
 
 ## Current Summary
 
-Monitoring: audience 12719 has recovered; shared Albertsons 8473/10073 retry rows are still processing and 2189 remains unresolved in the related snapshotting case.
+Auto-monitored from Pizza export checks: 4 alert-scoped export check(s) are still processing and 0 are already healthy.
 
 ## Alert Scope
 
@@ -61,6 +61,8 @@ Check evidence:
 
 ## Recent Evidence
 
+- Auto-monitored from Pizza export checks: 4 alert-scoped export check(s) are still processing and 0 are already healthy.
+  Source: `check-exports`; kind: `export_check`; captured: `2026-05-16T23:10:54.550Z`.
 - Monitoring check-in: audience 12719 has reached snapshotting_finished/export_finished with zero failures. The shared older audience rows remain unresolved elsewhere: 8473 and 10073 are still snapshotting_processing/no_batches after retry attempts, and 2189 latest Pizza is snapshotting_error/no_batches.
   Source: `monitoring preflight/manual Pizza`; kind: `pizza`; captured: `2026-05-16T23:04:10.153Z`.
   Command: `glcli --env albertsons bifrost pizza --audience-id 12719 --org-id 6; plus shared audiences 2189,8473,10073`

@@ -4,14 +4,14 @@
 
 > Generated file. Do not edit directly; put free-form investigation notes in `notes.md`.
 
-State: `monitoring`
-Tags: `triage:needs_review`, `monitoring:export-processing`
+State: `resolved`
+Tags: `triage:needs_review`, `monitoring:export-processing`, `resolved:export-healthy`
 Incidents: [Q38JR11G2ENK2W](https://growthloop.pagerduty.com/incidents/Q38JR11G2ENK2W)
 Alerts: 1
 
 ## Current Summary
 
-Monitoring: audience 12875 remains export_processing with zero failures on the latest 2026-05-16 LiveRamp run.
+Auto-resolved from Pizza export checks: all 1 alert-scoped export check(s) are healthy_closed with no blockers.
 
 ## Alert Scope
 
@@ -28,17 +28,18 @@ Representative alerts:
 ## Export Checks
 
 - Checks: 1.
-- States: `blocked`=1
-- Blockers seen: `missing_run_identity`
+- States: `healthy_closed`=1
 
 Check evidence:
-- chk_q38jr11g2enk2w_q0hosdajcfxnku (Q38JR11G2ENK2W/Q0HOSDAJCFXNKU): state=`blocked`.
+- chk_q38jr11g2enk2w_q0hosdajcfxnku (Q38JR11G2ENK2W/Q0HOSDAJCFXNKU): state=`healthy_closed`.
   Scope: env=albertsons; org=6; audience=12875.
   Command: `glcli --env albertsons bifrost pizza --audience-id 12875 --org-id 6`
-  Blockers: `missing_run_identity`
+  Run 12875-live_ramp_activation_4613-scheduled__2026-05-15T00:00:00+00:00: health=`healthy`; created=2026-05-15T05:15:46.851851+00:00; snapshotting=snapshotting_finished; export=export_finished; failed=0.
 
 ## Recent Evidence
 
+- Auto-resolved from Pizza export checks: all 1 alert-scoped export check(s) are healthy_closed with no blockers.
+  Source: `check-exports`; kind: `export_check`; captured: `2026-05-16T23:11:16.473Z`.
 - Monitoring check-in: audience 12875 remains snapshotting_finished/export_processing with zero failures on latest 2026-05-16 scheduled LiveRamp run.
   Source: `monitoring preflight/manual Pizza`; kind: `pizza`; captured: `2026-05-16T23:03:56.098Z`.
   Command: `glcli --env albertsons bifrost pizza --audience-id 12875 --org-id 6`

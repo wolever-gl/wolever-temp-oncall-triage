@@ -30,17 +30,17 @@ Representative alerts:
 
 - Checks: 2.
 - States: `blocked`=2
-- Blockers seen: `missing_run_identity`
+- Blockers seen: `missing_export_after_alert`
 
 Check evidence:
 - chk_q2ejwg22cer0la_q2n69vpqcmrhgl (Q2EJWG22CER0LA/Q2N69VPQCMRHGL): state=`blocked`.
   Scope: env=albertsons; org=6; audience=8473.
   Command: `glcli --env albertsons bifrost pizza --audience-id 8473 --org-id 6`
-  Blockers: `missing_run_identity`
+  Blockers: `missing_export_after_alert`
 - chk_q38jr11g2enk2w_q32j02dn0jryz0 (Q38JR11G2ENK2W/Q32J02DN0JRYZ0): state=`blocked`.
   Scope: env=albertsons; org=6; audience=10073.
   Command: `glcli --env albertsons bifrost pizza --audience-id 10073 --org-id 6`
-  Blockers: `missing_run_identity`
+  Blockers: `missing_export_after_alert`
 
 ## Recent Evidence
 
