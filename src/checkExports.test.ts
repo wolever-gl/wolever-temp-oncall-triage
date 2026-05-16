@@ -154,6 +154,51 @@ describe("check-exports", () => {
     }
   });
 
+  test("ignores sibling destination run ids when an alert is scoped to one destination", async () => {
+    const workspaceDir = await mkdtemp(path.join(tmpdir(), "oncall-triage-v2-"));
+    try {
+      const alertsFile = path.join(workspaceDir, "alerts.json");
+      await writeFile(
+        alertsFile,
+        JSON.stringify([
+          {
+            id: "PMULTIDEST",
+            created_at: "2026-05-15T16:05:00Z",
+            summary: "Exports for audience 31274 failed with states: <(snapshotting_finished,no_batches)>",
+            details: {
+              org_id: "ford_310",
+              org_id_numeric: "310",
+              audience_id: "31274",
+              destination_type: "facebook",
+              checked_export_run_ids:
+                "31274-facebook_19687-scheduled__2026-05-13T00:00:00+00:00,31274-the_trade_desk_crm_19688-scheduled__2026-05-13T00:00:00+00:00",
+              glcli: "glcli --env prod bifrost pizza --audience-id 31274 --org-id 310",
+            },
+          },
+        ]),
+      );
+      await importPagerDutyIncident({ workspaceDir, incident: "QFORD", alertsFile });
+
+      await checkExportsWorkspace({
+        workspaceDir,
+        apply: true,
+        now: new Date("2026-05-15T17:00:00Z"),
+        fetchPizzaRows: async () => [
+          healthyRow("31274-facebook_19687-scheduled__2026-05-13T00:00:00+00:00", "31274", "facebook"),
+          healthyRow("31274-the_trade_desk_crm_19688-scheduled__2026-05-13T00:00:00+00:00", "31274", "the_trade_desk_crm"),
+        ],
+      });
+
+      const checks = await loadAllExportChecks(workspaceDir);
+      expect(checks).toHaveLength(1);
+      expect(checks[0]?.state).toBe("healthy_closed");
+      expect(checks[0]?.run_evaluations).toHaveLength(1);
+      expect(checks[0]?.run_evaluations[0]?.export_run_id).toContain("facebook");
+    } finally {
+      await rm(workspaceDir, { recursive: true, force: true });
+    }
+  });
+
   test("skips environments marked unavailable without fetching or starting work", async () => {
     const workspaceDir = await mkdtemp(path.join(tmpdir(), "oncall-triage-v2-"));
     try {
@@ -264,11 +309,11 @@ describe("check-exports", () => {
   });
 });
 
-function healthyRow(export_run_id: string, audience_id: string): PizzaExportRow {
+function healthyRow(export_run_id: string, audience_id: string, destination_type = "marketing_cloud"): PizzaExportRow {
   return {
     export_run_id,
     audience_id,
-    destination_type: "marketing_cloud",
+    destination_type,
     snapshotting_state: "snapshotting_finished",
     export_state: "export_finished",
     failed_export_count: 0,

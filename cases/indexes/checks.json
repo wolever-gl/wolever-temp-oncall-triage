@@ -3711,10 +3711,8 @@
     "check_id": "chk_q1tjj4mevof1w3_q04b2ojiz4f2kt",
     "incident_id": "Q1TJJ4MEVOF1W3",
     "alert_id": "Q04B2OJIZ4F2KT",
-    "state": "blocked",
-    "blockers": [
-      "destination_mismatch"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "310",
@@ -3731,14 +3729,8 @@
     "check_id": "chk_q1tjj4mevof1w3_q0egepo2j93w4r",
     "incident_id": "Q1TJJ4MEVOF1W3",
     "alert_id": "Q0EGEPO2J93W4R",
-    "state": "blocked",
-    "blockers": [
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "310",
@@ -3759,10 +3751,8 @@
     "check_id": "chk_q1tjj4mevof1w3_q0ei54d89docs9",
     "incident_id": "Q1TJJ4MEVOF1W3",
     "alert_id": "Q0EI54D89DOCS9",
-    "state": "blocked",
-    "blockers": [
-      "destination_mismatch"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "310",
@@ -3779,10 +3769,8 @@
     "check_id": "chk_q1tjj4mevof1w3_q10ccc3a5xzfgc",
     "incident_id": "Q1TJJ4MEVOF1W3",
     "alert_id": "Q10CCC3A5XZFGC",
-    "state": "blocked",
-    "blockers": [
-      "destination_mismatch"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "310",
@@ -3799,14 +3787,8 @@
     "check_id": "chk_q1tjj4mevof1w3_q186trpzm2rud7",
     "incident_id": "Q1TJJ4MEVOF1W3",
     "alert_id": "Q186TRPZM2RUD7",
-    "state": "blocked",
-    "blockers": [
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "310",
@@ -3827,14 +3809,8 @@
     "check_id": "chk_q1tjj4mevof1w3_q18n6x3v6vaajn",
     "incident_id": "Q1TJJ4MEVOF1W3",
     "alert_id": "Q18N6X3V6VAAJN",
-    "state": "blocked",
-    "blockers": [
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "310",
@@ -3871,14 +3847,8 @@
     "check_id": "chk_q1tjj4mevof1w3_q1iu9pjhh47nr3",
     "incident_id": "Q1TJJ4MEVOF1W3",
     "alert_id": "Q1IU9PJHH47NR3",
-    "state": "blocked",
-    "blockers": [
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "310",
@@ -3918,12 +3888,7 @@
     "alert_id": "Q1VGETGKE29BNK",
     "state": "blocked",
     "blockers": [
-      "failed_export_count",
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch"
+      "failed_export_count"
     ],
     "scope": {
       "env": "prod",
@@ -3945,14 +3910,8 @@
     "check_id": "chk_q1tjj4mevof1w3_q20m70mqd14d30",
     "incident_id": "Q1TJJ4MEVOF1W3",
     "alert_id": "Q20M70MQD14D30",
-    "state": "blocked",
-    "blockers": [
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "310",
@@ -3990,10 +3949,8 @@
     "check_id": "chk_q1tjj4mevof1w3_q24218tgu2m1y5",
     "incident_id": "Q1TJJ4MEVOF1W3",
     "alert_id": "Q24218TGU2M1Y5",
-    "state": "blocked",
-    "blockers": [
-      "destination_mismatch"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "310",
@@ -4010,14 +3967,8 @@
     "check_id": "chk_q1tjj4mevof1w3_q25ruo635ln9f8",
     "incident_id": "Q1TJJ4MEVOF1W3",
     "alert_id": "Q25RUO635LN9F8",
-    "state": "blocked",
-    "blockers": [
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "310",
@@ -4071,14 +4022,8 @@
     "check_id": "chk_q1tjj4mevof1w3_q2uhvie9h3cww8",
     "incident_id": "Q1TJJ4MEVOF1W3",
     "alert_id": "Q2UHVIE9H3CWW8",
-    "state": "blocked",
-    "blockers": [
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "310",
@@ -4099,14 +4044,8 @@
     "check_id": "chk_q1tjj4mevof1w3_q2x5j6yuevwuwk",
     "incident_id": "Q1TJJ4MEVOF1W3",
     "alert_id": "Q2X5J6YUEVWUWK",
-    "state": "blocked",
-    "blockers": [
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "310",
@@ -4127,10 +4066,8 @@
     "check_id": "chk_q1tjj4mevof1w3_q35g2y7hop9wvu",
     "incident_id": "Q1TJJ4MEVOF1W3",
     "alert_id": "Q35G2Y7HOP9WVU",
-    "state": "blocked",
-    "blockers": [
-      "destination_mismatch"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "310",
@@ -4147,10 +4084,8 @@
     "check_id": "chk_q1tjj4mevof1w3_q35jfdlcvfvcbx",
     "incident_id": "Q1TJJ4MEVOF1W3",
     "alert_id": "Q35JFDLCVFVCBX",
-    "state": "blocked",
-    "blockers": [
-      "destination_mismatch"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "310",
@@ -4167,10 +4102,8 @@
     "check_id": "chk_q1tjj4mevof1w3_q3oga20c8vth1g",
     "incident_id": "Q1TJJ4MEVOF1W3",
     "alert_id": "Q3OGA20C8VTH1G",
-    "state": "blocked",
-    "blockers": [
-      "destination_mismatch"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "310",

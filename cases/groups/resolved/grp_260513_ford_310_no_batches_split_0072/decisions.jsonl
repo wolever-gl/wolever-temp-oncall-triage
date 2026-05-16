@@ -1,0 +1,1 @@
+{"ts":"2026-05-16T22:34:02.341Z","actor":"agent","decision":"transitioned_to_resolved","rationale":"Resolved: Ford audience 34010 reddit_ads had a failed-count alert on 2026-05-13, but later 2026-05-14 through 2026-05-16 runs succeeded with zero failures."}

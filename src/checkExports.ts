@@ -349,7 +349,8 @@ export function evaluateExportCheck(
     };
   }
 
-  const runEvaluations = check.scope.checked_export_run_ids.map((runId): ExportRunEvaluation => {
+  const runIdsToEvaluate = scopedRunIds(check.scope);
+  const runEvaluations = runIdsToEvaluate.map((runId): ExportRunEvaluation => {
     const row = rows.find((candidate) => candidate.export_run_id === runId);
     if (!row) {
       return {
@@ -422,6 +423,13 @@ async function fetchRowsForCheck(
   if (!fetchPizzaRows) return [];
   if (!check.scope.env || !check.scope.org_id || !check.scope.audience_id) return [];
   return fetchPizzaRows(check.scope);
+}
+
+function scopedRunIds(scope: ExportCheckScope): string[] {
+  const scopeDestination = scope.destination_type;
+  if (!scopeDestination) return scope.checked_export_run_ids;
+  const matchingRunIds = scope.checked_export_run_ids.filter((runId) => destinationFromRun(runId) === scopeDestination);
+  return matchingRunIds.length > 0 ? matchingRunIds : scope.checked_export_run_ids;
 }
 
 function evaluateRunRow(runId: string, row: PizzaExportRow, scope: ExportCheckScope): ExportRunEvaluation {
@@ -540,7 +548,7 @@ function scopeKey(scope: ExportCheckScope): string {
 }
 
 function destinationFromRun(runId: string | undefined): string | undefined {
-  return runId?.match(/^\d+-(.+)_\d+-/)?.[1];
+  return runId?.match(/^\d+-(.+?)_\d+-(?:scheduled|webapp|manual)__/)?.[1] ?? runId?.match(/^\d+-(.+)_\d+-/)?.[1];
 }
 
 function endpointNumericPart(endpoint: string): string {

@@ -126,20 +126,6 @@
     "path": "groups/open/260511-allegro_3-dv360-export-error/case.md"
   },
   {
-    "group_id": "260513-ford_310-no-batches",
-    "state": "open",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "ford_310 no-batches",
-    "summary": "ford (Marketing Production): Exports for audience 34062 failed with states: <(snapshotting_finished,no_batches)>",
-    "incident_ids": [
-      "Q1TJJ4MEVOF1W3"
-    ],
-    "alert_count": 19,
-    "path": "groups/open/260513-ford_310-no-batches/case.md"
-  },
-  {
     "group_id": "260513-trumanshow_336-client-sent-export-failure",
     "state": "open",
     "tags": [
@@ -760,6 +746,21 @@
     "path": "groups/resolved/260513-451-client-sent-export-failure/case.md"
   },
   {
+    "group_id": "260513-ford_310-no-batches",
+    "state": "resolved",
+    "tags": [
+      "triage:needs_review",
+      "resolved:export-healthy"
+    ],
+    "title": "ford_310 no-batches",
+    "summary": "Resolved: 18 Ford no-batches alert-scoped exports are healthy after destination-scoped Pizza checks; the single 34010 reddit_ads failed-count case was split out.",
+    "incident_ids": [
+      "Q1TJJ4MEVOF1W3"
+    ],
+    "alert_count": 18,
+    "path": "groups/resolved/260513-ford_310-no-batches/case.md"
+  },
+  {
     "group_id": "260514-albertsons_6-client-sent-export-failure",
     "state": "resolved",
     "tags": [
@@ -1015,6 +1016,21 @@
     ],
     "alert_count": 1,
     "path": "groups/resolved/grp_260513_451_client_sent_export_failure_split_0070/case.md"
+  },
+  {
+    "group_id": "grp_260513_ford_310_no_batches_split_0072",
+    "state": "resolved",
+    "tags": [
+      "triage:needs_review",
+      "evidence:retry-succeeded"
+    ],
+    "title": "ford_310 no-batches split",
+    "summary": "Resolved: Ford audience 34010 reddit_ads had a failed-count alert on 2026-05-13, but later 2026-05-14 through 2026-05-16 runs succeeded with zero failures.",
+    "incident_ids": [
+      "Q1TJJ4MEVOF1W3"
+    ],
+    "alert_count": 1,
+    "path": "groups/resolved/grp_260513_ford_310_no_batches_split_0072/case.md"
   },
   {
     "group_id": "grp_260514_451_campaign_manager_360_export_error_split_0071",

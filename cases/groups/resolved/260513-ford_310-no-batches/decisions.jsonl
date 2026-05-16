@@ -18,3 +18,4 @@
 {"ts":"2026-05-16T00:38:01.850Z","actor":"oncall-triage","decision":"attached_alert_to_existing_group","rationale":"Alert matched deterministic key v3|incident:Q1TJJ4MEVOF1W3|org:ford_310|class:no-batches."}
 {"ts":"2026-05-16T00:38:01.850Z","actor":"oncall-triage","decision":"attached_alert_to_existing_group","rationale":"Alert matched deterministic key v3|incident:Q1TJJ4MEVOF1W3|org:ford_310|class:no-batches."}
 {"ts":"2026-05-16T20:44:55.241Z","actor":"check-exports","decision":"started_work","rationale":"Export evidence check evaluated alert facts for this group."}
+{"ts":"2026-05-16T22:33:53.624Z","actor":"agent","decision":"transitioned_to_resolved","rationale":"Resolved: 18 Ford no-batches alert-scoped exports are healthy after destination-scoped Pizza checks; the single 34010 reddit_ads failed-count case was split out."}
