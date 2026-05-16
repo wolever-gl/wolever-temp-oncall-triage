@@ -2,7 +2,7 @@ import { describe, expect, test } from "bun:test";
 import { mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import path from "node:path";
-import { autoResolveHealthyExportGroup, checkExportsWorkspace, loadAllExportChecks } from "./checkExports";
+import { autoMonitorExportGroup, autoResolveHealthyExportGroup, checkExportsWorkspace, loadAllExportChecks } from "./checkExports";
 import { groupImportedAlerts, importPagerDutyIncident, readGroupState } from "./workspace";
 import type { PizzaExportRow } from "./schema";
 
@@ -75,6 +75,55 @@ describe("check-exports", () => {
       expect(resolved.summary).toContain("Auto-resolved from Pizza export checks");
       const evidence = await readFile(path.join(workspaceDir, "groups", "resolved", groupId, "evidence.jsonl"), "utf8");
       expect(evidence).toContain("all 3 alert-scoped export check");
+    } finally {
+      await rm(workspaceDir, { recursive: true, force: true });
+    }
+  });
+
+  test("auto-monitors a group when remaining checks are processing", async () => {
+    const workspaceDir = await mkdtemp(path.join(tmpdir(), "oncall-triage-v2-"));
+    try {
+      await importPagerDutyIncident({ workspaceDir, incident: "QTEST123", alertsFile: fixture });
+      const grouped = await groupImportedAlerts(workspaceDir);
+      const groupId = grouped.groups[0]!;
+      const group = await readGroupState(workspaceDir, groupId);
+      const rows: PizzaExportRow[] = [
+        healthyRow("16985-marketing_cloud_10988-scheduled__2026-05-15T16:00:00+00:00", "16985"),
+        processingRow("20770-marketing_cloud_10988-scheduled__2026-05-15T16:00:00+00:00", "20770"),
+      ];
+
+      await checkExportsWorkspace({
+        workspaceDir,
+        apply: true,
+        now: new Date("2026-05-15T17:00:00Z"),
+        filters: { alertRefs: group.alert_refs },
+        fetchPizzaRows: async () => rows,
+      });
+      const resolved = await autoResolveHealthyExportGroup({
+        workspaceDir,
+        groupId,
+        now: new Date("2026-05-15T17:01:00Z"),
+      });
+      const monitored = await autoMonitorExportGroup({
+        workspaceDir,
+        groupId,
+        now: new Date("2026-05-15T17:02:00Z"),
+      });
+
+      expect(resolved.resolved).toBe(false);
+      expect(monitored).toMatchObject({
+        group_id: groupId,
+        monitored: true,
+        reason: "checks_healthy_or_monitoring",
+        healthy_checks: 2,
+        monitoring_checks: 1,
+      });
+      const monitoring = await readGroupState(workspaceDir, groupId);
+      expect(monitoring.state).toBe("monitoring");
+      expect(monitoring.tags).toContain("monitoring:export-processing");
+      expect(monitoring.summary).toContain("still processing");
+      const evidence = await readFile(path.join(workspaceDir, "groups", "monitoring", groupId, "evidence.jsonl"), "utf8");
+      expect(evidence).toContain("Auto-monitored from Pizza export checks");
     } finally {
       await rm(workspaceDir, { recursive: true, force: true });
     }
@@ -222,6 +271,17 @@ function healthyRow(export_run_id: string, audience_id: string): PizzaExportRow 
     destination_type: "marketing_cloud",
     snapshotting_state: "snapshotting_finished",
     export_state: "export_finished",
+    failed_export_count: 0,
+  };
+}
+
+function processingRow(export_run_id: string, audience_id: string): PizzaExportRow {
+  return {
+    export_run_id,
+    audience_id,
+    destination_type: "marketing_cloud",
+    snapshotting_state: "snapshotting_finished",
+    export_state: "export_processing",
     failed_export_count: 0,
   };
 }

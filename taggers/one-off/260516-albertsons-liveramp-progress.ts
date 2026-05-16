@@ -100,7 +100,7 @@ if (hasSnapshottingError) {
   decision = "tag";
   classification = "export-in-progress";
   confidence = "high";
-  tags = ["evidence:albertsons-liveramp-progress", "waiting:uploads"];
+  tags = ["evidence:albertsons-liveramp-progress", "monitoring:export-processing"];
 } else if (hasExportFailure) {
   decision = "tag";
   classification = "export-failure-unrecovered";

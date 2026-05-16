@@ -92,6 +92,42 @@ describe("260516-albertsons-liveramp-progress tagger", () => {
       await rm(workspaceDir, { recursive: true, force: true });
     }
   });
+
+  test("tags processing exports as monitoring", async () => {
+    const workspaceDir = await mkdtemp(path.join(tmpdir(), "oncall-tagger-"));
+    try {
+      await writeAlertAndCheck(workspaceDir, {
+        incident_id: "QINC",
+        alert_id: "QPROCESSING",
+        audience_id: "12801",
+      }, {
+        state: "monitoring",
+        updated_at: "2026-05-16T00:00:00Z",
+        blockers: [],
+        run_evaluations: [
+          {
+            export_run_id: "12801-live_ramp_activation_4542-webapp__2026-05-12T22:25:38+00:00",
+            health: "monitoring",
+            blockers: [],
+            selected_row: {
+              export_state: "export_processing",
+              snapshotting_state: "snapshotting_finished",
+              failed_export_count: 0,
+              created_at: "2026-05-12T22:58:30Z",
+            },
+          },
+        ],
+      });
+
+      const result = await runTagger(workspaceDir);
+
+      expect(result.decision).toBe("tag");
+      expect(result.tags).toContain("monitoring:export-processing");
+      expect(result.evidence?.[0]?.data?.classification).toBe("export-in-progress");
+    } finally {
+      await rm(workspaceDir, { recursive: true, force: true });
+    }
+  });
 });
 
 async function writeAlertAndCheck(workspaceDir: string, alert: { incident_id: string; alert_id: string; audience_id: string }, check: unknown): Promise<void> {

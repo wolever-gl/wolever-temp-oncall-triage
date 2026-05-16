@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-16T21:26:19.272Z",
+  "generated_at": "2026-05-16T21:28:40.460Z",
   "open_count": 46,
   "groups": [
     {
@@ -197,20 +197,6 @@
       ],
       "alert_count": 3,
       "path": "groups/open/260513-albertsons_6-client-sent-export-failure/case.md"
-    },
-    {
-      "group_id": "260513-albertsons_6-zero-success",
-      "state": "open",
-      "tags": [
-        "triage:needs_review"
-      ],
-      "title": "albertsons_6 zero-success",
-      "summary": "albertsons (Albertsons Media) - Audience 12742: 0 successfull_exports from pizza tracker found 10 minutes after new export",
-      "incident_ids": [
-        "Q2EJWG22CER0LA"
-      ],
-      "alert_count": 2,
-      "path": "groups/open/260513-albertsons_6-zero-success/case.md"
     },
     {
       "group_id": "260513-ford_310-no-batches",
@@ -549,20 +535,6 @@
       "path": "groups/open/260515-451-snapshotting-error/case.md"
     },
     {
-      "group_id": "260515-albertsons_6-zero-success-02",
-      "state": "open",
-      "tags": [
-        "triage:needs_review"
-      ],
-      "title": "albertsons_6 zero-success",
-      "summary": "albertsons (Albertsons Media) - Audience 12814: 0 successfull_exports from pizza tracker found 10 minutes after new export",
-      "incident_ids": [
-        "Q38JR11G2ENK2W"
-      ],
-      "alert_count": 10,
-      "path": "groups/open/260515-albertsons_6-zero-success-02/case.md"
-    },
-    {
       "group_id": "260515-birchwood_274-salesforce-audience-export-error",
       "state": "open",
       "tags": [
@@ -618,6 +590,36 @@
       ],
       "alert_count": 4,
       "path": "groups/monitoring/260512-albertsons_6-liveramp-waiting-uploads/case.md"
+    },
+    {
+      "group_id": "260513-albertsons_6-zero-success",
+      "state": "monitoring",
+      "tags": [
+        "triage:needs_review",
+        "monitoring:export-processing"
+      ],
+      "title": "albertsons_6 zero-success",
+      "summary": "Zero-success tagger found the unresolved attached alert is still export_processing while the other alert has recovered; recheck after the next export monitor window.",
+      "incident_ids": [
+        "Q2EJWG22CER0LA"
+      ],
+      "alert_count": 2,
+      "path": "groups/monitoring/260513-albertsons_6-zero-success/case.md"
+    },
+    {
+      "group_id": "260515-albertsons_6-zero-success-02",
+      "state": "monitoring",
+      "tags": [
+        "triage:needs_review",
+        "monitoring:export-processing"
+      ],
+      "title": "albertsons_6 zero-success",
+      "summary": "Zero-success tagger found 7 attached alerts recovered and the remaining 3 are still export_processing; recheck after the next export monitor window.",
+      "incident_ids": [
+        "Q38JR11G2ENK2W"
+      ],
+      "alert_count": 10,
+      "path": "groups/monitoring/260515-albertsons_6-zero-success-02/case.md"
     },
     {
       "group_id": "260505-albertsons_6-snapshotting-schema-error",

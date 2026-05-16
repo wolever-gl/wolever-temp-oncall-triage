@@ -1,15 +1,16 @@
 {
   "group_id": "260515-albertsons_6-zero-success-02",
-  "state": "open",
+  "state": "monitoring",
   "tags": [
-    "triage:needs_review"
+    "triage:needs_review",
+    "monitoring:export-processing"
   ],
   "title": "albertsons_6 zero-success",
-  "summary": "albertsons (Albertsons Media) - Audience 12814: 0 successfull_exports from pizza tracker found 10 minutes after new export",
+  "summary": "Zero-success tagger found 7 attached alerts recovered and the remaining 3 are still export_processing; recheck after the next export monitor window.",
   "deterministic_key": "v3|incident:Q38JR11G2ENK2W|org:albertsons_6|class:zero-success",
   "grouping_version": 3,
   "created_at": "2026-05-16T00:38:01.850Z",
-  "updated_at": "2026-05-16T21:08:12.256Z",
+  "updated_at": "2026-05-16T21:28:39.319Z",
   "alert_refs": [
     {
       "incident_id": "Q38JR11G2ENK2W",

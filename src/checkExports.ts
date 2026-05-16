@@ -38,6 +38,14 @@ export interface AutoResolveExportGroupResult {
   healthy_checks: number;
 }
 
+export interface AutoMonitorExportGroupResult {
+  group_id: string;
+  monitored: boolean;
+  reason: string;
+  healthy_checks: number;
+  monitoring_checks: number;
+}
+
 export async function checkExportsWorkspace(options: CheckExportsOptions): Promise<CheckExportsResult> {
   await ensureDir(checksDir(options.workspaceDir));
   const now = options.now ?? new Date();
@@ -216,6 +224,68 @@ export async function autoResolveHealthyExportGroup(options: {
     actor: "check-exports",
   });
   return { group_id: group.group_id, resolved: true, reason: "all_checks_healthy_closed", healthy_checks: checks.length };
+}
+
+export async function autoMonitorExportGroup(options: {
+  workspaceDir: string;
+  groupId: string;
+  now?: Date;
+}): Promise<AutoMonitorExportGroupResult> {
+  const group = await readGroupState(options.workspaceDir, options.groupId);
+  if (group.state === "resolved") {
+    return { group_id: group.group_id, monitored: false, reason: "already_resolved", healthy_checks: 0, monitoring_checks: 0 };
+  }
+  if (group.state === "waiting") {
+    return { group_id: group.group_id, monitored: false, reason: "already_waiting", healthy_checks: 0, monitoring_checks: 0 };
+  }
+  if (group.state === "monitoring") {
+    return { group_id: group.group_id, monitored: false, reason: "already_monitoring", healthy_checks: 0, monitoring_checks: 0 };
+  }
+
+  const selected = new Set(group.alert_refs.map(refKey));
+  const checks = (await loadAllExportChecks(options.workspaceDir)).filter((check) =>
+    selected.has(refKey({ incident_id: check.incident_id, alert_id: check.alert_id })),
+  );
+  if (checks.length === 0) return { group_id: group.group_id, monitored: false, reason: "no_export_checks", healthy_checks: 0, monitoring_checks: 0 };
+
+  const checkedRefs = new Set(checks.map((check) => refKey({ incident_id: check.incident_id, alert_id: check.alert_id })));
+  const missingRefs = group.alert_refs.filter((ref) => !checkedRefs.has(refKey(ref)));
+  const healthyChecks = checks.filter((check) => check.state === "healthy_closed");
+  const monitoringChecks = checks.filter((check) => check.state === "monitoring");
+  if (missingRefs.length > 0) {
+    return { group_id: group.group_id, monitored: false, reason: `missing_export_checks:${missingRefs.length}`, healthy_checks: healthyChecks.length, monitoring_checks: monitoringChecks.length };
+  }
+  if (monitoringChecks.length === 0) {
+    return { group_id: group.group_id, monitored: false, reason: "no_monitoring_checks", healthy_checks: healthyChecks.length, monitoring_checks: 0 };
+  }
+
+  const notMonitorable = checks.filter((check) => check.state !== "healthy_closed" && check.state !== "monitoring");
+  if (notMonitorable.length > 0) {
+    return { group_id: group.group_id, monitored: false, reason: `checks_not_monitorable:${notMonitorable.map((check) => `${check.check_id}=${check.state}`).join(",")}`, healthy_checks: healthyChecks.length, monitoring_checks: monitoringChecks.length };
+  }
+
+  const nowIso = (options.now ?? new Date()).toISOString();
+  const summary = `Auto-monitored from Pizza export checks: ${monitoringChecks.length} alert-scoped export check(s) are still processing and ${healthyChecks.length} are already healthy.`;
+  await appendEvidence(options.workspaceDir, group.group_id, {
+    ts: nowIso,
+    kind: "export_check",
+    source: "check-exports",
+    summary,
+    data: {
+      monitoring_check_ids: monitoringChecks.map((check) => check.check_id),
+      healthy_check_ids: healthyChecks.map((check) => check.check_id),
+      next_check_at: monitoringChecks.map((check) => check.next_check_at).filter(Boolean).sort()[0],
+    },
+  });
+  await transitionGroup({
+    workspaceDir: options.workspaceDir,
+    groupId: group.group_id,
+    state: "monitoring",
+    tag: "monitoring:export-processing",
+    summary,
+    actor: "check-exports",
+  });
+  return { group_id: group.group_id, monitored: true, reason: "checks_healthy_or_monitoring", healthy_checks: healthyChecks.length, monitoring_checks: monitoringChecks.length };
 }
 
 export function deriveExportCheck(alert: AlertFact, nowIso: string, previous?: ExportCheck): ExportCheck {

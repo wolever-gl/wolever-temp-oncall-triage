@@ -24,7 +24,7 @@ describe("260516-albertsons-zero-success-progress tagger", () => {
     expect(result.evidence[0].data.classification).toBe("zero-success-recovered");
   });
 
-  test("tags processing export as waiting uploads", async () => {
+  test("tags processing export as monitoring", async () => {
     const result = await runTagger({
       alert: zeroSuccessAlert("12801", "2026-05-12T16:05:54-07:00"),
       rows: [{
@@ -38,7 +38,7 @@ describe("260516-albertsons-zero-success-progress tagger", () => {
     });
 
     expect(result.decision).toBe("tag");
-    expect(result.tags).toContain("waiting:uploads");
+    expect(result.tags).toContain("monitoring:export-processing");
     expect(result.evidence[0].data.classification).toBe("zero-success-export-in-progress");
   });
 

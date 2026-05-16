@@ -28,6 +28,7 @@ Use this repo as a case-workspace system, not a spreadsheet workflow.
 - Use the CLI for structural mutations. Direct file edits are fine for narrative and artifact files.
 - Current group states are `new`, `open`, `waiting`, `monitoring`, and `resolved`.
 - `new` means imported and grouped, but no evidence collection or triage work has started yet. Move a group to `open` when an agent or human begins investigation, appends evidence, runs a relevant check, or otherwise starts work.
+- Move a group to `monitoring` when evidence shows the only remaining action is a future recheck, such as all attached export checks being either healthy or still `export_processing`/`export_waiting`/`export_queued`. Do not leave these cases `open` unless some blocker still needs investigation.
 - Move a group to `waiting` only after there is durable evidence that the blocker has been communicated to the owning party. Include that communication evidence in the case when making the transition. If communication has not happened yet, report findings and leave the group `open` unless another state is clearly justified.
 - Use namespaced tags such as `triage:*`, `waiting:*`, `monitoring:*`, and `resolved:*`.
 - No scheduler for now. Use `next_check_at` fields when a future revisit is needed.
@@ -37,9 +38,9 @@ Use this repo as a case-workspace system, not a spreadsheet workflow.
   `bun run oncall-triage check-exports cases --group <group-id> --apply --auto-resolve`.
   For a full pass across new cases, run
   `bun run oncall-triage preflight cases --state new`.
-  If it resolves the case, stop; if it records blocked or monitoring evidence,
-  continue from that generated evidence instead of repeating Pizza checks by
-  hand.
+  If it resolves or moves the case to monitoring, stop; if it records blocked
+  evidence, continue from that generated evidence instead of repeating Pizza
+  checks by hand.
 - Respect `cases/env_availability.json`. Do not manually probe environments
   marked `unavailable`; update that file when local access changes.
 - Agents can explore after the export preflight, then choose a runbook before remediation or resolution.

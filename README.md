@@ -31,11 +31,13 @@ Triage is an evidence loop, not a one-shot grouping pass:
    ```
 
    This runs the relevant Pizza checks for each group, records check evidence in
-   the cases, and resolves a group automatically when every alert-scoped export
-   check is healthy. If it resolves a case, move on to the next group. If it
-   records `blocked` or `monitoring` evidence, continue investigation from that
-   generated evidence. Environments listed as unavailable in
-   `cases/env_availability.json` are skipped instead of probed.
+   the cases, resolves a group automatically when every alert-scoped export
+   check is healthy, and moves a group to `monitoring` automatically when every
+   attached check is either healthy or still processing. If it resolves or moves
+   a case to monitoring, move on to the next group. If it records `blocked`
+   evidence, continue investigation from that generated evidence. Environments
+   listed as unavailable in `cases/env_availability.json` are skipped instead
+   of probed.
 4. Ask the agent to decide what to do with that group. The agent should inspect
    alert facts, prior annotations, case notes, and external evidence; explain
    the likely situation; and guide the next action.
@@ -188,19 +190,19 @@ bun run oncall-triage tag cases \
   --org albertsons_6 \
   --destination live-ramp \
   --script ./taggers/one-off/260516-albertsons-liveramp-progress.ts \
-  --tag waiting:uploads \
+  --tag monitoring:export-processing \
   --limit 10 \
   --test
 
 bun run oncall-triage group cases \
   --tag evidence:liveramp-sftp-permission \
-  --tag waiting:uploads \
+  --tag monitoring:export-processing \
   --group 260511-albertsons_6-liveramp-sftp-permission \
   --title "Albertsons LiveRamp SFTP permission retries" \
-  --summary "Verified LiveRamp SFTP permission retries; waiting for uploads." \
+  --summary "Verified LiveRamp exports are still processing; monitor for upload completion." \
   --rationale "Grouped only alerts whose tagger evidence matched the failure mode." \
   --state monitoring \
-  --group-tag waiting:uploads
+  --group-tag monitoring:export-processing
 ```
 
 `tag` archives the script under `cases/assets/taggers/<run_id>/`, runs it once
@@ -220,8 +222,10 @@ Common export triage pattern:
 1. Query a broad cohort, such as one org and destination.
 2. Run `check-exports` to collect scoped per-alert evidence.
 3. Run a classifier tagger with `--test` first.
-4. Keep known outcomes as separate tags, such as recovered, waiting, export
-   failure, or snapshotting schema error.
+4. Keep known outcomes as separate tags, such as recovered, monitoring,
+   waiting, export failure, or snapshotting schema error. Use `monitoring:*`
+   for exports that are still processing; reserve `waiting:*` for cases where
+   durable evidence shows the blocker was communicated to an external owner.
 5. Leave unfamiliar blocker combinations as `needs_evidence` until an agent
    adds a better rule.
 6. Use `group --tag` to create one group per remediation path, not one group
@@ -241,7 +245,7 @@ Structural state transitions go through the CLI:
 bun run oncall-triage transition cases \
   --group 260515-acme_123-a456-marketing-cloud-processing \
   --state monitoring \
-  --tag monitoring:retrying \
+  --tag monitoring:export-processing \
   --summary "Later export is processing; recheck after the next monitor window."
 ```
 

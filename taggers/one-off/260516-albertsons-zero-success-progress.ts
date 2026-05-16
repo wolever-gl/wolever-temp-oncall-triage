@@ -65,7 +65,7 @@ if (healthyRows.length > 0) {
   classification = "zero-success-export-in-progress";
   decision = "tag";
   confidence = "high";
-  tags = ["evidence:albertsons-zero-success-progress", "waiting:uploads"];
+  tags = ["evidence:albertsons-zero-success-progress", "monitoring:export-processing"];
 } else if (blockedRows.length > 0) {
   classification = "zero-success-export-blocked";
   decision = "tag";

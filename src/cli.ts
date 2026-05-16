@@ -1,5 +1,5 @@
 #!/usr/bin/env bun
-import { autoResolveHealthyExportGroup, checkExportsWorkspace, loadPizzaRowsFile } from "./checkExports";
+import { autoMonitorExportGroup, autoResolveHealthyExportGroup, checkExportsWorkspace, loadPizzaRowsFile } from "./checkExports";
 import { createLivePizzaFetcher } from "./pizza";
 import { appendEvidence, groupImportedAlerts, groupTaggedAlerts, importPagerDutyIncident, initWorkspace, loadAllGroups, mergeGroups, queryAlertFacts, readGroupState, regenerateIndex, runAlertTagger, splitGroup, syncPagerDutyWorkspace, transitionGroup } from "./workspace";
 import type { CheckExportsOptions } from "./checkExports";
@@ -179,6 +179,10 @@ async function main(argv: string[]): Promise<void> {
       if (group && args["auto-resolve"]) {
         const resolved = await autoResolveHealthyExportGroup({ workspaceDir, groupId: group.group_id });
         console.log(`Auto-resolve ${resolved.group_id}: resolved=${resolved.resolved} reason=${resolved.reason} healthy_checks=${resolved.healthy_checks}`);
+        if (!resolved.resolved) {
+          const monitored = await autoMonitorExportGroup({ workspaceDir, groupId: group.group_id });
+          console.log(`Auto-monitor ${monitored.group_id}: monitored=${monitored.monitored} reason=${monitored.reason} healthy_checks=${monitored.healthy_checks} monitoring_checks=${monitored.monitoring_checks}`);
+        }
       }
     } finally {
       await liveFetcher?.close();
@@ -192,6 +196,7 @@ async function main(argv: string[]): Promise<void> {
     const liveFetcher = createLivePizzaFetcher({ onProgress: progress });
     let checked = 0;
     let resolved = 0;
+    let monitored = 0;
     try {
       const groups = (await loadAllGroups(workspaceDir)).filter((group) => group.state === state).sort((a, b) => a.group_id.localeCompare(b.group_id));
       for (const group of groups) {
@@ -204,15 +209,21 @@ async function main(argv: string[]): Promise<void> {
           onProgress: progress,
         });
         const auto = await autoResolveHealthyExportGroup({ workspaceDir, groupId: group.group_id });
+        let monitorReason = "resolved";
+        if (!auto.resolved) {
+          const monitor = await autoMonitorExportGroup({ workspaceDir, groupId: group.group_id });
+          if (monitor.monitored) monitored++;
+          monitorReason = monitor.reason;
+        }
         if (auto.resolved) resolved++;
         checked++;
-        console.log(`Preflight ${group.group_id}: evaluated=${result.evaluated} skipped_unavailable=${result.skipped_unavailable} resolved=${auto.resolved} reason=${auto.reason}`);
+        console.log(`Preflight ${group.group_id}: evaluated=${result.evaluated} skipped_unavailable=${result.skipped_unavailable} resolved=${auto.resolved} reason=${auto.reason} monitor_reason=${monitorReason}`);
       }
     } finally {
       await liveFetcher.close();
     }
     const index = await regenerateIndex(workspaceDir);
-    console.log(`Preflight complete: groups=${checked}, resolved=${resolved}, open=${index.open_count}`);
+    console.log(`Preflight complete: groups=${checked}, resolved=${resolved}, monitored=${monitored}, open=${index.open_count}`);
     return;
   }
   if (command === "evidence") {
