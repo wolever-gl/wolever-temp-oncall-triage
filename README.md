@@ -222,13 +222,20 @@ Common export triage pattern:
 1. Query a broad cohort, such as one org and destination.
 2. Run `check-exports` to collect scoped per-alert evidence.
 3. Run a classifier tagger with `--test` first.
-4. Keep known outcomes as separate tags, such as recovered, monitoring,
+4. Before tagging a later successful run as recovered, check whether the failed
+   export was a delta export. If scoped logs or batch messages show
+   `export_type=deltas`, `delta_history_write_up`, `unload`, or
+   `unloaded_deltas_write`, use
+   [snapshotting-delta-recovery](runbooks/snapshotting-delta-recovery.md).
+   Later success alone is not terminal evidence for delta exports because
+   generated delta files may need re-drop or destination-specific retry.
+5. Keep known outcomes as separate tags, such as recovered, monitoring,
    waiting, export failure, or snapshotting schema error. Use `monitoring:*`
    for exports that are still processing; reserve `waiting:*` for cases where
    durable evidence shows the blocker was communicated to an external owner.
-5. Leave unfamiliar blocker combinations as `needs_evidence` until an agent
+6. Leave unfamiliar blocker combinations as `needs_evidence` until an agent
    adds a better rule.
-6. Use `group --tag` to create one group per remediation path, not one group
+7. Use `group --tag` to create one group per remediation path, not one group
    for the whole cohort.
 
 Fixture import:
@@ -301,9 +308,13 @@ Tags carry specificity. Prefixes are intentionally lightweight and will evolve:
 
 ## First MVP Runbook
 
-Start with [retry-later-succeeded](runbooks/retry-later-succeeded.md). It is
-low-risk and exercises the full loop: group, gather evidence, resolve the group,
-write a PD breadcrumb, and reconcile PD when every alert is covered.
+Start with [retry-later-succeeded](runbooks/retry-later-succeeded.md) for
+non-delta retries. If the failed export used snapshotting deltas, use
+[snapshotting-delta-recovery](runbooks/snapshotting-delta-recovery.md) instead;
+that runbook is stricter because future success alone may hide stranded or
+already-marked delta files. These runbooks exercise the full loop: group, gather
+evidence, resolve or keep open, write a PD breadcrumb when appropriate, and
+reconcile PD when every alert is covered.
 
 ## Verification
 

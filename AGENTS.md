@@ -44,6 +44,12 @@ Use this repo as a case-workspace system, not a spreadsheet workflow.
 - Respect `cases/env_availability.json`. Do not manually probe environments
   marked `unavailable`; update that file when local access changes.
 - Agents can explore after the export preflight, then choose a runbook before remediation or resolution.
+- Before resolving an export failure only because a later same-scope run
+  succeeded, check whether the failed export was a delta export. If logs or
+  batch evidence show `export_type=deltas`, `delta_history_write_up`, `unload`,
+  or `unloaded_deltas_write`, apply
+  `runbooks/snapshotting-delta-recovery.md`; later success alone is not enough
+  to resolve because a re-drop or destination retry may still be needed.
 - See `LEXICON.md` for canonical terms, invariants, and model boundaries.
 
 ## Editing Discipline
