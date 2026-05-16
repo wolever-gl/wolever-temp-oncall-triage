@@ -6,11 +6,11 @@
     "monitoring:export-processing"
   ],
   "title": "albertsons_6 zero-success",
-  "summary": "Zero-success tagger found 7 attached alerts recovered and the remaining 3 are still export_processing; recheck after the next export monitor window.",
+  "summary": "Monitoring: 5 Albertsons zero-success audiences have recovered and 5 remain export_processing with zero failures.",
   "deterministic_key": "v3|incident:Q38JR11G2ENK2W|org:albertsons_6|class:zero-success",
   "grouping_version": 3,
   "created_at": "2026-05-16T00:38:01.850Z",
-  "updated_at": "2026-05-16T21:28:39.319Z",
+  "updated_at": "2026-05-16T23:03:38.936Z",
   "alert_refs": [
     {
       "incident_id": "Q38JR11G2ENK2W",

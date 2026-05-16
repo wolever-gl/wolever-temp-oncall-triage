@@ -6,11 +6,11 @@
     "monitoring:export-processing"
   ],
   "title": "albertsons_6 client-sent-export-failure",
-  "summary": "Monitoring Albertsons client-sent export alerts: audiences 11688 and 11820 have latest LiveRamp runs export_processing with zero failures.",
+  "summary": "Monitoring: Albertsons audiences 11688 and 11820 remain LiveRamp export_processing with zero failures on latest 2026-05-15 runs.",
   "deterministic_key": "v3|incident:Q2EJWG22CER0LA|org:albertsons_6|class:client-sent-export-failure",
   "grouping_version": 3,
   "created_at": "2026-05-16T00:38:01.850Z",
-  "updated_at": "2026-05-16T21:42:16.233Z",
+  "updated_at": "2026-05-16T23:03:23.272Z",
   "alert_refs": [
     {
       "incident_id": "Q2EJWG22CER0LA",

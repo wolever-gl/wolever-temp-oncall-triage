@@ -11,7 +11,7 @@ Alerts: 10
 
 ## Current Summary
 
-Zero-success tagger found 7 attached alerts recovered and the remaining 3 are still export_processing; recheck after the next export monitor window.
+Monitoring: 5 Albertsons zero-success audiences have recovered and 5 remain export_processing with zero failures.
 
 ## Alert Scope
 
@@ -81,6 +81,12 @@ Check evidence:
   Scope: env=albertsons; org=6; audience=12876.
   Command: `glcli --env albertsons bifrost pizza --audience-id 12876 --org-id 6`
   Blockers: `missing_run_identity`
+
+## Recent Evidence
+
+- Monitoring check-in: audiences 12873, 12865, 12862, 12866, and 12874 are now export_finished with zero failures. Audiences 12814, 12810, 12875, 12876, and 12878 remain export_processing with zero failures. Keep monitoring the five processing audiences.
+  Source: `monitoring preflight/manual Pizza`; kind: `pizza`; captured: `2026-05-16T23:03:38.886Z`.
+  Command: `glcli --env albertsons bifrost pizza for audiences 12810,12814,12862,12865,12866,12873,12874,12875,12876,12878`
 
 ## Next Action
 

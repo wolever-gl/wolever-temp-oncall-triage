@@ -1,16 +1,17 @@
 {
   "group_id": "260511-albertsons_6-snapshotting-processing",
-  "state": "monitoring",
+  "state": "open",
   "tags": [
     "triage:needs_review",
-    "monitoring:export-processing"
+    "monitoring:export-processing",
+    "triage:snapshotting-error"
   ],
   "title": "albertsons_6 snapshotting-processing",
-  "summary": "Monitoring Albertsons snapshotting-processing exports: three alert-scoped runs remain snapshotting_processing/no_batches, and the audience 2189 client-sent alert was merged here as the notification counterpart.",
+  "summary": "Needs review: Albertsons 8473 and 10073 remain snapshotting_processing/no_batches, but audience 2189 now has latest Pizza snapshotting_error/no_batches and should be investigated manually.",
   "deterministic_key": "v3|incident:Q2T09VCLN9MRZ8|org:albertsons_6|class:snapshotting-processing",
   "grouping_version": 3,
   "created_at": "2026-05-16T16:36:53.567Z",
-  "updated_at": "2026-05-16T21:40:49.741Z",
+  "updated_at": "2026-05-16T23:04:11.599Z",
   "alert_refs": [
     {
       "incident_id": "Q2T09VCLN9MRZ8",

@@ -112,6 +112,22 @@
     "path": "groups/new/260515-allegro_3-dv360-export-processing/case.md"
   },
   {
+    "group_id": "260511-albertsons_6-snapshotting-processing",
+    "state": "open",
+    "tags": [
+      "triage:needs_review",
+      "monitoring:export-processing",
+      "triage:snapshotting-error"
+    ],
+    "title": "albertsons_6 snapshotting-processing",
+    "summary": "Needs review: Albertsons 8473 and 10073 remain snapshotting_processing/no_batches, but audience 2189 now has latest Pizza snapshotting_error/no_batches and should be investigated manually.",
+    "incident_ids": [
+      "Q2T09VCLN9MRZ8"
+    ],
+    "alert_count": 4,
+    "path": "groups/open/260511-albertsons_6-snapshotting-processing/case.md"
+  },
+  {
     "group_id": "260511-allegro_3-dv360-export-error",
     "state": "open",
     "tags": [
@@ -452,29 +468,15 @@
     "path": "groups/open/260515-royals_4-snapshotting-error/case.md"
   },
   {
-    "group_id": "260511-albertsons_6-snapshotting-processing",
-    "state": "monitoring",
-    "tags": [
-      "triage:needs_review",
-      "monitoring:export-processing"
-    ],
-    "title": "albertsons_6 snapshotting-processing",
-    "summary": "Monitoring Albertsons snapshotting-processing exports: three alert-scoped runs remain snapshotting_processing/no_batches, and the audience 2189 client-sent alert was merged here as the notification counterpart.",
-    "incident_ids": [
-      "Q2T09VCLN9MRZ8"
-    ],
-    "alert_count": 4,
-    "path": "groups/monitoring/260511-albertsons_6-snapshotting-processing/case.md"
-  },
-  {
     "group_id": "260512-albertsons_6-liveramp-waiting-uploads",
     "state": "monitoring",
     "tags": [
       "triage:tag_grouped",
-      "waiting:uploads"
+      "waiting:uploads",
+      "monitoring:export-processing"
     ],
     "title": "Albertsons LiveRamp uploads still processing",
-    "summary": "Exports have progress evidence but are not complete yet.",
+    "summary": "Monitoring: audience 12719 has recovered; shared Albertsons 8473/10073 retry rows are still processing and 2189 remains unresolved in the related snapshotting case.",
     "incident_ids": [
       "Q2T09VCLN9MRZ8"
     ],
@@ -489,7 +491,7 @@
       "monitoring:export-processing"
     ],
     "title": "albertsons_6 client-sent-export-failure",
-    "summary": "Monitoring Albertsons client-sent export alerts: audiences 11688 and 11820 have latest LiveRamp runs export_processing with zero failures.",
+    "summary": "Monitoring: Albertsons audiences 11688 and 11820 remain LiveRamp export_processing with zero failures on latest 2026-05-15 runs.",
     "incident_ids": [
       "Q2EJWG22CER0LA"
     ],
@@ -504,7 +506,7 @@
       "monitoring:export-processing"
     ],
     "title": "albertsons_6 zero-success",
-    "summary": "Zero-success tagger found the unresolved attached alert is still export_processing while the other alert has recovered; recheck after the next export monitor window.",
+    "summary": "Monitoring: audience 12742 has recovered, while audience 12801 remains export_processing with zero failures.",
     "incident_ids": [
       "Q2EJWG22CER0LA"
     ],
@@ -519,7 +521,7 @@
       "monitoring:export-processing"
     ],
     "title": "albertsons_6 zero-success",
-    "summary": "Zero-success tagger found 7 attached alerts recovered and the remaining 3 are still export_processing; recheck after the next export monitor window.",
+    "summary": "Monitoring: 5 Albertsons zero-success audiences have recovered and 5 remain export_processing with zero failures.",
     "incident_ids": [
       "Q38JR11G2ENK2W"
     ],
@@ -534,10 +536,11 @@
       "triage:snapshotting-error",
       "bug:service-quervice",
       "triage:manual_retry_needed",
-      "monitoring:snapshotting-retry"
+      "monitoring:snapshotting-retry",
+      "monitoring:retry-processing"
     ],
     "title": "albertsons_6 client-sent-export-failure split",
-    "summary": "Manual retries were triggered for Albertsons LiveRamp audiences 8473 and 10073. Both latest Pizza rows now show snapshotting_processing/no_batches after retry attempts; monitor until they reach export_finished or terminal failure. 8473 has already shown renewed Quervice 502/503 pre_snapshotting_check errors in logs, while 10073 reached initial Quervice checks successfully.",
+    "summary": "Monitoring: Albertsons audiences 8473 and 10073 remain snapshotting_processing/no_batches after manual retry attempts.",
     "incident_ids": [
       "Q2EJWG22CER0LA",
       "Q38JR11G2ENK2W"
@@ -553,7 +556,7 @@
       "monitoring:export-processing"
     ],
     "title": "albertsons_6 client-sent-export-failure split",
-    "summary": "Monitor: audience 12875 has a newer 2026-05-16 run in export_processing after a successful 2026-05-15 run; no manual action needed unless it fails or stalls.",
+    "summary": "Monitoring: audience 12875 remains export_processing with zero failures on the latest 2026-05-16 LiveRamp run.",
     "incident_ids": [
       "Q38JR11G2ENK2W"
     ],
@@ -567,10 +570,11 @@
       "triage:needs_review",
       "resolved:recovered",
       "triage:delta-redrop-review",
-      "monitoring:dv360-redrop-rate-limited"
+      "monitoring:dv360-redrop-rate-limited",
+      "monitoring:dv360-redrop-processing"
     ],
     "title": "ford_310 dv360 export-error split",
-    "summary": "Re-dropped the failed Ford 34062 DV360 delta file into Bifrost. Replacement batch 10d20a20-efd9-43d3-8232-04c6f1a724cd was created and began processing; current logs show DV360 partner rate limiting with Bifrost retries scheduled, so monitor until segments complete and Pizza reflects export_finished.",
+    "summary": "Monitoring: Ford 34062 DV360 re-drop is now reflected in Pizza as export_processing with zero failures.",
     "incident_ids": [
       "Q1TJJ4MEVOF1W3",
       "Q3HWKW0FS3VTHE"

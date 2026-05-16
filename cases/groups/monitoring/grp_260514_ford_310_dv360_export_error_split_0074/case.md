@@ -5,13 +5,13 @@
 > Generated file. Do not edit directly; put free-form investigation notes in `notes.md`.
 
 State: `monitoring`
-Tags: `triage:needs_review`, `resolved:recovered`, `triage:delta-redrop-review`, `monitoring:dv360-redrop-rate-limited`
+Tags: `triage:needs_review`, `resolved:recovered`, `triage:delta-redrop-review`, `monitoring:dv360-redrop-rate-limited`, `monitoring:dv360-redrop-processing`
 Incidents: [Q1TJJ4MEVOF1W3](https://growthloop.pagerduty.com/incidents/Q1TJJ4MEVOF1W3), [Q3HWKW0FS3VTHE](https://growthloop.pagerduty.com/incidents/Q3HWKW0FS3VTHE)
 Alerts: 2
 
 ## Current Summary
 
-Re-dropped the failed Ford 34062 DV360 delta file into Bifrost. Replacement batch 10d20a20-efd9-43d3-8232-04c6f1a724cd was created and began processing; current logs show DV360 partner rate limiting with Bifrost retries scheduled, so monitor until segments complete and Pizza reflects export_finished.
+Monitoring: Ford 34062 DV360 re-drop is now reflected in Pizza as export_processing with zero failures.
 
 ## Alert Scope
 
@@ -47,6 +47,9 @@ Check evidence:
 
 ## Recent Evidence
 
+- Monitoring check-in: Ford audience 34062 DV360 latest row is 2026-05-16 22:56:24 UTC, run 34062-dv360_20860-scheduled__2026-05-14T00:00:00+00:00, snapshotting_finished/export_processing with zero failures after the approved re-drop. Keep monitoring until export_finished or terminal failure.
+  Source: `monitoring preflight/manual Pizza`; kind: `pizza`; captured: `2026-05-16T23:04:24.177Z`.
+  Command: `glcli --env prod bifrost pizza --audience-id 34062 --org-id 310 --format json | select dv360 latest`
 - Approved re-drop of Ford audience 34062 DV360 historical delta file. Bifrost accepted the ingest at 2026-05-16 22:56:21Z, found 1 file matching the metadata pattern, created replacement batch 10d20a20-efd9-43d3-8232-04c6f1a724cd for export run 34062-dv360_20860-scheduled__2026-05-14T00:00:00+00:00, and started DV360 jobs for segments 0-4. Follow-up logs showed Google Audience Partner rate limiting with Bifrost scheduling retries, so this is now active processing/monitoring rather than unresolved manual triage.
   Source: `glcli bifrost export / gcloud logs`; kind: `remediation`; captured: `2026-05-16T22:58:10.096Z`.
   Command: `glcli --env prod bifrost export --external-bucket-secret ford_310_external_bucket gs://bkt-tfstate-cdmgl-ext-p/exports/ford_310/dv360/app_dv360_1807/34062__9350017290__20860_20260514004037-000000000000.avro`

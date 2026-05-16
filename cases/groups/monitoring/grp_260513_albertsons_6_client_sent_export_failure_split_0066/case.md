@@ -5,13 +5,13 @@
 > Generated file. Do not edit directly; put free-form investigation notes in `notes.md`.
 
 State: `monitoring`
-Tags: `triage:needs_review`, `triage:snapshotting-error`, `bug:service-quervice`, `triage:manual_retry_needed`, `monitoring:snapshotting-retry`
+Tags: `triage:needs_review`, `triage:snapshotting-error`, `bug:service-quervice`, `triage:manual_retry_needed`, `monitoring:snapshotting-retry`, `monitoring:retry-processing`
 Incidents: [Q2EJWG22CER0LA](https://growthloop.pagerduty.com/incidents/Q2EJWG22CER0LA), [Q38JR11G2ENK2W](https://growthloop.pagerduty.com/incidents/Q38JR11G2ENK2W)
 Alerts: 2
 
 ## Current Summary
 
-Manual retries were triggered for Albertsons LiveRamp audiences 8473 and 10073. Both latest Pizza rows now show snapshotting_processing/no_batches after retry attempts; monitor until they reach export_finished or terminal failure. 8473 has already shown renewed Quervice 502/503 pre_snapshotting_check errors in logs, while 10073 reached initial Quervice checks successfully.
+Monitoring: Albertsons audiences 8473 and 10073 remain snapshotting_processing/no_batches after manual retry attempts.
 
 ## Alert Scope
 
@@ -44,6 +44,9 @@ Check evidence:
 
 ## Recent Evidence
 
+- Monitoring check-in: audiences 8473 and 10073 remain snapshotting_processing/no_batches after retry attempts. Neither has reached export_finished or a new terminal failure in Pizza.
+  Source: `monitoring preflight/manual Pizza`; kind: `pizza`; captured: `2026-05-16T23:03:54.691Z`.
+  Command: `glcli --env albertsons bifrost pizza --audience-id 8473 --org-id 6; glcli --env albertsons bifrost pizza --audience-id 10073 --org-id 6`
 - Manual retry attempts started snapshotting for both Albertsons LiveRamp audiences. Audience 8473 rerun selected historical external_run_id scheduled__2026-05-13T00:00:00+00:00 and timed out client-side after creating snapshot_run_id a620388a-c598-4139-9df8-b485e4107694; follow-up logs show it reached Quervice pre_snapshotting_check but Quervice returned 502/503. Audience 10073 snapshot retry for scheduled__2026-05-15T00:00:00+00:00 disconnected client-side after creating snapshot_run_id 6b2edef4-5fb0-48c1-b36c-043930334960; logs show snapshotting beginning and successful Quervice responses through initial checks. Pizza rechecks after both attempts show both latest runs in snapshotting_processing/no_batches, so continue monitoring rather than resolving.
   Source: `glcli`; kind: `manual_retry`; captured: `2026-05-16T22:27:02.877Z`.
   Command: `PATH="/Users/wolever/.local/share/mise/installs/gcloud/562.0.0/bin:$PATH" glcli --env albertsons snapshotting rerun-snapshot --organization-identifier albertsons_6 --snapshot-target-type audience --snapshot-target-id 8473 --export-id live_ramp_activation_1649 --days 14; selected scheduled__2026-05-13T00:00:00+00:00`
@@ -58,9 +61,6 @@ Check evidence:
 - Audience 10073 latest Pizza row is 2026-05-15 02:40:38 UTC, run 10073-live_ramp_activation_2061-scheduled__2026-05-15T00:00:00+00:00, state snapshotting_error/no_batches with failure reason: Snapshotting failed while running pre_snapshotting_check: unknown error. There is no later successful run.
   Source: `glcli bifrost pizza`; kind: `pizza`; captured: `2026-05-16T21:48:05.323Z`.
   Command: `glcli --env albertsons bifrost pizza --audience-id 10073 --org-id 6 --format json`
-- Latest Pizza still shows 2026-05-13 run 8473-live_ramp_activation_1649-scheduled__2026-05-13T00:00:00+00:00 in snapshotting_error/no_batches; prior weekly runs from 2026-04-08 through 2026-05-06 were stuck snapshotting_processing/no_batches; last fully successful export_finished run was 2026-04-01.
-  Source: `glcli bifrost pizza`; kind: `pizza`; captured: `2026-05-16T21:44:51.432Z`.
-  Command: `glcli --env albertsons bifrost pizza --audience-id 8473 --org-id 6 --format json`
 
 ## Next Action
 

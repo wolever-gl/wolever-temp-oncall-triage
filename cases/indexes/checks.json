@@ -7958,7 +7958,7 @@
     "alert_id": "Q06RN07M3BVDQB",
     "state": "monitoring",
     "blockers": [],
-    "next_check_at": "2026-05-16T20:37:53.184Z",
+    "next_check_at": "2026-05-16T23:15:27.526Z",
     "scope": {
       "env": "albertsons",
       "org_id": "6",
@@ -9893,7 +9893,7 @@
     "alert_id": "Q2FA9QPTXF9MJM",
     "state": "monitoring",
     "blockers": [],
-    "next_check_at": "2026-05-16T21:53:43.684Z",
+    "next_check_at": "2026-05-16T23:15:20.750Z",
     "scope": {
       "env": "albertsons",
       "org_id": "6",
@@ -10393,7 +10393,7 @@
     "alert_id": "Q2TYR6XMVMLGTB",
     "state": "monitoring",
     "blockers": [],
-    "next_check_at": "2026-05-16T21:53:43.684Z",
+    "next_check_at": "2026-05-16T23:15:20.750Z",
     "scope": {
       "env": "albertsons",
       "org_id": "6",
@@ -10741,7 +10741,7 @@
     "alert_id": "Q3HGOVLPIQWNZ0",
     "state": "monitoring",
     "blockers": [],
-    "next_check_at": "2026-05-16T21:53:43.684Z",
+    "next_check_at": "2026-05-16T23:15:20.750Z",
     "scope": {
       "env": "albertsons",
       "org_id": "6",

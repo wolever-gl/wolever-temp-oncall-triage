@@ -11,7 +11,7 @@ Alerts: 2
 
 ## Current Summary
 
-Zero-success tagger found the unresolved attached alert is still export_processing while the other alert has recovered; recheck after the next export monitor window.
+Monitoring: audience 12742 has recovered, while audience 12801 remains export_processing with zero failures.
 
 ## Alert Scope
 
@@ -41,6 +41,12 @@ Check evidence:
   Scope: env=albertsons; org=6; audience=12801.
   Command: `glcli --env albertsons bifrost pizza --audience-id 12801 --org-id 6`
   Blockers: `missing_run_identity`
+
+## Recent Evidence
+
+- Monitoring check-in: audience 12742 is now snapshotting_finished/export_finished with zero failures; audience 12801 remains snapshotting_finished/export_processing with zero failures. Keep this group monitoring for 12801.
+  Source: `monitoring preflight/manual Pizza`; kind: `pizza`; captured: `2026-05-16T23:03:37.467Z`.
+  Command: `glcli --env albertsons bifrost pizza --audience-id 12742 --org-id 6; glcli --env albertsons bifrost pizza --audience-id 12801 --org-id 6`
 
 ## Next Action
 

@@ -11,7 +11,7 @@ Alerts: 1
 
 ## Current Summary
 
-Monitor: audience 12875 has a newer 2026-05-16 run in export_processing after a successful 2026-05-15 run; no manual action needed unless it fails or stalls.
+Monitoring: audience 12875 remains export_processing with zero failures on the latest 2026-05-16 LiveRamp run.
 
 ## Alert Scope
 
@@ -39,6 +39,9 @@ Check evidence:
 
 ## Recent Evidence
 
+- Monitoring check-in: audience 12875 remains snapshotting_finished/export_processing with zero failures on latest 2026-05-16 scheduled LiveRamp run.
+  Source: `monitoring preflight/manual Pizza`; kind: `pizza`; captured: `2026-05-16T23:03:56.098Z`.
+  Command: `glcli --env albertsons bifrost pizza --audience-id 12875 --org-id 6`
 - Audience 12875 has recovered past the client-sent alert: 2026-05-15 scheduled run finished export_finished, and latest 2026-05-16 scheduled run is snapshotting_finished/export_processing with zero failures.
   Source: `glcli bifrost pizza`; kind: `pizza`; captured: `2026-05-16T21:46:48.259Z`.
   Command: `glcli --env albertsons bifrost pizza --audience-id 12875 --org-id 6 --format json`

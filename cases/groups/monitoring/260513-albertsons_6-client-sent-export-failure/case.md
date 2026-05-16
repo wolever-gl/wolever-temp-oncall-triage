@@ -11,7 +11,7 @@ Alerts: 2
 
 ## Current Summary
 
-Monitoring Albertsons client-sent export alerts: audiences 11688 and 11820 have latest LiveRamp runs export_processing with zero failures.
+Monitoring: Albertsons audiences 11688 and 11820 remain LiveRamp export_processing with zero failures on latest 2026-05-15 runs.
 
 ## Alert Scope
 
@@ -44,6 +44,9 @@ Check evidence:
 
 ## Recent Evidence
 
+- Monitoring check-in: audiences 11688 and 11820 remain snapshotting_finished/export_processing with zero failures on latest LiveRamp runs from 2026-05-15. Keep monitoring.
+  Source: `monitoring preflight/manual Pizza`; kind: `pizza`; captured: `2026-05-16T23:03:08.001Z`.
+  Command: `bun run oncall-triage preflight cases --state monitoring; glcli --env albertsons bifrost pizza --audience-id 11688 --org-id 6; glcli --env albertsons bifrost pizza --audience-id 11820 --org-id 6`
 - Live Pizza shows audiences 11688 and 11820 have latest LiveRamp runs in export_processing with snapshotting_finished and zero failures; monitor for completion.
   Source: `glcli bifrost pizza`; kind: `pizza`; captured: `2026-05-16T21:42:16.068Z`.
   Command: `glcli --env albertsons bifrost pizza --audience-id 11688 --org-id 6 --format json`

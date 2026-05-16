@@ -6,11 +6,11 @@
     "monitoring:export-processing"
   ],
   "title": "albertsons_6 client-sent-export-failure split",
-  "summary": "Monitor: audience 12875 has a newer 2026-05-16 run in export_processing after a successful 2026-05-15 run; no manual action needed unless it fails or stalls.",
+  "summary": "Monitoring: audience 12875 remains export_processing with zero failures on the latest 2026-05-16 LiveRamp run.",
   "deterministic_key": "v3|incident:Q38JR11G2ENK2W|org:albertsons_6|class:client-sent-export-failure|split|Q0HOSDAJCFXNKU",
   "grouping_version": 3,
   "created_at": "2026-05-16T21:46:28.974Z",
-  "updated_at": "2026-05-16T21:46:48.309Z",
+  "updated_at": "2026-05-16T23:03:56.148Z",
   "alert_refs": [
     {
       "incident_id": "Q38JR11G2ENK2W",
