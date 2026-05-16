@@ -1,9 +1,9 @@
 #!/usr/bin/env bun
 import { autoMonitorExportGroup, autoResolveHealthyExportGroup, checkExportsWorkspace, loadPizzaRowsFile } from "./checkExports";
+import { matchesGroupFilter, mergeAlertFilter, mergeGroupFilter, parseFilterValues, type AlertFilter, type CommandFilters, type GroupFilter } from "./filters";
 import { createLivePizzaFetcher } from "./pizza";
 import { appendEvidence, groupImportedAlerts, groupTaggedAlerts, importPagerDutyIncident, initWorkspace, loadAllGroups, mergeGroups, queryAlertFacts, readGroupState, regenerateIndex, runAlertTagger, splitGroup, syncPagerDutyWorkspace, transitionGroup } from "./workspace";
-import type { CheckExportsOptions } from "./checkExports";
-import type { GroupStateName } from "./schema";
+import type { GroupState, GroupStateName } from "./schema";
 
 async function main(argv: string[]): Promise<void> {
   const [command, workspaceDir, ...rest] = argv;
@@ -30,17 +30,7 @@ async function main(argv: string[]): Promise<void> {
     return;
   }
   if (command === "alerts") {
-    const filters: Parameters<typeof queryAlertFacts>[1] = {};
-    const incident = optional(args, "incident");
-    const org = optional(args, "org");
-    const audience = optional(args, "audience");
-    const destination = optional(args, "destination");
-    const state = optional(args, "state");
-    if (incident) filters.incidentId = incident;
-    if (org) filters.orgId = org;
-    if (audience) filters.audienceId = audience;
-    if (destination) filters.destination = destination;
-    if (state) filters.state = state;
+    const { alertFilter: filters } = await alertFilterForArgs(workspaceDir, args, { legacyAlertState: true });
     const alerts = await queryAlertFacts(workspaceDir, filters);
     for (const alert of alerts) console.log(JSON.stringify(alert));
     return;
@@ -77,17 +67,7 @@ async function main(argv: string[]): Promise<void> {
     return;
   }
   if (command === "tag") {
-    const filters: Parameters<typeof queryAlertFacts>[1] = {};
-    const incident = optional(args, "incident");
-    const org = optional(args, "org");
-    const audience = optional(args, "audience");
-    const destination = optional(args, "destination");
-    const alertState = optional(args, "state");
-    if (incident) filters.incidentId = incident;
-    if (org) filters.orgId = org;
-    if (audience) filters.audienceId = audience;
-    if (destination) filters.destination = destination;
-    if (alertState) filters.state = alertState;
+    const { alertFilter: filters } = await alertFilterForArgs(workspaceDir, args, { legacyAlertState: true });
     const result = await runAlertTagger({
       workspaceDir,
       filters,
@@ -153,14 +133,10 @@ async function main(argv: string[]): Promise<void> {
     const pizzaRows = pizzaRowsFile ? await loadPizzaRowsFile(pizzaRowsFile) : undefined;
     const progress = (message: string): void => console.log(message);
     const liveFetcher = pizzaRows ? undefined : createLivePizzaFetcher({ onProgress: progress });
-    const groupId = optional(args, "group");
+    const { alertFilter: filters, groups } = await alertFilterForArgs(workspaceDir, args, { legacyAlertState: true, legacyGroupId: true });
+    const group = groups.length === 1 ? groups[0] : undefined;
     if (args["auto-resolve"] && !args.apply) throw new Error("--auto-resolve requires --apply.");
-    if (args["auto-resolve"] && !groupId) throw new Error("--auto-resolve requires --group.");
-    const group = groupId ? await readGroupState(workspaceDir, groupId) : undefined;
-    const filters: CheckExportsOptions["filters"] = {
-      ...alertFiltersFromArgs(args),
-      ...(group ? { alertRefs: group.alert_refs } : {}),
-    };
+    if (args["auto-resolve"] && groups.length !== 1) throw new Error("--auto-resolve requires exactly one group selected by --group or --filter group.id=...");
     const limit = optional(args, "limit");
     try {
       const result = await checkExportsWorkspace({
@@ -190,18 +166,15 @@ async function main(argv: string[]): Promise<void> {
     return;
   }
   if (command === "preflight") {
-    const state = (optional(args, "state") ?? "new") as GroupStateName;
-    if (!["new", "open", "waiting", "monitoring", "resolved"].includes(state)) throw new Error(`Invalid state: ${state}`);
-    const groupId = optional(args, "group");
+    const parsedFilters = commandFiltersFromArgs(args, { legacyGroupId: true, legacyGroupState: true });
+    const groupFilter = hasGroupFilter(parsedFilters.group) ? parsedFilters.group : { state: "new" as GroupStateName };
     const progress = (message: string): void => console.log(message);
     const liveFetcher = createLivePizzaFetcher({ onProgress: progress });
     let checked = 0;
     let resolved = 0;
     let monitored = 0;
     try {
-      const groups = groupId
-        ? [await readGroupState(workspaceDir, groupId)]
-        : (await loadAllGroups(workspaceDir)).filter((group) => group.state === state).sort((a, b) => a.group_id.localeCompare(b.group_id));
+      const groups = await resolveGroups(workspaceDir, groupFilter);
       for (const group of groups) {
         console.log(`Preflight ${group.group_id}`);
         const result = await checkExportsWorkspace({
@@ -285,19 +258,58 @@ function required(args: Record<string, string | string[]>, key: string): string 
   return Array.isArray(value) ? value[0]! : value;
 }
 
-function alertFiltersFromArgs(args: Record<string, string | string[]>): CheckExportsOptions["filters"] {
-  const filters: CheckExportsOptions["filters"] = {};
+async function alertFilterForArgs(
+  workspaceDir: string,
+  args: Record<string, string | string[]>,
+  options: { legacyAlertState?: boolean; legacyGroupId?: boolean; legacyGroupState?: boolean } = {},
+): Promise<{ alertFilter: AlertFilter; groups: GroupState[] }> {
+  const parsedFilters = commandFiltersFromArgs(args, options);
+  const hasGroups = hasGroupFilter(parsedFilters.group);
+  const groups = hasGroups ? await resolveGroups(workspaceDir, parsedFilters.group) : [];
+  const alertFilter = hasGroups ? mergeAlertFilter(parsedFilters.alert, { alertRefs: groups.flatMap((group) => group.alert_refs) }) : parsedFilters.alert;
+  return { alertFilter, groups };
+}
+
+function commandFiltersFromArgs(
+  args: Record<string, string | string[]>,
+  options: { legacyAlertState?: boolean; legacyGroupId?: boolean; legacyGroupState?: boolean } = {},
+): CommandFilters {
+  let parsed = parseFilterValues(values(args, "filter"));
+  const legacyAlert: AlertFilter = {};
   const incident = optional(args, "incident");
   const org = optional(args, "org");
   const audience = optional(args, "audience");
   const destination = optional(args, "destination");
   const state = optional(args, "state");
-  if (incident) filters.incidentId = incident;
-  if (org) filters.orgId = org;
-  if (audience) filters.audienceId = audience;
-  if (destination) filters.destination = destination;
-  if (state) filters.state = state;
-  return filters;
+  if (incident) legacyAlert.incidentId = incident;
+  if (org) legacyAlert.orgId = org;
+  if (audience) legacyAlert.audienceId = audience;
+  if (destination) legacyAlert.destination = destination;
+  if (options.legacyAlertState && state) legacyAlert.state = state;
+  parsed = { ...parsed, alert: mergeAlertFilter(parsed.alert, legacyAlert) };
+
+  const legacyGroup: GroupFilter = {};
+  const groupId = optional(args, "group");
+  if (options.legacyGroupId && groupId) legacyGroup.id = groupId;
+  if (options.legacyGroupState && state) legacyGroup.state = parseGroupState(state);
+  return { ...parsed, group: mergeGroupFilter(parsed.group, legacyGroup) };
+}
+
+async function resolveGroups(workspaceDir: string, filter: GroupFilter): Promise<GroupState[]> {
+  if (filter.id) {
+    const group = await readGroupState(workspaceDir, filter.id);
+    return matchesGroupFilter(group, filter) ? [group] : [];
+  }
+  return (await loadAllGroups(workspaceDir)).filter((group) => matchesGroupFilter(group, filter)).sort((a, b) => a.group_id.localeCompare(b.group_id));
+}
+
+function hasGroupFilter(filter: GroupFilter): boolean {
+  return Boolean(filter.id || filter.state || filter.incidentId || (filter.tags && filter.tags.length > 0));
+}
+
+function parseGroupState(value: string): GroupStateName {
+  if (!["new", "open", "waiting", "monitoring", "resolved"].includes(value)) throw new Error(`Invalid group state: ${value}`);
+  return value as GroupStateName;
 }
 
 function parsePositiveInteger(value: string, name: string): number {
@@ -322,8 +334,8 @@ function usageText(): string {
   return `Usage:
   bun run oncall-triage init <workspace>
   bun run oncall-triage import-pd <workspace> --incident <pd-url-or-id> [--alerts-file <file>] [--allow-partial true]
-  bun run oncall-triage alerts <workspace> [--incident <id>] [--org <org_id>] [--audience <id>] [--destination <destination>] [--state <state>]
-  bun run oncall-triage tag <workspace> --script <file> [--incident <id>] [--org <org_id>] [--audience <id>] [--destination <destination>] [--state <state>] [--tag <tag>] [--limit <n>] [--test]
+  bun run oncall-triage alerts <workspace> [--filter alert.org=<org_id>] [--incident <id>] [--org <org_id>] [--audience <id>] [--destination <destination>] [--state <state>]
+  bun run oncall-triage tag <workspace> --script <file> [--filter alert.org=<org_id>] [--incident <id>] [--org <org_id>] [--audience <id>] [--destination <destination>] [--state <state>] [--tag <tag>] [--limit <n>] [--test]
   bun run oncall-triage group <workspace>
   bun run oncall-triage group <workspace> --tag <tag> --title <text> --summary <text> --rationale <text> [--group <id>] [--state <new|open|waiting|monitoring|resolved>] [--group-tag <tag>] [--limit <n>] [--test]
   bun run oncall-triage index <workspace>
@@ -331,8 +343,8 @@ function usageText(): string {
   bun run oncall-triage merge <workspace> --source <id> --target <id> --rationale <text>
   bun run oncall-triage split <workspace> --group <id> --alerts <comma-separated-alert-ids> --rationale <text>
   bun run oncall-triage sync-pd <workspace> [--incident <pd-url-or-id>]
-  bun run oncall-triage preflight <workspace> [--state <new|open|waiting|monitoring|resolved>] [--group <id>]
-  bun run oncall-triage check-exports <workspace> [--apply] [--auto-resolve] [--group <id>] [--pizza-rows-file <file>] [--incident <id>] [--org <org_id>] [--audience <id>] [--destination <destination>] [--state <state>] [--limit <n>]
+  bun run oncall-triage preflight <workspace> [--filter group.state=<state>] [--state <new|open|waiting|monitoring|resolved>] [--group <id>]
+  bun run oncall-triage check-exports <workspace> [--apply] [--auto-resolve] [--filter group.id=<id>] [--filter alert.destination=<destination>] [--group <id>] [--pizza-rows-file <file>] [--incident <id>] [--org <org_id>] [--audience <id>] [--destination <destination>] [--state <state>] [--limit <n>]
   bun run oncall-triage evidence <workspace> --group <id> --summary <text> [--kind <kind>] [--source <source>] [--link <label=url>] [--command <command>]`;
 }
 

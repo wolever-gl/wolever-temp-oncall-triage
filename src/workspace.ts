@@ -6,6 +6,7 @@ import { promisify } from "node:util";
 import { tmpdir } from "node:os";
 import { appendJsonl, ensureDir, listDirs, readJson, relativePath, slug, writeJson } from "./fsutil";
 import { fetchPagerDutyIncidentStatus, loadAlertFacts, parseAlertFacts } from "./pagerduty";
+import { filterAlertFacts } from "./filters";
 import type {
   ActionEvent,
   AlertAnnotation,
@@ -654,17 +655,7 @@ export async function queryAlertFacts(
   },
 ): Promise<AlertFact[]> {
   const alerts = await loadAllAlerts(workspaceDir);
-  return alerts.filter((alert) => {
-    if (filters.incidentId && alert.incident_id !== filters.incidentId) return false;
-    if (filters.orgId && alert.org_id !== filters.orgId) return false;
-    if (filters.audienceId && alert.audience_id !== filters.audienceId) return false;
-    if (filters.destination && alert.destination_type !== filters.destination && alert.destination_product !== filters.destination) return false;
-    if (filters.state) {
-      const tuple = [alert.state_tuple?.snapshotting ?? "", alert.state_tuple?.export ?? ""].filter(Boolean).join("/");
-      if (tuple !== filters.state && alert.state_tuple?.snapshotting !== filters.state && alert.state_tuple?.export !== filters.state) return false;
-    }
-    return true;
-  });
+  return filterAlertFacts(alerts, filters);
 }
 
 export async function loadAllGroups(workspaceDir: string): Promise<GroupState[]> {

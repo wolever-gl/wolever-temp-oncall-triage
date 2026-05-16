@@ -133,10 +133,10 @@ bun install
 bun run oncall-triage init cases
 bun run oncall-triage import-pd cases --incident Q123ABC
 bun run oncall-triage group cases
-bun run oncall-triage tag cases --script ./tagger.ts --org acme_123 --limit 5 --test
+bun run oncall-triage tag cases --script ./tagger.ts --filter alert.org=acme_123 --limit 5 --test
 bun run oncall-triage group cases --tag evidence:example --title "Example issue" --summary "..." --rationale "..." --test
-bun run oncall-triage preflight cases --state new
-bun run oncall-triage check-exports cases --group <group-id> --apply --auto-resolve
+bun run oncall-triage preflight cases --filter group.state=new
+bun run oncall-triage check-exports cases --filter group.id=<group-id> --apply --auto-resolve
 bun run oncall-triage evidence cases --group <group-id> --kind triage --source "gcloud scoped logs" --summary "..." --link "Scoped logs=https://console.cloud.google.com/logs/query;query=...?...project=..."
 bun run oncall-triage index cases
 bun run oncall-triage sync-pd cases --incident Q123ABC
@@ -147,15 +147,22 @@ commands that fetch external evidence, open proxies, or evaluate many checks
 should report what they are checking and what state they wrote instead of
 remaining silent until completion.
 
+Use repeatable namespaced `--filter key=value` arguments for command selection.
+Supported alert filters are `alert.incident`, `alert.org`, `alert.audience`,
+`alert.destination`, and `alert.state`. Supported group filters are `group.id`,
+`group.state`, `group.tag`, and `group.incident`. Existing flags such as
+`--group`, `--org`, `--audience`, `--destination`, and command-specific
+`--state` remain compatibility aliases and combine with `--filter`.
+
 `check-exports` keeps one live Bifrost proxy open per environment for the
 duration of a command run, reuses it across checks, and closes it before exit.
 With `--group <group-id> --apply --auto-resolve`, it acts as the first
 investigation preflight for a case: run Pizza for the group's alert facts,
 write export-check evidence, and resolve the group when every alert-scoped
 check is `healthy_closed`.
-`preflight --group <group-id>` runs that case-scoped operation for one group.
-Without `--group`, `preflight` runs it across every group in a selected state,
-defaulting to `new`.
+`preflight --filter group.id=<group-id>` runs that case-scoped operation for one group.
+Without `group.id` or `--group`, `preflight` runs it across every group in a
+selected state, defaulting to `new`.
 
 `cases/env_availability.json` records local environment reachability. Mark an
 environment `unavailable` there when the current machine cannot access its
@@ -189,8 +196,8 @@ Evidence-tagged grouping:
 
 ```bash
 bun run oncall-triage tag cases \
-  --org albertsons_6 \
-  --destination live-ramp \
+  --filter alert.org=albertsons_6 \
+  --filter alert.destination=live-ramp \
   --script ./taggers/one-off/260516-albertsons-liveramp-progress.ts \
   --tag monitoring:export-processing \
   --limit 10 \

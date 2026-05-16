@@ -1,5 +1,6 @@
 import path from "node:path";
 import { readFile } from "node:fs/promises";
+import { filterAlertFacts, type AlertFilter } from "./filters";
 import { ensureDir, listDirs, readJson, slug, writeJson } from "./fsutil";
 import { exportCheckStrategy } from "./pagerduty";
 import { appendEvidence, loadAllAlerts, markGroupsStartedForAlerts, readGroupState, transitionGroup } from "./workspace";
@@ -9,15 +10,7 @@ export interface CheckExportsOptions {
   workspaceDir: string;
   apply?: boolean;
   now?: Date;
-  filters?: {
-    incidentId?: string;
-    orgId?: string;
-    audienceId?: string;
-    destination?: string;
-    state?: string;
-    alertRefs?: AlertRef[];
-    limit?: number;
-  };
+  filters?: AlertFilter;
   fetchPizzaRows?: (scope: ExportCheckScope) => Promise<PizzaExportRow[]>;
   onProgress?: (message: string) => void;
 }
@@ -159,21 +152,7 @@ function unavailableEnvironmentReason(availability: EnvironmentAvailabilityFile,
 }
 
 function filterAlerts(alerts: AlertFact[], filters: CheckExportsOptions["filters"]): AlertFact[] {
-  if (!filters) return alerts;
-  const alertRefKeys = filters.alertRefs ? new Set(filters.alertRefs.map(refKey)) : undefined;
-  const matched = alerts.filter((alert) => {
-    if (alertRefKeys && !alertRefKeys.has(alertKey(alert))) return false;
-    if (filters.incidentId && alert.incident_id !== filters.incidentId) return false;
-    if (filters.orgId && alert.org_id !== filters.orgId) return false;
-    if (filters.audienceId && alert.audience_id !== filters.audienceId) return false;
-    if (filters.destination && alert.destination_type !== filters.destination && alert.destination_product !== filters.destination) return false;
-    if (filters.state) {
-      const tuple = [alert.state_tuple?.snapshotting ?? "", alert.state_tuple?.export ?? ""].filter(Boolean).join("/");
-      if (tuple !== filters.state && alert.state_tuple?.snapshotting !== filters.state && alert.state_tuple?.export !== filters.state) return false;
-    }
-    return true;
-  });
-  return filters.limit ? matched.slice(0, filters.limit) : matched;
+  return filterAlertFacts(alerts, filters);
 }
 
 export async function autoResolveHealthyExportGroup(options: {

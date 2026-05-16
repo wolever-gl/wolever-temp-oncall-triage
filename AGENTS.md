@@ -26,6 +26,11 @@ Use this repo as a case-workspace system, not a spreadsheet workflow.
 - Keep append-only `lineage.jsonl`, `evidence.jsonl`, `decisions.jsonl`, `actions.jsonl`, and structural events.
 - Keep `DECISIONS.md`, `LEARNINGS.md`, and `LEXICON.md` current when work changes architecture, behavior, or terminology.
 - Use the CLI for structural mutations. Direct file edits are fine for narrative and artifact files.
+- Prefer shared namespaced filters for CLI selection, for example
+  `--filter group.id=<group-id>`, `--filter group.state=new`,
+  `--filter alert.org=albertsons_6`, and
+  `--filter alert.destination=live-ramp`. Older flags such as `--group`,
+  `--org`, and command-specific `--state` still work as compatibility aliases.
 - Current group states are `new`, `open`, `waiting`, `monitoring`, and `resolved`.
 - `new` means imported and grouped, but no evidence collection or triage work has started yet. Move a group to `open` when an agent or human begins investigation, appends evidence, runs a relevant check, or otherwise starts work.
 - Move a group to `monitoring` when evidence shows the only remaining action is a future recheck, such as all attached export checks being either healthy or still `export_processing`/`export_waiting`/`export_queued`. Do not leave these cases `open` unless some blocker still needs investigation.
@@ -35,9 +40,9 @@ Use this repo as a case-workspace system, not a spreadsheet workflow.
 - Runbooks are structured instructions and may include tool functions or scripts.
 - Before manual case investigation, run the export preflight when the case has
   export-alert evidence:
-  `bun run oncall-triage check-exports cases --group <group-id> --apply --auto-resolve`.
+  `bun run oncall-triage preflight cases --filter group.id=<group-id>`.
   For a full pass across new cases, run
-  `bun run oncall-triage preflight cases --state new`.
+  `bun run oncall-triage preflight cases --filter group.state=new`.
   If it resolves or moves the case to monitoring, stop; if it records blocked
   evidence, continue from that generated evidence instead of repeating Pizza
   checks by hand.
