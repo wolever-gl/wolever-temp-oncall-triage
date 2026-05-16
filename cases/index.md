@@ -1,7 +1,7 @@
 # On-call Triage Cases
 
-Generated: 2026-05-16T21:44:52.776Z
-Open groups: 46
+Generated: 2026-05-16T21:46:50.905Z
+Open groups: 47
 Alert facts: 698
 
 ## New (8)
@@ -29,7 +29,6 @@ Alert facts: 698
 | `triage:needs_review` | [260514-451-campaign-manager-360-export-error](groups/open/260514-451-campaign-manager-360-export-error/case.md) | ASU Enterprise Partners (General - ASU Data): Exports for signal 984 failed with states: <(snapshotting_finished,export_error)> | Q3XQABQFPPVNT5 | 2 |
 | `triage:needs_review` | [260514-451-client-sent-export-failure](groups/open/260514-451-client-sent-export-failure/case.md) | ASU Enterprise Partners (Alumni) - Audience 26039: Audience Export failure for 26039 sent to client. | Q1UC14QNZK76EZ | 9 |
 | `triage:needs_review` | [260514-451-salesforce-audience-export-error](groups/open/260514-451-salesforce-audience-export-error/case.md) | ASU Enterprise Partners (Restricted): Exports for audience 31982 failed with states: <(snapshotting_finished,export_error)> | Q3XQABQFPPVNT5 | 1 |
-| `triage:needs_review` | [260514-albertsons_6-client-sent-export-failure](groups/open/260514-albertsons_6-client-sent-export-failure/case.md) | albertsons (Albertsons Media) - Audience 10073: Audience Export failure for 10073 sent to client. | Q38JR11G2ENK2W | 8 |
 | `triage:needs_review` | [260514-birchwood_274-client-sent-export-failure](groups/open/260514-birchwood_274-client-sent-export-failure/case.md) | birchwood (default) - SignalRoute 723: SignalRoute Export failure for 723 sent to client. | Q3PJ7W2K3Y9LJV | 1 |
 | `triage:needs_review` | [260514-chghealthcare_395-client-sent-export-failure](groups/open/260514-chghealthcare_395-client-sent-export-failure/case.md) | chghealthcare (Global Medical Staffing) - Audience 30299: Audience Export failure for 30299 sent to client. | Q064V2C56CNTCR | 8 |
 | `triage:needs_review` | [260514-chghealthcare_395-no-batches](groups/open/260514-chghealthcare_395-no-batches/case.md) | chghealthcare (TESTING): Exports for signal 341 failed with states: <(snapshotting_finished,no_batches)> | Q064V2C56CNTCR | 174 |
@@ -51,8 +50,9 @@ Alert facts: 698
 | `triage:needs_review` | [260515-pgatourhq_219-no-batches](groups/open/260515-pgatourhq_219-no-batches/case.md) | pgatourhq (New World Order): Exports for audience 31918 failed with states: <(snapshotting_finished,no_batches)> | Q2DJCY3XC2BSBG | 13 |
 | `triage:needs_review` | [260515-royals_4-snapshotting-error](groups/open/260515-royals_4-snapshotting-error/case.md) | royals (default): Exports for signal 203 failed with states: <(snapshotting_error,no_batches)> | Q08B553ANQ9KMI | 1 |
 | `triage:needs_review`<br>`triage:snapshotting-error`<br>`bug:service-quervice` | [grp_260513_albertsons_6_client_sent_export_failure_split_0066](groups/open/grp_260513_albertsons_6_client_sent_export_failure_split_0066/case.md) | Needs platform investigation: audience 8473 snapshotting pre-check failed because Quervice returned repeated 502s/upstream premature close for the 2026-05-13 LiveRamp run; latest Pizza remains snapshotting_error/no_batches with no later success. | Q2EJWG22CER0LA | 1 |
+| `triage:needs_review`<br>`triage:snapshotting-error` | [grp_260514_albertsons_6_client_sent_export_failure_split_0067](groups/open/grp_260514_albertsons_6_client_sent_export_failure_split_0067/case.md) | Needs investigation: audience 10073 remains failed; latest Pizza is 2026-05-15 snapshotting_error/no_batches during pre_snapshotting_check with no later success. | Q38JR11G2ENK2W | 1 |
 
-## Monitoring (5)
+## Monitoring (6)
 
 | Tags | Group | Summary | Incidents | Alerts |
 |---|---|---|---|---:|
@@ -61,6 +61,7 @@ Alert facts: 698
 | `triage:needs_review`<br>`monitoring:export-processing` | [260513-albertsons_6-client-sent-export-failure](groups/monitoring/260513-albertsons_6-client-sent-export-failure/case.md) | Monitoring Albertsons client-sent export alerts: audiences 11688 and 11820 have latest LiveRamp runs export_processing with zero failures. | Q2EJWG22CER0LA | 2 |
 | `triage:needs_review`<br>`monitoring:export-processing` | [260513-albertsons_6-zero-success](groups/monitoring/260513-albertsons_6-zero-success/case.md) | Zero-success tagger found the unresolved attached alert is still export_processing while the other alert has recovered; recheck after the next export monitor window. | Q2EJWG22CER0LA | 2 |
 | `triage:needs_review`<br>`monitoring:export-processing` | [260515-albertsons_6-zero-success-02](groups/monitoring/260515-albertsons_6-zero-success-02/case.md) | Zero-success tagger found 7 attached alerts recovered and the remaining 3 are still export_processing; recheck after the next export monitor window. | Q38JR11G2ENK2W | 10 |
+| `triage:needs_review`<br>`monitoring:export-processing` | [grp_260514_albertsons_6_client_sent_export_failure_split_0068](groups/monitoring/grp_260514_albertsons_6_client_sent_export_failure_split_0068/case.md) | Monitor: audience 12875 has a newer 2026-05-16 run in export_processing after a successful 2026-05-15 run; no manual action needed unless it fails or stalls. | Q38JR11G2ENK2W | 1 |
 
 ## Waiting (3)
 
@@ -70,7 +71,7 @@ Alert facts: 698
 | `triage:needs_review`<br>`waiting:client_schema`<br>`triage:client_schema_missing` | [260511-albertsons_6-snapshotting-error](groups/waiting/260511-albertsons_6-snapshotting-error/case.md) | Waiting on support/client remediation: five Albertsons LiveRamp export-run alerts still fail snapshotting with missing_table_field, and three client-sent alerts for the same schema-affected audiences were merged here. | Q2T09VCLN9MRZ8 | 8 |
 | `triage:needs_review`<br>`triage:client_schema_missing`<br>`waiting:client_schema` | [260515-gopuff_544-snapshotting-error](groups/waiting/260515-gopuff_544-snapshotting-error/case.md) | Waiting on support/client remediation for missing source column CORE.GOPUFF_ORDER_ITEMS.CLASS in GoPuff Snowflake source schema; support thread opened. | Q1X9CE7BIDK9MV | 1 |
 
-## Resolved (20)
+## Resolved (21)
 
 | Tags | Group | Summary | Incidents | Alerts |
 |---|---|---|---|---:|
@@ -80,6 +81,7 @@ Alert facts: 698
 | `resolved:export-healthy`<br>`triage:tag_grouped` | [260511-albertsons_6-liveramp-complete](groups/resolved/260511-albertsons_6-liveramp-complete/case.md) | Checked exports are healthy with no blocking export evidence. | Q2T09VCLN9MRZ8 | 4 |
 | `triage:needs_review`<br>`resolved:export-healthy` | [260511-albertsons_6-no-batches](groups/resolved/260511-albertsons_6-no-batches/case.md) | Resolved from Albertsons LiveRamp tagger evidence: the only alert-scoped export is healthy/export-complete. | Q2T09VCLN9MRZ8 | 1 |
 | `triage:needs_review`<br>`resolved:merged` | [260512-albertsons_6-client-sent-export-failure](groups/resolved/260512-albertsons_6-client-sent-export-failure/case.md) | Merged into 260511-albertsons_6-snapshotting-error: Remaining client-sent alerts for audiences 10370, 10372, and 10749 match the existing Albertsons missing RFM_Category_Group client-schema waiting case. | Q2T09VCLN9MRZ8 | 3 |
+| `triage:needs_review`<br>`evidence:retry-succeeded` | [260514-albertsons_6-client-sent-export-failure](groups/resolved/260514-albertsons_6-client-sent-export-failure/case.md) | Resolved: the remaining six 5/14 Albertsons client-sent alerts all have later Pizza export_finished runs after the alert time. | Q38JR11G2ENK2W | 6 |
 | `triage:needs_review`<br>`resolved:export-healthy` | [260514-trumanshow_336-no-batches](groups/resolved/260514-trumanshow_336-no-batches/case.md) | Auto-resolved from Pizza export checks: all 2 alert-scoped export check(s) are healthy_closed with no blockers. | Q12A5QFIM3F9LN | 2 |
 | `triage:needs_review`<br>`resolved:pd_closed_external` | [260515-76ers_131-zero-success](groups/resolved/260515-76ers_131-zero-success/case.md) | All attached PagerDuty incidents are resolved externally. | Q0Z4MMEOFYDHC7 | 1 |
 | `triage:needs_review`<br>`resolved:later-export-succeeded` | [260515-albertsons_6-live-ramp-export-error](groups/resolved/260515-albertsons_6-live-ramp-export-error/case.md) | Resolved from Albertsons LiveRamp tagger evidence: the alert had a later healthy run after the export error. | Q38JR11G2ENK2W | 1 |

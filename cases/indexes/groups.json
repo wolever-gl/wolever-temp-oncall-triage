@@ -224,20 +224,6 @@
     "path": "groups/open/260514-451-salesforce-audience-export-error/case.md"
   },
   {
-    "group_id": "260514-albertsons_6-client-sent-export-failure",
-    "state": "open",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "albertsons_6 client-sent-export-failure",
-    "summary": "albertsons (Albertsons Media) - Audience 10073: Audience Export failure for 10073 sent to client.",
-    "incident_ids": [
-      "Q38JR11G2ENK2W"
-    ],
-    "alert_count": 8,
-    "path": "groups/open/260514-albertsons_6-client-sent-export-failure/case.md"
-  },
-  {
     "group_id": "260514-birchwood_274-client-sent-export-failure",
     "state": "open",
     "tags": [
@@ -534,6 +520,21 @@
     "path": "groups/open/grp_260513_albertsons_6_client_sent_export_failure_split_0066/case.md"
   },
   {
+    "group_id": "grp_260514_albertsons_6_client_sent_export_failure_split_0067",
+    "state": "open",
+    "tags": [
+      "triage:needs_review",
+      "triage:snapshotting-error"
+    ],
+    "title": "albertsons_6 client-sent-export-failure split",
+    "summary": "Needs investigation: audience 10073 remains failed; latest Pizza is 2026-05-15 snapshotting_error/no_batches during pre_snapshotting_check with no later success.",
+    "incident_ids": [
+      "Q38JR11G2ENK2W"
+    ],
+    "alert_count": 1,
+    "path": "groups/open/grp_260514_albertsons_6_client_sent_export_failure_split_0067/case.md"
+  },
+  {
     "group_id": "260511-albertsons_6-snapshotting-processing",
     "state": "monitoring",
     "tags": [
@@ -607,6 +608,21 @@
     ],
     "alert_count": 10,
     "path": "groups/monitoring/260515-albertsons_6-zero-success-02/case.md"
+  },
+  {
+    "group_id": "grp_260514_albertsons_6_client_sent_export_failure_split_0068",
+    "state": "monitoring",
+    "tags": [
+      "triage:needs_review",
+      "monitoring:export-processing"
+    ],
+    "title": "albertsons_6 client-sent-export-failure split",
+    "summary": "Monitor: audience 12875 has a newer 2026-05-16 run in export_processing after a successful 2026-05-15 run; no manual action needed unless it fails or stalls.",
+    "incident_ids": [
+      "Q38JR11G2ENK2W"
+    ],
+    "alert_count": 1,
+    "path": "groups/monitoring/grp_260514_albertsons_6_client_sent_export_failure_split_0068/case.md"
   },
   {
     "group_id": "260505-albertsons_6-snapshotting-schema-error",
@@ -750,6 +766,21 @@
     ],
     "alert_count": 3,
     "path": "groups/resolved/260512-albertsons_6-client-sent-export-failure/case.md"
+  },
+  {
+    "group_id": "260514-albertsons_6-client-sent-export-failure",
+    "state": "resolved",
+    "tags": [
+      "triage:needs_review",
+      "evidence:retry-succeeded"
+    ],
+    "title": "albertsons_6 client-sent-export-failure",
+    "summary": "Resolved: the remaining six 5/14 Albertsons client-sent alerts all have later Pizza export_finished runs after the alert time.",
+    "incident_ids": [
+      "Q38JR11G2ENK2W"
+    ],
+    "alert_count": 6,
+    "path": "groups/resolved/260514-albertsons_6-client-sent-export-failure/case.md"
   },
   {
     "group_id": "260514-trumanshow_336-no-batches",
