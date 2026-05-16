@@ -1,7 +1,7 @@
 # On-call Triage Cases
 
-Generated: 2026-05-16T21:47:41.265Z
-Open groups: 46
+Generated: 2026-05-16T22:09:16.925Z
+Open groups: 45
 Alert facts: 698
 
 ## New (8)
@@ -17,18 +17,17 @@ Alert facts: 698
 | `triage:needs_review` | [260514-allegro_3-dv360-export-processing](groups/new/260514-allegro_3-dv360-export-processing/case.md) | allegro (Marketing): Exports for audience 1156 failed with states: <(snapshotting_finished,export_processing)> | Q2KT0WUDEVL42Q | 13 |
 | `triage:needs_review` | [260515-allegro_3-dv360-export-processing](groups/new/260515-allegro_3-dv360-export-processing/case.md) | allegro (Marketing): Exports for audience 605 failed with states: <(snapshotting_finished,export_processing)> | Q3GQQRY1UQLBSN | 1 |
 
-## Open (29)
+## Open (28)
 
 | Tags | Group | Summary | Incidents | Alerts |
 |---|---|---|---|---:|
 | `triage:needs_review` | [260511-allegro_3-dv360-export-error](groups/open/260511-allegro_3-dv360-export-error/case.md) | allegro (Marketing): Exports for audience 731 failed with states: <(snapshotting_finished,export_error)> | Q3HYNV525MK1RW | 8 |
-| `triage:needs_review` | [260513-451-client-sent-export-failure](groups/open/260513-451-client-sent-export-failure/case.md) | ASU Enterprise Partners (Restricted) - Audience 31982: Audience Export failure for 31982 sent to client. | Q3XQABQFPPVNT5 | 3 |
 | `triage:needs_review` | [260513-ford_310-no-batches](groups/open/260513-ford_310-no-batches/case.md) | ford (Marketing Production): Exports for audience 34062 failed with states: <(snapshotting_finished,no_batches)> | Q1TJJ4MEVOF1W3 | 19 |
 | `triage:needs_review` | [260513-trumanshow_336-client-sent-export-failure](groups/open/260513-trumanshow_336-client-sent-export-failure/case.md) | trumanshow (Retail & CPG) - Audience 35783: Audience Export failure for 35783 sent to client. | Q12A5QFIM3F9LN | 1 |
 | `triage:needs_review` | [260514-378-client-sent-export-failure](groups/open/260514-378-client-sent-export-failure/case.md) | Cincinnati Reds (default) - SignalRoute 891: SignalRoute Export failure for 891 sent to client. | Q1QD2CX8MRAYBW | 1 |
-| `triage:needs_review` | [260514-451-campaign-manager-360-export-error](groups/open/260514-451-campaign-manager-360-export-error/case.md) | ASU Enterprise Partners (General - ASU Data): Exports for signal 984 failed with states: <(snapshotting_finished,export_error)> | Q3XQABQFPPVNT5 | 2 |
+| `triage:needs_review`<br>`triage:export-error` | [260514-451-campaign-manager-360-export-error](groups/open/260514-451-campaign-manager-360-export-error/case.md) | Needs investigation: ASU SignalRoute 981 Campaign Manager 360 continues to fail; latest Pizza is snapshotting_finished/export_error with 1299 failures. | Q3XQABQFPPVNT5 | 2 |
 | `triage:needs_review` | [260514-451-client-sent-export-failure](groups/open/260514-451-client-sent-export-failure/case.md) | ASU Enterprise Partners (Alumni) - Audience 26039: Audience Export failure for 26039 sent to client. | Q1UC14QNZK76EZ | 9 |
-| `triage:needs_review` | [260514-451-salesforce-audience-export-error](groups/open/260514-451-salesforce-audience-export-error/case.md) | ASU Enterprise Partners (Restricted): Exports for audience 31982 failed with states: <(snapshotting_finished,export_error)> | Q3XQABQFPPVNT5 | 1 |
+| `triage:needs_review`<br>`triage:export-error` | [260514-451-salesforce-audience-export-error](groups/open/260514-451-salesforce-audience-export-error/case.md) | Needs investigation: ASU audience 31982 Salesforce audience export continues to fail; latest Pizza is snapshotting_finished/export_error with 14 failures. | Q3XQABQFPPVNT5 | 2 |
 | `triage:needs_review` | [260514-birchwood_274-client-sent-export-failure](groups/open/260514-birchwood_274-client-sent-export-failure/case.md) | birchwood (default) - SignalRoute 723: SignalRoute Export failure for 723 sent to client. | Q3PJ7W2K3Y9LJV | 1 |
 | `triage:needs_review` | [260514-chghealthcare_395-client-sent-export-failure](groups/open/260514-chghealthcare_395-client-sent-export-failure/case.md) | chghealthcare (Global Medical Staffing) - Audience 30299: Audience Export failure for 30299 sent to client. | Q064V2C56CNTCR | 8 |
 | `triage:needs_review` | [260514-chghealthcare_395-no-batches](groups/open/260514-chghealthcare_395-no-batches/case.md) | chghealthcare (TESTING): Exports for signal 341 failed with states: <(snapshotting_finished,no_batches)> | Q064V2C56CNTCR | 174 |
@@ -49,7 +48,7 @@ Alert facts: 698
 | `triage:needs_review` | [260515-birchwood_274-salesforce-audience-export-error](groups/open/260515-birchwood_274-salesforce-audience-export-error/case.md) | birchwood (default): Exports for signal 723 failed with states: <(snapshotting_finished,export_error)> | Q3PJ7W2K3Y9LJV | 1 |
 | `triage:needs_review` | [260515-pgatourhq_219-no-batches](groups/open/260515-pgatourhq_219-no-batches/case.md) | pgatourhq (New World Order): Exports for audience 31918 failed with states: <(snapshotting_finished,no_batches)> | Q2DJCY3XC2BSBG | 13 |
 | `triage:needs_review` | [260515-royals_4-snapshotting-error](groups/open/260515-royals_4-snapshotting-error/case.md) | royals (default): Exports for signal 203 failed with states: <(snapshotting_error,no_batches)> | Q08B553ANQ9KMI | 1 |
-| `triage:needs_review`<br>`triage:snapshotting-error`<br>`bug:service-quervice` | [grp_260513_albertsons_6_client_sent_export_failure_split_0066](groups/open/grp_260513_albertsons_6_client_sent_export_failure_split_0066/case.md) | Needs platform investigation: Albertsons audiences 8473 and 10073 both remain failed after LiveRamp snapshotting pre-checks hit Quervice 502/upstream premature-close errors; latest Pizza rows are snapshotting_error/no_batches with no later success. | Q2EJWG22CER0LA<br>Q38JR11G2ENK2W | 2 |
+| `triage:needs_review`<br>`triage:snapshotting-error`<br>`bug:service-quervice`<br>`triage:manual_retry_needed` | [grp_260513_albertsons_6_client_sent_export_failure_split_0066](groups/open/grp_260513_albertsons_6_client_sent_export_failure_split_0066/case.md) | Manual retry/platform action still needed: fresh Pizza recheck on 2026-05-16 found no later success or processing for Albertsons audiences 8473 and 10073; latest rows remain the failed Quervice pre_snapshotting_check runs from 2026-05-13 and 2026-05-15 respectively. | Q2EJWG22CER0LA<br>Q38JR11G2ENK2W | 2 |
 
 ## Monitoring (6)
 
@@ -70,7 +69,7 @@ Alert facts: 698
 | `triage:needs_review`<br>`waiting:client_schema`<br>`triage:client_schema_missing` | [260511-albertsons_6-snapshotting-error](groups/waiting/260511-albertsons_6-snapshotting-error/case.md) | Waiting on support/client remediation: five Albertsons LiveRamp export-run alerts still fail snapshotting with missing_table_field, and three client-sent alerts for the same schema-affected audiences were merged here. | Q2T09VCLN9MRZ8 | 8 |
 | `triage:needs_review`<br>`triage:client_schema_missing`<br>`waiting:client_schema` | [260515-gopuff_544-snapshotting-error](groups/waiting/260515-gopuff_544-snapshotting-error/case.md) | Waiting on support/client remediation for missing source column CORE.GOPUFF_ORDER_ITEMS.CLASS in GoPuff Snowflake source schema; support thread opened. | Q1X9CE7BIDK9MV | 1 |
 
-## Resolved (22)
+## Resolved (26)
 
 | Tags | Group | Summary | Incidents | Alerts |
 |---|---|---|---|---:|
@@ -80,6 +79,7 @@ Alert facts: 698
 | `resolved:export-healthy`<br>`triage:tag_grouped` | [260511-albertsons_6-liveramp-complete](groups/resolved/260511-albertsons_6-liveramp-complete/case.md) | Checked exports are healthy with no blocking export evidence. | Q2T09VCLN9MRZ8 | 4 |
 | `triage:needs_review`<br>`resolved:export-healthy` | [260511-albertsons_6-no-batches](groups/resolved/260511-albertsons_6-no-batches/case.md) | Resolved from Albertsons LiveRamp tagger evidence: the only alert-scoped export is healthy/export-complete. | Q2T09VCLN9MRZ8 | 1 |
 | `triage:needs_review`<br>`resolved:merged` | [260512-albertsons_6-client-sent-export-failure](groups/resolved/260512-albertsons_6-client-sent-export-failure/case.md) | Merged into 260511-albertsons_6-snapshotting-error: Remaining client-sent alerts for audiences 10370, 10372, and 10749 match the existing Albertsons missing RFM_Category_Group client-schema waiting case. | Q2T09VCLN9MRZ8 | 3 |
+| `triage:needs_review`<br>`resolved:merged` | [260513-451-client-sent-export-failure](groups/resolved/260513-451-client-sent-export-failure/case.md) | Merged into 260514-451-salesforce-audience-export-error: Audience 31982 client-sent alert is the notification counterpart of the Salesforce audience export-error case; latest Pizza still shows 31982 export_error. | Q3XQABQFPPVNT5 | 1 |
 | `triage:needs_review`<br>`evidence:retry-succeeded` | [260514-albertsons_6-client-sent-export-failure](groups/resolved/260514-albertsons_6-client-sent-export-failure/case.md) | Resolved: the remaining six 5/14 Albertsons client-sent alerts all have later Pizza export_finished runs after the alert time. | Q38JR11G2ENK2W | 6 |
 | `triage:needs_review`<br>`resolved:export-healthy` | [260514-trumanshow_336-no-batches](groups/resolved/260514-trumanshow_336-no-batches/case.md) | Auto-resolved from Pizza export checks: all 2 alert-scoped export check(s) are healthy_closed with no blockers. | Q12A5QFIM3F9LN | 2 |
 | `triage:needs_review`<br>`resolved:pd_closed_external` | [260515-76ers_131-zero-success](groups/resolved/260515-76ers_131-zero-success/case.md) | All attached PagerDuty incidents are resolved externally. | Q0Z4MMEOFYDHC7 | 1 |
@@ -95,4 +95,7 @@ Alert facts: 698
 | `triage:needs_review`<br>`resolved:pd_closed_external` | [260515-whirlpool_525-no-batches](groups/resolved/260515-whirlpool_525-no-batches/case.md) | All attached PagerDuty incidents are resolved externally. | Q3WZUE4915S6J4 | 2 |
 | `triage:needs_review`<br>`resolved:retry_succeeded` | [260516-evgo_402-client-sent-export-failure](groups/resolved/260516-evgo_402-client-sent-export-failure/case.md) | Resolved as retry/false alarm: failed Braze run 29790-braze_18238-scheduled__2026-05-16T14:00:00+00:00 hit transient Snowflake connector response-ended-prematurely during snapshotting, but later same-scope scheduled runs at 15:00 and 16:00 UTC completed export_finished with zero failures/rejects. | Q22U9UI0BTFNJC | 1 |
 | `triage:needs_review`<br>`resolved:merged` | [grp_260512_albertsons_6_client_sent_export_failure_split_0065](groups/resolved/grp_260512_albertsons_6_client_sent_export_failure_split_0065/case.md) | Merged into 260511-albertsons_6-snapshotting-processing: Audience 2189 client-sent failure is the notification counterpart of the existing snapshotting_processing/no_batches monitoring case. | Q2T09VCLN9MRZ8 | 1 |
+| `triage:needs_review`<br>`evidence:retry-succeeded` | [grp_260513_451_client_sent_export_failure_split_0069](groups/resolved/grp_260513_451_client_sent_export_failure_split_0069/case.md) | Resolved: ASU SignalRoute 984 has a later Campaign Manager 360 export_finished run after the client-sent alert. | Q3XQABQFPPVNT5 | 1 |
+| `triage:needs_review`<br>`resolved:merged` | [grp_260513_451_client_sent_export_failure_split_0070](groups/resolved/grp_260513_451_client_sent_export_failure_split_0070/case.md) | Merged into 260514-451-campaign-manager-360-export-error: SignalRoute 981 client-sent alert is the notification counterpart of the Campaign Manager 360 export-error case; latest Pizza still shows 981 export_error. | Q3XQABQFPPVNT5 | 1 |
+| `triage:needs_review`<br>`evidence:retry-succeeded` | [grp_260514_451_campaign_manager_360_export_error_split_0071](groups/resolved/grp_260514_451_campaign_manager_360_export_error_split_0071/case.md) | Resolved: ASU SignalRoute 984 Campaign Manager 360 export has a later export_finished run. | Q3XQABQFPPVNT5 | 1 |
 | `triage:needs_review`<br>`triage:snapshotting-error`<br>`bug:service-quervice`<br>`resolved:merged` | [grp_260514_albertsons_6_client_sent_export_failure_split_0067](groups/resolved/grp_260514_albertsons_6_client_sent_export_failure_split_0067/case.md) | Merged into grp_260513_albertsons_6_client_sent_export_failure_split_0066: Same Albertsons platform failure class: both audience 8473 and 10073 failed LiveRamp snapshotting pre_snapshotting_check with Quervice 502/upstream premature close and no later success. Track as one Quervice service-side investigation. | Q38JR11G2ENK2W | 1 |

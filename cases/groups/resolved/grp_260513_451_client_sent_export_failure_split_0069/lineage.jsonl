@@ -1,0 +1,1 @@
+{"ts":"2026-05-16T22:08:23.523Z","actor":"agent","kind":"split","related_group_id":"260513-451-client-sent-export-failure","summary":"Split from 260513-451-client-sent-export-failure.","rationale":"Split SignalRoute 984 because current Pizza shows a later successful Campaign Manager 360 run, unlike 981 and 31982 which still fail.","alert_ids":["Q1X4ZB5GQBRSU1"]}

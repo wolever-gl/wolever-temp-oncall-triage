@@ -1,0 +1,28 @@
+{
+  "group_id": "grp_260513_451_client_sent_export_failure_split_0070",
+  "state": "resolved",
+  "tags": [
+    "triage:needs_review",
+    "resolved:merged"
+  ],
+  "title": "451 client-sent-export-failure split",
+  "summary": "Merged into 260514-451-campaign-manager-360-export-error: SignalRoute 981 client-sent alert is the notification counterpart of the Campaign Manager 360 export-error case; latest Pizza still shows 981 export_error.",
+  "deterministic_key": "v3|incident:Q3XQABQFPPVNT5|org:451|class:client-sent-export-failure|split|Q0XF5RYJ4EGXJZ",
+  "grouping_version": 3,
+  "created_at": "2026-05-16T22:08:26.088Z",
+  "updated_at": "2026-05-16T22:08:49.283Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q3XQABQFPPVNT5",
+      "alert_id": "Q0XF5RYJ4EGXJZ"
+    }
+  ],
+  "incident_ids": [
+    "Q3XQABQFPPVNT5"
+  ],
+  "related_group_ids": [
+    "260513-451-client-sent-export-failure",
+    "260514-451-campaign-manager-360-export-error"
+  ],
+  "next_action": "Follow target group 260514-451-campaign-manager-360-export-error."
+}

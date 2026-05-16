@@ -2,26 +2,30 @@
   "group_id": "260514-451-campaign-manager-360-export-error",
   "state": "open",
   "tags": [
-    "triage:needs_review"
+    "triage:needs_review",
+    "triage:export-error"
   ],
   "title": "451 campaign-manager-360 export-error",
-  "summary": "ASU Enterprise Partners (General - ASU Data): Exports for signal 984 failed with states: <(snapshotting_finished,export_error)>",
+  "summary": "Needs investigation: ASU SignalRoute 981 Campaign Manager 360 continues to fail; latest Pizza is snapshotting_finished/export_error with 1299 failures.",
   "deterministic_key": "v3|incident:Q3XQABQFPPVNT5|org:451|dest:campaign-manager-360|class:export-error",
   "grouping_version": 3,
   "created_at": "2026-05-16T00:38:01.850Z",
-  "updated_at": "2026-05-16T20:46:23.622Z",
+  "updated_at": "2026-05-16T22:09:14.035Z",
   "alert_refs": [
     {
       "incident_id": "Q3XQABQFPPVNT5",
-      "alert_id": "Q003VALSPIPFI1"
+      "alert_id": "Q01J962O90JJ1O"
     },
     {
       "incident_id": "Q3XQABQFPPVNT5",
-      "alert_id": "Q01J962O90JJ1O"
+      "alert_id": "Q0XF5RYJ4EGXJZ"
     }
   ],
   "incident_ids": [
     "Q3XQABQFPPVNT5"
   ],
-  "related_group_ids": []
+  "related_group_ids": [
+    "grp_260513_451_client_sent_export_failure_split_0070",
+    "grp_260514_451_campaign_manager_360_export_error_split_0071"
+  ]
 }

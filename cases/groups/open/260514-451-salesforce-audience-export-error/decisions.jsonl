@@ -1,2 +1,3 @@
 {"ts":"2026-05-16T00:38:01.850Z","actor":"oncall-triage","decision":"created_group","rationale":"Conservative deterministic grouping created a new group for v3|incident:Q3XQABQFPPVNT5|org:451|dest:salesforce-audience|class:export-error."}
 {"ts":"2026-05-16T20:47:10.617Z","actor":"check-exports","decision":"started_work","rationale":"Export evidence check evaluated alert facts for this group."}
+{"ts":"2026-05-16T22:09:15.652Z","actor":"agent","decision":"transitioned_to_open","rationale":"Needs investigation: ASU audience 31982 Salesforce audience export continues to fail; latest Pizza is snapshotting_finished/export_error with 14 failures."}
