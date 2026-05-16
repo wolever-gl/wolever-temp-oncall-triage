@@ -27,17 +27,18 @@ Triage is an evidence loop, not a one-shot grouping pass:
 3. Before manual investigation, run the case-scoped export preflight:
 
    ```bash
-   bun run oncall-triage preflight cases --state new
+   bun run oncall-triage preflight cases --group <group-id>
    ```
 
-   This runs the relevant Pizza checks for each group, records check evidence in
-   the cases, resolves a group automatically when every alert-scoped export
-   check is healthy, and moves a group to `monitoring` automatically when every
-   attached check is either healthy or still processing. If it resolves or moves
-   a case to monitoring, move on to the next group. If it records `blocked`
-   evidence, continue investigation from that generated evidence. Environments
-   listed as unavailable in `cases/env_availability.json` are skipped instead
-   of probed.
+   This runs the relevant Pizza checks for the selected group, records check
+   evidence in the case, resolves the group automatically when every
+   alert-scoped export check is healthy, and moves the group to `monitoring`
+   automatically when every attached check is either healthy or still
+   processing. To run that operation across a queue, use `--state new` or
+   another state. If it resolves or moves a case to monitoring, move on to the
+   next group. If it records `blocked` evidence, continue investigation from
+   that generated evidence. Environments listed as unavailable in
+   `cases/env_availability.json` are skipped instead of probed.
 4. Ask the agent to decide what to do with that group. The agent should inspect
    alert facts, prior annotations, case notes, and external evidence; explain
    the likely situation; and guide the next action.
@@ -152,8 +153,9 @@ With `--group <group-id> --apply --auto-resolve`, it acts as the first
 investigation preflight for a case: run Pizza for the group's alert facts,
 write export-check evidence, and resolve the group when every alert-scoped
 check is `healthy_closed`.
-`preflight` runs that case-scoped operation across every group in a selected
-state, defaulting to `new`.
+`preflight --group <group-id>` runs that case-scoped operation for one group.
+Without `--group`, `preflight` runs it across every group in a selected state,
+defaulting to `new`.
 
 `cases/env_availability.json` records local environment reachability. Mark an
 environment `unavailable` there when the current machine cannot access its

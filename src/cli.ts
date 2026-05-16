@@ -192,13 +192,16 @@ async function main(argv: string[]): Promise<void> {
   if (command === "preflight") {
     const state = (optional(args, "state") ?? "new") as GroupStateName;
     if (!["new", "open", "waiting", "monitoring", "resolved"].includes(state)) throw new Error(`Invalid state: ${state}`);
+    const groupId = optional(args, "group");
     const progress = (message: string): void => console.log(message);
     const liveFetcher = createLivePizzaFetcher({ onProgress: progress });
     let checked = 0;
     let resolved = 0;
     let monitored = 0;
     try {
-      const groups = (await loadAllGroups(workspaceDir)).filter((group) => group.state === state).sort((a, b) => a.group_id.localeCompare(b.group_id));
+      const groups = groupId
+        ? [await readGroupState(workspaceDir, groupId)]
+        : (await loadAllGroups(workspaceDir)).filter((group) => group.state === state).sort((a, b) => a.group_id.localeCompare(b.group_id));
       for (const group of groups) {
         console.log(`Preflight ${group.group_id}`);
         const result = await checkExportsWorkspace({
@@ -328,7 +331,7 @@ function usageText(): string {
   bun run oncall-triage merge <workspace> --source <id> --target <id> --rationale <text>
   bun run oncall-triage split <workspace> --group <id> --alerts <comma-separated-alert-ids> --rationale <text>
   bun run oncall-triage sync-pd <workspace> [--incident <pd-url-or-id>]
-  bun run oncall-triage preflight <workspace> [--state <new|open|waiting|monitoring|resolved>]
+  bun run oncall-triage preflight <workspace> [--state <new|open|waiting|monitoring|resolved>] [--group <id>]
   bun run oncall-triage check-exports <workspace> [--apply] [--auto-resolve] [--group <id>] [--pizza-rows-file <file>] [--incident <id>] [--org <org_id>] [--audience <id>] [--destination <destination>] [--state <state>] [--limit <n>]
   bun run oncall-triage evidence <workspace> --group <id> --summary <text> [--kind <kind>] [--source <source>] [--link <label=url>] [--command <command>]`;
 }
