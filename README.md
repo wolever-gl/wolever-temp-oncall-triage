@@ -24,18 +24,29 @@ Triage is an evidence loop, not a one-shot grouping pass:
 2. Open `cases/index.md` and take the highest-priority non-resolved group. Start
    with the top `New` group unless there is a stronger operational reason to
    continue an `open`, `monitoring`, or `waiting` group.
-3. Ask the agent to decide what to do with that group. The agent should inspect
+3. Before manual investigation, run the case-scoped export preflight:
+
+   ```bash
+   bun run oncall-triage check-exports cases --group <group-id> --apply --auto-resolve
+   ```
+
+   This runs the relevant Pizza checks, records check evidence in the case, and
+   resolves the group automatically when every alert-scoped export check is
+   healthy. If it resolves the case, move on to the next group. If it records
+   `blocked` or `monitoring` evidence, continue investigation from that
+   generated evidence.
+4. Ask the agent to decide what to do with that group. The agent should inspect
    alert facts, prior annotations, case notes, and external evidence; explain
    the likely situation; and guide the next action.
-4. Take the smallest justified action: collect more evidence, tag alerts, split
+5. Take the smallest justified action: collect more evidence, tag alerts, split
    or merge groups, mark something waiting, resolve a recovered issue, escalate
    a customer-owned problem, or ask for human judgment.
-5. Regenerate the index.
-6. Before moving on, ask the agent to review how it reached the result. If a
+6. Regenerate the index.
+7. Before moving on, ask the agent to review how it reached the result. If a
    tool, runbook, parser, command, lexicon entry, or workflow note would have
    made the path faster or safer, update the relevant documentation so the next
    agent benefits.
-7. Repeat.
+8. Repeat.
 
 The important habit is to work one group at a time while keeping alerts
 queryable across group boundaries. Groups are a work queue and coordination
@@ -120,6 +131,7 @@ bun run oncall-triage import-pd cases --incident Q123ABC
 bun run oncall-triage group cases
 bun run oncall-triage tag cases --script ./tagger.ts --org acme_123 --limit 5 --test
 bun run oncall-triage group cases --tag evidence:example --title "Example issue" --summary "..." --rationale "..." --test
+bun run oncall-triage check-exports cases --group <group-id> --apply --auto-resolve
 bun run oncall-triage evidence cases --group <group-id> --kind triage --source "gcloud scoped logs" --summary "..." --link "Scoped logs=https://console.cloud.google.com/logs/query;query=...?...project=..."
 bun run oncall-triage index cases
 bun run oncall-triage sync-pd cases --incident Q123ABC
@@ -132,6 +144,10 @@ remaining silent until completion.
 
 `check-exports` keeps one live Bifrost proxy open per environment for the
 duration of a command run, reuses it across checks, and closes it before exit.
+With `--group <group-id> --apply --auto-resolve`, it acts as the first
+investigation preflight for a case: run Pizza for the group's alert facts,
+write export-check evidence, and resolve the group when every alert-scoped
+check is `healthy_closed`.
 
 `case.md` is generated as a human-readable case view and should not be edited
 directly. It should be enough for a human to understand why the case exists,

@@ -2,8 +2,8 @@ import { describe, expect, test } from "bun:test";
 import { mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import path from "node:path";
-import { checkExportsWorkspace, loadAllExportChecks } from "./checkExports";
-import { importPagerDutyIncident } from "./workspace";
+import { autoResolveHealthyExportGroup, checkExportsWorkspace, loadAllExportChecks } from "./checkExports";
+import { groupImportedAlerts, importPagerDutyIncident, readGroupState } from "./workspace";
 import type { PizzaExportRow } from "./schema";
 
 const fixture = path.resolve(import.meta.dir, "..", "fixtures", "pagerduty-alerts.json");
@@ -33,6 +33,48 @@ describe("check-exports", () => {
       expect(checks.every((check) => check.proposed_state === "healthy_closed")).toBe(true);
       expect(checks.every((check) => check.state === "open")).toBe(true);
       expect(checks[0]?.run_evaluations[0]?.health).toBe("healthy");
+    } finally {
+      await rm(workspaceDir, { recursive: true, force: true });
+    }
+  });
+
+  test("filters checks to a group and auto-resolves when every group check is healthy", async () => {
+    const workspaceDir = await mkdtemp(path.join(tmpdir(), "oncall-triage-v2-"));
+    try {
+      await importPagerDutyIncident({ workspaceDir, incident: "QTEST123", alertsFile: fixture });
+      const grouped = await groupImportedAlerts(workspaceDir);
+      const groupId = grouped.groups[0]!;
+      const group = await readGroupState(workspaceDir, groupId);
+      const rows: PizzaExportRow[] = [
+        healthyRow("16985-marketing_cloud_10988-scheduled__2026-05-15T16:00:00+00:00", "16985"),
+        healthyRow("20770-marketing_cloud_10988-scheduled__2026-05-15T16:00:00+00:00", "20770"),
+      ];
+
+      await checkExportsWorkspace({
+        workspaceDir,
+        apply: true,
+        now: new Date("2026-05-15T17:00:00Z"),
+        filters: { alertRefs: group.alert_refs },
+        fetchPizzaRows: async () => rows,
+      });
+      const result = await autoResolveHealthyExportGroup({
+        workspaceDir,
+        groupId,
+        now: new Date("2026-05-15T17:01:00Z"),
+      });
+
+      expect(result).toMatchObject({
+        group_id: groupId,
+        resolved: true,
+        reason: "all_checks_healthy_closed",
+        healthy_checks: 3,
+      });
+      const resolved = await readGroupState(workspaceDir, groupId);
+      expect(resolved.state).toBe("resolved");
+      expect(resolved.tags).toContain("resolved:export-healthy");
+      expect(resolved.summary).toContain("Auto-resolved from Pizza export checks");
+      const evidence = await readFile(path.join(workspaceDir, "groups", "resolved", groupId, "evidence.jsonl"), "utf8");
+      expect(evidence).toContain("all 3 alert-scoped export check");
     } finally {
       await rm(workspaceDir, { recursive: true, force: true });
     }

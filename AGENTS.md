@@ -32,7 +32,13 @@ Use this repo as a case-workspace system, not a spreadsheet workflow.
 - Use namespaced tags such as `triage:*`, `waiting:*`, `monitoring:*`, and `resolved:*`.
 - No scheduler for now. Use `next_check_at` fields when a future revisit is needed.
 - Runbooks are structured instructions and may include tool functions or scripts.
-- Agents can explore first, then choose a runbook before remediation or resolution.
+- Before manual case investigation, run the export preflight when the case has
+  export-alert evidence:
+  `bun run oncall-triage check-exports cases --group <group-id> --apply --auto-resolve`.
+  If it resolves the case, stop; if it records blocked or monitoring evidence,
+  continue from that generated evidence instead of repeating Pizza checks by
+  hand.
+- Agents can explore after the export preflight, then choose a runbook before remediation or resolution.
 - See `LEXICON.md` for canonical terms, invariants, and model boundaries.
 
 ## Editing Discipline

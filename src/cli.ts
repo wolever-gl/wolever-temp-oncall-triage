@@ -1,7 +1,8 @@
 #!/usr/bin/env bun
-import { checkExportsWorkspace, loadPizzaRowsFile } from "./checkExports";
+import { autoResolveHealthyExportGroup, checkExportsWorkspace, loadPizzaRowsFile } from "./checkExports";
 import { createLivePizzaFetcher } from "./pizza";
-import { appendEvidence, groupImportedAlerts, groupTaggedAlerts, importPagerDutyIncident, initWorkspace, mergeGroups, queryAlertFacts, regenerateIndex, runAlertTagger, splitGroup, syncPagerDutyWorkspace, transitionGroup } from "./workspace";
+import { appendEvidence, groupImportedAlerts, groupTaggedAlerts, importPagerDutyIncident, initWorkspace, mergeGroups, queryAlertFacts, readGroupState, regenerateIndex, runAlertTagger, splitGroup, syncPagerDutyWorkspace, transitionGroup } from "./workspace";
+import type { CheckExportsOptions } from "./checkExports";
 import type { GroupStateName } from "./schema";
 
 async function main(argv: string[]): Promise<void> {
@@ -152,7 +153,14 @@ async function main(argv: string[]): Promise<void> {
     const pizzaRows = pizzaRowsFile ? await loadPizzaRowsFile(pizzaRowsFile) : undefined;
     const progress = (message: string): void => console.log(message);
     const liveFetcher = pizzaRows ? undefined : createLivePizzaFetcher({ onProgress: progress });
-    const filters = alertFiltersFromArgs(args);
+    const groupId = optional(args, "group");
+    if (args["auto-resolve"] && !args.apply) throw new Error("--auto-resolve requires --apply.");
+    if (args["auto-resolve"] && !groupId) throw new Error("--auto-resolve requires --group.");
+    const group = groupId ? await readGroupState(workspaceDir, groupId) : undefined;
+    const filters: CheckExportsOptions["filters"] = {
+      ...alertFiltersFromArgs(args),
+      ...(group ? { alertRefs: group.alert_refs } : {}),
+    };
     const limit = optional(args, "limit");
     try {
       const result = await checkExportsWorkspace({
@@ -168,6 +176,10 @@ async function main(argv: string[]): Promise<void> {
       console.log(
         `Checked exports: derived=${result.derived}, evaluated=${result.evaluated}, healthy_closed=${result.healthy_closed}, monitoring=${result.monitoring}, blocked=${result.blocked}, not_applicable=${result.not_applicable}`,
       );
+      if (group && args["auto-resolve"]) {
+        const resolved = await autoResolveHealthyExportGroup({ workspaceDir, groupId: group.group_id });
+        console.log(`Auto-resolve ${resolved.group_id}: resolved=${resolved.resolved} reason=${resolved.reason} healthy_checks=${resolved.healthy_checks}`);
+      }
     } finally {
       await liveFetcher?.close();
     }
@@ -193,7 +205,7 @@ async function main(argv: string[]): Promise<void> {
 
 function parseArgs(args: string[]): Record<string, string | string[]> {
   const parsed: Record<string, string | string[]> = {};
-  const booleanFlags = new Set(["apply", "test"]);
+  const booleanFlags = new Set(["apply", "test", "auto-resolve"]);
   for (let i = 0; i < args.length; i++) {
     const arg = args[i];
     if (!arg?.startsWith("--")) throw new Error(`Unexpected argument: ${arg}`);
@@ -229,8 +241,8 @@ function required(args: Record<string, string | string[]>, key: string): string 
   return Array.isArray(value) ? value[0]! : value;
 }
 
-function alertFiltersFromArgs(args: Record<string, string | string[]>): Parameters<typeof queryAlertFacts>[1] {
-  const filters: Parameters<typeof queryAlertFacts>[1] = {};
+function alertFiltersFromArgs(args: Record<string, string | string[]>): CheckExportsOptions["filters"] {
+  const filters: CheckExportsOptions["filters"] = {};
   const incident = optional(args, "incident");
   const org = optional(args, "org");
   const audience = optional(args, "audience");
@@ -275,7 +287,7 @@ function usageText(): string {
   bun run oncall-triage merge <workspace> --source <id> --target <id> --rationale <text>
   bun run oncall-triage split <workspace> --group <id> --alerts <comma-separated-alert-ids> --rationale <text>
   bun run oncall-triage sync-pd <workspace> [--incident <pd-url-or-id>]
-  bun run oncall-triage check-exports <workspace> [--apply] [--pizza-rows-file <file>] [--incident <id>] [--org <org_id>] [--audience <id>] [--destination <destination>] [--state <state>] [--limit <n>]
+  bun run oncall-triage check-exports <workspace> [--apply] [--auto-resolve] [--group <id>] [--pizza-rows-file <file>] [--incident <id>] [--org <org_id>] [--audience <id>] [--destination <destination>] [--state <state>] [--limit <n>]
   bun run oncall-triage evidence <workspace> --group <id> --summary <text> [--kind <kind>] [--source <source>] [--link <label=url>] [--command <command>]`;
 }
 

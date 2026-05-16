@@ -1,8 +1,8 @@
 import path from "node:path";
 import { readFile } from "node:fs/promises";
 import { ensureDir, listDirs, readJson, slug, writeJson } from "./fsutil";
-import { loadAllAlerts, markGroupsStartedForAlerts } from "./workspace";
-import type { AlertFact, ExportCheck, ExportCheckScope, ExportCheckState, ExportRunEvaluation, PizzaExportRow } from "./schema";
+import { appendEvidence, loadAllAlerts, markGroupsStartedForAlerts, readGroupState, transitionGroup } from "./workspace";
+import type { AlertFact, AlertRef, ExportCheck, ExportCheckScope, ExportCheckState, ExportRunEvaluation, PizzaExportRow } from "./schema";
 
 export interface CheckExportsOptions {
   workspaceDir: string;
@@ -14,6 +14,7 @@ export interface CheckExportsOptions {
     audienceId?: string;
     destination?: string;
     state?: string;
+    alertRefs?: AlertRef[];
     limit?: number;
   };
   fetchPizzaRows?: (scope: ExportCheckScope) => Promise<PizzaExportRow[]>;
@@ -27,6 +28,13 @@ export interface CheckExportsResult {
   monitoring: number;
   blocked: number;
   not_applicable: number;
+}
+
+export interface AutoResolveExportGroupResult {
+  group_id: string;
+  resolved: boolean;
+  reason: string;
+  healthy_checks: number;
 }
 
 export async function checkExportsWorkspace(options: CheckExportsOptions): Promise<CheckExportsResult> {
@@ -108,7 +116,9 @@ export async function checkExportsWorkspace(options: CheckExportsOptions): Promi
 
 function filterAlerts(alerts: AlertFact[], filters: CheckExportsOptions["filters"]): AlertFact[] {
   if (!filters) return alerts;
+  const alertRefKeys = filters.alertRefs ? new Set(filters.alertRefs.map(refKey)) : undefined;
   const matched = alerts.filter((alert) => {
+    if (alertRefKeys && !alertRefKeys.has(alertKey(alert))) return false;
     if (filters.incidentId && alert.incident_id !== filters.incidentId) return false;
     if (filters.orgId && alert.org_id !== filters.orgId) return false;
     if (filters.audienceId && alert.audience_id !== filters.audienceId) return false;
@@ -120,6 +130,57 @@ function filterAlerts(alerts: AlertFact[], filters: CheckExportsOptions["filters
     return true;
   });
   return filters.limit ? matched.slice(0, filters.limit) : matched;
+}
+
+export async function autoResolveHealthyExportGroup(options: {
+  workspaceDir: string;
+  groupId: string;
+  now?: Date;
+}): Promise<AutoResolveExportGroupResult> {
+  const group = await readGroupState(options.workspaceDir, options.groupId);
+  if (group.state === "resolved") {
+    return { group_id: group.group_id, resolved: false, reason: "already_resolved", healthy_checks: 0 };
+  }
+
+  const selected = new Set(group.alert_refs.map(refKey));
+  const checks = (await loadAllExportChecks(options.workspaceDir)).filter((check) =>
+    selected.has(refKey({ incident_id: check.incident_id, alert_id: check.alert_id })),
+  );
+  if (checks.length === 0) return { group_id: group.group_id, resolved: false, reason: "no_export_checks", healthy_checks: 0 };
+
+  const checkedRefs = new Set(checks.map((check) => refKey({ incident_id: check.incident_id, alert_id: check.alert_id })));
+  const missingRefs = group.alert_refs.filter((ref) => !checkedRefs.has(refKey(ref)));
+  if (missingRefs.length > 0) {
+    return { group_id: group.group_id, resolved: false, reason: `missing_export_checks:${missingRefs.length}`, healthy_checks: checks.filter((check) => check.state === "healthy_closed").length };
+  }
+
+  const unhealthy = checks.filter((check) => check.state !== "healthy_closed");
+  if (unhealthy.length > 0) {
+    return { group_id: group.group_id, resolved: false, reason: `checks_not_healthy:${unhealthy.map((check) => `${check.check_id}=${check.state}`).join(",")}`, healthy_checks: checks.filter((check) => check.state === "healthy_closed").length };
+  }
+
+  const nowIso = (options.now ?? new Date()).toISOString();
+  const runIds = sortedUnique(checks.flatMap((check) => check.run_evaluations.map((evaluation) => evaluation.export_run_id)));
+  const summary = `Auto-resolved from Pizza export checks: all ${checks.length} alert-scoped export check(s) are healthy_closed with no blockers.`;
+  await appendEvidence(options.workspaceDir, group.group_id, {
+    ts: nowIso,
+    kind: "export_check",
+    source: "check-exports",
+    summary,
+    data: {
+      healthy_check_ids: checks.map((check) => check.check_id),
+      checked_export_run_ids: runIds,
+    },
+  });
+  await transitionGroup({
+    workspaceDir: options.workspaceDir,
+    groupId: group.group_id,
+    state: "resolved",
+    tag: "resolved:export-healthy",
+    summary,
+    actor: "check-exports",
+  });
+  return { group_id: group.group_id, resolved: true, reason: "all_checks_healthy_closed", healthy_checks: checks.length };
 }
 
 export function deriveExportCheck(alert: AlertFact, nowIso: string, previous?: ExportCheck): ExportCheck {
@@ -339,6 +400,18 @@ function checkedRunIdsFor(alert: AlertFact): string[] {
 
 function checkIdForAlert(alert: AlertFact): string {
   return `chk_${slug(`${alert.incident_id}_${alert.alert_id}`)}`;
+}
+
+function refKey(ref: AlertRef): string {
+  return `${ref.incident_id}::${ref.alert_id}`;
+}
+
+function alertKey(alert: AlertFact): string {
+  return `${alert.incident_id}::${alert.alert_id}`;
+}
+
+function sortedUnique(values: string[]): string[] {
+  return [...new Set(values)].sort();
 }
 
 function parseGlcli(glcli: string | undefined): { env?: string; org_id?: string; audience_id?: string } {
