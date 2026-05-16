@@ -27,16 +27,17 @@ Triage is an evidence loop, not a one-shot grouping pass:
 3. Before manual investigation, run the case-scoped export preflight:
 
    ```bash
-   bun run oncall-triage preflight cases --group <group-id>
+   bun run oncall-triage preflight cases --filter group.id=<group-id>
    ```
 
    This runs the relevant Pizza checks for the selected group, records check
    evidence in the case, resolves the group automatically when every
    alert-scoped export check is healthy, and moves the group to `monitoring`
    automatically when every attached check is either healthy or still
-   processing. To run that operation across a queue, use `--state new` or
-   another state. If it resolves or moves a case to monitoring, move on to the
-   next group. If it records `blocked` evidence, continue investigation from
+   processing. To run that operation across a queue, use
+   `--filter group.state=new` or another state. If it resolves or moves a case
+   to monitoring, move on to the next group. If it records `blocked` evidence,
+   continue investigation from
    that generated evidence. Environments listed as unavailable in
    `cases/env_availability.json` are skipped instead of probed.
 4. Ask the agent to decide what to do with that group. The agent should inspect
@@ -150,18 +151,21 @@ remaining silent until completion.
 Use repeatable namespaced `--filter key=value` arguments for command selection.
 Supported alert filters are `alert.incident`, `alert.org`, `alert.audience`,
 `alert.destination`, and `alert.state`. Supported group filters are `group.id`,
-`group.state`, `group.tag`, and `group.incident`. Existing flags such as
-`--group`, `--org`, `--audience`, `--destination`, and command-specific
-`--state` remain compatibility aliases and combine with `--filter`.
+`group.state`, `group.tag`, and `group.incident`. Selector aliases such as
+`--incident`, `--org`, `--audience`, `--destination`, `--group`, and queue
+`--state` are no longer supported on selector-driven commands; use `--filter`
+instead. Command arguments with distinct meanings, such as
+`import-pd --incident`, `sync-pd --incident`, `transition --state`, and
+`group --state`, are still valid.
 
 `check-exports` keeps one live Bifrost proxy open per environment for the
 duration of a command run, reuses it across checks, and closes it before exit.
-With `--group <group-id> --apply --auto-resolve`, it acts as the first
+With `--filter group.id=<group-id> --apply --auto-resolve`, it acts as the first
 investigation preflight for a case: run Pizza for the group's alert facts,
 write export-check evidence, and resolve the group when every alert-scoped
 check is `healthy_closed`.
 `preflight --filter group.id=<group-id>` runs that case-scoped operation for one group.
-Without `group.id` or `--group`, `preflight` runs it across every group in a
+Without `group.id`, `preflight` runs it across every group in a
 selected state, defaulting to `new`.
 
 `cases/env_availability.json` records local environment reachability. Mark an

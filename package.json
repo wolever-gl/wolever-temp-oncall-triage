@@ -8,7 +8,7 @@
   },
   "scripts": {
     "oncall-triage": "bun run src/cli.ts",
-    "check-monitoring": "PATH=/Users/wolever/.local/share/mise/installs/gcloud/562.0.0/bin:$PATH bun run src/cli.ts preflight cases --state monitoring",
+    "check-monitoring": "PATH=/Users/wolever/.local/share/mise/installs/gcloud/562.0.0/bin:$PATH bun run src/cli.ts preflight cases --filter group.state=monitoring",
     "test": "bun test",
     "typecheck": "bunx tsc --noEmit"
   },

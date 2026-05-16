@@ -29,8 +29,9 @@ Use this repo as a case-workspace system, not a spreadsheet workflow.
 - Prefer shared namespaced filters for CLI selection, for example
   `--filter group.id=<group-id>`, `--filter group.state=new`,
   `--filter alert.org=albertsons_6`, and
-  `--filter alert.destination=live-ramp`. Older flags such as `--group`,
-  `--org`, and command-specific `--state` still work as compatibility aliases.
+  `--filter alert.destination=live-ramp`. Do not use old selector aliases such
+  as `--group`, `--org`, `--audience`, `--destination`, or queue `--state` on
+  selector-driven commands.
 - Current group states are `new`, `open`, `waiting`, `monitoring`, and `resolved`.
 - `new` means imported and grouped, but no evidence collection or triage work has started yet. Move a group to `open` when an agent or human begins investigation, appends evidence, runs a relevant check, or otherwise starts work.
 - Move a group to `monitoring` when evidence shows the only remaining action is a future recheck, such as all attached export checks being either healthy or still `export_processing`/`export_waiting`/`export_queued`. Do not leave these cases `open` unless some blocker still needs investigation.
