@@ -1,0 +1,38 @@
+{
+  "check_id": "chk_q3hynv525mk1rw_q35x0xhhq7quqb",
+  "source": "pagerduty",
+  "incident_id": "Q3HYNV525MK1RW",
+  "alert_id": "Q35X0XHHQ7QUQB",
+  "state": "open",
+  "scope": {
+    "env": "allegro",
+    "org_id": "3",
+    "audience_id": "79",
+    "endpoint_id": "app_dv360_1",
+    "destination_type": "dv360",
+    "checked_export_run_ids": [
+      "79-dv360_155-scheduled__2026-05-02T00:00:00+00:00",
+      "79-dv360_155-scheduled__2026-05-03T00:00:00+00:00",
+      "79-dv360_155-scheduled__2026-05-04T00:00:00+00:00",
+      "79-dv360_155-scheduled__2026-05-05T00:00:00+00:00",
+      "79-dv360_155-scheduled__2026-05-06T00:00:00+00:00",
+      "79-dv360_155-scheduled__2026-05-07T00:00:00+00:00",
+      "79-dv360_155-scheduled__2026-05-08T00:00:00+00:00",
+      "79-dv360_155-scheduled__2026-05-09T00:00:00+00:00",
+      "79-dv360_155-scheduled__2026-05-10T00:00:00+00:00",
+      "79-dv360_155-scheduled__2026-05-11T00:00:00+00:00"
+    ],
+    "glcli": "glcli --env allegro bifrost pizza --audience-id 79 --org-id 3"
+  },
+  "scope_key": "allegro|3|79|dv360|app_dv360_1|79-dv360_155-scheduled__2026-05-02T00:00:00+00:00,79-dv360_155-scheduled__2026-05-03T00:00:00+00:00,79-dv360_155-scheduled__2026-05-04T00:00:00+00:00,79-dv360_155-scheduled__2026-05-05T00:00:00+00:00,79-dv360_155-scheduled__2026-05-06T00:00:00+00:00,79-dv360_155-scheduled__2026-05-07T00:00:00+00:00,79-dv360_155-scheduled__2026-05-08T00:00:00+00:00,79-dv360_155-scheduled__2026-05-09T00:00:00+00:00,79-dv360_155-scheduled__2026-05-10T00:00:00+00:00,79-dv360_155-scheduled__2026-05-11T00:00:00+00:00",
+  "run_evaluations": [],
+  "blockers": [
+    "evidence_unavailable"
+  ],
+  "evidence_artifacts": [
+    "pizza_fetch_error:Unable to connect. Is the computer able to access the url?"
+  ],
+  "created_at": "2026-05-16T20:40:58.231Z",
+  "updated_at": "2026-05-16T20:40:58.231Z",
+  "next_check_at": "2026-05-16T20:55:58.231Z"
+}

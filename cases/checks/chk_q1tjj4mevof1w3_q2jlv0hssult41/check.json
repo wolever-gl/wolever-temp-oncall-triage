@@ -1,0 +1,78 @@
+{
+  "check_id": "chk_q1tjj4mevof1w3_q2jlv0hssult41",
+  "source": "pagerduty",
+  "incident_id": "Q1TJJ4MEVOF1W3",
+  "alert_id": "Q2JLV0HSSULT41",
+  "state": "healthy_closed",
+  "scope": {
+    "env": "prod",
+    "org_id": "310",
+    "audience_id": "29560",
+    "destination_type": "marketing_cloud",
+    "checked_export_run_ids": [
+      "29560-marketing_cloud_18087-scheduled__2026-05-13T00:00:00+00:00"
+    ],
+    "glcli": "glcli --env prod bifrost pizza --audience-id 29560 --org-id 310"
+  },
+  "scope_key": "prod|310|29560|marketing_cloud|unknown_endpoint|29560-marketing_cloud_18087-scheduled__2026-05-13T00:00:00+00:00",
+  "run_evaluations": [
+    {
+      "export_run_id": "29560-marketing_cloud_18087-scheduled__2026-05-13T00:00:00+00:00",
+      "health": "healthy",
+      "match_basis": "checked_export_run_id",
+      "blockers": [],
+      "selected_row": {
+        "export_run_id": "29560-marketing_cloud_18087-scheduled__2026-05-13T00:00:00+00:00",
+        "audience_id": "29560",
+        "endpoint_id": "app_marketing_cloud_1765",
+        "destination_type": "marketing_cloud",
+        "created_at": "2026-05-13T00:20:11.112917+00:00",
+        "snapshotting_state": "snapshotting_finished",
+        "export_state": "export_finished",
+        "failed_export_count": 0,
+        "raw": {
+          "export_state": "export_finished",
+          "successful_add_count": 117,
+          "successful_remove_count": 4,
+          "failed_export_count": 0,
+          "rejected_row_count": 159,
+          "total_row_count": 280,
+          "successful_expanded_add_count": 117,
+          "successful_expanded_remove_count": 4,
+          "failed_expanded_export_count": 0,
+          "rejected_expanded_row_count": 159,
+          "total_expanded_row_count": 280,
+          "enhanced_match_count": 0,
+          "enhanced_row_count": 0,
+          "enhanced_total_records": 0,
+          "total_batch_count": 1,
+          "completed_batch_count": 1,
+          "successful_batch_count": 1,
+          "failed_batch_count": 0,
+          "failure_reason": null,
+          "info": {
+            "internal_export_id": "13317e78d0dca200be75e4ebd6ac0087-20260513001746",
+            "export_run_id": "29560-marketing_cloud_18087-scheduled__2026-05-13T00:00:00+00:00",
+            "audience_id": null,
+            "internal_audience_id": "29560",
+            "audience_name": "",
+            "organization_id": "310",
+            "organization_name": "ford",
+            "platform": "marketing_cloud",
+            "endpoint_id": "app_marketing_cloud_1765",
+            "export_timestamp": "2026-05-13 00:17:46",
+            "error_file_uri": "gs://bkt-tfstate-cdmgl-ext-p/batch_errors/6c33ccdc-6748-4cc4-b637-91c8c675a772.csv",
+            "created_at": "2026-05-13T00:20:11.112917+00:00",
+            "export_complete_response": null
+          },
+          "snapshotting_state": "snapshotting_finished"
+        }
+      }
+    }
+  ],
+  "blockers": [],
+  "evidence_artifacts": [],
+  "created_at": "2026-05-16T20:44:55.241Z",
+  "updated_at": "2026-05-16T20:44:55.241Z",
+  "closed_at": "2026-05-16T20:44:55.241Z"
+}

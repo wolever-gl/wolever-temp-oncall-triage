@@ -1,0 +1,46 @@
+<!-- AUTO-GENERATED: Do not edit case.md directly. Put free-form investigation notes in notes.md. -->
+
+# trumanshow_336 client-sent-export-failure
+
+> Generated file. Do not edit directly; put free-form investigation notes in `notes.md`.
+
+State: `open`
+Tags: `triage:needs_review`
+Incidents: [Q12A5QFIM3F9LN](https://growthloop.pagerduty.com/incidents/Q12A5QFIM3F9LN)
+Alerts: 1
+
+## Current Summary
+
+trumanshow (Retail & CPG) - Audience 35783: Audience Export failure for 35783 sent to client.
+
+## Alert Scope
+
+- Alert facts: 1 imported, 1 linked to this group.
+- Orgs: `trumanshow_336`
+- Audiences: `35783`
+- Destinations: none
+- State tuples: none
+- Commands seen: `glcli --env prod bifrost pizza --audience-id 35783 --org-id 336`
+
+Representative alerts:
+- Q12A5QFIM3F9LN/Q3GVOV55Z30Y4R: 2026-05-13T17:18:48-07:00; trumanshow_336; audience 35783. trumanshow (Retail & CPG) - Audience 35783: Audience Export failure for 35783 sent to client.
+
+## Export Checks
+
+- Checks: 1.
+- States: `blocked`=1
+- Blockers seen: `missing_run_identity`
+
+Check evidence:
+- chk_q12a5qfim3f9ln_q3gvov55z30y4r (Q12A5QFIM3F9LN/Q3GVOV55Z30Y4R): state=`blocked`.
+  Scope: env=prod; org=336; audience=35783.
+  Command: `glcli --env prod bifrost pizza --audience-id 35783 --org-id 336`
+  Blockers: `missing_run_identity`
+
+## Next Action
+
+Agent should gather evidence, choose/apply a runbook when appropriate, and update this case.
+
+## Decision Trail
+
+See `lineage.jsonl`, `decisions.jsonl`, `evidence.jsonl`, and `actions.jsonl` for the durable audit trail.

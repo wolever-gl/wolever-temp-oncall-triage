@@ -1,0 +1,56 @@
+{
+  "group_id": "260515-evgo_402-no-batches",
+  "state": "resolved",
+  "tags": [
+    "triage:needs_review",
+    "resolved:export-healthy"
+  ],
+  "title": "evgo_402 no-batches",
+  "summary": "Resolved as false alarm/export healthy: all nine EVgo Braze alerts were checked in Pizza and the referenced runs are healthy_closed with snapshotting_finished/export_finished and failed=0.",
+  "deterministic_key": "v3|incident:Q157KO5ON9TWGO|org:evgo_402|class:no-batches",
+  "grouping_version": 3,
+  "created_at": "2026-05-16T00:38:01.850Z",
+  "updated_at": "2026-05-16T20:39:28.550Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q157KO5ON9TWGO",
+      "alert_id": "Q1CLWH1FCYZ8JN"
+    },
+    {
+      "incident_id": "Q157KO5ON9TWGO",
+      "alert_id": "Q3HHTRB9TTDA8J"
+    },
+    {
+      "incident_id": "Q157KO5ON9TWGO",
+      "alert_id": "Q0T0BAGCYBEHII"
+    },
+    {
+      "incident_id": "Q157KO5ON9TWGO",
+      "alert_id": "Q237T3CPXIN2SY"
+    },
+    {
+      "incident_id": "Q157KO5ON9TWGO",
+      "alert_id": "Q2D1S9TLC4TWNS"
+    },
+    {
+      "incident_id": "Q157KO5ON9TWGO",
+      "alert_id": "Q3ORFM9I02A91Y"
+    },
+    {
+      "incident_id": "Q157KO5ON9TWGO",
+      "alert_id": "Q3Q035J0UOBMIC"
+    },
+    {
+      "incident_id": "Q157KO5ON9TWGO",
+      "alert_id": "Q0WBQIUFYSLK0N"
+    },
+    {
+      "incident_id": "Q157KO5ON9TWGO",
+      "alert_id": "Q23QRTJVMEZ4QW"
+    }
+  ],
+  "incident_ids": [
+    "Q157KO5ON9TWGO"
+  ],
+  "related_group_ids": []
+}

@@ -1,0 +1,78 @@
+{
+  "check_id": "chk_q1tjj4mevof1w3_q22b7qprrdsa37",
+  "source": "pagerduty",
+  "incident_id": "Q1TJJ4MEVOF1W3",
+  "alert_id": "Q22B7QPRRDSA37",
+  "state": "healthy_closed",
+  "scope": {
+    "env": "prod",
+    "org_id": "310",
+    "audience_id": "32702",
+    "destination_type": "facebook",
+    "checked_export_run_ids": [
+      "32702-facebook_20066-scheduled__2026-05-13T00:00:00+00:00"
+    ],
+    "glcli": "glcli --env prod bifrost pizza --audience-id 32702 --org-id 310"
+  },
+  "scope_key": "prod|310|32702|facebook|unknown_endpoint|32702-facebook_20066-scheduled__2026-05-13T00:00:00+00:00",
+  "run_evaluations": [
+    {
+      "export_run_id": "32702-facebook_20066-scheduled__2026-05-13T00:00:00+00:00",
+      "health": "healthy",
+      "match_basis": "checked_export_run_id",
+      "blockers": [],
+      "selected_row": {
+        "export_run_id": "32702-facebook_20066-scheduled__2026-05-13T00:00:00+00:00",
+        "audience_id": "32702",
+        "endpoint_id": "app_facebook_2107",
+        "destination_type": "facebook",
+        "created_at": "2026-05-13T00:32:49.903210+00:00",
+        "snapshotting_state": "snapshotting_finished",
+        "export_state": "export_finished",
+        "failed_export_count": 0,
+        "raw": {
+          "export_state": "export_finished",
+          "successful_add_count": 8425677,
+          "successful_remove_count": 0,
+          "failed_export_count": 0,
+          "rejected_row_count": 1214,
+          "total_row_count": 8426891,
+          "successful_expanded_add_count": 0,
+          "successful_expanded_remove_count": 0,
+          "failed_expanded_export_count": 0,
+          "rejected_expanded_row_count": 1214,
+          "total_expanded_row_count": 8426891,
+          "enhanced_match_count": 0,
+          "enhanced_row_count": 0,
+          "enhanced_total_records": 0,
+          "total_batch_count": 68,
+          "completed_batch_count": 68,
+          "successful_batch_count": 68,
+          "failed_batch_count": 0,
+          "failure_reason": null,
+          "info": {
+            "internal_export_id": "44c5b524c3c5bd61cac16c72f34495cc-20260513002839",
+            "export_run_id": "32702-facebook_20066-scheduled__2026-05-13T00:00:00+00:00",
+            "audience_id": "120239853115570298",
+            "internal_audience_id": "32702",
+            "audience_name": "",
+            "organization_id": "310",
+            "organization_name": "ford",
+            "platform": "facebook",
+            "endpoint_id": "app_facebook_2107",
+            "export_timestamp": "2026-05-13 00:28:39",
+            "error_file_uri": "gs://bkt-tfstate-cdmgl-ext-p/batch_errors/62b9db5d-d521-45db-bb10-cc2794839c11.csv",
+            "created_at": "2026-05-13T00:32:49.903210+00:00",
+            "export_complete_response": null
+          },
+          "snapshotting_state": "snapshotting_finished"
+        }
+      }
+    }
+  ],
+  "blockers": [],
+  "evidence_artifacts": [],
+  "created_at": "2026-05-16T20:44:55.241Z",
+  "updated_at": "2026-05-16T20:44:55.241Z",
+  "closed_at": "2026-05-16T20:44:55.241Z"
+}

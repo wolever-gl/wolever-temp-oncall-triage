@@ -1,0 +1,2 @@
+{"ts":"2026-05-16T00:38:01.850Z","actor":"oncall-triage","decision":"created_group","rationale":"Conservative deterministic grouping created a new group for v3|incident:Q157KO5ON9TWGO|org:evgo_402|class:client-sent-export-failure."}
+{"ts":"2026-05-16T20:47:41.809Z","actor":"check-exports","decision":"started_work","rationale":"Export evidence check evaluated alert facts for this group."}

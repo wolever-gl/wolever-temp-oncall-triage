@@ -1,0 +1,23 @@
+{
+  "group_id": "260514-birchwood_274-client-sent-export-failure",
+  "state": "open",
+  "tags": [
+    "triage:needs_review"
+  ],
+  "title": "birchwood_274 client-sent-export-failure",
+  "summary": "birchwood (default) - SignalRoute 723: SignalRoute Export failure for 723 sent to client.",
+  "deterministic_key": "v3|incident:Q3PJ7W2K3Y9LJV|org:birchwood_274|class:client-sent-export-failure",
+  "grouping_version": 3,
+  "created_at": "2026-05-16T00:38:01.850Z",
+  "updated_at": "2026-05-16T20:47:27.956Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q3PJ7W2K3Y9LJV",
+      "alert_id": "Q0S5D7L5PK1NBX"
+    }
+  ],
+  "incident_ids": [
+    "Q3PJ7W2K3Y9LJV"
+  ],
+  "related_group_ids": []
+}
