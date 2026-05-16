@@ -4,7 +4,7 @@
 
 > Generated file. Do not edit directly; put free-form investigation notes in `notes.md`.
 
-State: `new`
+State: `open`
 Tags: `triage:needs_review`
 Incidents: [Q38JR11G2ENK2W](https://growthloop.pagerduty.com/incidents/Q38JR11G2ENK2W)
 Alerts: 10
@@ -33,6 +33,54 @@ Representative alerts:
 - Q38JR11G2ENK2W/Q1QONB2ZKNS7PV: 2026-05-14T13:56:05-07:00; albertsons_6; audience 12875. albertsons (Albertsons Media) - Audience 12875: 0 successfull_exports from pizza tracker found 10 minutes after new export
 - Q38JR11G2ENK2W/Q3WNLOQE86QYWA: 2026-05-15T12:50:16-07:00; albertsons_6; audience 12810. albertsons (Albertsons Media) - Audience 12810: 0 successfull_exports from pizza tracker found 10 minutes after new export
 - Q38JR11G2ENK2W/Q0ZDIAGV3OJULA: 2026-05-15T12:51:58-07:00; albertsons_6; audience 12814. albertsons (Albertsons Media) - Audience 12814: 0 successfull_exports from pizza tracker found 10 minutes after new export
+
+## Export Checks
+
+- Checks: 10.
+- States: `blocked`=10
+- Blockers seen: `missing_run_identity`
+
+Check evidence:
+- chk_q38jr11g2enk2w_q0uj754hnuza0w (Q38JR11G2ENK2W/Q0UJ754HNUZA0W): state=`blocked`.
+  Scope: env=albertsons; org=6; audience=12874.
+  Command: `glcli --env albertsons bifrost pizza --audience-id 12874 --org-id 6`
+  Blockers: `missing_run_identity`
+- chk_q38jr11g2enk2w_q0uxytqae5seef (Q38JR11G2ENK2W/Q0UXYTQAE5SEEF): state=`blocked`.
+  Scope: env=albertsons; org=6; audience=12866.
+  Command: `glcli --env albertsons bifrost pizza --audience-id 12866 --org-id 6`
+  Blockers: `missing_run_identity`
+- chk_q38jr11g2enk2w_q0zdiagv3ojula (Q38JR11G2ENK2W/Q0ZDIAGV3OJULA): state=`blocked`.
+  Scope: env=albertsons; org=6; audience=12814.
+  Command: `glcli --env albertsons bifrost pizza --audience-id 12814 --org-id 6`
+  Blockers: `missing_run_identity`
+- chk_q38jr11g2enk2w_q1qonb2zkns7pv (Q38JR11G2ENK2W/Q1QONB2ZKNS7PV): state=`blocked`.
+  Scope: env=albertsons; org=6; audience=12875.
+  Command: `glcli --env albertsons bifrost pizza --audience-id 12875 --org-id 6`
+  Blockers: `missing_run_identity`
+- chk_q38jr11g2enk2w_q24005uuw7icks (Q38JR11G2ENK2W/Q24005UUW7ICKS): state=`blocked`.
+  Scope: env=albertsons; org=6; audience=12862.
+  Command: `glcli --env albertsons bifrost pizza --audience-id 12862 --org-id 6`
+  Blockers: `missing_run_identity`
+- chk_q38jr11g2enk2w_q2m2bhx98mhzq4 (Q38JR11G2ENK2W/Q2M2BHX98MHZQ4): state=`blocked`.
+  Scope: env=albertsons; org=6; audience=12878.
+  Command: `glcli --env albertsons bifrost pizza --audience-id 12878 --org-id 6`
+  Blockers: `missing_run_identity`
+- chk_q38jr11g2enk2w_q2otoa7jsd823s (Q38JR11G2ENK2W/Q2OTOA7JSD823S): state=`blocked`.
+  Scope: env=albertsons; org=6; audience=12873.
+  Command: `glcli --env albertsons bifrost pizza --audience-id 12873 --org-id 6`
+  Blockers: `missing_run_identity`
+- chk_q38jr11g2enk2w_q3o67ytdvsankl (Q38JR11G2ENK2W/Q3O67YTDVSANKL): state=`blocked`.
+  Scope: env=albertsons; org=6; audience=12865.
+  Command: `glcli --env albertsons bifrost pizza --audience-id 12865 --org-id 6`
+  Blockers: `missing_run_identity`
+- chk_q38jr11g2enk2w_q3wnloqe86qywa (Q38JR11G2ENK2W/Q3WNLOQE86QYWA): state=`blocked`.
+  Scope: env=albertsons; org=6; audience=12810.
+  Command: `glcli --env albertsons bifrost pizza --audience-id 12810 --org-id 6`
+  Blockers: `missing_run_identity`
+- chk_q38jr11g2enk2w_q3wxbz7nhk8ajm (Q38JR11G2ENK2W/Q3WXBZ7NHK8AJM): state=`blocked`.
+  Scope: env=albertsons; org=6; audience=12876.
+  Command: `glcli --env albertsons bifrost pizza --audience-id 12876 --org-id 6`
+  Blockers: `missing_run_identity`
 
 ## Next Action
 

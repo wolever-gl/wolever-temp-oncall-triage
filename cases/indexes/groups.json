@@ -98,20 +98,6 @@
     "path": "groups/new/260514-allegro_3-dv360-export-processing/case.md"
   },
   {
-    "group_id": "260515-albertsons_6-zero-success-02",
-    "state": "new",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "albertsons_6 zero-success",
-    "summary": "albertsons (Albertsons Media) - Audience 12814: 0 successfull_exports from pizza tracker found 10 minutes after new export",
-    "incident_ids": [
-      "Q38JR11G2ENK2W"
-    ],
-    "alert_count": 10,
-    "path": "groups/new/260515-albertsons_6-zero-success-02/case.md"
-  },
-  {
     "group_id": "260515-allegro_3-dv360-export-processing",
     "state": "new",
     "tags": [
@@ -614,6 +600,20 @@
     ],
     "alert_count": 2,
     "path": "groups/open/260515-albertsons_6-zero-success/case.md"
+  },
+  {
+    "group_id": "260515-albertsons_6-zero-success-02",
+    "state": "open",
+    "tags": [
+      "triage:needs_review"
+    ],
+    "title": "albertsons_6 zero-success",
+    "summary": "albertsons (Albertsons Media) - Audience 12814: 0 successfull_exports from pizza tracker found 10 minutes after new export",
+    "incident_ids": [
+      "Q38JR11G2ENK2W"
+    ],
+    "alert_count": 10,
+    "path": "groups/open/260515-albertsons_6-zero-success-02/case.md"
   },
   {
     "group_id": "260515-birchwood_274-salesforce-audience-export-error",

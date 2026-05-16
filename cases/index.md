@@ -1,10 +1,10 @@
 # On-call Triage Cases
 
-Generated: 2026-05-16T21:06:55.317Z
+Generated: 2026-05-16T21:09:19.337Z
 Open groups: 50
 Alert facts: 698
 
-## New (9)
+## New (8)
 
 | Tags | Group | Summary | Incidents | Alerts |
 |---|---|---|---|---:|
@@ -15,10 +15,9 @@ Alert facts: 698
 | `triage:needs_review` | [260514-allegro_3-client-sent-export-failure](groups/new/260514-allegro_3-client-sent-export-failure/case.md) | allegro (Marketing) - Audience 302: Audience Export failure for 302 sent to client. | Q2KT0WUDEVL42Q | 37 |
 | `triage:needs_review` | [260514-allegro_3-dv360-export-error](groups/new/260514-allegro_3-dv360-export-error/case.md) | allegro (Marketing): Exports for audience 1277 failed with states: <(snapshotting_finished,export_error)> | Q2KT0WUDEVL42Q | 1 |
 | `triage:needs_review` | [260514-allegro_3-dv360-export-processing](groups/new/260514-allegro_3-dv360-export-processing/case.md) | allegro (Marketing): Exports for audience 1156 failed with states: <(snapshotting_finished,export_processing)> | Q2KT0WUDEVL42Q | 13 |
-| `triage:needs_review` | [260515-albertsons_6-zero-success-02](groups/new/260515-albertsons_6-zero-success-02/case.md) | albertsons (Albertsons Media) - Audience 12814: 0 successfull_exports from pizza tracker found 10 minutes after new export | Q38JR11G2ENK2W | 10 |
 | `triage:needs_review` | [260515-allegro_3-dv360-export-processing](groups/new/260515-allegro_3-dv360-export-processing/case.md) | allegro (Marketing): Exports for audience 605 failed with states: <(snapshotting_finished,export_processing)> | Q3GQQRY1UQLBSN | 1 |
 
-## Open (38)
+## Open (39)
 
 | Tags | Group | Summary | Incidents | Alerts |
 |---|---|---|---|---:|
@@ -57,6 +56,7 @@ Alert facts: 698
 | `triage:needs_review` | [260515-451-snapshotting-error](groups/open/260515-451-snapshotting-error/case.md) | ASU Enterprise Partners (Alumni): Exports for audience 26039 failed with states: <(snapshotting_error,no_batches)> | Q1UC14QNZK76EZ | 6 |
 | `triage:needs_review` | [260515-albertsons_6-live-ramp-export-error](groups/open/260515-albertsons_6-live-ramp-export-error/case.md) | albertsons (Albertsons Media): Exports for audience 12862 failed with states: <(snapshotting_finished,export_error)> | Q38JR11G2ENK2W | 1 |
 | `triage:needs_review` | [260515-albertsons_6-zero-success](groups/open/260515-albertsons_6-zero-success/case.md) | albertsons (Albertsons Media) - Audience 10684: 0 successfull_exports from pizza tracker found 10 minutes after new export | Q269WMZF4MKMNL | 2 |
+| `triage:needs_review` | [260515-albertsons_6-zero-success-02](groups/open/260515-albertsons_6-zero-success-02/case.md) | albertsons (Albertsons Media) - Audience 12814: 0 successfull_exports from pizza tracker found 10 minutes after new export | Q38JR11G2ENK2W | 10 |
 | `triage:needs_review` | [260515-birchwood_274-salesforce-audience-export-error](groups/open/260515-birchwood_274-salesforce-audience-export-error/case.md) | birchwood (default): Exports for signal 723 failed with states: <(snapshotting_finished,export_error)> | Q3PJ7W2K3Y9LJV | 1 |
 | `triage:needs_review` | [260515-pgatourhq_219-no-batches](groups/open/260515-pgatourhq_219-no-batches/case.md) | pgatourhq (New World Order): Exports for audience 31918 failed with states: <(snapshotting_finished,no_batches)> | Q2DJCY3XC2BSBG | 13 |
 | `triage:needs_review` | [260515-royals_4-snapshotting-error](groups/open/260515-royals_4-snapshotting-error/case.md) | royals (default): Exports for signal 203 failed with states: <(snapshotting_error,no_batches)> | Q08B553ANQ9KMI | 1 |
