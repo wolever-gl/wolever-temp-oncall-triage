@@ -468,6 +468,27 @@
     "path": "groups/open/260515-royals_4-snapshotting-error/case.md"
   },
   {
+    "group_id": "grp_260513_albertsons_6_client_sent_export_failure_split_0066",
+    "state": "open",
+    "tags": [
+      "triage:needs_review",
+      "triage:snapshotting-error",
+      "bug:service-quervice",
+      "triage:manual_retry_needed",
+      "monitoring:snapshotting-retry",
+      "monitoring:retry-processing",
+      "triage:retry_failed"
+    ],
+    "title": "albertsons_6 client-sent-export-failure split",
+    "summary": "Manual retry did not recover Albertsons LiveRamp audiences 8473 or 10073. Heartbeat Pizza recheck found both latest relevant runs back in terminal snapshotting_error/no_batches with pre_snapshotting_check unknown error; needs platform/Quervice follow-up before another retry.",
+    "incident_ids": [
+      "Q2EJWG22CER0LA",
+      "Q38JR11G2ENK2W"
+    ],
+    "alert_count": 2,
+    "path": "groups/open/grp_260513_albertsons_6_client_sent_export_failure_split_0066/case.md"
+  },
+  {
     "group_id": "260512-albertsons_6-liveramp-waiting-uploads",
     "state": "monitoring",
     "tags": [
@@ -527,26 +548,6 @@
     ],
     "alert_count": 10,
     "path": "groups/monitoring/260515-albertsons_6-zero-success-02/case.md"
-  },
-  {
-    "group_id": "grp_260513_albertsons_6_client_sent_export_failure_split_0066",
-    "state": "monitoring",
-    "tags": [
-      "triage:needs_review",
-      "triage:snapshotting-error",
-      "bug:service-quervice",
-      "triage:manual_retry_needed",
-      "monitoring:snapshotting-retry",
-      "monitoring:retry-processing"
-    ],
-    "title": "albertsons_6 client-sent-export-failure split",
-    "summary": "Monitoring: Albertsons audiences 8473 and 10073 remain snapshotting_processing/no_batches after manual retry attempts.",
-    "incident_ids": [
-      "Q2EJWG22CER0LA",
-      "Q38JR11G2ENK2W"
-    ],
-    "alert_count": 2,
-    "path": "groups/monitoring/grp_260513_albertsons_6_client_sent_export_failure_split_0066/case.md"
   },
   {
     "group_id": "grp_260514_ford_310_dv360_export_error_split_0074",

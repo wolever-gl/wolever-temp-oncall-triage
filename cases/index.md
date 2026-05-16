@@ -1,6 +1,6 @@
 # On-call Triage Cases
 
-Generated: 2026-05-16T23:24:52.374Z
+Generated: 2026-05-16T23:31:32.886Z
 Open groups: 43
 Alert facts: 698
 
@@ -17,7 +17,7 @@ Alert facts: 698
 | `triage:needs_review` | [260514-allegro_3-dv360-export-processing](groups/new/260514-allegro_3-dv360-export-processing/case.md) | allegro (Marketing): Exports for audience 1156 failed with states: <(snapshotting_finished,export_processing)> | Q2KT0WUDEVL42Q | 13 |
 | `triage:needs_review` | [260515-allegro_3-dv360-export-processing](groups/new/260515-allegro_3-dv360-export-processing/case.md) | allegro (Marketing): Exports for audience 605 failed with states: <(snapshotting_finished,export_processing)> | Q3GQQRY1UQLBSN | 1 |
 
-## Open (25)
+## Open (26)
 
 | Tags | Group | Summary | Incidents | Alerts |
 |---|---|---|---|---:|
@@ -46,8 +46,9 @@ Alert facts: 698
 | `triage:needs_review` | [260515-birchwood_274-salesforce-audience-export-error](groups/open/260515-birchwood_274-salesforce-audience-export-error/case.md) | birchwood (default): Exports for signal 723 failed with states: <(snapshotting_finished,export_error)> | Q3PJ7W2K3Y9LJV | 1 |
 | `triage:needs_review` | [260515-pgatourhq_219-no-batches](groups/open/260515-pgatourhq_219-no-batches/case.md) | pgatourhq (New World Order): Exports for audience 31918 failed with states: <(snapshotting_finished,no_batches)> | Q2DJCY3XC2BSBG | 13 |
 | `triage:needs_review` | [260515-royals_4-snapshotting-error](groups/open/260515-royals_4-snapshotting-error/case.md) | royals (default): Exports for signal 203 failed with states: <(snapshotting_error,no_batches)> | Q08B553ANQ9KMI | 1 |
+| `triage:needs_review`<br>`triage:snapshotting-error`<br>`bug:service-quervice`<br>`triage:manual_retry_needed`<br>`monitoring:snapshotting-retry`<br>`monitoring:retry-processing`<br>`triage:retry_failed` | [grp_260513_albertsons_6_client_sent_export_failure_split_0066](groups/open/grp_260513_albertsons_6_client_sent_export_failure_split_0066/case.md) | Manual retry did not recover Albertsons LiveRamp audiences 8473 or 10073. Heartbeat Pizza recheck found both latest relevant runs back in terminal snapshotting_error/no_batches with pre_snapshotting_check unknown error; needs platform/Quervice follow-up before another retry. | Q2EJWG22CER0LA<br>Q38JR11G2ENK2W | 2 |
 
-## Monitoring (6)
+## Monitoring (5)
 
 | Tags | Group | Summary | Incidents | Alerts |
 |---|---|---|---|---:|
@@ -55,7 +56,6 @@ Alert facts: 698
 | `triage:needs_review`<br>`monitoring:export-processing` | [260513-albertsons_6-client-sent-export-failure](groups/monitoring/260513-albertsons_6-client-sent-export-failure/case.md) | Auto-monitored from Pizza export checks: 2 alert-scoped export check(s) are still processing and 0 are already healthy. | Q2EJWG22CER0LA | 2 |
 | `triage:needs_review`<br>`monitoring:export-processing` | [260513-albertsons_6-zero-success](groups/monitoring/260513-albertsons_6-zero-success/case.md) | Monitoring: audience 12742 has recovered, while audience 12801 remains export_processing with zero failures. | Q2EJWG22CER0LA | 2 |
 | `triage:needs_review`<br>`monitoring:export-processing` | [260515-albertsons_6-zero-success-02](groups/monitoring/260515-albertsons_6-zero-success-02/case.md) | Monitoring: 5 Albertsons zero-success audiences have recovered and 5 remain export_processing with zero failures. | Q38JR11G2ENK2W | 10 |
-| `triage:needs_review`<br>`triage:snapshotting-error`<br>`bug:service-quervice`<br>`triage:manual_retry_needed`<br>`monitoring:snapshotting-retry`<br>`monitoring:retry-processing` | [grp_260513_albertsons_6_client_sent_export_failure_split_0066](groups/monitoring/grp_260513_albertsons_6_client_sent_export_failure_split_0066/case.md) | Monitoring: Albertsons audiences 8473 and 10073 remain snapshotting_processing/no_batches after manual retry attempts. | Q2EJWG22CER0LA<br>Q38JR11G2ENK2W | 2 |
 | `triage:needs_review`<br>`resolved:recovered`<br>`triage:delta-redrop-review`<br>`monitoring:dv360-redrop-rate-limited`<br>`monitoring:dv360-redrop-processing` | [grp_260514_ford_310_dv360_export_error_split_0074](groups/monitoring/grp_260514_ford_310_dv360_export_error_split_0074/case.md) | Monitoring: Ford 34062 DV360 re-drop is now reflected in Pizza as export_processing with zero failures. | Q1TJJ4MEVOF1W3<br>Q3HWKW0FS3VTHE | 2 |
 
 ## Waiting (4)

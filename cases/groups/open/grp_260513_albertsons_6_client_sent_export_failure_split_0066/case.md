@@ -4,14 +4,14 @@
 
 > Generated file. Do not edit directly; put free-form investigation notes in `notes.md`.
 
-State: `monitoring`
-Tags: `triage:needs_review`, `triage:snapshotting-error`, `bug:service-quervice`, `triage:manual_retry_needed`, `monitoring:snapshotting-retry`, `monitoring:retry-processing`
+State: `open`
+Tags: `triage:needs_review`, `triage:snapshotting-error`, `bug:service-quervice`, `triage:manual_retry_needed`, `monitoring:snapshotting-retry`, `monitoring:retry-processing`, `triage:retry_failed`
 Incidents: [Q2EJWG22CER0LA](https://growthloop.pagerduty.com/incidents/Q2EJWG22CER0LA), [Q38JR11G2ENK2W](https://growthloop.pagerduty.com/incidents/Q38JR11G2ENK2W)
 Alerts: 2
 
 ## Current Summary
 
-Monitoring: Albertsons audiences 8473 and 10073 remain snapshotting_processing/no_batches after manual retry attempts.
+Manual retry did not recover Albertsons LiveRamp audiences 8473 or 10073. Heartbeat Pizza recheck found both latest relevant runs back in terminal snapshotting_error/no_batches with pre_snapshotting_check unknown error; needs platform/Quervice follow-up before another retry.
 
 ## Alert Scope
 
@@ -44,6 +44,10 @@ Check evidence:
 
 ## Recent Evidence
 
+- Heartbeat recheck on 2026-05-16 23:27 UTC found both manual retry attempts landed back in terminal snapshotting_error/no_batches. Audience 8473 latest relevant run 8473-live_ramp_activation_1649-scheduled__2026-05-13T00:00:00+00:00 now shows failure reason "Snapshotting failed while running pre_snapshotting_check: unknown error". Audience 10073 latest relevant run 10073-live_ramp_activation_2061-scheduled__2026-05-15T00:00:00+00:00 shows the same terminal snapshotting_error/no_batches failure. The retry did not recover either audience.
+  Source: `glcli bifrost pizza`; kind: `pizza`; captured: `2026-05-16T23:31:27.255Z`.
+  Command: `glcli --env albertsons bifrost pizza --audience-id 8473 --org-id 6 --format json`
+  Command: `glcli --env albertsons bifrost pizza --audience-id 10073 --org-id 6 --format json`
 - Monitoring check-in: audiences 8473 and 10073 remain snapshotting_processing/no_batches after retry attempts. Neither has reached export_finished or a new terminal failure in Pizza.
   Source: `monitoring preflight/manual Pizza`; kind: `pizza`; captured: `2026-05-16T23:03:54.691Z`.
   Command: `glcli --env albertsons bifrost pizza --audience-id 8473 --org-id 6; glcli --env albertsons bifrost pizza --audience-id 10073 --org-id 6`
@@ -58,9 +62,6 @@ Check evidence:
 - Audience 10073 logs show snapshotting started, base_table_not_empty succeeded, and an initial pre_snapshotting_check returned 200; a subsequent pre_snapshotting_check to Quervice returned 502 after a long upstream wait, with nginx logging upstream prematurely closed connection while reading response header. This matches the 8473 Quervice service-side failure pattern.
   Source: `gl-client-albertsons`; kind: `gcloud_logs`; captured: `2026-05-16T21:48:05.458Z`.
   Command: `gcloud logging read timestamp>=2026-05-15T02:20:00Z timestamp<=2026-05-15T03:00:00Z (10073 OR live_ramp_activation_2061) --project=gl-client-albertsons`
-- Audience 10073 latest Pizza row is 2026-05-15 02:40:38 UTC, run 10073-live_ramp_activation_2061-scheduled__2026-05-15T00:00:00+00:00, state snapshotting_error/no_batches with failure reason: Snapshotting failed while running pre_snapshotting_check: unknown error. There is no later successful run.
-  Source: `glcli bifrost pizza`; kind: `pizza`; captured: `2026-05-16T21:48:05.323Z`.
-  Command: `glcli --env albertsons bifrost pizza --audience-id 10073 --org-id 6 --format json`
 
 ## Next Action
 

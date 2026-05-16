@@ -1,20 +1,21 @@
 {
   "group_id": "grp_260513_albertsons_6_client_sent_export_failure_split_0066",
-  "state": "monitoring",
+  "state": "open",
   "tags": [
     "triage:needs_review",
     "triage:snapshotting-error",
     "bug:service-quervice",
     "triage:manual_retry_needed",
     "monitoring:snapshotting-retry",
-    "monitoring:retry-processing"
+    "monitoring:retry-processing",
+    "triage:retry_failed"
   ],
   "title": "albertsons_6 client-sent-export-failure split",
-  "summary": "Monitoring: Albertsons audiences 8473 and 10073 remain snapshotting_processing/no_batches after manual retry attempts.",
+  "summary": "Manual retry did not recover Albertsons LiveRamp audiences 8473 or 10073. Heartbeat Pizza recheck found both latest relevant runs back in terminal snapshotting_error/no_batches with pre_snapshotting_check unknown error; needs platform/Quervice follow-up before another retry.",
   "deterministic_key": "v3|incident:Q2EJWG22CER0LA|org:albertsons_6|class:client-sent-export-failure|split|Q2N69VPQCMRHGL",
   "grouping_version": 3,
   "created_at": "2026-05-16T21:41:58.819Z",
-  "updated_at": "2026-05-16T23:03:54.747Z",
+  "updated_at": "2026-05-16T23:31:31.523Z",
   "alert_refs": [
     {
       "incident_id": "Q2EJWG22CER0LA",
