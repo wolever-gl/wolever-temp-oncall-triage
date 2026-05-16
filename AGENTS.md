@@ -17,6 +17,9 @@ Use this repo as a case-workspace system, not a spreadsheet workflow.
 - Generated cohorts and related groups are navigation aids, not persisted truth, until an agent records an explicit relationship or merge.
 - Agents may write compact PagerDuty breadcrumbs when useful.
 - Keep state in `state.json` and the human summary in `case.md`.
+- Open cases must be self-orienting in `case.md`: include enough alert scope,
+  export-check results, and investigation evidence for a human to understand
+  what has been looked at without opening every JSON artifact first.
 - Keep append-only `lineage.jsonl`, `evidence.jsonl`, `decisions.jsonl`, `actions.jsonl`, and structural events.
 - Keep `DECISIONS.md`, `LEARNINGS.md`, and `LEXICON.md` current when work changes architecture, behavior, or terminology.
 - Use the CLI for structural mutations. Direct file edits are fine for narrative and artifact files.

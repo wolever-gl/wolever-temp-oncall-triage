@@ -2,8 +2,10 @@ import { describe, expect, test } from "bun:test";
 import { mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import path from "node:path";
+import { checkExportsWorkspace } from "./checkExports";
 import { appendEvidence, groupImportedAlerts, groupTaggedAlerts, importPagerDutyIncident, loadAllGroups, loadMatchRules, mergeGroups, queryAlertFacts, readIncidentRecord, regenerateIndex, runAlertTagger, splitGroup, syncPagerDutyWorkspace, transitionGroup } from "./workspace";
 import type { PagerDutyIncidentStatusRecord } from "./pagerduty";
+import type { PizzaExportRow } from "./schema";
 
 const fixture = path.resolve(import.meta.dir, "..", "fixtures", "pagerduty-alerts.json");
 
@@ -179,6 +181,54 @@ console.log(JSON.stringify({
       expect(caseMarkdown).toContain("base_table_not_empty_check_failed");
       expect(caseMarkdown).toContain("[Scoped run logs](https://console.cloud.google.com/logs/query;query=test?project=flywheel-prod-328213)");
       expect(caseMarkdown).toContain("gcloud logging read");
+    } finally {
+      await rm(workspaceDir, { recursive: true, force: true });
+    }
+  });
+
+  test("regenerating the index refreshes case markdown with export check evidence", async () => {
+    const workspaceDir = await mkdtemp(path.join(tmpdir(), "oncall-triage-v2-"));
+    try {
+      await importPagerDutyIncident({ workspaceDir, incident: "QTEST123", alertsFile: fixture });
+      const grouped = await groupImportedAlerts(workspaceDir);
+      const groupId = grouped.groups[0]!;
+      const rows: PizzaExportRow[] = [
+        {
+          export_run_id: "16985-marketing_cloud_10988-scheduled__2026-05-15T16:00:00+00:00",
+          audience_id: "16985",
+          destination_type: "marketing_cloud",
+          snapshotting_state: "snapshotting_finished",
+          export_state: "export_finished",
+          failed_export_count: 0,
+          created_at: "2026-05-15T16:30:00Z",
+        },
+        {
+          export_run_id: "20770-marketing_cloud_10988-scheduled__2026-05-15T16:00:00+00:00",
+          audience_id: "20770",
+          destination_type: "marketing_cloud",
+          snapshotting_state: "snapshotting_finished",
+          export_state: "export_finished",
+          failed_export_count: 0,
+          created_at: "2026-05-15T16:31:00Z",
+        },
+      ];
+
+      await checkExportsWorkspace({
+        workspaceDir,
+        apply: true,
+        now: new Date("2026-05-15T17:00:00Z"),
+        fetchPizzaRows: async () => rows,
+      });
+      await regenerateIndex(workspaceDir);
+
+      const caseMarkdown = await readFile(groupFile(workspaceDir, "open", groupId, "case.md"), "utf8");
+      expect(caseMarkdown).toContain("## Alert Scope");
+      expect(caseMarkdown).toContain("## Export Checks");
+      expect(caseMarkdown).toContain("chk_qtest123_palt1");
+      expect(caseMarkdown).toContain("Checked runs:");
+      expect(caseMarkdown).toContain("16985-marketing_cloud_10988-scheduled__2026-05-15T16:00:00+00:00");
+      expect(caseMarkdown).toContain("health=`healthy`");
+      expect(caseMarkdown).toContain("Command: `glcli --env prod bifrost pizza --org-id 395 --audience-id 16985`");
     } finally {
       await rm(workspaceDir, { recursive: true, force: true });
     }

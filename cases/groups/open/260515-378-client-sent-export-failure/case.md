@@ -9,29 +9,34 @@ Alerts: 1
 
 Cincinnati Reds (default) - Audience 34484: Audience Export failure for 34484 sent to client.
 
-Latest scoped evidence points to a snapshotting precondition failure, not an Iterable delivery failure:
+## Alert Scope
 
-- Org: `378` / `cincinnatireds_378`
-- Audience: `34484`
-- Destination/export: `iterable_21078`
-- Export run: `34484-iterable_21078-scheduled__2026-05-16T00:00:00+00:00`
-- Latest pizza state: `snapshotting_error` / `no_batches`, `total rows=0`, `failure reason=base_table_not_empty_check_failed`
-- Snapshotting logs show two attempts for this same scheduled run, both failing with `Base table not empty check failed`, `success=False`, `retry=False`.
-- Ownership guess: likely client/source-data precondition issue rather than an obvious GrowthLoop product bug. Direct BigQuery validation against `reds-wheelhouse-prod.flywheel_system.model_564_b54e77` was blocked by missing query permission, so confidence is medium.
-- Progress: blocked for the current run. No later healthy run was present in `glcli` output.
+- Alert facts: 1 imported, 1 linked to this group.
+- Orgs: `378`
+- Audiences: `34484`
+- Destinations: none
+- State tuples: none
+- Commands seen: `glcli --env prod bifrost pizza --audience-id 34484 --org-id 378`
 
-Useful commands:
+Representative alerts:
+- Q33KFL1KESEMVC/Q33GT851B14YV7: 2026-05-15T17:25:50-07:00; 378; audience 34484. Cincinnati Reds (default) - Audience 34484: Audience Export failure for 34484 sent to client.
 
-```sh
-glcli --env prod bifrost pizza --audience-id 34484 --org-id 378 --format=json
+## Export Checks
 
-gcloud logging read 'resource.type="k8s_container" AND jsonPayload.organization_id="cincinnatireds_378" AND jsonPayload.internal_audience_id="34484" AND jsonPayload.export_run_id_hash="b1568a5bbc46b6dfb756d73e575dd043" AND timestamp>="2026-05-16T00:20:00Z" AND timestamp<="2026-05-16T00:35:00Z"' --project=flywheel-prod-328213
-```
+- Checks: 1.
+- States: `blocked`=1
+- Blockers seen: `missing_run_identity`
 
-Useful logs:
+Check evidence:
+- chk_q33kfl1kesemvc_q33gt851b14yv7 (Q33KFL1KESEMVC/Q33GT851B14YV7): state=`blocked`.
+  Scope: env=prod; org=378; audience=34484.
+  Command: `glcli --env prod bifrost pizza --audience-id 34484 --org-id 378`
+  Blockers: `missing_run_identity`
 
-- [Scoped run logs](https://console.cloud.google.com/logs/query;query=resource.type%3D%22k8s_container%22%0AjsonPayload.organization_id%3D%22cincinnatireds_378%22%0AjsonPayload.internal_audience_id%3D%2234484%22%0AjsonPayload.export_run_id_hash%3D%22b1568a5bbc46b6dfb756d73e575dd043%22%0Atimestamp%3E%3D%222026-05-16T00%3A20%3A00Z%22%0Atimestamp%3C%3D%222026-05-16T00%3A35%3A00Z%22;timeRange=2026-05-16T00:20:00Z%2F2026-05-16T00:35:00Z?project=flywheel-prod-328213)
-- [Exact error log entries](https://console.cloud.google.com/logs/query;query=resource.type%3D%22k8s_container%22%0AinsertId%3D(%22kbbonx3mvzm3e4tw%22%20OR%20%220gamvmn5o20k3vvr%22);timeRange=2026-05-16T00:20:00Z%2F2026-05-16T00:35:00Z?project=flywheel-prod-328213)
+## Recent Evidence
+
+- For Cincinnati Reds org 378 audience 34484, glcli shows latest run 34484-iterable_21078-scheduled__2026-05-16T00:00:00+00:00 created 2026-05-16 00:25:15 UTC ended snapshotting_error/no_batches with total rows=0 and failure reason base_table_not_empty_check_failed. Scoped logs for org cincinnatireds_378, audience 34484, export_run_id_hash b1568a5bbc46b6dfb756d73e575dd043, 2026-05-16T00:20:00Z..00:35:00Z show two snapshotting attempts (snapshot_run_id 5459d8b1-a4dc-4bb3-a7d6-4155928ec997 at 00:25:31Z and 9fad0940-ef10-4580-bb97-a4db1a9d30c1 at 00:31:45Z) both failing: Core snapshotting failed / Base table not empty check failed / success=False retry=False for export_id iterable_21078. Direct BQ validation was attempted but credentials lack query permission on reds-wheelhouse-prod.flywheel_system.model_564_b54e77.
+  Source: `glcli + scoped gcloud logs`; kind: `triage`; captured: `2026-05-16T16:48:07.812Z`.
 
 ## Next Action
 

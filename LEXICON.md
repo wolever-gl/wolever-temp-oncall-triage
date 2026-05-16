@@ -81,7 +81,10 @@ The set of files that make a group usable by humans and tools: `state.json`,
 
 Invariants:
 
-- `case.md` is narrative and may be edited directly.
+- `case.md` is a generated narrative view; direct edits may be overwritten by
+  CLI operations, so durable evidence should be recorded in structured files.
+- Generated `case.md` files must be self-orienting for open cases, including
+  alert scope plus the evidence/check results that show what work has started.
 - Structural changes should go through CLI operations and append events.
 
 ## Identity And Matching

@@ -9,6 +9,30 @@ Alerts: 1
 
 Resolved as retry/false alarm: failed Braze run 29790-braze_18238-scheduled__2026-05-16T14:00:00+00:00 hit transient Snowflake connector response-ended-prematurely during snapshotting, but later same-scope scheduled runs at 15:00 and 16:00 UTC completed export_finished with zero failures/rejects.
 
+## Alert Scope
+
+- Alert facts: 1 imported, 1 linked to this group.
+- Orgs: `evgo_402`
+- Audiences: `29790`
+- Destinations: none
+- State tuples: none
+- Commands seen: `glcli --env prod bifrost pizza --audience-id 29790 --org-id 402`
+
+Representative alerts:
+- Q22U9UI0BTFNJC/Q0K1H7M6L0BBDH: 2026-05-16T07:24:58-07:00; evgo_402; audience 29790. EVgo (EVgo Prod) - Audience 29790: Audience Export failure for 29790 sent to client.
+
+## Export Checks
+
+- Checks: 1.
+- States: `blocked`=1
+- Blockers seen: `missing_run_identity`
+
+Check evidence:
+- chk_q22u9ui0btfnjc_q0k1h7m6l0bbdh (Q22U9UI0BTFNJC/Q0K1H7M6L0BBDH): state=`blocked`.
+  Scope: env=prod; org=402; audience=29790.
+  Command: `glcli --env prod bifrost pizza --audience-id 29790 --org-id 402`
+  Blockers: `missing_run_identity`
+
 ## Recent Evidence
 
 - Follow-up on delta redrop risk: scoped logs for 2026-05-16T14:00 run show two snapshot_history_write_up attempts returned 500 at 14:24:55Z and 14:34:10Z, with no delta_history_write_up/unload/unloaded_deltas_write/metadata_write_up success for that external_run_id. The 15:00 run completed snapshot_history_write_up, metadata_write_up, delta_history_write_up, unload, and unloaded_deltas_write successfully. Quervice source shows delta_history_write_up chooses the previous completed run from metadata excluding current external_run_id, and unload/unloaded_deltas_write select delta_history rows with no unloaded_deltas marker or the current run. Therefore there were no specific 14:00 delta files to re-drop; the next successful run generated/unloaded the accumulated deltas and marked them against the 15:00 cloud_storage_uri.

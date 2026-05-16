@@ -13,6 +13,7 @@ import type {
   AlertRef,
   DecisionEvent,
   EvidenceEvent,
+  ExportCheck,
   GroupState,
   IndexAlertFact,
   IndexGroup,
@@ -582,6 +583,7 @@ export async function regenerateIndex(workspaceDir: string): Promise<WorkspaceIn
   await ensureDir(path.join(workspaceDir, "indexes"));
   await organizeGroupDirectories(workspaceDir);
   const groups = await loadAllGroups(workspaceDir);
+  for (const group of groups) await writeCaseMarkdown(workspaceDir, group);
   const alerts = await loadAllAlerts(workspaceDir);
   const indexGroups: IndexGroup[] = groups
     .map((group) => ({
@@ -1037,7 +1039,11 @@ function stateFailureClass(alert: AlertFact): string | undefined {
 }
 
 async function writeCaseMarkdown(workspaceDir: string, group: GroupState): Promise<void> {
-  const evidence = await readEvidenceEvents(workspaceDir, group.group_id);
+  const [alerts, checks, evidence] = await Promise.all([
+    readGroupAlerts(workspaceDir, group),
+    readGroupExportChecks(workspaceDir, group),
+    readEvidenceEvents(workspaceDir, group.group_id),
+  ]);
   const lines = [
     `# ${group.title}`,
     "",
@@ -1050,6 +1056,12 @@ async function writeCaseMarkdown(workspaceDir: string, group: GroupState): Promi
     "",
     group.summary || "No summary yet.",
     "",
+    "## Alert Scope",
+    "",
+    ...renderAlertScope(group, alerts),
+    "",
+    ...(checks.length > 0 ? ["## Export Checks", "", ...renderExportChecks(checks), ""] : []),
+    ...(evidence.length > 0 ? ["## Recent Evidence", "", ...renderRecentEvidence(evidence), ""] : []),
     "## Next Action",
     "",
     group.next_action || "Agent should gather evidence, choose/apply a runbook when appropriate, and update this case.",
@@ -1059,18 +1071,98 @@ async function writeCaseMarkdown(workspaceDir: string, group: GroupState): Promi
     "See `lineage.jsonl`, `decisions.jsonl`, `evidence.jsonl`, and `actions.jsonl` for the durable audit trail.",
     "",
   ];
-  if (evidence.length > 0) {
-    lines.splice(
-      lines.findIndex((line) => line === "## Next Action"),
-      0,
-      "## Recent Evidence",
-      "",
-      ...renderRecentEvidence(evidence),
-      "",
-    );
-  }
   await moveGroupDirToState(workspaceDir, group.group_id, group.state);
   await writeFile(path.join(groupDirForState(workspaceDir, group.state, group.group_id), "case.md"), lines.join("\n"));
+}
+
+async function readGroupAlerts(workspaceDir: string, group: GroupState): Promise<AlertFact[]> {
+  const selected = new Set(group.alert_refs.map(refKey));
+  const alerts = await loadAllAlerts(workspaceDir);
+  return alerts
+    .filter((alert) => selected.has(alertKey(alert)))
+    .sort((a, b) => a.created_at.localeCompare(b.created_at) || a.incident_id.localeCompare(b.incident_id) || a.alert_id.localeCompare(b.alert_id));
+}
+
+async function readGroupExportChecks(workspaceDir: string, group: GroupState): Promise<ExportCheck[]> {
+  const selected = new Set(group.alert_refs.map(refKey));
+  const checkIds = await listDirs(path.join(workspaceDir, "checks"));
+  const checks: ExportCheck[] = [];
+  for (const checkId of checkIds) {
+    try {
+      const check = await readJson<ExportCheck>(path.join(workspaceDir, "checks", checkId, "check.json"));
+      if (selected.has(refKey({ incident_id: check.incident_id, alert_id: check.alert_id }))) checks.push(check);
+    } catch (err) {
+      if ((err as NodeJS.ErrnoException).code !== "ENOENT") throw err;
+    }
+  }
+  return checks.sort((a, b) => a.incident_id.localeCompare(b.incident_id) || a.alert_id.localeCompare(b.alert_id) || a.check_id.localeCompare(b.check_id));
+}
+
+function renderAlertScope(group: GroupState, alerts: AlertFact[]): string[] {
+  if (alerts.length === 0) return ["- No imported alert facts found for this group."];
+  const lines = [
+    `- Alert facts: ${alerts.length} imported, ${group.alert_refs.length} linked to this group.`,
+    `- Orgs: ${formatList(sortedUnique(alerts.map((alert) => alert.org_id || alert.org_id_numeric).filter(isPresent)))}`,
+    `- Audiences: ${formatList(sortedUnique(alerts.map((alert) => alert.audience_id).filter(isPresent)))}`,
+    `- Destinations: ${formatList(sortedUnique(alerts.map((alert) => alert.destination_type || alert.destination_product || destinationFromRun(alert.export_run_id)).filter(isPresent)))}`,
+    `- State tuples: ${formatList(sortedUnique(alerts.map(formatAlertStateTuple).filter(isPresent)))}`,
+  ];
+  const glcliCommands = sortedUnique(alerts.map((alert) => alert.source_glcli).filter(isPresent));
+  if (glcliCommands.length > 0) lines.push(`- Commands seen: ${formatList(glcliCommands, 3)}`);
+  lines.push("", "Representative alerts:");
+  for (const alert of alerts.slice(0, 10)) {
+    const details = [
+      alert.created_at,
+      alert.org_id || alert.org_id_numeric,
+      alert.audience_id ? `audience ${alert.audience_id}` : undefined,
+      alert.destination_type || alert.destination_product || destinationFromRun(alert.export_run_id),
+      formatAlertStateTuple(alert),
+    ].filter(isPresent);
+    lines.push(`- ${alert.incident_id}/${alert.alert_id}: ${details.join("; ")}. ${alert.summary}`);
+    const runIds = sortedUnique([...(alert.checked_export_run_ids ?? []), ...(alert.export_run_id ? [alert.export_run_id] : [])]);
+    if (runIds.length > 0) lines.push(`  Runs: ${formatList(runIds, 3)}`);
+  }
+  if (alerts.length > 10) lines.push(`- Showing 10 of ${alerts.length} alert facts; see \`indexes/alert_facts.json\` for the full imported set.`);
+  return lines;
+}
+
+function renderExportChecks(checks: ExportCheck[]): string[] {
+  const lines = [
+    `- Checks: ${checks.length}.`,
+    `- States: ${formatCounts(checks.map((check) => check.state))}`,
+  ];
+  const proposed = formatCounts(checks.map((check) => check.proposed_state).filter(isPresent));
+  if (proposed !== "none") lines.push(`- Proposed states: ${proposed}`);
+  const blockers = sortedUnique(checks.flatMap((check) => check.blockers));
+  if (blockers.length > 0) lines.push(`- Blockers seen: ${formatList(blockers)}`);
+  lines.push("", "Check evidence:");
+  for (const check of checks.slice(0, 10)) {
+    const scope = [
+      check.scope.env ? `env=${check.scope.env}` : undefined,
+      check.scope.org_id ? `org=${check.scope.org_id}` : undefined,
+      check.scope.audience_id ? `audience=${check.scope.audience_id}` : undefined,
+      check.scope.endpoint_id ? `endpoint=${check.scope.endpoint_id}` : undefined,
+      check.scope.destination_type ? `destination=${check.scope.destination_type}` : undefined,
+    ].filter(isPresent);
+    lines.push(`- ${check.check_id} (${check.incident_id}/${check.alert_id}): state=\`${check.state}\`${check.proposed_state ? `, proposed=\`${check.proposed_state}\`` : ""}${check.next_check_at ? `, next_check_at=\`${check.next_check_at}\`` : ""}.`);
+    if (scope.length > 0) lines.push(`  Scope: ${scope.join("; ")}.`);
+    if (check.scope.checked_export_run_ids.length > 0) lines.push(`  Checked runs: ${formatList(check.scope.checked_export_run_ids, 4)}`);
+    if (check.scope.glcli) lines.push(`  Command: \`${check.scope.glcli}\``);
+    if (check.blockers.length > 0) lines.push(`  Blockers: ${formatList(check.blockers)}`);
+    for (const evaluation of check.run_evaluations.slice(0, 4)) {
+      const row = evaluation.selected_row;
+      const rowDetails = [
+        row?.created_at ? `created=${row.created_at}` : undefined,
+        row?.snapshotting_state ? `snapshotting=${row.snapshotting_state}` : undefined,
+        row?.export_state ? `export=${row.export_state}` : undefined,
+        row?.failed_export_count !== undefined && row?.failed_export_count !== null ? `failed=${row.failed_export_count}` : undefined,
+      ].filter(isPresent);
+      lines.push(`  Run ${evaluation.export_run_id}: health=\`${evaluation.health}\`${evaluation.blockers.length > 0 ? `; blockers=${evaluation.blockers.join(", ")}` : ""}${rowDetails.length > 0 ? `; ${rowDetails.join("; ")}` : ""}.`);
+    }
+    if (check.run_evaluations.length > 4) lines.push(`  Showing 4 of ${check.run_evaluations.length} run evaluations.`);
+  }
+  if (checks.length > 10) lines.push(`- Showing 10 of ${checks.length} checks; see \`indexes/checks.json\` and \`checks/*/check.json\` for the full evidence set.`);
+  return lines;
 }
 
 async function readEvidenceEvents(workspaceDir: string, groupId: string): Promise<EvidenceEvent[]> {
@@ -1138,6 +1230,32 @@ function collectEvidenceLinks(record: Record<string, unknown>): { label: string;
 function collectStringList(value: unknown): string[] {
   if (!Array.isArray(value)) return [];
   return value.filter((item): item is string => typeof item === "string" && item.trim().length > 0);
+}
+
+function formatAlertStateTuple(alert: AlertFact): string | undefined {
+  const parts = [alert.state_tuple?.snapshotting, alert.state_tuple?.export].filter(isPresent);
+  return parts.length > 0 ? parts.join("/") : undefined;
+}
+
+function formatList(values: string[], limit = 8): string {
+  if (values.length === 0) return "none";
+  const shown = values.slice(0, limit).map((value) => `\`${value}\``);
+  if (values.length > limit) shown.push(`and ${values.length - limit} more`);
+  return shown.join(", ");
+}
+
+function formatCounts(values: string[]): string {
+  if (values.length === 0) return "none";
+  const counts = new Map<string, number>();
+  for (const value of values) counts.set(value, (counts.get(value) ?? 0) + 1);
+  return [...counts.entries()]
+    .sort(([left], [right]) => left.localeCompare(right))
+    .map(([value, count]) => `\`${value}\`=${count}`)
+    .join(", ");
+}
+
+function isPresent<T>(value: T | null | undefined | ""): value is T {
+  return value !== undefined && value !== null && value !== "";
 }
 
 function renderIndex(index: WorkspaceIndex): string {

@@ -55,9 +55,10 @@ surface; evidence tags explain why any alert belongs in a remediation path.
   archived tagger scripts against alert facts, inspect the results, then group
   alerts by tag with explicit rationale.
 - **Materialized case files are convenience views.** `state.json` stores the
-  current machine snapshot; `case.md` is the human summary and includes recent
-  evidence; append-only JSONL files retain structural events, evidence,
-  decisions, lineage, and actions.
+  current machine snapshot; `case.md` is the human summary and includes alert
+  scope, export-check evidence, and recent investigation evidence; append-only
+  JSONL files retain structural events, evidence, decisions, lineage, and
+  actions.
 - **Spreadsheet/reporting views are generated.** `index.md` and `index.json`
   are views over the case directories and immutable facts.
 - **Match rules drive attachment.** Active keys, aliases, redirects, and
@@ -130,6 +131,11 @@ remaining silent until completion.
 
 `check-exports` keeps one live Bifrost proxy open per environment for the
 duration of a command run, reuses it across checks, and closes it before exit.
+
+`case.md` is generated as a human-readable case view. It should be enough for a
+human to understand why the case exists, what alert facts are in scope, and what
+evidence has already been checked. `index` refreshes every case file from
+`state.json`, imported alert facts, export checks, and `evidence.jsonl`.
 
 `evidence` appends to `evidence.jsonl` and refreshes `case.md` with a Recent
 Evidence section. Use repeated `--link <label=url>` values for Google Cloud

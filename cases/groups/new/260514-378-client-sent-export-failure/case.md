@@ -9,6 +9,18 @@ Alerts: 1
 
 Cincinnati Reds (default) - SignalRoute 891: SignalRoute Export failure for 891 sent to client.
 
+## Alert Scope
+
+- Alert facts: 1 imported, 1 linked to this group.
+- Orgs: `378`
+- Audiences: `891`
+- Destinations: none
+- State tuples: none
+- Commands seen: `glcli --env prod bifrost pizza --audience-id 891 --org-id 378`
+
+Representative alerts:
+- Q1QD2CX8MRAYBW/Q3AS52WT001FD8: 2026-05-14T18:01:37-07:00; 378; audience 891. Cincinnati Reds (default) - SignalRoute 891: SignalRoute Export failure for 891 sent to client.
+
 ## Next Action
 
 Agent should gather evidence, choose/apply a runbook when appropriate, and update this case.

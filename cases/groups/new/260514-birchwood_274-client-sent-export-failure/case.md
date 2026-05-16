@@ -9,6 +9,18 @@ Alerts: 1
 
 birchwood (default) - SignalRoute 723: SignalRoute Export failure for 723 sent to client.
 
+## Alert Scope
+
+- Alert facts: 1 imported, 1 linked to this group.
+- Orgs: `birchwood_274`
+- Audiences: `723`
+- Destinations: none
+- State tuples: none
+- Commands seen: `glcli --env prod bifrost pizza --audience-id 723 --org-id 274`
+
+Representative alerts:
+- Q3PJ7W2K3Y9LJV/Q0S5D7L5PK1NBX: 2026-05-14T18:28:16-07:00; birchwood_274; audience 723. birchwood (default) - SignalRoute 723: SignalRoute Export failure for 723 sent to client.
+
 ## Next Action
 
 Agent should gather evidence, choose/apply a runbook when appropriate, and update this case.
