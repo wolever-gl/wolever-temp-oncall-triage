@@ -1,20 +1,17 @@
 {
   "group_id": "260513-albertsons_6-client-sent-export-failure",
-  "state": "open",
+  "state": "monitoring",
   "tags": [
-    "triage:needs_review"
+    "triage:needs_review",
+    "monitoring:export-processing"
   ],
   "title": "albertsons_6 client-sent-export-failure",
-  "summary": "albertsons (Albertsons Media) - Audience 8473: Audience Export failure for 8473 sent to client.",
+  "summary": "Monitoring Albertsons client-sent export alerts: audiences 11688 and 11820 have latest LiveRamp runs export_processing with zero failures.",
   "deterministic_key": "v3|incident:Q2EJWG22CER0LA|org:albertsons_6|class:client-sent-export-failure",
   "grouping_version": 3,
   "created_at": "2026-05-16T00:38:01.850Z",
-  "updated_at": "2026-05-16T20:44:42.998Z",
+  "updated_at": "2026-05-16T21:42:16.233Z",
   "alert_refs": [
-    {
-      "incident_id": "Q2EJWG22CER0LA",
-      "alert_id": "Q2N69VPQCMRHGL"
-    },
     {
       "incident_id": "Q2EJWG22CER0LA",
       "alert_id": "Q311OEQ3IZ6GPG"
@@ -27,5 +24,7 @@
   "incident_ids": [
     "Q2EJWG22CER0LA"
   ],
-  "related_group_ids": []
+  "related_group_ids": [
+    "grp_260513_albertsons_6_client_sent_export_failure_split_0066"
+  ]
 }

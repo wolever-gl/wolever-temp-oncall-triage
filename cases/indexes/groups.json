@@ -140,20 +140,6 @@
     "path": "groups/open/260513-451-client-sent-export-failure/case.md"
   },
   {
-    "group_id": "260513-albertsons_6-client-sent-export-failure",
-    "state": "open",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "albertsons_6 client-sent-export-failure",
-    "summary": "albertsons (Albertsons Media) - Audience 8473: Audience Export failure for 8473 sent to client.",
-    "incident_ids": [
-      "Q2EJWG22CER0LA"
-    ],
-    "alert_count": 3,
-    "path": "groups/open/260513-albertsons_6-client-sent-export-failure/case.md"
-  },
-  {
     "group_id": "260513-ford_310-no-batches",
     "state": "open",
     "tags": [
@@ -532,6 +518,21 @@
     "path": "groups/open/260515-royals_4-snapshotting-error/case.md"
   },
   {
+    "group_id": "grp_260513_albertsons_6_client_sent_export_failure_split_0066",
+    "state": "open",
+    "tags": [
+      "triage:needs_review",
+      "triage:snapshotting-error"
+    ],
+    "title": "albertsons_6 client-sent-export-failure split",
+    "summary": "Needs investigation: audience 8473 client-sent alert has a later LiveRamp scheduled run in snapshotting_error/no_batches, distinct from the older snapshotting-processing monitor.",
+    "incident_ids": [
+      "Q2EJWG22CER0LA"
+    ],
+    "alert_count": 1,
+    "path": "groups/open/grp_260513_albertsons_6_client_sent_export_failure_split_0066/case.md"
+  },
+  {
     "group_id": "260511-albertsons_6-snapshotting-processing",
     "state": "monitoring",
     "tags": [
@@ -560,6 +561,21 @@
     ],
     "alert_count": 4,
     "path": "groups/monitoring/260512-albertsons_6-liveramp-waiting-uploads/case.md"
+  },
+  {
+    "group_id": "260513-albertsons_6-client-sent-export-failure",
+    "state": "monitoring",
+    "tags": [
+      "triage:needs_review",
+      "monitoring:export-processing"
+    ],
+    "title": "albertsons_6 client-sent-export-failure",
+    "summary": "Monitoring Albertsons client-sent export alerts: audiences 11688 and 11820 have latest LiveRamp runs export_processing with zero failures.",
+    "incident_ids": [
+      "Q2EJWG22CER0LA"
+    ],
+    "alert_count": 2,
+    "path": "groups/monitoring/260513-albertsons_6-client-sent-export-failure/case.md"
   },
   {
     "group_id": "260513-albertsons_6-zero-success",

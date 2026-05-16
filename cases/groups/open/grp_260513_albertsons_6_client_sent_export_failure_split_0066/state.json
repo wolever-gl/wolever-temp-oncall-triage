@@ -1,0 +1,26 @@
+{
+  "group_id": "grp_260513_albertsons_6_client_sent_export_failure_split_0066",
+  "state": "open",
+  "tags": [
+    "triage:needs_review",
+    "triage:snapshotting-error"
+  ],
+  "title": "albertsons_6 client-sent-export-failure split",
+  "summary": "Needs investigation: audience 8473 client-sent alert has a later LiveRamp scheduled run in snapshotting_error/no_batches, distinct from the older snapshotting-processing monitor.",
+  "deterministic_key": "v3|incident:Q2EJWG22CER0LA|org:albertsons_6|class:client-sent-export-failure|split|Q2N69VPQCMRHGL",
+  "grouping_version": 3,
+  "created_at": "2026-05-16T21:41:58.819Z",
+  "updated_at": "2026-05-16T21:42:17.617Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q2EJWG22CER0LA",
+      "alert_id": "Q2N69VPQCMRHGL"
+    }
+  ],
+  "incident_ids": [
+    "Q2EJWG22CER0LA"
+  ],
+  "related_group_ids": [
+    "260513-albertsons_6-client-sent-export-failure"
+  ]
+}
