@@ -7,7 +7,7 @@
 State: `open`
 Tags: `triage:needs_review`, `triage:export-error`
 Incidents: [Q3XQABQFPPVNT5](https://growthloop.pagerduty.com/incidents/Q3XQABQFPPVNT5)
-Alerts: 2
+Alerts: 4
 
 ## Current Summary
 
@@ -15,22 +15,24 @@ Needs investigation: ASU audience 31982 Salesforce audience export continues to 
 
 ## Alert Scope
 
-- Alert facts: 2 imported, 2 linked to this group.
+- Alert facts: 4 imported, 4 linked to this group.
 - Orgs: `451`
-- Audiences: `31982`
+- Audiences: `31982`, `981`, `984`
 - Destinations: `salesforce_audience`
 - State tuples: `snapshotting_finished/export_error`
-- Commands seen: `glcli --env prod bifrost pizza --audience-id 31982 --org-id 451`
+- Commands seen: `glcli --env prod bifrost pizza --audience-id 31982 --org-id 451`, `glcli --env prod bifrost pizza --audience-id 981 --org-id 451`, `glcli --env prod bifrost pizza --audience-id 984 --org-id 451`
 
 Representative alerts:
+- Q3XQABQFPPVNT5/Q0XF5RYJ4EGXJZ: 2026-05-13T17:01:38-07:00; 451; audience 981. ASU Enterprise Partners (General - ASU Data) - SignalRoute 981: SignalRoute Export failure for 981 sent to client.
+- Q3XQABQFPPVNT5/Q1X4ZB5GQBRSU1: 2026-05-13T17:03:15-07:00; 451; audience 984. ASU Enterprise Partners (General - ASU Data) - SignalRoute 984: SignalRoute Export failure for 984 sent to client.
 - Q3XQABQFPPVNT5/Q20R8OKEQNMTTK: 2026-05-13T19:19:06-07:00; 451; audience 31982. ASU Enterprise Partners (Restricted) - Audience 31982: Audience Export failure for 31982 sent to client.
 - Q3XQABQFPPVNT5/Q07JGZI66746XA: 2026-05-14T08:15:15-07:00; 451; audience 31982; salesforce_audience; snapshotting_finished/export_error. ASU Enterprise Partners (Restricted): Exports for audience 31982 failed with states: <(snapshotting_finished,export_error)>
   Runs: `31982-salesforce_audience_21336-scheduled__2026-05-14T00:00:00+00:00`
 
 ## Export Checks
 
-- Checks: 2.
-- States: `blocked`=2
+- Checks: 4.
+- States: `blocked`=4
 - Blockers seen: `export_error`, `failed_export_count`, `missing_run_identity`
 
 Check evidence:
@@ -40,6 +42,14 @@ Check evidence:
   Command: `glcli --env prod bifrost pizza --audience-id 31982 --org-id 451`
   Blockers: `failed_export_count`, `export_error`
   Run 31982-salesforce_audience_21336-scheduled__2026-05-14T00:00:00+00:00: health=`blocked`; blockers=failed_export_count, export_error; created=2026-05-14T01:11:00.672570+00:00; snapshotting=snapshotting_finished; export=export_error; failed=32.
+- chk_q3xqabqfppvnt5_q0xf5ryj4egxjz (Q3XQABQFPPVNT5/Q0XF5RYJ4EGXJZ): state=`blocked`.
+  Scope: env=prod; org=451; audience=981.
+  Command: `glcli --env prod bifrost pizza --audience-id 981 --org-id 451`
+  Blockers: `missing_run_identity`
+- chk_q3xqabqfppvnt5_q1x4zb5gqbrsu1 (Q3XQABQFPPVNT5/Q1X4ZB5GQBRSU1): state=`blocked`.
+  Scope: env=prod; org=451; audience=984.
+  Command: `glcli --env prod bifrost pizza --audience-id 984 --org-id 451`
+  Blockers: `missing_run_identity`
 - chk_q3xqabqfppvnt5_q20r8okeqnmttk (Q3XQABQFPPVNT5/Q20R8OKEQNMTTK): state=`blocked`.
   Scope: env=prod; org=451; audience=31982.
   Command: `glcli --env prod bifrost pizza --audience-id 31982 --org-id 451`

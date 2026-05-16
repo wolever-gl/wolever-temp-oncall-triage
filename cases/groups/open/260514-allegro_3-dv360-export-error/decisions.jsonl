@@ -1,0 +1,2 @@
+{"ts":"2026-05-16T00:38:01.850Z","actor":"oncall-triage","decision":"created_group","rationale":"Conservative deterministic grouping created a new group for v3|incident:Q2KT0WUDEVL42Q|org:allegro_3|dest:dv360|class:export-error."}
+{"ts":"2026-05-16T23:46:41.342Z","actor":"agent","decision":"transitioned_to_open","rationale":"Triage preflight attempted, but Allegro export checks were skipped because this laptop cannot access the Allegro Bifrost proxy. Manual triage needs an environment with Allegro access or non-Pizza evidence."}

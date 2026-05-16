@@ -1,0 +1,24 @@
+{
+  "group_id": "260513-allegro_3-dv360-export-error",
+  "state": "open",
+  "tags": [
+    "triage:needs_review",
+    "triage:blocked-env-unavailable"
+  ],
+  "title": "allegro_3 dv360 export-error",
+  "summary": "Triage preflight attempted, but Allegro export checks were skipped because this laptop cannot access the Allegro Bifrost proxy. Manual triage needs an environment with Allegro access or non-Pizza evidence.",
+  "deterministic_key": "v3|incident:Q0UU3VAZ2I5R5H|org:allegro_3|dest:dv360|class:export-error",
+  "grouping_version": 3,
+  "created_at": "2026-05-16T00:38:01.850Z",
+  "updated_at": "2026-05-16T23:46:35.940Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q0UU3VAZ2I5R5H",
+      "alert_id": "Q3RAMU5DKK9FQW"
+    }
+  ],
+  "incident_ids": [
+    "Q0UU3VAZ2I5R5H"
+  ],
+  "related_group_ids": []
+}

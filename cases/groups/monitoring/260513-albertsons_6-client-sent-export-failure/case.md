@@ -7,7 +7,7 @@
 State: `monitoring`
 Tags: `triage:needs_review`, `monitoring:export-processing`
 Incidents: [Q2EJWG22CER0LA](https://growthloop.pagerduty.com/incidents/Q2EJWG22CER0LA)
-Alerts: 2
+Alerts: 3
 
 ## Current Summary
 
@@ -15,23 +15,29 @@ Auto-monitored from Pizza export checks: 2 alert-scoped export check(s) are stil
 
 ## Alert Scope
 
-- Alert facts: 2 imported, 2 linked to this group.
+- Alert facts: 3 imported, 3 linked to this group.
 - Orgs: `albertsons_6`
-- Audiences: `11688`, `11820`
+- Audiences: `11688`, `11820`, `8473`
 - Destinations: none
 - State tuples: none
-- Commands seen: `glcli --env albertsons bifrost pizza --audience-id 11688 --org-id 6`, `glcli --env albertsons bifrost pizza --audience-id 11820 --org-id 6`
+- Commands seen: `glcli --env albertsons bifrost pizza --audience-id 11688 --org-id 6`, `glcli --env albertsons bifrost pizza --audience-id 11820 --org-id 6`, `glcli --env albertsons bifrost pizza --audience-id 8473 --org-id 6`
 
 Representative alerts:
 - Q2EJWG22CER0LA/Q2S03JXYQD34WM: 2026-05-12T10:08:23-07:00; albertsons_6; audience 11820. albertsons (Albertsons Media) - Audience 11820: Audience Export failure for 11820 sent to client.
 - Q2EJWG22CER0LA/Q311OEQ3IZ6GPG: 2026-05-12T12:10:10-07:00; albertsons_6; audience 11688. albertsons (Albertsons Media) - Audience 11688: Audience Export failure for 11688 sent to client.
+- Q2EJWG22CER0LA/Q2N69VPQCMRHGL: 2026-05-13T00:18:27-07:00; albertsons_6; audience 8473. albertsons (Albertsons Media) - Audience 8473: Audience Export failure for 8473 sent to client.
 
 ## Export Checks
 
-- Checks: 2.
-- States: `monitoring`=2
+- Checks: 3.
+- States: `blocked`=1, `monitoring`=2
+- Blockers seen: `missing_export_after_alert`
 
 Check evidence:
+- chk_q2ejwg22cer0la_q2n69vpqcmrhgl (Q2EJWG22CER0LA/Q2N69VPQCMRHGL): state=`blocked`.
+  Scope: env=albertsons; org=6; audience=8473.
+  Command: `glcli --env albertsons bifrost pizza --audience-id 8473 --org-id 6`
+  Blockers: `missing_export_after_alert`
 - chk_q2ejwg22cer0la_q2s03jxyqd34wm (Q2EJWG22CER0LA/Q2S03JXYQD34WM): state=`monitoring`, next_check_at=`2026-05-16T23:25:55.908Z`.
   Scope: env=albertsons; org=6; audience=11820.
   Command: `glcli --env albertsons bifrost pizza --audience-id 11820 --org-id 6`

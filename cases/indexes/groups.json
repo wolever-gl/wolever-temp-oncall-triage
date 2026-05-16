@@ -1,117 +1,5 @@
 [
   {
-    "group_id": "260513-allegro_3-client-sent-export-failure",
-    "state": "new",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "allegro_3 client-sent-export-failure",
-    "summary": "allegro (Marketing) - Audience 1277: Audience Export failure for 1277 sent to client.",
-    "incident_ids": [
-      "Q0UU3VAZ2I5R5H"
-    ],
-    "alert_count": 23,
-    "path": "groups/new/260513-allegro_3-client-sent-export-failure/case.md"
-  },
-  {
-    "group_id": "260513-allegro_3-dv360-export-error",
-    "state": "new",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "allegro_3 dv360 export-error",
-    "summary": "allegro (Marketing): Exports for audience 1266 failed with states: <(snapshotting_finished,export_error)>",
-    "incident_ids": [
-      "Q0UU3VAZ2I5R5H"
-    ],
-    "alert_count": 1,
-    "path": "groups/new/260513-allegro_3-dv360-export-error/case.md"
-  },
-  {
-    "group_id": "260513-allegro_3-dv360-export-processing",
-    "state": "new",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "allegro_3 dv360 export-processing",
-    "summary": "allegro (Marketing): Exports for audience 638 failed with states: <(snapshotting_finished,export_processing)>",
-    "incident_ids": [
-      "Q0UU3VAZ2I5R5H"
-    ],
-    "alert_count": 2,
-    "path": "groups/new/260513-allegro_3-dv360-export-processing/case.md"
-  },
-  {
-    "group_id": "260513-allegro_3-facebook-export-error",
-    "state": "new",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "allegro_3 facebook export-error",
-    "summary": "allegro (Advertising): Exports for audience 1077 failed with states: <(snapshotting_finished,export_error)>",
-    "incident_ids": [
-      "Q0UU3VAZ2I5R5H"
-    ],
-    "alert_count": 2,
-    "path": "groups/new/260513-allegro_3-facebook-export-error/case.md"
-  },
-  {
-    "group_id": "260514-allegro_3-client-sent-export-failure",
-    "state": "new",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "allegro_3 client-sent-export-failure",
-    "summary": "allegro (Marketing) - Audience 302: Audience Export failure for 302 sent to client.",
-    "incident_ids": [
-      "Q2KT0WUDEVL42Q"
-    ],
-    "alert_count": 37,
-    "path": "groups/new/260514-allegro_3-client-sent-export-failure/case.md"
-  },
-  {
-    "group_id": "260514-allegro_3-dv360-export-error",
-    "state": "new",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "allegro_3 dv360 export-error",
-    "summary": "allegro (Marketing): Exports for audience 1277 failed with states: <(snapshotting_finished,export_error)>",
-    "incident_ids": [
-      "Q2KT0WUDEVL42Q"
-    ],
-    "alert_count": 1,
-    "path": "groups/new/260514-allegro_3-dv360-export-error/case.md"
-  },
-  {
-    "group_id": "260514-allegro_3-dv360-export-processing",
-    "state": "new",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "allegro_3 dv360 export-processing",
-    "summary": "allegro (Marketing): Exports for audience 1156 failed with states: <(snapshotting_finished,export_processing)>",
-    "incident_ids": [
-      "Q2KT0WUDEVL42Q"
-    ],
-    "alert_count": 13,
-    "path": "groups/new/260514-allegro_3-dv360-export-processing/case.md"
-  },
-  {
-    "group_id": "260515-allegro_3-dv360-export-processing",
-    "state": "new",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "allegro_3 dv360 export-processing",
-    "summary": "allegro (Marketing): Exports for audience 605 failed with states: <(snapshotting_finished,export_processing)>",
-    "incident_ids": [
-      "Q3GQQRY1UQLBSN"
-    ],
-    "alert_count": 1,
-    "path": "groups/new/260515-allegro_3-dv360-export-processing/case.md"
-  },
-  {
     "group_id": "260511-albertsons_6-snapshotting-processing",
     "state": "open",
     "tags": [
@@ -140,6 +28,66 @@
     ],
     "alert_count": 8,
     "path": "groups/open/260511-allegro_3-dv360-export-error/case.md"
+  },
+  {
+    "group_id": "260513-allegro_3-client-sent-export-failure",
+    "state": "open",
+    "tags": [
+      "triage:needs_review",
+      "triage:blocked-env-unavailable"
+    ],
+    "title": "allegro_3 client-sent-export-failure",
+    "summary": "Triage preflight attempted, but Allegro export checks were skipped because this laptop cannot access the Allegro Bifrost proxy. Manual triage needs an environment with Allegro access or non-Pizza evidence.",
+    "incident_ids": [
+      "Q0UU3VAZ2I5R5H"
+    ],
+    "alert_count": 23,
+    "path": "groups/open/260513-allegro_3-client-sent-export-failure/case.md"
+  },
+  {
+    "group_id": "260513-allegro_3-dv360-export-error",
+    "state": "open",
+    "tags": [
+      "triage:needs_review",
+      "triage:blocked-env-unavailable"
+    ],
+    "title": "allegro_3 dv360 export-error",
+    "summary": "Triage preflight attempted, but Allegro export checks were skipped because this laptop cannot access the Allegro Bifrost proxy. Manual triage needs an environment with Allegro access or non-Pizza evidence.",
+    "incident_ids": [
+      "Q0UU3VAZ2I5R5H"
+    ],
+    "alert_count": 1,
+    "path": "groups/open/260513-allegro_3-dv360-export-error/case.md"
+  },
+  {
+    "group_id": "260513-allegro_3-dv360-export-processing",
+    "state": "open",
+    "tags": [
+      "triage:needs_review",
+      "triage:blocked-env-unavailable"
+    ],
+    "title": "allegro_3 dv360 export-processing",
+    "summary": "Triage preflight attempted, but Allegro export checks were skipped because this laptop cannot access the Allegro Bifrost proxy. Manual triage needs an environment with Allegro access or non-Pizza evidence.",
+    "incident_ids": [
+      "Q0UU3VAZ2I5R5H"
+    ],
+    "alert_count": 2,
+    "path": "groups/open/260513-allegro_3-dv360-export-processing/case.md"
+  },
+  {
+    "group_id": "260513-allegro_3-facebook-export-error",
+    "state": "open",
+    "tags": [
+      "triage:needs_review",
+      "triage:blocked-env-unavailable"
+    ],
+    "title": "allegro_3 facebook export-error",
+    "summary": "Triage preflight attempted, but Allegro export checks were skipped because this laptop cannot access the Allegro Bifrost proxy. Manual triage needs an environment with Allegro access or non-Pizza evidence.",
+    "incident_ids": [
+      "Q0UU3VAZ2I5R5H"
+    ],
+    "alert_count": 2,
+    "path": "groups/open/260513-allegro_3-facebook-export-error/case.md"
   },
   {
     "group_id": "260513-trumanshow_336-client-sent-export-failure",
@@ -195,8 +143,53 @@
     "incident_ids": [
       "Q3XQABQFPPVNT5"
     ],
-    "alert_count": 2,
+    "alert_count": 4,
     "path": "groups/open/260514-451-salesforce-audience-export-error/case.md"
+  },
+  {
+    "group_id": "260514-allegro_3-client-sent-export-failure",
+    "state": "open",
+    "tags": [
+      "triage:needs_review",
+      "triage:blocked-env-unavailable"
+    ],
+    "title": "allegro_3 client-sent-export-failure",
+    "summary": "Triage preflight attempted, but Allegro export checks were skipped because this laptop cannot access the Allegro Bifrost proxy. Manual triage needs an environment with Allegro access or non-Pizza evidence.",
+    "incident_ids": [
+      "Q2KT0WUDEVL42Q"
+    ],
+    "alert_count": 37,
+    "path": "groups/open/260514-allegro_3-client-sent-export-failure/case.md"
+  },
+  {
+    "group_id": "260514-allegro_3-dv360-export-error",
+    "state": "open",
+    "tags": [
+      "triage:needs_review",
+      "triage:blocked-env-unavailable"
+    ],
+    "title": "allegro_3 dv360 export-error",
+    "summary": "Triage preflight attempted, but Allegro export checks were skipped because this laptop cannot access the Allegro Bifrost proxy. Manual triage needs an environment with Allegro access or non-Pizza evidence.",
+    "incident_ids": [
+      "Q2KT0WUDEVL42Q"
+    ],
+    "alert_count": 1,
+    "path": "groups/open/260514-allegro_3-dv360-export-error/case.md"
+  },
+  {
+    "group_id": "260514-allegro_3-dv360-export-processing",
+    "state": "open",
+    "tags": [
+      "triage:needs_review",
+      "triage:blocked-env-unavailable"
+    ],
+    "title": "allegro_3 dv360 export-processing",
+    "summary": "Triage preflight attempted, but Allegro export checks were skipped because this laptop cannot access the Allegro Bifrost proxy. Manual triage needs an environment with Allegro access or non-Pizza evidence.",
+    "incident_ids": [
+      "Q2KT0WUDEVL42Q"
+    ],
+    "alert_count": 13,
+    "path": "groups/open/260514-allegro_3-dv360-export-processing/case.md"
   },
   {
     "group_id": "260514-birchwood_274-client-sent-export-failure",
@@ -282,7 +275,7 @@
       "Q1TJJ4MEVOF1W3",
       "Q3HWKW0FS3VTHE"
     ],
-    "alert_count": 2,
+    "alert_count": 4,
     "path": "groups/open/260514-ford_310-dv360-export-error/case.md"
   },
   {
@@ -426,6 +419,21 @@
     "path": "groups/open/260515-451-snapshotting-error/case.md"
   },
   {
+    "group_id": "260515-allegro_3-dv360-export-processing",
+    "state": "open",
+    "tags": [
+      "triage:needs_review",
+      "triage:blocked-env-unavailable"
+    ],
+    "title": "allegro_3 dv360 export-processing",
+    "summary": "Triage preflight attempted, but Allegro export checks were skipped because this laptop cannot access the Allegro Bifrost proxy. Manual triage needs an environment with Allegro access or non-Pizza evidence.",
+    "incident_ids": [
+      "Q3GQQRY1UQLBSN"
+    ],
+    "alert_count": 1,
+    "path": "groups/open/260515-allegro_3-dv360-export-processing/case.md"
+  },
+  {
     "group_id": "260515-birchwood_274-salesforce-audience-export-error",
     "state": "open",
     "tags": [
@@ -516,7 +524,7 @@
     "incident_ids": [
       "Q2EJWG22CER0LA"
     ],
-    "alert_count": 2,
+    "alert_count": 3,
     "path": "groups/monitoring/260513-albertsons_6-client-sent-export-failure/case.md"
   },
   {
@@ -598,7 +606,7 @@
     "incident_ids": [
       "Q2T09VCLN9MRZ8"
     ],
-    "alert_count": 8,
+    "alert_count": 9,
     "path": "groups/waiting/260511-albertsons_6-snapshotting-error/case.md"
   },
   {
@@ -614,7 +622,7 @@
     "incident_ids": [
       "Q3XQABQFPPVNT5"
     ],
-    "alert_count": 2,
+    "alert_count": 3,
     "path": "groups/waiting/260514-451-campaign-manager-360-export-error/case.md"
   },
   {
@@ -755,7 +763,7 @@
     "incident_ids": [
       "Q1TJJ4MEVOF1W3"
     ],
-    "alert_count": 18,
+    "alert_count": 19,
     "path": "groups/resolved/260513-ford_310-no-batches/case.md"
   },
   {
@@ -770,7 +778,7 @@
     "incident_ids": [
       "Q38JR11G2ENK2W"
     ],
-    "alert_count": 6,
+    "alert_count": 8,
     "path": "groups/resolved/260514-albertsons_6-client-sent-export-failure/case.md"
   },
   {

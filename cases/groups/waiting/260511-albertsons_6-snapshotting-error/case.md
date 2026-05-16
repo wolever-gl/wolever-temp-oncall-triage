@@ -7,7 +7,7 @@
 State: `waiting`
 Tags: `triage:needs_review`, `waiting:client_schema`, `triage:client_schema_missing`
 Incidents: [Q2T09VCLN9MRZ8](https://growthloop.pagerduty.com/incidents/Q2T09VCLN9MRZ8)
-Alerts: 8
+Alerts: 9
 
 ## Current Summary
 
@@ -15,12 +15,12 @@ Waiting on support/client remediation: five Albertsons LiveRamp export-run alert
 
 ## Alert Scope
 
-- Alert facts: 8 imported, 8 linked to this group.
+- Alert facts: 9 imported, 9 linked to this group.
 - Orgs: `albertsons_6`
-- Audiences: `10074`, `10370`, `10372`, `10663`, `10749`
+- Audiences: `10074`, `10370`, `10372`, `10663`, `10749`, `2189`
 - Destinations: `live_ramp_activation`
 - State tuples: `snapshotting_error/no_batches`
-- Commands seen: `glcli --env albertsons bifrost pizza --audience-id 10074 --org-id 6`, `glcli --env albertsons bifrost pizza --audience-id 10370 --org-id 6`, `glcli --env albertsons bifrost pizza --audience-id 10372 --org-id 6`, and 2 more
+- Commands seen: `glcli --env albertsons bifrost pizza --audience-id 10074 --org-id 6`, `glcli --env albertsons bifrost pizza --audience-id 10370 --org-id 6`, `glcli --env albertsons bifrost pizza --audience-id 10372 --org-id 6`, and 3 more
 
 Representative alerts:
 - Q2T09VCLN9MRZ8/Q14V88Y9W3XATI: 2026-05-11T07:35:55-07:00; albertsons_6; audience 10074; live_ramp_activation; snapshotting_error/no_batches. albertsons (Albertsons Media): Exports for audience 10074 failed with states: <(snapshotting_error,no_batches)>
@@ -36,12 +36,13 @@ Representative alerts:
 - Q2T09VCLN9MRZ8/Q3TL521CW7Y2J2: 2026-05-11T21:26:39-07:00; albertsons_6; audience 10749. albertsons (Albertsons Media) - Audience 10749: Audience Export failure for 10749 sent to client.
 - Q2T09VCLN9MRZ8/Q0GX8AZ1GWYKL9: 2026-05-11T21:27:07-07:00; albertsons_6; audience 10372. albertsons (Albertsons Media) - Audience 10372: Audience Export failure for 10372 sent to client.
 - Q2T09VCLN9MRZ8/Q0ODPXTYE0FORK: 2026-05-11T23:13:09-07:00; albertsons_6; audience 10370. albertsons (Albertsons Media) - Audience 10370: Audience Export failure for 10370 sent to client.
+- Q2T09VCLN9MRZ8/Q24L2JIWVY4GIS: 2026-05-12T01:04:24-07:00; albertsons_6; audience 2189. albertsons (Albertsons Media) - Audience 2189: Audience Export failure for 2189 sent to client.
 
 ## Export Checks
 
-- Checks: 5.
-- States: `blocked`=5
-- Blockers seen: `snapshotting_error_requires_review`
+- Checks: 6.
+- States: `blocked`=6
+- Blockers seen: `missing_export_after_alert`, `snapshotting_error_requires_review`
 
 Check evidence:
 - chk_q2t09vcln9mrz8_q14v88y9w3xati (Q2T09VCLN9MRZ8/Q14V88Y9W3XATI): state=`blocked`.
@@ -68,6 +69,10 @@ Check evidence:
   Command: `glcli --env albertsons bifrost pizza --audience-id 10663 --org-id 6`
   Blockers: `snapshotting_error_requires_review`
   Run 10663-live_ramp_activation_2367-scheduled__2026-05-06T00:00:00+00:00: health=`blocked`; blockers=snapshotting_error_requires_review; created=2026-05-06T05:32:37.973456+00:00; snapshotting=snapshotting_error; export=no_batches; failed=0.
+- chk_q2t09vcln9mrz8_q24l2jiwvy4gis (Q2T09VCLN9MRZ8/Q24L2JIWVY4GIS): state=`blocked`.
+  Scope: env=albertsons; org=6; audience=2189.
+  Command: `glcli --env albertsons bifrost pizza --audience-id 2189 --org-id 6`
+  Blockers: `missing_export_after_alert`
 - chk_q2t09vcln9mrz8_q2mns4qomcjwaw (Q2T09VCLN9MRZ8/Q2MNS4QOMCJWAW): state=`blocked`.
   Scope: env=albertsons; org=6; audience=10749; destination=live_ramp_activation.
   Checked runs: `10749-live_ramp_activation_2412-scheduled__2026-05-05T00:00:00+00:00`

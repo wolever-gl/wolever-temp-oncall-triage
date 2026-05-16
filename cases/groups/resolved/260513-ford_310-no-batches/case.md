@@ -7,7 +7,7 @@
 State: `resolved`
 Tags: `triage:needs_review`, `resolved:export-healthy`
 Incidents: [Q1TJJ4MEVOF1W3](https://growthloop.pagerduty.com/incidents/Q1TJJ4MEVOF1W3)
-Alerts: 18
+Alerts: 19
 
 ## Current Summary
 
@@ -15,12 +15,12 @@ Resolved: 18 Ford no-batches alert-scoped exports are healthy after destination-
 
 ## Alert Scope
 
-- Alert facts: 18 imported, 18 linked to this group.
+- Alert facts: 19 imported, 19 linked to this group.
 - Orgs: `ford_310`
-- Audiences: `29560`, `31274`, `31276`, `31289`, `31290`, `31303`, `31315`, `31317`, and 10 more
-- Destinations: `facebook`, `marketing_cloud`, `pinterest`, `the_trade_desk_crm`, `tik_tok_streaming`
+- Audiences: `29560`, `31274`, `31276`, `31289`, `31290`, `31303`, `31315`, `31317`, and 11 more
+- Destinations: `facebook`, `marketing_cloud`, `pinterest`, `reddit_ads`, `the_trade_desk_crm`, `tik_tok_streaming`
 - State tuples: `snapshotting_finished/no_batches`
-- Commands seen: `glcli --env prod bifrost pizza --audience-id 29560 --org-id 310`, `glcli --env prod bifrost pizza --audience-id 31274 --org-id 310`, `glcli --env prod bifrost pizza --audience-id 31276 --org-id 310`, and 15 more
+- Commands seen: `glcli --env prod bifrost pizza --audience-id 29560 --org-id 310`, `glcli --env prod bifrost pizza --audience-id 31274 --org-id 310`, `glcli --env prod bifrost pizza --audience-id 31276 --org-id 310`, and 16 more
 
 Representative alerts:
 - Q1TJJ4MEVOF1W3/Q2JLV0HSSULT41: 2026-05-13T07:56:54-07:00; ford_310; audience 29560; marketing_cloud; snapshotting_finished/no_batches. ford (Marketing Production): Exports for audience 29560 failed with states: <(snapshotting_finished,no_batches)>
@@ -43,12 +43,13 @@ Representative alerts:
   Runs: `32702-facebook_20066-scheduled__2026-05-13T00:00:00+00:00`
 - Q1TJJ4MEVOF1W3/Q1LEWIJ102WL8R: 2026-05-13T07:57:07-07:00; ford_310; audience 32703; facebook; snapshotting_finished/no_batches. ford (Marketing Production): Exports for audience 32703 failed with states: <(snapshotting_finished,no_batches)>
   Runs: `32703-facebook_20067-scheduled__2026-05-13T00:00:00+00:00`
-- Showing 10 of 18 alert facts; see `indexes/alert_facts.json` for the full imported set.
+- Showing 10 of 19 alert facts; see `indexes/alert_facts.json` for the full imported set.
 
 ## Export Checks
 
-- Checks: 18.
-- States: `healthy_closed`=18
+- Checks: 19.
+- States: `blocked`=1, `healthy_closed`=18
+- Blockers seen: `failed_export_count`
 
 Check evidence:
 - chk_q1tjj4mevof1w3_q04b2ojiz4f2kt (Q1TJJ4MEVOF1W3/Q04B2OJIZ4F2KT): state=`healthy_closed`.
@@ -91,17 +92,18 @@ Check evidence:
   Checked runs: `32703-facebook_20067-scheduled__2026-05-13T00:00:00+00:00`
   Command: `glcli --env prod bifrost pizza --audience-id 32703 --org-id 310`
   Run 32703-facebook_20067-scheduled__2026-05-13T00:00:00+00:00: health=`healthy`; created=2026-05-13T00:32:35.138558+00:00; snapshotting=snapshotting_finished; export=export_finished; failed=0.
+- chk_q1tjj4mevof1w3_q1vgetgke29bnk (Q1TJJ4MEVOF1W3/Q1VGETGKE29BNK): state=`blocked`.
+  Scope: env=prod; org=310; audience=34010; destination=reddit_ads.
+  Checked runs: `34010-reddit_ads_21799-scheduled__2026-05-13T00:00:00+00:00`, `34010-pinterest_21757-scheduled__2026-05-13T00:00:00+00:00`, `34010-the_trade_desk_crm_20865-scheduled__2026-05-13T00:00:00+00:00`, `34010-tik_tok_streaming_21808-scheduled__2026-05-13T00:00:00+00:00`, and 2 more
+  Command: `glcli --env prod bifrost pizza --audience-id 34010 --org-id 310`
+  Blockers: `failed_export_count`
+  Run 34010-reddit_ads_21799-scheduled__2026-05-13T00:00:00+00:00: health=`blocked`; blockers=failed_export_count; created=2026-05-13T00:27:01.228054+00:00; snapshotting=snapshotting_finished; export=export_finished; failed=16.
 - chk_q1tjj4mevof1w3_q20m70mqd14d30 (Q1TJJ4MEVOF1W3/Q20M70MQD14D30): state=`healthy_closed`.
   Scope: env=prod; org=310; audience=32920; destination=pinterest.
   Checked runs: `32920-pinterest_21758-scheduled__2026-05-13T00:00:00+00:00`, `32920-reddit_ads_21800-scheduled__2026-05-13T00:00:00+00:00`, `32920-tik_tok_streaming_21809-scheduled__2026-05-13T00:00:00+00:00`, `32920-dv360_20866-scheduled__2026-05-13T00:00:00+00:00`, and 2 more
   Command: `glcli --env prod bifrost pizza --audience-id 32920 --org-id 310`
   Run 32920-pinterest_21758-scheduled__2026-05-13T00:00:00+00:00: health=`healthy`; created=2026-05-13T00:34:30.451772+00:00; snapshotting=snapshotting_finished; export=export_finished; failed=0.
-- chk_q1tjj4mevof1w3_q22b7qprrdsa37 (Q1TJJ4MEVOF1W3/Q22B7QPRRDSA37): state=`healthy_closed`.
-  Scope: env=prod; org=310; audience=32702; destination=facebook.
-  Checked runs: `32702-facebook_20066-scheduled__2026-05-13T00:00:00+00:00`
-  Command: `glcli --env prod bifrost pizza --audience-id 32702 --org-id 310`
-  Run 32702-facebook_20066-scheduled__2026-05-13T00:00:00+00:00: health=`healthy`; created=2026-05-13T00:32:49.903210+00:00; snapshotting=snapshotting_finished; export=export_finished; failed=0.
-- Showing 10 of 18 checks; see `indexes/checks.json` and `checks/*/check.json` for the full evidence set.
+- Showing 10 of 19 checks; see `indexes/checks.json` and `checks/*/check.json` for the full evidence set.
 
 ## Recent Evidence
 
