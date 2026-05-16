@@ -112,20 +112,6 @@
     "path": "groups/new/260515-allegro_3-dv360-export-processing/case.md"
   },
   {
-    "group_id": "260511-albertsons_6-snapshotting-error",
-    "state": "open",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "albertsons_6 snapshotting-error",
-    "summary": "albertsons (Albertsons Media): Exports for audience 10749 failed with states: <(snapshotting_error,no_batches)>",
-    "incident_ids": [
-      "Q2T09VCLN9MRZ8"
-    ],
-    "alert_count": 5,
-    "path": "groups/open/260511-albertsons_6-snapshotting-error/case.md"
-  },
-  {
     "group_id": "260511-albertsons_6-snapshotting-processing",
     "state": "open",
     "tags": [
@@ -634,6 +620,22 @@
     ],
     "alert_count": 5,
     "path": "groups/waiting/260505-albertsons_6-snapshotting-schema-error/case.md"
+  },
+  {
+    "group_id": "260511-albertsons_6-snapshotting-error",
+    "state": "waiting",
+    "tags": [
+      "triage:needs_review",
+      "waiting:client_schema",
+      "triage:client_schema_missing"
+    ],
+    "title": "albertsons_6 snapshotting-error",
+    "summary": "Waiting on support/client remediation: all five Albertsons LiveRamp alerts still fail snapshotting with missing_table_field; missing RFM_Category_Group fields are documented in #eng-support.",
+    "incident_ids": [
+      "Q2T09VCLN9MRZ8"
+    ],
+    "alert_count": 5,
+    "path": "groups/waiting/260511-albertsons_6-snapshotting-error/case.md"
   },
   {
     "group_id": "260515-gopuff_544-snapshotting-error",

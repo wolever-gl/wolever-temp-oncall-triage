@@ -4,14 +4,14 @@
 
 > Generated file. Do not edit directly; put free-form investigation notes in `notes.md`.
 
-State: `open`
-Tags: `triage:needs_review`
+State: `waiting`
+Tags: `triage:needs_review`, `waiting:client_schema`, `triage:client_schema_missing`
 Incidents: [Q2T09VCLN9MRZ8](https://growthloop.pagerduty.com/incidents/Q2T09VCLN9MRZ8)
 Alerts: 5
 
 ## Current Summary
 
-albertsons (Albertsons Media): Exports for audience 10749 failed with states: <(snapshotting_error,no_batches)>
+Waiting on support/client remediation: all five Albertsons LiveRamp alerts still fail snapshotting with missing_table_field; missing RFM_Category_Group fields are documented in #eng-support.
 
 ## Alert Scope
 
@@ -71,6 +71,12 @@ Check evidence:
   Command: `glcli --env albertsons bifrost pizza --audience-id 10749 --org-id 6`
   Blockers: `snapshotting_error_requires_review`
   Run 10749-live_ramp_activation_2412-scheduled__2026-05-05T00:00:00+00:00: health=`blocked`; blockers=snapshotting_error_requires_review; created=2026-05-05T06:16:10.782768+00:00; snapshotting=snapshotting_error; export=no_batches; failed=0.
+
+## Recent Evidence
+
+- #eng-support thread documents the matching Albertsons snapshotting schema blocker for these five audiences: missing RFM_Category_Waterenhancers2010Champions_L52W, RFM_Category_Eggs3835NewCustomers_L52W, or RFM_Category_Cakebakingmixes1301ActiveCustomer_L52W in RFM_Category_Group.
+  Source: `eng-support`; kind: `slack_thread`; captured: `2026-05-16T21:37:07.315Z`.
+  Links: [eng-support thread](https://flywheeltechnologies.slack.com/archives/C02J2RJ6VSL/p1778949133193199?thread_ts=1778902074.333359&cid=C02J2RJ6VSL).
 
 ## Next Action
 
