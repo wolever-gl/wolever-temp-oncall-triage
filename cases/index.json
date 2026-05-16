@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-05-16T21:46:50.905Z",
-  "open_count": 47,
+  "generated_at": "2026-05-16T21:47:41.265Z",
+  "open_count": 46,
   "groups": [
     {
       "group_id": "260513-allegro_3-client-sent-export-failure",
@@ -515,27 +515,13 @@
         "bug:service-quervice"
       ],
       "title": "albertsons_6 client-sent-export-failure split",
-      "summary": "Needs platform investigation: audience 8473 snapshotting pre-check failed because Quervice returned repeated 502s/upstream premature close for the 2026-05-13 LiveRamp run; latest Pizza remains snapshotting_error/no_batches with no later success.",
+      "summary": "Needs platform investigation: Albertsons audiences 8473 and 10073 both remain failed after LiveRamp snapshotting pre-checks hit Quervice 502/upstream premature-close errors; latest Pizza rows are snapshotting_error/no_batches with no later success.",
       "incident_ids": [
-        "Q2EJWG22CER0LA"
-      ],
-      "alert_count": 1,
-      "path": "groups/open/grp_260513_albertsons_6_client_sent_export_failure_split_0066/case.md"
-    },
-    {
-      "group_id": "grp_260514_albertsons_6_client_sent_export_failure_split_0067",
-      "state": "open",
-      "tags": [
-        "triage:needs_review",
-        "triage:snapshotting-error"
-      ],
-      "title": "albertsons_6 client-sent-export-failure split",
-      "summary": "Needs investigation: audience 10073 remains failed; latest Pizza is 2026-05-15 snapshotting_error/no_batches during pre_snapshotting_check with no later success.",
-      "incident_ids": [
+        "Q2EJWG22CER0LA",
         "Q38JR11G2ENK2W"
       ],
-      "alert_count": 1,
-      "path": "groups/open/grp_260514_albertsons_6_client_sent_export_failure_split_0067/case.md"
+      "alert_count": 2,
+      "path": "groups/open/grp_260513_albertsons_6_client_sent_export_failure_split_0066/case.md"
     },
     {
       "group_id": "260511-albertsons_6-snapshotting-processing",
@@ -995,6 +981,24 @@
       ],
       "alert_count": 1,
       "path": "groups/resolved/grp_260512_albertsons_6_client_sent_export_failure_split_0065/case.md"
+    },
+    {
+      "group_id": "grp_260514_albertsons_6_client_sent_export_failure_split_0067",
+      "state": "resolved",
+      "tags": [
+        "triage:needs_review",
+        "triage:snapshotting-error",
+        "bug:service-quervice",
+        "resolved:merged"
+      ],
+      "title": "albertsons_6 client-sent-export-failure split",
+      "summary": "Merged into grp_260513_albertsons_6_client_sent_export_failure_split_0066: Same Albertsons platform failure class: both audience 8473 and 10073 failed LiveRamp snapshotting pre_snapshotting_check with Quervice 502/upstream premature close and no later success. Track as one Quervice service-side investigation.",
+      "next_action": "Follow target group grp_260513_albertsons_6_client_sent_export_failure_split_0066.",
+      "incident_ids": [
+        "Q38JR11G2ENK2W"
+      ],
+      "alert_count": 1,
+      "path": "groups/resolved/grp_260514_albertsons_6_client_sent_export_failure_split_0067/case.md"
     }
   ],
   "alert_count": 698

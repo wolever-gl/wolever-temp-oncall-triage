@@ -1,7 +1,7 @@
 # On-call Triage Cases
 
-Generated: 2026-05-16T21:46:50.905Z
-Open groups: 47
+Generated: 2026-05-16T21:47:41.265Z
+Open groups: 46
 Alert facts: 698
 
 ## New (8)
@@ -17,7 +17,7 @@ Alert facts: 698
 | `triage:needs_review` | [260514-allegro_3-dv360-export-processing](groups/new/260514-allegro_3-dv360-export-processing/case.md) | allegro (Marketing): Exports for audience 1156 failed with states: <(snapshotting_finished,export_processing)> | Q2KT0WUDEVL42Q | 13 |
 | `triage:needs_review` | [260515-allegro_3-dv360-export-processing](groups/new/260515-allegro_3-dv360-export-processing/case.md) | allegro (Marketing): Exports for audience 605 failed with states: <(snapshotting_finished,export_processing)> | Q3GQQRY1UQLBSN | 1 |
 
-## Open (30)
+## Open (29)
 
 | Tags | Group | Summary | Incidents | Alerts |
 |---|---|---|---|---:|
@@ -49,8 +49,7 @@ Alert facts: 698
 | `triage:needs_review` | [260515-birchwood_274-salesforce-audience-export-error](groups/open/260515-birchwood_274-salesforce-audience-export-error/case.md) | birchwood (default): Exports for signal 723 failed with states: <(snapshotting_finished,export_error)> | Q3PJ7W2K3Y9LJV | 1 |
 | `triage:needs_review` | [260515-pgatourhq_219-no-batches](groups/open/260515-pgatourhq_219-no-batches/case.md) | pgatourhq (New World Order): Exports for audience 31918 failed with states: <(snapshotting_finished,no_batches)> | Q2DJCY3XC2BSBG | 13 |
 | `triage:needs_review` | [260515-royals_4-snapshotting-error](groups/open/260515-royals_4-snapshotting-error/case.md) | royals (default): Exports for signal 203 failed with states: <(snapshotting_error,no_batches)> | Q08B553ANQ9KMI | 1 |
-| `triage:needs_review`<br>`triage:snapshotting-error`<br>`bug:service-quervice` | [grp_260513_albertsons_6_client_sent_export_failure_split_0066](groups/open/grp_260513_albertsons_6_client_sent_export_failure_split_0066/case.md) | Needs platform investigation: audience 8473 snapshotting pre-check failed because Quervice returned repeated 502s/upstream premature close for the 2026-05-13 LiveRamp run; latest Pizza remains snapshotting_error/no_batches with no later success. | Q2EJWG22CER0LA | 1 |
-| `triage:needs_review`<br>`triage:snapshotting-error` | [grp_260514_albertsons_6_client_sent_export_failure_split_0067](groups/open/grp_260514_albertsons_6_client_sent_export_failure_split_0067/case.md) | Needs investigation: audience 10073 remains failed; latest Pizza is 2026-05-15 snapshotting_error/no_batches during pre_snapshotting_check with no later success. | Q38JR11G2ENK2W | 1 |
+| `triage:needs_review`<br>`triage:snapshotting-error`<br>`bug:service-quervice` | [grp_260513_albertsons_6_client_sent_export_failure_split_0066](groups/open/grp_260513_albertsons_6_client_sent_export_failure_split_0066/case.md) | Needs platform investigation: Albertsons audiences 8473 and 10073 both remain failed after LiveRamp snapshotting pre-checks hit Quervice 502/upstream premature-close errors; latest Pizza rows are snapshotting_error/no_batches with no later success. | Q2EJWG22CER0LA<br>Q38JR11G2ENK2W | 2 |
 
 ## Monitoring (6)
 
@@ -71,7 +70,7 @@ Alert facts: 698
 | `triage:needs_review`<br>`waiting:client_schema`<br>`triage:client_schema_missing` | [260511-albertsons_6-snapshotting-error](groups/waiting/260511-albertsons_6-snapshotting-error/case.md) | Waiting on support/client remediation: five Albertsons LiveRamp export-run alerts still fail snapshotting with missing_table_field, and three client-sent alerts for the same schema-affected audiences were merged here. | Q2T09VCLN9MRZ8 | 8 |
 | `triage:needs_review`<br>`triage:client_schema_missing`<br>`waiting:client_schema` | [260515-gopuff_544-snapshotting-error](groups/waiting/260515-gopuff_544-snapshotting-error/case.md) | Waiting on support/client remediation for missing source column CORE.GOPUFF_ORDER_ITEMS.CLASS in GoPuff Snowflake source schema; support thread opened. | Q1X9CE7BIDK9MV | 1 |
 
-## Resolved (21)
+## Resolved (22)
 
 | Tags | Group | Summary | Incidents | Alerts |
 |---|---|---|---|---:|
@@ -96,3 +95,4 @@ Alert facts: 698
 | `triage:needs_review`<br>`resolved:pd_closed_external` | [260515-whirlpool_525-no-batches](groups/resolved/260515-whirlpool_525-no-batches/case.md) | All attached PagerDuty incidents are resolved externally. | Q3WZUE4915S6J4 | 2 |
 | `triage:needs_review`<br>`resolved:retry_succeeded` | [260516-evgo_402-client-sent-export-failure](groups/resolved/260516-evgo_402-client-sent-export-failure/case.md) | Resolved as retry/false alarm: failed Braze run 29790-braze_18238-scheduled__2026-05-16T14:00:00+00:00 hit transient Snowflake connector response-ended-prematurely during snapshotting, but later same-scope scheduled runs at 15:00 and 16:00 UTC completed export_finished with zero failures/rejects. | Q22U9UI0BTFNJC | 1 |
 | `triage:needs_review`<br>`resolved:merged` | [grp_260512_albertsons_6_client_sent_export_failure_split_0065](groups/resolved/grp_260512_albertsons_6_client_sent_export_failure_split_0065/case.md) | Merged into 260511-albertsons_6-snapshotting-processing: Audience 2189 client-sent failure is the notification counterpart of the existing snapshotting_processing/no_batches monitoring case. | Q2T09VCLN9MRZ8 | 1 |
+| `triage:needs_review`<br>`triage:snapshotting-error`<br>`bug:service-quervice`<br>`resolved:merged` | [grp_260514_albertsons_6_client_sent_export_failure_split_0067](groups/resolved/grp_260514_albertsons_6_client_sent_export_failure_split_0067/case.md) | Merged into grp_260513_albertsons_6_client_sent_export_failure_split_0066: Same Albertsons platform failure class: both audience 8473 and 10073 failed LiveRamp snapshotting pre_snapshotting_check with Quervice 502/upstream premature close and no later success. Track as one Quervice service-side investigation. | Q38JR11G2ENK2W | 1 |

@@ -4,14 +4,14 @@
 
 > Generated file. Do not edit directly; put free-form investigation notes in `notes.md`.
 
-State: `open`
-Tags: `triage:needs_review`, `triage:snapshotting-error`
+State: `resolved`
+Tags: `triage:needs_review`, `triage:snapshotting-error`, `bug:service-quervice`, `resolved:merged`
 Incidents: [Q38JR11G2ENK2W](https://growthloop.pagerduty.com/incidents/Q38JR11G2ENK2W)
 Alerts: 1
 
 ## Current Summary
 
-Needs investigation: audience 10073 remains failed; latest Pizza is 2026-05-15 snapshotting_error/no_batches during pre_snapshotting_check with no later success.
+Merged into grp_260513_albertsons_6_client_sent_export_failure_split_0066: Same Albertsons platform failure class: both audience 8473 and 10073 failed LiveRamp snapshotting pre_snapshotting_check with Quervice 502/upstream premature close and no later success. Track as one Quervice service-side investigation.
 
 ## Alert Scope
 
@@ -39,13 +39,16 @@ Check evidence:
 
 ## Recent Evidence
 
+- Albertsons logs for audience 10073 show snapshotting started for run 10073-live_ramp_activation_2061-scheduled__2026-05-15T00:00:00+00:00, base_table_not_empty succeeded, and an initial pre_snapshotting_check returned 200. A subsequent pre_snapshotting_check call to Quervice for internal_audience_id=10073 returned 502 after a long upstream wait; nginx logged upstream prematurely closed connection while reading response header. This matches a GrowthLoop/Quervice service-side failure, not client schema or missing field evidence.
+  Source: `gl-client-albertsons`; kind: `gcloud_logs`; captured: `2026-05-16T21:47:24.557Z`.
+  Command: `gcloud logging read timestamp>=2026-05-15T02:20:00Z timestamp<=2026-05-15T03:00:00Z (10073 OR live_ramp_activation_2061) --project=gl-client-albertsons`
 - Audience 10073 latest Pizza row is 2026-05-15 02:40:38 UTC, run 10073-live_ramp_activation_2061-scheduled__2026-05-15T00:00:00+00:00, state snapshotting_error/no_batches with failure reason: Snapshotting failed while running pre_snapshotting_check: unknown error. Prior weekly runs from 2026-04-17 through 2026-05-08 were snapshotting_processing/no_batches, so there is no later successful run.
   Source: `glcli bifrost pizza`; kind: `pizza`; captured: `2026-05-16T21:46:46.855Z`.
   Command: `glcli --env albertsons bifrost pizza --audience-id 10073 --org-id 6 --format json`
 
 ## Next Action
 
-Agent should gather evidence, choose/apply a runbook when appropriate, and update this case.
+Follow target group grp_260513_albertsons_6_client_sent_export_failure_split_0066.
 
 ## Decision Trail
 
