@@ -1,0 +1,51 @@
+{
+  "group_id": "260514-albertsons_6-client-sent-export-failure",
+  "state": "new",
+  "tags": [
+    "triage:needs_review"
+  ],
+  "title": "albertsons_6 client-sent-export-failure",
+  "summary": "albertsons (Albertsons Media) - Audience 10073: Audience Export failure for 10073 sent to client.",
+  "deterministic_key": "v3|incident:Q38JR11G2ENK2W|org:albertsons_6|class:client-sent-export-failure",
+  "grouping_version": 3,
+  "created_at": "2026-05-16T00:38:01.850Z",
+  "updated_at": "2026-05-16T00:38:01.850Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q38JR11G2ENK2W",
+      "alert_id": "Q32J02DN0JRYZ0"
+    },
+    {
+      "incident_id": "Q38JR11G2ENK2W",
+      "alert_id": "Q1ULRV0BGTSFB6"
+    },
+    {
+      "incident_id": "Q38JR11G2ENK2W",
+      "alert_id": "Q3XKDL8A9WAX7G"
+    },
+    {
+      "incident_id": "Q38JR11G2ENK2W",
+      "alert_id": "Q0HOSDAJCFXNKU"
+    },
+    {
+      "incident_id": "Q38JR11G2ENK2W",
+      "alert_id": "Q37HTX61KYUTPQ"
+    },
+    {
+      "incident_id": "Q38JR11G2ENK2W",
+      "alert_id": "Q1TMIDDKP4H2XI"
+    },
+    {
+      "incident_id": "Q38JR11G2ENK2W",
+      "alert_id": "Q2852WP5GN2XBE"
+    },
+    {
+      "incident_id": "Q38JR11G2ENK2W",
+      "alert_id": "Q02ZG08UGCS5OA"
+    }
+  ],
+  "incident_ids": [
+    "Q38JR11G2ENK2W"
+  ],
+  "related_group_ids": []
+}

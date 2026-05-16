@@ -126,6 +126,15 @@
     "rationale": "Initial deterministic grouping for 260515-evgo_402-no-batches."
   },
   {
+    "match_key": "v3|incident:Q15FI03XBQ4OW5|org:3|class:client-sent-export-failure",
+    "status": "active",
+    "target_group_id": "260515-3-client-sent-export-failure",
+    "reason": "created",
+    "created_at": "2026-05-16T16:36:53.567Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260515-3-client-sent-export-failure."
+  },
+  {
     "match_key": "v3|incident:Q16KSAQEWECSDD|org:nascar_2|class:no-batches",
     "status": "active",
     "target_group_id": "260515-nascar_2-no-batches",
@@ -223,6 +232,15 @@
     "created_at": "2026-05-16T00:38:01.850Z",
     "created_by": "oncall-triage",
     "rationale": "Initial deterministic grouping for 260515-174-zero-success."
+  },
+  {
+    "match_key": "v3|incident:Q22U9UI0BTFNJC|org:evgo_402|class:client-sent-export-failure",
+    "status": "active",
+    "target_group_id": "260516-evgo_402-client-sent-export-failure",
+    "reason": "created",
+    "created_at": "2026-05-16T16:36:53.567Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260516-evgo_402-client-sent-export-failure."
   },
   {
     "match_key": "v3|incident:Q269WMZF4MKMNL|org:albertsons_6|class:zero-success",
@@ -334,48 +352,66 @@
   },
   {
     "match_key": "v3|incident:Q2T09VCLN9MRZ8|org:albertsons_6|class:no-batches",
-    "status": "redirect",
-    "target_group_id": "260511-albertsons_6-liveramp-sftp-permission",
-    "reason": "merged",
-    "created_at": "2026-05-16T00:38:01.850Z",
+    "status": "active",
+    "target_group_id": "260511-albertsons_6-no-batches",
+    "reason": "created",
+    "created_at": "2026-05-16T16:36:53.567Z",
     "created_by": "oncall-triage",
-    "rationale": "Grouped by agent after reviewing https://flywheeltechnologies.slack.com/archives/C02J2RJ6VSL/p1778522176115369. The thread identifies PermissionError [Errno 13] on Albertsons LiveRamp SFTP, notes Bifrost retries these failures, and confirms successful uploads were present; treat matching Albertsons LiveRamp alerts as one remediation path: monitor retries/uploads rather than investigate separate root causes."
+    "rationale": "Initial deterministic grouping for 260511-albertsons_6-no-batches."
   },
   {
     "match_key": "v3|incident:Q2T09VCLN9MRZ8|org:albertsons_6|class:snapshotting-error",
-    "status": "redirect",
-    "target_group_id": "260511-albertsons_6-liveramp-sftp-permission",
-    "reason": "merged",
-    "created_at": "2026-05-16T00:38:01.850Z",
+    "status": "active",
+    "target_group_id": "260511-albertsons_6-snapshotting-error",
+    "reason": "created",
+    "created_at": "2026-05-16T16:36:53.567Z",
     "created_by": "oncall-triage",
-    "rationale": "Grouped by agent after reviewing https://flywheeltechnologies.slack.com/archives/C02J2RJ6VSL/p1778522176115369. The thread identifies PermissionError [Errno 13] on Albertsons LiveRamp SFTP, notes Bifrost retries these failures, and confirms successful uploads were present; treat matching Albertsons LiveRamp alerts as one remediation path: monitor retries/uploads rather than investigate separate root causes."
+    "rationale": "Initial deterministic grouping for 260511-albertsons_6-snapshotting-error."
   },
   {
     "match_key": "v3|incident:Q2T09VCLN9MRZ8|org:albertsons_6|class:snapshotting-processing",
-    "status": "redirect",
-    "target_group_id": "260511-albertsons_6-liveramp-sftp-permission",
-    "reason": "merged",
-    "created_at": "2026-05-16T00:38:01.850Z",
+    "status": "active",
+    "target_group_id": "260511-albertsons_6-snapshotting-processing",
+    "reason": "created",
+    "created_at": "2026-05-16T16:36:53.567Z",
     "created_by": "oncall-triage",
-    "rationale": "Grouped by agent after reviewing https://flywheeltechnologies.slack.com/archives/C02J2RJ6VSL/p1778522176115369. The thread identifies PermissionError [Errno 13] on Albertsons LiveRamp SFTP, notes Bifrost retries these failures, and confirms successful uploads were present; treat matching Albertsons LiveRamp alerts as one remediation path: monitor retries/uploads rather than investigate separate root causes."
+    "rationale": "Initial deterministic grouping for 260511-albertsons_6-snapshotting-processing."
   },
   {
     "match_key": "v3|incident:Q2T09VCLN9MRZ8|org:albertsons_6|dest:live-ramp|class:export-error",
-    "status": "redirect",
-    "target_group_id": "260511-albertsons_6-liveramp-sftp-permission",
-    "reason": "merged",
-    "created_at": "2026-05-16T00:38:01.850Z",
+    "status": "active",
+    "target_group_id": "260511-albertsons_6-live-ramp-export-error",
+    "reason": "created",
+    "created_at": "2026-05-16T16:36:53.567Z",
     "created_by": "oncall-triage",
-    "rationale": "Grouped by agent after reviewing https://flywheeltechnologies.slack.com/archives/C02J2RJ6VSL/p1778522176115369. The thread identifies PermissionError [Errno 13] on Albertsons LiveRamp SFTP, notes Bifrost retries these failures, and confirms successful uploads were present; treat matching Albertsons LiveRamp alerts as one remediation path: monitor retries/uploads rather than investigate separate root causes."
+    "rationale": "Initial deterministic grouping for 260511-albertsons_6-live-ramp-export-error."
   },
   {
     "match_key": "v3|incident:Q2T09VCLN9MRZ8|org:albertsons_6|dest:live-ramp|class:export-processing",
-    "status": "redirect",
-    "target_group_id": "260511-albertsons_6-liveramp-sftp-permission",
-    "reason": "merged",
-    "created_at": "2026-05-16T00:38:01.850Z",
+    "status": "active",
+    "target_group_id": "260511-albertsons_6-live-ramp-export-processing",
+    "reason": "created",
+    "created_at": "2026-05-16T16:36:53.567Z",
     "created_by": "oncall-triage",
-    "rationale": "Grouped by agent after reviewing https://flywheeltechnologies.slack.com/archives/C02J2RJ6VSL/p1778522176115369. The thread identifies PermissionError [Errno 13] on Albertsons LiveRamp SFTP, notes Bifrost retries these failures, and confirms successful uploads were present; treat matching Albertsons LiveRamp alerts as one remediation path: monitor retries/uploads rather than investigate separate root causes."
+    "rationale": "Initial deterministic grouping for 260511-albertsons_6-live-ramp-export-processing."
+  },
+  {
+    "match_key": "v3|incident:Q31XLLHUNNMAK9|org:451|class:client-sent-export-failure",
+    "status": "active",
+    "target_group_id": "260515-451-client-sent-export-failure",
+    "reason": "created",
+    "created_at": "2026-05-16T16:36:53.567Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260515-451-client-sent-export-failure."
+  },
+  {
+    "match_key": "v3|incident:Q33KFL1KESEMVC|org:378|class:client-sent-export-failure",
+    "status": "active",
+    "target_group_id": "260515-378-client-sent-export-failure",
+    "reason": "created",
+    "created_at": "2026-05-16T16:36:53.567Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260515-378-client-sent-export-failure."
   },
   {
     "match_key": "v3|incident:Q38JR11G2ENK2W|org:albertsons_6|class:client-sent-export-failure",
@@ -397,12 +433,12 @@
   },
   {
     "match_key": "v3|incident:Q38JR11G2ENK2W|org:albertsons_6|dest:live-ramp|class:export-error",
-    "status": "redirect",
-    "target_group_id": "260511-albertsons_6-liveramp-sftp-permission",
-    "reason": "merged",
-    "created_at": "2026-05-16T00:38:01.850Z",
+    "status": "active",
+    "target_group_id": "260515-albertsons_6-live-ramp-export-error",
+    "reason": "created",
+    "created_at": "2026-05-16T16:36:53.567Z",
     "created_by": "oncall-triage",
-    "rationale": "Grouped by agent after reviewing https://flywheeltechnologies.slack.com/archives/C02J2RJ6VSL/p1778522176115369. The thread identifies PermissionError [Errno 13] on Albertsons LiveRamp SFTP, notes Bifrost retries these failures, and confirms successful uploads were present; treat matching Albertsons LiveRamp alerts as one remediation path: monitor retries/uploads rather than investigate separate root causes."
+    "rationale": "Initial deterministic grouping for 260515-albertsons_6-live-ramp-export-error."
   },
   {
     "match_key": "v3|incident:Q3GQQRY1UQLBSN|org:allegro_3|dest:dv360|class:export-processing",

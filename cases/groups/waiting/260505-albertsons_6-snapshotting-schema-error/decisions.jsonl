@@ -1,0 +1,2 @@
+{"ts":"2026-05-16T01:48:36.496Z","actor":"agent","decision":"created_group_from_tags","rationale":"Grouped separately from LiveRamp upload recovery because evidence points to missing source-table fields, not SFTP upload progress."}
+{"ts":"2026-05-16T02:06:44.650Z","actor":"agent","decision":"transitioned_to_waiting","rationale":"Blocked on Albertsons source/schema remediation: scoped snapshotting logs show missing fields in RFM_Category_Group, and live pizza shows no later successful terminal export for the five alert-scoped runs."}

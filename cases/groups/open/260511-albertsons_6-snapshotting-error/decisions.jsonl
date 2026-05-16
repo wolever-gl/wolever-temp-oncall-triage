@@ -1,0 +1,5 @@
+{"ts":"2026-05-16T16:36:53.567Z","actor":"oncall-triage","decision":"created_group","rationale":"Conservative deterministic grouping created a new group for v3|incident:Q2T09VCLN9MRZ8|org:albertsons_6|class:snapshotting-error."}
+{"ts":"2026-05-16T16:36:53.567Z","actor":"oncall-triage","decision":"attached_alert_to_existing_group","rationale":"Alert matched deterministic key v3|incident:Q2T09VCLN9MRZ8|org:albertsons_6|class:snapshotting-error."}
+{"ts":"2026-05-16T16:36:53.567Z","actor":"oncall-triage","decision":"attached_alert_to_existing_group","rationale":"Alert matched deterministic key v3|incident:Q2T09VCLN9MRZ8|org:albertsons_6|class:snapshotting-error."}
+{"ts":"2026-05-16T16:36:53.567Z","actor":"oncall-triage","decision":"attached_alert_to_existing_group","rationale":"Alert matched deterministic key v3|incident:Q2T09VCLN9MRZ8|org:albertsons_6|class:snapshotting-error."}
+{"ts":"2026-05-16T16:36:53.567Z","actor":"oncall-triage","decision":"attached_alert_to_existing_group","rationale":"Alert matched deterministic key v3|incident:Q2T09VCLN9MRZ8|org:albertsons_6|class:snapshotting-error."}

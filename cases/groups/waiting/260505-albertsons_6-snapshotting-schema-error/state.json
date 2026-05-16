@@ -1,0 +1,44 @@
+{
+  "group_id": "260505-albertsons_6-snapshotting-schema-error",
+  "state": "waiting",
+  "tags": [
+    "triage:snapshotting-schema",
+    "triage:tag_grouped",
+    "waiting:source-schema"
+  ],
+  "title": "Albertsons snapshotting schema errors",
+  "summary": "Blocked on Albertsons source/schema remediation: scoped snapshotting logs show missing fields in RFM_Category_Group, and live pizza shows no later successful terminal export for the five alert-scoped runs.",
+  "next_action": "Track customer/source-owner follow-up in Slack thread https://flywheeltechnologies.slack.com/archives/C02J2RJ6VSL/p1778902074333359, then recheck the five alert-scoped audiences for a later snapshotting_finished/export_finished run before resolving.",
+  "deterministic_key": "tag|260505-albertsons_6-snapshotting-schema-error",
+  "grouping_version": 3,
+  "created_at": "2026-05-16T01:48:36.496Z",
+  "updated_at": "2026-05-16T16:33:33Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q2T09VCLN9MRZ8",
+      "alert_id": "Q14V88Y9W3XATI"
+    },
+    {
+      "incident_id": "Q2T09VCLN9MRZ8",
+      "alert_id": "Q14XXYJMQ2YAP3"
+    },
+    {
+      "incident_id": "Q2T09VCLN9MRZ8",
+      "alert_id": "Q1MJ4HIBTPB61E"
+    },
+    {
+      "incident_id": "Q2T09VCLN9MRZ8",
+      "alert_id": "Q214HEH2KED82E"
+    },
+    {
+      "incident_id": "Q2T09VCLN9MRZ8",
+      "alert_id": "Q2MNS4QOMCJWAW"
+    }
+  ],
+  "incident_ids": [
+    "Q2T09VCLN9MRZ8"
+  ],
+  "related_group_ids": [
+    "260511-albertsons_6-liveramp-sftp-permission"
+  ]
+}

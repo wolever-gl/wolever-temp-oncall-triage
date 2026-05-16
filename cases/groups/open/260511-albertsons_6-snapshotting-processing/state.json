@@ -1,0 +1,31 @@
+{
+  "group_id": "260511-albertsons_6-snapshotting-processing",
+  "state": "open",
+  "tags": [
+    "triage:needs_review"
+  ],
+  "title": "albertsons_6 snapshotting-processing",
+  "summary": "albertsons (Albertsons Media): Exports for audience 10073 failed with states: <(snapshotting_processing,no_batches)>",
+  "deterministic_key": "v3|incident:Q2T09VCLN9MRZ8|org:albertsons_6|class:snapshotting-processing",
+  "grouping_version": 3,
+  "created_at": "2026-05-16T16:36:53.567Z",
+  "updated_at": "2026-05-16T16:36:53.567Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q2T09VCLN9MRZ8",
+      "alert_id": "Q2TYR6XMVMLGTB"
+    },
+    {
+      "incident_id": "Q2T09VCLN9MRZ8",
+      "alert_id": "Q3HGOVLPIQWNZ0"
+    },
+    {
+      "incident_id": "Q2T09VCLN9MRZ8",
+      "alert_id": "Q2FA9QPTXF9MJM"
+    }
+  ],
+  "incident_ids": [
+    "Q2T09VCLN9MRZ8"
+  ],
+  "related_group_ids": []
+}

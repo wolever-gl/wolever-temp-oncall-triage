@@ -1,0 +1,24 @@
+{
+  "group_id": "260515-flagstar_305-no-batches",
+  "state": "resolved",
+  "tags": [
+    "triage:needs_review",
+    "resolved:pd_closed_external"
+  ],
+  "title": "flagstar_305 no-batches",
+  "summary": "All attached PagerDuty incidents are resolved externally.",
+  "deterministic_key": "v3|incident:Q28HZS5TYC0NM9|org:flagstar_305|class:no-batches",
+  "grouping_version": 3,
+  "created_at": "2026-05-16T00:38:01.850Z",
+  "updated_at": "2026-05-16T16:37:00.344Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q28HZS5TYC0NM9",
+      "alert_id": "Q056HXGKRMM8CI"
+    }
+  ],
+  "incident_ids": [
+    "Q28HZS5TYC0NM9"
+  ],
+  "related_group_ids": []
+}

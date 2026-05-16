@@ -1,0 +1,38 @@
+{
+  "group_id": "260511-albertsons_6-liveramp-complete",
+  "state": "resolved",
+  "tags": [
+    "resolved:export-healthy",
+    "triage:tag_grouped"
+  ],
+  "title": "Albertsons LiveRamp exports complete",
+  "summary": "Checked exports are healthy with no blocking export evidence.",
+  "deterministic_key": "tag|260511-albertsons_6-liveramp-complete",
+  "grouping_version": 3,
+  "created_at": "2026-05-16T01:48:42.939Z",
+  "updated_at": "2026-05-16T01:48:42.939Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q2T09VCLN9MRZ8",
+      "alert_id": "Q0CG1XZ64MROU1"
+    },
+    {
+      "incident_id": "Q2T09VCLN9MRZ8",
+      "alert_id": "Q0O5PHKZDIR9IS"
+    },
+    {
+      "incident_id": "Q2T09VCLN9MRZ8",
+      "alert_id": "Q0ODP0MBZ3C4Y2"
+    },
+    {
+      "incident_id": "Q2T09VCLN9MRZ8",
+      "alert_id": "Q2CC3JVTUBUB5N"
+    }
+  ],
+  "incident_ids": [
+    "Q2T09VCLN9MRZ8"
+  ],
+  "related_group_ids": [
+    "260511-albertsons_6-liveramp-sftp-permission"
+  ]
+}

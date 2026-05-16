@@ -1,0 +1,23 @@
+{
+  "group_id": "260511-albertsons_6-live-ramp-export-processing",
+  "state": "open",
+  "tags": [
+    "triage:needs_review"
+  ],
+  "title": "albertsons_6 live-ramp export-processing",
+  "summary": "albertsons (Albertsons Media): Exports for audience 12719 failed with states: <(snapshotting_finished,export_processing)>",
+  "deterministic_key": "v3|incident:Q2T09VCLN9MRZ8|org:albertsons_6|dest:live-ramp|class:export-processing",
+  "grouping_version": 3,
+  "created_at": "2026-05-16T16:36:53.567Z",
+  "updated_at": "2026-05-16T16:36:53.567Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q2T09VCLN9MRZ8",
+      "alert_id": "Q06RN07M3BVDQB"
+    }
+  ],
+  "incident_ids": [
+    "Q2T09VCLN9MRZ8"
+  ],
+  "related_group_ids": []
+}

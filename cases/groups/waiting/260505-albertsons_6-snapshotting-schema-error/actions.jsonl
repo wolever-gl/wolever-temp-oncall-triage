@@ -1,0 +1,2 @@
+{"ts":"2026-05-16T02:06:47Z","actor":"agent","action":"waiting_on_source_schema_owner","summary":"Ask Albertsons/source schema owner to restore or update the missing RFM_Category_Group source fields, then recheck the alert-scoped exports for later successful terminal runs."}
+{"ts":"2026-05-16T16:33:33Z","actor":"agent","action":"track_support_thread","summary":"Use Slack thread https://flywheeltechnologies.slack.com/archives/C02J2RJ6VSL/p1778902074333359 for customer/source-owner follow-up on the Albertsons schema issue."}
