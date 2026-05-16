@@ -1,7 +1,7 @@
 # On-call Triage Cases
 
-Generated: 2026-05-16T21:38:51.148Z
-Open groups: 46
+Generated: 2026-05-16T21:40:52.183Z
+Open groups: 45
 Alert facts: 698
 
 ## New (8)
@@ -17,12 +17,11 @@ Alert facts: 698
 | `triage:needs_review` | [260514-allegro_3-dv360-export-processing](groups/new/260514-allegro_3-dv360-export-processing/case.md) | allegro (Marketing): Exports for audience 1156 failed with states: <(snapshotting_finished,export_processing)> | Q2KT0WUDEVL42Q | 13 |
 | `triage:needs_review` | [260515-allegro_3-dv360-export-processing](groups/new/260515-allegro_3-dv360-export-processing/case.md) | allegro (Marketing): Exports for audience 605 failed with states: <(snapshotting_finished,export_processing)> | Q3GQQRY1UQLBSN | 1 |
 
-## Open (31)
+## Open (30)
 
 | Tags | Group | Summary | Incidents | Alerts |
 |---|---|---|---|---:|
 | `triage:needs_review` | [260511-allegro_3-dv360-export-error](groups/open/260511-allegro_3-dv360-export-error/case.md) | allegro (Marketing): Exports for audience 731 failed with states: <(snapshotting_finished,export_error)> | Q3HYNV525MK1RW | 8 |
-| `triage:needs_review` | [260512-albertsons_6-client-sent-export-failure](groups/open/260512-albertsons_6-client-sent-export-failure/case.md) | albertsons (Albertsons Media) - Audience 2189: Audience Export failure for 2189 sent to client. | Q2T09VCLN9MRZ8 | 4 |
 | `triage:needs_review` | [260513-451-client-sent-export-failure](groups/open/260513-451-client-sent-export-failure/case.md) | ASU Enterprise Partners (Restricted) - Audience 31982: Audience Export failure for 31982 sent to client. | Q3XQABQFPPVNT5 | 3 |
 | `triage:needs_review` | [260513-albertsons_6-client-sent-export-failure](groups/open/260513-albertsons_6-client-sent-export-failure/case.md) | albertsons (Albertsons Media) - Audience 8473: Audience Export failure for 8473 sent to client. | Q2EJWG22CER0LA | 3 |
 | `triage:needs_review` | [260513-ford_310-no-batches](groups/open/260513-ford_310-no-batches/case.md) | ford (Marketing Production): Exports for audience 34062 failed with states: <(snapshotting_finished,no_batches)> | Q1TJJ4MEVOF1W3 | 19 |
@@ -57,7 +56,7 @@ Alert facts: 698
 
 | Tags | Group | Summary | Incidents | Alerts |
 |---|---|---|---|---:|
-| `triage:needs_review`<br>`monitoring:export-processing` | [260511-albertsons_6-snapshotting-processing](groups/monitoring/260511-albertsons_6-snapshotting-processing/case.md) | Auto-monitored from Pizza export checks: 3 alert-scoped export check(s) are still processing and 0 are already healthy. | Q2T09VCLN9MRZ8 | 3 |
+| `triage:needs_review`<br>`monitoring:export-processing` | [260511-albertsons_6-snapshotting-processing](groups/monitoring/260511-albertsons_6-snapshotting-processing/case.md) | Monitoring Albertsons snapshotting-processing exports: three alert-scoped runs remain snapshotting_processing/no_batches, and the audience 2189 client-sent alert was merged here as the notification counterpart. | Q2T09VCLN9MRZ8 | 4 |
 | `triage:tag_grouped`<br>`waiting:uploads` | [260512-albertsons_6-liveramp-waiting-uploads](groups/monitoring/260512-albertsons_6-liveramp-waiting-uploads/case.md) | Exports have progress evidence but are not complete yet. | Q2T09VCLN9MRZ8 | 4 |
 | `triage:needs_review`<br>`monitoring:export-processing` | [260513-albertsons_6-zero-success](groups/monitoring/260513-albertsons_6-zero-success/case.md) | Zero-success tagger found the unresolved attached alert is still export_processing while the other alert has recovered; recheck after the next export monitor window. | Q2EJWG22CER0LA | 2 |
 | `triage:needs_review`<br>`monitoring:export-processing` | [260515-albertsons_6-zero-success-02](groups/monitoring/260515-albertsons_6-zero-success-02/case.md) | Zero-success tagger found 7 attached alerts recovered and the remaining 3 are still export_processing; recheck after the next export monitor window. | Q38JR11G2ENK2W | 10 |
@@ -67,10 +66,10 @@ Alert facts: 698
 | Tags | Group | Summary | Incidents | Alerts |
 |---|---|---|---|---:|
 | `triage:snapshotting-schema`<br>`triage:tag_grouped`<br>`waiting:source-schema` | [260505-albertsons_6-snapshotting-schema-error](groups/waiting/260505-albertsons_6-snapshotting-schema-error/case.md) | Blocked on Albertsons source/schema remediation: scoped snapshotting logs show missing fields in RFM_Category_Group, and live pizza shows no later successful terminal export for the five alert-scoped runs. | Q2T09VCLN9MRZ8 | 5 |
-| `triage:needs_review`<br>`waiting:client_schema`<br>`triage:client_schema_missing` | [260511-albertsons_6-snapshotting-error](groups/waiting/260511-albertsons_6-snapshotting-error/case.md) | Waiting on support/client remediation: all five Albertsons LiveRamp alerts still fail snapshotting with missing_table_field; missing RFM_Category_Group fields are documented in #eng-support. | Q2T09VCLN9MRZ8 | 5 |
+| `triage:needs_review`<br>`waiting:client_schema`<br>`triage:client_schema_missing` | [260511-albertsons_6-snapshotting-error](groups/waiting/260511-albertsons_6-snapshotting-error/case.md) | Waiting on support/client remediation: five Albertsons LiveRamp export-run alerts still fail snapshotting with missing_table_field, and three client-sent alerts for the same schema-affected audiences were merged here. | Q2T09VCLN9MRZ8 | 8 |
 | `triage:needs_review`<br>`triage:client_schema_missing`<br>`waiting:client_schema` | [260515-gopuff_544-snapshotting-error](groups/waiting/260515-gopuff_544-snapshotting-error/case.md) | Waiting on support/client remediation for missing source column CORE.GOPUFF_ORDER_ITEMS.CLASS in GoPuff Snowflake source schema; support thread opened. | Q1X9CE7BIDK9MV | 1 |
 
-## Resolved (18)
+## Resolved (20)
 
 | Tags | Group | Summary | Incidents | Alerts |
 |---|---|---|---|---:|
@@ -79,6 +78,7 @@ Alert facts: 698
 | `triage:needs_review`<br>`evidence:albertsons-liveramp-progress`<br>`resolved:merged` | [260511-albertsons_6-live-ramp-export-processing](groups/resolved/260511-albertsons_6-live-ramp-export-processing/case.md) | Merged into 260512-albertsons_6-liveramp-waiting-uploads: Same alert and same export-in-progress evidence; keep the broader Albertsons LiveRamp uploads monitoring group as the live case. | Q2T09VCLN9MRZ8 | 1 |
 | `resolved:export-healthy`<br>`triage:tag_grouped` | [260511-albertsons_6-liveramp-complete](groups/resolved/260511-albertsons_6-liveramp-complete/case.md) | Checked exports are healthy with no blocking export evidence. | Q2T09VCLN9MRZ8 | 4 |
 | `triage:needs_review`<br>`resolved:export-healthy` | [260511-albertsons_6-no-batches](groups/resolved/260511-albertsons_6-no-batches/case.md) | Resolved from Albertsons LiveRamp tagger evidence: the only alert-scoped export is healthy/export-complete. | Q2T09VCLN9MRZ8 | 1 |
+| `triage:needs_review`<br>`resolved:merged` | [260512-albertsons_6-client-sent-export-failure](groups/resolved/260512-albertsons_6-client-sent-export-failure/case.md) | Merged into 260511-albertsons_6-snapshotting-error: Remaining client-sent alerts for audiences 10370, 10372, and 10749 match the existing Albertsons missing RFM_Category_Group client-schema waiting case. | Q2T09VCLN9MRZ8 | 3 |
 | `triage:needs_review`<br>`resolved:export-healthy` | [260514-trumanshow_336-no-batches](groups/resolved/260514-trumanshow_336-no-batches/case.md) | Auto-resolved from Pizza export checks: all 2 alert-scoped export check(s) are healthy_closed with no blockers. | Q12A5QFIM3F9LN | 2 |
 | `triage:needs_review`<br>`resolved:pd_closed_external` | [260515-76ers_131-zero-success](groups/resolved/260515-76ers_131-zero-success/case.md) | All attached PagerDuty incidents are resolved externally. | Q0Z4MMEOFYDHC7 | 1 |
 | `triage:needs_review`<br>`resolved:later-export-succeeded` | [260515-albertsons_6-live-ramp-export-error](groups/resolved/260515-albertsons_6-live-ramp-export-error/case.md) | Resolved from Albertsons LiveRamp tagger evidence: the alert had a later healthy run after the export error. | Q38JR11G2ENK2W | 1 |
@@ -92,3 +92,4 @@ Alert facts: 698
 | `triage:needs_review`<br>`resolved:export-healthy` | [260515-priceline_370-tik-tok-export-processing](groups/resolved/260515-priceline_370-tik-tok-export-processing/case.md) | Auto-resolved from Pizza export checks: all 1 alert-scoped export check(s) are healthy_closed with no blockers. | Q0X2D8TR82ZQV9 | 1 |
 | `triage:needs_review`<br>`resolved:pd_closed_external` | [260515-whirlpool_525-no-batches](groups/resolved/260515-whirlpool_525-no-batches/case.md) | All attached PagerDuty incidents are resolved externally. | Q3WZUE4915S6J4 | 2 |
 | `triage:needs_review`<br>`resolved:retry_succeeded` | [260516-evgo_402-client-sent-export-failure](groups/resolved/260516-evgo_402-client-sent-export-failure/case.md) | Resolved as retry/false alarm: failed Braze run 29790-braze_18238-scheduled__2026-05-16T14:00:00+00:00 hit transient Snowflake connector response-ended-prematurely during snapshotting, but later same-scope scheduled runs at 15:00 and 16:00 UTC completed export_finished with zero failures/rejects. | Q22U9UI0BTFNJC | 1 |
+| `triage:needs_review`<br>`resolved:merged` | [grp_260512_albertsons_6_client_sent_export_failure_split_0065](groups/resolved/grp_260512_albertsons_6_client_sent_export_failure_split_0065/case.md) | Merged into 260511-albertsons_6-snapshotting-processing: Audience 2189 client-sent failure is the notification counterpart of the existing snapshotting_processing/no_batches monitoring case. | Q2T09VCLN9MRZ8 | 1 |

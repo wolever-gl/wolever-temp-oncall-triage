@@ -7,15 +7,15 @@
 State: `monitoring`
 Tags: `triage:needs_review`, `monitoring:export-processing`
 Incidents: [Q2T09VCLN9MRZ8](https://growthloop.pagerduty.com/incidents/Q2T09VCLN9MRZ8)
-Alerts: 3
+Alerts: 4
 
 ## Current Summary
 
-Auto-monitored from Pizza export checks: 3 alert-scoped export check(s) are still processing and 0 are already healthy.
+Monitoring Albertsons snapshotting-processing exports: three alert-scoped runs remain snapshotting_processing/no_batches, and the audience 2189 client-sent alert was merged here as the notification counterpart.
 
 ## Alert Scope
 
-- Alert facts: 3 imported, 3 linked to this group.
+- Alert facts: 4 imported, 4 linked to this group.
 - Orgs: `albertsons_6`
 - Audiences: `10073`, `2189`, `8473`
 - Destinations: `live_ramp_activation`
@@ -29,13 +29,19 @@ Representative alerts:
   Runs: `8473-live_ramp_activation_1649-scheduled__2026-05-06T00:00:00+00:00`
 - Q2T09VCLN9MRZ8/Q2TYR6XMVMLGTB: 2026-05-11T07:35:55-07:00; albertsons_6; audience 10073; live_ramp_activation; snapshotting_processing/no_batches. albertsons (Albertsons Media): Exports for audience 10073 failed with states: <(snapshotting_processing,no_batches)>
   Runs: `10073-live_ramp_activation_2061-scheduled__2026-05-08T00:00:00+00:00`
+- Q2T09VCLN9MRZ8/Q24L2JIWVY4GIS: 2026-05-12T01:04:24-07:00; albertsons_6; audience 2189. albertsons (Albertsons Media) - Audience 2189: Audience Export failure for 2189 sent to client.
 
 ## Export Checks
 
-- Checks: 3.
-- States: `monitoring`=3
+- Checks: 4.
+- States: `blocked`=1, `monitoring`=3
+- Blockers seen: `missing_run_identity`
 
 Check evidence:
+- chk_q2t09vcln9mrz8_q24l2jiwvy4gis (Q2T09VCLN9MRZ8/Q24L2JIWVY4GIS): state=`blocked`.
+  Scope: env=albertsons; org=6; audience=2189.
+  Command: `glcli --env albertsons bifrost pizza --audience-id 2189 --org-id 6`
+  Blockers: `missing_run_identity`
 - chk_q2t09vcln9mrz8_q2fa9qptxf9mjm (Q2T09VCLN9MRZ8/Q2FA9QPTXF9MJM): state=`monitoring`, next_check_at=`2026-05-16T21:53:43.684Z`.
   Scope: env=albertsons; org=6; audience=2189; destination=live_ramp_activation.
   Checked runs: `2189-live_ramp_activation_678-scheduled__2026-05-05T00:00:00+00:00`

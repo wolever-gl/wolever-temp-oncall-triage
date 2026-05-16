@@ -126,20 +126,6 @@
     "path": "groups/open/260511-allegro_3-dv360-export-error/case.md"
   },
   {
-    "group_id": "260512-albertsons_6-client-sent-export-failure",
-    "state": "open",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "albertsons_6 client-sent-export-failure",
-    "summary": "albertsons (Albertsons Media) - Audience 2189: Audience Export failure for 2189 sent to client.",
-    "incident_ids": [
-      "Q2T09VCLN9MRZ8"
-    ],
-    "alert_count": 4,
-    "path": "groups/open/260512-albertsons_6-client-sent-export-failure/case.md"
-  },
-  {
     "group_id": "260513-451-client-sent-export-failure",
     "state": "open",
     "tags": [
@@ -553,11 +539,11 @@
       "monitoring:export-processing"
     ],
     "title": "albertsons_6 snapshotting-processing",
-    "summary": "Auto-monitored from Pizza export checks: 3 alert-scoped export check(s) are still processing and 0 are already healthy.",
+    "summary": "Monitoring Albertsons snapshotting-processing exports: three alert-scoped runs remain snapshotting_processing/no_batches, and the audience 2189 client-sent alert was merged here as the notification counterpart.",
     "incident_ids": [
       "Q2T09VCLN9MRZ8"
     ],
-    "alert_count": 3,
+    "alert_count": 4,
     "path": "groups/monitoring/260511-albertsons_6-snapshotting-processing/case.md"
   },
   {
@@ -631,11 +617,11 @@
       "triage:client_schema_missing"
     ],
     "title": "albertsons_6 snapshotting-error",
-    "summary": "Waiting on support/client remediation: all five Albertsons LiveRamp alerts still fail snapshotting with missing_table_field; missing RFM_Category_Group fields are documented in #eng-support.",
+    "summary": "Waiting on support/client remediation: five Albertsons LiveRamp export-run alerts still fail snapshotting with missing_table_field, and three client-sent alerts for the same schema-affected audiences were merged here.",
     "incident_ids": [
       "Q2T09VCLN9MRZ8"
     ],
-    "alert_count": 5,
+    "alert_count": 8,
     "path": "groups/waiting/260511-albertsons_6-snapshotting-error/case.md"
   },
   {
@@ -731,6 +717,22 @@
     ],
     "alert_count": 1,
     "path": "groups/resolved/260511-albertsons_6-no-batches/case.md"
+  },
+  {
+    "group_id": "260512-albertsons_6-client-sent-export-failure",
+    "state": "resolved",
+    "tags": [
+      "triage:needs_review",
+      "resolved:merged"
+    ],
+    "title": "albertsons_6 client-sent-export-failure",
+    "summary": "Merged into 260511-albertsons_6-snapshotting-error: Remaining client-sent alerts for audiences 10370, 10372, and 10749 match the existing Albertsons missing RFM_Category_Group client-schema waiting case.",
+    "next_action": "Follow target group 260511-albertsons_6-snapshotting-error.",
+    "incident_ids": [
+      "Q2T09VCLN9MRZ8"
+    ],
+    "alert_count": 3,
+    "path": "groups/resolved/260512-albertsons_6-client-sent-export-failure/case.md"
   },
   {
     "group_id": "260514-trumanshow_336-no-batches",
@@ -926,5 +928,21 @@
     ],
     "alert_count": 1,
     "path": "groups/resolved/260516-evgo_402-client-sent-export-failure/case.md"
+  },
+  {
+    "group_id": "grp_260512_albertsons_6_client_sent_export_failure_split_0065",
+    "state": "resolved",
+    "tags": [
+      "triage:needs_review",
+      "resolved:merged"
+    ],
+    "title": "albertsons_6 client-sent-export-failure split",
+    "summary": "Merged into 260511-albertsons_6-snapshotting-processing: Audience 2189 client-sent failure is the notification counterpart of the existing snapshotting_processing/no_batches monitoring case.",
+    "next_action": "Follow target group 260511-albertsons_6-snapshotting-processing.",
+    "incident_ids": [
+      "Q2T09VCLN9MRZ8"
+    ],
+    "alert_count": 1,
+    "path": "groups/resolved/grp_260512_albertsons_6_client_sent_export_failure_split_0065/case.md"
   }
 ]

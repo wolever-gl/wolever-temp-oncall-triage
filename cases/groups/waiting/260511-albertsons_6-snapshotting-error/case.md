@@ -7,15 +7,15 @@
 State: `waiting`
 Tags: `triage:needs_review`, `waiting:client_schema`, `triage:client_schema_missing`
 Incidents: [Q2T09VCLN9MRZ8](https://growthloop.pagerduty.com/incidents/Q2T09VCLN9MRZ8)
-Alerts: 5
+Alerts: 8
 
 ## Current Summary
 
-Waiting on support/client remediation: all five Albertsons LiveRamp alerts still fail snapshotting with missing_table_field; missing RFM_Category_Group fields are documented in #eng-support.
+Waiting on support/client remediation: five Albertsons LiveRamp export-run alerts still fail snapshotting with missing_table_field, and three client-sent alerts for the same schema-affected audiences were merged here.
 
 ## Alert Scope
 
-- Alert facts: 5 imported, 5 linked to this group.
+- Alert facts: 8 imported, 8 linked to this group.
 - Orgs: `albertsons_6`
 - Audiences: `10074`, `10370`, `10372`, `10663`, `10749`
 - Destinations: `live_ramp_activation`
@@ -33,6 +33,9 @@ Representative alerts:
   Runs: `10663-live_ramp_activation_2367-scheduled__2026-05-06T00:00:00+00:00`
 - Q2T09VCLN9MRZ8/Q2MNS4QOMCJWAW: 2026-05-11T07:36:32-07:00; albertsons_6; audience 10749; live_ramp_activation; snapshotting_error/no_batches. albertsons (Albertsons Media): Exports for audience 10749 failed with states: <(snapshotting_error,no_batches)>
   Runs: `10749-live_ramp_activation_2412-scheduled__2026-05-05T00:00:00+00:00`
+- Q2T09VCLN9MRZ8/Q3TL521CW7Y2J2: 2026-05-11T21:26:39-07:00; albertsons_6; audience 10749. albertsons (Albertsons Media) - Audience 10749: Audience Export failure for 10749 sent to client.
+- Q2T09VCLN9MRZ8/Q0GX8AZ1GWYKL9: 2026-05-11T21:27:07-07:00; albertsons_6; audience 10372. albertsons (Albertsons Media) - Audience 10372: Audience Export failure for 10372 sent to client.
+- Q2T09VCLN9MRZ8/Q0ODPXTYE0FORK: 2026-05-11T23:13:09-07:00; albertsons_6; audience 10370. albertsons (Albertsons Media) - Audience 10370: Audience Export failure for 10370 sent to client.
 
 ## Export Checks
 
