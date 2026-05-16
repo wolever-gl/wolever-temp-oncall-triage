@@ -4,6 +4,7 @@
   "imported_at": "2026-05-16T00:38:01.406Z",
   "source": "fixture",
   "alert_count": 1,
-  "status": "unknown",
-  "refreshed_at": "2026-05-16T00:38:01.406Z"
+  "status": "resolved",
+  "refreshed_at": "2026-05-16T16:47:21.552Z",
+  "resolved_at": "2026-05-15T22:59:57Z"
 }

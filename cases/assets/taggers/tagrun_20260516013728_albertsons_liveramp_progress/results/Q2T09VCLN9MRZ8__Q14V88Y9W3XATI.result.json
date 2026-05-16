@@ -1,0 +1,55 @@
+{
+  "annotation": {
+    "ts": "2026-05-16T01:37:28.866Z",
+    "alert_ref": {
+      "incident_id": "Q2T09VCLN9MRZ8",
+      "alert_id": "Q14V88Y9W3XATI"
+    },
+    "tags": [],
+    "decision": "skip",
+    "confidence": "medium",
+    "summary": "Audience 10074: no progress evidence yet (check=blocked; healthy_runs=0; monitoring_runs=0; blocked_runs=1; blockers=snapshotting_error_requires_review).",
+    "source": {
+      "kind": "tagger",
+      "run_id": "tagrun_20260516013728_albertsons_liveramp_progress",
+      "script_sha256": "9b4e40a1a85bca9f47e3b43983f90b48c274cb246be070860a8637e584fe5e0a",
+      "script_path": "cases/assets/taggers/tagrun_20260516013728_albertsons_liveramp_progress/albertsons-liveramp-progress.ts"
+    },
+    "evidence": [
+      {
+        "kind": "export_check",
+        "matched": false,
+        "source": "/Users/wolever/Scratch/oncall-triage-v2/cases/checks/chk_q2t09vcln9mrz8_q14v88y9w3xati/check.json",
+        "summary": "check=blocked; healthy_runs=0; monitoring_runs=0; blocked_runs=1; blockers=snapshotting_error_requires_review",
+        "data": {
+          "check_state": "blocked",
+          "blockers": [
+            "snapshotting_error_requires_review"
+          ],
+          "checked_export_run_ids": [
+            "10074-live_ramp_activation_2062-scheduled__2026-05-08T00:00:00+00:00"
+          ],
+          "run_evaluations": [
+            {
+              "export_run_id": "10074-live_ramp_activation_2062-scheduled__2026-05-08T00:00:00+00:00",
+              "health": "blocked",
+              "blockers": [
+                "snapshotting_error_requires_review"
+              ],
+              "export_state": "no_batches",
+              "snapshotting_state": "snapshotting_error",
+              "failed_export_count": 0,
+              "row_created_at": "2026-05-08T00:22:11.354834+00:00"
+            }
+          ],
+          "updated_at": "2026-05-16T01:35:43.498Z"
+        }
+      }
+    ]
+  },
+  "process": {
+    "stdout": "{\"decision\":\"skip\",\"tags\":[],\"confidence\":\"medium\",\"summary\":\"Audience 10074: no progress evidence yet (check=blocked; healthy_runs=0; monitoring_runs=0; blocked_runs=1; blockers=snapshotting_error_requires_review).\",\"evidence\":[{\"kind\":\"export_check\",\"matched\":false,\"source\":\"/Users/wolever/Scratch/oncall-triage-v2/cases/checks/chk_q2t09vcln9mrz8_q14v88y9w3xati/check.json\",\"summary\":\"check=blocked; healthy_runs=0; monitoring_runs=0; blocked_runs=1; blockers=snapshotting_error_requires_review\",\"data\":{\"check_state\":\"blocked\",\"blockers\":[\"snapshotting_error_requires_review\"],\"checked_export_run_ids\":[\"10074-live_ramp_activation_2062-scheduled__2026-05-08T00:00:00+00:00\"],\"run_evaluations\":[{\"export_run_id\":\"10074-live_ramp_activation_2062-scheduled__2026-05-08T00:00:00+00:00\",\"health\":\"blocked\",\"blockers\":[\"snapshotting_error_requires_review\"],\"export_state\":\"no_batches\",\"snapshotting_state\":\"snapshotting_error\",\"failed_export_count\":0,\"row_created_at\":\"2026-05-08T00:22:11.354834+00:00\"}],\"updated_at\":\"2026-05-16T01:35:43.498Z\"}}]}\n",
+    "stderr": "",
+    "exit_code": 0
+  }
+}

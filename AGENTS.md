@@ -37,3 +37,9 @@ Use this repo as a case-workspace system, not a spreadsheet workflow.
 - Do not rewrite unrelated files.
 - Do not touch source or package files unless the task explicitly requires it.
 - After finishing a unit of work, briefly review what was slow or repetitive. If a tool, runbook, parser, command, or workflow update would make the next pass safer or faster, propose it.
+
+## Sub-Agent Model Selection
+
+- Use `gpt-5.4-mini` for bounded, mechanical, low-risk sub-agent tasks such as filesystem migrations, index regeneration, simple verification, formatting, or narrow searches.
+- Use the inherited/frontier model for sub-agent work that needs deeper judgment: ambiguous incident investigation, production risk analysis, root-cause triage, or complex code changes.
+- When spawning a sub-agent, make the model choice explicit if cost or capability tradeoffs are not obvious.

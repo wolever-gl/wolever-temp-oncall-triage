@@ -1,0 +1,138 @@
+{
+  "check_id": "chk_q2t09vcln9mrz8_q36s0eu5dq3jus",
+  "source": "pagerduty",
+  "incident_id": "Q2T09VCLN9MRZ8",
+  "alert_id": "Q36S0EU5DQ3JUS",
+  "state": "blocked",
+  "scope": {
+    "env": "albertsons",
+    "org_id": "6",
+    "audience_id": "10115",
+    "endpoint_id": "app_liveramp_activation_26",
+    "destination_type": "live_ramp_activation",
+    "checked_export_run_ids": [
+      "10115-live_ramp_activation_3017-scheduled__2026-05-06T00:00:00+00:00",
+      "10115-live_ramp_activation_3017-manual__2026-05-06T18:09:59+00:00"
+    ],
+    "glcli": "glcli --env albertsons bifrost pizza --audience-id 10115 --org-id 6"
+  },
+  "scope_key": "albertsons|6|10115|live_ramp_activation|app_liveramp_activation_26|10115-live_ramp_activation_3017-scheduled__2026-05-06T00:00:00+00:00,10115-live_ramp_activation_3017-manual__2026-05-06T18:09:59+00:00",
+  "run_evaluations": [
+    {
+      "export_run_id": "10115-live_ramp_activation_3017-scheduled__2026-05-06T00:00:00+00:00",
+      "health": "blocked",
+      "match_basis": "checked_export_run_id",
+      "blockers": [
+        "failed_export_count",
+        "export_error"
+      ],
+      "selected_row": {
+        "export_run_id": "10115-live_ramp_activation_3017-scheduled__2026-05-06T00:00:00+00:00",
+        "audience_id": "10115",
+        "endpoint_id": "app_liveramp_activation_26",
+        "destination_type": "live_ramp_activation",
+        "created_at": "2026-05-06T01:08:22.651273+00:00",
+        "snapshotting_state": "snapshotting_finished",
+        "export_state": "export_error",
+        "failed_export_count": 372466,
+        "raw": {
+          "export_state": "export_error",
+          "successful_add_count": 0,
+          "successful_remove_count": 0,
+          "failed_export_count": 372466,
+          "rejected_row_count": 417738,
+          "total_row_count": 790204,
+          "successful_expanded_add_count": 0,
+          "successful_expanded_remove_count": 0,
+          "failed_expanded_export_count": 372466,
+          "rejected_expanded_row_count": 417738,
+          "total_expanded_row_count": 790204,
+          "enhanced_match_count": 0,
+          "enhanced_row_count": 0,
+          "enhanced_total_records": 0,
+          "total_batch_count": 1,
+          "completed_batch_count": 1,
+          "successful_batch_count": 0,
+          "failed_batch_count": 1,
+          "failure_reason": null,
+          "info": {
+            "internal_export_id": "10115-live_ramp_activation_3017-scheduled__2026-05-06T00:00:00+00:00-20260506010605",
+            "export_run_id": "10115-live_ramp_activation_3017-scheduled__2026-05-06T00:00:00+00:00",
+            "audience_id": "240112221",
+            "internal_audience_id": "10115",
+            "audience_name": "Lactaid_Creamer Innovation FY25_CoffeeProdBuyers_L26W",
+            "organization_id": "6",
+            "organization_name": "albertsons",
+            "platform": "live_ramp_activation",
+            "endpoint_id": "app_liveramp_activation_26",
+            "export_timestamp": "2026-05-06 01:06:05",
+            "error_file_uri": "gs://emgi-outbound-prod-bkt-01/batch_errors/2b350df1-91af-4e38-9aa1-3dbf0e1a92fb.csv",
+            "created_at": "2026-05-06T01:08:22.651273+00:00",
+            "export_complete_response": null
+          },
+          "snapshotting_state": "snapshotting_finished"
+        }
+      }
+    },
+    {
+      "export_run_id": "10115-live_ramp_activation_3017-manual__2026-05-06T18:09:59+00:00",
+      "health": "healthy",
+      "match_basis": "checked_export_run_id",
+      "blockers": [],
+      "selected_row": {
+        "export_run_id": "10115-live_ramp_activation_3017-manual__2026-05-06T18:09:59+00:00",
+        "audience_id": "10115",
+        "endpoint_id": "app_liveramp_activation_26",
+        "destination_type": "live_ramp_activation",
+        "created_at": "2026-05-06T21:37:51.151553+00:00",
+        "snapshotting_state": "snapshotting_finished",
+        "export_state": "export_finished",
+        "failed_export_count": 0,
+        "raw": {
+          "export_state": "export_finished",
+          "successful_add_count": 393849,
+          "successful_remove_count": 0,
+          "failed_export_count": 0,
+          "rejected_row_count": 416652,
+          "total_row_count": 810501,
+          "successful_expanded_add_count": 0,
+          "successful_expanded_remove_count": 0,
+          "failed_expanded_export_count": 0,
+          "rejected_expanded_row_count": 416652,
+          "total_expanded_row_count": 810501,
+          "enhanced_match_count": 0,
+          "enhanced_row_count": 0,
+          "enhanced_total_records": 0,
+          "total_batch_count": 1,
+          "completed_batch_count": 1,
+          "successful_batch_count": 1,
+          "failed_batch_count": 0,
+          "failure_reason": null,
+          "info": {
+            "internal_export_id": "10115-live_ramp_activation_3017-manual__2026-05-06T18:09:59+00:00-20260506213542",
+            "export_run_id": "10115-live_ramp_activation_3017-manual__2026-05-06T18:09:59+00:00",
+            "audience_id": "240112221",
+            "internal_audience_id": "10115",
+            "audience_name": "Lactaid_Creamer Innovation FY25_CoffeeProdBuyers_L26W",
+            "organization_id": "6",
+            "organization_name": "albertsons",
+            "platform": "live_ramp_activation",
+            "endpoint_id": "app_liveramp_activation_26",
+            "export_timestamp": "2026-05-06 21:35:42",
+            "error_file_uri": "gs://emgi-outbound-prod-bkt-01/batch_errors/c1654379-e6fb-41cf-8b15-7dc060d24464.csv",
+            "created_at": "2026-05-06T21:37:51.151553+00:00",
+            "export_complete_response": null
+          },
+          "snapshotting_state": "snapshotting_finished"
+        }
+      }
+    }
+  ],
+  "blockers": [
+    "failed_export_count",
+    "export_error"
+  ],
+  "evidence_artifacts": [],
+  "created_at": "2026-05-16T01:35:43.498Z",
+  "updated_at": "2026-05-16T01:35:43.498Z"
+}

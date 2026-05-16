@@ -1,0 +1,67 @@
+{
+  "annotation": {
+    "ts": "2026-05-16T01:37:28.809Z",
+    "alert_ref": {
+      "incident_id": "Q2T09VCLN9MRZ8",
+      "alert_id": "Q2SVDFC6306KTM"
+    },
+    "tags": [],
+    "decision": "skip",
+    "confidence": "medium",
+    "summary": "Audience 10162: no progress evidence yet (check=blocked; healthy_runs=1; monitoring_runs=0; blocked_runs=1; blockers=failed_export_count,export_error).",
+    "source": {
+      "kind": "tagger",
+      "run_id": "tagrun_20260516013728_albertsons_liveramp_progress",
+      "script_sha256": "9b4e40a1a85bca9f47e3b43983f90b48c274cb246be070860a8637e584fe5e0a",
+      "script_path": "cases/assets/taggers/tagrun_20260516013728_albertsons_liveramp_progress/albertsons-liveramp-progress.ts"
+    },
+    "evidence": [
+      {
+        "kind": "export_check",
+        "matched": false,
+        "source": "/Users/wolever/Scratch/oncall-triage-v2/cases/checks/chk_q2t09vcln9mrz8_q2svdfc6306ktm/check.json",
+        "summary": "check=blocked; healthy_runs=1; monitoring_runs=0; blocked_runs=1; blockers=failed_export_count,export_error",
+        "data": {
+          "check_state": "blocked",
+          "blockers": [
+            "failed_export_count",
+            "export_error"
+          ],
+          "checked_export_run_ids": [
+            "10162-live_ramp_activation_2985-scheduled__2026-05-06T00:00:00+00:00",
+            "10162-live_ramp_activation_2985-manual__2026-05-06T18:09:59+00:00"
+          ],
+          "run_evaluations": [
+            {
+              "export_run_id": "10162-live_ramp_activation_2985-scheduled__2026-05-06T00:00:00+00:00",
+              "health": "blocked",
+              "blockers": [
+                "failed_export_count",
+                "export_error"
+              ],
+              "export_state": "export_error",
+              "snapshotting_state": "snapshotting_finished",
+              "failed_export_count": 196916,
+              "row_created_at": "2026-05-06T01:01:48.173262+00:00"
+            },
+            {
+              "export_run_id": "10162-live_ramp_activation_2985-manual__2026-05-06T18:09:59+00:00",
+              "health": "healthy",
+              "blockers": [],
+              "export_state": "export_finished",
+              "snapshotting_state": "snapshotting_finished",
+              "failed_export_count": 0,
+              "row_created_at": "2026-05-06T21:46:19.240308+00:00"
+            }
+          ],
+          "updated_at": "2026-05-16T01:35:43.498Z"
+        }
+      }
+    ]
+  },
+  "process": {
+    "stdout": "{\"decision\":\"skip\",\"tags\":[],\"confidence\":\"medium\",\"summary\":\"Audience 10162: no progress evidence yet (check=blocked; healthy_runs=1; monitoring_runs=0; blocked_runs=1; blockers=failed_export_count,export_error).\",\"evidence\":[{\"kind\":\"export_check\",\"matched\":false,\"source\":\"/Users/wolever/Scratch/oncall-triage-v2/cases/checks/chk_q2t09vcln9mrz8_q2svdfc6306ktm/check.json\",\"summary\":\"check=blocked; healthy_runs=1; monitoring_runs=0; blocked_runs=1; blockers=failed_export_count,export_error\",\"data\":{\"check_state\":\"blocked\",\"blockers\":[\"failed_export_count\",\"export_error\"],\"checked_export_run_ids\":[\"10162-live_ramp_activation_2985-scheduled__2026-05-06T00:00:00+00:00\",\"10162-live_ramp_activation_2985-manual__2026-05-06T18:09:59+00:00\"],\"run_evaluations\":[{\"export_run_id\":\"10162-live_ramp_activation_2985-scheduled__2026-05-06T00:00:00+00:00\",\"health\":\"blocked\",\"blockers\":[\"failed_export_count\",\"export_error\"],\"export_state\":\"export_error\",\"snapshotting_state\":\"snapshotting_finished\",\"failed_export_count\":196916,\"row_created_at\":\"2026-05-06T01:01:48.173262+00:00\"},{\"export_run_id\":\"10162-live_ramp_activation_2985-manual__2026-05-06T18:09:59+00:00\",\"health\":\"healthy\",\"blockers\":[],\"export_state\":\"export_finished\",\"snapshotting_state\":\"snapshotting_finished\",\"failed_export_count\":0,\"row_created_at\":\"2026-05-06T21:46:19.240308+00:00\"}],\"updated_at\":\"2026-05-16T01:35:43.498Z\"}}]}\n",
+    "stderr": "",
+    "exit_code": 0
+  }
+}

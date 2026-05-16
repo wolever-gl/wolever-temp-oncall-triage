@@ -1,0 +1,138 @@
+{
+  "check_id": "chk_q2t09vcln9mrz8_q2po7hxnb0nz8r",
+  "source": "pagerduty",
+  "incident_id": "Q2T09VCLN9MRZ8",
+  "alert_id": "Q2PO7HXNB0NZ8R",
+  "state": "blocked",
+  "scope": {
+    "env": "albertsons",
+    "org_id": "6",
+    "audience_id": "9906",
+    "endpoint_id": "app_liveramp_activation_26",
+    "destination_type": "live_ramp_activation",
+    "checked_export_run_ids": [
+      "9906-live_ramp_activation_2770-scheduled__2026-05-06T00:00:00+00:00",
+      "9906-live_ramp_activation_2770-manual__2026-05-06T18:09:59+00:00"
+    ],
+    "glcli": "glcli --env albertsons bifrost pizza --audience-id 9906 --org-id 6"
+  },
+  "scope_key": "albertsons|6|9906|live_ramp_activation|app_liveramp_activation_26|9906-live_ramp_activation_2770-scheduled__2026-05-06T00:00:00+00:00,9906-live_ramp_activation_2770-manual__2026-05-06T18:09:59+00:00",
+  "run_evaluations": [
+    {
+      "export_run_id": "9906-live_ramp_activation_2770-scheduled__2026-05-06T00:00:00+00:00",
+      "health": "blocked",
+      "match_basis": "checked_export_run_id",
+      "blockers": [
+        "failed_export_count",
+        "export_error"
+      ],
+      "selected_row": {
+        "export_run_id": "9906-live_ramp_activation_2770-scheduled__2026-05-06T00:00:00+00:00",
+        "audience_id": "9906",
+        "endpoint_id": "app_liveramp_activation_26",
+        "destination_type": "live_ramp_activation",
+        "created_at": "2026-05-06T01:10:14.402241+00:00",
+        "snapshotting_state": "snapshotting_finished",
+        "export_state": "export_error",
+        "failed_export_count": 1219761,
+        "raw": {
+          "export_state": "export_error",
+          "successful_add_count": 0,
+          "successful_remove_count": 0,
+          "failed_export_count": 1219761,
+          "rejected_row_count": 1177407,
+          "total_row_count": 2397168,
+          "successful_expanded_add_count": 0,
+          "successful_expanded_remove_count": 0,
+          "failed_expanded_export_count": 1219761,
+          "rejected_expanded_row_count": 1177407,
+          "total_expanded_row_count": 2397168,
+          "enhanced_match_count": 0,
+          "enhanced_row_count": 0,
+          "enhanced_total_records": 0,
+          "total_batch_count": 2,
+          "completed_batch_count": 2,
+          "successful_batch_count": 0,
+          "failed_batch_count": 2,
+          "failure_reason": null,
+          "info": {
+            "internal_export_id": "9906-live_ramp_activation_2770-scheduled__2026-05-06T00:00:00+00:00-20260506010734",
+            "export_run_id": "9906-live_ramp_activation_2770-scheduled__2026-05-06T00:00:00+00:00",
+            "audience_id": "239556381",
+            "internal_audience_id": "9906",
+            "audience_name": "SelfService_demo_interest_music",
+            "organization_id": "6",
+            "organization_name": "albertsons",
+            "platform": "live_ramp_activation",
+            "endpoint_id": "app_liveramp_activation_26",
+            "export_timestamp": "2026-05-06 01:07:34",
+            "error_file_uri": "gs://emgi-outbound-prod-bkt-01/batch_errors/1f96c431-f241-4acb-9799-2e7cc42b07e0.csv",
+            "created_at": "2026-05-06T01:10:14.402241+00:00",
+            "export_complete_response": null
+          },
+          "snapshotting_state": "snapshotting_finished"
+        }
+      }
+    },
+    {
+      "export_run_id": "9906-live_ramp_activation_2770-manual__2026-05-06T18:09:59+00:00",
+      "health": "healthy",
+      "match_basis": "checked_export_run_id",
+      "blockers": [],
+      "selected_row": {
+        "export_run_id": "9906-live_ramp_activation_2770-manual__2026-05-06T18:09:59+00:00",
+        "audience_id": "9906",
+        "endpoint_id": "app_liveramp_activation_26",
+        "destination_type": "live_ramp_activation",
+        "created_at": "2026-05-06T21:33:31.849578+00:00",
+        "snapshotting_state": "snapshotting_finished",
+        "export_state": "export_finished",
+        "failed_export_count": 0,
+        "raw": {
+          "export_state": "export_finished",
+          "successful_add_count": 1,
+          "successful_remove_count": 0,
+          "failed_export_count": 0,
+          "rejected_row_count": 528,
+          "total_row_count": 529,
+          "successful_expanded_add_count": 0,
+          "successful_expanded_remove_count": 0,
+          "failed_expanded_export_count": 0,
+          "rejected_expanded_row_count": 528,
+          "total_expanded_row_count": 529,
+          "enhanced_match_count": 0,
+          "enhanced_row_count": 0,
+          "enhanced_total_records": 0,
+          "total_batch_count": 1,
+          "completed_batch_count": 1,
+          "successful_batch_count": 1,
+          "failed_batch_count": 0,
+          "failure_reason": null,
+          "info": {
+            "internal_export_id": "9906-live_ramp_activation_2770-manual__2026-05-06T18:09:59+00:00-20260506213133",
+            "export_run_id": "9906-live_ramp_activation_2770-manual__2026-05-06T18:09:59+00:00",
+            "audience_id": "239556381",
+            "internal_audience_id": "9906",
+            "audience_name": "SelfService_demo_interest_music",
+            "organization_id": "6",
+            "organization_name": "albertsons",
+            "platform": "live_ramp_activation",
+            "endpoint_id": "app_liveramp_activation_26",
+            "export_timestamp": "2026-05-06 21:31:33",
+            "error_file_uri": "gs://emgi-outbound-prod-bkt-01/batch_errors/88924e31-a8a2-439c-b648-7a1dbf24adf4.csv",
+            "created_at": "2026-05-06T21:33:31.849578+00:00",
+            "export_complete_response": null
+          },
+          "snapshotting_state": "snapshotting_finished"
+        }
+      }
+    }
+  ],
+  "blockers": [
+    "failed_export_count",
+    "export_error"
+  ],
+  "evidence_artifacts": [],
+  "created_at": "2026-05-16T01:35:43.498Z",
+  "updated_at": "2026-05-16T01:35:43.498Z"
+}

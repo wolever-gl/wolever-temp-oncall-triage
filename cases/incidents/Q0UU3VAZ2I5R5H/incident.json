@@ -4,6 +4,6 @@
   "imported_at": "2026-05-16T00:38:01.086Z",
   "source": "fixture",
   "alert_count": 28,
-  "status": "unknown",
-  "refreshed_at": "2026-05-16T00:38:01.086Z"
+  "status": "triggered",
+  "refreshed_at": "2026-05-16T16:47:19.122Z"
 }

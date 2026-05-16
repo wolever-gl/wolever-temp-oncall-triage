@@ -1,0 +1,138 @@
+{
+  "check_id": "chk_q2t09vcln9mrz8_q14gceu1sjgrz9",
+  "source": "pagerduty",
+  "incident_id": "Q2T09VCLN9MRZ8",
+  "alert_id": "Q14GCEU1SJGRZ9",
+  "state": "blocked",
+  "scope": {
+    "env": "albertsons",
+    "org_id": "6",
+    "audience_id": "3007",
+    "endpoint_id": "app_liveramp_activation_26",
+    "destination_type": "live_ramp_activation",
+    "checked_export_run_ids": [
+      "3007-live_ramp_activation_1067-scheduled__2026-05-06T00:00:00+00:00",
+      "3007-live_ramp_activation_1067-manual__2026-05-06T18:09:59+00:00"
+    ],
+    "glcli": "glcli --env albertsons bifrost pizza --audience-id 3007 --org-id 6"
+  },
+  "scope_key": "albertsons|6|3007|live_ramp_activation|app_liveramp_activation_26|3007-live_ramp_activation_1067-scheduled__2026-05-06T00:00:00+00:00,3007-live_ramp_activation_1067-manual__2026-05-06T18:09:59+00:00",
+  "run_evaluations": [
+    {
+      "export_run_id": "3007-live_ramp_activation_1067-scheduled__2026-05-06T00:00:00+00:00",
+      "health": "blocked",
+      "match_basis": "checked_export_run_id",
+      "blockers": [
+        "failed_export_count",
+        "export_error"
+      ],
+      "selected_row": {
+        "export_run_id": "3007-live_ramp_activation_1067-scheduled__2026-05-06T00:00:00+00:00",
+        "audience_id": "3007",
+        "endpoint_id": "app_liveramp_activation_26",
+        "destination_type": "live_ramp_activation",
+        "created_at": "2026-05-06T01:16:00.945410+00:00",
+        "snapshotting_state": "snapshotting_finished",
+        "export_state": "export_error",
+        "failed_export_count": 41148,
+        "raw": {
+          "export_state": "export_error",
+          "successful_add_count": 0,
+          "successful_remove_count": 0,
+          "failed_export_count": 41148,
+          "rejected_row_count": 42592,
+          "total_row_count": 83740,
+          "successful_expanded_add_count": 0,
+          "successful_expanded_remove_count": 0,
+          "failed_expanded_export_count": 41148,
+          "rejected_expanded_row_count": 42592,
+          "total_expanded_row_count": 83740,
+          "enhanced_match_count": 0,
+          "enhanced_row_count": 0,
+          "enhanced_total_records": 0,
+          "total_batch_count": 1,
+          "completed_batch_count": 1,
+          "successful_batch_count": 0,
+          "failed_batch_count": 1,
+          "failure_reason": null,
+          "info": {
+            "internal_export_id": "3007-live_ramp_activation_1067-scheduled__2026-05-06T00:00:00+00:00-20260506011417",
+            "export_run_id": "3007-live_ramp_activation_1067-scheduled__2026-05-06T00:00:00+00:00",
+            "audience_id": null,
+            "internal_audience_id": "3007",
+            "audience_name": "AAA_LR_RMN_FY23ExpPcg_Respiratory_L52W",
+            "organization_id": "6",
+            "organization_name": "albertsons",
+            "platform": "live_ramp_activation",
+            "endpoint_id": "app_liveramp_activation_26",
+            "export_timestamp": "2026-05-06 01:14:17",
+            "error_file_uri": "gs://emgi-outbound-prod-bkt-01/batch_errors/473cf552-2647-41f7-965b-fb95fa4c88f6.csv",
+            "created_at": "2026-05-06T01:16:00.945410+00:00",
+            "export_complete_response": null
+          },
+          "snapshotting_state": "snapshotting_finished"
+        }
+      }
+    },
+    {
+      "export_run_id": "3007-live_ramp_activation_1067-manual__2026-05-06T18:09:59+00:00",
+      "health": "healthy",
+      "match_basis": "checked_export_run_id",
+      "blockers": [],
+      "selected_row": {
+        "export_run_id": "3007-live_ramp_activation_1067-manual__2026-05-06T18:09:59+00:00",
+        "audience_id": "3007",
+        "endpoint_id": "app_liveramp_activation_26",
+        "destination_type": "live_ramp_activation",
+        "created_at": "2026-05-06T19:28:19.331741+00:00",
+        "snapshotting_state": "snapshotting_finished",
+        "export_state": "export_finished",
+        "failed_export_count": 0,
+        "raw": {
+          "export_state": "export_finished",
+          "successful_add_count": 1189923,
+          "successful_remove_count": 0,
+          "failed_export_count": 0,
+          "rejected_row_count": 1239873,
+          "total_row_count": 2429796,
+          "successful_expanded_add_count": 0,
+          "successful_expanded_remove_count": 0,
+          "failed_expanded_export_count": 0,
+          "rejected_expanded_row_count": 1239873,
+          "total_expanded_row_count": 2429796,
+          "enhanced_match_count": 0,
+          "enhanced_row_count": 0,
+          "enhanced_total_records": 0,
+          "total_batch_count": 2,
+          "completed_batch_count": 2,
+          "successful_batch_count": 2,
+          "failed_batch_count": 0,
+          "failure_reason": null,
+          "info": {
+            "internal_export_id": "3007-live_ramp_activation_1067-manual__2026-05-06T18:09:59+00:00-20260506191950",
+            "export_run_id": "3007-live_ramp_activation_1067-manual__2026-05-06T18:09:59+00:00",
+            "audience_id": null,
+            "internal_audience_id": "3007",
+            "audience_name": "AAA_LR_RMN_FY23ExpPcg_Respiratory_L52W",
+            "organization_id": "6",
+            "organization_name": "albertsons",
+            "platform": "live_ramp_activation",
+            "endpoint_id": "app_liveramp_activation_26",
+            "export_timestamp": "2026-05-06 19:19:50",
+            "error_file_uri": "gs://emgi-outbound-prod-bkt-01/batch_errors/498cbf3e-f223-408e-971d-2dc360f5aa80.csv",
+            "created_at": "2026-05-06T19:28:19.331741+00:00",
+            "export_complete_response": null
+          },
+          "snapshotting_state": "snapshotting_finished"
+        }
+      }
+    }
+  ],
+  "blockers": [
+    "failed_export_count",
+    "export_error"
+  ],
+  "evidence_artifacts": [],
+  "created_at": "2026-05-16T01:35:43.498Z",
+  "updated_at": "2026-05-16T01:35:43.498Z"
+}

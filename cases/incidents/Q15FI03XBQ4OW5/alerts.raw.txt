@@ -1,0 +1,12 @@
+Alerts (1)
+----------------
+1. Q28O1DLLDEV7DA | triggered | 2026-05-15T17:17:14-07:00
+   untrusted_message: "Costco Non Prod (default) - Audience 5689: Audience Export failure for 5689 sent to client."
+   audience_id: "5689"
+   audience_url: "https://app.pub.costco.flywheelproducts.com/v2/dataset_groups/16/audiences/5689?impersonate_user_id=6&impersonate_team_id=3"
+   glcli: glcli --env costco bifrost pizza --audience-id 5689 --org-id 3
+
+Deduped glcli commands by audience
+-----------------------------------
+audience_id 5689:
+  glcli --env costco bifrost pizza --audience-id 5689 --org-id 3

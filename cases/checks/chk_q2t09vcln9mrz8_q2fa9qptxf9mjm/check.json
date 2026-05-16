@@ -1,0 +1,68 @@
+{
+  "check_id": "chk_q2t09vcln9mrz8_q2fa9qptxf9mjm",
+  "source": "pagerduty",
+  "incident_id": "Q2T09VCLN9MRZ8",
+  "alert_id": "Q2FA9QPTXF9MJM",
+  "state": "monitoring",
+  "scope": {
+    "env": "albertsons",
+    "org_id": "6",
+    "audience_id": "2189",
+    "destination_type": "live_ramp_activation",
+    "checked_export_run_ids": [
+      "2189-live_ramp_activation_678-scheduled__2026-05-05T00:00:00+00:00"
+    ],
+    "glcli": "glcli --env albertsons bifrost pizza --audience-id 2189 --org-id 6"
+  },
+  "scope_key": "albertsons|6|2189|live_ramp_activation|unknown_endpoint|2189-live_ramp_activation_678-scheduled__2026-05-05T00:00:00+00:00",
+  "run_evaluations": [
+    {
+      "export_run_id": "2189-live_ramp_activation_678-scheduled__2026-05-05T00:00:00+00:00",
+      "health": "monitoring",
+      "match_basis": "checked_export_run_id",
+      "blockers": [],
+      "selected_row": {
+        "export_run_id": "2189-live_ramp_activation_678-scheduled__2026-05-05T00:00:00+00:00",
+        "audience_id": "2189",
+        "destination_type": "live_ramp_activation",
+        "created_at": "2026-05-05T01:42:54.344376+00:00",
+        "snapshotting_state": "snapshotting_processing",
+        "export_state": "no_batches",
+        "failed_export_count": 0,
+        "raw": {
+          "export_state": "no_batches",
+          "successful_add_count": 0,
+          "successful_remove_count": 0,
+          "failed_export_count": 0,
+          "rejected_row_count": 0,
+          "total_row_count": 0,
+          "successful_expanded_add_count": 0,
+          "successful_expanded_remove_count": 0,
+          "failed_expanded_export_count": 0,
+          "rejected_expanded_row_count": 0,
+          "total_expanded_row_count": 0,
+          "enhanced_match_count": 0,
+          "enhanced_row_count": 0,
+          "enhanced_total_records": 0,
+          "total_batch_count": 0,
+          "completed_batch_count": 0,
+          "successful_batch_count": 0,
+          "failed_batch_count": 0,
+          "failure_reason": null,
+          "info": {
+            "internal_audience_id": "2189",
+            "export_run_id": "2189-live_ramp_activation_678-scheduled__2026-05-05T00:00:00+00:00",
+            "export_timestamp": "2026-05-05 01:42:54",
+            "created_at": "2026-05-05T01:42:54.344376+00:00"
+          },
+          "snapshotting_state": "snapshotting_processing"
+        }
+      }
+    }
+  ],
+  "blockers": [],
+  "evidence_artifacts": [],
+  "created_at": "2026-05-16T01:35:43.498Z",
+  "updated_at": "2026-05-16T01:35:43.498Z",
+  "next_check_at": "2026-05-16T01:50:43.498Z"
+}

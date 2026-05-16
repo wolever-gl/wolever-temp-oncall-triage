@@ -1,0 +1,138 @@
+{
+  "check_id": "chk_q2t09vcln9mrz8_q2c1jw03s03kaf",
+  "source": "pagerduty",
+  "incident_id": "Q2T09VCLN9MRZ8",
+  "alert_id": "Q2C1JW03S03KAF",
+  "state": "blocked",
+  "scope": {
+    "env": "albertsons",
+    "org_id": "6",
+    "audience_id": "8475",
+    "endpoint_id": "app_liveramp_activation_26",
+    "destination_type": "live_ramp_activation",
+    "checked_export_run_ids": [
+      "8475-live_ramp_activation_1652-scheduled__2026-05-06T00:00:00+00:00",
+      "8475-live_ramp_activation_1652-manual__2026-05-06T18:09:59+00:00"
+    ],
+    "glcli": "glcli --env albertsons bifrost pizza --audience-id 8475 --org-id 6"
+  },
+  "scope_key": "albertsons|6|8475|live_ramp_activation|app_liveramp_activation_26|8475-live_ramp_activation_1652-scheduled__2026-05-06T00:00:00+00:00,8475-live_ramp_activation_1652-manual__2026-05-06T18:09:59+00:00",
+  "run_evaluations": [
+    {
+      "export_run_id": "8475-live_ramp_activation_1652-scheduled__2026-05-06T00:00:00+00:00",
+      "health": "blocked",
+      "match_basis": "checked_export_run_id",
+      "blockers": [
+        "failed_export_count",
+        "export_error"
+      ],
+      "selected_row": {
+        "export_run_id": "8475-live_ramp_activation_1652-scheduled__2026-05-06T00:00:00+00:00",
+        "audience_id": "8475",
+        "endpoint_id": "app_liveramp_activation_26",
+        "destination_type": "live_ramp_activation",
+        "created_at": "2026-05-06T01:06:07.371622+00:00",
+        "snapshotting_state": "snapshotting_finished",
+        "export_state": "export_error",
+        "failed_export_count": 248101,
+        "raw": {
+          "export_state": "export_error",
+          "successful_add_count": 0,
+          "successful_remove_count": 0,
+          "failed_export_count": 248101,
+          "rejected_row_count": 227821,
+          "total_row_count": 475922,
+          "successful_expanded_add_count": 0,
+          "successful_expanded_remove_count": 0,
+          "failed_expanded_export_count": 248101,
+          "rejected_expanded_row_count": 227821,
+          "total_expanded_row_count": 475922,
+          "enhanced_match_count": 0,
+          "enhanced_row_count": 0,
+          "enhanced_total_records": 0,
+          "total_batch_count": 1,
+          "completed_batch_count": 1,
+          "successful_batch_count": 0,
+          "failed_batch_count": 1,
+          "failure_reason": null,
+          "info": {
+            "internal_export_id": "8475-live_ramp_activation_1652-scheduled__2026-05-06T00:00:00+00:00-20260506010418",
+            "export_run_id": "8475-live_ramp_activation_1652-scheduled__2026-05-06T00:00:00+00:00",
+            "audience_id": null,
+            "internal_audience_id": "8475",
+            "audience_name": "A_LR_RMN_FY23ExpPcg_ToysGamesEtc_L26W",
+            "organization_id": "6",
+            "organization_name": "albertsons",
+            "platform": "live_ramp_activation",
+            "endpoint_id": "app_liveramp_activation_26",
+            "export_timestamp": "2026-05-06 01:04:18",
+            "error_file_uri": "gs://emgi-outbound-prod-bkt-01/batch_errors/27e10d29-3878-4777-9aa3-3dbb0979f12a.csv",
+            "created_at": "2026-05-06T01:06:07.371622+00:00",
+            "export_complete_response": null
+          },
+          "snapshotting_state": "snapshotting_finished"
+        }
+      }
+    },
+    {
+      "export_run_id": "8475-live_ramp_activation_1652-manual__2026-05-06T18:09:59+00:00",
+      "health": "healthy",
+      "match_basis": "checked_export_run_id",
+      "blockers": [],
+      "selected_row": {
+        "export_run_id": "8475-live_ramp_activation_1652-manual__2026-05-06T18:09:59+00:00",
+        "audience_id": "8475",
+        "endpoint_id": "app_liveramp_activation_26",
+        "destination_type": "live_ramp_activation",
+        "created_at": "2026-05-06T20:42:10.445806+00:00",
+        "snapshotting_state": "snapshotting_finished",
+        "export_state": "export_finished",
+        "failed_export_count": 0,
+        "raw": {
+          "export_state": "export_finished",
+          "successful_add_count": 5,
+          "successful_remove_count": 0,
+          "failed_export_count": 0,
+          "rejected_row_count": 62,
+          "total_row_count": 67,
+          "successful_expanded_add_count": 0,
+          "successful_expanded_remove_count": 0,
+          "failed_expanded_export_count": 0,
+          "rejected_expanded_row_count": 62,
+          "total_expanded_row_count": 67,
+          "enhanced_match_count": 0,
+          "enhanced_row_count": 0,
+          "enhanced_total_records": 0,
+          "total_batch_count": 1,
+          "completed_batch_count": 1,
+          "successful_batch_count": 1,
+          "failed_batch_count": 0,
+          "failure_reason": null,
+          "info": {
+            "internal_export_id": "8475-live_ramp_activation_1652-manual__2026-05-06T18:09:59+00:00-20260506204105",
+            "export_run_id": "8475-live_ramp_activation_1652-manual__2026-05-06T18:09:59+00:00",
+            "audience_id": null,
+            "internal_audience_id": "8475",
+            "audience_name": "A_LR_RMN_FY23ExpPcg_ToysGamesEtc_L26W",
+            "organization_id": "6",
+            "organization_name": "albertsons",
+            "platform": "live_ramp_activation",
+            "endpoint_id": "app_liveramp_activation_26",
+            "export_timestamp": "2026-05-06 20:41:05",
+            "error_file_uri": "gs://emgi-outbound-prod-bkt-01/batch_errors/9be26429-4cbb-428a-a696-b6a4b785b74b.csv",
+            "created_at": "2026-05-06T20:42:10.445806+00:00",
+            "export_complete_response": null
+          },
+          "snapshotting_state": "snapshotting_finished"
+        }
+      }
+    }
+  ],
+  "blockers": [
+    "failed_export_count",
+    "export_error"
+  ],
+  "evidence_artifacts": [],
+  "created_at": "2026-05-16T01:35:43.498Z",
+  "updated_at": "2026-05-16T01:35:43.498Z"
+}

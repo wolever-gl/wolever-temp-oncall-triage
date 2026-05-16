@@ -1,0 +1,79 @@
+{
+  "check_id": "chk_q2t09vcln9mrz8_q06rn07m3bvdqb",
+  "source": "pagerduty",
+  "incident_id": "Q2T09VCLN9MRZ8",
+  "alert_id": "Q06RN07M3BVDQB",
+  "state": "monitoring",
+  "scope": {
+    "env": "albertsons",
+    "org_id": "6",
+    "audience_id": "12719",
+    "endpoint_id": "app_liveramp_activation_44",
+    "destination_type": "live_ramp_activation",
+    "checked_export_run_ids": [
+      "12719-live_ramp_activation_4469-webapp__2026-05-07T00:40:33+00:00"
+    ],
+    "glcli": "glcli --env albertsons bifrost pizza --audience-id 12719 --org-id 6"
+  },
+  "scope_key": "albertsons|6|12719|live_ramp_activation|app_liveramp_activation_44|12719-live_ramp_activation_4469-webapp__2026-05-07T00:40:33+00:00",
+  "run_evaluations": [
+    {
+      "export_run_id": "12719-live_ramp_activation_4469-webapp__2026-05-07T00:40:33+00:00",
+      "health": "monitoring",
+      "match_basis": "checked_export_run_id",
+      "blockers": [],
+      "selected_row": {
+        "export_run_id": "12719-live_ramp_activation_4469-webapp__2026-05-07T00:40:33+00:00",
+        "audience_id": "12719",
+        "endpoint_id": "app_liveramp_activation_44",
+        "destination_type": "live_ramp_activation",
+        "created_at": "2026-05-07T00:46:17.756011+00:00",
+        "snapshotting_state": "snapshotting_finished",
+        "export_state": "export_processing",
+        "failed_export_count": 0,
+        "raw": {
+          "export_state": "export_processing",
+          "successful_add_count": 45063274,
+          "successful_remove_count": 0,
+          "failed_export_count": 0,
+          "rejected_row_count": 0,
+          "total_row_count": 45285477,
+          "successful_expanded_add_count": 0,
+          "successful_expanded_remove_count": 0,
+          "failed_expanded_export_count": 0,
+          "rejected_expanded_row_count": 0,
+          "total_expanded_row_count": 45285477,
+          "enhanced_match_count": 0,
+          "enhanced_row_count": 0,
+          "enhanced_total_records": 0,
+          "total_batch_count": 204,
+          "completed_batch_count": 203,
+          "successful_batch_count": 203,
+          "failed_batch_count": 0,
+          "failure_reason": null,
+          "info": {
+            "internal_export_id": "12719-live_ramp_activation_4469-webapp__2026-05-07T00:40:33+00:00-20260507004426",
+            "export_run_id": "12719-live_ramp_activation_4469-webapp__2026-05-07T00:40:33+00:00",
+            "audience_id": null,
+            "internal_audience_id": "12719",
+            "audience_name": "Pfizer_RSVVX_Demo65Plus_Pin_L52W ",
+            "organization_id": "6",
+            "organization_name": "albertsons",
+            "platform": "live_ramp_activation",
+            "endpoint_id": "app_liveramp_activation_44",
+            "export_timestamp": "2026-05-07 00:44:26",
+            "error_file_uri": "gs://emgi-outbound-prod-bkt-01/batch_errors/8d1a7bbc-b222-4923-9ca1-fdd08120cb6b.csv",
+            "created_at": "2026-05-07T00:46:17.756011+00:00",
+            "export_complete_response": null
+          },
+          "snapshotting_state": "snapshotting_finished"
+        }
+      }
+    }
+  ],
+  "blockers": [],
+  "evidence_artifacts": [],
+  "created_at": "2026-05-16T01:35:43.498Z",
+  "updated_at": "2026-05-16T01:35:43.498Z",
+  "next_check_at": "2026-05-16T01:50:43.498Z"
+}

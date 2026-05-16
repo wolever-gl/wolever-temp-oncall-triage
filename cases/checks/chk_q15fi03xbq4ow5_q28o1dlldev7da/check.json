@@ -1,0 +1,25 @@
+{
+  "check_id": "chk_q15fi03xbq4ow5_q28o1dlldev7da",
+  "source": "pagerduty",
+  "incident_id": "Q15FI03XBQ4OW5",
+  "alert_id": "Q28O1DLLDEV7DA",
+  "state": "open",
+  "scope": {
+    "env": "costco",
+    "org_id": "3",
+    "audience_id": "5689",
+    "checked_export_run_ids": [],
+    "glcli": "glcli --env costco bifrost pizza --audience-id 5689 --org-id 3"
+  },
+  "scope_key": "costco|3|5689|unknown_destination|unknown_endpoint|unknown_run",
+  "run_evaluations": [],
+  "blockers": [
+    "evidence_unavailable"
+  ],
+  "evidence_artifacts": [
+    "pizza_fetch_error:Unable to connect. Is the computer able to access the url?"
+  ],
+  "created_at": "2026-05-16T16:37:45.724Z",
+  "updated_at": "2026-05-16T16:37:45.724Z",
+  "next_check_at": "2026-05-16T16:52:45.724Z"
+}

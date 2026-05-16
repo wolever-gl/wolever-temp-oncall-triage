@@ -1,0 +1,21 @@
+{
+  "generated_at": "2026-05-16T16:47:00.620Z",
+  "open_count": 1,
+  "groups": [
+    {
+      "group_id": "260516-evgo_402-client-sent-export-failure",
+      "state": "open",
+      "tags": [
+        "triage:needs_review"
+      ],
+      "title": "evgo_402 client-sent-export-failure",
+      "summary": "EVgo (EVgo Prod) - Audience 29790: Audience Export failure for 29790 sent to client.",
+      "incident_ids": [
+        "Q22U9UI0BTFNJC"
+      ],
+      "alert_count": 1,
+      "path": "groups/open/260516-evgo_402-client-sent-export-failure/case.md"
+    }
+  ],
+  "alert_count": 1
+}
