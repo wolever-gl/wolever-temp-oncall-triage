@@ -1,0 +1,27 @@
+{
+  "group_id": "260514-trumanshow_336-no-batches",
+  "state": "open",
+  "tags": [
+    "triage:needs_review"
+  ],
+  "title": "trumanshow_336 no-batches",
+  "summary": "trumanshow (Travel): Exports for audience 36293 failed with states: <(snapshotting_finished,no_batches)>",
+  "deterministic_key": "v3|incident:Q12A5QFIM3F9LN|org:trumanshow_336|class:no-batches",
+  "grouping_version": 3,
+  "created_at": "2026-05-16T00:38:01.850Z",
+  "updated_at": "2026-05-16T00:38:01.850Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q12A5QFIM3F9LN",
+      "alert_id": "Q10GUO0WFWZCAO"
+    },
+    {
+      "incident_id": "Q12A5QFIM3F9LN",
+      "alert_id": "Q2PYTEEB639Q4I"
+    }
+  ],
+  "incident_ids": [
+    "Q12A5QFIM3F9LN"
+  ],
+  "related_group_ids": []
+}

@@ -1,0 +1,51 @@
+{
+  "group_id": "260514-chghealthcare_395-client-sent-export-failure",
+  "state": "open",
+  "tags": [
+    "triage:needs_review"
+  ],
+  "title": "chghealthcare_395 client-sent-export-failure",
+  "summary": "chghealthcare (Global Medical Staffing) - Audience 30299: Audience Export failure for 30299 sent to client.",
+  "deterministic_key": "v3|incident:Q064V2C56CNTCR|org:chghealthcare_395|class:client-sent-export-failure",
+  "grouping_version": 3,
+  "created_at": "2026-05-16T00:38:01.850Z",
+  "updated_at": "2026-05-16T00:38:01.850Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q064V2C56CNTCR",
+      "alert_id": "Q0GIQNJAUIKNV2"
+    },
+    {
+      "incident_id": "Q064V2C56CNTCR",
+      "alert_id": "Q2FRFVN6PL13YM"
+    },
+    {
+      "incident_id": "Q064V2C56CNTCR",
+      "alert_id": "Q2MF89NIILLM2J"
+    },
+    {
+      "incident_id": "Q064V2C56CNTCR",
+      "alert_id": "Q129BWE1UJ28KO"
+    },
+    {
+      "incident_id": "Q064V2C56CNTCR",
+      "alert_id": "Q3G4Q7E1OK3XU8"
+    },
+    {
+      "incident_id": "Q064V2C56CNTCR",
+      "alert_id": "Q07518J3N04YCL"
+    },
+    {
+      "incident_id": "Q064V2C56CNTCR",
+      "alert_id": "Q3Z8GH96UIQEAZ"
+    },
+    {
+      "incident_id": "Q064V2C56CNTCR",
+      "alert_id": "Q329MNJYN3CVYV"
+    }
+  ],
+  "incident_ids": [
+    "Q064V2C56CNTCR"
+  ],
+  "related_group_ids": []
+}

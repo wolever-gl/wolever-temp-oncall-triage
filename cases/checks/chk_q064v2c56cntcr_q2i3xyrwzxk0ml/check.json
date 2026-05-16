@@ -1,0 +1,78 @@
+{
+  "check_id": "chk_q064v2c56cntcr_q2i3xyrwzxk0ml",
+  "source": "pagerduty",
+  "incident_id": "Q064V2C56CNTCR",
+  "alert_id": "Q2I3XYRWZXK0ML",
+  "state": "open",
+  "scope": {
+    "env": "prod",
+    "org_id": "395",
+    "audience_id": "31142",
+    "destination_type": "marketing_cloud",
+    "checked_export_run_ids": [
+      "31142-marketing_cloud_18890-scheduled__2026-05-13T23:00:00+00:00"
+    ],
+    "glcli": "glcli --env prod bifrost pizza --audience-id 31142 --org-id 395"
+  },
+  "scope_key": "prod|395|31142|marketing_cloud|unknown_endpoint|31142-marketing_cloud_18890-scheduled__2026-05-13T23:00:00+00:00",
+  "run_evaluations": [
+    {
+      "export_run_id": "31142-marketing_cloud_18890-scheduled__2026-05-13T23:00:00+00:00",
+      "health": "healthy",
+      "match_basis": "checked_export_run_id",
+      "blockers": [],
+      "selected_row": {
+        "export_run_id": "31142-marketing_cloud_18890-scheduled__2026-05-13T23:00:00+00:00",
+        "audience_id": "31142",
+        "endpoint_id": "app_marketing_cloud_1135",
+        "destination_type": "marketing_cloud",
+        "created_at": "2026-05-13T23:49:22.079082+00:00",
+        "snapshotting_state": "snapshotting_finished",
+        "export_state": "export_finished",
+        "failed_export_count": 0,
+        "raw": {
+          "export_state": "export_finished",
+          "successful_add_count": 1845,
+          "successful_remove_count": 0,
+          "failed_export_count": 0,
+          "rejected_row_count": 0,
+          "total_row_count": 1845,
+          "successful_expanded_add_count": 1845,
+          "successful_expanded_remove_count": 0,
+          "failed_expanded_export_count": 0,
+          "rejected_expanded_row_count": 0,
+          "total_expanded_row_count": 1845,
+          "enhanced_match_count": 0,
+          "enhanced_row_count": 0,
+          "enhanced_total_records": 0,
+          "total_batch_count": 1,
+          "completed_batch_count": 1,
+          "successful_batch_count": 1,
+          "failed_batch_count": 0,
+          "failure_reason": null,
+          "info": {
+            "internal_export_id": "9edeb3d750e9e6b30a75e5f264898a5a-20260513234812",
+            "export_run_id": "31142-marketing_cloud_18890-scheduled__2026-05-13T23:00:00+00:00",
+            "audience_id": "EML_LC_ImpactReferral_CHA_CHS_Provider_AssignmentData",
+            "internal_audience_id": "31142",
+            "audience_name": "",
+            "organization_id": "395",
+            "organization_name": "chghealthcare",
+            "platform": "marketing_cloud",
+            "endpoint_id": "app_marketing_cloud_1135",
+            "export_timestamp": "2026-05-13 23:48:12",
+            "error_file_uri": "gs://flywheel-prod-328213-temporary/batch_errors/2d0b89b0-078e-45de-9b34-95376b165b97.csv",
+            "created_at": "2026-05-13T23:49:22.079082+00:00",
+            "export_complete_response": null
+          },
+          "snapshotting_state": "snapshotting_finished"
+        }
+      }
+    }
+  ],
+  "blockers": [],
+  "evidence_artifacts": [],
+  "created_at": "2026-05-16T01:01:37.728Z",
+  "updated_at": "2026-05-16T01:17:44.826Z",
+  "proposed_state": "healthy_closed"
+}

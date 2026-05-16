@@ -1,5 +1,5 @@
 import path from "node:path";
-import type { AlertFact, IncidentRecord, PagerDutyIncidentStatus } from "./schema";
+import type { AlertFact, IncidentRecord, PagerDutyIncidentStatus, ParsedRunId } from "./schema";
 
 const PD_BASE = "https://growthloop.pagerduty.com/incidents";
 const PD_API_BASE = "https://api.pagerduty.com";
@@ -63,10 +63,11 @@ export async function fetchPagerDutyAlerts(incident: string): Promise<string> {
 export async function loadAlertFacts(input: {
   incident: string;
   alertsFile?: string;
+  allowPartial?: boolean;
 }): Promise<{ incident: IncidentRecord; alerts: AlertFact[]; rawText: string }> {
   const incident_id = parseIncidentId(input.incident);
   const rawText = input.alertsFile ? await Bun.file(input.alertsFile).text() : await fetchPagerDutyAlerts(input.incident);
-  const alerts = parseAlertFacts(rawText, input.incident);
+  const alerts = parseAlertFacts(rawText, input.incident, input.allowPartial ? { allowPartial: true } : {});
   return {
     incident: {
       incident_id,
@@ -82,7 +83,7 @@ export async function loadAlertFacts(input: {
   };
 }
 
-export function parseAlertFacts(rawText: string, incidentInput: string): AlertFact[] {
+export function parseAlertFacts(rawText: string, incidentInput: string, options: { allowPartial?: boolean } = {}): AlertFact[] {
   const incident_id = parseIncidentId(incidentInput);
   const incident_url = incidentUrl(incidentInput);
   const trimmed = rawText.trim();
@@ -93,6 +94,9 @@ export function parseAlertFacts(rawText: string, incidentInput: string): AlertFa
   if (json && typeof json === "object" && Array.isArray((json as { alerts?: unknown[] }).alerts)) {
     return (json as { alerts: unknown[] }).alerts.map((entry, idx) => normalizeAlert(entry, idx, incident_id, incident_url));
   }
+
+  const wrapperAlerts = parsePagerDutyWrapperAlerts(rawText, incident_id, incident_url, options);
+  if (wrapperAlerts) return wrapperAlerts;
 
   return parseLooseTextAlerts(rawText, incident_id, incident_url);
 }
@@ -119,16 +123,84 @@ function normalizeAlert(entry: unknown, idx: number, incident_id: string, incide
   const export_run_hash = stringField(details, "export_run_hash", "export run hash");
   const service = stringField(details, "service", "component");
   const source_glcli = stringField(details, "glcli", "source_glcli");
+  const checked_export_run_ids = splitCsv(stringField(details, "checked_export_run_ids"));
+  const parsed_run_ids = checked_export_run_ids.map(parseRunId);
+  const state_tuple = parseStateTuple(summary);
   if (org_id) alert.org_id = org_id;
   if (org_id_numeric) alert.org_id_numeric = org_id_numeric;
+  if (org_id && org_id_numeric) alert.org_id = org_id.includes(`_${org_id_numeric}`) ? org_id : `${org_id}_${org_id_numeric}`;
+  if (alert.org_id) alert.org_slug = orgSlug(alert.org_id);
   if (audience_id) alert.audience_id = audience_id;
   if (endpoint_id) alert.endpoint_id = endpoint_id;
   if (export_run_id) alert.export_run_id = export_run_id;
+  if (checked_export_run_ids.length > 0) alert.checked_export_run_ids = checked_export_run_ids;
+  if (parsed_run_ids.length > 0) alert.parsed_run_ids = parsed_run_ids;
+  const destination = firstDefined(parsed_run_ids.map((run) => run.destination_type)) || destinationFromEndpoint(endpoint_id);
+  if (destination) {
+    alert.destination_type = destination;
+    alert.destination_product = destinationProduct(destination);
+  }
   if (export_run_hash) alert.export_run_hash = export_run_hash;
   if (service) alert.service = service;
+  if (state_tuple) alert.state_tuple = state_tuple;
   alert.error_signature = signature(stringField(details, "error", "failure_reason", "message") || summary);
   if (source_glcli) alert.source_glcli = source_glcli;
+  alert.parser_version = 2;
   return alert;
+}
+
+function parsePagerDutyWrapperAlerts(rawText: string, incident_id: string, incident_url: string, options: { allowPartial?: boolean }): AlertFact[] | undefined {
+  const header = rawText.match(/^\s*Alerts\s*\((\d+)\)\s*$/m);
+  if (!header) return undefined;
+
+  const expected = Number(header[1]);
+  const alertsSection = rawText.split(/\nDeduped glcli commands by audience\b/i)[0] ?? rawText;
+  const alertStart = /^(\d+)\.\s+([A-Z0-9]+)\s+\|\s+([a-z_]+)\s+\|\s+([^\n]+)$/gim;
+  const starts = [...alertsSection.matchAll(alertStart)];
+  if (starts.length !== expected && !options.allowPartial) {
+    throw new Error(`PagerDuty alert count mismatch for ${incident_id}: header says ${expected}, parsed ${starts.length}`);
+  }
+  return starts.map((match, idx) => {
+    const start = match.index ?? 0;
+    const next = starts[idx + 1]?.index ?? alertsSection.length;
+    const block = alertsSection.slice(start, next).trim();
+    const fields = parseIndentedFields(block);
+    const summary = fields.untrusted_message ?? block.split("\n")[0] ?? "PagerDuty alert";
+    const glcli = fields.glcli;
+    const org_id_numeric = orgIdFromGlcli(glcli);
+    const org_slug = orgSlugFromSummary(summary);
+    const org_id = org_slug && org_id_numeric ? `${org_slug}_${org_id_numeric}` : undefined;
+    const checked_export_run_ids = splitCsv(fields.checked_export_run_ids);
+    const parsed_run_ids = checked_export_run_ids.map(parseRunId);
+    const state_tuple = parseStateTuple(summary);
+    const endpoint_id = fields.endpoint_id;
+    const destination_type = firstDefined(parsed_run_ids.map((run) => run.destination_type)) || destinationFromEndpoint(endpoint_id);
+    const audience_id = fields.audience_id ?? audienceFromSummary(summary) ?? audienceFromGlcli(glcli);
+    const alert: AlertFact = {
+      alert_id: match[2]!,
+      incident_id,
+      incident_url,
+      alert_status: normalizeStatus(match[3]),
+      created_at: match[4]!.trim(),
+      summary,
+      parser_version: 2,
+      ...(org_id ? { org_id } : {}),
+      ...(org_slug ? { org_slug } : {}),
+      ...(org_id_numeric ? { org_id_numeric } : {}),
+      audience_kind: audienceKind(summary),
+      ...(audience_id ? { audience_id } : {}),
+      ...(endpoint_id ? { endpoint_id } : {}),
+      ...(checked_export_run_ids.length > 0 ? { checked_export_run_ids } : {}),
+      ...(parsed_run_ids.length > 0 ? { parsed_run_ids } : {}),
+      ...(destination_type ? { destination_type, destination_product: destinationProduct(destination_type) } : {}),
+      ...(state_tuple ? { state_tuple } : {}),
+      ...(glcli ? { source_glcli: glcli } : {}),
+      ...(fields.logs ? { logs_url: fields.logs } : {}),
+      error_signature: signature(summary),
+      raw: block,
+    };
+    return alert;
+  });
 }
 
 function parseLooseTextAlerts(rawText: string, incident_id: string, incident_url: string): AlertFact[] {
@@ -147,6 +219,7 @@ function parseLooseTextAlerts(rawText: string, incident_id: string, incident_url
       incident_url,
       created_at: new Date().toISOString(),
       summary: firstLine,
+      parser_version: 2,
       ...(org ? { org_id: org } : {}),
       ...(audience ? { audience_id: audience } : {}),
       ...(endpoint ? { endpoint_id: endpoint } : {}),
@@ -166,6 +239,89 @@ function signature(input: string): string {
     .replace(/\d+/g, "<n>")
     .replace(/\s+/g, " ")
     .slice(0, 120);
+}
+
+function parseIndentedFields(block: string): Record<string, string> {
+  const fields: Record<string, string> = {};
+  for (const line of block.split("\n")) {
+    const match = line.match(/^\s+([a-zA-Z0-9_]+):\s*(.*)$/);
+    if (!match) continue;
+    fields[match[1]!] = unquote(match[2]!.trim());
+  }
+  return fields;
+}
+
+function unquote(value: string): string {
+  if (value.startsWith('"') && value.endsWith('"')) return value.slice(1, -1);
+  return value;
+}
+
+function splitCsv(value: string | undefined): string[] {
+  return value?.split(",").map((part) => part.trim()).filter(Boolean) ?? [];
+}
+
+function parseRunId(raw: string): ParsedRunId {
+  if (/^[0-9a-f]{16,}$/i.test(raw)) return { raw, hash: raw };
+  const match = raw.match(/^(\d+)-(.+)_([0-9]+)-([a-z]+)__(.+)$/i);
+  if (!match) return { raw };
+  return {
+    raw,
+    ...(match[1] ? { audience_id: match[1] } : {}),
+    ...(match[2] ? { destination_type: match[2] } : {}),
+    ...(match[3] ? { endpoint_id: match[3] } : {}),
+    ...(match[4] ? { trigger_type: match[4] } : {}),
+    ...(match[5] ? { scheduled_at: match[5] } : {}),
+  };
+}
+
+function parseStateTuple(summary: string): { snapshotting?: string; export?: string } | undefined {
+  const match = summary.match(/states:\s*<\(([^,]*),([^)]+)\)>/i);
+  if (!match) return undefined;
+  return {
+    ...(match[1] ? { snapshotting: match[1] } : {}),
+    ...(match[2] ? { export: match[2] } : {}),
+  };
+}
+
+function orgIdFromGlcli(glcli: string | undefined): string | undefined {
+  return glcli?.match(/--org-id\s+([0-9]+)/)?.[1];
+}
+
+function audienceFromGlcli(glcli: string | undefined): string | undefined {
+  return glcli?.match(/--audience-id\s+([0-9]+)/)?.[1];
+}
+
+function orgSlugFromSummary(summary: string): string | undefined {
+  return summary.match(/^([A-Za-z0-9_-]+)\s+\(/)?.[1]?.toLowerCase();
+}
+
+function orgSlug(orgId: string): string {
+  return orgId.replace(/_\d+$/, "");
+}
+
+function audienceFromSummary(summary: string): string | undefined {
+  return summary.match(/\b(?:audience|signal|SignalRoute)\s+([0-9]+)/i)?.[1];
+}
+
+function audienceKind(summary: string): NonNullable<AlertFact["audience_kind"]> {
+  if (/\bSignalRoute\b/.test(summary)) return "signal_route";
+  if (/\bsignal\s+\d+/i.test(summary)) return "signal";
+  if (/\baudience\s+\d+/i.test(summary)) return "audience";
+  return "unknown";
+}
+
+function destinationFromEndpoint(endpointId: string | undefined): string | undefined {
+  return endpointId?.replace(/^app_/, "").replace(/_[0-9]+$/, "");
+}
+
+function destinationProduct(destinationType: string): string {
+  return destinationType
+    .replace(/_(activation|object)$/, "")
+    .replaceAll("_", "-");
+}
+
+function firstDefined<T>(values: (T | undefined)[]): T | undefined {
+  return values.find((value): value is T => value !== undefined);
 }
 
 function tryParseJson(input: string): unknown {

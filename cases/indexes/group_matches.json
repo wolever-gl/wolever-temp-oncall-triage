@@ -1,0 +1,506 @@
+[
+  {
+    "match_key": "v3|incident:Q064V2C56CNTCR|org:chghealthcare_395|class:client-sent-export-failure",
+    "status": "active",
+    "target_group_id": "260514-chghealthcare_395-client-sent-export-failure",
+    "reason": "created",
+    "created_at": "2026-05-16T00:38:01.850Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260514-chghealthcare_395-client-sent-export-failure."
+  },
+  {
+    "match_key": "v3|incident:Q064V2C56CNTCR|org:chghealthcare_395|class:no-batches",
+    "status": "active",
+    "target_group_id": "260514-chghealthcare_395-no-batches",
+    "reason": "created",
+    "created_at": "2026-05-16T00:38:01.850Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260514-chghealthcare_395-no-batches."
+  },
+  {
+    "match_key": "v3|incident:Q08B553ANQ9KMI|org:royals_4|class:snapshotting-error",
+    "status": "active",
+    "target_group_id": "260515-royals_4-snapshotting-error",
+    "reason": "created",
+    "created_at": "2026-05-16T00:38:01.850Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260515-royals_4-snapshotting-error."
+  },
+  {
+    "match_key": "v3|incident:Q0UU3VAZ2I5R5H|org:allegro_3|class:client-sent-export-failure",
+    "status": "active",
+    "target_group_id": "260513-allegro_3-client-sent-export-failure",
+    "reason": "created",
+    "created_at": "2026-05-16T00:38:01.850Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260513-allegro_3-client-sent-export-failure."
+  },
+  {
+    "match_key": "v3|incident:Q0UU3VAZ2I5R5H|org:allegro_3|dest:dv360|class:export-error",
+    "status": "active",
+    "target_group_id": "260513-allegro_3-dv360-export-error",
+    "reason": "created",
+    "created_at": "2026-05-16T00:38:01.850Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260513-allegro_3-dv360-export-error."
+  },
+  {
+    "match_key": "v3|incident:Q0UU3VAZ2I5R5H|org:allegro_3|dest:dv360|class:export-processing",
+    "status": "active",
+    "target_group_id": "260513-allegro_3-dv360-export-processing",
+    "reason": "created",
+    "created_at": "2026-05-16T00:38:01.850Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260513-allegro_3-dv360-export-processing."
+  },
+  {
+    "match_key": "v3|incident:Q0UU3VAZ2I5R5H|org:allegro_3|dest:facebook|class:export-error",
+    "status": "active",
+    "target_group_id": "260513-allegro_3-facebook-export-error",
+    "reason": "created",
+    "created_at": "2026-05-16T00:38:01.850Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260513-allegro_3-facebook-export-error."
+  },
+  {
+    "match_key": "v3|incident:Q0X2D8TR82ZQV9|org:priceline_370|dest:tik-tok|class:export-processing",
+    "status": "active",
+    "target_group_id": "260515-priceline_370-tik-tok-export-processing",
+    "reason": "created",
+    "created_at": "2026-05-16T00:38:01.850Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260515-priceline_370-tik-tok-export-processing."
+  },
+  {
+    "match_key": "v3|incident:Q0Z4MMEOFYDHC7|org:76ers_131|class:zero-success",
+    "status": "active",
+    "target_group_id": "260515-76ers_131-zero-success",
+    "reason": "created",
+    "created_at": "2026-05-16T00:38:01.850Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260515-76ers_131-zero-success."
+  },
+  {
+    "match_key": "v3|incident:Q12A5QFIM3F9LN|org:trumanshow_336|class:client-sent-export-failure",
+    "status": "active",
+    "target_group_id": "260513-trumanshow_336-client-sent-export-failure",
+    "reason": "created",
+    "created_at": "2026-05-16T00:38:01.850Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260513-trumanshow_336-client-sent-export-failure."
+  },
+  {
+    "match_key": "v3|incident:Q12A5QFIM3F9LN|org:trumanshow_336|class:no-batches",
+    "status": "active",
+    "target_group_id": "260514-trumanshow_336-no-batches",
+    "reason": "created",
+    "created_at": "2026-05-16T00:38:01.850Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260514-trumanshow_336-no-batches."
+  },
+  {
+    "match_key": "v3|incident:Q12A5QFIM3F9LN|org:trumanshow_336|dest:adobe-experience-platform|class:export-error",
+    "status": "active",
+    "target_group_id": "260514-trumanshow_336-adobe-experience-platform-export-error",
+    "reason": "created",
+    "created_at": "2026-05-16T00:38:01.850Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260514-trumanshow_336-adobe-experience-platform-export-error."
+  },
+  {
+    "match_key": "v3|incident:Q157KO5ON9TWGO|org:evgo_402|class:client-sent-export-failure",
+    "status": "active",
+    "target_group_id": "260514-evgo_402-client-sent-export-failure",
+    "reason": "created",
+    "created_at": "2026-05-16T00:38:01.850Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260514-evgo_402-client-sent-export-failure."
+  },
+  {
+    "match_key": "v3|incident:Q157KO5ON9TWGO|org:evgo_402|class:no-batches",
+    "status": "active",
+    "target_group_id": "260515-evgo_402-no-batches",
+    "reason": "created",
+    "created_at": "2026-05-16T00:38:01.850Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260515-evgo_402-no-batches."
+  },
+  {
+    "match_key": "v3|incident:Q16KSAQEWECSDD|org:nascar_2|class:no-batches",
+    "status": "active",
+    "target_group_id": "260515-nascar_2-no-batches",
+    "reason": "created",
+    "created_at": "2026-05-16T00:38:01.850Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260515-nascar_2-no-batches."
+  },
+  {
+    "match_key": "v3|incident:Q1QD2CX8MRAYBW|org:378|class:client-sent-export-failure",
+    "status": "active",
+    "target_group_id": "260514-378-client-sent-export-failure",
+    "reason": "created",
+    "created_at": "2026-05-16T00:38:01.850Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260514-378-client-sent-export-failure."
+  },
+  {
+    "match_key": "v3|incident:Q1QD2CX8MRAYBW|org:378|class:snapshotting-error",
+    "status": "active",
+    "target_group_id": "260515-378-snapshotting-error",
+    "reason": "created",
+    "created_at": "2026-05-16T00:38:01.850Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260515-378-snapshotting-error."
+  },
+  {
+    "match_key": "v3|incident:Q1TJJ4MEVOF1W3|org:ford_310|class:client-sent-export-failure",
+    "status": "active",
+    "target_group_id": "260514-ford_310-client-sent-export-failure",
+    "reason": "created",
+    "created_at": "2026-05-16T00:38:01.850Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260514-ford_310-client-sent-export-failure."
+  },
+  {
+    "match_key": "v3|incident:Q1TJJ4MEVOF1W3|org:ford_310|class:no-batches",
+    "status": "active",
+    "target_group_id": "260513-ford_310-no-batches",
+    "reason": "created",
+    "created_at": "2026-05-16T00:38:01.850Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260513-ford_310-no-batches."
+  },
+  {
+    "match_key": "v3|incident:Q1UC14QNZK76EZ|org:451|class:client-sent-export-failure",
+    "status": "active",
+    "target_group_id": "260514-451-client-sent-export-failure",
+    "reason": "created",
+    "created_at": "2026-05-16T00:38:01.850Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260514-451-client-sent-export-failure."
+  },
+  {
+    "match_key": "v3|incident:Q1UC14QNZK76EZ|org:451|class:snapshotting-error",
+    "status": "active",
+    "target_group_id": "260515-451-snapshotting-error",
+    "reason": "created",
+    "created_at": "2026-05-16T00:38:01.850Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260515-451-snapshotting-error."
+  },
+  {
+    "match_key": "v3|incident:Q1X9CE7BIDK9MV|org:gopuff_544|class:snapshotting-error",
+    "status": "active",
+    "target_group_id": "260515-gopuff_544-snapshotting-error",
+    "reason": "created",
+    "created_at": "2026-05-16T00:38:01.850Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260515-gopuff_544-snapshotting-error."
+  },
+  {
+    "match_key": "v3|incident:Q1YQV4ERKAIVMF|org:priceline_370|class:no-batches",
+    "status": "active",
+    "target_group_id": "260514-priceline_370-no-batches",
+    "reason": "created",
+    "created_at": "2026-05-16T00:38:01.850Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260514-priceline_370-no-batches."
+  },
+  {
+    "match_key": "v3|incident:Q20XI8KK8YWADB|org:174|class:snapshotting-error",
+    "status": "active",
+    "target_group_id": "260515-174-snapshotting-error",
+    "reason": "created",
+    "created_at": "2026-05-16T00:38:01.850Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260515-174-snapshotting-error."
+  },
+  {
+    "match_key": "v3|incident:Q20XI8KK8YWADB|org:174|class:zero-success",
+    "status": "active",
+    "target_group_id": "260515-174-zero-success",
+    "reason": "created",
+    "created_at": "2026-05-16T00:38:01.850Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260515-174-zero-success."
+  },
+  {
+    "match_key": "v3|incident:Q269WMZF4MKMNL|org:albertsons_6|class:zero-success",
+    "status": "active",
+    "target_group_id": "260515-albertsons_6-zero-success",
+    "reason": "created",
+    "created_at": "2026-05-16T00:38:01.850Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260515-albertsons_6-zero-success."
+  },
+  {
+    "match_key": "v3|incident:Q28HZS5TYC0NM9|org:flagstar_305|class:no-batches",
+    "status": "active",
+    "target_group_id": "260515-flagstar_305-no-batches",
+    "reason": "created",
+    "created_at": "2026-05-16T00:38:01.850Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260515-flagstar_305-no-batches."
+  },
+  {
+    "match_key": "v3|incident:Q29I2IVNNVK80X|org:chghealthcare_395|dest:marketing-cloud|class:export-error",
+    "status": "active",
+    "target_group_id": "260515-chghealthcare_395-marketing-cloud-export-error",
+    "reason": "created",
+    "created_at": "2026-05-16T00:38:01.850Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260515-chghealthcare_395-marketing-cloud-export-error."
+  },
+  {
+    "match_key": "v3|incident:Q2CEMYYJ9N4IAX|org:nerdwallet_373|dest:tik-tok|class:export-processing",
+    "status": "active",
+    "target_group_id": "260515-nerdwallet_373-tik-tok-export-processing",
+    "reason": "created",
+    "created_at": "2026-05-16T00:38:01.850Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260515-nerdwallet_373-tik-tok-export-processing."
+  },
+  {
+    "match_key": "v3|incident:Q2DJCY3XC2BSBG|org:pgatourhq_219|class:no-batches",
+    "status": "active",
+    "target_group_id": "260515-pgatourhq_219-no-batches",
+    "reason": "created",
+    "created_at": "2026-05-16T00:38:01.850Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260515-pgatourhq_219-no-batches."
+  },
+  {
+    "match_key": "v3|incident:Q2EJWG22CER0LA|org:albertsons_6|class:client-sent-export-failure",
+    "status": "active",
+    "target_group_id": "260513-albertsons_6-client-sent-export-failure",
+    "reason": "created",
+    "created_at": "2026-05-16T00:38:01.850Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260513-albertsons_6-client-sent-export-failure."
+  },
+  {
+    "match_key": "v3|incident:Q2EJWG22CER0LA|org:albertsons_6|class:zero-success",
+    "status": "active",
+    "target_group_id": "260513-albertsons_6-zero-success",
+    "reason": "created",
+    "created_at": "2026-05-16T00:38:01.850Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260513-albertsons_6-zero-success."
+  },
+  {
+    "match_key": "v3|incident:Q2KT0WUDEVL42Q|org:allegro_3|class:client-sent-export-failure",
+    "status": "active",
+    "target_group_id": "260514-allegro_3-client-sent-export-failure",
+    "reason": "created",
+    "created_at": "2026-05-16T00:38:01.850Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260514-allegro_3-client-sent-export-failure."
+  },
+  {
+    "match_key": "v3|incident:Q2KT0WUDEVL42Q|org:allegro_3|dest:dv360|class:export-error",
+    "status": "active",
+    "target_group_id": "260514-allegro_3-dv360-export-error",
+    "reason": "created",
+    "created_at": "2026-05-16T00:38:01.850Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260514-allegro_3-dv360-export-error."
+  },
+  {
+    "match_key": "v3|incident:Q2KT0WUDEVL42Q|org:allegro_3|dest:dv360|class:export-processing",
+    "status": "active",
+    "target_group_id": "260514-allegro_3-dv360-export-processing",
+    "reason": "created",
+    "created_at": "2026-05-16T00:38:01.850Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260514-allegro_3-dv360-export-processing."
+  },
+  {
+    "match_key": "v3|incident:Q2RVN4BPATQXSR|org:dexcom_478|class:no-batches",
+    "status": "active",
+    "target_group_id": "260515-dexcom_478-no-batches",
+    "reason": "created",
+    "created_at": "2026-05-16T00:38:01.850Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260515-dexcom_478-no-batches."
+  },
+  {
+    "match_key": "v3|incident:Q2T09VCLN9MRZ8|org:albertsons_6|class:client-sent-export-failure",
+    "status": "active",
+    "target_group_id": "260512-albertsons_6-client-sent-export-failure",
+    "reason": "created",
+    "created_at": "2026-05-16T00:38:01.850Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260512-albertsons_6-client-sent-export-failure."
+  },
+  {
+    "match_key": "v3|incident:Q2T09VCLN9MRZ8|org:albertsons_6|class:no-batches",
+    "status": "redirect",
+    "target_group_id": "260511-albertsons_6-liveramp-sftp-permission",
+    "reason": "merged",
+    "created_at": "2026-05-16T00:38:01.850Z",
+    "created_by": "oncall-triage",
+    "rationale": "Grouped by agent after reviewing https://flywheeltechnologies.slack.com/archives/C02J2RJ6VSL/p1778522176115369. The thread identifies PermissionError [Errno 13] on Albertsons LiveRamp SFTP, notes Bifrost retries these failures, and confirms successful uploads were present; treat matching Albertsons LiveRamp alerts as one remediation path: monitor retries/uploads rather than investigate separate root causes."
+  },
+  {
+    "match_key": "v3|incident:Q2T09VCLN9MRZ8|org:albertsons_6|class:snapshotting-error",
+    "status": "redirect",
+    "target_group_id": "260511-albertsons_6-liveramp-sftp-permission",
+    "reason": "merged",
+    "created_at": "2026-05-16T00:38:01.850Z",
+    "created_by": "oncall-triage",
+    "rationale": "Grouped by agent after reviewing https://flywheeltechnologies.slack.com/archives/C02J2RJ6VSL/p1778522176115369. The thread identifies PermissionError [Errno 13] on Albertsons LiveRamp SFTP, notes Bifrost retries these failures, and confirms successful uploads were present; treat matching Albertsons LiveRamp alerts as one remediation path: monitor retries/uploads rather than investigate separate root causes."
+  },
+  {
+    "match_key": "v3|incident:Q2T09VCLN9MRZ8|org:albertsons_6|class:snapshotting-processing",
+    "status": "redirect",
+    "target_group_id": "260511-albertsons_6-liveramp-sftp-permission",
+    "reason": "merged",
+    "created_at": "2026-05-16T00:38:01.850Z",
+    "created_by": "oncall-triage",
+    "rationale": "Grouped by agent after reviewing https://flywheeltechnologies.slack.com/archives/C02J2RJ6VSL/p1778522176115369. The thread identifies PermissionError [Errno 13] on Albertsons LiveRamp SFTP, notes Bifrost retries these failures, and confirms successful uploads were present; treat matching Albertsons LiveRamp alerts as one remediation path: monitor retries/uploads rather than investigate separate root causes."
+  },
+  {
+    "match_key": "v3|incident:Q2T09VCLN9MRZ8|org:albertsons_6|dest:live-ramp|class:export-error",
+    "status": "redirect",
+    "target_group_id": "260511-albertsons_6-liveramp-sftp-permission",
+    "reason": "merged",
+    "created_at": "2026-05-16T00:38:01.850Z",
+    "created_by": "oncall-triage",
+    "rationale": "Grouped by agent after reviewing https://flywheeltechnologies.slack.com/archives/C02J2RJ6VSL/p1778522176115369. The thread identifies PermissionError [Errno 13] on Albertsons LiveRamp SFTP, notes Bifrost retries these failures, and confirms successful uploads were present; treat matching Albertsons LiveRamp alerts as one remediation path: monitor retries/uploads rather than investigate separate root causes."
+  },
+  {
+    "match_key": "v3|incident:Q2T09VCLN9MRZ8|org:albertsons_6|dest:live-ramp|class:export-processing",
+    "status": "redirect",
+    "target_group_id": "260511-albertsons_6-liveramp-sftp-permission",
+    "reason": "merged",
+    "created_at": "2026-05-16T00:38:01.850Z",
+    "created_by": "oncall-triage",
+    "rationale": "Grouped by agent after reviewing https://flywheeltechnologies.slack.com/archives/C02J2RJ6VSL/p1778522176115369. The thread identifies PermissionError [Errno 13] on Albertsons LiveRamp SFTP, notes Bifrost retries these failures, and confirms successful uploads were present; treat matching Albertsons LiveRamp alerts as one remediation path: monitor retries/uploads rather than investigate separate root causes."
+  },
+  {
+    "match_key": "v3|incident:Q38JR11G2ENK2W|org:albertsons_6|class:client-sent-export-failure",
+    "status": "active",
+    "target_group_id": "260514-albertsons_6-client-sent-export-failure",
+    "reason": "created",
+    "created_at": "2026-05-16T00:38:01.850Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260514-albertsons_6-client-sent-export-failure."
+  },
+  {
+    "match_key": "v3|incident:Q38JR11G2ENK2W|org:albertsons_6|class:zero-success",
+    "status": "active",
+    "target_group_id": "260515-albertsons_6-zero-success-02",
+    "reason": "created",
+    "created_at": "2026-05-16T00:38:01.850Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260515-albertsons_6-zero-success-02."
+  },
+  {
+    "match_key": "v3|incident:Q38JR11G2ENK2W|org:albertsons_6|dest:live-ramp|class:export-error",
+    "status": "redirect",
+    "target_group_id": "260511-albertsons_6-liveramp-sftp-permission",
+    "reason": "merged",
+    "created_at": "2026-05-16T00:38:01.850Z",
+    "created_by": "oncall-triage",
+    "rationale": "Grouped by agent after reviewing https://flywheeltechnologies.slack.com/archives/C02J2RJ6VSL/p1778522176115369. The thread identifies PermissionError [Errno 13] on Albertsons LiveRamp SFTP, notes Bifrost retries these failures, and confirms successful uploads were present; treat matching Albertsons LiveRamp alerts as one remediation path: monitor retries/uploads rather than investigate separate root causes."
+  },
+  {
+    "match_key": "v3|incident:Q3GQQRY1UQLBSN|org:allegro_3|dest:dv360|class:export-processing",
+    "status": "active",
+    "target_group_id": "260515-allegro_3-dv360-export-processing",
+    "reason": "created",
+    "created_at": "2026-05-16T00:38:01.850Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260515-allegro_3-dv360-export-processing."
+  },
+  {
+    "match_key": "v3|incident:Q3HWKW0FS3VTHE|org:ford_310|class:client-sent-export-failure",
+    "status": "active",
+    "target_group_id": "260514-ford_310-client-sent-export-failure-02",
+    "reason": "created",
+    "created_at": "2026-05-16T00:38:01.850Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260514-ford_310-client-sent-export-failure-02."
+  },
+  {
+    "match_key": "v3|incident:Q3HWKW0FS3VTHE|org:ford_310|dest:dv360|class:export-error",
+    "status": "active",
+    "target_group_id": "260514-ford_310-dv360-export-error",
+    "reason": "created",
+    "created_at": "2026-05-16T00:38:01.850Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260514-ford_310-dv360-export-error."
+  },
+  {
+    "match_key": "v3|incident:Q3HYNV525MK1RW|org:allegro_3|dest:dv360|class:export-error",
+    "status": "active",
+    "target_group_id": "260511-allegro_3-dv360-export-error",
+    "reason": "created",
+    "created_at": "2026-05-16T00:38:01.850Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260511-allegro_3-dv360-export-error."
+  },
+  {
+    "match_key": "v3|incident:Q3PJ7W2K3Y9LJV|org:birchwood_274|class:client-sent-export-failure",
+    "status": "active",
+    "target_group_id": "260514-birchwood_274-client-sent-export-failure",
+    "reason": "created",
+    "created_at": "2026-05-16T00:38:01.850Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260514-birchwood_274-client-sent-export-failure."
+  },
+  {
+    "match_key": "v3|incident:Q3PJ7W2K3Y9LJV|org:birchwood_274|dest:salesforce-audience|class:export-error",
+    "status": "active",
+    "target_group_id": "260515-birchwood_274-salesforce-audience-export-error",
+    "reason": "created",
+    "created_at": "2026-05-16T00:38:01.850Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260515-birchwood_274-salesforce-audience-export-error."
+  },
+  {
+    "match_key": "v3|incident:Q3PW7IHI1KCDWS|org:growthloop_268|class:client-sent-export-failure",
+    "status": "active",
+    "target_group_id": "260514-growthloop_268-client-sent-export-failure",
+    "reason": "created",
+    "created_at": "2026-05-16T00:38:01.850Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260514-growthloop_268-client-sent-export-failure."
+  },
+  {
+    "match_key": "v3|incident:Q3WZUE4915S6J4|org:whirlpool_525|class:no-batches",
+    "status": "active",
+    "target_group_id": "260515-whirlpool_525-no-batches",
+    "reason": "created",
+    "created_at": "2026-05-16T00:38:01.850Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260515-whirlpool_525-no-batches."
+  },
+  {
+    "match_key": "v3|incident:Q3XQABQFPPVNT5|org:451|class:client-sent-export-failure",
+    "status": "active",
+    "target_group_id": "260513-451-client-sent-export-failure",
+    "reason": "created",
+    "created_at": "2026-05-16T00:38:01.850Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260513-451-client-sent-export-failure."
+  },
+  {
+    "match_key": "v3|incident:Q3XQABQFPPVNT5|org:451|dest:campaign-manager-360|class:export-error",
+    "status": "active",
+    "target_group_id": "260514-451-campaign-manager-360-export-error",
+    "reason": "created",
+    "created_at": "2026-05-16T00:38:01.850Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260514-451-campaign-manager-360-export-error."
+  },
+  {
+    "match_key": "v3|incident:Q3XQABQFPPVNT5|org:451|dest:salesforce-audience|class:export-error",
+    "status": "active",
+    "target_group_id": "260514-451-salesforce-audience-export-error",
+    "reason": "created",
+    "created_at": "2026-05-16T00:38:01.850Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260514-451-salesforce-audience-export-error."
+  }
+]

@@ -1,0 +1,78 @@
+{
+  "check_id": "chk_q064v2c56cntcr_q3i8jx0h2ydspb",
+  "source": "pagerduty",
+  "incident_id": "Q064V2C56CNTCR",
+  "alert_id": "Q3I8JX0H2YDSPB",
+  "state": "open",
+  "scope": {
+    "env": "prod",
+    "org_id": "395",
+    "audience_id": "31800",
+    "destination_type": "pulse_point",
+    "checked_export_run_ids": [
+      "31800-pulse_point_19410-scheduled__2026-05-13T23:00:00+00:00"
+    ],
+    "glcli": "glcli --env prod bifrost pizza --audience-id 31800 --org-id 395"
+  },
+  "scope_key": "prod|395|31800|pulse_point|unknown_endpoint|31800-pulse_point_19410-scheduled__2026-05-13T23:00:00+00:00",
+  "run_evaluations": [
+    {
+      "export_run_id": "31800-pulse_point_19410-scheduled__2026-05-13T23:00:00+00:00",
+      "health": "healthy",
+      "match_basis": "checked_export_run_id",
+      "blockers": [],
+      "selected_row": {
+        "export_run_id": "31800-pulse_point_19410-scheduled__2026-05-13T23:00:00+00:00",
+        "audience_id": "31800",
+        "endpoint_id": "app_pulsepoint_1640",
+        "destination_type": "pulse_point",
+        "created_at": "2026-05-13T23:56:06.575984+00:00",
+        "snapshotting_state": "snapshotting_finished",
+        "export_state": "export_finished",
+        "failed_export_count": 0,
+        "raw": {
+          "export_state": "export_finished",
+          "successful_add_count": 60,
+          "successful_remove_count": 5,
+          "failed_export_count": 0,
+          "rejected_row_count": 15,
+          "total_row_count": 80,
+          "successful_expanded_add_count": 0,
+          "successful_expanded_remove_count": 0,
+          "failed_expanded_export_count": 0,
+          "rejected_expanded_row_count": 15,
+          "total_expanded_row_count": 80,
+          "enhanced_match_count": 0,
+          "enhanced_row_count": 0,
+          "enhanced_total_records": 0,
+          "total_batch_count": 1,
+          "completed_batch_count": 1,
+          "successful_batch_count": 1,
+          "failed_batch_count": 0,
+          "failure_reason": null,
+          "info": {
+            "internal_export_id": "7b87a69b7bcf5bea6522b3240e9c7ded-20260513235503",
+            "export_run_id": "31800-pulse_point_19410-scheduled__2026-05-13T23:00:00+00:00",
+            "audience_id": "81802",
+            "internal_audience_id": "31800",
+            "audience_name": "",
+            "organization_id": "395",
+            "organization_name": "chghealthcare",
+            "platform": "pulse_point",
+            "endpoint_id": "app_pulsepoint_1640",
+            "export_timestamp": "2026-05-13 23:55:03",
+            "error_file_uri": "gs://flywheel-prod-328213-temporary/batch_errors/f7039844-0f47-4078-a52b-08baf555597d.csv",
+            "created_at": "2026-05-13T23:56:06.575984+00:00",
+            "export_complete_response": null
+          },
+          "snapshotting_state": "snapshotting_finished"
+        }
+      }
+    }
+  ],
+  "blockers": [],
+  "evidence_artifacts": [],
+  "created_at": "2026-05-16T01:01:37.728Z",
+  "updated_at": "2026-05-16T01:17:44.826Z",
+  "proposed_state": "healthy_closed"
+}

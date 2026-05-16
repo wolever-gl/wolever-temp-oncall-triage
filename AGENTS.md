@@ -5,22 +5,33 @@ Use this repo as a case-workspace system, not a spreadsheet workflow.
 ## Operating Rules
 
 - Treat the git-backed case workspace as the source of truth.
-- Groups are the primary object. A group may span multiple PagerDuty incidents.
+- Immutable PagerDuty facts and derived alert facts are the primary query surface.
+- Groups are loose operational workspaces over alert facts. A group may span multiple PagerDuty incidents, and alert facts may be queried across group boundaries.
 - Keep deterministic grouping conservative and split-first. Agents may enrich, override, merge, or split with lineage.
-- Imported PagerDuty alerts are immutable raw facts.
+- Prefer evidence-tagged grouping for root-cause work: run `tag` with an archived script, inspect `--test` output first when practical, then use `group --tag` with rationale.
+- Imported PagerDuty raw text is immutable. Parsed alert facts are versioned derived facts.
+- Assume facts and event logs should be immutable unless there is a strong reason otherwise.
+- PagerDuty wrapper imports must preserve every alert. If the wrapper says `Alerts (N)`, parsed facts must match `N` unless an explicit partial-import escape hatch is used.
+- Incident titles may enrich display or low-confidence hints, but they are not matching inputs.
+- Match rules are the shared mechanism for active grouping keys, aliases, redirects, and ambiguous split keys.
+- Generated cohorts and related groups are navigation aids, not persisted truth, until an agent records an explicit relationship or merge.
 - Agents may write compact PagerDuty breadcrumbs when useful.
 - Keep state in `state.json` and the human summary in `case.md`.
-- Keep append-only `lineage.jsonl`, `evidence.jsonl`, `decisions.jsonl`, and `actions.jsonl`.
+- Keep append-only `lineage.jsonl`, `evidence.jsonl`, `decisions.jsonl`, `actions.jsonl`, and structural events.
+- Keep `DECISIONS.md`, `LEARNINGS.md`, and `LEXICON.md` current when work changes architecture, behavior, or terminology.
 - Use the CLI for structural mutations. Direct file edits are fine for narrative and artifact files.
 - Current group states are `open`, `waiting`, `monitoring`, and `resolved`.
 - Use namespaced tags such as `triage:*`, `waiting:*`, `monitoring:*`, and `resolved:*`.
 - No scheduler for now. Use `next_check_at` fields when a future revisit is needed.
 - Runbooks are structured instructions and may include tool functions or scripts.
 - Agents can explore first, then choose a runbook before remediation or resolution.
+- See `LEXICON.md` for canonical terms, invariants, and model boundaries.
 
 ## Editing Discipline
 
 - Keep changes small and local.
+- Keep solutions simple: do the simplest, dumbest thing that works, then add complexity only when real use proves it is needed.
 - Prefer the repo’s existing patterns over new abstractions.
 - Do not rewrite unrelated files.
 - Do not touch source or package files unless the task explicitly requires it.
+- After finishing a unit of work, briefly review what was slow or repetitive. If a tool, runbook, parser, command, or workflow update would make the next pass safer or faster, propose it.

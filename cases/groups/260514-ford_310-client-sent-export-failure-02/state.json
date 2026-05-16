@@ -1,0 +1,23 @@
+{
+  "group_id": "260514-ford_310-client-sent-export-failure-02",
+  "state": "open",
+  "tags": [
+    "triage:needs_review"
+  ],
+  "title": "ford_310 client-sent-export-failure",
+  "summary": "ford (Marketing Production) - Audience 34059: Audience Export failure for 34059 sent to client.",
+  "deterministic_key": "v3|incident:Q3HWKW0FS3VTHE|org:ford_310|class:client-sent-export-failure",
+  "grouping_version": 3,
+  "created_at": "2026-05-16T00:38:01.850Z",
+  "updated_at": "2026-05-16T00:38:01.850Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q3HWKW0FS3VTHE",
+      "alert_id": "Q2BK8G803N1MIK"
+    }
+  ],
+  "incident_ids": [
+    "Q3HWKW0FS3VTHE"
+  ],
+  "related_group_ids": []
+}

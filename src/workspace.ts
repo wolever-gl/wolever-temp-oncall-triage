@@ -1,21 +1,31 @@
 import path from "node:path";
-import { readFile, writeFile } from "node:fs/promises";
+import { copyFile, mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
+import { createHash } from "node:crypto";
+import { execFile } from "node:child_process";
+import { promisify } from "node:util";
+import { tmpdir } from "node:os";
 import { appendJsonl, ensureDir, listDirs, readJson, relativePath, slug, writeJson } from "./fsutil";
-import { fetchPagerDutyIncidentStatus, loadAlertFacts } from "./pagerduty";
+import { fetchPagerDutyIncidentStatus, loadAlertFacts, parseAlertFacts } from "./pagerduty";
 import type {
   ActionEvent,
+  AlertAnnotation,
   AlertFact,
+  AlertRef,
   DecisionEvent,
   EvidenceEvent,
   GroupState,
+  IndexAlertFact,
   IndexGroup,
   IncidentRecord,
   LineageEvent,
+  MatchRule,
   PagerDutyIncidentStatus,
+  TaggerResult,
   WorkspaceIndex,
 } from "./schema";
 
-export const GROUPING_VERSION = 1;
+export const GROUPING_VERSION = 3;
+const execFileAsync = promisify(execFile);
 
 export async function initWorkspace(workspaceDir: string): Promise<void> {
   await ensureDir(path.join(workspaceDir, "incidents"));
@@ -29,16 +39,19 @@ export async function importPagerDutyIncident(options: {
   workspaceDir: string;
   incident: string;
   alertsFile?: string;
+  allowPartial?: boolean;
 }): Promise<{ incident_id: string; alert_count: number }> {
   await initWorkspace(options.workspaceDir);
   const loaded = await loadAlertFacts({
     incident: options.incident,
     ...(options.alertsFile ? { alertsFile: options.alertsFile } : {}),
+    ...(options.allowPartial ? { allowPartial: options.allowPartial } : {}),
   });
   const incidentDir = path.join(options.workspaceDir, "incidents", loaded.incident.incident_id);
   await ensureDir(incidentDir);
   await writeJson(path.join(incidentDir, "incident.json"), loaded.incident);
   await writeFile(path.join(incidentDir, "alerts.raw.txt"), loaded.rawText);
+  await writeFile(path.join(incidentDir, "alerts.v2.jsonl"), renderJsonl(loaded.alerts));
   await writeFile(path.join(incidentDir, "alerts.jsonl"), loaded.alerts.map((alert) => JSON.stringify(alert)).join("\n") + "\n");
   await appendJsonl(path.join(options.workspaceDir, "events.jsonl"), {
     ts: new Date().toISOString(),
@@ -154,17 +167,8 @@ export async function groupImportedAlerts(workspaceDir: string): Promise<{ creat
   const alerts = await loadAllAlerts(workspaceDir);
   const existingGroups = await loadAllGroups(workspaceDir);
   const groupsById = new Map(existingGroups.map((group) => [group.group_id, group]));
-  const byKey = new Map(existingGroups.map((group) => [group.deterministic_key, group]));
-  for (const group of existingGroups) {
-    if (group.state !== "resolved" || !group.tags.includes("resolved:merged")) continue;
-    const redirectTargetId = group.related_group_ids.find((groupId) => {
-      const related = groupsById.get(groupId);
-      return related?.state !== "resolved";
-    });
-    if (!redirectTargetId) continue;
-    const redirectTarget = groupsById.get(redirectTargetId);
-    if (redirectTarget) byKey.set(group.deterministic_key, redirectTarget);
-  }
+  const matchRules = await loadMatchRules(workspaceDir);
+  const byKey = new Map<string, MatchRule>(matchRules.map((rule) => [rule.match_key, rule]));
   const now = new Date().toISOString();
   let created = 0;
   let attached = 0;
@@ -172,7 +176,11 @@ export async function groupImportedAlerts(workspaceDir: string): Promise<{ creat
 
   for (const alert of alerts) {
     const key = deterministicGroupKey(alert);
-    const existing = byKey.get(key);
+    const rule = byKey.get(key);
+    if (rule?.status === "ambiguous") {
+      continue;
+    }
+    const existing = rule?.target_group_id ? groupsById.get(rule.target_group_id) : undefined;
     if (existing) {
       if (!existing.alert_refs.some((ref) => ref.incident_id === alert.incident_id && ref.alert_id === alert.alert_id)) {
         existing.alert_refs.push({ incident_id: alert.incident_id, alert_id: alert.alert_id });
@@ -191,8 +199,19 @@ export async function groupImportedAlerts(workspaceDir: string): Promise<{ creat
       continue;
     }
 
-    const group = newGroup(alert, key, now, existingGroups.length + created + 1);
-    byKey.set(key, group);
+    const group = newGroup(alert, key, now, [...groupsById.keys(), ...[...touched]]);
+    groupsById.set(group.group_id, group);
+    const matchRule: MatchRule = {
+      match_key: key,
+      status: "active",
+      target_group_id: group.group_id,
+      reason: "created",
+      created_at: now,
+      created_by: "oncall-triage",
+      rationale: `Initial deterministic grouping for ${group.group_id}.`,
+    };
+    byKey.set(key, matchRule);
+    matchRules.push(matchRule);
     await writeGroupState(workspaceDir, group);
     await writeCaseMarkdown(workspaceDir, group);
     await appendDecision(workspaceDir, group.group_id, {
@@ -205,6 +224,7 @@ export async function groupImportedAlerts(workspaceDir: string): Promise<{ creat
     touched.add(group.group_id);
   }
 
+  await writeMatchRules(workspaceDir, matchRules);
   await regenerateIndex(workspaceDir);
   return { created, attached, groups: [...touched].sort() };
 }
@@ -264,6 +284,17 @@ export async function mergeGroups(options: {
 
   await writeGroupState(options.workspaceDir, source);
   await writeGroupState(options.workspaceDir, target);
+  const matchRules = await loadMatchRules(options.workspaceDir);
+  let changedRules = false;
+  for (const rule of matchRules) {
+    if (rule.status !== "active" || rule.target_group_id !== source.group_id) continue;
+    rule.status = "redirect";
+    rule.target_group_id = target.group_id;
+    rule.reason = "merged";
+    rule.rationale = options.rationale;
+    changedRules = true;
+  }
+  if (changedRules) await writeMatchRules(options.workspaceDir, matchRules);
   await appendLineage(options.workspaceDir, source.group_id, {
     ts: now,
     actor,
@@ -336,6 +367,154 @@ export async function splitGroup(options: {
   return { source, created };
 }
 
+export async function runAlertTagger(options: {
+  workspaceDir: string;
+  filters: Parameters<typeof queryAlertFacts>[1];
+  scriptPath: string;
+  tags?: string[];
+  limit?: number;
+  test?: boolean;
+}): Promise<{ run_id: string; candidates: number; processed: number; tagged: number; skipped: number; needs_evidence: number; results: AlertAnnotation[] }> {
+  await initWorkspace(options.workspaceDir);
+  const alerts = await queryAlertFacts(options.workspaceDir, options.filters);
+  const selected = typeof options.limit === "number" ? alerts.slice(0, options.limit) : alerts;
+  const now = new Date().toISOString();
+  const run_id = `tagrun_${now.replace(/\D/g, "").slice(0, 14)}_${slug(path.basename(options.scriptPath, path.extname(options.scriptPath)))}`;
+  const scriptText = await readFile(options.scriptPath);
+  const script_sha256 = createHash("sha256").update(scriptText).digest("hex");
+  const runDir = path.join(options.workspaceDir, "assets", "taggers", run_id);
+  const archivedScript = path.join(runDir, path.basename(options.scriptPath));
+  const resultsDir = path.join(runDir, "results");
+  if (!options.test) {
+    await ensureDir(resultsDir);
+    await copyFile(options.scriptPath, archivedScript);
+    await writeJson(path.join(runDir, "manifest.json"), {
+      run_id,
+      created_at: now,
+      script_path: archivedScript,
+      script_sha256,
+      filters: options.filters,
+      requested_tags: options.tags ?? [],
+      candidate_count: alerts.length,
+      processed_count: selected.length,
+    });
+  }
+
+  const annotations: AlertAnnotation[] = [];
+  let skipped = 0;
+  let needs_evidence = 0;
+  for (const alert of selected) {
+    const alertFile = path.join(resultsDir, `${alert.incident_id}__${alert.alert_id}.alert.json`);
+    if (!options.test) await writeJson(alertFile, alert);
+    const taggerRun = await runTaggerScript(options.test ? options.scriptPath : archivedScript, options.test ? alert : undefined, alertFile);
+    const tags = taggerRun.result.decision === "tag" ? sortedUnique([...(options.tags ?? []), ...(taggerRun.result.tags ?? [])]) : [];
+    const annotation: AlertAnnotation = {
+      ts: new Date().toISOString(),
+      alert_ref: { incident_id: alert.incident_id, alert_id: alert.alert_id },
+      tags,
+      decision: taggerRun.result.decision,
+      ...(taggerRun.result.confidence ? { confidence: taggerRun.result.confidence } : {}),
+      summary: taggerRun.result.summary,
+      source: {
+        kind: "tagger",
+        run_id,
+        script_sha256,
+        script_path: options.test ? options.scriptPath : archivedScript,
+      },
+      ...(taggerRun.result.evidence ? { evidence: taggerRun.result.evidence } : {}),
+    };
+    annotations.push(annotation);
+    if (annotation.decision === "skip") skipped++;
+    if (annotation.decision === "needs_evidence") needs_evidence++;
+    if (!options.test) {
+      await writeJson(path.join(resultsDir, `${alert.incident_id}__${alert.alert_id}.result.json`), {
+        annotation,
+        process: taggerRun.process,
+      });
+      await appendJsonl(alertAnnotationsFile(options.workspaceDir), annotation);
+    }
+  }
+
+  return {
+    run_id,
+    candidates: alerts.length,
+    processed: selected.length,
+    tagged: annotations.filter((annotation) => annotation.decision === "tag").length,
+    skipped,
+    needs_evidence,
+    results: annotations,
+  };
+}
+
+export async function groupTaggedAlerts(options: {
+  workspaceDir: string;
+  tags: string[];
+  title: string;
+  summary: string;
+  rationale: string;
+  groupId?: string;
+  state?: GroupState["state"];
+  groupTags?: string[];
+  limit?: number;
+  test?: boolean;
+  actor?: string;
+}): Promise<{ group: GroupState; matched: number; would_create: boolean; test: boolean }> {
+  await initWorkspace(options.workspaceDir);
+  if (options.tags.length === 0) throw new Error("At least one --tag is required.");
+  const annotations = await loadAlertAnnotations(options.workspaceDir);
+  const refs = refsWithTags(annotations, options.tags);
+  const selectedRefs = typeof options.limit === "number" ? refs.slice(0, options.limit) : refs;
+  if (selectedRefs.length === 0) throw new Error("No tagged alerts matched the requested tags.");
+
+  const alerts = await loadAllAlerts(options.workspaceDir);
+  const alertsByRef = new Map(alerts.map((alert) => [alertKey(alert), alert]));
+  const selectedAlerts = selectedRefs.map((ref) => alertsByRef.get(refKey(ref))).filter((alert): alert is AlertFact => Boolean(alert));
+  if (selectedAlerts.length === 0) throw new Error("Tagged alerts matched annotations, but no current alert facts were found.");
+
+  const existingGroups = await loadAllGroups(options.workspaceDir);
+  const groupId = options.groupId ?? uniqueGroupId(agentGroupIdBase(selectedAlerts, options.title), existingGroups.map((group) => group.group_id));
+  const now = new Date().toISOString();
+  const previousTarget = existingGroups.find((group) => group.group_id === groupId);
+  const target = buildTaggedGroup({
+    ...(previousTarget ? { previousTarget } : {}),
+    groupId,
+    selectedRefs,
+    title: options.title,
+    summary: options.summary,
+    ...(options.state ? { state: options.state } : {}),
+    groupTags: options.groupTags ?? [],
+    now,
+  });
+  if (options.test) return { group: target, matched: selectedRefs.length, would_create: !previousTarget, test: true };
+
+  await moveRefsIntoGroup({
+    workspaceDir: options.workspaceDir,
+    target,
+    existingGroups,
+    refs: selectedRefs,
+    actor: options.actor ?? "agent",
+    rationale: options.rationale,
+  });
+  await appendDecision(options.workspaceDir, target.group_id, {
+    ts: now,
+    actor: options.actor ?? "agent",
+    decision: previousTarget ? "updated_group_from_tags" : "created_group_from_tags",
+    rationale: options.rationale,
+  });
+  await appendEvidence(options.workspaceDir, target.group_id, {
+    ts: now,
+    kind: "tag_grouping",
+    source: "oncall-triage",
+    summary: options.summary,
+    data: {
+      tags: options.tags,
+      alert_count: selectedRefs.length,
+    },
+  });
+  await regenerateIndex(options.workspaceDir);
+  return { group: target, matched: selectedRefs.length, would_create: !previousTarget, test: false };
+}
+
 export async function appendEvidence(workspaceDir: string, groupId: string, event: EvidenceEvent): Promise<void> {
   await appendJsonl(path.join(groupDir(workspaceDir, groupId), "evidence.jsonl"), event);
 }
@@ -355,6 +534,7 @@ export async function appendLineage(workspaceDir: string, groupId: string, event
 export async function regenerateIndex(workspaceDir: string): Promise<WorkspaceIndex> {
   await ensureDir(path.join(workspaceDir, "indexes"));
   const groups = await loadAllGroups(workspaceDir);
+  const alerts = await loadAllAlerts(workspaceDir);
   const indexGroups: IndexGroup[] = groups
     .map((group) => ({
       group_id: group.group_id,
@@ -369,13 +549,17 @@ export async function regenerateIndex(workspaceDir: string): Promise<WorkspaceIn
       path: relativePath(workspaceDir, path.join(groupDir(workspaceDir, group.group_id), "case.md")),
     }))
     .sort((a, b) => stateRank(a.state) - stateRank(b.state) || a.group_id.localeCompare(b.group_id));
+  const indexAlerts: IndexAlertFact[] = alerts.map(indexAlertFact).sort((a, b) => a.created_at.localeCompare(b.created_at) || a.incident_id.localeCompare(b.incident_id) || a.alert_id.localeCompare(b.alert_id));
   const index: WorkspaceIndex = {
     generated_at: new Date().toISOString(),
     open_count: indexGroups.filter((group) => group.state !== "resolved").length,
     groups: indexGroups,
+    alert_count: indexAlerts.length,
   };
   await writeJson(path.join(workspaceDir, "index.json"), index);
   await writeJson(path.join(workspaceDir, "indexes", "groups.json"), indexGroups);
+  await writeJson(path.join(workspaceDir, "indexes", "alert_facts.json"), indexAlerts);
+  await ensureMatchRulesFile(workspaceDir);
   await writeFile(path.join(workspaceDir, "index.md"), renderIndex(index));
   return index;
 }
@@ -385,15 +569,52 @@ export async function loadAllAlerts(workspaceDir: string): Promise<AlertFact[]> 
   const incidentIds = await listDirs(incidentsDir);
   const alerts: AlertFact[] = [];
   for (const incidentId of incidentIds) {
-    const file = path.join(incidentsDir, incidentId, "alerts.jsonl");
+    const incidentDir = path.join(incidentsDir, incidentId);
+    const v2File = path.join(incidentDir, "alerts.v2.jsonl");
+    const rawFile = path.join(incidentDir, "alerts.raw.txt");
+    const legacyFile = path.join(incidentDir, "alerts.jsonl");
+    const file = await firstExistingFile([v2File]);
+    if (!file) {
+      const parsedFromRaw = await parseAlertsFromRawIfPresent(rawFile, incidentId);
+      if (parsedFromRaw) {
+        alerts.push(...parsedFromRaw);
+        continue;
+      }
+    }
+    const readableFile = file ?? (await firstExistingFile([legacyFile]));
+    if (!readableFile) continue;
     try {
-      const lines = (await readFile(file, "utf8")).split("\n").filter(Boolean);
+      const lines = (await readFile(readableFile, "utf8")).split("\n").filter(Boolean);
       alerts.push(...lines.map((line) => JSON.parse(line) as AlertFact));
     } catch (err) {
       if ((err as NodeJS.ErrnoException).code !== "ENOENT") throw err;
     }
   }
   return alerts;
+}
+
+export async function queryAlertFacts(
+  workspaceDir: string,
+  filters: {
+    incidentId?: string;
+    orgId?: string;
+    audienceId?: string;
+    destination?: string;
+    state?: string;
+  },
+): Promise<AlertFact[]> {
+  const alerts = await loadAllAlerts(workspaceDir);
+  return alerts.filter((alert) => {
+    if (filters.incidentId && alert.incident_id !== filters.incidentId) return false;
+    if (filters.orgId && alert.org_id !== filters.orgId) return false;
+    if (filters.audienceId && alert.audience_id !== filters.audienceId) return false;
+    if (filters.destination && alert.destination_type !== filters.destination && alert.destination_product !== filters.destination) return false;
+    if (filters.state) {
+      const tuple = [alert.state_tuple?.snapshotting ?? "", alert.state_tuple?.export ?? ""].filter(Boolean).join("/");
+      if (tuple !== filters.state && alert.state_tuple?.snapshotting !== filters.state && alert.state_tuple?.export !== filters.state) return false;
+    }
+    return true;
+  });
 }
 
 export async function loadAllGroups(workspaceDir: string): Promise<GroupState[]> {
@@ -440,10 +661,14 @@ export async function writeIncidentRecord(workspaceDir: string, incident: Incide
 
 export function deterministicGroupKey(alert: AlertFact): string {
   const org = alert.org_id || alert.org_id_numeric || "unknown_org";
-  const destination = alert.endpoint_id || destinationFromRun(alert.export_run_id) || "unknown_destination";
-  const audience = alert.audience_id ? `audience:${alert.audience_id}` : "audience:unknown";
-  const signature = alert.error_signature || alert.summary;
-  return [org, destination, audience, slug(signature)].join("|");
+  const grouping = groupingParts(alert);
+  return [
+    `v3`,
+    `incident:${alert.incident_id}`,
+    `org:${org}`,
+    ...(grouping.destination ? [`dest:${grouping.destination}`] : []),
+    `class:${grouping.failureClass}`,
+  ].join("|");
 }
 
 function destinationFromRun(runId: string | undefined): string | undefined {
@@ -454,16 +679,19 @@ function isResolvedIncident(status: PagerDutyIncidentStatus | undefined): boolea
   return status === "resolved" || status === "closed";
 }
 
-function newGroup(alert: AlertFact, key: string, now: string, ordinal: number): GroupState {
+function newGroup(alert: AlertFact, key: string, now: string, existingGroupIds: string[]): GroupState {
   const org = alert.org_id || alert.org_id_numeric || "unknown_org";
-  const destination = alert.endpoint_id || destinationFromRun(alert.export_run_id) || "unknown_destination";
-  const audience = alert.audience_id || "unknown_audience";
-  const group_id = `grp_${slug(org)}_${slug(destination)}_${slug(audience)}_${String(ordinal).padStart(4, "0")}`;
+  const grouping = groupingParts(alert);
+  const group_id = uniqueGroupId(
+    [groupDate(alert), groupOrgPart(org), ...(grouping.destination ? [groupIdPart(grouping.destination)] : []), groupIdPart(grouping.failureClass)].join("-"),
+    existingGroupIds,
+  );
+  const title = [org, grouping.destination, grouping.failureClass].filter(Boolean).join(" ");
   return {
     group_id,
     state: "open",
     tags: ["triage:needs_review"],
-    title: `${org} ${destination} audience ${audience}`,
+    title,
     summary: alert.summary,
     deterministic_key: key,
     grouping_version: GROUPING_VERSION,
@@ -473,6 +701,290 @@ function newGroup(alert: AlertFact, key: string, now: string, ordinal: number): 
     incident_ids: [alert.incident_id],
     related_group_ids: [],
   };
+}
+
+export async function loadMatchRules(workspaceDir: string): Promise<MatchRule[]> {
+  try {
+    return await readJson<MatchRule[]>(matchRulesFile(workspaceDir));
+  } catch (err) {
+    if ((err as NodeJS.ErrnoException).code === "ENOENT") return [];
+    throw err;
+  }
+}
+
+async function writeMatchRules(workspaceDir: string, rules: MatchRule[]): Promise<void> {
+  await writeJson(matchRulesFile(workspaceDir), dedupeMatchRules(rules));
+}
+
+async function ensureMatchRulesFile(workspaceDir: string): Promise<void> {
+  try {
+    await readFile(matchRulesFile(workspaceDir), "utf8");
+  } catch (err) {
+    if ((err as NodeJS.ErrnoException).code !== "ENOENT") throw err;
+    await writeMatchRules(workspaceDir, []);
+  }
+}
+
+function matchRulesFile(workspaceDir: string): string {
+  return path.join(workspaceDir, "indexes", "group_matches.json");
+}
+
+function alertAnnotationsFile(workspaceDir: string): string {
+  return path.join(workspaceDir, "indexes", "alert_annotations.jsonl");
+}
+
+async function loadAlertAnnotations(workspaceDir: string): Promise<AlertAnnotation[]> {
+  try {
+    const lines = (await readFile(alertAnnotationsFile(workspaceDir), "utf8")).split("\n").filter(Boolean);
+    return lines.map((line) => JSON.parse(line) as AlertAnnotation);
+  } catch (err) {
+    if ((err as NodeJS.ErrnoException).code === "ENOENT") return [];
+    throw err;
+  }
+}
+
+function refsWithTags(annotations: AlertAnnotation[], tags: string[]): AlertRef[] {
+  const tagsByRef = new Map<string, { ref: AlertRef; tags: Set<string> }>();
+  for (const annotation of annotations) {
+    if (annotation.decision !== "tag") continue;
+    const key = refKey(annotation.alert_ref);
+    const entry = tagsByRef.get(key) ?? { ref: annotation.alert_ref, tags: new Set<string>() };
+    for (const tag of annotation.tags) entry.tags.add(tag);
+    tagsByRef.set(key, entry);
+  }
+  return [...tagsByRef.values()]
+    .filter((entry) => tags.every((tag) => entry.tags.has(tag)))
+    .map((entry) => entry.ref)
+    .sort((a, b) => a.incident_id.localeCompare(b.incident_id) || a.alert_id.localeCompare(b.alert_id));
+}
+
+async function runTaggerScript(scriptPath: string, alert: AlertFact | undefined, alertFile: string): Promise<{
+  result: TaggerResult;
+  process: { stdout: string; stderr: string; exit_code: number | null; error?: string };
+}> {
+  let tempDir: string | undefined;
+  let inputFile = alertFile;
+  if (alert) {
+    tempDir = await mkdtemp(path.join(tmpdir(), "oncall-alert-tagger-"));
+    inputFile = path.join(tempDir, "alert.json");
+    await writeJson(inputFile, alert);
+  }
+  try {
+    const { stdout, stderr } = await execFileAsync("bun", ["run", scriptPath, "--alert", inputFile], { maxBuffer: 10 * 1024 * 1024 });
+    try {
+      const parsed = JSON.parse(stdout.trim()) as TaggerResult;
+      validateTaggerResult(parsed);
+      return { result: parsed, process: { stdout, stderr, exit_code: 0 } };
+    } catch (err) {
+      return {
+        result: {
+          decision: "needs_evidence",
+          confidence: "low",
+          summary: `Tagger output could not be parsed: ${err instanceof Error ? err.message : String(err)}`,
+        },
+        process: { stdout, stderr, exit_code: 0, error: err instanceof Error ? err.message : String(err) },
+      };
+    }
+  } catch (err) {
+    const error = err as NodeJS.ErrnoException & { stdout?: string; stderr?: string; code?: number };
+    return {
+      result: {
+        decision: "needs_evidence",
+        confidence: "low",
+        summary: `Tagger failed: ${error.message}`,
+      },
+      process: {
+        stdout: error.stdout ?? "",
+        stderr: error.stderr ?? "",
+        exit_code: typeof error.code === "number" ? error.code : null,
+        error: error.message,
+      },
+    };
+  } finally {
+    if (tempDir) await rm(tempDir, { recursive: true, force: true });
+  }
+}
+
+function validateTaggerResult(result: TaggerResult): void {
+  if (!["tag", "skip", "needs_evidence"].includes(result.decision)) throw new Error(`Invalid tagger decision: ${result.decision}`);
+  if (result.confidence && !["low", "medium", "high"].includes(result.confidence)) throw new Error(`Invalid tagger confidence: ${result.confidence}`);
+  if (!result.summary) throw new Error("Tagger result must include summary.");
+}
+
+function buildTaggedGroup(options: {
+  previousTarget?: GroupState;
+  groupId: string;
+  selectedRefs: AlertRef[];
+  title: string;
+  summary: string;
+  state?: GroupState["state"];
+  groupTags: string[];
+  now: string;
+}): GroupState {
+  if (options.previousTarget) {
+    return {
+      ...options.previousTarget,
+      state: options.state ?? options.previousTarget.state,
+      tags: sortedUnique([...options.previousTarget.tags, ...options.groupTags, "triage:tag_grouped"]),
+      title: options.title,
+      summary: options.summary,
+      updated_at: options.now,
+      alert_refs: sortedUniqueRefs([...options.previousTarget.alert_refs, ...options.selectedRefs]),
+      incident_ids: sortedUnique([...options.previousTarget.incident_ids, ...options.selectedRefs.map((ref) => ref.incident_id)]),
+    };
+  }
+  return {
+    group_id: options.groupId,
+    state: options.state ?? "open",
+    tags: sortedUnique([...options.groupTags, "triage:tag_grouped"]),
+    title: options.title,
+    summary: options.summary,
+    deterministic_key: `tag|${options.groupId}`,
+    grouping_version: GROUPING_VERSION,
+    created_at: options.now,
+    updated_at: options.now,
+    alert_refs: sortedUniqueRefs(options.selectedRefs),
+    incident_ids: sortedUnique(options.selectedRefs.map((ref) => ref.incident_id)),
+    related_group_ids: [],
+  };
+}
+
+async function moveRefsIntoGroup(options: {
+  workspaceDir: string;
+  target: GroupState;
+  existingGroups: GroupState[];
+  refs: AlertRef[];
+  actor: string;
+  rationale: string;
+}): Promise<void> {
+  const now = new Date().toISOString();
+  const selectedKeys = new Set(options.refs.map(refKey));
+  const consumedGroupIds: string[] = [];
+  for (const group of options.existingGroups) {
+    if (group.group_id === options.target.group_id) continue;
+    const before = group.alert_refs.length;
+    const remaining = group.alert_refs.filter((ref) => !selectedKeys.has(refKey(ref)));
+    if (remaining.length === before) continue;
+    options.target.related_group_ids = sortedUnique([...options.target.related_group_ids, group.group_id]);
+    if (remaining.length === 0) {
+      consumedGroupIds.push(group.group_id);
+      await rm(groupDir(options.workspaceDir, group.group_id), { recursive: true, force: true });
+      continue;
+    }
+    group.alert_refs = remaining;
+    group.incident_ids = sortedUnique(remaining.map((ref) => ref.incident_id));
+    group.updated_at = now;
+    group.related_group_ids = sortedUnique([...group.related_group_ids, options.target.group_id]);
+    await writeGroupState(options.workspaceDir, group);
+    await writeCaseMarkdown(options.workspaceDir, group);
+    await appendLineage(options.workspaceDir, group.group_id, {
+      ts: now,
+      actor: options.actor,
+      kind: "split",
+      related_group_id: options.target.group_id,
+      summary: `Moved ${before - remaining.length} alert(s) into ${options.target.group_id}.`,
+      rationale: options.rationale,
+      alert_ids: options.refs.map((ref) => ref.alert_id),
+    });
+  }
+  await writeGroupState(options.workspaceDir, options.target);
+  await writeCaseMarkdown(options.workspaceDir, options.target);
+  if (consumedGroupIds.length === 0) return;
+  const matchRules = await loadMatchRules(options.workspaceDir);
+  let changedRules = false;
+  for (const rule of matchRules) {
+    if (rule.status !== "active" || !rule.target_group_id || !consumedGroupIds.includes(rule.target_group_id)) continue;
+    rule.status = "redirect";
+    rule.target_group_id = options.target.group_id;
+    rule.reason = "merged";
+    rule.rationale = options.rationale;
+    changedRules = true;
+  }
+  if (changedRules) await writeMatchRules(options.workspaceDir, matchRules);
+}
+
+function refKey(ref: AlertRef): string {
+  return `${ref.incident_id}::${ref.alert_id}`;
+}
+
+function alertKey(alert: AlertFact): string {
+  return `${alert.incident_id}::${alert.alert_id}`;
+}
+
+function dedupeMatchRules(rules: MatchRule[]): MatchRule[] {
+  const byKey = new Map<string, MatchRule>();
+  for (const rule of rules) byKey.set(rule.match_key, rule);
+  return [...byKey.values()].sort((a, b) => a.match_key.localeCompare(b.match_key));
+}
+
+function groupDate(alert: AlertFact): string {
+  const date = alert.created_at.match(/^(\d{4})-(\d{2})-(\d{2})/) ?? [];
+  if (date[1] && date[2] && date[3]) return `${date[1].slice(2)}${date[2]}${date[3]}`;
+  const parsed = new Date(alert.created_at);
+  if (!Number.isNaN(parsed.getTime())) return parsed.toISOString().slice(2, 10).replaceAll("-", "");
+  return new Date().toISOString().slice(2, 10).replaceAll("-", "");
+}
+
+function agentGroupIdBase(alerts: AlertFact[], title: string): string {
+  const first = [...alerts].sort((a, b) => a.created_at.localeCompare(b.created_at))[0]!;
+  const orgs = sortedUnique(alerts.map((alert) => alert.org_id || alert.org_id_numeric || "unknown_org"));
+  const org = orgs.length === 1 ? orgs[0]! : "mixed_org";
+  return [groupDate(first), groupOrgPart(org), groupIdPart(title)].join("-");
+}
+
+function uniqueGroupId(base: string, existingGroupIds: string[]): string {
+  const existing = new Set(existingGroupIds);
+  if (!existing.has(base)) return base;
+  for (let idx = 2; ; idx++) {
+    const candidate = `${base}-${String(idx).padStart(2, "0")}`;
+    if (!existing.has(candidate)) return candidate;
+  }
+}
+
+function groupIdPart(input: string): string {
+  return input
+    .toLowerCase()
+    .replaceAll("_", "-")
+    .replace(/[^a-z0-9-]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .replace(/-+/g, "-")
+    .slice(0, 80) || "unknown";
+}
+
+function groupOrgPart(input: string): string {
+  return input
+    .toLowerCase()
+    .replace(/[^a-z0-9_]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .replace(/-+/g, "-")
+    .slice(0, 80) || "unknown_org";
+}
+
+function stateOrClassFor(alert: AlertFact): string {
+  const stateClass = stateFailureClass(alert);
+  if (stateClass) return stateClass;
+  if (/0 successfull?_exports/i.test(alert.summary)) return "zero-success";
+  if (/audience export failure|signalroute export failure/i.test(alert.summary)) return "client-sent-export-failure";
+  return slug(alert.error_signature || alert.summary).replaceAll("_", "-").slice(0, 48) || "alert";
+}
+
+function groupingParts(alert: AlertFact): { failureClass: string; destination?: string } {
+  const failureClass = stateOrClassFor(alert);
+  const destination = alert.destination_product || alert.destination_type || destinationFromRun(alert.export_run_id);
+  const includeDestination = Boolean(destination && (failureClass === "export-error" || failureClass === "export-processing"));
+  if (includeDestination && destination) return { failureClass, destination };
+  return { failureClass };
+}
+
+function stateFailureClass(alert: AlertFact): string | undefined {
+  if (alert.state_tuple?.snapshotting && alert.state_tuple.snapshotting !== "snapshotting_finished") {
+    return alert.state_tuple.snapshotting.replace(/^snapshotting_/, "snapshotting-").replaceAll("_", "-");
+  }
+  if (alert.state_tuple?.export === "export_error") return "export-error";
+  if (alert.state_tuple?.export === "export_processing") return "export-processing";
+  if (alert.state_tuple?.export) return alert.state_tuple.export.replaceAll("_", "-");
+  if (alert.state_tuple?.snapshotting) return alert.state_tuple.snapshotting.replace(/^snapshotting_/, "snapshotting-").replaceAll("_", "-");
+  return undefined;
 }
 
 async function writeCaseMarkdown(workspaceDir: string, group: GroupState): Promise<void> {
@@ -506,6 +1018,7 @@ function renderIndex(index: WorkspaceIndex): string {
     "",
     `Generated: ${index.generated_at}`,
     `Open groups: ${index.open_count}`,
+    `Alert facts: ${index.alert_count ?? 0}`,
     "",
     "| State | Tags | Group | Summary | Incidents | Alerts |",
     "|---|---|---|---|---|---:|",
@@ -517,6 +1030,48 @@ function renderIndex(index: WorkspaceIndex): string {
   }
   lines.push("");
   return lines.join("\n");
+}
+
+function indexAlertFact(alert: AlertFact): IndexAlertFact {
+  return {
+    incident_id: alert.incident_id,
+    alert_id: alert.alert_id,
+    created_at: alert.created_at,
+    summary: alert.summary,
+    ...(alert.org_id ? { org_id: alert.org_id } : {}),
+    ...(alert.audience_id ? { audience_id: alert.audience_id } : {}),
+    ...(alert.destination_type ? { destination_type: alert.destination_type } : {}),
+    ...(alert.destination_product ? { destination_product: alert.destination_product } : {}),
+    ...(alert.endpoint_id ? { endpoint_id: alert.endpoint_id } : {}),
+    ...(alert.state_tuple ? { state_tuple: alert.state_tuple } : {}),
+    ...(alert.checked_export_run_ids ? { checked_export_run_ids: alert.checked_export_run_ids } : {}),
+  };
+}
+
+function renderJsonl(values: unknown[]): string {
+  return values.map((value) => JSON.stringify(value)).join("\n") + (values.length > 0 ? "\n" : "");
+}
+
+async function firstExistingFile(files: string[]): Promise<string | undefined> {
+  for (const file of files) {
+    try {
+      await readFile(file, "utf8");
+      return file;
+    } catch (err) {
+      if ((err as NodeJS.ErrnoException).code !== "ENOENT") throw err;
+    }
+  }
+  return undefined;
+}
+
+async function parseAlertsFromRawIfPresent(rawFile: string, incidentId: string): Promise<AlertFact[] | undefined> {
+  try {
+    const raw = await readFile(rawFile, "utf8");
+    return parseAlertFacts(raw, incidentId);
+  } catch (err) {
+    if ((err as NodeJS.ErrnoException).code === "ENOENT") return undefined;
+    throw err;
+  }
 }
 
 function stateRank(state: GroupState["state"]): number {

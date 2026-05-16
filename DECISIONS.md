@@ -15,3 +15,15 @@
 - Structural mutations go through the CLI; narrative files and artifacts may be edited directly.
 - Merged groups act as deterministic-key redirects to their live target when future matching alerts arrive.
 - `sync-pd` refreshes stored PagerDuty incident records and can close a group when all attached incidents are resolved externally, tagging it `resolved:pd_closed_external`.
+- v2 grouping starts from immutable alert facts. Groups are loose operational workspaces over those facts, not the canonical taxonomy.
+- Parsed alert facts are versioned derived facts; raw PagerDuty text remains immutable and parsed versions may be regenerated without rewriting history.
+- Import must validate PagerDuty wrapper alert counts before grouping. Count mismatches fail by default, with an explicit partial-import escape hatch.
+- Initial grouping is alert-first. Incident titles may enrich display or low-confidence hints, but they are not deterministic matching inputs.
+- Evidence-led grouping uses append-only alert annotations: agents run archived tagger scripts, the framework captures per-alert output, and `group --tag` promotes only tagged alerts into a durable group.
+- A single PagerDuty alert may produce destination-scoped child facts when multiple checked run IDs prove multiple destinations; the parent PagerDuty alert remains immutable.
+- Group IDs use `YYMMDD-<org_identifier>-<something>`, where `<org_identifier>` includes the numeric suffix such as `abc_123`. The date is fixed from the earliest parsed PagerDuty alert in the group at creation time and does not change later.
+- Initial groups are incident-local root-cause hypotheses, usually `YYMMDD-<org_identifier>-<failure-class>`. Destination is included only for export-specific classes such as `export-error` and `export-processing`.
+- Cross-audience similarities, cohorts, and related groups are generated query/index views unless an agent explicitly records a relationship or merge.
+- Match rules are the single model for active deterministic keys, aliases, redirects, and ambiguous split keys.
+- Structural group mutations should append events while retaining `state.json` as a materialized convenience snapshot.
+- Grouping must not consume legacy collapsed wrapper facts. If `alerts.v2.jsonl` is absent, the tool reparses `alerts.raw.txt` before falling back to legacy `alerts.jsonl`.

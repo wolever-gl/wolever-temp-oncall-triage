@@ -1,0 +1,40 @@
+Alerts (4)
+----------------
+1. Q10GUO0WFWZCAO | triggered | 2026-05-14T08:08:33-07:00
+   untrusted_message: "trumanshow (Travel): Exports for audience 36293 failed with states: <(snapshotting_finished,no_batches)>"
+   audience_id: "36293"
+   web_app_url: "https://app.flywheelsoftware.com/v2/dataset_groups/6190/audiences/36293?impersonate_user_id=913&impersonate_team_id=856"
+   checked_export_run_ids: "36293-personalization_api_22146-webapp__2026-05-13T00:37:15+00:00"
+   glcli: glcli --env prod bifrost pizza --audience-id 36293 --org-id 336
+   logs: "https://console.cloud.google.com/logs/query;query=resource.type%3D%22k8s_container%22%0A%0AjsonPayload.organization_id%3D%22trumanshow_336%22%0AjsonPayload.internal_audience_id%3D%2236293%22%0A%0A;summaryFields=jsonPayload%252Fbatch_id:false:32:beginning;timeRange=2026-05-14T14:58:32Z%2F2026-05-14T15:18:32Z?project=flywheel-prod-328213"
+2. Q05NTDX4NQ1HYU | triggered | 2026-05-14T08:08:31-07:00
+   untrusted_message: "trumanshow (VZN): Exports for audience 36199 failed with states: <(snapshotting_finished,export_error)>"
+   audience_id: "36199"
+   web_app_url: "https://app.flywheelsoftware.com/v2/dataset_groups/6110/audiences/36199?impersonate_user_id=90&impersonate_team_id=837"
+   endpoint_id: "app_adobe_experience_platform_2175"
+   checked_export_run_ids: "36199-adobe_experience_platform_22089-webapp__2026-05-08T13:13:49+00:00, 36199-adobe_experience_platform_22089-webapp__2026-05-08T13:13:49+00:00"
+   glcli: glcli --env prod bifrost pizza --audience-id 36199 --org-id 336
+   logs: "https://console.cloud.google.com/logs/query;query=resource.type%3D%22k8s_container%22%0A%0AjsonPayload.organization_id%3D%22trumanshow_336%22%0AjsonPayload.internal_audience_id%3D%2236199%22%0A%0A;summaryFields=jsonPayload%252Fbatch_id:false:32:beginning;timeRange=2026-05-14T14:58:30Z%2F2026-05-14T15:18:30Z?project=flywheel-prod-328213"
+3. Q2PYTEEB639Q4I | triggered | 2026-05-14T08:08:29-07:00
+   untrusted_message: "trumanshow (Retail & CPG): Exports for audience 35392 failed with states: <(snapshotting_finished,no_batches)>"
+   audience_id: "35392"
+   web_app_url: "https://app.flywheelsoftware.com/v2/dataset_groups/1338/audiences/35392?impersonate_user_id=90&impersonate_team_id=420"
+   checked_export_run_ids: "35392-iterable_21441-scheduled__2026-05-14T00:00:00+00:00"
+   glcli: glcli --env prod bifrost pizza --audience-id 35392 --org-id 336
+   logs: "https://console.cloud.google.com/logs/query;query=resource.type%3D%22k8s_container%22%0A%0AjsonPayload.organization_id%3D%22trumanshow_336%22%0AjsonPayload.internal_audience_id%3D%2235392%22%0A%0A;summaryFields=jsonPayload%252Fbatch_id:false:32:beginning;timeRange=2026-05-14T14:58:28Z%2F2026-05-14T15:18:28Z?project=flywheel-prod-328213"
+4. Q3GVOV55Z30Y4R | triggered | 2026-05-13T17:18:48-07:00
+   untrusted_message: "trumanshow (Retail & CPG) - Audience 35783: Audience Export failure for 35783 sent to client."
+   audience_id: "35783"
+   audience_url: "https://app.flywheelsoftware.com/v2/dataset_groups/6058/audiences/35783?impersonate_user_id=90&impersonate_team_id=420"
+   glcli: glcli --env prod bifrost pizza --audience-id 35783 --org-id 336
+
+Deduped glcli commands by audience
+-----------------------------------
+audience_id 36293:
+  glcli --env prod bifrost pizza --audience-id 36293 --org-id 336
+audience_id 36199:
+  glcli --env prod bifrost pizza --audience-id 36199 --org-id 336
+audience_id 35392:
+  glcli --env prod bifrost pizza --audience-id 35392 --org-id 336
+audience_id 35783:
+  glcli --env prod bifrost pizza --audience-id 35783 --org-id 336

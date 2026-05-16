@@ -1,0 +1,23 @@
+{
+  "group_id": "260514-trumanshow_336-adobe-experience-platform-export-error",
+  "state": "open",
+  "tags": [
+    "triage:needs_review"
+  ],
+  "title": "trumanshow_336 adobe-experience-platform export-error",
+  "summary": "trumanshow (VZN): Exports for audience 36199 failed with states: <(snapshotting_finished,export_error)>",
+  "deterministic_key": "v3|incident:Q12A5QFIM3F9LN|org:trumanshow_336|dest:adobe-experience-platform|class:export-error",
+  "grouping_version": 3,
+  "created_at": "2026-05-16T00:38:01.850Z",
+  "updated_at": "2026-05-16T00:38:01.850Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q12A5QFIM3F9LN",
+      "alert_id": "Q05NTDX4NQ1HYU"
+    }
+  ],
+  "incident_ids": [
+    "Q12A5QFIM3F9LN"
+  ],
+  "related_group_ids": []
+}

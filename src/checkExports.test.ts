@@ -1,0 +1,138 @@
+import { describe, expect, test } from "bun:test";
+import { mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
+import { tmpdir } from "node:os";
+import path from "node:path";
+import { checkExportsWorkspace, loadAllExportChecks } from "./checkExports";
+import { importPagerDutyIncident } from "./workspace";
+import type { PizzaExportRow } from "./schema";
+
+const fixture = path.resolve(import.meta.dir, "..", "fixtures", "pagerduty-alerts.json");
+
+describe("check-exports", () => {
+  test("derives export checks and proposes local closure from exact healthy run evidence", async () => {
+    const workspaceDir = await mkdtemp(path.join(tmpdir(), "oncall-triage-v2-"));
+    try {
+      await importPagerDutyIncident({ workspaceDir, incident: "QTEST123", alertsFile: fixture });
+      const rows: PizzaExportRow[] = [
+        healthyRow("16985-marketing_cloud_10988-scheduled__2026-05-15T16:00:00+00:00", "16985"),
+        healthyRow("20770-marketing_cloud_10988-scheduled__2026-05-15T16:00:00+00:00", "20770"),
+      ];
+
+      const result = await checkExportsWorkspace({
+        workspaceDir,
+        now: new Date("2026-05-15T17:00:00Z"),
+        fetchPizzaRows: async () => rows,
+      });
+
+      expect(result.derived).toBe(3);
+      expect(result.evaluated).toBe(3);
+      expect(result.healthy_closed).toBe(0);
+
+      const checks = await loadAllExportChecks(workspaceDir);
+      expect(checks).toHaveLength(3);
+      expect(checks.every((check) => check.proposed_state === "healthy_closed")).toBe(true);
+      expect(checks.every((check) => check.state === "open")).toBe(true);
+      expect(checks[0]?.run_evaluations[0]?.health).toBe("healthy");
+    } finally {
+      await rm(workspaceDir, { recursive: true, force: true });
+    }
+  });
+
+  test("--apply closes checks locally when all exact runs are healthy", async () => {
+    const workspaceDir = await mkdtemp(path.join(tmpdir(), "oncall-triage-v2-"));
+    try {
+      await importPagerDutyIncident({ workspaceDir, incident: "QTEST123", alertsFile: fixture });
+      const rows: PizzaExportRow[] = [
+        healthyRow("16985-marketing_cloud_10988-scheduled__2026-05-15T16:00:00+00:00", "16985"),
+        healthyRow("20770-marketing_cloud_10988-scheduled__2026-05-15T16:00:00+00:00", "20770"),
+      ];
+
+      const result = await checkExportsWorkspace({
+        workspaceDir,
+        apply: true,
+        now: new Date("2026-05-15T17:00:00Z"),
+        fetchPizzaRows: async () => rows,
+      });
+
+      expect(result.healthy_closed).toBe(3);
+      const checks = await loadAllExportChecks(workspaceDir);
+      expect(checks.every((check) => check.state === "healthy_closed")).toBe(true);
+      expect(checks.every((check) => check.closed_at === "2026-05-15T17:00:00.000Z")).toBe(true);
+    } finally {
+      await rm(workspaceDir, { recursive: true, force: true });
+    }
+  });
+
+  test("blocks snapshotting errors and missing run identity", async () => {
+    const workspaceDir = await mkdtemp(path.join(tmpdir(), "oncall-triage-v2-"));
+    try {
+      const alertsFile = path.join(workspaceDir, "alerts.json");
+      await writeFile(
+        alertsFile,
+        JSON.stringify([
+          {
+            id: "PERR",
+            created_at: "2026-05-15T16:05:00Z",
+            summary: "Exports for audience 16985 failed with states: <(snapshotting_error,no_batches)>",
+            details: {
+              org_id: "chghealthcare_395",
+              org_id_numeric: "395",
+              audience_id: "16985",
+              endpoint_id: "marketing_cloud_10988",
+              checked_export_run_ids: "16985-marketing_cloud_10988-scheduled__2026-05-15T16:00:00+00:00",
+              glcli: "glcli --env prod bifrost pizza --org-id 395 --audience-id 16985",
+            },
+          },
+          {
+            id: "PNORUN",
+            created_at: "2026-05-15T16:06:00Z",
+            summary: "Audience 20770 has zero successful exports",
+            details: {
+              org_id_numeric: "395",
+              audience_id: "20770",
+              glcli: "glcli --env prod bifrost pizza --audience-id 20770 --org-id 395",
+            },
+          },
+        ]),
+      );
+      await importPagerDutyIncident({ workspaceDir, incident: "QTEST999", alertsFile });
+
+      await checkExportsWorkspace({
+        workspaceDir,
+        apply: true,
+        now: new Date("2026-05-15T17:00:00Z"),
+        fetchPizzaRows: async () => [
+          {
+            export_run_id: "16985-marketing_cloud_10988-scheduled__2026-05-15T16:00:00+00:00",
+            audience_id: "16985",
+            destination_type: "marketing_cloud",
+            snapshotting_state: "snapshotting_error",
+            export_state: "no_batches",
+            failed_export_count: 0,
+          },
+        ],
+      });
+
+      const checks = await loadAllExportChecks(workspaceDir);
+      expect(checks).toHaveLength(2);
+      expect(checks.find((check) => check.alert_id === "PERR")?.blockers).toContain("snapshotting_error_requires_review");
+      expect(checks.find((check) => check.alert_id === "PNORUN")?.blockers).toContain("missing_run_identity");
+
+      const index = await readFile(path.join(workspaceDir, "indexes", "checks.json"), "utf8");
+      expect(index).toContain("snapshotting_error_requires_review");
+    } finally {
+      await rm(workspaceDir, { recursive: true, force: true });
+    }
+  });
+});
+
+function healthyRow(export_run_id: string, audience_id: string): PizzaExportRow {
+  return {
+    export_run_id,
+    audience_id,
+    destination_type: "marketing_cloud",
+    snapshotting_state: "snapshotting_finished",
+    export_state: "export_finished",
+    failed_export_count: 0,
+  };
+}

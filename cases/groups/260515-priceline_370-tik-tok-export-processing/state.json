@@ -1,0 +1,23 @@
+{
+  "group_id": "260515-priceline_370-tik-tok-export-processing",
+  "state": "open",
+  "tags": [
+    "triage:needs_review"
+  ],
+  "title": "priceline_370 tik-tok export-processing",
+  "summary": "priceline (default): Exports for audience 18623 failed with states: <(snapshotting_finished,export_processing)>",
+  "deterministic_key": "v3|incident:Q0X2D8TR82ZQV9|org:priceline_370|dest:tik-tok|class:export-processing",
+  "grouping_version": 3,
+  "created_at": "2026-05-16T00:38:01.850Z",
+  "updated_at": "2026-05-16T00:38:01.850Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q0X2D8TR82ZQV9",
+      "alert_id": "Q0JCB7G5H5G6U4"
+    }
+  ],
+  "incident_ids": [
+    "Q0X2D8TR82ZQV9"
+  ],
+  "related_group_ids": []
+}

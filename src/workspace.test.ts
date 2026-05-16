@@ -2,7 +2,7 @@ import { describe, expect, test } from "bun:test";
 import { mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import path from "node:path";
-import { groupImportedAlerts, importPagerDutyIncident, loadAllGroups, mergeGroups, readIncidentRecord, regenerateIndex, splitGroup, syncPagerDutyWorkspace, transitionGroup } from "./workspace";
+import { groupImportedAlerts, groupTaggedAlerts, importPagerDutyIncident, loadAllGroups, loadMatchRules, mergeGroups, queryAlertFacts, readIncidentRecord, regenerateIndex, runAlertTagger, splitGroup, syncPagerDutyWorkspace, transitionGroup } from "./workspace";
 import type { PagerDutyIncidentStatusRecord } from "./pagerduty";
 
 const fixture = path.resolve(import.meta.dir, "..", "fixtures", "pagerduty-alerts.json");
@@ -13,19 +13,101 @@ describe("case workspace", () => {
     try {
       const imported = await importPagerDutyIncident({ workspaceDir, incident: "QTEST123", alertsFile: fixture });
       expect(imported).toEqual({ incident_id: "QTEST123", alert_count: 3 });
+      const versionedFacts = await readFile(path.join(workspaceDir, "incidents", "QTEST123", "alerts.v2.jsonl"), "utf8");
+      expect(versionedFacts.trim().split("\n")).toHaveLength(3);
 
       const grouped = await groupImportedAlerts(workspaceDir);
-      expect(grouped.created).toBe(2);
-      expect(grouped.attached).toBe(1);
+      expect(grouped.created).toBe(1);
+      expect(grouped.attached).toBe(2);
 
       const groups = await loadAllGroups(workspaceDir);
-      expect(groups).toHaveLength(2);
-      expect(groups.find((group) => group.alert_refs.length === 2)?.tags).toContain("triage:needs_review");
+      expect(groups).toHaveLength(1);
+      expect(groups[0]?.alert_refs).toHaveLength(3);
+      expect(groups[0]?.tags).toContain("triage:needs_review");
+      expect(groups.map((group) => group.group_id).sort()).toEqual([
+        "260515-chghealthcare_395-client-sent-export-failure",
+      ]);
+      const matchRules = await loadMatchRules(workspaceDir);
+      expect(matchRules).toHaveLength(1);
+      expect(matchRules.every((rule) => rule.status === "active")).toBe(true);
 
       const index = await regenerateIndex(workspaceDir);
-      expect(index.open_count).toBe(2);
+      expect(index.open_count).toBe(1);
+      expect(index.alert_count).toBe(3);
+      const alertIndex = await readFile(path.join(workspaceDir, "indexes", "alert_facts.json"), "utf8");
+      expect(alertIndex).toContain("16985");
       const indexMd = await readFile(path.join(workspaceDir, "index.md"), "utf8");
       expect(indexMd).toContain("On-call Triage Cases");
+    } finally {
+      await rm(workspaceDir, { recursive: true, force: true });
+    }
+  });
+
+  test("queries alert facts across groups", async () => {
+    const workspaceDir = await mkdtemp(path.join(tmpdir(), "oncall-triage-v2-"));
+    try {
+      await importPagerDutyIncident({ workspaceDir, incident: "QTEST123", alertsFile: fixture });
+      await groupImportedAlerts(workspaceDir);
+
+      const alerts = await queryAlertFacts(workspaceDir, { orgId: "chghealthcare_395", audienceId: "16985" });
+      expect(alerts).toHaveLength(2);
+      expect(alerts.map((alert) => alert.alert_id).sort()).toEqual(["PALT1", "PALT2"]);
+    } finally {
+      await rm(workspaceDir, { recursive: true, force: true });
+    }
+  });
+
+  test("tags alerts with a script and groups by tag", async () => {
+    const workspaceDir = await mkdtemp(path.join(tmpdir(), "oncall-triage-v2-"));
+    try {
+      await importPagerDutyIncident({ workspaceDir, incident: "QTEST123", alertsFile: fixture });
+      await importPagerDutyIncident({ workspaceDir, incident: "QTEST456", alertsFile: fixture });
+      await groupImportedAlerts(workspaceDir);
+      const tagger = path.join(workspaceDir, "tagger.ts");
+      await writeFile(
+        tagger,
+        `const alertPath = process.argv[process.argv.indexOf("--alert") + 1];
+const alert = await Bun.file(alertPath).json();
+console.log(JSON.stringify({
+  decision: alert.org_id === "chghealthcare_395" ? "tag" : "skip",
+  tags: ["evidence:retry-succeeded"],
+  confidence: "high",
+  summary: "Fixture tagger matched chghealthcare alert."
+}));
+`,
+      );
+
+      const tagged = await runAlertTagger({
+        workspaceDir,
+        filters: { orgId: "chghealthcare_395" },
+        scriptPath: tagger,
+        tags: ["waiting:uploads"],
+      });
+      expect(tagged.candidates).toBe(6);
+      expect(tagged.tagged).toBe(6);
+
+      const grouped = await groupTaggedAlerts({
+        title: "Marketing Cloud retry succeeded",
+        summary: "These alerts share confirmed recovery evidence and can be tracked together.",
+        rationale: "Agent verified common recovery evidence across the queried alerts.",
+        tags: ["evidence:retry-succeeded", "waiting:uploads"],
+        state: "monitoring",
+        groupTags: ["waiting:uploads"],
+        workspaceDir,
+      });
+
+      expect(grouped.group.group_id).toBe("260515-chghealthcare_395-marketing-cloud-retry-succeeded");
+      expect(grouped.group.alert_refs).toHaveLength(6);
+      expect(grouped.group.incident_ids).toEqual(["QTEST123", "QTEST456"]);
+      expect(grouped.group.tags).toContain("triage:tag_grouped");
+      expect(grouped.group.tags).toContain("waiting:uploads");
+
+      const groups = await loadAllGroups(workspaceDir);
+      expect(groups.map((group) => group.group_id)).toEqual([grouped.group.group_id]);
+      const decisions = await readFile(path.join(workspaceDir, "groups", grouped.group.group_id, "decisions.jsonl"), "utf8");
+      expect(decisions).toContain("created_group_from_tags");
+      const matchRules = await loadMatchRules(workspaceDir);
+      expect(matchRules.every((rule) => rule.status === "redirect" && rule.target_group_id === grouped.group.group_id)).toBe(true);
     } finally {
       await rm(workspaceDir, { recursive: true, force: true });
     }
@@ -59,6 +141,7 @@ describe("case workspace", () => {
     const workspaceDir = await mkdtemp(path.join(tmpdir(), "oncall-triage-v2-"));
     try {
       await importPagerDutyIncident({ workspaceDir, incident: "QTEST123", alertsFile: fixture });
+      await importPagerDutyIncident({ workspaceDir, incident: "QTEST456", alertsFile: fixture });
       const grouped = await groupImportedAlerts(workspaceDir);
       const sourceGroupId = grouped.groups[0]!;
       const targetGroupId = grouped.groups[1]!;
@@ -73,8 +156,8 @@ describe("case workspace", () => {
       expect(result.source.state).toBe("resolved");
       expect(result.source.tags).toContain("resolved:merged");
       expect(result.source.next_action).toContain(targetGroupId);
-      expect(result.target.alert_refs).toHaveLength(3);
-      expect(result.target.incident_ids).toEqual(["QTEST123"]);
+      expect(result.target.alert_refs).toHaveLength(6);
+      expect(result.target.incident_ids).toEqual(["QTEST123", "QTEST456"]);
 
       const sourceLineage = await readFile(path.join(workspaceDir, "groups", sourceGroupId, "lineage.jsonl"), "utf8");
       const targetLineage = await readFile(path.join(workspaceDir, "groups", targetGroupId, "lineage.jsonl"), "utf8");
@@ -92,6 +175,7 @@ describe("case workspace", () => {
     const workspaceDir = await mkdtemp(path.join(tmpdir(), "oncall-triage-v2-"));
     try {
       await importPagerDutyIncident({ workspaceDir, incident: "QTEST123", alertsFile: fixture });
+      await importPagerDutyIncident({ workspaceDir, incident: "QTEST456", alertsFile: fixture });
       const grouped = await groupImportedAlerts(workspaceDir);
       const sourceGroupId = grouped.groups[0]!;
       const targetGroupId = grouped.groups[1]!;
@@ -125,17 +209,19 @@ describe("case workspace", () => {
         ]),
       );
 
-      await importPagerDutyIncident({ workspaceDir, incident: "QREDIR1", alertsFile: redirectFixture });
+      await importPagerDutyIncident({ workspaceDir, incident: "QTEST123", alertsFile: redirectFixture });
       const regrouped = await groupImportedAlerts(workspaceDir);
       const groups = await loadAllGroups(workspaceDir);
       const source = groups.find((group) => group.group_id === sourceGroupId);
       const target = groups.find((group) => group.group_id === targetGroupId);
+      const matchRules = await loadMatchRules(workspaceDir);
 
       expect(regrouped.created).toBe(0);
       expect(regrouped.attached).toBe(1);
       expect(regrouped.groups).toEqual([targetGroupId]);
-      expect(source?.alert_refs).toHaveLength(2);
-      expect(target?.alert_refs).toHaveLength(4);
+      expect(source?.alert_refs).toHaveLength(3);
+      expect(target?.alert_refs).toHaveLength(7);
+      expect(matchRules.some((rule) => rule.status === "redirect" && rule.target_group_id === targetGroupId)).toBe(true);
     } finally {
       await rm(workspaceDir, { recursive: true, force: true });
     }
@@ -147,7 +233,7 @@ describe("case workspace", () => {
       await importPagerDutyIncident({ workspaceDir, incident: "QTEST123", alertsFile: fixture });
       await groupImportedAlerts(workspaceDir);
       const groups = await loadAllGroups(workspaceDir);
-      const source = groups.find((group) => group.alert_refs.length === 2);
+      const source = groups.find((group) => group.alert_refs.length === 3);
       expect(source).toBeDefined();
       const alertId = source!.alert_refs[0]!.alert_id;
 
@@ -158,7 +244,7 @@ describe("case workspace", () => {
         rationale: "One alert needs to stand on its own.",
       });
 
-      expect(result.source.alert_refs).toHaveLength(1);
+      expect(result.source.alert_refs).toHaveLength(2);
       expect(result.created.alert_refs).toHaveLength(1);
       expect(result.created.summary).toBe("One alert needs to stand on its own.");
       expect(result.created.related_group_ids).toContain(source!.group_id);
@@ -169,7 +255,7 @@ describe("case workspace", () => {
       expect(createdLineage).toContain(`"kind":"split"`);
 
       const index = await regenerateIndex(workspaceDir);
-      expect(index.groups).toHaveLength(3);
+      expect(index.groups).toHaveLength(2);
     } finally {
       await rm(workspaceDir, { recursive: true, force: true });
     }

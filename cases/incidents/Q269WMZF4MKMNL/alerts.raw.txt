@@ -1,0 +1,19 @@
+Alerts (2)
+----------------
+1. Q1E9RQ6EFI68FV | triggered | 2026-05-15T14:46:08-07:00
+   untrusted_message: "albertsons (Albertsons Media) - Audience 10684: 0 successfull_exports from pizza tracker found 10 minutes after new export"
+   audience_id: "10684"
+   audience_url: "https://albertsons.growthloop.com/v2/dataset_groups/82/audiences/10684?impersonate_user_id=29&impersonate_team_id=9"
+   glcli: glcli --env albertsons bifrost pizza --audience-id 10684 --org-id 6
+2. Q0BQKJWVBSB8AY | triggered | 2026-05-15T14:25:24-07:00
+   untrusted_message: "albertsons (Albertsons Media) - Audience 10685: 0 successfull_exports from pizza tracker found 10 minutes after new export"
+   audience_id: "10685"
+   audience_url: "https://albertsons.growthloop.com/v2/dataset_groups/82/audiences/10685?impersonate_user_id=29&impersonate_team_id=9"
+   glcli: glcli --env albertsons bifrost pizza --audience-id 10685 --org-id 6
+
+Deduped glcli commands by audience
+-----------------------------------
+audience_id 10684:
+  glcli --env albertsons bifrost pizza --audience-id 10684 --org-id 6
+audience_id 10685:
+  glcli --env albertsons bifrost pizza --audience-id 10685 --org-id 6

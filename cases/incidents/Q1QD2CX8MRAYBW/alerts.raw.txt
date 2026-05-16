@@ -1,0 +1,17 @@
+Alerts (2)
+----------------
+1. Q08TXNT2TOYP3Q | triggered | 2026-05-15T08:09:23-07:00
+   untrusted_message: "Cincinnati Reds (default): Exports for signal 891 failed with states: <(snapshotting_error,no_batches)>"
+   audience_id: "891"
+   web_app_url: "https://app.flywheelsoftware.com/signal_routes/891?impersonate_user_id=1117&impersonate_team_id=478"
+   checked_export_run_ids: "891-dynamics_object_891-scheduled__2026-05-15T12:00:00+00:00, 891-dynamics_object_891-scheduled__2026-05-15T13:00:00+00:00, 891-dynamics_object_891-scheduled__2026-05-15T14:00:00+00:00"
+   glcli: glcli --env prod bifrost pizza --audience-id 891 --org-id 378
+   logs: "https://console.cloud.google.com/logs/query;query=resource.type%3D%22k8s_container%22%0A%0AjsonPayload.organization_id%3D%22cincinnatireds_378%22%0AjsonPayload.internal_audience_id%3D%22891%22%0A%0A;summaryFields=jsonPayload%252Fbatch_id:false:32:beginning;timeRange=2026-05-15T14:59:22Z%2F2026-05-15T15:19:22Z?project=flywheel-prod-328213"
+2. Q3AS52WT001FD8 | triggered | 2026-05-14T18:01:37-07:00
+   untrusted_message: "Cincinnati Reds (default) - SignalRoute 891: SignalRoute Export failure for 891 sent to client."
+   glcli: glcli --env prod bifrost pizza --audience-id 891 --org-id 378
+
+Deduped glcli commands by audience
+-----------------------------------
+audience_id 891:
+  glcli --env prod bifrost pizza --audience-id 891 --org-id 378

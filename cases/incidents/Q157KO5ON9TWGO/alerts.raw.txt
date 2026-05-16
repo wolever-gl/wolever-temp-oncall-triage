@@ -1,0 +1,89 @@
+Alerts (10)
+----------------
+1. Q1CLWH1FCYZ8JN | triggered | 2026-05-15T08:01:55-07:00
+   untrusted_message: "EVgo (default): Exports for audience 28561 failed with states: <(snapshotting_finished,no_batches)>"
+   audience_id: "28561"
+   web_app_url: "https://app.flywheelsoftware.com/v2/dataset_groups/3112/audiences/28561?impersonate_user_id=803&impersonate_team_id=529"
+   checked_export_run_ids: "28561-braze_17453-scheduled__2026-05-14T18:00:00+00:00"
+   glcli: glcli --env prod bifrost pizza --audience-id 28561 --org-id 402
+   logs: "https://console.cloud.google.com/logs/query;query=resource.type%3D%22k8s_container%22%0A%0AjsonPayload.organization_id%3D%22evgo_402%22%0AjsonPayload.internal_audience_id%3D%2228561%22%0A%0A;summaryFields=jsonPayload%252Fbatch_id:false:32:beginning;timeRange=2026-05-15T14:51:55Z%2F2026-05-15T15:11:55Z?project=flywheel-prod-328213"
+2. Q3HHTRB9TTDA8J | triggered | 2026-05-15T08:01:50-07:00
+   untrusted_message: "EVgo (EVgo Prod): Exports for audience 28448 failed with states: <(snapshotting_finished,no_batches)>"
+   audience_id: "28448"
+   web_app_url: "https://app.flywheelsoftware.com/v2/dataset_groups/2182/audiences/28448?impersonate_user_id=803&impersonate_team_id=579"
+   checked_export_run_ids: "28448-braze_17405-scheduled__2026-05-14T20:00:00+00:00"
+   glcli: glcli --env prod bifrost pizza --audience-id 28448 --org-id 402
+   logs: "https://console.cloud.google.com/logs/query;query=resource.type%3D%22k8s_container%22%0A%0AjsonPayload.organization_id%3D%22evgo_402%22%0AjsonPayload.internal_audience_id%3D%2228448%22%0A%0A;summaryFields=jsonPayload%252Fbatch_id:false:32:beginning;timeRange=2026-05-15T14:51:49Z%2F2026-05-15T15:11:49Z?project=flywheel-prod-328213"
+3. Q0T0BAGCYBEHII | triggered | 2026-05-15T08:01:33-07:00
+   untrusted_message: "EVgo (EVgo Prod): Exports for audience 27021 failed with states: <(snapshotting_finished,no_batches)>"
+   audience_id: "27021"
+   web_app_url: "https://app.flywheelsoftware.com/v2/dataset_groups/2182/audiences/27021?impersonate_user_id=803&impersonate_team_id=579"
+   checked_export_run_ids: "27021-braze_16579-scheduled__2026-05-14T22:00:00+00:00"
+   glcli: glcli --env prod bifrost pizza --audience-id 27021 --org-id 402
+   logs: "https://console.cloud.google.com/logs/query;query=resource.type%3D%22k8s_container%22%0A%0AjsonPayload.organization_id%3D%22evgo_402%22%0AjsonPayload.internal_audience_id%3D%2227021%22%0A%0A;summaryFields=jsonPayload%252Fbatch_id:false:32:beginning;timeRange=2026-05-15T14:51:33Z%2F2026-05-15T15:11:33Z?project=flywheel-prod-328213"
+4. Q237T3CPXIN2SY | triggered | 2026-05-15T08:01:20-07:00
+   untrusted_message: "EVgo (default): Exports for audience 22633 failed with states: <(snapshotting_finished,no_batches)>"
+   audience_id: "22633"
+   web_app_url: "https://app.flywheelsoftware.com/v2/dataset_groups/1998/audiences/22633?impersonate_user_id=803&impersonate_team_id=529"
+   checked_export_run_ids: "22633-braze_14199-scheduled__2026-05-14T17:00:00+00:00"
+   glcli: glcli --env prod bifrost pizza --audience-id 22633 --org-id 402
+   logs: "https://console.cloud.google.com/logs/query;query=resource.type%3D%22k8s_container%22%0A%0AjsonPayload.organization_id%3D%22evgo_402%22%0AjsonPayload.internal_audience_id%3D%2222633%22%0A%0A;summaryFields=jsonPayload%252Fbatch_id:false:32:beginning;timeRange=2026-05-15T14:51:19Z%2F2026-05-15T15:11:19Z?project=flywheel-prod-328213"
+5. Q2D1S9TLC4TWNS | triggered | 2026-05-15T08:00:11-07:00
+   untrusted_message: "EVgo (EVgo Prod): Exports for audience 15494 failed with states: <(snapshotting_finished,no_batches)>"
+   audience_id: "15494"
+   web_app_url: "https://app.flywheelsoftware.com/v2/dataset_groups/2182/audiences/15494?impersonate_user_id=803&impersonate_team_id=579"
+   checked_export_run_ids: "15494-braze_10094-scheduled__2026-05-13T00:00:00+00:00"
+   glcli: glcli --env prod bifrost pizza --audience-id 15494 --org-id 402
+   logs: "https://console.cloud.google.com/logs/query;query=resource.type%3D%22k8s_container%22%0A%0AjsonPayload.organization_id%3D%22evgo_402%22%0AjsonPayload.internal_audience_id%3D%2215494%22%0A%0A;summaryFields=jsonPayload%252Fbatch_id:false:32:beginning;timeRange=2026-05-15T14:50:11Z%2F2026-05-15T15:10:11Z?project=flywheel-prod-328213"
+6. Q3ORFM9I02A91Y | triggered | 2026-05-15T07:59:38-07:00
+   untrusted_message: "EVgo (default): Exports for audience 12517 failed with states: <(snapshotting_finished,no_batches)>"
+   audience_id: "12517"
+   web_app_url: "https://app.flywheelsoftware.com/v2/dataset_groups/2034/audiences/12517?impersonate_user_id=803&impersonate_team_id=529"
+   checked_export_run_ids: "12517-braze_8453-scheduled__2026-05-14T14:15:00+00:00"
+   glcli: glcli --env prod bifrost pizza --audience-id 12517 --org-id 402
+   logs: "https://console.cloud.google.com/logs/query;query=resource.type%3D%22k8s_container%22%0A%0AjsonPayload.organization_id%3D%22evgo_402%22%0AjsonPayload.internal_audience_id%3D%2212517%22%0A%0A;summaryFields=jsonPayload%252Fbatch_id:false:32:beginning;timeRange=2026-05-15T14:49:37Z%2F2026-05-15T15:09:37Z?project=flywheel-prod-328213"
+7. Q3Q035J0UOBMIC | triggered | 2026-05-15T07:59:31-07:00
+   untrusted_message: "EVgo (default): Exports for audience 12515 failed with states: <(snapshotting_finished,no_batches)>"
+   audience_id: "12515"
+   web_app_url: "https://app.flywheelsoftware.com/v2/dataset_groups/2036/audiences/12515?impersonate_user_id=803&impersonate_team_id=529"
+   checked_export_run_ids: "12515-braze_8451-scheduled__2026-05-14T18:30:00+00:00"
+   glcli: glcli --env prod bifrost pizza --audience-id 12515 --org-id 402
+   logs: "https://console.cloud.google.com/logs/query;query=resource.type%3D%22k8s_container%22%0A%0AjsonPayload.organization_id%3D%22evgo_402%22%0AjsonPayload.internal_audience_id%3D%2212515%22%0A%0A;summaryFields=jsonPayload%252Fbatch_id:false:32:beginning;timeRange=2026-05-15T14:49:31Z%2F2026-05-15T15:09:31Z?project=flywheel-prod-328213"
+8. Q0WBQIUFYSLK0N | triggered | 2026-05-15T07:59:21-07:00
+   untrusted_message: "EVgo (default): Exports for audience 12439 failed with states: <(snapshotting_finished,no_batches)>"
+   audience_id: "12439"
+   web_app_url: "https://app.flywheelsoftware.com/v2/dataset_groups/2017/audiences/12439?impersonate_user_id=803&impersonate_team_id=529"
+   checked_export_run_ids: "12439-braze_8406-scheduled__2026-05-14T16:00:00+00:00"
+   glcli: glcli --env prod bifrost pizza --audience-id 12439 --org-id 402
+   logs: "https://console.cloud.google.com/logs/query;query=resource.type%3D%22k8s_container%22%0A%0AjsonPayload.organization_id%3D%22evgo_402%22%0AjsonPayload.internal_audience_id%3D%2212439%22%0A%0A;summaryFields=jsonPayload%252Fbatch_id:false:32:beginning;timeRange=2026-05-15T14:49:20Z%2F2026-05-15T15:09:20Z?project=flywheel-prod-328213"
+9. Q23QRTJVMEZ4QW | triggered | 2026-05-15T07:59:13-07:00
+   untrusted_message: "EVgo (default): Exports for audience 12438 failed with states: <(snapshotting_finished,no_batches)>"
+   audience_id: "12438"
+   web_app_url: "https://app.flywheelsoftware.com/v2/dataset_groups/1995/audiences/12438?impersonate_user_id=803&impersonate_team_id=529"
+   checked_export_run_ids: "12438-braze_8405-scheduled__2026-05-14T14:30:00+00:00"
+   glcli: glcli --env prod bifrost pizza --audience-id 12438 --org-id 402
+   logs: "https://console.cloud.google.com/logs/query;query=resource.type%3D%22k8s_container%22%0A%0AjsonPayload.organization_id%3D%22evgo_402%22%0AjsonPayload.internal_audience_id%3D%2212438%22%0A%0A;summaryFields=jsonPayload%252Fbatch_id:false:32:beginning;timeRange=2026-05-15T14:49:12Z%2F2026-05-15T15:09:12Z?project=flywheel-prod-328213"
+10. Q08OE2LVF6XGMU | triggered | 2026-05-14T21:16:41-07:00
+   untrusted_message: "EVgo (default) - SignalRoute 373: SignalRoute Export failure for 373 sent to client."
+   glcli: glcli --env prod bifrost pizza --audience-id 373 --org-id 402
+
+Deduped glcli commands by audience
+-----------------------------------
+audience_id 28561:
+  glcli --env prod bifrost pizza --audience-id 28561 --org-id 402
+audience_id 28448:
+  glcli --env prod bifrost pizza --audience-id 28448 --org-id 402
+audience_id 27021:
+  glcli --env prod bifrost pizza --audience-id 27021 --org-id 402
+audience_id 22633:
+  glcli --env prod bifrost pizza --audience-id 22633 --org-id 402
+audience_id 15494:
+  glcli --env prod bifrost pizza --audience-id 15494 --org-id 402
+audience_id 12517:
+  glcli --env prod bifrost pizza --audience-id 12517 --org-id 402
+audience_id 12515:
+  glcli --env prod bifrost pizza --audience-id 12515 --org-id 402
+audience_id 12439:
+  glcli --env prod bifrost pizza --audience-id 12439 --org-id 402
+audience_id 12438:
+  glcli --env prod bifrost pizza --audience-id 12438 --org-id 402
