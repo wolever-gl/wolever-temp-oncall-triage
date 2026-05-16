@@ -4,14 +4,14 @@
 
 > Generated file. Do not edit directly; put free-form investigation notes in `notes.md`.
 
-State: `open`
-Tags: `triage:needs_review`
+State: `resolved`
+Tags: `triage:needs_review`, `resolved:merged`
 Incidents: [Q1QD2CX8MRAYBW](https://growthloop.pagerduty.com/incidents/Q1QD2CX8MRAYBW)
 Alerts: 1
 
 ## Current Summary
 
-Cincinnati Reds (default) - SignalRoute 891: SignalRoute Export failure for 891 sent to client.
+Merged into 260515-378-snapshotting-error: Client-sent SignalRoute 891 alert is the notification counterpart of the active Cincinnati Reds snapshotting-error case for the same incident/org/audience; fresh preflight still shows the latest same-scope run blocked by snapshotting_error_requires_review.
 
 ## Alert Scope
 
@@ -29,17 +29,18 @@ Representative alerts:
 
 - Checks: 1.
 - States: `blocked`=1
-- Blockers seen: `missing_run_identity`
+- Blockers seen: `snapshotting_error_requires_review`
 
 Check evidence:
 - chk_q1qd2cx8mraybw_q3as52wt001fd8 (Q1QD2CX8MRAYBW/Q3AS52WT001FD8): state=`blocked`.
   Scope: env=prod; org=378; audience=891.
   Command: `glcli --env prod bifrost pizza --audience-id 891 --org-id 378`
-  Blockers: `missing_run_identity`
+  Blockers: `snapshotting_error_requires_review`
+  Run 891-dynamics_object_891-scheduled__2026-05-16T22:00:00+00:00: health=`blocked`; blockers=snapshotting_error_requires_review; created=2026-05-16T23:01:35.303004+00:00; snapshotting=snapshotting_error; export=no_batches; failed=0.
 
 ## Next Action
 
-Agent should gather evidence, choose/apply a runbook when appropriate, and update this case.
+Follow target group 260515-378-snapshotting-error.
 
 ## Decision Trail
 

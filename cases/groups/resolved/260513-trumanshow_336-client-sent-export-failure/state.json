@@ -1,15 +1,16 @@
 {
   "group_id": "260513-trumanshow_336-client-sent-export-failure",
-  "state": "open",
+  "state": "resolved",
   "tags": [
-    "triage:needs_review"
+    "triage:needs_review",
+    "resolved:export-healthy"
   ],
   "title": "trumanshow_336 client-sent-export-failure",
-  "summary": "trumanshow (Retail & CPG) - Audience 35783: Audience Export failure for 35783 sent to client.",
+  "summary": "Auto-resolved from Pizza export checks: all 1 alert-scoped export check(s) are healthy_closed with no blockers.",
   "deterministic_key": "v3|incident:Q12A5QFIM3F9LN|org:trumanshow_336|class:client-sent-export-failure",
   "grouping_version": 3,
   "created_at": "2026-05-16T00:38:01.850Z",
-  "updated_at": "2026-05-16T20:46:07.288Z",
+  "updated_at": "2026-05-16T23:49:08.449Z",
   "alert_refs": [
     {
       "incident_id": "Q12A5QFIM3F9LN",

@@ -3436,14 +3436,14 @@
     "check_id": "chk_q12a5qfim3f9ln_q3gvov55z30y4r",
     "incident_id": "Q12A5QFIM3F9LN",
     "alert_id": "Q3GVOV55Z30Y4R",
-    "state": "blocked",
-    "blockers": [
-      "missing_run_identity"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "336",
       "audience_id": "35783",
+      "match_strategy": "any_export_after_alert",
+      "alert_created_at": "2026-05-13T17:18:48-07:00",
       "checked_export_run_ids": [],
       "glcli": "glcli --env prod bifrost pizza --audience-id 35783 --org-id 336"
     }
@@ -3697,12 +3697,14 @@
     "alert_id": "Q3AS52WT001FD8",
     "state": "blocked",
     "blockers": [
-      "missing_run_identity"
+      "snapshotting_error_requires_review"
     ],
     "scope": {
       "env": "prod",
       "org_id": "378",
       "audience_id": "891",
+      "match_strategy": "any_export_after_alert",
+      "alert_created_at": "2026-05-14T18:01:37-07:00",
       "checked_export_run_ids": [],
       "glcli": "glcli --env prod bifrost pizza --audience-id 891 --org-id 378"
     }
@@ -11832,12 +11834,14 @@
     "alert_id": "Q0S5D7L5PK1NBX",
     "state": "blocked",
     "blockers": [
-      "missing_run_identity"
+      "failed_export_count"
     ],
     "scope": {
       "env": "prod",
       "org_id": "274",
       "audience_id": "723",
+      "match_strategy": "any_export_after_alert",
+      "alert_created_at": "2026-05-14T18:28:16-07:00",
       "checked_export_run_ids": [],
       "glcli": "glcli --env prod bifrost pizza --audience-id 723 --org-id 274"
     }
@@ -11869,12 +11873,14 @@
     "alert_id": "Q14N3EWLBRLVPF",
     "state": "blocked",
     "blockers": [
-      "missing_run_identity"
+      "snapshotting_error_requires_review"
     ],
     "scope": {
       "env": "prod",
       "org_id": "268",
       "audience_id": "35826",
+      "match_strategy": "any_export_after_alert",
+      "alert_created_at": "2026-05-14T17:15:33-07:00",
       "checked_export_run_ids": [],
       "glcli": "glcli --env prod bifrost pizza --audience-id 35826 --org-id 268"
     }

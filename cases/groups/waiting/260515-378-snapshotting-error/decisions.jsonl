@@ -1,0 +1,3 @@
+{"ts":"2026-05-16T00:38:01.850Z","actor":"oncall-triage","decision":"created_group","rationale":"Conservative deterministic grouping created a new group for v3|incident:Q1QD2CX8MRAYBW|org:378|class:snapshotting-error."}
+{"ts":"2026-05-16T21:03:34.124Z","actor":"check-exports","decision":"started_work","rationale":"Export evidence check evaluated alert facts for this group."}
+{"ts":"2026-05-16T23:50:53.358Z","actor":"agent","decision":"transitioned_to_waiting","rationale":"Waiting on source/schema remediation for Cincinnati Reds SignalRoute 891: latest Pizza run still fails snapshot_history_write_up with a non-retryable BigQuery column type mismatch (source tickets_status INT64 into snapshot history tickets_status STRING); no later healthy export exists."}

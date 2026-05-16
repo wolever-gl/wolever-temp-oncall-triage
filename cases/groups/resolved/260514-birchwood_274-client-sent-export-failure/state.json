@@ -1,0 +1,27 @@
+{
+  "group_id": "260514-birchwood_274-client-sent-export-failure",
+  "state": "resolved",
+  "tags": [
+    "triage:needs_review",
+    "resolved:merged"
+  ],
+  "title": "birchwood_274 client-sent-export-failure",
+  "summary": "Merged into 260515-birchwood_274-salesforce-audience-export-error: Client-sent SignalRoute 723 alert is the notification counterpart of the Birchwood Salesforce Audience export failure: same incident, org 274, audience/signal 723, and preflight selected the same salesforce_audience_object endpoint with failed exported rows.",
+  "deterministic_key": "v3|incident:Q3PJ7W2K3Y9LJV|org:birchwood_274|class:client-sent-export-failure",
+  "grouping_version": 3,
+  "created_at": "2026-05-16T00:38:01.850Z",
+  "updated_at": "2026-05-16T23:49:38.651Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q3PJ7W2K3Y9LJV",
+      "alert_id": "Q0S5D7L5PK1NBX"
+    }
+  ],
+  "incident_ids": [
+    "Q3PJ7W2K3Y9LJV"
+  ],
+  "related_group_ids": [
+    "260515-birchwood_274-salesforce-audience-export-error"
+  ],
+  "next_action": "Follow target group 260515-birchwood_274-salesforce-audience-export-error."
+}

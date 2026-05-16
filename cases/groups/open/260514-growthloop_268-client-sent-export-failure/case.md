@@ -29,13 +29,14 @@ Representative alerts:
 
 - Checks: 1.
 - States: `blocked`=1
-- Blockers seen: `missing_run_identity`
+- Blockers seen: `snapshotting_error_requires_review`
 
 Check evidence:
 - chk_q3pw7ihi1kcdws_q14n3ewlbrlvpf (Q3PW7IHI1KCDWS/Q14N3EWLBRLVPF): state=`blocked`.
   Scope: env=prod; org=268; audience=35826.
   Command: `glcli --env prod bifrost pizza --audience-id 35826 --org-id 268`
-  Blockers: `missing_run_identity`
+  Blockers: `snapshotting_error_requires_review`
+  Run 35826-google_adwords_21820-scheduled__2026-05-16T00:00:00+00:00: health=`blocked`; blockers=snapshotting_error_requires_review; created=2026-05-16T00:16:27.198035+00:00; snapshotting=snapshotting_error; export=no_batches; failed=0.
 
 ## Next Action
 

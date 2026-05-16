@@ -90,34 +90,6 @@
     "path": "groups/open/260513-allegro_3-facebook-export-error/case.md"
   },
   {
-    "group_id": "260513-trumanshow_336-client-sent-export-failure",
-    "state": "open",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "trumanshow_336 client-sent-export-failure",
-    "summary": "trumanshow (Retail & CPG) - Audience 35783: Audience Export failure for 35783 sent to client.",
-    "incident_ids": [
-      "Q12A5QFIM3F9LN"
-    ],
-    "alert_count": 1,
-    "path": "groups/open/260513-trumanshow_336-client-sent-export-failure/case.md"
-  },
-  {
-    "group_id": "260514-378-client-sent-export-failure",
-    "state": "open",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "378 client-sent-export-failure",
-    "summary": "Cincinnati Reds (default) - SignalRoute 891: SignalRoute Export failure for 891 sent to client.",
-    "incident_ids": [
-      "Q1QD2CX8MRAYBW"
-    ],
-    "alert_count": 1,
-    "path": "groups/open/260514-378-client-sent-export-failure/case.md"
-  },
-  {
     "group_id": "260514-451-client-sent-export-failure",
     "state": "open",
     "tags": [
@@ -190,20 +162,6 @@
     ],
     "alert_count": 13,
     "path": "groups/open/260514-allegro_3-dv360-export-processing/case.md"
-  },
-  {
-    "group_id": "260514-birchwood_274-client-sent-export-failure",
-    "state": "open",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "birchwood_274 client-sent-export-failure",
-    "summary": "birchwood (default) - SignalRoute 723: SignalRoute Export failure for 723 sent to client.",
-    "incident_ids": [
-      "Q3PJ7W2K3Y9LJV"
-    ],
-    "alert_count": 1,
-    "path": "groups/open/260514-birchwood_274-client-sent-export-failure/case.md"
   },
   {
     "group_id": "260514-chghealthcare_395-client-sent-export-failure",
@@ -377,20 +335,6 @@
     "path": "groups/open/260515-378-client-sent-export-failure/case.md"
   },
   {
-    "group_id": "260515-378-snapshotting-error",
-    "state": "open",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "378 snapshotting-error",
-    "summary": "Cincinnati Reds (default): Exports for signal 891 failed with states: <(snapshotting_error,no_batches)>",
-    "incident_ids": [
-      "Q1QD2CX8MRAYBW"
-    ],
-    "alert_count": 1,
-    "path": "groups/open/260515-378-snapshotting-error/case.md"
-  },
-  {
     "group_id": "260515-451-client-sent-export-failure",
     "state": "open",
     "tags": [
@@ -444,7 +388,7 @@
     "incident_ids": [
       "Q3PJ7W2K3Y9LJV"
     ],
-    "alert_count": 1,
+    "alert_count": 2,
     "path": "groups/open/260515-birchwood_274-salesforce-audience-export-error/case.md"
   },
   {
@@ -626,6 +570,21 @@
     "path": "groups/waiting/260514-451-campaign-manager-360-export-error/case.md"
   },
   {
+    "group_id": "260515-378-snapshotting-error",
+    "state": "waiting",
+    "tags": [
+      "triage:needs_review",
+      "waiting:source-schema"
+    ],
+    "title": "378 snapshotting-error",
+    "summary": "Waiting on source/schema remediation for Cincinnati Reds SignalRoute 891: latest Pizza run still fails snapshot_history_write_up with a non-retryable BigQuery column type mismatch (source tickets_status INT64 into snapshot history tickets_status STRING); no later healthy export exists.",
+    "incident_ids": [
+      "Q1QD2CX8MRAYBW"
+    ],
+    "alert_count": 2,
+    "path": "groups/waiting/260515-378-snapshotting-error/case.md"
+  },
+  {
     "group_id": "260515-gopuff_544-snapshotting-error",
     "state": "waiting",
     "tags": [
@@ -767,6 +726,37 @@
     "path": "groups/resolved/260513-ford_310-no-batches/case.md"
   },
   {
+    "group_id": "260513-trumanshow_336-client-sent-export-failure",
+    "state": "resolved",
+    "tags": [
+      "triage:needs_review",
+      "resolved:export-healthy"
+    ],
+    "title": "trumanshow_336 client-sent-export-failure",
+    "summary": "Auto-resolved from Pizza export checks: all 1 alert-scoped export check(s) are healthy_closed with no blockers.",
+    "incident_ids": [
+      "Q12A5QFIM3F9LN"
+    ],
+    "alert_count": 1,
+    "path": "groups/resolved/260513-trumanshow_336-client-sent-export-failure/case.md"
+  },
+  {
+    "group_id": "260514-378-client-sent-export-failure",
+    "state": "resolved",
+    "tags": [
+      "triage:needs_review",
+      "resolved:merged"
+    ],
+    "title": "378 client-sent-export-failure",
+    "summary": "Merged into 260515-378-snapshotting-error: Client-sent SignalRoute 891 alert is the notification counterpart of the active Cincinnati Reds snapshotting-error case for the same incident/org/audience; fresh preflight still shows the latest same-scope run blocked by snapshotting_error_requires_review.",
+    "next_action": "Follow target group 260515-378-snapshotting-error.",
+    "incident_ids": [
+      "Q1QD2CX8MRAYBW"
+    ],
+    "alert_count": 1,
+    "path": "groups/resolved/260514-378-client-sent-export-failure/case.md"
+  },
+  {
     "group_id": "260514-albertsons_6-client-sent-export-failure",
     "state": "resolved",
     "tags": [
@@ -780,6 +770,22 @@
     ],
     "alert_count": 8,
     "path": "groups/resolved/260514-albertsons_6-client-sent-export-failure/case.md"
+  },
+  {
+    "group_id": "260514-birchwood_274-client-sent-export-failure",
+    "state": "resolved",
+    "tags": [
+      "triage:needs_review",
+      "resolved:merged"
+    ],
+    "title": "birchwood_274 client-sent-export-failure",
+    "summary": "Merged into 260515-birchwood_274-salesforce-audience-export-error: Client-sent SignalRoute 723 alert is the notification counterpart of the Birchwood Salesforce Audience export failure: same incident, org 274, audience/signal 723, and preflight selected the same salesforce_audience_object endpoint with failed exported rows.",
+    "next_action": "Follow target group 260515-birchwood_274-salesforce-audience-export-error.",
+    "incident_ids": [
+      "Q3PJ7W2K3Y9LJV"
+    ],
+    "alert_count": 1,
+    "path": "groups/resolved/260514-birchwood_274-client-sent-export-failure/case.md"
   },
   {
     "group_id": "260514-ford_310-client-sent-export-failure",

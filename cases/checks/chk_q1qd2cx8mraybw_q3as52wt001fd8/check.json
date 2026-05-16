@@ -8,15 +8,63 @@
     "env": "prod",
     "org_id": "378",
     "audience_id": "891",
+    "match_strategy": "any_export_after_alert",
+    "alert_created_at": "2026-05-14T18:01:37-07:00",
     "checked_export_run_ids": [],
     "glcli": "glcli --env prod bifrost pizza --audience-id 891 --org-id 378"
   },
   "scope_key": "prod|378|891|unknown_destination|unknown_endpoint|unknown_run",
-  "run_evaluations": [],
+  "run_evaluations": [
+    {
+      "export_run_id": "891-dynamics_object_891-scheduled__2026-05-16T22:00:00+00:00",
+      "health": "blocked",
+      "match_basis": "any_export_after_alert",
+      "blockers": [
+        "snapshotting_error_requires_review"
+      ],
+      "selected_row": {
+        "export_run_id": "891-dynamics_object_891-scheduled__2026-05-16T22:00:00+00:00",
+        "audience_id": "891",
+        "destination_type": "dynamics_object",
+        "created_at": "2026-05-16T23:01:35.303004+00:00",
+        "snapshotting_state": "snapshotting_error",
+        "export_state": "no_batches",
+        "failed_export_count": 0,
+        "raw": {
+          "export_state": "no_batches",
+          "successful_add_count": 0,
+          "successful_remove_count": 0,
+          "failed_export_count": 0,
+          "rejected_row_count": 0,
+          "total_row_count": 0,
+          "successful_expanded_add_count": 0,
+          "successful_expanded_remove_count": 0,
+          "failed_expanded_export_count": 0,
+          "rejected_expanded_row_count": 0,
+          "total_expanded_row_count": 0,
+          "enhanced_match_count": 0,
+          "enhanced_row_count": 0,
+          "enhanced_total_records": 0,
+          "total_batch_count": 0,
+          "completed_batch_count": 0,
+          "successful_batch_count": 0,
+          "failed_batch_count": 0,
+          "failure_reason": "Snapshotting failed while running snapshot_history_write_up: BigQuery insert failed due to a column type mismatch",
+          "info": {
+            "internal_audience_id": "891",
+            "export_run_id": "891-dynamics_object_891-scheduled__2026-05-16T22:00:00+00:00",
+            "export_timestamp": "2026-05-16 23:01:35",
+            "created_at": "2026-05-16T23:01:35.303004+00:00"
+          },
+          "snapshotting_state": "snapshotting_error"
+        }
+      }
+    }
+  ],
   "blockers": [
-    "missing_run_identity"
+    "snapshotting_error_requires_review"
   ],
   "evidence_artifacts": [],
   "created_at": "2026-05-16T20:46:14.819Z",
-  "updated_at": "2026-05-16T20:46:14.819Z"
+  "updated_at": "2026-05-16T23:49:05.221Z"
 }

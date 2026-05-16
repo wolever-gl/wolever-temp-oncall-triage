@@ -1,0 +1,27 @@
+{
+  "group_id": "260514-378-client-sent-export-failure",
+  "state": "resolved",
+  "tags": [
+    "triage:needs_review",
+    "resolved:merged"
+  ],
+  "title": "378 client-sent-export-failure",
+  "summary": "Merged into 260515-378-snapshotting-error: Client-sent SignalRoute 891 alert is the notification counterpart of the active Cincinnati Reds snapshotting-error case for the same incident/org/audience; fresh preflight still shows the latest same-scope run blocked by snapshotting_error_requires_review.",
+  "deterministic_key": "v3|incident:Q1QD2CX8MRAYBW|org:378|class:client-sent-export-failure",
+  "grouping_version": 3,
+  "created_at": "2026-05-16T00:38:01.850Z",
+  "updated_at": "2026-05-16T23:50:59.750Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q1QD2CX8MRAYBW",
+      "alert_id": "Q3AS52WT001FD8"
+    }
+  ],
+  "incident_ids": [
+    "Q1QD2CX8MRAYBW"
+  ],
+  "related_group_ids": [
+    "260515-378-snapshotting-error"
+  ],
+  "next_action": "Follow target group 260515-378-snapshotting-error."
+}
