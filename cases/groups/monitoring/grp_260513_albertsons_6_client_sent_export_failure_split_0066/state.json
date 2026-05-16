@@ -1,18 +1,19 @@
 {
   "group_id": "grp_260513_albertsons_6_client_sent_export_failure_split_0066",
-  "state": "open",
+  "state": "monitoring",
   "tags": [
     "triage:needs_review",
     "triage:snapshotting-error",
     "bug:service-quervice",
-    "triage:manual_retry_needed"
+    "triage:manual_retry_needed",
+    "monitoring:snapshotting-retry"
   ],
   "title": "albertsons_6 client-sent-export-failure split",
-  "summary": "Manual retry/platform action still needed: fresh Pizza recheck on 2026-05-16 found no later success or processing for Albertsons audiences 8473 and 10073; latest rows remain the failed Quervice pre_snapshotting_check runs from 2026-05-13 and 2026-05-15 respectively.",
+  "summary": "Manual retries were triggered for Albertsons LiveRamp audiences 8473 and 10073. Both latest Pizza rows now show snapshotting_processing/no_batches after retry attempts; monitor until they reach export_finished or terminal failure. 8473 has already shown renewed Quervice 502/503 pre_snapshotting_check errors in logs, while 10073 reached initial Quervice checks successfully.",
   "deterministic_key": "v3|incident:Q2EJWG22CER0LA|org:albertsons_6|class:client-sent-export-failure|split|Q2N69VPQCMRHGL",
   "grouping_version": 3,
   "created_at": "2026-05-16T21:41:58.819Z",
-  "updated_at": "2026-05-16T22:08:44.258Z",
+  "updated_at": "2026-05-16T22:27:07.639Z",
   "alert_refs": [
     {
       "incident_id": "Q2EJWG22CER0LA",

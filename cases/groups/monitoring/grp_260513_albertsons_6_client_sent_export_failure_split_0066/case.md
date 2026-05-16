@@ -4,14 +4,14 @@
 
 > Generated file. Do not edit directly; put free-form investigation notes in `notes.md`.
 
-State: `open`
-Tags: `triage:needs_review`, `triage:snapshotting-error`, `bug:service-quervice`, `triage:manual_retry_needed`
+State: `monitoring`
+Tags: `triage:needs_review`, `triage:snapshotting-error`, `bug:service-quervice`, `triage:manual_retry_needed`, `monitoring:snapshotting-retry`
 Incidents: [Q2EJWG22CER0LA](https://growthloop.pagerduty.com/incidents/Q2EJWG22CER0LA), [Q38JR11G2ENK2W](https://growthloop.pagerduty.com/incidents/Q38JR11G2ENK2W)
 Alerts: 2
 
 ## Current Summary
 
-Manual retry/platform action still needed: fresh Pizza recheck on 2026-05-16 found no later success or processing for Albertsons audiences 8473 and 10073; latest rows remain the failed Quervice pre_snapshotting_check runs from 2026-05-13 and 2026-05-15 respectively.
+Manual retries were triggered for Albertsons LiveRamp audiences 8473 and 10073. Both latest Pizza rows now show snapshotting_processing/no_batches after retry attempts; monitor until they reach export_finished or terminal failure. 8473 has already shown renewed Quervice 502/503 pre_snapshotting_check errors in logs, while 10073 reached initial Quervice checks successfully.
 
 ## Alert Scope
 
@@ -44,6 +44,10 @@ Check evidence:
 
 ## Recent Evidence
 
+- Manual retry attempts started snapshotting for both Albertsons LiveRamp audiences. Audience 8473 rerun selected historical external_run_id scheduled__2026-05-13T00:00:00+00:00 and timed out client-side after creating snapshot_run_id a620388a-c598-4139-9df8-b485e4107694; follow-up logs show it reached Quervice pre_snapshotting_check but Quervice returned 502/503. Audience 10073 snapshot retry for scheduled__2026-05-15T00:00:00+00:00 disconnected client-side after creating snapshot_run_id 6b2edef4-5fb0-48c1-b36c-043930334960; logs show snapshotting beginning and successful Quervice responses through initial checks. Pizza rechecks after both attempts show both latest runs in snapshotting_processing/no_batches, so continue monitoring rather than resolving.
+  Source: `glcli`; kind: `manual_retry`; captured: `2026-05-16T22:27:02.877Z`.
+  Command: `PATH="/Users/wolever/.local/share/mise/installs/gcloud/562.0.0/bin:$PATH" glcli --env albertsons snapshotting rerun-snapshot --organization-identifier albertsons_6 --snapshot-target-type audience --snapshot-target-id 8473 --export-id live_ramp_activation_1649 --days 14; selected scheduled__2026-05-13T00:00:00+00:00`
+  Command: `PATH="/Users/wolever/.local/share/mise/installs/gcloud/562.0.0/bin:$PATH" glcli --env albertsons snapshotting snapshot --organization-identifier albertsons_6 --snapshot-target-type audience --snapshot-target-id 10073 --export-id live_ramp_activation_2061 --external-run-id scheduled__2026-05-15T00:00:00+00:00`
 - Fresh Pizza recheck on 2026-05-16: audience 8473 latest row remains 2026-05-13 05:59:31 UTC run 8473-live_ramp_activation_1649-scheduled__2026-05-13T00:00:00+00:00 in snapshotting_error/no_batches; audience 10073 latest row remains 2026-05-15 02:40:38 UTC run 10073-live_ramp_activation_2061-scheduled__2026-05-15T00:00:00+00:00 in snapshotting_error/no_batches with pre_snapshotting_check unknown error. No later success or processing run exists for either audience, so both still need manual retry/platform action.
   Source: `glcli bifrost pizza`; kind: `pizza`; captured: `2026-05-16T22:08:39.113Z`.
   Command: `PATH="/opt/homebrew/share/google-cloud-sdk/bin:$PATH" glcli --env albertsons bifrost pizza --audience-id 8473 --org-id 6 --format json`
@@ -57,9 +61,6 @@ Check evidence:
 - Latest Pizza still shows 2026-05-13 run 8473-live_ramp_activation_1649-scheduled__2026-05-13T00:00:00+00:00 in snapshotting_error/no_batches; prior weekly runs from 2026-04-08 through 2026-05-06 were stuck snapshotting_processing/no_batches; last fully successful export_finished run was 2026-04-01.
   Source: `glcli bifrost pizza`; kind: `pizza`; captured: `2026-05-16T21:44:51.432Z`.
   Command: `glcli --env albertsons bifrost pizza --audience-id 8473 --org-id 6 --format json`
-- Albertsons logs for the 2026-05-13 audience 8473 run show the snapshotting pre_snapshotting_check repeatedly calling Quervice for internal_audience_id=8473 and receiving 502 Bad Gateway responses after long upstream waits; nginx logged upstream prematurely closed connection while reading response header. This points to a GrowthLoop/Quervice service-side failure path, not client schema or missing field evidence.
-  Source: `gl-client-albertsons`; kind: `gcloud_logs`; captured: `2026-05-16T21:44:51.315Z`.
-  Command: `gcloud logging read timestamp>=2026-05-13T05:45:00Z timestamp<=2026-05-13T06:15:00Z (8473 OR live_ramp_activation_1649 OR A_LR_RMN_FY23ExpPcg_Bags_L26W) --project=gl-client-albertsons`
 
 ## Next Action
 

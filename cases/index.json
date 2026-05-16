@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-16T22:09:16.925Z",
+  "generated_at": "2026-05-16T22:27:08.962Z",
   "open_count": 45,
   "groups": [
     {
@@ -495,24 +495,6 @@
       "path": "groups/open/260515-royals_4-snapshotting-error/case.md"
     },
     {
-      "group_id": "grp_260513_albertsons_6_client_sent_export_failure_split_0066",
-      "state": "open",
-      "tags": [
-        "triage:needs_review",
-        "triage:snapshotting-error",
-        "bug:service-quervice",
-        "triage:manual_retry_needed"
-      ],
-      "title": "albertsons_6 client-sent-export-failure split",
-      "summary": "Manual retry/platform action still needed: fresh Pizza recheck on 2026-05-16 found no later success or processing for Albertsons audiences 8473 and 10073; latest rows remain the failed Quervice pre_snapshotting_check runs from 2026-05-13 and 2026-05-15 respectively.",
-      "incident_ids": [
-        "Q2EJWG22CER0LA",
-        "Q38JR11G2ENK2W"
-      ],
-      "alert_count": 2,
-      "path": "groups/open/grp_260513_albertsons_6_client_sent_export_failure_split_0066/case.md"
-    },
-    {
       "group_id": "260511-albertsons_6-snapshotting-processing",
       "state": "monitoring",
       "tags": [
@@ -586,6 +568,25 @@
       ],
       "alert_count": 10,
       "path": "groups/monitoring/260515-albertsons_6-zero-success-02/case.md"
+    },
+    {
+      "group_id": "grp_260513_albertsons_6_client_sent_export_failure_split_0066",
+      "state": "monitoring",
+      "tags": [
+        "triage:needs_review",
+        "triage:snapshotting-error",
+        "bug:service-quervice",
+        "triage:manual_retry_needed",
+        "monitoring:snapshotting-retry"
+      ],
+      "title": "albertsons_6 client-sent-export-failure split",
+      "summary": "Manual retries were triggered for Albertsons LiveRamp audiences 8473 and 10073. Both latest Pizza rows now show snapshotting_processing/no_batches after retry attempts; monitor until they reach export_finished or terminal failure. 8473 has already shown renewed Quervice 502/503 pre_snapshotting_check errors in logs, while 10073 reached initial Quervice checks successfully.",
+      "incident_ids": [
+        "Q2EJWG22CER0LA",
+        "Q38JR11G2ENK2W"
+      ],
+      "alert_count": 2,
+      "path": "groups/monitoring/grp_260513_albertsons_6_client_sent_export_failure_split_0066/case.md"
     },
     {
       "group_id": "grp_260514_albertsons_6_client_sent_export_failure_split_0068",
