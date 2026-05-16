@@ -1,0 +1,51 @@
+{
+  "annotation": {
+    "ts": "2026-05-16T21:24:51.466Z",
+    "alert_ref": {
+      "incident_id": "Q38JR11G2ENK2W",
+      "alert_id": "Q0ZDIAGV3OJULA"
+    },
+    "tags": [
+      "evidence:albertsons-zero-success-progress",
+      "waiting:uploads"
+    ],
+    "decision": "tag",
+    "confidence": "high",
+    "summary": "Audience 12814: zero-success-export-in-progress; rows=2; post_alert_rows=1; monitoring=1; latest=export_processing 12814-live_ramp_activation_4621-webapp__2026-05-15T19:36:57+00:00.",
+    "source": {
+      "kind": "tagger",
+      "run_id": "tagrun_20260516212434_260516_albertsons_zero_success_progress",
+      "script_sha256": "6cd1c8066fa6dcebf5dd981e9015f54e8718fa2efcda1c3daa56538dca5181c7",
+      "script_path": "cases/assets/taggers/tagrun_20260516212434_260516_albertsons_zero_success_progress/260516-albertsons-zero-success-progress.ts"
+    },
+    "evidence": [
+      {
+        "kind": "pizza_zero_success",
+        "matched": true,
+        "source": "glcli bifrost pizza",
+        "query": "glcli --env albertsons bifrost pizza --audience-id 12814 --org-id 6 --format json",
+        "summary": "zero-success-export-in-progress; rows=2; post_alert_rows=1.",
+        "data": {
+          "classification": "zero-success-export-in-progress",
+          "audience_id": "12814",
+          "alert_created_at": "2026-05-15T12:51:58-07:00",
+          "rows": [
+            {
+              "created_at": "2026-05-15 19:52:26 UTC",
+              "export_run_id": "12814-live_ramp_activation_4621-webapp__2026-05-15T19:36:57+00:00",
+              "snapshot_state": "snapshotting_finished",
+              "export_state": "export_processing",
+              "failures": 0,
+              "failure_reason": ""
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "process": {
+    "stdout": "{\"decision\":\"tag\",\"tags\":[\"evidence:albertsons-zero-success-progress\",\"waiting:uploads\"],\"confidence\":\"high\",\"summary\":\"Audience 12814: zero-success-export-in-progress; rows=2; post_alert_rows=1; monitoring=1; latest=export_processing 12814-live_ramp_activation_4621-webapp__2026-05-15T19:36:57+00:00.\",\"evidence\":[{\"kind\":\"pizza_zero_success\",\"matched\":true,\"source\":\"glcli bifrost pizza\",\"query\":\"glcli --env albertsons bifrost pizza --audience-id 12814 --org-id 6 --format json\",\"summary\":\"zero-success-export-in-progress; rows=2; post_alert_rows=1.\",\"data\":{\"classification\":\"zero-success-export-in-progress\",\"audience_id\":\"12814\",\"alert_created_at\":\"2026-05-15T12:51:58-07:00\",\"rows\":[{\"created_at\":\"2026-05-15 19:52:26 UTC\",\"export_run_id\":\"12814-live_ramp_activation_4621-webapp__2026-05-15T19:36:57+00:00\",\"snapshot_state\":\"snapshotting_finished\",\"export_state\":\"export_processing\",\"failures\":0,\"failure_reason\":\"\"}]}}]}\n",
+    "stderr": "",
+    "exit_code": 0
+  }
+}

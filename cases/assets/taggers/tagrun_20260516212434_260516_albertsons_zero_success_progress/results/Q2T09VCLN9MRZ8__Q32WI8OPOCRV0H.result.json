@@ -1,0 +1,24 @@
+{
+  "annotation": {
+    "ts": "2026-05-16T21:24:45.703Z",
+    "alert_ref": {
+      "incident_id": "Q2T09VCLN9MRZ8",
+      "alert_id": "Q32WI8OPOCRV0H"
+    },
+    "tags": [],
+    "decision": "skip",
+    "confidence": "high",
+    "summary": "Not an Albertsons zero-success alert.",
+    "source": {
+      "kind": "tagger",
+      "run_id": "tagrun_20260516212434_260516_albertsons_zero_success_progress",
+      "script_sha256": "6cd1c8066fa6dcebf5dd981e9015f54e8718fa2efcda1c3daa56538dca5181c7",
+      "script_path": "cases/assets/taggers/tagrun_20260516212434_260516_albertsons_zero_success_progress/260516-albertsons-zero-success-progress.ts"
+    }
+  },
+  "process": {
+    "stdout": "{\"decision\":\"skip\",\"confidence\":\"high\",\"summary\":\"Not an Albertsons zero-success alert.\"}\n",
+    "stderr": "",
+    "exit_code": 0
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "annotation": {
+    "ts": "2026-05-16T21:25:03.836Z",
+    "alert_ref": {
+      "incident_id": "Q38JR11G2ENK2W",
+      "alert_id": "Q2OTOA7JSD823S"
+    },
+    "tags": [
+      "evidence:albertsons-zero-success-recovered",
+      "resolved:export-healthy"
+    ],
+    "decision": "tag",
+    "confidence": "high",
+    "summary": "Audience 12873: zero-success-recovered; rows=3; post_alert_rows=3; healthy=3; latest=export_finished 12873-live_ramp_activation_4612-scheduled__2026-05-16T00:00:00+00:00.",
+    "source": {
+      "kind": "tagger",
+      "run_id": "tagrun_20260516212434_260516_albertsons_zero_success_progress",
+      "script_sha256": "6cd1c8066fa6dcebf5dd981e9015f54e8718fa2efcda1c3daa56538dca5181c7",
+      "script_path": "cases/assets/taggers/tagrun_20260516212434_260516_albertsons_zero_success_progress/260516-albertsons-zero-success-progress.ts"
+    },
+    "evidence": [
+      {
+        "kind": "pizza_zero_success",
+        "matched": true,
+        "source": "glcli bifrost pizza",
+        "query": "glcli --env albertsons bifrost pizza --audience-id 12873 --org-id 6 --format json",
+        "summary": "zero-success-recovered; rows=3; post_alert_rows=3.",
+        "data": {
+          "classification": "zero-success-recovered",
+          "audience_id": "12873",
+          "alert_created_at": "2026-05-14T13:54:18-07:00",
+          "rows": [
+            {
+              "created_at": "2026-05-16 00:29:57 UTC",
+              "export_run_id": "12873-live_ramp_activation_4612-scheduled__2026-05-16T00:00:00+00:00",
+              "snapshot_state": "snapshotting_finished",
+              "export_state": "export_finished",
+              "failures": 0,
+              "failure_reason": ""
+            },
+            {
+              "created_at": "2026-05-15 04:53:07 UTC",
+              "export_run_id": "12873-live_ramp_activation_4612-scheduled__2026-05-15T00:00:00+00:00",
+              "snapshot_state": "snapshotting_finished",
+              "export_state": "export_finished",
+              "failures": 0,
+              "failure_reason": ""
+            },
+            {
+              "created_at": "2026-05-14 20:56:08 UTC",
+              "export_run_id": "12873-live_ramp_activation_4612-webapp__2026-05-14T20:39:11+00:00",
+              "snapshot_state": "snapshotting_finished",
+              "export_state": "export_finished",
+              "failures": 0,
+              "failure_reason": ""
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "process": {
+    "stdout": "{\"decision\":\"tag\",\"tags\":[\"evidence:albertsons-zero-success-recovered\",\"resolved:export-healthy\"],\"confidence\":\"high\",\"summary\":\"Audience 12873: zero-success-recovered; rows=3; post_alert_rows=3; healthy=3; latest=export_finished 12873-live_ramp_activation_4612-scheduled__2026-05-16T00:00:00+00:00.\",\"evidence\":[{\"kind\":\"pizza_zero_success\",\"matched\":true,\"source\":\"glcli bifrost pizza\",\"query\":\"glcli --env albertsons bifrost pizza --audience-id 12873 --org-id 6 --format json\",\"summary\":\"zero-success-recovered; rows=3; post_alert_rows=3.\",\"data\":{\"classification\":\"zero-success-recovered\",\"audience_id\":\"12873\",\"alert_created_at\":\"2026-05-14T13:54:18-07:00\",\"rows\":[{\"created_at\":\"2026-05-16 00:29:57 UTC\",\"export_run_id\":\"12873-live_ramp_activation_4612-scheduled__2026-05-16T00:00:00+00:00\",\"snapshot_state\":\"snapshotting_finished\",\"export_state\":\"export_finished\",\"failures\":0,\"failure_reason\":\"\"},{\"created_at\":\"2026-05-15 04:53:07 UTC\",\"export_run_id\":\"12873-live_ramp_activation_4612-scheduled__2026-05-15T00:00:00+00:00\",\"snapshot_state\":\"snapshotting_finished\",\"export_state\":\"export_finished\",\"failures\":0,\"failure_reason\":\"\"},{\"created_at\":\"2026-05-14 20:56:08 UTC\",\"export_run_id\":\"12873-live_ramp_activation_4612-webapp__2026-05-14T20:39:11+00:00\",\"snapshot_state\":\"snapshotting_finished\",\"export_state\":\"export_finished\",\"failures\":0,\"failure_reason\":\"\"}]}}]}\n",
+    "stderr": "",
+    "exit_code": 0
+  }
+}

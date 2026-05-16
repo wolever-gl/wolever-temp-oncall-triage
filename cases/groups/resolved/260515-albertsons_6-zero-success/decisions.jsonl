@@ -1,0 +1,4 @@
+{"ts":"2026-05-16T00:38:01.850Z","actor":"oncall-triage","decision":"created_group","rationale":"Conservative deterministic grouping created a new group for v3|incident:Q269WMZF4MKMNL|org:albertsons_6|class:zero-success."}
+{"ts":"2026-05-16T00:38:01.850Z","actor":"oncall-triage","decision":"attached_alert_to_existing_group","rationale":"Alert matched deterministic key v3|incident:Q269WMZF4MKMNL|org:albertsons_6|class:zero-success."}
+{"ts":"2026-05-16T21:04:05.732Z","actor":"check-exports","decision":"started_work","rationale":"Export evidence check evaluated alert facts for this group."}
+{"ts":"2026-05-16T21:26:17.993Z","actor":"agent","decision":"transitioned_to_resolved","rationale":"Resolved by zero-success tagger: all attached alerts now have healthy Pizza evidence, either export_finished or snapshotting_finished_no_deltas/no_batches with zero failures."}

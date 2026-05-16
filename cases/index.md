@@ -1,7 +1,7 @@
 # On-call Triage Cases
 
-Generated: 2026-05-16T21:15:42.003Z
-Open groups: 47
+Generated: 2026-05-16T21:26:19.272Z
+Open groups: 46
 Alert facts: 698
 
 ## New (8)
@@ -17,7 +17,7 @@ Alert facts: 698
 | `triage:needs_review` | [260514-allegro_3-dv360-export-processing](groups/new/260514-allegro_3-dv360-export-processing/case.md) | allegro (Marketing): Exports for audience 1156 failed with states: <(snapshotting_finished,export_processing)> | Q2KT0WUDEVL42Q | 13 |
 | `triage:needs_review` | [260515-allegro_3-dv360-export-processing](groups/new/260515-allegro_3-dv360-export-processing/case.md) | allegro (Marketing): Exports for audience 605 failed with states: <(snapshotting_finished,export_processing)> | Q3GQQRY1UQLBSN | 1 |
 
-## Open (36)
+## Open (35)
 
 | Tags | Group | Summary | Incidents | Alerts |
 |---|---|---|---|---:|
@@ -52,7 +52,6 @@ Alert facts: 698
 | `triage:needs_review` | [260515-378-snapshotting-error](groups/open/260515-378-snapshotting-error/case.md) | Cincinnati Reds (default): Exports for signal 891 failed with states: <(snapshotting_error,no_batches)> | Q1QD2CX8MRAYBW | 1 |
 | `triage:needs_review` | [260515-451-client-sent-export-failure](groups/open/260515-451-client-sent-export-failure/case.md) | ASU Enterprise Partners (General - ASU Data) - SignalRoute 995: SignalRoute Export failure for 995 sent to client. | Q31XLLHUNNMAK9 | 1 |
 | `triage:needs_review` | [260515-451-snapshotting-error](groups/open/260515-451-snapshotting-error/case.md) | ASU Enterprise Partners (Alumni): Exports for audience 26039 failed with states: <(snapshotting_error,no_batches)> | Q1UC14QNZK76EZ | 6 |
-| `triage:needs_review` | [260515-albertsons_6-zero-success](groups/open/260515-albertsons_6-zero-success/case.md) | albertsons (Albertsons Media) - Audience 10684: 0 successfull_exports from pizza tracker found 10 minutes after new export | Q269WMZF4MKMNL | 2 |
 | `triage:needs_review` | [260515-albertsons_6-zero-success-02](groups/open/260515-albertsons_6-zero-success-02/case.md) | albertsons (Albertsons Media) - Audience 12814: 0 successfull_exports from pizza tracker found 10 minutes after new export | Q38JR11G2ENK2W | 10 |
 | `triage:needs_review` | [260515-birchwood_274-salesforce-audience-export-error](groups/open/260515-birchwood_274-salesforce-audience-export-error/case.md) | birchwood (default): Exports for signal 723 failed with states: <(snapshotting_finished,export_error)> | Q3PJ7W2K3Y9LJV | 1 |
 | `triage:needs_review` | [260515-pgatourhq_219-no-batches](groups/open/260515-pgatourhq_219-no-batches/case.md) | pgatourhq (New World Order): Exports for audience 31918 failed with states: <(snapshotting_finished,no_batches)> | Q2DJCY3XC2BSBG | 13 |
@@ -71,7 +70,7 @@ Alert facts: 698
 | `triage:snapshotting-schema`<br>`triage:tag_grouped`<br>`waiting:source-schema` | [260505-albertsons_6-snapshotting-schema-error](groups/waiting/260505-albertsons_6-snapshotting-schema-error/case.md) | Blocked on Albertsons source/schema remediation: scoped snapshotting logs show missing fields in RFM_Category_Group, and live pizza shows no later successful terminal export for the five alert-scoped runs. | Q2T09VCLN9MRZ8 | 5 |
 | `triage:needs_review`<br>`triage:client_schema_missing`<br>`waiting:client_schema` | [260515-gopuff_544-snapshotting-error](groups/waiting/260515-gopuff_544-snapshotting-error/case.md) | Waiting on support/client remediation for missing source column CORE.GOPUFF_ORDER_ITEMS.CLASS in GoPuff Snowflake source schema; support thread opened. | Q1X9CE7BIDK9MV | 1 |
 
-## Resolved (17)
+## Resolved (18)
 
 | Tags | Group | Summary | Incidents | Alerts |
 |---|---|---|---|---:|
@@ -83,6 +82,7 @@ Alert facts: 698
 | `triage:needs_review`<br>`resolved:export-healthy` | [260514-trumanshow_336-no-batches](groups/resolved/260514-trumanshow_336-no-batches/case.md) | Auto-resolved from Pizza export checks: all 2 alert-scoped export check(s) are healthy_closed with no blockers. | Q12A5QFIM3F9LN | 2 |
 | `triage:needs_review`<br>`resolved:pd_closed_external` | [260515-76ers_131-zero-success](groups/resolved/260515-76ers_131-zero-success/case.md) | All attached PagerDuty incidents are resolved externally. | Q0Z4MMEOFYDHC7 | 1 |
 | `triage:needs_review`<br>`resolved:later-export-succeeded` | [260515-albertsons_6-live-ramp-export-error](groups/resolved/260515-albertsons_6-live-ramp-export-error/case.md) | Resolved from Albertsons LiveRamp tagger evidence: the alert had a later healthy run after the export error. | Q38JR11G2ENK2W | 1 |
+| `triage:needs_review`<br>`resolved:export-healthy` | [260515-albertsons_6-zero-success](groups/resolved/260515-albertsons_6-zero-success/case.md) | Resolved by zero-success tagger: all attached alerts now have healthy Pizza evidence, either export_finished or snapshotting_finished_no_deltas/no_batches with zero failures. | Q269WMZF4MKMNL | 2 |
 | `triage:needs_review`<br>`resolved:export-healthy` | [260515-chghealthcare_395-marketing-cloud-export-error](groups/resolved/260515-chghealthcare_395-marketing-cloud-export-error/case.md) | Auto-resolved from Pizza export checks: all 1 alert-scoped export check(s) are healthy_closed with no blockers. | Q29I2IVNNVK80X | 1 |
 | `triage:needs_review`<br>`resolved:retry_succeeded` | [260515-dexcom_478-no-batches](groups/resolved/260515-dexcom_478-no-batches/case.md) | Resolved as retry/false alarm: alert reported snapshotting_finished/no_batches, but live Pizza shows the checked Dexcom Marketing Cloud run and later same-scope scheduled runs completed export_finished with zero failures/rejects. | Q2RVN4BPATQXSR | 1 |
 | `triage:needs_review`<br>`resolved:export-healthy` | [260515-evgo_402-no-batches](groups/resolved/260515-evgo_402-no-batches/case.md) | Resolved as false alarm/export healthy: all nine EVgo Braze alerts were checked in Pizza and the referenced runs are healthy_closed with snapshotting_finished/export_finished and failed=0. | Q157KO5ON9TWGO | 9 |

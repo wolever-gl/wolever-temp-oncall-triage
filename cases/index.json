@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-05-16T21:15:42.003Z",
-  "open_count": 47,
+  "generated_at": "2026-05-16T21:26:19.272Z",
+  "open_count": 46,
   "groups": [
     {
       "group_id": "260513-allegro_3-client-sent-export-failure",
@@ -549,20 +549,6 @@
       "path": "groups/open/260515-451-snapshotting-error/case.md"
     },
     {
-      "group_id": "260515-albertsons_6-zero-success",
-      "state": "open",
-      "tags": [
-        "triage:needs_review"
-      ],
-      "title": "albertsons_6 zero-success",
-      "summary": "albertsons (Albertsons Media) - Audience 10684: 0 successfull_exports from pizza tracker found 10 minutes after new export",
-      "incident_ids": [
-        "Q269WMZF4MKMNL"
-      ],
-      "alert_count": 2,
-      "path": "groups/open/260515-albertsons_6-zero-success/case.md"
-    },
-    {
       "group_id": "260515-albertsons_6-zero-success-02",
       "state": "open",
       "tags": [
@@ -788,6 +774,21 @@
       ],
       "alert_count": 1,
       "path": "groups/resolved/260515-albertsons_6-live-ramp-export-error/case.md"
+    },
+    {
+      "group_id": "260515-albertsons_6-zero-success",
+      "state": "resolved",
+      "tags": [
+        "triage:needs_review",
+        "resolved:export-healthy"
+      ],
+      "title": "albertsons_6 zero-success",
+      "summary": "Resolved by zero-success tagger: all attached alerts now have healthy Pizza evidence, either export_finished or snapshotting_finished_no_deltas/no_batches with zero failures.",
+      "incident_ids": [
+        "Q269WMZF4MKMNL"
+      ],
+      "alert_count": 2,
+      "path": "groups/resolved/260515-albertsons_6-zero-success/case.md"
     },
     {
       "group_id": "260515-chghealthcare_395-marketing-cloud-export-error",
