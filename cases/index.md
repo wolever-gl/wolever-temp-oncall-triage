@@ -1,15 +1,14 @@
 # On-call Triage Cases
 
-Generated: 2026-05-16T17:30:03.103Z
-Open groups: 58
+Generated: 2026-05-16T20:23:46.829Z
+Open groups: 57
 Alert facts: 698
 
-## New (44)
+## New (43)
 
 | Tags | Group | Summary | Incidents | Alerts |
 |---|---|---|---|---:|
 | `triage:needs_review` | [260511-allegro_3-dv360-export-error](groups/new/260511-allegro_3-dv360-export-error/case.md) | allegro (Marketing): Exports for audience 731 failed with states: <(snapshotting_finished,export_error)> | Q3HYNV525MK1RW | 8 |
-| `triage:needs_review` | [260512-albertsons_6-client-sent-export-failure](groups/new/260512-albertsons_6-client-sent-export-failure/case.md) | albertsons (Albertsons Media) - Audience 2189: Audience Export failure for 2189 sent to client. | Q2T09VCLN9MRZ8 | 4 |
 | `triage:needs_review` | [260513-451-client-sent-export-failure](groups/new/260513-451-client-sent-export-failure/case.md) | ASU Enterprise Partners (Restricted) - Audience 31982: Audience Export failure for 31982 sent to client. | Q3XQABQFPPVNT5 | 3 |
 | `triage:needs_review` | [260513-albertsons_6-client-sent-export-failure](groups/new/260513-albertsons_6-client-sent-export-failure/case.md) | albertsons (Albertsons Media) - Audience 8473: Audience Export failure for 8473 sent to client. | Q2EJWG22CER0LA | 3 |
 | `triage:needs_review` | [260513-albertsons_6-zero-success](groups/new/260513-albertsons_6-zero-success/case.md) | albertsons (Albertsons Media) - Audience 12742: 0 successfull_exports from pizza tracker found 10 minutes after new export | Q2EJWG22CER0LA | 2 |
@@ -58,10 +57,10 @@ Alert facts: 698
 | Tags | Group | Summary | Incidents | Alerts |
 |---|---|---|---|---:|
 | `triage:needs_review` | [260511-albertsons_6-live-ramp-export-error](groups/open/260511-albertsons_6-live-ramp-export-error/case.md) | albertsons (Albertsons Media): Exports for audience 12632 failed with states: <(snapshotting_finished,export_error)> | Q2T09VCLN9MRZ8 | 142 |
-| `triage:needs_review` | [260511-albertsons_6-live-ramp-export-processing](groups/open/260511-albertsons_6-live-ramp-export-processing/case.md) | albertsons (Albertsons Media): Exports for audience 12719 failed with states: <(snapshotting_finished,export_processing)> | Q2T09VCLN9MRZ8 | 1 |
 | `triage:needs_review` | [260511-albertsons_6-no-batches](groups/open/260511-albertsons_6-no-batches/case.md) | albertsons (Albertsons Media): Exports for audience 2850 failed with states: <(snapshotting_finished,no_batches)> | Q2T09VCLN9MRZ8 | 1 |
 | `triage:needs_review` | [260511-albertsons_6-snapshotting-error](groups/open/260511-albertsons_6-snapshotting-error/case.md) | albertsons (Albertsons Media): Exports for audience 10749 failed with states: <(snapshotting_error,no_batches)> | Q2T09VCLN9MRZ8 | 5 |
 | `triage:needs_review` | [260511-albertsons_6-snapshotting-processing](groups/open/260511-albertsons_6-snapshotting-processing/case.md) | albertsons (Albertsons Media): Exports for audience 10073 failed with states: <(snapshotting_processing,no_batches)> | Q2T09VCLN9MRZ8 | 3 |
+| `triage:needs_review` | [260512-albertsons_6-client-sent-export-failure](groups/open/260512-albertsons_6-client-sent-export-failure/case.md) | albertsons (Albertsons Media) - Audience 2189: Audience Export failure for 2189 sent to client. | Q2T09VCLN9MRZ8 | 4 |
 | `triage:needs_review` | [260514-chghealthcare_395-client-sent-export-failure](groups/open/260514-chghealthcare_395-client-sent-export-failure/case.md) | chghealthcare (Global Medical Staffing) - Audience 30299: Audience Export failure for 30299 sent to client. | Q064V2C56CNTCR | 8 |
 | `triage:needs_review` | [260514-chghealthcare_395-no-batches](groups/open/260514-chghealthcare_395-no-batches/case.md) | chghealthcare (TESTING): Exports for signal 341 failed with states: <(snapshotting_finished,no_batches)> | Q064V2C56CNTCR | 174 |
 | `triage:needs_review` | [260515-3-client-sent-export-failure](groups/open/260515-3-client-sent-export-failure/case.md) | Costco Non Prod (default) - Audience 5689: Audience Export failure for 5689 sent to client. | Q15FI03XBQ4OW5 | 1 |
@@ -82,11 +81,12 @@ Alert facts: 698
 |---|---|---|---|---:|
 | `triage:snapshotting-schema`<br>`triage:tag_grouped`<br>`waiting:source-schema` | [260505-albertsons_6-snapshotting-schema-error](groups/waiting/260505-albertsons_6-snapshotting-schema-error/case.md) | Blocked on Albertsons source/schema remediation: scoped snapshotting logs show missing fields in RFM_Category_Group, and live pizza shows no later successful terminal export for the five alert-scoped runs. | Q2T09VCLN9MRZ8 | 5 |
 
-## Resolved (6)
+## Resolved (7)
 
 | Tags | Group | Summary | Incidents | Alerts |
 |---|---|---|---|---:|
 | `resolved:later-export-succeeded`<br>`triage:tag_grouped` | [260504-albertsons_6-liveramp-recovered](groups/resolved/260504-albertsons_6-liveramp-recovered/case.md) | Exports with prior LiveRamp failures have later healthy checked runs. | Q2T09VCLN9MRZ8<br>Q38JR11G2ENK2W | 140 |
+| `triage:needs_review`<br>`evidence:albertsons-liveramp-progress`<br>`resolved:merged` | [260511-albertsons_6-live-ramp-export-processing](groups/resolved/260511-albertsons_6-live-ramp-export-processing/case.md) | Merged into 260512-albertsons_6-liveramp-waiting-uploads: Same alert and same export-in-progress evidence; keep the broader Albertsons LiveRamp uploads monitoring group as the live case. | Q2T09VCLN9MRZ8 | 1 |
 | `resolved:export-healthy`<br>`triage:tag_grouped` | [260511-albertsons_6-liveramp-complete](groups/resolved/260511-albertsons_6-liveramp-complete/case.md) | Checked exports are healthy with no blocking export evidence. | Q2T09VCLN9MRZ8 | 4 |
 | `triage:needs_review`<br>`resolved:pd_closed_external` | [260515-76ers_131-zero-success](groups/resolved/260515-76ers_131-zero-success/case.md) | All attached PagerDuty incidents are resolved externally. | Q0Z4MMEOFYDHC7 | 1 |
 | `triage:needs_review`<br>`resolved:pd_closed_external` | [260515-flagstar_305-no-batches](groups/resolved/260515-flagstar_305-no-batches/case.md) | All attached PagerDuty incidents are resolved externally. | Q28HZS5TYC0NM9 | 1 |

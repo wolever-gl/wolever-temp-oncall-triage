@@ -14,20 +14,6 @@
     "path": "groups/new/260511-allegro_3-dv360-export-error/case.md"
   },
   {
-    "group_id": "260512-albertsons_6-client-sent-export-failure",
-    "state": "new",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "albertsons_6 client-sent-export-failure",
-    "summary": "albertsons (Albertsons Media) - Audience 2189: Audience Export failure for 2189 sent to client.",
-    "incident_ids": [
-      "Q2T09VCLN9MRZ8"
-    ],
-    "alert_count": 4,
-    "path": "groups/new/260512-albertsons_6-client-sent-export-failure/case.md"
-  },
-  {
     "group_id": "260513-451-client-sent-export-failure",
     "state": "new",
     "tags": [
@@ -630,20 +616,6 @@
     "path": "groups/open/260511-albertsons_6-live-ramp-export-error/case.md"
   },
   {
-    "group_id": "260511-albertsons_6-live-ramp-export-processing",
-    "state": "open",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "albertsons_6 live-ramp export-processing",
-    "summary": "albertsons (Albertsons Media): Exports for audience 12719 failed with states: <(snapshotting_finished,export_processing)>",
-    "incident_ids": [
-      "Q2T09VCLN9MRZ8"
-    ],
-    "alert_count": 1,
-    "path": "groups/open/260511-albertsons_6-live-ramp-export-processing/case.md"
-  },
-  {
     "group_id": "260511-albertsons_6-no-batches",
     "state": "open",
     "tags": [
@@ -684,6 +656,20 @@
     ],
     "alert_count": 3,
     "path": "groups/open/260511-albertsons_6-snapshotting-processing/case.md"
+  },
+  {
+    "group_id": "260512-albertsons_6-client-sent-export-failure",
+    "state": "open",
+    "tags": [
+      "triage:needs_review"
+    ],
+    "title": "albertsons_6 client-sent-export-failure",
+    "summary": "albertsons (Albertsons Media) - Audience 2189: Audience Export failure for 2189 sent to client.",
+    "incident_ids": [
+      "Q2T09VCLN9MRZ8"
+    ],
+    "alert_count": 4,
+    "path": "groups/open/260512-albertsons_6-client-sent-export-failure/case.md"
   },
   {
     "group_id": "260514-chghealthcare_395-client-sent-export-failure",
@@ -830,6 +816,23 @@
     ],
     "alert_count": 140,
     "path": "groups/resolved/260504-albertsons_6-liveramp-recovered/case.md"
+  },
+  {
+    "group_id": "260511-albertsons_6-live-ramp-export-processing",
+    "state": "resolved",
+    "tags": [
+      "triage:needs_review",
+      "evidence:albertsons-liveramp-progress",
+      "resolved:merged"
+    ],
+    "title": "albertsons_6 live-ramp export-processing",
+    "summary": "Merged into 260512-albertsons_6-liveramp-waiting-uploads: Same alert and same export-in-progress evidence; keep the broader Albertsons LiveRamp uploads monitoring group as the live case.",
+    "next_action": "Follow target group 260512-albertsons_6-liveramp-waiting-uploads.",
+    "incident_ids": [
+      "Q2T09VCLN9MRZ8"
+    ],
+    "alert_count": 1,
+    "path": "groups/resolved/260511-albertsons_6-live-ramp-export-processing/case.md"
   },
   {
     "group_id": "260511-albertsons_6-liveramp-complete",

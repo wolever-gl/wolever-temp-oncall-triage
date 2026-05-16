@@ -4,7 +4,7 @@
 
 > Generated file. Do not edit directly; put free-form investigation notes in `notes.md`.
 
-State: `new`
+State: `open`
 Tags: `triage:needs_review`
 Incidents: [Q2T09VCLN9MRZ8](https://growthloop.pagerduty.com/incidents/Q2T09VCLN9MRZ8)
 Alerts: 4
@@ -27,6 +27,18 @@ Representative alerts:
 - Q2T09VCLN9MRZ8/Q0GX8AZ1GWYKL9: 2026-05-11T21:27:07-07:00; albertsons_6; audience 10372. albertsons (Albertsons Media) - Audience 10372: Audience Export failure for 10372 sent to client.
 - Q2T09VCLN9MRZ8/Q0ODPXTYE0FORK: 2026-05-11T23:13:09-07:00; albertsons_6; audience 10370. albertsons (Albertsons Media) - Audience 10370: Audience Export failure for 10370 sent to client.
 - Q2T09VCLN9MRZ8/Q24L2JIWVY4GIS: 2026-05-12T01:04:24-07:00; albertsons_6; audience 2189. albertsons (Albertsons Media) - Audience 2189: Audience Export failure for 2189 sent to client.
+
+## Export Checks
+
+- Checks: 1.
+- States: `blocked`=1
+- Blockers seen: `missing_run_identity`
+
+Check evidence:
+- chk_q2t09vcln9mrz8_q24l2jiwvy4gis (Q2T09VCLN9MRZ8/Q24L2JIWVY4GIS): state=`blocked`.
+  Scope: env=albertsons; org=6; audience=2189.
+  Command: `glcli --env albertsons bifrost pizza --audience-id 2189 --org-id 6`
+  Blockers: `missing_run_identity`
 
 ## Next Action
 

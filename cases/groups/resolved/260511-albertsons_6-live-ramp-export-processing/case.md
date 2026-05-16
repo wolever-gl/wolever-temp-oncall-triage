@@ -4,14 +4,14 @@
 
 > Generated file. Do not edit directly; put free-form investigation notes in `notes.md`.
 
-State: `open`
-Tags: `triage:needs_review`
+State: `resolved`
+Tags: `triage:needs_review`, `evidence:albertsons-liveramp-progress`, `resolved:merged`
 Incidents: [Q2T09VCLN9MRZ8](https://growthloop.pagerduty.com/incidents/Q2T09VCLN9MRZ8)
 Alerts: 1
 
 ## Current Summary
 
-albertsons (Albertsons Media): Exports for audience 12719 failed with states: <(snapshotting_finished,export_processing)>
+Merged into 260512-albertsons_6-liveramp-waiting-uploads: Same alert and same export-in-progress evidence; keep the broader Albertsons LiveRamp uploads monitoring group as the live case.
 
 ## Alert Scope
 
@@ -32,7 +32,7 @@ Representative alerts:
 - States: `monitoring`=1
 
 Check evidence:
-- chk_q2t09vcln9mrz8_q06rn07m3bvdqb (Q2T09VCLN9MRZ8/Q06RN07M3BVDQB): state=`monitoring`, next_check_at=`2026-05-16T01:50:43.498Z`.
+- chk_q2t09vcln9mrz8_q06rn07m3bvdqb (Q2T09VCLN9MRZ8/Q06RN07M3BVDQB): state=`monitoring`, next_check_at=`2026-05-16T20:37:53.184Z`.
   Scope: env=albertsons; org=6; audience=12719; endpoint=app_liveramp_activation_44; destination=live_ramp_activation.
   Checked runs: `12719-live_ramp_activation_4469-webapp__2026-05-07T00:40:33+00:00`
   Command: `glcli --env albertsons bifrost pizza --audience-id 12719 --org-id 6`
@@ -40,7 +40,7 @@ Check evidence:
 
 ## Next Action
 
-Agent should gather evidence, choose/apply a runbook when appropriate, and update this case.
+Follow target group 260512-albertsons_6-liveramp-waiting-uploads.
 
 ## Decision Trail
 

@@ -1,0 +1,2 @@
+{"ts":"2026-05-16T16:36:53.567Z","actor":"oncall-triage","decision":"created_group","rationale":"Conservative deterministic grouping created a new group for v3|incident:Q2T09VCLN9MRZ8|org:albertsons_6|dest:live-ramp|class:export-processing."}
+{"ts":"2026-05-16T17:34:44.849Z","actor":"agent","decision":"transitioned_to_monitoring","rationale":"Scoped export check still shows the checked LiveRamp run in export_processing with no blockers or failed exports; keep monitoring until the next check."}

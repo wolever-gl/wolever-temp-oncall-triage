@@ -3508,7 +3508,7 @@
     "alert_id": "Q06RN07M3BVDQB",
     "state": "monitoring",
     "blockers": [],
-    "next_check_at": "2026-05-16T01:50:43.498Z",
+    "next_check_at": "2026-05-16T20:37:53.184Z",
     "scope": {
       "env": "albertsons",
       "org_id": "6",
@@ -5140,6 +5140,22 @@
     }
   },
   {
+    "check_id": "chk_q2t09vcln9mrz8_q24l2jiwvy4gis",
+    "incident_id": "Q2T09VCLN9MRZ8",
+    "alert_id": "Q24L2JIWVY4GIS",
+    "state": "blocked",
+    "blockers": [
+      "missing_run_identity"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "2189",
+      "checked_export_run_ids": [],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 2189 --org-id 6"
+    }
+  },
+  {
     "check_id": "chk_q2t09vcln9mrz8_q24s5ng93d2ik2",
     "incident_id": "Q2T09VCLN9MRZ8",
     "alert_id": "Q24S5NG93D2IK2",
@@ -5427,7 +5443,7 @@
     "alert_id": "Q2FA9QPTXF9MJM",
     "state": "monitoring",
     "blockers": [],
-    "next_check_at": "2026-05-16T01:50:43.498Z",
+    "next_check_at": "2026-05-16T20:38:21.402Z",
     "scope": {
       "env": "albertsons",
       "org_id": "6",
@@ -5927,7 +5943,7 @@
     "alert_id": "Q2TYR6XMVMLGTB",
     "state": "monitoring",
     "blockers": [],
-    "next_check_at": "2026-05-16T01:50:43.498Z",
+    "next_check_at": "2026-05-16T20:38:32.671Z",
     "scope": {
       "env": "albertsons",
       "org_id": "6",
@@ -6275,7 +6291,7 @@
     "alert_id": "Q3HGOVLPIQWNZ0",
     "state": "monitoring",
     "blockers": [],
-    "next_check_at": "2026-05-16T01:50:43.498Z",
+    "next_check_at": "2026-05-16T20:38:27.733Z",
     "scope": {
       "env": "albertsons",
       "org_id": "6",
