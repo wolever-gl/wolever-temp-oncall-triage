@@ -1,0 +1,28 @@
+{
+  "group_id": "260514-ford_310-client-sent-export-failure",
+  "state": "resolved",
+  "tags": [
+    "triage:needs_review",
+    "resolved:merged"
+  ],
+  "title": "ford_310 client-sent-export-failure",
+  "summary": "Merged into 260514-ford_310-dv360-export-error: Merge Ford audience 32921 client-sent alert into the active DV360 export-error case; current Pizza shows the client notification corresponds to the still-failing 32921 DV360 run, not a separate issue.",
+  "deterministic_key": "v3|incident:Q1TJJ4MEVOF1W3|org:ford_310|class:client-sent-export-failure",
+  "grouping_version": 3,
+  "created_at": "2026-05-16T00:38:01.850Z",
+  "updated_at": "2026-05-16T22:38:52.106Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q1TJJ4MEVOF1W3",
+      "alert_id": "Q1DMVWD0F3T9DI"
+    }
+  ],
+  "incident_ids": [
+    "Q1TJJ4MEVOF1W3"
+  ],
+  "related_group_ids": [
+    "260514-ford_310-dv360-export-error",
+    "grp_260514_ford_310_client_sent_export_failure_split_0073"
+  ],
+  "next_action": "Follow target group 260514-ford_310-dv360-export-error."
+}

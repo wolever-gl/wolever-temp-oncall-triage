@@ -1,7 +1,7 @@
 # On-call Triage Cases
 
-Generated: 2026-05-16T22:36:55.563Z
-Open groups: 44
+Generated: 2026-05-16T22:39:39.437Z
+Open groups: 43
 Alert facts: 698
 
 ## New (8)
@@ -17,7 +17,7 @@ Alert facts: 698
 | `triage:needs_review` | [260514-allegro_3-dv360-export-processing](groups/new/260514-allegro_3-dv360-export-processing/case.md) | allegro (Marketing): Exports for audience 1156 failed with states: <(snapshotting_finished,export_processing)> | Q2KT0WUDEVL42Q | 13 |
 | `triage:needs_review` | [260515-allegro_3-dv360-export-processing](groups/new/260515-allegro_3-dv360-export-processing/case.md) | allegro (Marketing): Exports for audience 605 failed with states: <(snapshotting_finished,export_processing)> | Q3GQQRY1UQLBSN | 1 |
 
-## Open (25)
+## Open (24)
 
 | Tags | Group | Summary | Incidents | Alerts |
 |---|---|---|---|---:|
@@ -30,9 +30,8 @@ Alert facts: 698
 | `triage:needs_review` | [260514-chghealthcare_395-client-sent-export-failure](groups/open/260514-chghealthcare_395-client-sent-export-failure/case.md) | chghealthcare (Global Medical Staffing) - Audience 30299: Audience Export failure for 30299 sent to client. | Q064V2C56CNTCR | 8 |
 | `triage:needs_review` | [260514-chghealthcare_395-no-batches](groups/open/260514-chghealthcare_395-no-batches/case.md) | chghealthcare (TESTING): Exports for signal 341 failed with states: <(snapshotting_finished,no_batches)> | Q064V2C56CNTCR | 174 |
 | `triage:needs_review` | [260514-evgo_402-client-sent-export-failure](groups/open/260514-evgo_402-client-sent-export-failure/case.md) | EVgo (default) - SignalRoute 373: SignalRoute Export failure for 373 sent to client. | Q157KO5ON9TWGO | 1 |
-| `triage:needs_review` | [260514-ford_310-client-sent-export-failure](groups/open/260514-ford_310-client-sent-export-failure/case.md) | ford (Marketing Production) - Audience 32921: Audience Export failure for 32921 sent to client. | Q1TJJ4MEVOF1W3 | 2 |
-| `triage:needs_review` | [260514-ford_310-client-sent-export-failure-02](groups/open/260514-ford_310-client-sent-export-failure-02/case.md) | ford (Marketing Production) - Audience 34059: Audience Export failure for 34059 sent to client. | Q3HWKW0FS3VTHE | 1 |
-| `triage:needs_review` | [260514-ford_310-dv360-export-error](groups/open/260514-ford_310-dv360-export-error/case.md) | ford (Marketing Production): Exports for audience 34062 failed with states: <(,export_error)> | Q3HWKW0FS3VTHE | 2 |
+| `triage:needs_review`<br>`triage:no-batches-zero-rows` | [260514-ford_310-client-sent-export-failure-02](groups/open/260514-ford_310-client-sent-export-failure-02/case.md) | Needs investigation: Ford audience 34059 is not a recovered client-sent duplicate; current 2026-05-16 Pizza rows across destinations are snapshotting_finished/no_batches with total_rows=0 and failures=0. | Q3HWKW0FS3VTHE | 1 |
+| `triage:needs_review`<br>`triage:dv360-export-error` | [260514-ford_310-dv360-export-error](groups/open/260514-ford_310-dv360-export-error/case.md) | Needs investigation: Ford audience 32921 still fails DV360 on the latest 2026-05-16 scheduled run (export_error, failures=9580), while sibling destinations are export_finished. Audience 34062 was split out as recovered. | Q1TJJ4MEVOF1W3<br>Q3HWKW0FS3VTHE | 2 |
 | `triage:needs_review` | [260514-growthloop_268-client-sent-export-failure](groups/open/260514-growthloop_268-client-sent-export-failure/case.md) | growthloop (default) - Audience 35826: Audience Export failure for 35826 sent to client. | Q3PW7IHI1KCDWS | 1 |
 | `triage:needs_review` | [260514-priceline_370-no-batches](groups/open/260514-priceline_370-no-batches/case.md) | priceline (default): Exports for signal 783 failed with states: <(snapshotting_finished,no_batches)> | Q1YQV4ERKAIVMF | 151 |
 | `triage:needs_review` | [260514-trumanshow_336-adobe-experience-platform-export-error](groups/open/260514-trumanshow_336-adobe-experience-platform-export-error/case.md) | trumanshow (VZN): Exports for audience 36199 failed with states: <(snapshotting_finished,export_error)> | Q12A5QFIM3F9LN | 1 |
@@ -68,7 +67,7 @@ Alert facts: 698
 | `triage:needs_review`<br>`triage:export-error`<br>`waiting:client_cm360_matchid_config` | [260514-451-campaign-manager-360-export-error](groups/waiting/260514-451-campaign-manager-360-export-error/case.md) | Waiting on ASU/WPP/client configuration: SignalRoute 981 keeps failing CM360 uploads with NOT_FOUND for Floodlight activity/config MatchID lookups; retry alone is unlikely to help until the client confirms/fixes the MatchID/Floodlight identifier setup. | Q3XQABQFPPVNT5 | 2 |
 | `triage:needs_review`<br>`triage:client_schema_missing`<br>`waiting:client_schema` | [260515-gopuff_544-snapshotting-error](groups/waiting/260515-gopuff_544-snapshotting-error/case.md) | Waiting on support/client remediation for missing source column CORE.GOPUFF_ORDER_ITEMS.CLASS in GoPuff Snowflake source schema; support thread opened. | Q1X9CE7BIDK9MV | 1 |
 
-## Resolved (28)
+## Resolved (31)
 
 | Tags | Group | Summary | Incidents | Alerts |
 |---|---|---|---|---:|
@@ -81,6 +80,7 @@ Alert facts: 698
 | `triage:needs_review`<br>`resolved:merged` | [260513-451-client-sent-export-failure](groups/resolved/260513-451-client-sent-export-failure/case.md) | Merged into 260514-451-salesforce-audience-export-error: Audience 31982 client-sent alert is the notification counterpart of the Salesforce audience export-error case; latest Pizza still shows 31982 export_error. | Q3XQABQFPPVNT5 | 1 |
 | `triage:needs_review`<br>`resolved:export-healthy` | [260513-ford_310-no-batches](groups/resolved/260513-ford_310-no-batches/case.md) | Resolved: 18 Ford no-batches alert-scoped exports are healthy after destination-scoped Pizza checks; the single 34010 reddit_ads failed-count case was split out. | Q1TJJ4MEVOF1W3 | 18 |
 | `triage:needs_review`<br>`evidence:retry-succeeded` | [260514-albertsons_6-client-sent-export-failure](groups/resolved/260514-albertsons_6-client-sent-export-failure/case.md) | Resolved: the remaining six 5/14 Albertsons client-sent alerts all have later Pizza export_finished runs after the alert time. | Q38JR11G2ENK2W | 6 |
+| `triage:needs_review`<br>`resolved:merged` | [260514-ford_310-client-sent-export-failure](groups/resolved/260514-ford_310-client-sent-export-failure/case.md) | Merged into 260514-ford_310-dv360-export-error: Merge Ford audience 32921 client-sent alert into the active DV360 export-error case; current Pizza shows the client notification corresponds to the still-failing 32921 DV360 run, not a separate issue. | Q1TJJ4MEVOF1W3 | 1 |
 | `triage:needs_review`<br>`resolved:export-healthy` | [260514-trumanshow_336-no-batches](groups/resolved/260514-trumanshow_336-no-batches/case.md) | Auto-resolved from Pizza export checks: all 2 alert-scoped export check(s) are healthy_closed with no blockers. | Q12A5QFIM3F9LN | 2 |
 | `triage:needs_review`<br>`resolved:pd_closed_external` | [260515-76ers_131-zero-success](groups/resolved/260515-76ers_131-zero-success/case.md) | All attached PagerDuty incidents are resolved externally. | Q0Z4MMEOFYDHC7 | 1 |
 | `triage:needs_review`<br>`resolved:later-export-succeeded` | [260515-albertsons_6-live-ramp-export-error](groups/resolved/260515-albertsons_6-live-ramp-export-error/case.md) | Resolved from Albertsons LiveRamp tagger evidence: the alert had a later healthy run after the export error. | Q38JR11G2ENK2W | 1 |
@@ -100,3 +100,5 @@ Alert facts: 698
 | `triage:needs_review`<br>`evidence:retry-succeeded` | [grp_260513_ford_310_no_batches_split_0072](groups/resolved/grp_260513_ford_310_no_batches_split_0072/case.md) | Resolved: Ford audience 34010 reddit_ads had a failed-count alert on 2026-05-13, but later 2026-05-14 through 2026-05-16 runs succeeded with zero failures. | Q1TJJ4MEVOF1W3 | 1 |
 | `triage:needs_review`<br>`evidence:retry-succeeded` | [grp_260514_451_campaign_manager_360_export_error_split_0071](groups/resolved/grp_260514_451_campaign_manager_360_export_error_split_0071/case.md) | Resolved: ASU SignalRoute 984 Campaign Manager 360 export has a later export_finished run. | Q3XQABQFPPVNT5 | 1 |
 | `triage:needs_review`<br>`triage:snapshotting-error`<br>`bug:service-quervice`<br>`resolved:merged` | [grp_260514_albertsons_6_client_sent_export_failure_split_0067](groups/resolved/grp_260514_albertsons_6_client_sent_export_failure_split_0067/case.md) | Merged into grp_260513_albertsons_6_client_sent_export_failure_split_0066: Same Albertsons platform failure class: both audience 8473 and 10073 failed LiveRamp snapshotting pre_snapshotting_check with Quervice 502/upstream premature close and no later success. Track as one Quervice service-side investigation. | Q38JR11G2ENK2W | 1 |
+| `triage:needs_review`<br>`resolved:recovered` | [grp_260514_ford_310_client_sent_export_failure_split_0073](groups/resolved/grp_260514_ford_310_client_sent_export_failure_split_0073/case.md) | Resolved: audience 34062 recovered; current Pizza shows the 2026-05-16 DV360 export_finished with zero failures, so the client-sent alert is stale. | Q1TJJ4MEVOF1W3 | 1 |
+| `triage:needs_review`<br>`resolved:recovered` | [grp_260514_ford_310_dv360_export_error_split_0074](groups/resolved/grp_260514_ford_310_dv360_export_error_split_0074/case.md) | Resolved: audience 34062 DV360 recovered; latest 2026-05-16 DV360 run export_finished with zero failures. | Q3HWKW0FS3VTHE | 1 |

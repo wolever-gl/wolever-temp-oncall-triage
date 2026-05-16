@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-05-16T22:36:55.563Z",
-  "open_count": 44,
+  "generated_at": "2026-05-16T22:39:39.437Z",
+  "open_count": 43,
   "groups": [
     {
       "group_id": "260513-allegro_3-client-sent-export-failure",
@@ -242,27 +242,14 @@
       "path": "groups/open/260514-evgo_402-client-sent-export-failure/case.md"
     },
     {
-      "group_id": "260514-ford_310-client-sent-export-failure",
-      "state": "open",
-      "tags": [
-        "triage:needs_review"
-      ],
-      "title": "ford_310 client-sent-export-failure",
-      "summary": "ford (Marketing Production) - Audience 32921: Audience Export failure for 32921 sent to client.",
-      "incident_ids": [
-        "Q1TJJ4MEVOF1W3"
-      ],
-      "alert_count": 2,
-      "path": "groups/open/260514-ford_310-client-sent-export-failure/case.md"
-    },
-    {
       "group_id": "260514-ford_310-client-sent-export-failure-02",
       "state": "open",
       "tags": [
-        "triage:needs_review"
+        "triage:needs_review",
+        "triage:no-batches-zero-rows"
       ],
       "title": "ford_310 client-sent-export-failure",
-      "summary": "ford (Marketing Production) - Audience 34059: Audience Export failure for 34059 sent to client.",
+      "summary": "Needs investigation: Ford audience 34059 is not a recovered client-sent duplicate; current 2026-05-16 Pizza rows across destinations are snapshotting_finished/no_batches with total_rows=0 and failures=0.",
       "incident_ids": [
         "Q3HWKW0FS3VTHE"
       ],
@@ -273,11 +260,13 @@
       "group_id": "260514-ford_310-dv360-export-error",
       "state": "open",
       "tags": [
-        "triage:needs_review"
+        "triage:needs_review",
+        "triage:dv360-export-error"
       ],
       "title": "ford_310 dv360 export-error",
-      "summary": "ford (Marketing Production): Exports for audience 34062 failed with states: <(,export_error)>",
+      "summary": "Needs investigation: Ford audience 32921 still fails DV360 on the latest 2026-05-16 scheduled run (export_error, failures=9580), while sibling destinations are export_finished. Audience 34062 was split out as recovered.",
       "incident_ids": [
+        "Q1TJJ4MEVOF1W3",
         "Q3HWKW0FS3VTHE"
       ],
       "alert_count": 2,
@@ -780,6 +769,22 @@
       "path": "groups/resolved/260514-albertsons_6-client-sent-export-failure/case.md"
     },
     {
+      "group_id": "260514-ford_310-client-sent-export-failure",
+      "state": "resolved",
+      "tags": [
+        "triage:needs_review",
+        "resolved:merged"
+      ],
+      "title": "ford_310 client-sent-export-failure",
+      "summary": "Merged into 260514-ford_310-dv360-export-error: Merge Ford audience 32921 client-sent alert into the active DV360 export-error case; current Pizza shows the client notification corresponds to the still-failing 32921 DV360 run, not a separate issue.",
+      "next_action": "Follow target group 260514-ford_310-dv360-export-error.",
+      "incident_ids": [
+        "Q1TJJ4MEVOF1W3"
+      ],
+      "alert_count": 1,
+      "path": "groups/resolved/260514-ford_310-client-sent-export-failure/case.md"
+    },
+    {
       "group_id": "260514-trumanshow_336-no-batches",
       "state": "resolved",
       "tags": [
@@ -1068,6 +1073,36 @@
       ],
       "alert_count": 1,
       "path": "groups/resolved/grp_260514_albertsons_6_client_sent_export_failure_split_0067/case.md"
+    },
+    {
+      "group_id": "grp_260514_ford_310_client_sent_export_failure_split_0073",
+      "state": "resolved",
+      "tags": [
+        "triage:needs_review",
+        "resolved:recovered"
+      ],
+      "title": "ford_310 client-sent-export-failure split",
+      "summary": "Resolved: audience 34062 recovered; current Pizza shows the 2026-05-16 DV360 export_finished with zero failures, so the client-sent alert is stale.",
+      "incident_ids": [
+        "Q1TJJ4MEVOF1W3"
+      ],
+      "alert_count": 1,
+      "path": "groups/resolved/grp_260514_ford_310_client_sent_export_failure_split_0073/case.md"
+    },
+    {
+      "group_id": "grp_260514_ford_310_dv360_export_error_split_0074",
+      "state": "resolved",
+      "tags": [
+        "triage:needs_review",
+        "resolved:recovered"
+      ],
+      "title": "ford_310 dv360 export-error split",
+      "summary": "Resolved: audience 34062 DV360 recovered; latest 2026-05-16 DV360 run export_finished with zero failures.",
+      "incident_ids": [
+        "Q3HWKW0FS3VTHE"
+      ],
+      "alert_count": 1,
+      "path": "groups/resolved/grp_260514_ford_310_dv360_export_error_split_0074/case.md"
     }
   ],
   "alert_count": 698

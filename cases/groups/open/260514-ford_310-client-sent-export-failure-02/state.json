@@ -2,14 +2,15 @@
   "group_id": "260514-ford_310-client-sent-export-failure-02",
   "state": "open",
   "tags": [
-    "triage:needs_review"
+    "triage:needs_review",
+    "triage:no-batches-zero-rows"
   ],
   "title": "ford_310 client-sent-export-failure",
-  "summary": "ford (Marketing Production) - Audience 34059: Audience Export failure for 34059 sent to client.",
+  "summary": "Needs investigation: Ford audience 34059 is not a recovered client-sent duplicate; current 2026-05-16 Pizza rows across destinations are snapshotting_finished/no_batches with total_rows=0 and failures=0.",
   "deterministic_key": "v3|incident:Q3HWKW0FS3VTHE|org:ford_310|class:client-sent-export-failure",
   "grouping_version": 3,
   "created_at": "2026-05-16T00:38:01.850Z",
-  "updated_at": "2026-05-16T20:48:01.778Z",
+  "updated_at": "2026-05-16T22:39:04.476Z",
   "alert_refs": [
     {
       "incident_id": "Q3HWKW0FS3VTHE",
