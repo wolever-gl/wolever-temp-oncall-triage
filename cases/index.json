@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-05-17T16:24:33.122Z",
-  "open_count": 35,
+  "generated_at": "2026-05-17T16:30:24.692Z",
+  "open_count": 33,
   "groups": [
     {
       "group_id": "260511-albertsons_6-snapshotting-processing",
@@ -171,10 +171,11 @@
       "group_id": "260514-growthloop_268-client-sent-export-failure",
       "state": "open",
       "tags": [
-        "triage:needs_review"
+        "triage:needs_review",
+        "triage:customer_bq_permission"
       ],
       "title": "growthloop_268 client-sent-export-failure",
-      "summary": "growthloop (default) - Audience 35826: Audience Export failure for 35826 sent to client.",
+      "summary": "Needs communication before waiting: GrowthLoop audience 35826 is blocked by customer-owned BigQuery authorization. Quervice pre_snapshotting_check cannot create fs-cmd-center.flywheel_system metadata tables because bigquery.tables.create is denied; latest structured error is owner=customer and retryable=false.",
       "incident_ids": [
         "Q3PW7IHI1KCDWS"
       ],
@@ -194,34 +195,6 @@
       ],
       "alert_count": 151,
       "path": "groups/open/260514-priceline_370-no-batches/case.md"
-    },
-    {
-      "group_id": "260515-174-snapshotting-error",
-      "state": "open",
-      "tags": [
-        "triage:needs_review"
-      ],
-      "title": "174 snapshotting-error",
-      "summary": "NJ Devils (default): Exports for audience 23746 failed with states: <(snapshotting_error,no_batches)>",
-      "incident_ids": [
-        "Q20XI8KK8YWADB"
-      ],
-      "alert_count": 1,
-      "path": "groups/open/260515-174-snapshotting-error/case.md"
-    },
-    {
-      "group_id": "260515-174-zero-success",
-      "state": "open",
-      "tags": [
-        "triage:needs_review"
-      ],
-      "title": "174 zero-success",
-      "summary": "NJ Devils (default) - Audience 36378: 0 successfull_exports from pizza tracker found 10 minutes after new export",
-      "incident_ids": [
-        "Q20XI8KK8YWADB"
-      ],
-      "alert_count": 1,
-      "path": "groups/open/260515-174-zero-success/case.md"
     },
     {
       "group_id": "260515-3-client-sent-export-failure",
@@ -813,6 +786,36 @@
       ],
       "alert_count": 2,
       "path": "groups/resolved/260514-trumanshow_336-no-batches/case.md"
+    },
+    {
+      "group_id": "260515-174-snapshotting-error",
+      "state": "resolved",
+      "tags": [
+        "triage:needs_review",
+        "resolved:recovered"
+      ],
+      "title": "174 snapshotting-error",
+      "summary": "Resolved: NJ Devils audience 23746 recovered after the alert-scoped scheduled snapshotting errors; a later 2026-05-15 webapp run completed snapshotting_finished/export_finished.",
+      "incident_ids": [
+        "Q20XI8KK8YWADB"
+      ],
+      "alert_count": 1,
+      "path": "groups/resolved/260515-174-snapshotting-error/case.md"
+    },
+    {
+      "group_id": "260515-174-zero-success",
+      "state": "resolved",
+      "tags": [
+        "triage:needs_review",
+        "resolved:recovered"
+      ],
+      "title": "174 zero-success",
+      "summary": "Resolved: NJ Devils audience 36378 is no longer zero-success; subsequent Marketing Cloud runs completed export_finished with thousands of adds after the alert.",
+      "incident_ids": [
+        "Q20XI8KK8YWADB"
+      ],
+      "alert_count": 1,
+      "path": "groups/resolved/260515-174-zero-success/case.md"
     },
     {
       "group_id": "260515-451-client-sent-export-failure",

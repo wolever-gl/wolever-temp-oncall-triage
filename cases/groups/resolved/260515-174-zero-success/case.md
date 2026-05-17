@@ -4,14 +4,14 @@
 
 > Generated file. Do not edit directly; put free-form investigation notes in `notes.md`.
 
-State: `open`
-Tags: `triage:needs_review`
+State: `resolved`
+Tags: `triage:needs_review`, `resolved:recovered`
 Incidents: [Q20XI8KK8YWADB](https://growthloop.pagerduty.com/incidents/Q20XI8KK8YWADB)
 Alerts: 1
 
 ## Current Summary
 
-NJ Devils (default) - Audience 36378: 0 successfull_exports from pizza tracker found 10 minutes after new export
+Resolved: NJ Devils audience 36378 is no longer zero-success; subsequent Marketing Cloud runs completed export_finished with thousands of adds after the alert.
 
 ## Alert Scope
 
@@ -37,6 +37,12 @@ Check evidence:
   Command: `glcli --env prod bifrost pizza --audience-id 36378 --org-id 174`
   Blockers: `failed_export_count`
   Run 36378-marketing_cloud_22179-scheduled__2026-05-16T10:00:00+00:00: health=`blocked`; blockers=failed_export_count; created=2026-05-16T11:51:48.300382+00:00; snapshotting=snapshotting_finished; export=export_finished; failed=1.
+
+## Recent Evidence
+
+- Audience 36378 has successful exports after the zero-success alert. Pizza shows 36378-marketing_cloud_22179-webapp__2026-05-15T13:32:06+00:00 completed with snapshotting_finished/export_finished, 44,786 adds, 3 failures, and 5 rejects; the later scheduled run 2026-05-16T10:00:00+00:00 also completed export_finished with 5,121 adds, 58 removes, and 1 failure. This is no longer a zero-success condition.
+  Source: `glcli bifrost pizza`; kind: `pizza`; captured: `2026-05-17T16:30:05.536Z`.
+  Command: `PATH=/Users/wolever/.local/share/mise/installs/gcloud/562.0.0/bin:$PATH glcli --env prod bifrost pizza --audience-id 36378 --org-id 174 --format json`
 
 ## Next Action
 

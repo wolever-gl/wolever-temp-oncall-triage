@@ -1,15 +1,16 @@
 {
   "group_id": "260515-174-zero-success",
-  "state": "open",
+  "state": "resolved",
   "tags": [
-    "triage:needs_review"
+    "triage:needs_review",
+    "resolved:recovered"
   ],
   "title": "174 zero-success",
-  "summary": "NJ Devils (default) - Audience 36378: 0 successfull_exports from pizza tracker found 10 minutes after new export",
+  "summary": "Resolved: NJ Devils audience 36378 is no longer zero-success; subsequent Marketing Cloud runs completed export_finished with thousands of adds after the alert.",
   "deterministic_key": "v3|incident:Q20XI8KK8YWADB|org:174|class:zero-success",
   "grouping_version": 3,
   "created_at": "2026-05-16T00:38:01.850Z",
-  "updated_at": "2026-05-16T21:03:28.743Z",
+  "updated_at": "2026-05-17T16:30:12.717Z",
   "alert_refs": [
     {
       "incident_id": "Q20XI8KK8YWADB",

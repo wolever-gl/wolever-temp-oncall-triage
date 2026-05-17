@@ -1,15 +1,16 @@
 {
   "group_id": "260515-174-snapshotting-error",
-  "state": "open",
+  "state": "resolved",
   "tags": [
-    "triage:needs_review"
+    "triage:needs_review",
+    "resolved:recovered"
   ],
   "title": "174 snapshotting-error",
-  "summary": "NJ Devils (default): Exports for audience 23746 failed with states: <(snapshotting_error,no_batches)>",
+  "summary": "Resolved: NJ Devils audience 23746 recovered after the alert-scoped scheduled snapshotting errors; a later 2026-05-15 webapp run completed snapshotting_finished/export_finished.",
   "deterministic_key": "v3|incident:Q20XI8KK8YWADB|org:174|class:snapshotting-error",
   "grouping_version": 3,
   "created_at": "2026-05-16T00:38:01.850Z",
-  "updated_at": "2026-05-16T21:03:22.735Z",
+  "updated_at": "2026-05-17T16:30:12.717Z",
   "alert_refs": [
     {
       "incident_id": "Q20XI8KK8YWADB",
