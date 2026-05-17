@@ -4,14 +4,14 @@
 
 > Generated file. Do not edit directly; put free-form investigation notes in `notes.md`.
 
-State: `resolved`
-Tags: `triage:needs_review`, `resolved:recovered`
+State: `open`
+Tags: `triage:needs_review`, `resolved:recovered`, `triage:needs_delta_recovery_evidence`
 Incidents: [Q20XI8KK8YWADB](https://growthloop.pagerduty.com/incidents/Q20XI8KK8YWADB)
 Alerts: 1
 
 ## Current Summary
 
-Resolved: NJ Devils audience 23746 recovered after the alert-scoped scheduled snapshotting errors; a later 2026-05-15 webapp run completed snapshotting_finished/export_finished.
+Reopened: do not resolve until snapshotting-delta-recovery is satisfied. Later Pizza success exists, but the case still needs scoped stage evidence proving no stranded delta files or missed delta window from the failed scheduled runs.
 
 ## Alert Scope
 
@@ -43,6 +43,8 @@ Check evidence:
 
 ## Recent Evidence
 
+- Reopened: previous closure did not satisfy snapshotting-delta-recovery. Later Pizza success alone is insufficient for a delta export. Need scoped logs for failed scheduled runs and later same-scope run proving whether snapshot_history_write_up, metadata_write_up, delta_history_write_up, unload, and unloaded_deltas_write completed, and whether any failed-run deltas/files were stranded or later selected/marked.
+  Source: `runbook review`; kind: `triage`; captured: `2026-05-17T16:37:00.561Z`.
 - Audience 23746 recovered after the alert-scoped scheduled snapshotting errors. Pizza shows a later 2026-05-15 15:04:39 UTC webapp run, 23746-marketing_cloud_14765-webapp__2026-05-15T14:59:02+00:00, with snapshotting_finished/export_finished, 184,416 total rows, 41,272 adds, 142,279 removes, 857 rejects, and 8 failures. This confirms snapshotting and export both completed after the 2026-05-13 scheduled snapshotting_error/no_batches alert.
   Source: `glcli bifrost pizza`; kind: `pizza`; captured: `2026-05-17T16:30:05.536Z`.
   Command: `PATH=/Users/wolever/.local/share/mise/installs/gcloud/562.0.0/bin:$PATH glcli --env prod bifrost pizza --audience-id 23746 --org-id 174 --format json`

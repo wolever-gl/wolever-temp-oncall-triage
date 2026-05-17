@@ -1,10 +1,10 @@
 # On-call Triage Cases
 
-Generated: 2026-05-17T16:33:14.734Z
-Open groups: 32
+Generated: 2026-05-17T16:37:18.075Z
+Open groups: 34
 Alert facts: 698
 
-## Open (20)
+## Open (22)
 
 | Tags | Group | Summary | Incidents | Alerts |
 |---|---|---|---|---:|
@@ -20,6 +20,8 @@ Alert facts: 698
 | `triage:needs_review` | [260514-chghealthcare_395-no-batches](groups/open/260514-chghealthcare_395-no-batches/case.md) | chghealthcare (TESTING): Exports for signal 341 failed with states: <(snapshotting_finished,no_batches)> | Q064V2C56CNTCR | 174 |
 | `triage:needs_review`<br>`triage:dv360-export-error` | [260514-ford_310-dv360-export-error](groups/open/260514-ford_310-dv360-export-error/case.md) | Needs investigation: Ford audience 32921 still fails DV360 on the latest 2026-05-16 scheduled run (export_error, failures=9580), while sibling destinations are export_finished. Audience 34062 was split out as recovered. | Q1TJJ4MEVOF1W3<br>Q3HWKW0FS3VTHE | 4 |
 | `triage:needs_review` | [260514-priceline_370-no-batches](groups/open/260514-priceline_370-no-batches/case.md) | priceline (default): Exports for signal 783 failed with states: <(snapshotting_finished,no_batches)> | Q1YQV4ERKAIVMF | 151 |
+| `triage:needs_review`<br>`resolved:recovered`<br>`triage:needs_delta_recovery_evidence` | [260515-174-snapshotting-error](groups/open/260515-174-snapshotting-error/case.md) | Reopened: do not resolve until snapshotting-delta-recovery is satisfied. Later Pizza success exists, but the case still needs scoped stage evidence proving no stranded delta files or missed delta window from the failed scheduled runs. | Q20XI8KK8YWADB | 1 |
+| `triage:needs_review`<br>`resolved:recovered`<br>`triage:needs_recovery_evidence` | [260515-174-zero-success](groups/open/260515-174-zero-success/case.md) | Reopened: later Pizza rows show export_finished, but preflight correctly did not auto-close because the later runs still had failed rows and the case lacks scoped evidence that the alert condition is safely recovered. | Q20XI8KK8YWADB | 1 |
 | `triage:needs_review` | [260515-3-client-sent-export-failure](groups/open/260515-3-client-sent-export-failure/case.md) | Costco Non Prod (default) - Audience 5689: Audience Export failure for 5689 sent to client. | Q15FI03XBQ4OW5 | 1 |
 | `triage:needs_review` | [260515-378-client-sent-export-failure](groups/open/260515-378-client-sent-export-failure/case.md) | Cincinnati Reds (default) - Audience 34484: Audience Export failure for 34484 sent to client. | Q33KFL1KESEMVC | 1 |
 | `triage:needs_review` | [260515-451-snapshotting-error](groups/open/260515-451-snapshotting-error/case.md) | ASU Enterprise Partners (Alumni): Exports for audience 26039 failed with states: <(snapshotting_error,no_batches)> | Q1UC14QNZK76EZ | 6 |
@@ -51,7 +53,7 @@ Alert facts: 698
 | `triage:needs_review`<br>`waiting:source-schema` | [260515-378-snapshotting-error](groups/waiting/260515-378-snapshotting-error/case.md) | Waiting on source/schema remediation for Cincinnati Reds SignalRoute 891: latest Pizza run still fails snapshot_history_write_up with a non-retryable BigQuery column type mismatch (source tickets_status INT64 into snapshot history tickets_status STRING); no later healthy export exists. | Q1QD2CX8MRAYBW | 2 |
 | `triage:needs_review`<br>`triage:client_schema_missing`<br>`waiting:client_schema` | [260515-gopuff_544-snapshotting-error](groups/waiting/260515-gopuff_544-snapshotting-error/case.md) | Waiting on support/client remediation for missing source column CORE.GOPUFF_ORDER_ITEMS.CLASS in GoPuff Snowflake source schema; support thread opened. | Q1X9CE7BIDK9MV | 1 |
 
-## Resolved (42)
+## Resolved (40)
 
 | Tags | Group | Summary | Incidents | Alerts |
 |---|---|---|---|---:|
@@ -74,8 +76,6 @@ Alert facts: 698
 | `triage:needs_review`<br>`triage:no-batches-zero-rows`<br>`resolved:export-healthy` | [260514-ford_310-client-sent-export-failure-02](groups/resolved/260514-ford_310-client-sent-export-failure-02/case.md) | Auto-resolved from Pizza export checks: all 1 alert-scoped export check(s) are healthy_closed with no blockers. | Q3HWKW0FS3VTHE | 1 |
 | `triage:needs_review`<br>`triage:customer_bq_permission`<br>`resolved:internal-test-account` | [260514-growthloop_268-client-sent-export-failure](groups/resolved/260514-growthloop_268-client-sent-export-failure/case.md) | Resolved: this is a GrowthLoop internal test account/audience, so it is not customer-impacting and does not need external follow-up. | Q3PW7IHI1KCDWS | 1 |
 | `triage:needs_review`<br>`resolved:export-healthy` | [260514-trumanshow_336-no-batches](groups/resolved/260514-trumanshow_336-no-batches/case.md) | Auto-resolved from Pizza export checks: all 2 alert-scoped export check(s) are healthy_closed with no blockers. | Q12A5QFIM3F9LN | 2 |
-| `triage:needs_review`<br>`resolved:recovered` | [260515-174-snapshotting-error](groups/resolved/260515-174-snapshotting-error/case.md) | Resolved: NJ Devils audience 23746 recovered after the alert-scoped scheduled snapshotting errors; a later 2026-05-15 webapp run completed snapshotting_finished/export_finished. | Q20XI8KK8YWADB | 1 |
-| `triage:needs_review`<br>`resolved:recovered` | [260515-174-zero-success](groups/resolved/260515-174-zero-success/case.md) | Resolved: NJ Devils audience 36378 is no longer zero-success; subsequent Marketing Cloud runs completed export_finished with thousands of adds after the alert. | Q20XI8KK8YWADB | 1 |
 | `triage:needs_review`<br>`resolved:merged` | [260515-451-client-sent-export-failure](groups/resolved/260515-451-client-sent-export-failure/case.md) | Merged into 260514-451-campaign-manager-360-export-error: SignalRoute 995 client-sent alert is another ASU CM360 endpoint app_campaign_manager_360_2130 failure in the same client/config family as the waiting SignalRoute 981 CM360 case; latest logs show StandardCM360Service NOT_FOUND/INVALID_ARGUMENT for the same Floodlight config/activity family, so track remediation with the existing ASU CM360 waiting case. | Q31XLLHUNNMAK9 | 1 |
 | `triage:needs_review`<br>`resolved:pd_closed_external` | [260515-76ers_131-zero-success](groups/resolved/260515-76ers_131-zero-success/case.md) | All attached PagerDuty incidents are resolved externally. | Q0Z4MMEOFYDHC7 | 1 |
 | `triage:needs_review`<br>`resolved:later-export-succeeded` | [260515-albertsons_6-live-ramp-export-error](groups/resolved/260515-albertsons_6-live-ramp-export-error/case.md) | Resolved from Albertsons LiveRamp tagger evidence: the alert had a later healthy run after the export error. | Q38JR11G2ENK2W | 1 |

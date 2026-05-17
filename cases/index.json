@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-05-17T16:33:14.734Z",
-  "open_count": 32,
+  "generated_at": "2026-05-17T16:37:18.075Z",
+  "open_count": 34,
   "groups": [
     {
       "group_id": "260511-albertsons_6-snapshotting-processing",
@@ -180,6 +180,38 @@
       ],
       "alert_count": 151,
       "path": "groups/open/260514-priceline_370-no-batches/case.md"
+    },
+    {
+      "group_id": "260515-174-snapshotting-error",
+      "state": "open",
+      "tags": [
+        "triage:needs_review",
+        "resolved:recovered",
+        "triage:needs_delta_recovery_evidence"
+      ],
+      "title": "174 snapshotting-error",
+      "summary": "Reopened: do not resolve until snapshotting-delta-recovery is satisfied. Later Pizza success exists, but the case still needs scoped stage evidence proving no stranded delta files or missed delta window from the failed scheduled runs.",
+      "incident_ids": [
+        "Q20XI8KK8YWADB"
+      ],
+      "alert_count": 1,
+      "path": "groups/open/260515-174-snapshotting-error/case.md"
+    },
+    {
+      "group_id": "260515-174-zero-success",
+      "state": "open",
+      "tags": [
+        "triage:needs_review",
+        "resolved:recovered",
+        "triage:needs_recovery_evidence"
+      ],
+      "title": "174 zero-success",
+      "summary": "Reopened: later Pizza rows show export_finished, but preflight correctly did not auto-close because the later runs still had failed rows and the case lacks scoped evidence that the alert condition is safely recovered.",
+      "incident_ids": [
+        "Q20XI8KK8YWADB"
+      ],
+      "alert_count": 1,
+      "path": "groups/open/260515-174-zero-success/case.md"
     },
     {
       "group_id": "260515-3-client-sent-export-failure",
@@ -787,36 +819,6 @@
       ],
       "alert_count": 2,
       "path": "groups/resolved/260514-trumanshow_336-no-batches/case.md"
-    },
-    {
-      "group_id": "260515-174-snapshotting-error",
-      "state": "resolved",
-      "tags": [
-        "triage:needs_review",
-        "resolved:recovered"
-      ],
-      "title": "174 snapshotting-error",
-      "summary": "Resolved: NJ Devils audience 23746 recovered after the alert-scoped scheduled snapshotting errors; a later 2026-05-15 webapp run completed snapshotting_finished/export_finished.",
-      "incident_ids": [
-        "Q20XI8KK8YWADB"
-      ],
-      "alert_count": 1,
-      "path": "groups/resolved/260515-174-snapshotting-error/case.md"
-    },
-    {
-      "group_id": "260515-174-zero-success",
-      "state": "resolved",
-      "tags": [
-        "triage:needs_review",
-        "resolved:recovered"
-      ],
-      "title": "174 zero-success",
-      "summary": "Resolved: NJ Devils audience 36378 is no longer zero-success; subsequent Marketing Cloud runs completed export_finished with thousands of adds after the alert.",
-      "incident_ids": [
-        "Q20XI8KK8YWADB"
-      ],
-      "alert_count": 1,
-      "path": "groups/resolved/260515-174-zero-success/case.md"
     },
     {
       "group_id": "260515-451-client-sent-export-failure",

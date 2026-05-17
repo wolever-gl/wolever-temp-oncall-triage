@@ -1,16 +1,17 @@
 {
   "group_id": "260515-174-zero-success",
-  "state": "resolved",
+  "state": "open",
   "tags": [
     "triage:needs_review",
-    "resolved:recovered"
+    "resolved:recovered",
+    "triage:needs_recovery_evidence"
   ],
   "title": "174 zero-success",
-  "summary": "Resolved: NJ Devils audience 36378 is no longer zero-success; subsequent Marketing Cloud runs completed export_finished with thousands of adds after the alert.",
+  "summary": "Reopened: later Pizza rows show export_finished, but preflight correctly did not auto-close because the later runs still had failed rows and the case lacks scoped evidence that the alert condition is safely recovered.",
   "deterministic_key": "v3|incident:Q20XI8KK8YWADB|org:174|class:zero-success",
   "grouping_version": 3,
   "created_at": "2026-05-16T00:38:01.850Z",
-  "updated_at": "2026-05-17T16:30:12.717Z",
+  "updated_at": "2026-05-17T16:37:07.104Z",
   "alert_refs": [
     {
       "incident_id": "Q20XI8KK8YWADB",
