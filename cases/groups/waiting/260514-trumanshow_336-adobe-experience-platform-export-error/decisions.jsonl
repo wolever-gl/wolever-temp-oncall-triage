@@ -1,2 +1,3 @@
 {"ts":"2026-05-16T00:38:01.850Z","actor":"oncall-triage","decision":"created_group","rationale":"Conservative deterministic grouping created a new group for v3|incident:Q12A5QFIM3F9LN|org:trumanshow_336|dest:adobe-experience-platform|class:export-error."}
 {"ts":"2026-05-16T21:03:07.310Z","actor":"check-exports","decision":"started_work","rationale":"Export evidence check evaluated alert facts for this group."}
+{"ts":"2026-05-17T16:24:30.376Z","actor":"agent","decision":"transitioned_to_waiting","rationale":"Waiting on Adobe/schema configuration fix: Truman Show audience 36199 AEP export fails because Adobe returns XDM-1413-400 Merge Schema Error for customer_id type conflict (string vs integer). Retry will not help until the schema/type mismatch is resolved."}

@@ -4,14 +4,14 @@
 
 > Generated file. Do not edit directly; put free-form investigation notes in `notes.md`.
 
-State: `open`
-Tags: `triage:needs_review`, `triage:export-error`
+State: `waiting`
+Tags: `triage:needs_review`, `triage:export-error`, `waiting:client_salesforce_password_expired`
 Incidents: [Q3XQABQFPPVNT5](https://growthloop.pagerduty.com/incidents/Q3XQABQFPPVNT5)
 Alerts: 4
 
 ## Current Summary
 
-Needs investigation: ASU audience 31982 Salesforce audience export continues to fail; latest Pizza is snapshotting_finished/export_error with 14 failures.
+Waiting on ASU/client Salesforce credential renewal: audience 31982 Salesforce Audience exports are failing because Salesforce returns INVALID_OPERATION_WITH_EXPIRED_PASSWORD for the ASU UAT sandbox. Pizza shows daily failures since the 2026-05-14 scheduled run; retrying before the Salesforce password/session is reset is expected to fail.
 
 ## Alert Scope
 
@@ -46,7 +46,7 @@ Check evidence:
   Scope: env=prod; org=451; audience=981.
   Command: `glcli --env prod bifrost pizza --audience-id 981 --org-id 451`
   Blockers: `failed_export_count`, `export_error`
-  Run 981-campaign_manager_360_object_981-scheduled__2026-05-15T00:00:00+00:00: health=`blocked`; blockers=failed_export_count, export_error; created=2026-05-16T00:01:26.085781+00:00; snapshotting=snapshotting_finished; export=export_error; failed=1299.
+  Run 981-campaign_manager_360_object_981-scheduled__2026-05-16T00:00:00+00:00: health=`blocked`; blockers=failed_export_count, export_error; created=2026-05-17T00:01:49.876651+00:00; snapshotting=snapshotting_finished; export=export_error; failed=1235.
 - chk_q3xqabqfppvnt5_q1x4zb5gqbrsu1 (Q3XQABQFPPVNT5/Q1X4ZB5GQBRSU1): state=`healthy_closed`.
   Scope: env=prod; org=451; audience=984.
   Command: `glcli --env prod bifrost pizza --audience-id 984 --org-id 451`
@@ -55,10 +55,16 @@ Check evidence:
   Scope: env=prod; org=451; audience=31982.
   Command: `glcli --env prod bifrost pizza --audience-id 31982 --org-id 451`
   Blockers: `failed_export_count`, `export_error`
-  Run 31982-salesforce_audience_21336-scheduled__2026-05-16T00:00:00+00:00: health=`blocked`; blockers=failed_export_count, export_error; created=2026-05-16T00:18:45.617445+00:00; snapshotting=snapshotting_finished; export=export_error; failed=14.
+  Run 31982-salesforce_audience_21336-scheduled__2026-05-17T00:00:00+00:00: health=`blocked`; blockers=failed_export_count, export_error; created=2026-05-17T01:18:17.480327+00:00; snapshotting=snapshotting_finished; export=export_error; failed=48.
 
 ## Recent Evidence
 
+- Latest ASU Salesforce Audience run for audience 31982 fails because Salesforce returns INVALID_OPERATION_WITH_EXPIRED_PASSWORD from advancement--uat.sandbox.my.salesforce.com. Logs for batch 859362f6-ebbe-490f-9114-30fc9aff8f81 show SalesforceExpiredSession 401 with message "Your password has expired. Please reset your password." This is a client/Salesforce credential issue; retrying before ASU renews the Salesforce password/session should keep failing.
+  Source: `flywheel-prod-328213 bifrost logs`; kind: `gcloud_logs`; captured: `2026-05-17T16:22:43.659Z`.
+  Command: `gcloud logging read resource.type="k8s_container" AND resource.labels.namespace_name="bifrost" AND timestamp>="2026-05-17T01:17:00Z" AND timestamp<="2026-05-17T01:25:00Z" AND jsonPayload.batch_id="859362f6-ebbe-490f-9114-30fc9aff8f81" --project=flywheel-prod-328213`
+- Pizza confirms audience 31982 daily Salesforce Audience exports succeeded through the 2026-05-13 scheduled run, then failed every scheduled run from 2026-05-14 through the latest 2026-05-17 run. Latest row is 2026-05-17 01:18:17 UTC, run 31982-salesforce_audience_21336-scheduled__2026-05-17T00:00:00+00:00, snapshotting_finished/export_error with 48 failures and 0 adds.
+  Source: `glcli bifrost pizza`; kind: `pizza`; captured: `2026-05-17T16:22:43.659Z`.
+  Command: `PATH=/Users/wolever/.local/share/mise/installs/gcloud/562.0.0/bin:$PATH glcli --env prod bifrost pizza --audience-id 31982 --org-id 451 --format json`
 - Audience 31982 still fails on latest Pizza: 2026-05-16 00:18:45 UTC, run 31982-salesforce_audience_21336-scheduled__2026-05-16T00:00:00+00:00, snapshotting_finished/export_error with 14 failures.
   Source: `glcli bifrost pizza`; kind: `pizza`; captured: `2026-05-16T22:09:15.603Z`.
   Command: `glcli --env prod bifrost pizza --audience-id 31982 --org-id 451 --format json`

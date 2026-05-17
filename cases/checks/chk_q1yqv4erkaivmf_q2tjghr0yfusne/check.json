@@ -3,7 +3,7 @@
   "source": "pagerduty",
   "incident_id": "Q1YQV4ERKAIVMF",
   "alert_id": "Q2TJGHR0YFUSNE",
-  "state": "open",
+  "state": "healthy_closed",
   "scope": {
     "env": "prod",
     "org_id": "370",
@@ -19,14 +19,66 @@
     "glcli": "glcli --env prod bifrost pizza --audience-id 18583 --org-id 370"
   },
   "scope_key": "prod|370|18583|microsoft_ads|unknown_endpoint|18583-microsoft_ads_11759-scheduled__2026-05-14T00:00:00+00:00,18583-google_adwords_11760-scheduled__2026-05-14T00:00:00+00:00,18583-reddit_ads_14563-scheduled__2026-05-14T00:00:00+00:00",
-  "run_evaluations": [],
-  "blockers": [
-    "evidence_unavailable"
+  "run_evaluations": [
+    {
+      "export_run_id": "18583-microsoft_ads_11759-scheduled__2026-05-14T00:00:00+00:00",
+      "health": "healthy",
+      "match_basis": "checked_export_run_id",
+      "blockers": [],
+      "selected_row": {
+        "export_run_id": "18583-microsoft_ads_11759-scheduled__2026-05-14T00:00:00+00:00",
+        "audience_id": "18583",
+        "endpoint_id": "app_microsoft_ads_827",
+        "destination_type": "microsoft_ads",
+        "created_at": "2026-05-14T00:38:13.266622+00:00",
+        "snapshotting_state": "snapshotting_finished",
+        "export_state": "export_finished",
+        "failed_export_count": 0,
+        "raw": {
+          "export_state": "export_finished",
+          "successful_add_count": 29120,
+          "successful_remove_count": 30181,
+          "failed_export_count": 0,
+          "rejected_row_count": 0,
+          "total_row_count": 59301,
+          "successful_expanded_add_count": 0,
+          "successful_expanded_remove_count": 0,
+          "failed_expanded_export_count": 0,
+          "rejected_expanded_row_count": 0,
+          "total_expanded_row_count": 59301,
+          "enhanced_match_count": 0,
+          "enhanced_row_count": 0,
+          "enhanced_total_records": 0,
+          "total_batch_count": 1,
+          "completed_batch_count": 1,
+          "successful_batch_count": 1,
+          "failed_batch_count": 0,
+          "failure_reason": null,
+          "info": {
+            "internal_export_id": "07127ae28f5b772effdfb37a91584371-20260514003648",
+            "export_run_id": "18583-microsoft_ads_11759-scheduled__2026-05-14T00:00:00+00:00",
+            "audience_id": null,
+            "internal_audience_id": "18583",
+            "audience_name": "",
+            "organization_id": "370",
+            "organization_name": "priceline",
+            "platform": "microsoft_ads",
+            "endpoint_id": "app_microsoft_ads_827",
+            "export_timestamp": "2026-05-14 00:36:48",
+            "error_file_uri": "gs://pcln-pl-dataext-prod-growthloop/batch_errors/677b04ab-43d8-4726-a392-9e2f32c01df4.csv",
+            "created_at": "2026-05-14T00:38:13.266622+00:00",
+            "export_complete_response": null
+          },
+          "snapshotting_state": "snapshotting_finished"
+        }
+      }
+    }
   ],
+  "blockers": [],
   "evidence_artifacts": [
     "pizza_fetch_error:Unable to connect. Is the computer able to access the url?"
   ],
   "created_at": "2026-05-16T20:48:51.585Z",
-  "updated_at": "2026-05-17T00:06:27.098Z",
-  "next_check_at": "2026-05-17T00:21:27.098Z"
+  "updated_at": "2026-05-17T16:17:23.557Z",
+  "closed_at": "2026-05-17T16:17:23.557Z"
 }

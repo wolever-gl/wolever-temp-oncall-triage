@@ -16,7 +16,7 @@
   "scope_key": "prod|451|31982|unknown_destination|unknown_endpoint|unknown_run",
   "run_evaluations": [
     {
-      "export_run_id": "31982-salesforce_audience_21336-scheduled__2026-05-16T00:00:00+00:00",
+      "export_run_id": "31982-salesforce_audience_21336-scheduled__2026-05-17T00:00:00+00:00",
       "health": "blocked",
       "match_basis": "any_export_after_alert",
       "blockers": [
@@ -24,26 +24,26 @@
         "export_error"
       ],
       "selected_row": {
-        "export_run_id": "31982-salesforce_audience_21336-scheduled__2026-05-16T00:00:00+00:00",
+        "export_run_id": "31982-salesforce_audience_21336-scheduled__2026-05-17T00:00:00+00:00",
         "audience_id": "31982",
         "endpoint_id": "app_salesforce_audience_2196",
         "destination_type": "salesforce_audience",
-        "created_at": "2026-05-16T00:18:45.617445+00:00",
+        "created_at": "2026-05-17T01:18:17.480327+00:00",
         "snapshotting_state": "snapshotting_finished",
         "export_state": "export_error",
-        "failed_export_count": 14,
+        "failed_export_count": 48,
         "raw": {
           "export_state": "export_error",
           "successful_add_count": 0,
           "successful_remove_count": 0,
-          "failed_export_count": 14,
+          "failed_export_count": 48,
           "rejected_row_count": 0,
-          "total_row_count": 14,
+          "total_row_count": 48,
           "successful_expanded_add_count": 0,
           "successful_expanded_remove_count": 0,
-          "failed_expanded_export_count": 14,
+          "failed_expanded_export_count": 48,
           "rejected_expanded_row_count": 0,
-          "total_expanded_row_count": 14,
+          "total_expanded_row_count": 48,
           "enhanced_match_count": 0,
           "enhanced_row_count": 0,
           "enhanced_total_records": 0,
@@ -53,8 +53,8 @@
           "failed_batch_count": 1,
           "failure_reason": null,
           "info": {
-            "internal_export_id": "31982-salesforce_audience_21336-scheduled__2026-05-16T00:00:00+00:00-20260516001635",
-            "export_run_id": "31982-salesforce_audience_21336-scheduled__2026-05-16T00:00:00+00:00",
+            "internal_export_id": "31982-salesforce_audience_21336-scheduled__2026-05-17T00:00:00+00:00-20260517010915",
+            "export_run_id": "31982-salesforce_audience_21336-scheduled__2026-05-17T00:00:00+00:00",
             "audience_id": null,
             "internal_audience_id": "31982",
             "audience_name": "Example - Lapsed Donators - 11 months",
@@ -62,9 +62,9 @@
             "organization_name": "asuenterprisepartners",
             "platform": "salesforce_audience",
             "endpoint_id": "app_salesforce_audience_2196",
-            "export_timestamp": "2026-05-16 00:18:42",
-            "error_file_uri": "gs://flywheel-prod-328213-temporary/batch_errors/6f929e21-7f9e-4176-91e9-2933414d44c3.csv",
-            "created_at": "2026-05-16T00:18:45.617445+00:00",
+            "export_timestamp": "2026-05-17 01:17:57",
+            "error_file_uri": "gs://flywheel-prod-328213-temporary/batch_errors/859362f6-ebbe-490f-9114-30fc9aff8f81.csv",
+            "created_at": "2026-05-17T01:18:17.480327+00:00",
             "export_complete_response": null
           },
           "snapshotting_state": "snapshotting_finished"
@@ -78,5 +78,5 @@
   ],
   "evidence_artifacts": [],
   "created_at": "2026-05-16T20:43:43.688Z",
-  "updated_at": "2026-05-16T23:54:04.866Z"
+  "updated_at": "2026-05-17T16:16:36.077Z"
 }

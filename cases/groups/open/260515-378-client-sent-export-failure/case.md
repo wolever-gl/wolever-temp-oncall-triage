@@ -28,14 +28,15 @@ Representative alerts:
 ## Export Checks
 
 - Checks: 1.
-- States: `open`=1
-- Blockers seen: `evidence_unavailable`
+- States: `blocked`=1
+- Blockers seen: `snapshotting_error_requires_review`
 
 Check evidence:
-- chk_q33kfl1kesemvc_q33gt851b14yv7 (Q33KFL1KESEMVC/Q33GT851B14YV7): state=`open`, next_check_at=`2026-05-17T09:59:09.262Z`.
+- chk_q33kfl1kesemvc_q33gt851b14yv7 (Q33KFL1KESEMVC/Q33GT851B14YV7): state=`blocked`.
   Scope: env=prod; org=378; audience=34484.
   Command: `glcli --env prod bifrost pizza --audience-id 34484 --org-id 378`
-  Blockers: `evidence_unavailable`
+  Blockers: `snapshotting_error_requires_review`
+  Run 34484-iterable_21078-scheduled__2026-05-17T00:00:00+00:00: health=`blocked`; blockers=snapshotting_error_requires_review; created=2026-05-17T00:25:11.743119+00:00; snapshotting=snapshotting_error; export=no_batches; failed=0.
 
 ## Recent Evidence
 

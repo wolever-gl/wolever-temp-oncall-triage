@@ -1,15 +1,16 @@
 {
   "group_id": "260514-trumanshow_336-adobe-experience-platform-export-error",
-  "state": "open",
+  "state": "waiting",
   "tags": [
-    "triage:needs_review"
+    "triage:needs_review",
+    "waiting:client_aep_schema_mismatch"
   ],
   "title": "trumanshow_336 adobe-experience-platform export-error",
-  "summary": "trumanshow (VZN): Exports for audience 36199 failed with states: <(snapshotting_finished,export_error)>",
+  "summary": "Waiting on Adobe/schema configuration fix: Truman Show audience 36199 AEP export fails because Adobe returns XDM-1413-400 Merge Schema Error for customer_id type conflict (string vs integer). Retry will not help until the schema/type mismatch is resolved.",
   "deterministic_key": "v3|incident:Q12A5QFIM3F9LN|org:trumanshow_336|dest:adobe-experience-platform|class:export-error",
   "grouping_version": 3,
   "created_at": "2026-05-16T00:38:01.850Z",
-  "updated_at": "2026-05-16T21:03:07.310Z",
+  "updated_at": "2026-05-17T16:24:30.376Z",
   "alert_refs": [
     {
       "incident_id": "Q12A5QFIM3F9LN",

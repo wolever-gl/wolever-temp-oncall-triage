@@ -35,8 +35,8 @@ Representative alerts:
 ## Export Checks
 
 - Checks: 8.
-- States: `blocked`=6, `healthy_closed`=1, `open`=1
-- Blockers seen: `evidence_unavailable`, `missing_run_identity`
+- States: `blocked`=7, `healthy_closed`=1
+- Blockers seen: `missing_export_after_alert`, `missing_run_identity`
 
 Check evidence:
 - chk_q38jr11g2enk2w_q02zg08ugcs5oa (Q38JR11G2ENK2W/Q02ZG08UGCS5OA): state=`blocked`.
@@ -59,10 +59,10 @@ Check evidence:
   Scope: env=albertsons; org=6; audience=12866.
   Command: `glcli --env albertsons bifrost pizza --audience-id 12866 --org-id 6`
   Blockers: `missing_run_identity`
-- chk_q38jr11g2enk2w_q32j02dn0jryz0 (Q38JR11G2ENK2W/Q32J02DN0JRYZ0): state=`open`, next_check_at=`2026-05-17T16:09:54.764Z`.
+- chk_q38jr11g2enk2w_q32j02dn0jryz0 (Q38JR11G2ENK2W/Q32J02DN0JRYZ0): state=`blocked`.
   Scope: env=albertsons; org=6; audience=10073.
   Command: `glcli --env albertsons bifrost pizza --audience-id 10073 --org-id 6`
-  Blockers: `evidence_unavailable`
+  Blockers: `missing_export_after_alert`
 - chk_q38jr11g2enk2w_q37htx61kyutpq (Q38JR11G2ENK2W/Q37HTX61KYUTPQ): state=`blocked`.
   Scope: env=albertsons; org=6; audience=12862.
   Command: `glcli --env albertsons bifrost pizza --audience-id 12862 --org-id 6`

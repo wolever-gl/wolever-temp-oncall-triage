@@ -1,0 +1,27 @@
+{
+  "group_id": "260515-451-client-sent-export-failure",
+  "state": "resolved",
+  "tags": [
+    "triage:needs_review",
+    "resolved:merged"
+  ],
+  "title": "451 client-sent-export-failure",
+  "summary": "Merged into 260514-451-campaign-manager-360-export-error: SignalRoute 995 client-sent alert is another ASU CM360 endpoint app_campaign_manager_360_2130 failure in the same client/config family as the waiting SignalRoute 981 CM360 case; latest logs show StandardCM360Service NOT_FOUND/INVALID_ARGUMENT for the same Floodlight config/activity family, so track remediation with the existing ASU CM360 waiting case.",
+  "deterministic_key": "v3|incident:Q31XLLHUNNMAK9|org:451|class:client-sent-export-failure",
+  "grouping_version": 3,
+  "created_at": "2026-05-16T16:36:53.567Z",
+  "updated_at": "2026-05-17T16:23:44.733Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q31XLLHUNNMAK9",
+      "alert_id": "Q14QGYRQTYNKJV"
+    }
+  ],
+  "incident_ids": [
+    "Q31XLLHUNNMAK9"
+  ],
+  "related_group_ids": [
+    "260514-451-campaign-manager-360-export-error"
+  ],
+  "next_action": "Follow target group 260514-451-campaign-manager-360-export-error."
+}

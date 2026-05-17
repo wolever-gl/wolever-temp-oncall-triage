@@ -36,7 +36,7 @@ Check evidence:
   Scope: env=prod; org=268; audience=35826.
   Command: `glcli --env prod bifrost pizza --audience-id 35826 --org-id 268`
   Blockers: `snapshotting_error_requires_review`
-  Run 35826-google_adwords_21820-scheduled__2026-05-16T00:00:00+00:00: health=`blocked`; blockers=snapshotting_error_requires_review; created=2026-05-16T00:16:27.198035+00:00; snapshotting=snapshotting_error; export=no_batches; failed=0.
+  Run 35826-google_adwords_21816-scheduled__2026-05-17T00:00:00+00:00: health=`blocked`; blockers=snapshotting_error_requires_review; created=2026-05-17T00:15:24.157494+00:00; snapshotting=snapshotting_error; export=no_batches; failed=0.
 
 ## Next Action
 

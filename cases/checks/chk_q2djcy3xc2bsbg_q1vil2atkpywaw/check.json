@@ -3,7 +3,7 @@
   "source": "pagerduty",
   "incident_id": "Q2DJCY3XC2BSBG",
   "alert_id": "Q1VIL2ATKPYWAW",
-  "state": "open",
+  "state": "healthy_closed",
   "scope": {
     "env": "prod",
     "org_id": "219",
@@ -24,14 +24,334 @@
     "glcli": "glcli --env prod bifrost pizza --audience-id 30678 --org-id 219"
   },
   "scope_key": "prod|219|30678|facebook|unknown_endpoint|30678-facebook_19071-scheduled__2026-04-12T00:00:00+00:00,30678-facebook_19071-scheduled__2026-04-13T00:00:00+00:00,30678-facebook_19071-scheduled__2026-04-15T00:00:00+00:00,30678-facebook_19071-scheduled__2026-04-17T00:00:00+00:00,30678-facebook_19071-scheduled__2026-04-23T00:00:00+00:00,30678-live_ramp_sftp_19072-scheduled__2026-05-13T00:00:00+00:00,30678-facebook_19071-scheduled__2026-05-13T00:00:00+00:00,30678-facebook_19071-scheduled__2026-05-14T00:00:00+00:00",
-  "run_evaluations": [],
-  "blockers": [
-    "evidence_unavailable"
+  "run_evaluations": [
+    {
+      "export_run_id": "30678-facebook_19071-scheduled__2026-04-12T00:00:00+00:00",
+      "health": "healthy",
+      "match_basis": "checked_export_run_id",
+      "blockers": [],
+      "selected_row": {
+        "export_run_id": "30678-facebook_19071-scheduled__2026-04-12T00:00:00+00:00",
+        "audience_id": "30678",
+        "destination_type": "facebook",
+        "created_at": "2026-04-12T00:16:44.349191+00:00",
+        "snapshotting_state": "snapshotting_finished_no_deltas",
+        "export_state": "no_batches",
+        "failed_export_count": 0,
+        "raw": {
+          "export_state": "no_batches",
+          "successful_add_count": 0,
+          "successful_remove_count": 0,
+          "failed_export_count": 0,
+          "rejected_row_count": 0,
+          "total_row_count": 0,
+          "successful_expanded_add_count": 0,
+          "successful_expanded_remove_count": 0,
+          "failed_expanded_export_count": 0,
+          "rejected_expanded_row_count": 0,
+          "total_expanded_row_count": 0,
+          "enhanced_match_count": 0,
+          "enhanced_row_count": 0,
+          "enhanced_total_records": 0,
+          "total_batch_count": 0,
+          "completed_batch_count": 0,
+          "successful_batch_count": 0,
+          "failed_batch_count": 0,
+          "failure_reason": null,
+          "info": {
+            "internal_audience_id": "30678",
+            "export_run_id": "30678-facebook_19071-scheduled__2026-04-12T00:00:00+00:00",
+            "export_timestamp": "2026-04-12 00:16:44",
+            "created_at": "2026-04-12T00:16:44.349191+00:00"
+          },
+          "snapshotting_state": "snapshotting_finished_no_deltas"
+        }
+      }
+    },
+    {
+      "export_run_id": "30678-facebook_19071-scheduled__2026-04-13T00:00:00+00:00",
+      "health": "healthy",
+      "match_basis": "checked_export_run_id",
+      "blockers": [],
+      "selected_row": {
+        "export_run_id": "30678-facebook_19071-scheduled__2026-04-13T00:00:00+00:00",
+        "audience_id": "30678",
+        "destination_type": "facebook",
+        "created_at": "2026-04-13T00:16:34.663919+00:00",
+        "snapshotting_state": "snapshotting_finished_no_deltas",
+        "export_state": "no_batches",
+        "failed_export_count": 0,
+        "raw": {
+          "export_state": "no_batches",
+          "successful_add_count": 0,
+          "successful_remove_count": 0,
+          "failed_export_count": 0,
+          "rejected_row_count": 0,
+          "total_row_count": 0,
+          "successful_expanded_add_count": 0,
+          "successful_expanded_remove_count": 0,
+          "failed_expanded_export_count": 0,
+          "rejected_expanded_row_count": 0,
+          "total_expanded_row_count": 0,
+          "enhanced_match_count": 0,
+          "enhanced_row_count": 0,
+          "enhanced_total_records": 0,
+          "total_batch_count": 0,
+          "completed_batch_count": 0,
+          "successful_batch_count": 0,
+          "failed_batch_count": 0,
+          "failure_reason": null,
+          "info": {
+            "internal_audience_id": "30678",
+            "export_run_id": "30678-facebook_19071-scheduled__2026-04-13T00:00:00+00:00",
+            "export_timestamp": "2026-04-13 00:16:34",
+            "created_at": "2026-04-13T00:16:34.663919+00:00"
+          },
+          "snapshotting_state": "snapshotting_finished_no_deltas"
+        }
+      }
+    },
+    {
+      "export_run_id": "30678-facebook_19071-scheduled__2026-04-15T00:00:00+00:00",
+      "health": "healthy",
+      "match_basis": "checked_export_run_id",
+      "blockers": [],
+      "selected_row": {
+        "export_run_id": "30678-facebook_19071-scheduled__2026-04-15T00:00:00+00:00",
+        "audience_id": "30678",
+        "destination_type": "facebook",
+        "created_at": "2026-04-15T02:18:34.875164+00:00",
+        "snapshotting_state": "snapshotting_finished_no_deltas",
+        "export_state": "no_batches",
+        "failed_export_count": 0,
+        "raw": {
+          "export_state": "no_batches",
+          "successful_add_count": 0,
+          "successful_remove_count": 0,
+          "failed_export_count": 0,
+          "rejected_row_count": 0,
+          "total_row_count": 0,
+          "successful_expanded_add_count": 0,
+          "successful_expanded_remove_count": 0,
+          "failed_expanded_export_count": 0,
+          "rejected_expanded_row_count": 0,
+          "total_expanded_row_count": 0,
+          "enhanced_match_count": 0,
+          "enhanced_row_count": 0,
+          "enhanced_total_records": 0,
+          "total_batch_count": 0,
+          "completed_batch_count": 0,
+          "successful_batch_count": 0,
+          "failed_batch_count": 0,
+          "failure_reason": null,
+          "info": {
+            "internal_audience_id": "30678",
+            "export_run_id": "30678-facebook_19071-scheduled__2026-04-15T00:00:00+00:00",
+            "export_timestamp": "2026-04-15 02:18:34",
+            "created_at": "2026-04-15T02:18:34.875164+00:00"
+          },
+          "snapshotting_state": "snapshotting_finished_no_deltas"
+        }
+      }
+    },
+    {
+      "export_run_id": "30678-facebook_19071-scheduled__2026-04-17T00:00:00+00:00",
+      "health": "healthy",
+      "match_basis": "checked_export_run_id",
+      "blockers": [],
+      "selected_row": {
+        "export_run_id": "30678-facebook_19071-scheduled__2026-04-17T00:00:00+00:00",
+        "audience_id": "30678",
+        "destination_type": "facebook",
+        "created_at": "2026-04-17T00:16:44.053837+00:00",
+        "snapshotting_state": "snapshotting_finished_no_deltas",
+        "export_state": "no_batches",
+        "failed_export_count": 0,
+        "raw": {
+          "export_state": "no_batches",
+          "successful_add_count": 0,
+          "successful_remove_count": 0,
+          "failed_export_count": 0,
+          "rejected_row_count": 0,
+          "total_row_count": 0,
+          "successful_expanded_add_count": 0,
+          "successful_expanded_remove_count": 0,
+          "failed_expanded_export_count": 0,
+          "rejected_expanded_row_count": 0,
+          "total_expanded_row_count": 0,
+          "enhanced_match_count": 0,
+          "enhanced_row_count": 0,
+          "enhanced_total_records": 0,
+          "total_batch_count": 0,
+          "completed_batch_count": 0,
+          "successful_batch_count": 0,
+          "failed_batch_count": 0,
+          "failure_reason": null,
+          "info": {
+            "internal_audience_id": "30678",
+            "export_run_id": "30678-facebook_19071-scheduled__2026-04-17T00:00:00+00:00",
+            "export_timestamp": "2026-04-17 00:16:44",
+            "created_at": "2026-04-17T00:16:44.053837+00:00"
+          },
+          "snapshotting_state": "snapshotting_finished_no_deltas"
+        }
+      }
+    },
+    {
+      "export_run_id": "30678-facebook_19071-scheduled__2026-04-23T00:00:00+00:00",
+      "health": "healthy",
+      "match_basis": "checked_export_run_id",
+      "blockers": [],
+      "selected_row": {
+        "export_run_id": "30678-facebook_19071-scheduled__2026-04-23T00:00:00+00:00",
+        "audience_id": "30678",
+        "destination_type": "facebook",
+        "created_at": "2026-04-23T00:15:43.615933+00:00",
+        "snapshotting_state": "snapshotting_finished_no_deltas",
+        "export_state": "no_batches",
+        "failed_export_count": 0,
+        "raw": {
+          "export_state": "no_batches",
+          "successful_add_count": 0,
+          "successful_remove_count": 0,
+          "failed_export_count": 0,
+          "rejected_row_count": 0,
+          "total_row_count": 0,
+          "successful_expanded_add_count": 0,
+          "successful_expanded_remove_count": 0,
+          "failed_expanded_export_count": 0,
+          "rejected_expanded_row_count": 0,
+          "total_expanded_row_count": 0,
+          "enhanced_match_count": 0,
+          "enhanced_row_count": 0,
+          "enhanced_total_records": 0,
+          "total_batch_count": 0,
+          "completed_batch_count": 0,
+          "successful_batch_count": 0,
+          "failed_batch_count": 0,
+          "failure_reason": null,
+          "info": {
+            "internal_audience_id": "30678",
+            "export_run_id": "30678-facebook_19071-scheduled__2026-04-23T00:00:00+00:00",
+            "export_timestamp": "2026-04-23 00:15:43",
+            "created_at": "2026-04-23T00:15:43.615933+00:00"
+          },
+          "snapshotting_state": "snapshotting_finished_no_deltas"
+        }
+      }
+    },
+    {
+      "export_run_id": "30678-facebook_19071-scheduled__2026-05-13T00:00:00+00:00",
+      "health": "healthy",
+      "match_basis": "checked_export_run_id",
+      "blockers": [],
+      "selected_row": {
+        "export_run_id": "30678-facebook_19071-scheduled__2026-05-13T00:00:00+00:00",
+        "audience_id": "30678",
+        "endpoint_id": "app_facebook_1934",
+        "destination_type": "facebook",
+        "created_at": "2026-05-13T00:23:01.741715+00:00",
+        "snapshotting_state": "snapshotting_finished",
+        "export_state": "export_finished",
+        "failed_export_count": 0,
+        "raw": {
+          "export_state": "export_finished",
+          "successful_add_count": 2,
+          "successful_remove_count": 24,
+          "failed_export_count": 0,
+          "rejected_row_count": 0,
+          "total_row_count": 26,
+          "successful_expanded_add_count": 0,
+          "successful_expanded_remove_count": 0,
+          "failed_expanded_export_count": 0,
+          "rejected_expanded_row_count": 0,
+          "total_expanded_row_count": 26,
+          "enhanced_match_count": 0,
+          "enhanced_row_count": 0,
+          "enhanced_total_records": 0,
+          "total_batch_count": 1,
+          "completed_batch_count": 1,
+          "successful_batch_count": 1,
+          "failed_batch_count": 0,
+          "failure_reason": null,
+          "info": {
+            "internal_export_id": "2f242791487baac6f8f2762601972b8b-20260513001643",
+            "export_run_id": "30678-facebook_19071-scheduled__2026-05-13T00:00:00+00:00",
+            "audience_id": "6905882359733",
+            "internal_audience_id": "30678",
+            "audience_name": "",
+            "organization_id": "219",
+            "organization_name": "pgatourhq",
+            "platform": "facebook",
+            "endpoint_id": "app_facebook_1934",
+            "export_timestamp": "2026-05-13 00:16:43",
+            "error_file_uri": "s3://pgatour-datalake-us-east-1-wlda-flywheel/batch_errors/362d2d87-9064-4eac-aa11-5258f120519f.csv",
+            "created_at": "2026-05-13T00:23:01.741715+00:00",
+            "export_complete_response": null
+          },
+          "snapshotting_state": "snapshotting_finished"
+        }
+      }
+    },
+    {
+      "export_run_id": "30678-facebook_19071-scheduled__2026-05-14T00:00:00+00:00",
+      "health": "healthy",
+      "match_basis": "checked_export_run_id",
+      "blockers": [],
+      "selected_row": {
+        "export_run_id": "30678-facebook_19071-scheduled__2026-05-14T00:00:00+00:00",
+        "audience_id": "30678",
+        "endpoint_id": "app_facebook_1934",
+        "destination_type": "facebook",
+        "created_at": "2026-05-14T00:17:38.216360+00:00",
+        "snapshotting_state": "snapshotting_finished",
+        "export_state": "export_finished",
+        "failed_export_count": 0,
+        "raw": {
+          "export_state": "export_finished",
+          "successful_add_count": 2,
+          "successful_remove_count": 17,
+          "failed_export_count": 0,
+          "rejected_row_count": 5,
+          "total_row_count": 24,
+          "successful_expanded_add_count": 0,
+          "successful_expanded_remove_count": 0,
+          "failed_expanded_export_count": 0,
+          "rejected_expanded_row_count": 5,
+          "total_expanded_row_count": 24,
+          "enhanced_match_count": 0,
+          "enhanced_row_count": 0,
+          "enhanced_total_records": 0,
+          "total_batch_count": 1,
+          "completed_batch_count": 1,
+          "successful_batch_count": 1,
+          "failed_batch_count": 0,
+          "failure_reason": null,
+          "info": {
+            "internal_export_id": "9c08ff192b11793ec8b2f8546b6ebf25-20260514001609",
+            "export_run_id": "30678-facebook_19071-scheduled__2026-05-14T00:00:00+00:00",
+            "audience_id": "6905882359733",
+            "internal_audience_id": "30678",
+            "audience_name": "",
+            "organization_id": "219",
+            "organization_name": "pgatourhq",
+            "platform": "facebook",
+            "endpoint_id": "app_facebook_1934",
+            "export_timestamp": "2026-05-14 00:16:09",
+            "error_file_uri": "s3://pgatour-datalake-us-east-1-wlda-flywheel/batch_errors/fc730c50-a356-47cd-a34b-7e8cf0e707c7.csv",
+            "created_at": "2026-05-14T00:17:38.216360+00:00",
+            "export_complete_response": null
+          },
+          "snapshotting_state": "snapshotting_finished"
+        }
+      }
+    }
   ],
+  "blockers": [],
   "evidence_artifacts": [
     "pizza_fetch_error:Unable to connect. Is the computer able to access the url?"
   ],
   "created_at": "2026-05-16T21:05:58.740Z",
-  "updated_at": "2026-05-17T14:30:36.917Z",
-  "next_check_at": "2026-05-17T14:45:36.917Z"
+  "updated_at": "2026-05-17T16:20:22.970Z",
+  "closed_at": "2026-05-17T16:20:22.970Z"
 }

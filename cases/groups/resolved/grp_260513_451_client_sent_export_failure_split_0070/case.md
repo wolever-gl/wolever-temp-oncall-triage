@@ -36,7 +36,7 @@ Check evidence:
   Scope: env=prod; org=451; audience=981.
   Command: `glcli --env prod bifrost pizza --audience-id 981 --org-id 451`
   Blockers: `failed_export_count`, `export_error`
-  Run 981-campaign_manager_360_object_981-scheduled__2026-05-15T00:00:00+00:00: health=`blocked`; blockers=failed_export_count, export_error; created=2026-05-16T00:01:26.085781+00:00; snapshotting=snapshotting_finished; export=export_error; failed=1299.
+  Run 981-campaign_manager_360_object_981-scheduled__2026-05-16T00:00:00+00:00: health=`blocked`; blockers=failed_export_count, export_error; created=2026-05-17T00:01:49.876651+00:00; snapshotting=snapshotting_finished; export=export_error; failed=1235.
 
 ## Recent Evidence
 
