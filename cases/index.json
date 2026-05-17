@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-05-17T16:30:24.692Z",
-  "open_count": 33,
+  "generated_at": "2026-05-17T16:33:14.734Z",
+  "open_count": 32,
   "groups": [
     {
       "group_id": "260511-albertsons_6-snapshotting-processing",
@@ -166,21 +166,6 @@
       ],
       "alert_count": 4,
       "path": "groups/open/260514-ford_310-dv360-export-error/case.md"
-    },
-    {
-      "group_id": "260514-growthloop_268-client-sent-export-failure",
-      "state": "open",
-      "tags": [
-        "triage:needs_review",
-        "triage:customer_bq_permission"
-      ],
-      "title": "growthloop_268 client-sent-export-failure",
-      "summary": "Needs communication before waiting: GrowthLoop audience 35826 is blocked by customer-owned BigQuery authorization. Quervice pre_snapshotting_check cannot create fs-cmd-center.flywheel_system metadata tables because bigquery.tables.create is denied; latest structured error is owner=customer and retryable=false.",
-      "incident_ids": [
-        "Q3PW7IHI1KCDWS"
-      ],
-      "alert_count": 1,
-      "path": "groups/open/260514-growthloop_268-client-sent-export-failure/case.md"
     },
     {
       "group_id": "260514-priceline_370-no-batches",
@@ -771,6 +756,22 @@
       ],
       "alert_count": 1,
       "path": "groups/resolved/260514-ford_310-client-sent-export-failure-02/case.md"
+    },
+    {
+      "group_id": "260514-growthloop_268-client-sent-export-failure",
+      "state": "resolved",
+      "tags": [
+        "triage:needs_review",
+        "triage:customer_bq_permission",
+        "resolved:internal-test-account"
+      ],
+      "title": "growthloop_268 client-sent-export-failure",
+      "summary": "Resolved: this is a GrowthLoop internal test account/audience, so it is not customer-impacting and does not need external follow-up.",
+      "incident_ids": [
+        "Q3PW7IHI1KCDWS"
+      ],
+      "alert_count": 1,
+      "path": "groups/resolved/260514-growthloop_268-client-sent-export-failure/case.md"
     },
     {
       "group_id": "260514-trumanshow_336-no-batches",

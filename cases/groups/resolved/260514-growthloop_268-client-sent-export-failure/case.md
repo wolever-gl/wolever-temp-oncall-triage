@@ -4,14 +4,14 @@
 
 > Generated file. Do not edit directly; put free-form investigation notes in `notes.md`.
 
-State: `open`
-Tags: `triage:needs_review`, `triage:customer_bq_permission`
+State: `resolved`
+Tags: `triage:needs_review`, `triage:customer_bq_permission`, `resolved:internal-test-account`
 Incidents: [Q3PW7IHI1KCDWS](https://growthloop.pagerduty.com/incidents/Q3PW7IHI1KCDWS)
 Alerts: 1
 
 ## Current Summary
 
-Needs communication before waiting: GrowthLoop audience 35826 is blocked by customer-owned BigQuery authorization. Quervice pre_snapshotting_check cannot create fs-cmd-center.flywheel_system metadata tables because bigquery.tables.create is denied; latest structured error is owner=customer and retryable=false.
+Resolved: this is a GrowthLoop internal test account/audience, so it is not customer-impacting and does not need external follow-up.
 
 ## Alert Scope
 
@@ -40,6 +40,8 @@ Check evidence:
 
 ## Recent Evidence
 
+- Closed because this is a GrowthLoop internal test account/audience, not a customer-impacting case. The underlying BigQuery permission failure remains non-retryable, but the on-call case does not need external follow-up.
+  Source: `operator review`; kind: `triage`; captured: `2026-05-17T16:33:00.405Z`.
 - Latest snapshotting run for audience 35826 fails in pre_snapshotting_check when Quervice attempts to create metadata table fs-cmd-center.flywheel_system.snapshotting_audience_35826_metadata. BigQuery returns 403 Access Denied: Permission bigquery.tables.create denied on dataset fs-cmd-center:flywheel_system. The structured glerror is category=authorization, owner=customer, retryable=false, warehouse_dataset=fs-cmd-center.flywheel_system, source_connection_id=flywheeldev_. This is not a retryable export problem.
   Source: `flywheel-prod-328213 snapshotting/quervice logs`; kind: `gcloud_logs`; captured: `2026-05-17T16:29:18.060Z`.
   Command: `gcloud logging read resource.type="k8s_container" AND timestamp>="2026-05-17T00:10:00Z" AND timestamp<="2026-05-17T00:20:00Z" AND jsonPayload.message:"35826" --project=flywheel-prod-328213`
