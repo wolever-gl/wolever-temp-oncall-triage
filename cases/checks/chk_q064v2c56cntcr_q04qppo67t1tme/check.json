@@ -3,12 +3,14 @@
   "source": "pagerduty",
   "incident_id": "Q064V2C56CNTCR",
   "alert_id": "Q04QPPO67T1TME",
-  "state": "blocked",
+  "state": "healthy_closed",
   "scope": {
     "env": "prod",
     "org_id": "395",
     "audience_id": "21184",
     "destination_type": "pulse_point",
+    "match_strategy": "checked_export_run_ids",
+    "alert_created_at": "2026-05-14T07:32:14-07:00",
     "checked_export_run_ids": [
       "21184-pulse_point_13454-scheduled__2026-05-13T23:00:00+00:00",
       "21184-google_adwords_13456-scheduled__2026-05-13T23:00:00+00:00",
@@ -71,179 +73,11 @@
           "snapshotting_state": "snapshotting_finished"
         }
       }
-    },
-    {
-      "export_run_id": "21184-google_adwords_13456-scheduled__2026-05-13T23:00:00+00:00",
-      "health": "blocked",
-      "match_basis": "checked_export_run_id",
-      "blockers": [
-        "destination_mismatch"
-      ],
-      "selected_row": {
-        "export_run_id": "21184-google_adwords_13456-scheduled__2026-05-13T23:00:00+00:00",
-        "audience_id": "21184",
-        "endpoint_id": "app_google_adwords_1140",
-        "destination_type": "google_adwords",
-        "created_at": "2026-05-13T23:28:24.898494+00:00",
-        "snapshotting_state": "snapshotting_finished",
-        "export_state": "export_finished",
-        "failed_export_count": 0,
-        "raw": {
-          "export_state": "export_finished",
-          "successful_add_count": 1554,
-          "successful_remove_count": 73,
-          "failed_export_count": 0,
-          "rejected_row_count": 101,
-          "total_row_count": 1728,
-          "successful_expanded_add_count": 1554,
-          "successful_expanded_remove_count": 73,
-          "failed_expanded_export_count": 0,
-          "rejected_expanded_row_count": 101,
-          "total_expanded_row_count": 1728,
-          "enhanced_match_count": 0,
-          "enhanced_row_count": 0,
-          "enhanced_total_records": 0,
-          "total_batch_count": 1,
-          "completed_batch_count": 1,
-          "successful_batch_count": 1,
-          "failed_batch_count": 0,
-          "failure_reason": null,
-          "info": {
-            "internal_export_id": "9aa2400fc7d371a740e4bdadbe12fee5-20260513232726",
-            "export_run_id": "21184-google_adwords_13456-scheduled__2026-05-13T23:00:00+00:00",
-            "audience_id": "9018734467",
-            "internal_audience_id": "21184",
-            "audience_name": "",
-            "organization_id": "395",
-            "organization_name": "chghealthcare",
-            "platform": "google_adwords",
-            "endpoint_id": "app_google_adwords_1140",
-            "export_timestamp": "2026-05-13 23:27:26",
-            "error_file_uri": "gs://flywheel-prod-328213-temporary/batch_errors/47041c1a-294b-456a-a01e-30641a2fdbff.csv",
-            "created_at": "2026-05-13T23:28:24.898494+00:00",
-            "export_complete_response": null
-          },
-          "snapshotting_state": "snapshotting_finished"
-        }
-      }
-    },
-    {
-      "export_run_id": "21184-facebook_13489-scheduled__2026-05-13T23:00:00+00:00",
-      "health": "blocked",
-      "match_basis": "checked_export_run_id",
-      "blockers": [
-        "destination_mismatch"
-      ],
-      "selected_row": {
-        "export_run_id": "21184-facebook_13489-scheduled__2026-05-13T23:00:00+00:00",
-        "audience_id": "21184",
-        "endpoint_id": "app_facebook_1139",
-        "destination_type": "facebook",
-        "created_at": "2026-05-13T23:28:24.797393+00:00",
-        "snapshotting_state": "snapshotting_finished",
-        "export_state": "export_finished",
-        "failed_export_count": 0,
-        "raw": {
-          "export_state": "export_finished",
-          "successful_add_count": 1637,
-          "successful_remove_count": 91,
-          "failed_export_count": 0,
-          "rejected_row_count": 0,
-          "total_row_count": 1728,
-          "successful_expanded_add_count": 0,
-          "successful_expanded_remove_count": 0,
-          "failed_expanded_export_count": 0,
-          "rejected_expanded_row_count": 0,
-          "total_expanded_row_count": 1728,
-          "enhanced_match_count": 0,
-          "enhanced_row_count": 0,
-          "enhanced_total_records": 0,
-          "total_batch_count": 1,
-          "completed_batch_count": 1,
-          "successful_batch_count": 1,
-          "failed_batch_count": 0,
-          "failure_reason": null,
-          "info": {
-            "internal_export_id": "51b4cd9a7110d6a499f6ab670c2bd927-20260513232739",
-            "export_run_id": "21184-facebook_13489-scheduled__2026-05-13T23:00:00+00:00",
-            "audience_id": "6755984489037",
-            "internal_audience_id": "21184",
-            "audience_name": "",
-            "organization_id": "395",
-            "organization_name": "chghealthcare",
-            "platform": "facebook",
-            "endpoint_id": "app_facebook_1139",
-            "export_timestamp": "2026-05-13 23:27:39",
-            "error_file_uri": "gs://flywheel-prod-328213-temporary/batch_errors/5208b95a-f8f3-41a3-9cf5-19d95e06014b.csv",
-            "created_at": "2026-05-13T23:28:24.797393+00:00",
-            "export_complete_response": null
-          },
-          "snapshotting_state": "snapshotting_finished"
-        }
-      }
-    },
-    {
-      "export_run_id": "21184-linkedin_ads_13538-scheduled__2026-05-13T23:00:00+00:00",
-      "health": "blocked",
-      "match_basis": "checked_export_run_id",
-      "blockers": [
-        "destination_mismatch"
-      ],
-      "selected_row": {
-        "export_run_id": "21184-linkedin_ads_13538-scheduled__2026-05-13T23:00:00+00:00",
-        "audience_id": "21184",
-        "endpoint_id": "app_linkedin_ads_1597",
-        "destination_type": "linkedin_ads",
-        "created_at": "2026-05-13T23:28:24.956452+00:00",
-        "snapshotting_state": "snapshotting_finished",
-        "export_state": "export_finished",
-        "failed_export_count": 0,
-        "raw": {
-          "export_state": "export_finished",
-          "successful_add_count": 1637,
-          "successful_remove_count": 91,
-          "failed_export_count": 0,
-          "rejected_row_count": 0,
-          "total_row_count": 1728,
-          "successful_expanded_add_count": 0,
-          "successful_expanded_remove_count": 0,
-          "failed_expanded_export_count": 0,
-          "rejected_expanded_row_count": 0,
-          "total_expanded_row_count": 1728,
-          "enhanced_match_count": 0,
-          "enhanced_row_count": 0,
-          "enhanced_total_records": 0,
-          "total_batch_count": 1,
-          "completed_batch_count": 1,
-          "successful_batch_count": 1,
-          "failed_batch_count": 0,
-          "failure_reason": null,
-          "info": {
-            "internal_export_id": "a46a8475fe5a3021b4adc19b05a3e704-20260513232752",
-            "export_run_id": "21184-linkedin_ads_13538-scheduled__2026-05-13T23:00:00+00:00",
-            "audience_id": "24437424",
-            "internal_audience_id": "21184",
-            "audience_name": "",
-            "organization_id": "395",
-            "organization_name": "chghealthcare",
-            "platform": "linkedin_ads",
-            "endpoint_id": "app_linkedin_ads_1597",
-            "export_timestamp": "2026-05-13 23:27:52",
-            "error_file_uri": "gs://flywheel-prod-328213-temporary/batch_errors/14623f87-1319-4a88-b5da-c1b4858de4f2.csv",
-            "created_at": "2026-05-13T23:28:24.956452+00:00",
-            "export_complete_response": null
-          },
-          "snapshotting_state": "snapshotting_finished"
-        }
-      }
     }
   ],
-  "blockers": [
-    "destination_mismatch",
-    "destination_mismatch",
-    "destination_mismatch"
-  ],
+  "blockers": [],
   "evidence_artifacts": [],
   "created_at": "2026-05-16T01:17:44.826Z",
-  "updated_at": "2026-05-16T01:17:44.826Z"
+  "updated_at": "2026-05-16T23:54:41.364Z",
+  "closed_at": "2026-05-16T23:54:41.364Z"
 }

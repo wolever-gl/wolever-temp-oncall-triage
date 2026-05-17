@@ -28,14 +28,14 @@ Representative alerts:
 ## Export Checks
 
 - Checks: 1.
-- States: `blocked`=1
-- Blockers seen: `missing_run_identity`
+- States: `open`=1
+- Blockers seen: `evidence_unavailable`
 
 Check evidence:
-- chk_q33kfl1kesemvc_q33gt851b14yv7 (Q33KFL1KESEMVC/Q33GT851B14YV7): state=`blocked`.
+- chk_q33kfl1kesemvc_q33gt851b14yv7 (Q33KFL1KESEMVC/Q33GT851B14YV7): state=`open`, next_check_at=`2026-05-17T09:59:09.262Z`.
   Scope: env=prod; org=378; audience=34484.
   Command: `glcli --env prod bifrost pizza --audience-id 34484 --org-id 378`
-  Blockers: `missing_run_identity`
+  Blockers: `evidence_unavailable`
 
 ## Recent Evidence
 

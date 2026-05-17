@@ -3,20 +3,75 @@
   "source": "pagerduty",
   "incident_id": "Q1UC14QNZK76EZ",
   "alert_id": "Q1BSQGDW7C6H6C",
-  "state": "blocked",
+  "state": "healthy_closed",
   "scope": {
     "env": "prod",
     "org_id": "451",
     "audience_id": "24855",
+    "match_strategy": "any_export_after_alert",
+    "alert_created_at": "2026-05-14T17:43:02-07:00",
     "checked_export_run_ids": [],
     "glcli": "glcli --env prod bifrost pizza --audience-id 24855 --org-id 451"
   },
   "scope_key": "prod|451|24855|unknown_destination|unknown_endpoint|unknown_run",
-  "run_evaluations": [],
-  "blockers": [
-    "missing_run_identity"
+  "run_evaluations": [
+    {
+      "export_run_id": "24855-google_adwords_18969-scheduled__2026-05-16T00:00:00+00:00",
+      "health": "healthy",
+      "match_basis": "any_export_after_alert",
+      "blockers": [],
+      "selected_row": {
+        "export_run_id": "24855-google_adwords_18969-scheduled__2026-05-16T00:00:00+00:00",
+        "audience_id": "24855",
+        "endpoint_id": "app_google_adwords_1628",
+        "destination_type": "google_adwords",
+        "created_at": "2026-05-16T00:48:56.208506+00:00",
+        "snapshotting_state": "snapshotting_finished",
+        "export_state": "export_finished",
+        "failed_export_count": 0,
+        "raw": {
+          "export_state": "export_finished",
+          "successful_add_count": 43,
+          "successful_remove_count": 0,
+          "failed_export_count": 0,
+          "rejected_row_count": 777,
+          "total_row_count": 820,
+          "successful_expanded_add_count": 43,
+          "successful_expanded_remove_count": 0,
+          "failed_expanded_export_count": 0,
+          "rejected_expanded_row_count": 777,
+          "total_expanded_row_count": 820,
+          "enhanced_match_count": 0,
+          "enhanced_row_count": 0,
+          "enhanced_total_records": 0,
+          "total_batch_count": 1,
+          "completed_batch_count": 1,
+          "successful_batch_count": 1,
+          "failed_batch_count": 0,
+          "failure_reason": null,
+          "info": {
+            "internal_export_id": "24855-google_adwords_18969-scheduled__2026-05-16T00:00:00+00:00-20260516004112",
+            "export_run_id": "24855-google_adwords_18969-scheduled__2026-05-16T00:00:00+00:00",
+            "audience_id": "9258239606",
+            "internal_audience_id": "24855",
+            "audience_name": "AE - RFI Submit - Online ",
+            "organization_id": "451",
+            "organization_name": "asuenterprisepartners",
+            "platform": "google_adwords",
+            "endpoint_id": "app_google_adwords_1628",
+            "export_timestamp": "2026-05-16 00:48:41",
+            "error_file_uri": "gs://flywheel-prod-328213-temporary/batch_errors/5cd2acaf-da7a-4733-8653-ff9a566ee254.csv",
+            "created_at": "2026-05-16T00:48:56.208506+00:00",
+            "export_complete_response": null
+          },
+          "snapshotting_state": "snapshotting_finished"
+        }
+      }
+    }
   ],
+  "blockers": [],
   "evidence_artifacts": [],
   "created_at": "2026-05-16T20:46:35.604Z",
-  "updated_at": "2026-05-16T20:46:35.604Z"
+  "updated_at": "2026-05-16T23:53:36.885Z",
+  "closed_at": "2026-05-16T23:53:36.885Z"
 }

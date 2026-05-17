@@ -8,15 +8,75 @@
     "env": "prod",
     "org_id": "451",
     "audience_id": "31982",
+    "match_strategy": "any_export_after_alert",
+    "alert_created_at": "2026-05-13T19:19:06-07:00",
     "checked_export_run_ids": [],
     "glcli": "glcli --env prod bifrost pizza --audience-id 31982 --org-id 451"
   },
   "scope_key": "prod|451|31982|unknown_destination|unknown_endpoint|unknown_run",
-  "run_evaluations": [],
+  "run_evaluations": [
+    {
+      "export_run_id": "31982-salesforce_audience_21336-scheduled__2026-05-16T00:00:00+00:00",
+      "health": "blocked",
+      "match_basis": "any_export_after_alert",
+      "blockers": [
+        "failed_export_count",
+        "export_error"
+      ],
+      "selected_row": {
+        "export_run_id": "31982-salesforce_audience_21336-scheduled__2026-05-16T00:00:00+00:00",
+        "audience_id": "31982",
+        "endpoint_id": "app_salesforce_audience_2196",
+        "destination_type": "salesforce_audience",
+        "created_at": "2026-05-16T00:18:45.617445+00:00",
+        "snapshotting_state": "snapshotting_finished",
+        "export_state": "export_error",
+        "failed_export_count": 14,
+        "raw": {
+          "export_state": "export_error",
+          "successful_add_count": 0,
+          "successful_remove_count": 0,
+          "failed_export_count": 14,
+          "rejected_row_count": 0,
+          "total_row_count": 14,
+          "successful_expanded_add_count": 0,
+          "successful_expanded_remove_count": 0,
+          "failed_expanded_export_count": 14,
+          "rejected_expanded_row_count": 0,
+          "total_expanded_row_count": 14,
+          "enhanced_match_count": 0,
+          "enhanced_row_count": 0,
+          "enhanced_total_records": 0,
+          "total_batch_count": 1,
+          "completed_batch_count": 1,
+          "successful_batch_count": 0,
+          "failed_batch_count": 1,
+          "failure_reason": null,
+          "info": {
+            "internal_export_id": "31982-salesforce_audience_21336-scheduled__2026-05-16T00:00:00+00:00-20260516001635",
+            "export_run_id": "31982-salesforce_audience_21336-scheduled__2026-05-16T00:00:00+00:00",
+            "audience_id": null,
+            "internal_audience_id": "31982",
+            "audience_name": "Example - Lapsed Donators - 11 months",
+            "organization_id": "451",
+            "organization_name": "asuenterprisepartners",
+            "platform": "salesforce_audience",
+            "endpoint_id": "app_salesforce_audience_2196",
+            "export_timestamp": "2026-05-16 00:18:42",
+            "error_file_uri": "gs://flywheel-prod-328213-temporary/batch_errors/6f929e21-7f9e-4176-91e9-2933414d44c3.csv",
+            "created_at": "2026-05-16T00:18:45.617445+00:00",
+            "export_complete_response": null
+          },
+          "snapshotting_state": "snapshotting_finished"
+        }
+      }
+    }
+  ],
   "blockers": [
-    "missing_run_identity"
+    "failed_export_count",
+    "export_error"
   ],
   "evidence_artifacts": [],
   "created_at": "2026-05-16T20:43:43.688Z",
-  "updated_at": "2026-05-16T22:07:16.461Z"
+  "updated_at": "2026-05-16T23:54:04.866Z"
 }

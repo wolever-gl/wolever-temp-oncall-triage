@@ -29,18 +29,18 @@ Representative alerts:
 ## Export Checks
 
 - Checks: 2.
-- States: `blocked`=2
-- Blockers seen: `missing_export_after_alert`
+- States: `open`=2
+- Blockers seen: `evidence_unavailable`
 
 Check evidence:
-- chk_q2ejwg22cer0la_q2n69vpqcmrhgl (Q2EJWG22CER0LA/Q2N69VPQCMRHGL): state=`blocked`.
+- chk_q2ejwg22cer0la_q2n69vpqcmrhgl (Q2EJWG22CER0LA/Q2N69VPQCMRHGL): state=`open`, next_check_at=`2026-05-17T16:09:54.764Z`.
   Scope: env=albertsons; org=6; audience=8473.
   Command: `glcli --env albertsons bifrost pizza --audience-id 8473 --org-id 6`
-  Blockers: `missing_export_after_alert`
-- chk_q38jr11g2enk2w_q32j02dn0jryz0 (Q38JR11G2ENK2W/Q32J02DN0JRYZ0): state=`blocked`.
+  Blockers: `evidence_unavailable`
+- chk_q38jr11g2enk2w_q32j02dn0jryz0 (Q38JR11G2ENK2W/Q32J02DN0JRYZ0): state=`open`, next_check_at=`2026-05-17T16:09:54.764Z`.
   Scope: env=albertsons; org=6; audience=10073.
   Command: `glcli --env albertsons bifrost pizza --audience-id 10073 --org-id 6`
-  Blockers: `missing_export_after_alert`
+  Blockers: `evidence_unavailable`
 
 ## Recent Evidence
 

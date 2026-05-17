@@ -3,14 +3,15 @@
     "check_id": "chk_q064v2c56cntcr_q01q2gj9ws4qwx",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q01Q2GJ9WS4QWX",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "34618",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:38:25-07:00",
       "checked_export_run_ids": [
         "34618-snowflake_21168-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -21,14 +22,15 @@
     "check_id": "chk_q064v2c56cntcr_q01realy7pgfux",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q01REALY7PGFUX",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "28128",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:34:11-07:00",
       "checked_export_run_ids": [
         "28128-snowflake_20024-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -39,14 +41,15 @@
     "check_id": "chk_q064v2c56cntcr_q024wdwuq24e10",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q024WDWUQ24E10",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "34240",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:38:12-07:00",
       "checked_export_run_ids": [
         "34240-snowflake_20938-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -57,14 +60,15 @@
     "check_id": "chk_q064v2c56cntcr_q02o1u4aoth9fg",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q02O1U4AOTH9FG",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "32222",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:37:29-07:00",
       "checked_export_run_ids": [
         "32222-snowflake_19835-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -75,14 +79,15 @@
     "check_id": "chk_q064v2c56cntcr_q032369n84snwe",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q032369N84SNWE",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "34359",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:38:20-07:00",
       "checked_export_run_ids": [
         "34359-snowflake_20972-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -93,14 +98,15 @@
     "check_id": "chk_q064v2c56cntcr_q038efz7htakip",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q038EFZ7HTAKIP",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "15710",
       "destination_type": "marketing_cloud",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:31:06-07:00",
       "checked_export_run_ids": [
         "15710-marketing_cloud_10218-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -111,14 +117,15 @@
     "check_id": "chk_q064v2c56cntcr_q04j7tfoue7x0j",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q04J7TFOUE7X0J",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "32727",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:37:59-07:00",
       "checked_export_run_ids": [
         "32727-snowflake_20079-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -129,15 +136,15 @@
     "check_id": "chk_q064v2c56cntcr_q04jzbnjrdzjer",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q04JZBNJRDZJER",
-    "state": "blocked",
-    "blockers": [
-      "destination_mismatch"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "31726",
       "destination_type": "pulse_point",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:36:53-07:00",
       "checked_export_run_ids": [
         "31726-pulse_point_19520-scheduled__2026-05-13T23:00:00+00:00",
         "31726-snowflake_19519-scheduled__2026-05-13T23:00:00+00:00"
@@ -149,17 +156,15 @@
     "check_id": "chk_q064v2c56cntcr_q04qppo67t1tme",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q04QPPO67T1TME",
-    "state": "blocked",
-    "blockers": [
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "21184",
       "destination_type": "pulse_point",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:32:14-07:00",
       "checked_export_run_ids": [
         "21184-pulse_point_13454-scheduled__2026-05-13T23:00:00+00:00",
         "21184-google_adwords_13456-scheduled__2026-05-13T23:00:00+00:00",
@@ -173,14 +178,15 @@
     "check_id": "chk_q064v2c56cntcr_q04tizn9dlevz2",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q04TIZN9DLEVZ2",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "35065",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:38:58-07:00",
       "checked_export_run_ids": [
         "35065-snowflake_21280-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -200,6 +206,8 @@
       "org_id": "395",
       "audience_id": "27222",
       "destination_type": "marketing_cloud",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:33:49-07:00",
       "checked_export_run_ids": [
         "27222-marketing_cloud_16662-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -210,14 +218,15 @@
     "check_id": "chk_q064v2c56cntcr_q05uqvz50k1wno",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q05UQVZ50K1WNO",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "18153",
       "destination_type": "pulse_point",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:31:46-07:00",
       "checked_export_run_ids": [
         "18153-pulse_point_11586-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -228,14 +237,15 @@
     "check_id": "chk_q064v2c56cntcr_q06hb0pxwe7tlr",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q06HB0PXWE7TLR",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "11189",
       "destination_type": "marketing_cloud",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:30:05-07:00",
       "checked_export_run_ids": [
         "11189-marketing_cloud_7771-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -246,14 +256,14 @@
     "check_id": "chk_q064v2c56cntcr_q07518j3n04ycl",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q07518J3N04YCL",
-    "state": "blocked",
-    "blockers": [
-      "missing_run_identity"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "16985",
+      "match_strategy": "any_export_after_alert",
+      "alert_created_at": "2026-05-14T11:51:33-07:00",
       "checked_export_run_ids": [],
       "glcli": "glcli --env prod bifrost pizza --audience-id 16985 --org-id 395"
     }
@@ -262,14 +272,15 @@
     "check_id": "chk_q064v2c56cntcr_q07ubv35lv22j4",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q07UBV35LV22J4",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "28673",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:34:29-07:00",
       "checked_export_run_ids": [
         "28673-snowflake_17523-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -280,14 +291,15 @@
     "check_id": "chk_q064v2c56cntcr_q08yyvvd5t413o",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q08YYVVD5T413O",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "15713",
       "destination_type": "marketing_cloud",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:31:16-07:00",
       "checked_export_run_ids": [
         "15713-marketing_cloud_10223-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -298,14 +310,15 @@
     "check_id": "chk_q064v2c56cntcr_q0c5shrhpct3r5",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q0C5SHRHPCT3R5",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "29798",
       "destination_type": "marketing_cloud",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:35:04-07:00",
       "checked_export_run_ids": [
         "29798-marketing_cloud_18245-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -316,14 +329,15 @@
     "check_id": "chk_q064v2c56cntcr_q0db2z23cvmycj",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q0DB2Z23CVMYCJ",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "34629",
       "destination_type": "marketing_cloud",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:38:27-07:00",
       "checked_export_run_ids": [
         "34629-marketing_cloud_21179-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -334,14 +348,15 @@
     "check_id": "chk_q064v2c56cntcr_q0ejfw0v6l1adj",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q0EJFW0V6L1ADJ",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "35054",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:38:41-07:00",
       "checked_export_run_ids": [
         "35054-snowflake_21274-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -352,14 +367,15 @@
     "check_id": "chk_q064v2c56cntcr_q0ejx79bkj5sx6",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q0EJX79BKJ5SX6",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "23579",
       "destination_type": "marketing_cloud",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:33:04-07:00",
       "checked_export_run_ids": [
         "23579-marketing_cloud_14691-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -370,15 +386,15 @@
     "check_id": "chk_q064v2c56cntcr_q0g18jh1kru2el",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q0G18JH1KRU2EL",
-    "state": "blocked",
-    "blockers": [
-      "destination_mismatch"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "31806",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:37:04-07:00",
       "checked_export_run_ids": [
         "31806-snowflake_19528-scheduled__2026-05-13T23:00:00+00:00",
         "31806-pulse_point_19529-scheduled__2026-05-13T23:00:00+00:00"
@@ -390,14 +406,14 @@
     "check_id": "chk_q064v2c56cntcr_q0giqnjauiknv2",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q0GIQNJAUIKNV2",
-    "state": "blocked",
-    "blockers": [
-      "missing_run_identity"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "30299",
+      "match_strategy": "any_export_after_alert",
+      "alert_created_at": "2026-05-14T12:55:32-07:00",
       "checked_export_run_ids": [],
       "glcli": "glcli --env prod bifrost pizza --audience-id 30299 --org-id 395"
     }
@@ -406,14 +422,15 @@
     "check_id": "chk_q064v2c56cntcr_q0giuroxumkfi4",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q0GIUROXUMKFI4",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "31399",
       "destination_type": "marketing_cloud",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:36:11-07:00",
       "checked_export_run_ids": [
         "31399-marketing_cloud_19114-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -424,14 +441,15 @@
     "check_id": "chk_q064v2c56cntcr_q0gvqe9glaxa85",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q0GVQE9GLAXA85",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "29564",
       "destination_type": "marketing_cloud",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:34:41-07:00",
       "checked_export_run_ids": [
         "29564-marketing_cloud_18089-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -442,14 +460,15 @@
     "check_id": "chk_q064v2c56cntcr_q0icybhyezd2p9",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q0ICYBHYEZD2P9",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "31139",
       "destination_type": "marketing_cloud",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:35:48-07:00",
       "checked_export_run_ids": [
         "31139-marketing_cloud_18889-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -460,14 +479,15 @@
     "check_id": "chk_q064v2c56cntcr_q0irhs4y29qjxv",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q0IRHS4Y29QJXV",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "29563",
       "destination_type": "marketing_cloud",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:34:39-07:00",
       "checked_export_run_ids": [
         "29563-marketing_cloud_18090-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -478,14 +498,15 @@
     "check_id": "chk_q064v2c56cntcr_q0jn5ar2ciyxor",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q0JN5AR2CIYXOR",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "32116",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:37:16-07:00",
       "checked_export_run_ids": [
         "32116-snowflake_19644-scheduled__2026-05-04T23:00:00+00:00",
         "32116-snowflake_19644-scheduled__2026-05-12T23:00:00+00:00",
@@ -498,14 +519,15 @@
     "check_id": "chk_q064v2c56cntcr_q0k5j365nu8xff",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q0K5J365NU8XFF",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "35061",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:38:54-07:00",
       "checked_export_run_ids": [
         "35061-snowflake_21276-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -516,14 +538,15 @@
     "check_id": "chk_q064v2c56cntcr_q0m2elwuo2u6ia",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q0M2ELWUO2U6IA",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "32523",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:37:44-07:00",
       "checked_export_run_ids": [
         "32523-snowflake_20058-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -534,14 +557,15 @@
     "check_id": "chk_q064v2c56cntcr_q0m7axlbzl2o5i",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q0M7AXLBZL2O5I",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "18684",
       "destination_type": "pulse_point",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:31:50-07:00",
       "checked_export_run_ids": [
         "18684-pulse_point_11878-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -552,14 +576,15 @@
     "check_id": "chk_q064v2c56cntcr_q0mm8auo340fdb",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q0MM8AUO340FDB",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "28569",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:34:20-07:00",
       "checked_export_run_ids": [
         "28569-snowflake_17454-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -570,14 +595,15 @@
     "check_id": "chk_q064v2c56cntcr_q0mx7hzszf1mlm",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q0MX7HZSZF1MLM",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "15720",
       "destination_type": "marketing_cloud",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:31:33-07:00",
       "checked_export_run_ids": [
         "15720-marketing_cloud_10279-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -588,14 +614,15 @@
     "check_id": "chk_q064v2c56cntcr_q0nvgivn1z6mt9",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q0NVGIVN1Z6MT9",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "35048",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:38:33-07:00",
       "checked_export_run_ids": [
         "35048-snowflake_21282-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -606,15 +633,15 @@
     "check_id": "chk_q064v2c56cntcr_q0olef7ybii5zc",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q0OLEF7YBII5ZC",
-    "state": "blocked",
-    "blockers": [
-      "destination_mismatch"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "24094",
       "destination_type": "facebook",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:33:10-07:00",
       "checked_export_run_ids": [
         "24094-facebook_16080-scheduled__2026-05-13T23:00:00+00:00",
         "24094-linkedin_ads_16081-scheduled__2026-05-13T23:00:00+00:00"
@@ -626,14 +653,15 @@
     "check_id": "chk_q064v2c56cntcr_q0q5bc89ih9bzp",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q0Q5BC89IH9BZP",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "29660",
       "destination_type": "marketing_cloud",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:34:45-07:00",
       "checked_export_run_ids": [
         "29660-marketing_cloud_18240-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -644,14 +672,15 @@
     "check_id": "chk_q064v2c56cntcr_q0qcr8dy04nu4u",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q0QCR8DY04NU4U",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "34617",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:38:22-07:00",
       "checked_export_run_ids": [
         "34617-snowflake_21167-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -662,15 +691,15 @@
     "check_id": "chk_q064v2c56cntcr_q0qzvv0izzj0sr",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q0QZVV0IZZJ0SR",
-    "state": "blocked",
-    "blockers": [
-      "destination_mismatch"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "31437",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:36:15-07:00",
       "checked_export_run_ids": [
         "31437-snowflake_19516-scheduled__2026-05-13T23:00:00+00:00",
         "31437-pulse_point_19579-scheduled__2026-05-13T23:00:00+00:00"
@@ -682,14 +711,15 @@
     "check_id": "chk_q064v2c56cntcr_q0r384l2djx853",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q0R384L2DJX853",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "29794",
       "destination_type": "marketing_cloud",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:34:57-07:00",
       "checked_export_run_ids": [
         "29794-marketing_cloud_18241-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -700,14 +730,15 @@
     "check_id": "chk_q064v2c56cntcr_q0r4d38zdjdvwo",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q0R4D38ZDJDVWO",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "32121",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:37:22-07:00",
       "checked_export_run_ids": [
         "32121-snowflake_19647-scheduled__2026-05-12T23:00:00+00:00",
         "32121-snowflake_19647-scheduled__2026-05-13T23:00:00+00:00"
@@ -728,6 +759,8 @@
       "org_id": "395",
       "audience_id": "23522",
       "destination_type": "marketing_cloud",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:32:55-07:00",
       "checked_export_run_ids": [
         "23522-marketing_cloud_14630-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -738,14 +771,15 @@
     "check_id": "chk_q064v2c56cntcr_q0siayrfpya2b8",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q0SIAYRFPYA2B8",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "35057",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:38:48-07:00",
       "checked_export_run_ids": [
         "35057-snowflake_21272-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -756,15 +790,15 @@
     "check_id": "chk_q064v2c56cntcr_q0v94kgjhkyfqs",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q0V94KGJHKYFQS",
-    "state": "blocked",
-    "blockers": [
-      "destination_mismatch"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "26157",
       "destination_type": "pulse_point",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:33:31-07:00",
       "checked_export_run_ids": [
         "26157-pulse_point_16183-scheduled__2026-05-13T23:00:00+00:00",
         "26157-snowflake_16170-scheduled__2026-05-13T23:00:00+00:00"
@@ -776,14 +810,15 @@
     "check_id": "chk_q064v2c56cntcr_q0vcww3kbdfesm",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q0VCWW3KBDFESM",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "31396",
       "destination_type": "marketing_cloud",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:36:04-07:00",
       "checked_export_run_ids": [
         "31396-marketing_cloud_19110-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -794,14 +829,15 @@
     "check_id": "chk_q064v2c56cntcr_q0vr8imksi34hq",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q0VR8IMKSI34HQ",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "24157",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:33:12-07:00",
       "checked_export_run_ids": [
         "24157-snowflake_14947-scheduled__2026-05-13T23:00:00+00:00",
         "24157-snowflake_15059-scheduled__2026-05-13T23:00:00+00:00"
@@ -813,14 +849,15 @@
     "check_id": "chk_q064v2c56cntcr_q0wfulzks71j2g",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q0WFULZKS71J2G",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "19441",
       "destination_type": "pulse_point",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:32:03-07:00",
       "checked_export_run_ids": [
         "19441-pulse_point_12246-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -831,14 +868,15 @@
     "check_id": "chk_q064v2c56cntcr_q0xszz8ktthz3j",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q0XSZZ8KTTHZ3J",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "341",
       "destination_type": "marketing_cloud_object",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:39:31-07:00",
       "checked_export_run_ids": [
         "341-marketing_cloud_object_341-scheduled__2026-05-12T18:00:00+00:00"
       ],
@@ -849,14 +887,15 @@
     "check_id": "chk_q064v2c56cntcr_q0zhqy7fce3r0y",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q0ZHQY7FCE3R0Y",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "15712",
       "destination_type": "marketing_cloud",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:31:13-07:00",
       "checked_export_run_ids": [
         "15712-marketing_cloud_10221-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -867,14 +906,15 @@
     "check_id": "chk_q064v2c56cntcr_q104aanulumqhe",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q104AANULUMQHE",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "12011",
       "destination_type": "marketing_cloud",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:30:22-07:00",
       "checked_export_run_ids": [
         "12011-marketing_cloud_8042-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -885,14 +925,14 @@
     "check_id": "chk_q064v2c56cntcr_q129bwe1uj28ko",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q129BWE1UJ28KO",
-    "state": "blocked",
-    "blockers": [
-      "missing_run_identity"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "20770",
+      "match_strategy": "any_export_after_alert",
+      "alert_created_at": "2026-05-14T11:53:30-07:00",
       "checked_export_run_ids": [],
       "glcli": "glcli --env prod bifrost pizza --audience-id 20770 --org-id 395"
     }
@@ -901,14 +941,15 @@
     "check_id": "chk_q064v2c56cntcr_q13400eie5teqw",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q13400EIE5TEQW",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "31105",
       "destination_type": "marketing_cloud",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:35:38-07:00",
       "checked_export_run_ids": [
         "31105-marketing_cloud_18865-scheduled__2026-05-12T23:00:00+00:00"
       ],
@@ -919,14 +960,15 @@
     "check_id": "chk_q064v2c56cntcr_q14jv74lr94zq3",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q14JV74LR94ZQ3",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "11347",
       "destination_type": "marketing_cloud",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:30:09-07:00",
       "checked_export_run_ids": [
         "11347-marketing_cloud_8093-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -937,14 +979,15 @@
     "check_id": "chk_q064v2c56cntcr_q152bj2l27pjue",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q152BJ2L27PJUE",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "23583",
       "destination_type": "marketing_cloud",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:33:09-07:00",
       "checked_export_run_ids": [
         "23583-marketing_cloud_14694-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -955,14 +998,15 @@
     "check_id": "chk_q064v2c56cntcr_q155bfb227cun7",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q155BFB227CUN7",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "34162",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:38:05-07:00",
       "checked_export_run_ids": [
         "34162-snowflake_20939-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -973,14 +1017,15 @@
     "check_id": "chk_q064v2c56cntcr_q166nhiolbkz1g",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q166NHIOLBKZ1G",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "27031",
       "destination_type": "marketing_cloud",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:33:40-07:00",
       "checked_export_run_ids": [
         "27031-marketing_cloud_16580-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -1000,6 +1045,8 @@
       "org_id": "395",
       "audience_id": "35330",
       "destination_type": "marketing_cloud",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:39:03-07:00",
       "checked_export_run_ids": [
         "35330-marketing_cloud_21409-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -1010,15 +1057,15 @@
     "check_id": "chk_q064v2c56cntcr_q197e9kzp9we93",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q197E9KZP9WE93",
-    "state": "blocked",
-    "blockers": [
-      "destination_mismatch"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "27244",
       "destination_type": "pulse_point",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:33:50-07:00",
       "checked_export_run_ids": [
         "27244-pulse_point_16994-scheduled__2026-05-13T23:00:00+00:00",
         "27244-snowflake_16866-scheduled__2026-05-13T23:00:00+00:00"
@@ -1030,14 +1077,15 @@
     "check_id": "chk_q064v2c56cntcr_q19cli5qtwr9q0",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q19CLI5QTWR9Q0",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "29797",
       "destination_type": "marketing_cloud",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:35:01-07:00",
       "checked_export_run_ids": [
         "29797-marketing_cloud_18246-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -1048,14 +1096,15 @@
     "check_id": "chk_q064v2c56cntcr_q19h8rn87v0jpl",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q19H8RN87V0JPL",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "31709",
       "destination_type": "marketing_cloud",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:36:45-07:00",
       "checked_export_run_ids": [
         "31709-marketing_cloud_19337-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -1066,14 +1115,15 @@
     "check_id": "chk_q064v2c56cntcr_q19mtvoarltpk9",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q19MTVOARLTPK9",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "35834",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:39:13-07:00",
       "checked_export_run_ids": [
         "35834-snowflake_21827-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -1084,14 +1134,15 @@
     "check_id": "chk_q064v2c56cntcr_q1aegmdc5t8dem",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q1AEGMDC5T8DEM",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "31705",
       "destination_type": "marketing_cloud",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:36:39-07:00",
       "checked_export_run_ids": [
         "31705-marketing_cloud_19338-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -1102,14 +1153,15 @@
     "check_id": "chk_q064v2c56cntcr_q1c5f0dvhod9qn",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q1C5F0DVHOD9QN",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "36139",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:39:19-07:00",
       "checked_export_run_ids": [
         "36139-snowflake_22036-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -1120,14 +1172,15 @@
     "check_id": "chk_q064v2c56cntcr_q1c9c295ccvx35",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q1C9C295CCVX35",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "22665",
       "destination_type": "marketing_cloud",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:32:39-07:00",
       "checked_export_run_ids": [
         "22665-marketing_cloud_14695-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -1138,14 +1191,15 @@
     "check_id": "chk_q064v2c56cntcr_q1cyln9ds31094",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q1CYLN9DS31094",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "31400",
       "destination_type": "marketing_cloud",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:36:14-07:00",
       "checked_export_run_ids": [
         "31400-marketing_cloud_19115-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -1156,15 +1210,15 @@
     "check_id": "chk_q064v2c56cntcr_q1em8dk39utyrw",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q1EM8DK39UTYRW",
-    "state": "blocked",
-    "blockers": [
-      "destination_mismatch"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "32373",
       "destination_type": "pulse_point",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:37:40-07:00",
       "checked_export_run_ids": [
         "32373-pulse_point_19829-scheduled__2026-05-13T23:00:00+00:00",
         "32373-snowflake_19830-scheduled__2026-05-13T23:00:00+00:00"
@@ -1176,14 +1230,15 @@
     "check_id": "chk_q064v2c56cntcr_q1f69hj8erwy07",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q1F69HJ8ERWY07",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "35058",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:38:50-07:00",
       "checked_export_run_ids": [
         "35058-snowflake_21273-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -1203,6 +1258,8 @@
       "org_id": "395",
       "audience_id": "26233",
       "destination_type": "marketing_cloud",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:33:35-07:00",
       "checked_export_run_ids": [
         "26233-marketing_cloud_16225-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -1213,14 +1270,15 @@
     "check_id": "chk_q064v2c56cntcr_q1g702lknrcgi6",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q1G702LKNRCGI6",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "31863",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:37:10-07:00",
       "checked_export_run_ids": [
         "31863-snowflake_19622-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -1231,14 +1289,15 @@
     "check_id": "chk_q064v2c56cntcr_q1ghvv4tawxfmg",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q1GHVV4TAWXFMG",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "15715",
       "destination_type": "marketing_cloud",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:31:23-07:00",
       "checked_export_run_ids": [
         "15715-marketing_cloud_10245-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -1249,15 +1308,15 @@
     "check_id": "chk_q064v2c56cntcr_q1h8xd2eaqdf75",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q1H8XD2EAQDF75",
-    "state": "blocked",
-    "blockers": [
-      "destination_mismatch"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "26145",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:33:29-07:00",
       "checked_export_run_ids": [
         "26145-snowflake_16135-scheduled__2026-05-13T23:00:00+00:00",
         "26145-pulse_point_16182-scheduled__2026-05-13T23:00:00+00:00"
@@ -1269,14 +1328,15 @@
     "check_id": "chk_q064v2c56cntcr_q1h9athddruchi",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q1H9ATHDDRUCHI",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "31802",
       "destination_type": "pulse_point",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:37:01-07:00",
       "checked_export_run_ids": [
         "31802-pulse_point_19570-scheduled__2026-05-13T23:00:00+00:00",
         "31802-pulse_point_19411-scheduled__2026-05-13T23:00:00+00:00"
@@ -1288,14 +1348,15 @@
     "check_id": "chk_q064v2c56cntcr_q1kwvfoomqs0lb",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q1KWVFOOMQS0LB",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "32723",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:37:57-07:00",
       "checked_export_run_ids": [
         "32723-snowflake_20082-scheduled__2026-05-12T23:00:00+00:00",
         "32723-snowflake_20082-scheduled__2026-05-13T23:00:00+00:00"
@@ -1307,14 +1368,15 @@
     "check_id": "chk_q064v2c56cntcr_q1lrchcs0tbxz7",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q1LRCHCS0TBXZ7",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "32522",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:37:42-07:00",
       "checked_export_run_ids": [
         "32522-snowflake_20059-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -1325,14 +1387,15 @@
     "check_id": "chk_q064v2c56cntcr_q1mey4k9zos5wf",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q1MEY4K9ZOS5WF",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "31721",
       "destination_type": "marketing_cloud",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:36:52-07:00",
       "checked_export_run_ids": [
         "31721-marketing_cloud_19335-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -1343,14 +1406,15 @@
     "check_id": "chk_q064v2c56cntcr_q1n5rivgghfri7",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q1N5RIVGGHFRI7",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "31710",
       "destination_type": "marketing_cloud",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:36:48-07:00",
       "checked_export_run_ids": [
         "31710-marketing_cloud_19334-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -1361,14 +1425,15 @@
     "check_id": "chk_q064v2c56cntcr_q1npsmumoeirti",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q1NPSMUMOEIRTI",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "32706",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:37:55-07:00",
       "checked_export_run_ids": [
         "32706-snowflake_20264-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -1379,14 +1444,15 @@
     "check_id": "chk_q064v2c56cntcr_q1o5yd7vgpy6jo",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q1O5YD7VGPY6JO",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "26083",
       "destination_type": "pulse_point",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:33:27-07:00",
       "checked_export_run_ids": [
         "26083-pulse_point_19618-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -1397,14 +1463,15 @@
     "check_id": "chk_q064v2c56cntcr_q1p4vlpu1j3jck",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q1P4VLPU1J3JCK",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "24231",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:33:16-07:00",
       "checked_export_run_ids": [
         "24231-snowflake_15005-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -1415,14 +1482,15 @@
     "check_id": "chk_q064v2c56cntcr_q1q2ckob2md15j",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q1Q2CKOB2MD15J",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "34160",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:38:01-07:00",
       "checked_export_run_ids": [
         "34160-snowflake_20941-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -1433,14 +1501,15 @@
     "check_id": "chk_q064v2c56cntcr_q1q97ajh1rswkc",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q1Q97AJH1RSWKC",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "32117",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:37:18-07:00",
       "checked_export_run_ids": [
         "32117-snowflake_19645-scheduled__2026-05-12T23:00:00+00:00",
         "32117-snowflake_19645-scheduled__2026-05-13T23:00:00+00:00"
@@ -1452,14 +1521,15 @@
     "check_id": "chk_q064v2c56cntcr_q1qd1tcsf71ide",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q1QD1TCSF71IDE",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "35060",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:38:52-07:00",
       "checked_export_run_ids": [
         "35060-snowflake_21275-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -1470,14 +1540,15 @@
     "check_id": "chk_q064v2c56cntcr_q1t129ksh11uuq",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q1T129KSH11UUQ",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "13605",
       "destination_type": "marketing_cloud",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:30:32-07:00",
       "checked_export_run_ids": [
         "13605-marketing_cloud_8910-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -1488,14 +1559,15 @@
     "check_id": "chk_q064v2c56cntcr_q1uv07vqvjixi4",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q1UV07VQVJIXI4",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "34161",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:38:03-07:00",
       "checked_export_run_ids": [
         "34161-snowflake_20940-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -1506,15 +1578,15 @@
     "check_id": "chk_q064v2c56cntcr_q1vxla1q9q4cul",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q1VXLA1Q9Q4CUL",
-    "state": "blocked",
-    "blockers": [
-      "destination_mismatch"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "27539",
       "destination_type": "pulse_point",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:34:00-07:00",
       "checked_export_run_ids": [
         "27539-pulse_point_16996-scheduled__2026-05-13T23:00:00+00:00",
         "27539-snowflake_17605-scheduled__2026-05-13T23:00:00+00:00",
@@ -1527,14 +1599,15 @@
     "check_id": "chk_q064v2c56cntcr_q1x7hkguq5nhga",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q1X7HKGUQ5NHGA",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "35833",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:39:11-07:00",
       "checked_export_run_ids": [
         "35833-snowflake_21828-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -1545,14 +1618,15 @@
     "check_id": "chk_q064v2c56cntcr_q1yo8xi20xmp6m",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q1YO8XI20XMP6M",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "27608",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:34:05-07:00",
       "checked_export_run_ids": [
         "27608-snowflake_16850-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -1563,14 +1637,15 @@
     "check_id": "chk_q064v2c56cntcr_q1zy18ysy0foic",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q1ZY18YSY0FOIC",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "32655",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:37:51-07:00",
       "checked_export_run_ids": [
         "32655-snowflake_20436-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -1581,14 +1656,15 @@
     "check_id": "chk_q064v2c56cntcr_q20q3bqo123u3n",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q20Q3BQO123U3N",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "35368",
       "destination_type": "marketing_cloud",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:39:05-07:00",
       "checked_export_run_ids": [
         "35368-marketing_cloud_21433-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -1599,14 +1675,15 @@
     "check_id": "chk_q064v2c56cntcr_q21avsr16rhl2n",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q21AVSR16RHL2N",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "30103",
       "destination_type": "marketing_cloud",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:35:09-07:00",
       "checked_export_run_ids": [
         "30103-marketing_cloud_21432-scheduled__2026-05-13T16:00:00+00:00"
       ],
@@ -1617,14 +1694,15 @@
     "check_id": "chk_q064v2c56cntcr_q232h8g08exzlt",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q232H8G08EXZLT",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "32122",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:37:25-07:00",
       "checked_export_run_ids": [
         "32122-snowflake_19649-scheduled__2026-05-12T23:00:00+00:00",
         "32122-snowflake_19649-scheduled__2026-05-13T23:00:00+00:00"
@@ -1636,14 +1714,15 @@
     "check_id": "chk_q064v2c56cntcr_q24prxfxx5urtt",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q24PRXFXX5URTT",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "31103",
       "destination_type": "marketing_cloud",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:35:34-07:00",
       "checked_export_run_ids": [
         "31103-marketing_cloud_18862-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -1654,14 +1733,15 @@
     "check_id": "chk_q064v2c56cntcr_q25j2a8erirdfm",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q25J2A8ERIRDFM",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "11592",
       "destination_type": "marketing_cloud",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:30:21-07:00",
       "checked_export_run_ids": [
         "11592-marketing_cloud_8023-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -1672,14 +1752,15 @@
     "check_id": "chk_q064v2c56cntcr_q25su66lk4ba6a",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q25SU66LK4BA6A",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "28132",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:34:17-07:00",
       "checked_export_run_ids": [
         "28132-snowflake_20025-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -1690,14 +1771,15 @@
     "check_id": "chk_q064v2c56cntcr_q26jugb9as3e0g",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q26JUGB9AS3E0G",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "22658",
       "destination_type": "marketing_cloud",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:32:27-07:00",
       "checked_export_run_ids": [
         "22658-marketing_cloud_14883-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -1708,14 +1790,15 @@
     "check_id": "chk_q064v2c56cntcr_q26nfrttxdjnkw",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q26NFRTTXDJNKW",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "31799",
       "destination_type": "pulse_point",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:36:55-07:00",
       "checked_export_run_ids": [
         "31799-pulse_point_19409-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -1726,14 +1809,15 @@
     "check_id": "chk_q064v2c56cntcr_q26odmq118c4uj",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q26ODMQ118C4UJ",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "32229",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:37:37-07:00",
       "checked_export_run_ids": [
         "32229-snowflake_19838-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -1744,14 +1828,15 @@
     "check_id": "chk_q064v2c56cntcr_q273a3vgei4hch",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q273A3VGEI4HCH",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "31645",
       "destination_type": "marketing_cloud",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:36:21-07:00",
       "checked_export_run_ids": [
         "31645-marketing_cloud_19347-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -1762,14 +1847,15 @@
     "check_id": "chk_q064v2c56cntcr_q280p47tflxbey",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q280P47TFLXBEY",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "35053",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:38:39-07:00",
       "checked_export_run_ids": [
         "35053-snowflake_21277-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -1780,14 +1866,15 @@
     "check_id": "chk_q064v2c56cntcr_q2bh1hgrnv13d8",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q2BH1HGRNV13D8",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "25299",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:33:22-07:00",
       "checked_export_run_ids": [
         "25299-snowflake_15907-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -1798,14 +1885,15 @@
     "check_id": "chk_q064v2c56cntcr_q2c04qimoko9ew",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q2C04QIMOKO9EW",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "27052",
       "destination_type": "marketing_cloud",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:33:45-07:00",
       "checked_export_run_ids": [
         "27052-marketing_cloud_16583-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -1816,14 +1904,15 @@
     "check_id": "chk_q064v2c56cntcr_q2c34nu3okahwm",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q2C34NU3OKAHWM",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "35055",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:38:44-07:00",
       "checked_export_run_ids": [
         "35055-snowflake_21271-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -1834,14 +1923,15 @@
     "check_id": "chk_q064v2c56cntcr_q2cg38ge5xuka7",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q2CG38GE5XUKA7",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "31394",
       "destination_type": "marketing_cloud",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:36:01-07:00",
       "checked_export_run_ids": [
         "31394-marketing_cloud_19108-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -1852,15 +1942,15 @@
     "check_id": "chk_q064v2c56cntcr_q2d3so16klrdbt",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q2D3SO16KLRDBT",
-    "state": "blocked",
-    "blockers": [
-      "destination_mismatch"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "34239",
       "destination_type": "pulse_point",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:38:10-07:00",
       "checked_export_run_ids": [
         "34239-pulse_point_20925-scheduled__2026-05-13T23:00:00+00:00",
         "34239-snowflake_20924-scheduled__2026-05-13T23:00:00+00:00"
@@ -1872,14 +1962,15 @@
     "check_id": "chk_q064v2c56cntcr_q2e0lddmg0cn77",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q2E0LDDMG0CN77",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "34349",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:38:18-07:00",
       "checked_export_run_ids": [
         "34349-snowflake_20971-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -1890,14 +1981,15 @@
     "check_id": "chk_q064v2c56cntcr_q2e3k7q27jbepc",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q2E3K7Q27JBEPC",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "15667",
       "destination_type": "marketing_cloud",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:31:02-07:00",
       "checked_export_run_ids": [
         "15667-marketing_cloud_10202-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -1908,14 +2000,15 @@
     "check_id": "chk_q064v2c56cntcr_q2esa1maqegdbg",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q2ESA1MAQEGDBG",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "22913",
       "destination_type": "marketing_cloud",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:32:46-07:00",
       "checked_export_run_ids": [
         "22913-marketing_cloud_14309-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -1926,14 +2019,15 @@
     "check_id": "chk_q064v2c56cntcr_q2ffvp7umzxozr",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q2FFVP7UMZXOZR",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "19377",
       "destination_type": "marketing_cloud",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:31:59-07:00",
       "checked_export_run_ids": [
         "19377-marketing_cloud_12207-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -1944,14 +2038,14 @@
     "check_id": "chk_q064v2c56cntcr_q2frfvn6pl13ym",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q2FRFVN6PL13YM",
-    "state": "blocked",
-    "blockers": [
-      "missing_run_identity"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "17010",
+      "match_strategy": "any_export_after_alert",
+      "alert_created_at": "2026-05-14T12:22:07-07:00",
       "checked_export_run_ids": [],
       "glcli": "glcli --env prod bifrost pizza --audience-id 17010 --org-id 395"
     }
@@ -1960,15 +2054,15 @@
     "check_id": "chk_q064v2c56cntcr_q2g0z6lzxxr8if",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q2G0Z6LZXXR8IF",
-    "state": "blocked",
-    "blockers": [
-      "destination_mismatch"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "31696",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:36:32-07:00",
       "checked_export_run_ids": [
         "31696-snowflake_19518-scheduled__2026-05-13T23:00:00+00:00",
         "31696-pulse_point_19521-scheduled__2026-05-13T23:00:00+00:00"
@@ -1980,14 +2074,15 @@
     "check_id": "chk_q064v2c56cntcr_q2g2o10l8v3agf",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q2G2O10L8V3AGF",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "21289",
       "destination_type": "google_adwords",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:32:18-07:00",
       "checked_export_run_ids": [
         "21289-google_adwords_13529-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -1998,14 +2093,15 @@
     "check_id": "chk_q064v2c56cntcr_q2giks8486yjzb",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q2GIKS8486YJZB",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "35385",
       "destination_type": "marketing_cloud",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:39:07-07:00",
       "checked_export_run_ids": [
         "35385-marketing_cloud_21436-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -2016,14 +2112,15 @@
     "check_id": "chk_q064v2c56cntcr_q2gkknkz6xfx7g",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q2GKKNKZ6XFX7G",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "15711",
       "destination_type": "marketing_cloud",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:31:09-07:00",
       "checked_export_run_ids": [
         "15711-marketing_cloud_10219-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -2034,14 +2131,15 @@
     "check_id": "chk_q064v2c56cntcr_q2gnh3nadspkgb",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q2GNH3NADSPKGB",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "31193",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:35:55-07:00",
       "checked_export_run_ids": [
         "31193-snowflake_18958-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -2052,14 +2150,15 @@
     "check_id": "chk_q064v2c56cntcr_q2hh2l89b5hksc",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q2HH2L89B5HKSC",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "15815",
       "destination_type": "marketing_cloud",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:31:36-07:00",
       "checked_export_run_ids": [
         "15815-marketing_cloud_10278-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -2070,14 +2169,15 @@
     "check_id": "chk_q064v2c56cntcr_q2hpa25optn4pq",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q2HPA25OPTN4PQ",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "32557",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:37:48-07:00",
       "checked_export_run_ids": [
         "32557-snowflake_19984-scheduled__2026-05-06T23:00:00+00:00",
         "32557-snowflake_19984-scheduled__2026-05-12T23:00:00+00:00",
@@ -2090,14 +2190,15 @@
     "check_id": "chk_q064v2c56cntcr_q2i2k255twyt2d",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q2I2K255TWYT2D",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "15714",
       "destination_type": "marketing_cloud",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:31:19-07:00",
       "checked_export_run_ids": [
         "15714-marketing_cloud_10236-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -2108,14 +2209,15 @@
     "check_id": "chk_q064v2c56cntcr_q2i3xyrwzxk0ml",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q2I3XYRWZXK0ML",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "31142",
       "destination_type": "marketing_cloud",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:35:51-07:00",
       "checked_export_run_ids": [
         "31142-marketing_cloud_18890-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -2126,14 +2228,15 @@
     "check_id": "chk_q064v2c56cntcr_q2i8qukqk1k4ge",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q2I8QUKQK1K4GE",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "36140",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:39:22-07:00",
       "checked_export_run_ids": [
         "36140-snowflake_22034-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -2144,15 +2247,15 @@
     "check_id": "chk_q064v2c56cntcr_q2if5ep22dvkfo",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q2IF5EP22DVKFO",
-    "state": "blocked",
-    "blockers": [
-      "destination_mismatch"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "26105",
       "destination_type": "pulse_point",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:33:28-07:00",
       "checked_export_run_ids": [
         "26105-pulse_point_16181-scheduled__2026-05-13T23:00:00+00:00",
         "26105-snowflake_16082-scheduled__2026-05-13T23:00:00+00:00"
@@ -2164,14 +2267,15 @@
     "check_id": "chk_q064v2c56cntcr_q2ig06q7jcqa9o",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q2IG06Q7JCQA9O",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "15716",
       "destination_type": "marketing_cloud",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:31:26-07:00",
       "checked_export_run_ids": [
         "15716-marketing_cloud_10246-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -2182,14 +2286,15 @@
     "check_id": "chk_q064v2c56cntcr_q2j9l518n0l35d",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q2J9L518N0L35D",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "31106",
       "destination_type": "marketing_cloud",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:35:41-07:00",
       "checked_export_run_ids": [
         "31106-marketing_cloud_18869-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -2200,14 +2305,15 @@
     "check_id": "chk_q064v2c56cntcr_q2kc1zcr3oewi6",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q2KC1ZCR3OEWI6",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "22535",
       "destination_type": "linkedin_ads",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:32:22-07:00",
       "checked_export_run_ids": [
         "22535-linkedin_ads_14878-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -2218,15 +2324,15 @@
     "check_id": "chk_q064v2c56cntcr_q2llylblrcboq6",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q2LLYLBLRCBOQ6",
-    "state": "blocked",
-    "blockers": [
-      "destination_mismatch"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "14103",
       "destination_type": "facebook",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:30:37-07:00",
       "checked_export_run_ids": [
         "14103-facebook_9221-scheduled__2026-05-13T23:00:00+00:00",
         "14103-linkedin_ads_9223-scheduled__2026-05-13T23:00:00+00:00",
@@ -2239,14 +2345,14 @@
     "check_id": "chk_q064v2c56cntcr_q2mf89niillm2j",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q2MF89NIILLM2J",
-    "state": "blocked",
-    "blockers": [
-      "missing_run_identity"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "16998",
+      "match_strategy": "any_export_after_alert",
+      "alert_created_at": "2026-05-14T12:21:06-07:00",
       "checked_export_run_ids": [],
       "glcli": "glcli --env prod bifrost pizza --audience-id 16998 --org-id 395"
     }
@@ -2255,14 +2361,15 @@
     "check_id": "chk_q064v2c56cntcr_q2mpfpvb12frai",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q2MPFPVB12FRAI",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "31102",
       "destination_type": "marketing_cloud",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:35:30-07:00",
       "checked_export_run_ids": [
         "31102-marketing_cloud_18863-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -2273,14 +2380,15 @@
     "check_id": "chk_q064v2c56cntcr_q2n0l5ob102u0w",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q2N0L5OB102U0W",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "32226",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:37:32-07:00",
       "checked_export_run_ids": [
         "32226-snowflake_19837-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -2291,14 +2399,15 @@
     "check_id": "chk_q064v2c56cntcr_q2nexzkd0b850m",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q2NEXZKD0B850M",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "332",
       "destination_type": "marketing_cloud_object",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:39:26-07:00",
       "checked_export_run_ids": [
         "332-marketing_cloud_object_332-scheduled__2026-05-13T00:00:00+00:00"
       ],
@@ -2309,15 +2418,15 @@
     "check_id": "chk_q064v2c56cntcr_q2o8n9hk4kjpdb",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q2O8N9HK4KJPDB",
-    "state": "blocked",
-    "blockers": [
-      "destination_mismatch"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "34238",
       "destination_type": "pulse_point",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:38:08-07:00",
       "checked_export_run_ids": [
         "34238-pulse_point_20926-scheduled__2026-05-13T23:00:00+00:00",
         "34238-snowflake_20923-scheduled__2026-05-13T23:00:00+00:00"
@@ -2329,14 +2438,15 @@
     "check_id": "chk_q064v2c56cntcr_q2qf2u3ske1taj",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q2QF2U3SKE1TAJ",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "35062",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:38:56-07:00",
       "checked_export_run_ids": [
         "35062-snowflake_21278-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -2347,14 +2457,15 @@
     "check_id": "chk_q064v2c56cntcr_q2qpztcmxsao5c",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q2QPZTCMXSAO5C",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "31803",
       "destination_type": "pulse_point",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:37:03-07:00",
       "checked_export_run_ids": [
         "31803-pulse_point_19412-scheduled__2026-05-13T23:00:00+00:00",
         "31803-pulse_point_19569-scheduled__2026-05-13T23:00:00+00:00"
@@ -2366,14 +2477,15 @@
     "check_id": "chk_q064v2c56cntcr_q2ri52uhnd8cr3",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q2RI52UHND8CR3",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "32356",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:37:39-07:00",
       "checked_export_run_ids": [
         "32356-snowflake_19812-scheduled__2026-05-12T23:00:00+00:00",
         "32356-snowflake_19812-scheduled__2026-05-13T23:00:00+00:00"
@@ -2385,14 +2497,15 @@
     "check_id": "chk_q064v2c56cntcr_q2soop11iuwt9k",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q2SOOP11IUWT9K",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "29102",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:34:32-07:00",
       "checked_export_run_ids": [
         "29102-snowflake_17809-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -2403,14 +2516,15 @@
     "check_id": "chk_q064v2c56cntcr_q2ux83b5prrnp1",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q2UX83B5PRRNP1",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "15717",
       "destination_type": "marketing_cloud",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:31:30-07:00",
       "checked_export_run_ids": [
         "15717-marketing_cloud_10249-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -2421,14 +2535,15 @@
     "check_id": "chk_q064v2c56cntcr_q2vb2r7puki82g",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q2VB2R7PUKI82G",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "32228",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:37:34-07:00",
       "checked_export_run_ids": [
         "32228-snowflake_19836-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -2439,15 +2554,15 @@
     "check_id": "chk_q064v2c56cntcr_q2wlu582anzc1g",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q2WLU582ANZC1G",
-    "state": "blocked",
-    "blockers": [
-      "destination_mismatch"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "26379",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:33:36-07:00",
       "checked_export_run_ids": [
         "26379-snowflake_16301-scheduled__2026-05-13T23:00:00+00:00",
         "26379-pulse_point_16995-scheduled__2026-05-13T23:00:00+00:00"
@@ -2459,14 +2574,15 @@
     "check_id": "chk_q064v2c56cntcr_q2x1j9oexnrzxe",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q2X1J9OEXNRZXE",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "32149",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:37:27-07:00",
       "checked_export_run_ids": [
         "32149-snowflake_20076-scheduled__2026-05-08T23:00:00+00:00",
         "32149-snowflake_20076-scheduled__2026-05-12T23:00:00+00:00",
@@ -2479,14 +2595,15 @@
     "check_id": "chk_q064v2c56cntcr_q2x61zy7bd35up",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q2X61ZY7BD35UP",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "31664",
       "destination_type": "marketing_cloud",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:36:28-07:00",
       "checked_export_run_ids": [
         "31664-marketing_cloud_19348-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -2497,14 +2614,15 @@
     "check_id": "chk_q064v2c56cntcr_q2xqz3lpd5wyji",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q2XQZ3LPD5WYJI",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "36134",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:39:17-07:00",
       "checked_export_run_ids": [
         "36134-snowflake_22035-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -2515,14 +2633,15 @@
     "check_id": "chk_q064v2c56cntcr_q2yh7wk2wtwq0w",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q2YH7WK2WTWQ0W",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "35038",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:38:29-07:00",
       "checked_export_run_ids": [
         "35038-snowflake_21268-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -2533,14 +2652,15 @@
     "check_id": "chk_q064v2c56cntcr_q2z1airflq1cpc",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q2Z1AIRFLQ1CPC",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "35039",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:38:31-07:00",
       "checked_export_run_ids": [
         "35039-snowflake_21269-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -2551,14 +2671,15 @@
     "check_id": "chk_q064v2c56cntcr_q30zej0g9t4vjq",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q30ZEJ0G9T4VJQ",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "22659",
       "destination_type": "marketing_cloud",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:32:31-07:00",
       "checked_export_run_ids": [
         "22659-marketing_cloud_14798-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -2569,14 +2690,14 @@
     "check_id": "chk_q064v2c56cntcr_q329mnjyn3cvyv",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q329MNJYN3CVYV",
-    "state": "blocked",
-    "blockers": [
-      "missing_run_identity"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "30367",
+      "match_strategy": "any_export_after_alert",
+      "alert_created_at": "2026-05-14T12:56:05-07:00",
       "checked_export_run_ids": [],
       "glcli": "glcli --env prod bifrost pizza --audience-id 30367 --org-id 395"
     }
@@ -2585,14 +2706,15 @@
     "check_id": "chk_q064v2c56cntcr_q33867snbfr1o6",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q33867SNBFR1O6",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "35051",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:38:37-07:00",
       "checked_export_run_ids": [
         "35051-snowflake_21279-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -2603,17 +2725,15 @@
     "check_id": "chk_q064v2c56cntcr_q33b8o33a0db3a",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q33B8O33A0DB3A",
-    "state": "blocked",
-    "blockers": [
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "22844",
       "destination_type": "linkedin_ads",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:32:42-07:00",
       "checked_export_run_ids": [
         "22844-linkedin_ads_14276-scheduled__2026-05-13T23:00:00+00:00",
         "22844-facebook_14275-scheduled__2026-05-13T23:00:00+00:00",
@@ -2627,17 +2747,15 @@
     "check_id": "chk_q064v2c56cntcr_q33xv5p8sxuukx",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q33XV5P8SXUUKX",
-    "state": "blocked",
-    "blockers": [
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "22843",
       "destination_type": "facebook",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:32:40-07:00",
       "checked_export_run_ids": [
         "22843-facebook_14273-scheduled__2026-05-13T23:00:00+00:00",
         "22843-linkedin_ads_14274-scheduled__2026-05-13T23:00:00+00:00",
@@ -2651,15 +2769,15 @@
     "check_id": "chk_q064v2c56cntcr_q35axcax43lr53",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q35AXCAX43LR53",
-    "state": "blocked",
-    "blockers": [
-      "destination_mismatch"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "29661",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:34:46-07:00",
       "checked_export_run_ids": [
         "29661-snowflake_18151-scheduled__2026-05-13T23:00:00+00:00",
         "29661-pulse_point_18466-scheduled__2026-05-13T23:00:00+00:00"
@@ -2671,14 +2789,15 @@
     "check_id": "chk_q064v2c56cntcr_q362upa0kjm2gs",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q362UPA0KJM2GS",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "29709",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:34:52-07:00",
       "checked_export_run_ids": [
         "29709-snowflake_18394-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -2689,14 +2808,15 @@
     "check_id": "chk_q064v2c56cntcr_q36ukq0uo8q8oz",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q36UKQ0UO8Q8OZ",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "31707",
       "destination_type": "marketing_cloud",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:36:42-07:00",
       "checked_export_run_ids": [
         "31707-marketing_cloud_19336-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -2707,14 +2827,15 @@
     "check_id": "chk_q064v2c56cntcr_q377y9clhrd2ec",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q377Y9CLHRD2EC",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "32705",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:37:53-07:00",
       "checked_export_run_ids": [
         "32705-snowflake_20262-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -2725,14 +2846,15 @@
     "check_id": "chk_q064v2c56cntcr_q39qhzr66j2bot",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q39QHZR66J2BOT",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "34241",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:38:14-07:00",
       "checked_export_run_ids": [
         "34241-snowflake_20937-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -2743,14 +2865,15 @@
     "check_id": "chk_q064v2c56cntcr_q39qznapkh6t4d",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q39QZNAPKH6T4D",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "22664",
       "destination_type": "marketing_cloud",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:32:35-07:00",
       "checked_export_run_ids": [
         "22664-marketing_cloud_14882-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -2761,14 +2884,15 @@
     "check_id": "chk_q064v2c56cntcr_q3a31otp9smpgl",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q3A31OTP9SMPGL",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "32120",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:37:20-07:00",
       "checked_export_run_ids": [
         "32120-snowflake_19648-scheduled__2026-05-12T23:00:00+00:00",
         "32120-snowflake_19648-scheduled__2026-05-13T23:00:00+00:00"
@@ -2780,14 +2904,15 @@
     "check_id": "chk_q064v2c56cntcr_q3bdwcvfl53msk",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q3BDWCVFL53MSK",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "29687",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:34:50-07:00",
       "checked_export_run_ids": [
         "29687-snowflake_18265-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -2798,14 +2923,15 @@
     "check_id": "chk_q064v2c56cntcr_q3be32jfuaut9f",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q3BE32JFUAUT9F",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "31701",
       "destination_type": "marketing_cloud",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:36:36-07:00",
       "checked_export_run_ids": [
         "31701-marketing_cloud_19339-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -2816,14 +2942,15 @@
     "check_id": "chk_q064v2c56cntcr_q3cxu5q58n3til",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q3CXU5Q58N3TIL",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "32524",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:37:46-07:00",
       "checked_export_run_ids": [
         "32524-snowflake_20057-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -2834,14 +2961,15 @@
     "check_id": "chk_q064v2c56cntcr_q3cydejim8qw3t",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q3CYDEJIM8QW3T",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "29105",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:34:36-07:00",
       "checked_export_run_ids": [
         "29105-snowflake_17810-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -2852,15 +2980,15 @@
     "check_id": "chk_q064v2c56cntcr_q3egqk08c6lnl2",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q3EGQK08C6LNL2",
-    "state": "blocked",
-    "blockers": [
-      "destination_mismatch"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "29545",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:34:37-07:00",
       "checked_export_run_ids": [
         "29545-snowflake_18150-scheduled__2026-05-13T23:00:00+00:00",
         "29545-pulse_point_18389-scheduled__2026-05-13T23:00:00+00:00"
@@ -2872,14 +3000,15 @@
     "check_id": "chk_q064v2c56cntcr_q3eqkjzfoix5si",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q3EQKJZFOIX5SI",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "23480",
       "destination_type": "marketing_cloud",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:32:51-07:00",
       "checked_export_run_ids": [
         "23480-marketing_cloud_14622-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -2890,14 +3019,15 @@
     "check_id": "chk_q064v2c56cntcr_q3f410hhf1ppzt",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q3F410HHF1PPZT",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "23523",
       "destination_type": "marketing_cloud",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:32:59-07:00",
       "checked_export_run_ids": [
         "23523-marketing_cloud_14631-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -2908,14 +3038,15 @@
     "check_id": "chk_q064v2c56cntcr_q3f6ux1m8woty1",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q3F6UX1M8WOTY1",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "31397",
       "destination_type": "marketing_cloud",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:36:07-07:00",
       "checked_export_run_ids": [
         "31397-marketing_cloud_19111-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -2926,14 +3057,15 @@
     "check_id": "chk_q064v2c56cntcr_q3ftgz9s0k89zn",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q3FTGZ9S0K89ZN",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "34256",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:38:16-07:00",
       "checked_export_run_ids": [
         "34256-snowflake_20936-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -2944,14 +3076,14 @@
     "check_id": "chk_q064v2c56cntcr_q3g4q7e1ok3xu8",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q3G4Q7E1OK3XU8",
-    "state": "blocked",
-    "blockers": [
-      "missing_run_identity"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "16992",
+      "match_strategy": "any_export_after_alert",
+      "alert_created_at": "2026-05-14T11:52:01-07:00",
       "checked_export_run_ids": [],
       "glcli": "glcli --env prod bifrost pizza --audience-id 16992 --org-id 395"
     }
@@ -2960,14 +3092,15 @@
     "check_id": "chk_q064v2c56cntcr_q3hq648ev03rin",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q3HQ648EV03RIN",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "31101",
       "destination_type": "marketing_cloud",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:35:27-07:00",
       "checked_export_run_ids": [
         "31101-marketing_cloud_18861-scheduled__2026-05-12T23:00:00+00:00"
       ],
@@ -2978,15 +3111,15 @@
     "check_id": "chk_q064v2c56cntcr_q3i7km49z3kyfo",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q3I7KM49Z3KYFO",
-    "state": "blocked",
-    "blockers": [
-      "destination_mismatch"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "31575",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:36:16-07:00",
       "checked_export_run_ids": [
         "31575-snowflake_19524-scheduled__2026-05-13T23:00:00+00:00",
         "31575-pulse_point_19525-scheduled__2026-05-13T23:00:00+00:00"
@@ -2998,14 +3131,15 @@
     "check_id": "chk_q064v2c56cntcr_q3i8jx0h2ydspb",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q3I8JX0H2YDSPB",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "31800",
       "destination_type": "pulse_point",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:36:58-07:00",
       "checked_export_run_ids": [
         "31800-pulse_point_19410-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -3016,14 +3150,15 @@
     "check_id": "chk_q064v2c56cntcr_q3nqz9xn9rt3z2",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q3NQZ9XN9RT3Z2",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "31368",
       "destination_type": "marketing_cloud",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:35:58-07:00",
       "checked_export_run_ids": [
         "31368-marketing_cloud_19098-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -3034,14 +3169,15 @@
     "check_id": "chk_q064v2c56cntcr_q3o360rq61hglf",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q3O360RQ61HGLF",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "28130",
       "destination_type": "pulse_point",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:34:15-07:00",
       "checked_export_run_ids": [
         "28130-pulse_point_17214-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -3052,14 +3188,15 @@
     "check_id": "chk_q064v2c56cntcr_q3o8golqnuca9y",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q3O8GOLQNUCA9Y",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "31107",
       "destination_type": "marketing_cloud",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:35:45-07:00",
       "checked_export_run_ids": [
         "31107-marketing_cloud_18870-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -3070,15 +3207,15 @@
     "check_id": "chk_q064v2c56cntcr_q3ok3t8ct6horg",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q3OK3T8CT6HORG",
-    "state": "blocked",
-    "blockers": [
-      "destination_mismatch"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "31904",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:37:14-07:00",
       "checked_export_run_ids": [
         "31904-snowflake_19515-scheduled__2026-05-13T23:00:00+00:00",
         "31904-pulse_point_19578-scheduled__2026-05-13T23:00:00+00:00"
@@ -3090,14 +3227,15 @@
     "check_id": "chk_q064v2c56cntcr_q3pn73nsmw7u1f",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q3PN73NSMW7U1F",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "35056",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:38:46-07:00",
       "checked_export_run_ids": [
         "35056-snowflake_21270-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -3108,14 +3246,15 @@
     "check_id": "chk_q064v2c56cntcr_q3q68xcbhyod6o",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q3Q68XCBHYOD6O",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "31646",
       "destination_type": "marketing_cloud",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:36:25-07:00",
       "checked_export_run_ids": [
         "31646-marketing_cloud_19350-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -3126,14 +3265,15 @@
     "check_id": "chk_q064v2c56cntcr_q3qaqs5tihsnzv",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q3QAQS5TIHSNZV",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "27542",
       "destination_type": "pulse_point",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:34:01-07:00",
       "checked_export_run_ids": [
         "27542-pulse_point_17212-scheduled__2026-05-13T23:00:00+00:00",
         "27542-pulse_point_16817-scheduled__2026-05-13T23:00:00+00:00"
@@ -3145,14 +3285,15 @@
     "check_id": "chk_q064v2c56cntcr_q3rm38bmq9gksl",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q3RM38BMQ9GKSL",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "35761",
       "destination_type": "marketing_cloud",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:39:09-07:00",
       "checked_export_run_ids": [
         "35761-marketing_cloud_21979-scheduled__2026-05-13T16:30:00+00:00"
       ],
@@ -3163,14 +3304,15 @@
     "check_id": "chk_q064v2c56cntcr_q3sjvvwqyg6pip",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q3SJVVWQYG6PIP",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "31665",
       "destination_type": "marketing_cloud",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:36:31-07:00",
       "checked_export_run_ids": [
         "31665-marketing_cloud_19346-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -3181,14 +3323,15 @@
     "check_id": "chk_q064v2c56cntcr_q3syt766ympltt",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q3SYT766YMPLTT",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "36059",
       "destination_type": "marketing_cloud",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:39:15-07:00",
       "checked_export_run_ids": [
         "36059-marketing_cloud_21999-scheduled__2026-05-13T16:30:00+00:00"
       ],
@@ -3199,14 +3342,15 @@
     "check_id": "chk_q064v2c56cntcr_q3wbfnmuzmunzh",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q3WBFNMUZMUNZH",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "19070",
       "destination_type": "pulse_point",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:31:54-07:00",
       "checked_export_run_ids": [
         "19070-pulse_point_12048-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -3217,14 +3361,15 @@
     "check_id": "chk_q064v2c56cntcr_q3wfoxly6v7p95",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q3WFOXLY6V7P95",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "35050",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:38:35-07:00",
       "checked_export_run_ids": [
         "35050-snowflake_21281-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -3235,14 +3380,15 @@
     "check_id": "chk_q064v2c56cntcr_q3wzb9ry22pvlp",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q3WZB9RY22PVLP",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "31808",
       "destination_type": "pulse_point",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:37:07-07:00",
       "checked_export_run_ids": [
         "31808-pulse_point_19414-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -3253,14 +3399,15 @@
     "check_id": "chk_q064v2c56cntcr_q3xfka5i2msu0e",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q3XFKA5I2MSU0E",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "27609",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:34:09-07:00",
       "checked_export_run_ids": [
         "27609-snowflake_16851-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -3271,14 +3418,15 @@
     "check_id": "chk_q064v2c56cntcr_q3xmwwzsak33ik",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q3XMWWZSAK33IK",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "31614",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:36:18-07:00",
       "checked_export_run_ids": [
         "31614-snowflake_19621-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -3289,14 +3437,15 @@
     "check_id": "chk_q064v2c56cntcr_q3xtqqv435sf7a",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q3XTQQV435SF7A",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "28672",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:34:25-07:00",
       "checked_export_run_ids": [
         "28672-snowflake_17521-scheduled__2026-05-13T23:00:00+00:00"
       ],
@@ -3307,14 +3456,15 @@
     "check_id": "chk_q064v2c56cntcr_q3yhzt542urwt3",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q3YHZT542URWT3",
-    "state": "open",
-    "proposed_state": "healthy_closed",
+    "state": "healthy_closed",
     "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "24243",
       "destination_type": "snowflake",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:33:18-07:00",
       "checked_export_run_ids": [
         "24243-snowflake_15011-scheduled__2026-05-13T23:00:00+00:00",
         "24243-snowflake_15064-scheduled__2026-05-13T23:00:00+00:00"
@@ -3326,14 +3476,14 @@
     "check_id": "chk_q064v2c56cntcr_q3z8gh96uiqeaz",
     "incident_id": "Q064V2C56CNTCR",
     "alert_id": "Q3Z8GH96UIQEAZ",
-    "state": "blocked",
-    "blockers": [
-      "missing_run_identity"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "395",
       "audience_id": "36059",
+      "match_strategy": "any_export_after_alert",
+      "alert_created_at": "2026-05-14T11:20:30-07:00",
       "checked_export_run_ids": [],
       "glcli": "glcli --env prod bifrost pizza --audience-id 36059 --org-id 395"
     }
@@ -3346,12 +3496,14 @@
     "blockers": [
       "evidence_unavailable"
     ],
-    "next_check_at": "2026-05-16T01:32:44.826Z",
+    "next_check_at": "2026-05-17T16:09:29.997Z",
     "scope": {
       "env": "royals",
       "org_id": "4",
       "audience_id": "203",
       "destination_type": "salesforce_audience_object",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-15T07:30:03-07:00",
       "checked_export_run_ids": [
         "203-salesforce_audience_object_203-scheduled__2026-05-15T13:00:00+00:00"
       ],
@@ -3380,17 +3532,19 @@
     "check_id": "chk_q12a5qfim3f9ln_q05ntdx4nq1hyu",
     "incident_id": "Q12A5QFIM3F9LN",
     "alert_id": "Q05NTDX4NQ1HYU",
-    "state": "blocked",
+    "state": "open",
     "blockers": [
-      "export_error",
-      "export_error"
+      "evidence_unavailable"
     ],
+    "next_check_at": "2026-05-17T07:28:55.328Z",
     "scope": {
       "env": "prod",
       "org_id": "336",
       "audience_id": "36199",
       "endpoint_id": "app_adobe_experience_platform_2175",
       "destination_type": "adobe_experience_platform",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T08:08:31-07:00",
       "checked_export_run_ids": [
         "36199-adobe_experience_platform_22089-webapp__2026-05-08T13:13:49+00:00",
         "36199-adobe_experience_platform_22089-webapp__2026-05-08T13:13:49+00:00"
@@ -3452,14 +3606,14 @@
     "check_id": "chk_q157ko5on9twgo_q08oe2lvf6xgmu",
     "incident_id": "Q157KO5ON9TWGO",
     "alert_id": "Q08OE2LVF6XGMU",
-    "state": "blocked",
-    "blockers": [
-      "missing_run_identity"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "402",
       "audience_id": "373",
+      "match_strategy": "any_export_after_alert",
+      "alert_created_at": "2026-05-14T21:16:41-07:00",
       "checked_export_run_ids": [],
       "glcli": "glcli --env prod bifrost pizza --audience-id 373 --org-id 402"
     }
@@ -3625,11 +3779,13 @@
     "blockers": [
       "evidence_unavailable"
     ],
-    "next_check_at": "2026-05-16T16:52:45.724Z",
+    "next_check_at": "2026-05-17T08:30:13.035Z",
     "scope": {
       "env": "costco",
       "org_id": "3",
       "audience_id": "5689",
+      "match_strategy": "any_export_after_alert",
+      "alert_created_at": "2026-05-15T17:17:14-07:00",
       "checked_export_run_ids": [],
       "glcli": "glcli --env costco bifrost pizza --audience-id 5689 --org-id 3"
     }
@@ -3833,14 +3989,14 @@
     "check_id": "chk_q1tjj4mevof1w3_q1dmvwd0f3t9di",
     "incident_id": "Q1TJJ4MEVOF1W3",
     "alert_id": "Q1DMVWD0F3T9DI",
-    "state": "blocked",
-    "blockers": [
-      "missing_run_identity"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "310",
       "audience_id": "32921",
+      "match_strategy": "any_export_after_alert",
+      "alert_created_at": "2026-05-14T07:52:48-07:00",
       "checked_export_run_ids": [],
       "glcli": "glcli --env prod bifrost pizza --audience-id 32921 --org-id 310"
     }
@@ -4122,15 +4278,18 @@
     "check_id": "chk_q1uc14qnzk76ez_q0bblwstoj1die",
     "incident_id": "Q1UC14QNZK76EZ",
     "alert_id": "Q0BBLWSTOJ1DIE",
-    "state": "blocked",
+    "state": "open",
     "blockers": [
-      "snapshotting_error_requires_review"
+      "evidence_unavailable"
     ],
+    "next_check_at": "2026-05-17T11:10:42.602Z",
     "scope": {
       "env": "prod",
       "org_id": "451",
       "audience_id": "24855",
       "destination_type": "facebook",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-15T08:29:26-07:00",
       "checked_export_run_ids": [
         "24855-facebook_18293-scheduled__2026-05-15T00:00:00+00:00"
       ],
@@ -4141,14 +4300,14 @@
     "check_id": "chk_q1uc14qnzk76ez_q0d81k8ytrd37v",
     "incident_id": "Q1UC14QNZK76EZ",
     "alert_id": "Q0D81K8YTRD37V",
-    "state": "blocked",
-    "blockers": [
-      "missing_run_identity"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "451",
       "audience_id": "26037",
+      "match_strategy": "any_export_after_alert",
+      "alert_created_at": "2026-05-14T17:58:18-07:00",
       "checked_export_run_ids": [],
       "glcli": "glcli --env prod bifrost pizza --audience-id 26037 --org-id 451"
     }
@@ -4157,14 +4316,14 @@
     "check_id": "chk_q1uc14qnzk76ez_q0f5q04vqmr20i",
     "incident_id": "Q1UC14QNZK76EZ",
     "alert_id": "Q0F5Q04VQMR20I",
-    "state": "blocked",
-    "blockers": [
-      "missing_run_identity"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "451",
       "audience_id": "25885",
+      "match_strategy": "any_export_after_alert",
+      "alert_created_at": "2026-05-14T17:55:48-07:00",
       "checked_export_run_ids": [],
       "glcli": "glcli --env prod bifrost pizza --audience-id 25885 --org-id 451"
     }
@@ -4173,14 +4332,14 @@
     "check_id": "chk_q1uc14qnzk76ez_q0llhij3wbrjfk",
     "incident_id": "Q1UC14QNZK76EZ",
     "alert_id": "Q0LLHIJ3WBRJFK",
-    "state": "blocked",
-    "blockers": [
-      "missing_run_identity"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "451",
       "audience_id": "25147",
+      "match_strategy": "any_export_after_alert",
+      "alert_created_at": "2026-05-14T17:44:31-07:00",
       "checked_export_run_ids": [],
       "glcli": "glcli --env prod bifrost pizza --audience-id 25147 --org-id 451"
     }
@@ -4189,16 +4348,18 @@
     "check_id": "chk_q1uc14qnzk76ez_q102pd4gx1c4a2",
     "incident_id": "Q1UC14QNZK76EZ",
     "alert_id": "Q102PD4GX1C4A2",
-    "state": "blocked",
+    "state": "open",
     "blockers": [
-      "snapshotting_error_requires_review",
-      "destination_mismatch"
+      "evidence_unavailable"
     ],
+    "next_check_at": "2026-05-17T11:10:42.602Z",
     "scope": {
       "env": "prod",
       "org_id": "451",
       "audience_id": "25885",
       "destination_type": "google_adwords",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-15T08:29:36-07:00",
       "checked_export_run_ids": [
         "25885-google_adwords_16088-scheduled__2026-05-15T00:00:00+00:00",
         "25885-microsoft_ads_16087-scheduled__2026-05-15T00:00:00+00:00"
@@ -4210,15 +4371,18 @@
     "check_id": "chk_q1uc14qnzk76ez_q13ewj3twg2u5c",
     "incident_id": "Q1UC14QNZK76EZ",
     "alert_id": "Q13EWJ3TWG2U5C",
-    "state": "blocked",
+    "state": "open",
     "blockers": [
-      "snapshotting_error_requires_review"
+      "evidence_unavailable"
     ],
+    "next_check_at": "2026-05-17T11:10:42.602Z",
     "scope": {
       "env": "prod",
       "org_id": "451",
       "audience_id": "25147",
       "destination_type": "marketing_cloud",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-15T08:29:31-07:00",
       "checked_export_run_ids": [
         "25147-marketing_cloud_15450-scheduled__2026-05-15T00:00:00+00:00"
       ],
@@ -4229,14 +4393,14 @@
     "check_id": "chk_q1uc14qnzk76ez_q1bsqgdw7c6h6c",
     "incident_id": "Q1UC14QNZK76EZ",
     "alert_id": "Q1BSQGDW7C6H6C",
-    "state": "blocked",
-    "blockers": [
-      "missing_run_identity"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "451",
       "audience_id": "24855",
+      "match_strategy": "any_export_after_alert",
+      "alert_created_at": "2026-05-14T17:43:02-07:00",
       "checked_export_run_ids": [],
       "glcli": "glcli --env prod bifrost pizza --audience-id 24855 --org-id 451"
     }
@@ -4245,14 +4409,14 @@
     "check_id": "chk_q1uc14qnzk76ez_q1cmzcwe71he01",
     "incident_id": "Q1UC14QNZK76EZ",
     "alert_id": "Q1CMZCWE71HE01",
-    "state": "blocked",
-    "blockers": [
-      "missing_run_identity"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "451",
       "audience_id": "25884",
+      "match_strategy": "any_export_after_alert",
+      "alert_created_at": "2026-05-14T17:52:34-07:00",
       "checked_export_run_ids": [],
       "glcli": "glcli --env prod bifrost pizza --audience-id 25884 --org-id 451"
     }
@@ -4261,14 +4425,14 @@
     "check_id": "chk_q1uc14qnzk76ez_q1qtjn0zgpx53d",
     "incident_id": "Q1UC14QNZK76EZ",
     "alert_id": "Q1QTJN0ZGPX53D",
-    "state": "blocked",
-    "blockers": [
-      "missing_run_identity"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "451",
       "audience_id": "24856",
+      "match_strategy": "any_export_after_alert",
+      "alert_created_at": "2026-05-14T17:42:57-07:00",
       "checked_export_run_ids": [],
       "glcli": "glcli --env prod bifrost pizza --audience-id 24856 --org-id 451"
     }
@@ -4277,21 +4441,18 @@
     "check_id": "chk_q1uc14qnzk76ez_q1rkueo3q27vxh",
     "incident_id": "Q1UC14QNZK76EZ",
     "alert_id": "Q1RKUEO3Q27VXH",
-    "state": "blocked",
+    "state": "open",
     "blockers": [
-      "snapshotting_error_requires_review",
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch"
+      "evidence_unavailable"
     ],
+    "next_check_at": "2026-05-17T11:10:42.602Z",
     "scope": {
       "env": "prod",
       "org_id": "451",
       "audience_id": "26037",
       "destination_type": "reddit_ads",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-15T08:29:39-07:00",
       "checked_export_run_ids": [
         "26037-reddit_ads_16102-scheduled__2026-05-15T00:00:00+00:00",
         "26037-linkedin_ads_16093-scheduled__2026-05-15T00:00:00+00:00",
@@ -4308,14 +4469,14 @@
     "check_id": "chk_q1uc14qnzk76ez_q1s3oko4s0kh1m",
     "incident_id": "Q1UC14QNZK76EZ",
     "alert_id": "Q1S3OKO4S0KH1M",
-    "state": "blocked",
-    "blockers": [
-      "missing_run_identity"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "451",
       "audience_id": "24842",
+      "match_strategy": "any_export_after_alert",
+      "alert_created_at": "2026-05-14T17:36:31-07:00",
       "checked_export_run_ids": [],
       "glcli": "glcli --env prod bifrost pizza --audience-id 24842 --org-id 451"
     }
@@ -4324,14 +4485,14 @@
     "check_id": "chk_q1uc14qnzk76ez_q1yd56celqd1vt",
     "incident_id": "Q1UC14QNZK76EZ",
     "alert_id": "Q1YD56CELQD1VT",
-    "state": "blocked",
-    "blockers": [
-      "missing_run_identity"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "451",
       "audience_id": "24841",
+      "match_strategy": "any_export_after_alert",
+      "alert_created_at": "2026-05-14T17:33:41-07:00",
       "checked_export_run_ids": [],
       "glcli": "glcli --env prod bifrost pizza --audience-id 24841 --org-id 451"
     }
@@ -4340,14 +4501,14 @@
     "check_id": "chk_q1uc14qnzk76ez_q253lp94b0kmhk",
     "incident_id": "Q1UC14QNZK76EZ",
     "alert_id": "Q253LP94B0KMHK",
-    "state": "blocked",
-    "blockers": [
-      "missing_run_identity"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "451",
       "audience_id": "26039",
+      "match_strategy": "any_export_after_alert",
+      "alert_created_at": "2026-05-14T18:01:37-07:00",
       "checked_export_run_ids": [],
       "glcli": "glcli --env prod bifrost pizza --audience-id 26039 --org-id 451"
     }
@@ -4356,16 +4517,18 @@
     "check_id": "chk_q1uc14qnzk76ez_q2vj695tkn2fpf",
     "incident_id": "Q1UC14QNZK76EZ",
     "alert_id": "Q2VJ695TKN2FPF",
-    "state": "blocked",
+    "state": "open",
     "blockers": [
-      "snapshotting_error_requires_review",
-      "destination_mismatch"
+      "evidence_unavailable"
     ],
+    "next_check_at": "2026-05-17T11:10:42.602Z",
     "scope": {
       "env": "prod",
       "org_id": "451",
       "audience_id": "26039",
       "destination_type": "viant",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-15T08:29:42-07:00",
       "checked_export_run_ids": [
         "26039-viant_16920-scheduled__2026-05-15T00:00:00+00:00",
         "26039-google_adwords_18977-scheduled__2026-05-15T00:00:00+00:00"
@@ -4377,15 +4540,18 @@
     "check_id": "chk_q1uc14qnzk76ez_q3qyqwzlehzn1l",
     "incident_id": "Q1UC14QNZK76EZ",
     "alert_id": "Q3QYQWZLEHZN1L",
-    "state": "blocked",
+    "state": "open",
     "blockers": [
-      "snapshotting_error_requires_review"
+      "evidence_unavailable"
     ],
+    "next_check_at": "2026-05-17T11:10:42.602Z",
     "scope": {
       "env": "prod",
       "org_id": "451",
       "audience_id": "25884",
       "destination_type": "reddit_ads",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-15T08:29:33-07:00",
       "checked_export_run_ids": [
         "25884-reddit_ads_16101-scheduled__2026-05-15T00:00:00+00:00"
       ],
@@ -4422,6 +4588,8 @@
       "org_id": "370",
       "audience_id": "671",
       "destination_type": "iterable_object",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:47:16-07:00",
       "checked_export_run_ids": [
         "671-iterable_object_671-scheduled__2026-05-12T17:00:00+00:00"
       ],
@@ -4432,16 +4600,15 @@
     "check_id": "chk_q1yqv4erkaivmf_q02t2crnhmdygp",
     "incident_id": "Q1YQV4ERKAIVMF",
     "alert_id": "Q02T2CRNHMDYGP",
-    "state": "blocked",
-    "blockers": [
-      "destination_mismatch",
-      "destination_mismatch"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "370",
       "audience_id": "32411",
       "destination_type": "facebook",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:46:54-07:00",
       "checked_export_run_ids": [
         "32411-facebook_19862-scheduled__2026-05-14T00:00:00+00:00",
         "32411-snapchat_19863-scheduled__2026-05-14T00:00:00+00:00",
@@ -4454,15 +4621,18 @@
     "check_id": "chk_q1yqv4erkaivmf_q03kgz1pfd2o15",
     "incident_id": "Q1YQV4ERKAIVMF",
     "alert_id": "Q03KGZ1PFD2O15",
-    "state": "blocked",
+    "state": "open",
     "blockers": [
-      "destination_mismatch"
+      "evidence_unavailable"
     ],
+    "next_check_at": "2026-05-17T00:21:27.098Z",
     "scope": {
       "env": "prod",
       "org_id": "370",
       "audience_id": "18486",
       "destination_type": "microsoft_ads",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:40:00-07:00",
       "checked_export_run_ids": [
         "18486-microsoft_ads_11776-scheduled__2026-05-14T00:00:00+00:00",
         "18486-google_adwords_11775-scheduled__2026-05-14T00:00:00+00:00"
@@ -4525,15 +4695,18 @@
     "check_id": "chk_q1yqv4erkaivmf_q05l0szm3f4dwy",
     "incident_id": "Q1YQV4ERKAIVMF",
     "alert_id": "Q05L0SZM3F4DWY",
-    "state": "blocked",
+    "state": "open",
     "blockers": [
-      "destination_mismatch"
+      "evidence_unavailable"
     ],
+    "next_check_at": "2026-05-17T00:21:27.098Z",
     "scope": {
       "env": "prod",
       "org_id": "370",
       "audience_id": "18485",
       "destination_type": "google_adwords",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:39:59-07:00",
       "checked_export_run_ids": [
         "18485-google_adwords_11777-scheduled__2026-05-14T00:00:00+00:00",
         "18485-microsoft_ads_11778-scheduled__2026-05-14T00:00:00+00:00"
@@ -4545,15 +4718,18 @@
     "check_id": "chk_q1yqv4erkaivmf_q05yt5m83l51du",
     "incident_id": "Q1YQV4ERKAIVMF",
     "alert_id": "Q05YT5M83L51DU",
-    "state": "blocked",
+    "state": "open",
     "blockers": [
-      "destination_mismatch"
+      "evidence_unavailable"
     ],
+    "next_check_at": "2026-05-17T00:21:27.098Z",
     "scope": {
       "env": "prod",
       "org_id": "370",
       "audience_id": "18589",
       "destination_type": "microsoft_ads",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:40:12-07:00",
       "checked_export_run_ids": [
         "18589-microsoft_ads_11756-scheduled__2026-05-14T00:00:00+00:00",
         "18589-google_adwords_11755-scheduled__2026-05-14T00:00:00+00:00"
@@ -4565,15 +4741,15 @@
     "check_id": "chk_q1yqv4erkaivmf_q066sp19m6sjt4",
     "incident_id": "Q1YQV4ERKAIVMF",
     "alert_id": "Q066SP19M6SJT4",
-    "state": "blocked",
-    "blockers": [
-      "destination_mismatch"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "370",
       "audience_id": "18636",
       "destination_type": "google_adwords",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:40:38-07:00",
       "checked_export_run_ids": [
         "18636-google_adwords_11815-scheduled__2026-05-14T00:00:00+00:00",
         "18636-microsoft_ads_11816-scheduled__2026-05-14T00:00:00+00:00"
@@ -4585,15 +4761,15 @@
     "check_id": "chk_q1yqv4erkaivmf_q079o1ajb840zw",
     "incident_id": "Q1YQV4ERKAIVMF",
     "alert_id": "Q079O1AJB840ZW",
-    "state": "blocked",
-    "blockers": [
-      "destination_mismatch"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "370",
       "audience_id": "25912",
       "destination_type": "big_query",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:46:17-07:00",
       "checked_export_run_ids": [
         "25912-big_query_16603-scheduled__2026-05-14T00:00:00+00:00",
         "25912-web_personalization_16602-scheduled__2026-05-14T00:00:00+00:00"
@@ -4605,15 +4781,15 @@
     "check_id": "chk_q1yqv4erkaivmf_q09izumjlkg8le",
     "incident_id": "Q1YQV4ERKAIVMF",
     "alert_id": "Q09IZUMJLKG8LE",
-    "state": "blocked",
-    "blockers": [
-      "destination_mismatch"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "370",
       "audience_id": "18630",
       "destination_type": "google_adwords",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:40:32-07:00",
       "checked_export_run_ids": [
         "18630-google_adwords_11825-scheduled__2026-05-14T00:00:00+00:00",
         "18630-microsoft_ads_11826-scheduled__2026-05-14T00:00:00+00:00"
@@ -4659,15 +4835,15 @@
     "check_id": "chk_q1yqv4erkaivmf_q0eu1tmiw669yx",
     "incident_id": "Q1YQV4ERKAIVMF",
     "alert_id": "Q0EU1TMIW669YX",
-    "state": "blocked",
-    "blockers": [
-      "destination_mismatch"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "370",
       "audience_id": "18639",
       "destination_type": "google_adwords",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:40:42-07:00",
       "checked_export_run_ids": [
         "18639-google_adwords_11809-scheduled__2026-05-14T00:00:00+00:00",
         "18639-microsoft_ads_11810-scheduled__2026-05-14T00:00:00+00:00"
@@ -4764,16 +4940,15 @@
     "check_id": "chk_q1yqv4erkaivmf_q0jlm52rs33cnu",
     "incident_id": "Q1YQV4ERKAIVMF",
     "alert_id": "Q0JLM52RS33CNU",
-    "state": "blocked",
-    "blockers": [
-      "destination_mismatch",
-      "destination_mismatch"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "370",
       "audience_id": "18631",
       "destination_type": "reddit_ads",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:40:33-07:00",
       "checked_export_run_ids": [
         "18631-reddit_ads_14565-scheduled__2026-05-14T00:00:00+00:00",
         "18631-microsoft_ads_11824-scheduled__2026-05-14T00:00:00+00:00",
@@ -4786,15 +4961,15 @@
     "check_id": "chk_q1yqv4erkaivmf_q0jtppp2qgght2",
     "incident_id": "Q1YQV4ERKAIVMF",
     "alert_id": "Q0JTPPP2QGGHT2",
-    "state": "blocked",
-    "blockers": [
-      "destination_mismatch"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "370",
       "audience_id": "18626",
       "destination_type": "microsoft_ads",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:40:28-07:00",
       "checked_export_run_ids": [
         "18626-microsoft_ads_11835-scheduled__2026-05-14T00:00:00+00:00",
         "18626-google_adwords_11834-scheduled__2026-05-14T00:00:00+00:00"
@@ -4806,15 +4981,15 @@
     "check_id": "chk_q1yqv4erkaivmf_q0jvk1rythe2v0",
     "incident_id": "Q1YQV4ERKAIVMF",
     "alert_id": "Q0JVK1RYTHE2V0",
-    "state": "blocked",
-    "blockers": [
-      "destination_mismatch"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "370",
       "audience_id": "28082",
       "destination_type": "big_query",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:46:40-07:00",
       "checked_export_run_ids": [
         "28082-big_query_17153-scheduled__2026-05-14T00:00:00+00:00",
         "28082-web_personalization_17152-scheduled__2026-05-14T00:00:00+00:00"
@@ -4852,6 +5027,8 @@
       "org_id": "370",
       "audience_id": "767",
       "destination_type": "iterable_object",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:47:26-07:00",
       "checked_export_run_ids": [
         "767-iterable_object_767-scheduled__2026-05-12T17:00:00+00:00"
       ],
@@ -4862,15 +5039,15 @@
     "check_id": "chk_q1yqv4erkaivmf_q0n7ex531fqy1q",
     "incident_id": "Q1YQV4ERKAIVMF",
     "alert_id": "Q0N7EX531FQY1Q",
-    "state": "blocked",
-    "blockers": [
-      "destination_mismatch"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "370",
       "audience_id": "23075",
       "destination_type": "web_personalization",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:41:17-07:00",
       "checked_export_run_ids": [
         "23075-web_personalization_14441-scheduled__2026-05-14T00:00:00+00:00",
         "23075-big_query_14440-scheduled__2026-05-14T00:00:00+00:00"
@@ -4916,15 +5093,15 @@
     "check_id": "chk_q1yqv4erkaivmf_q0ptfuay586w6h",
     "incident_id": "Q1YQV4ERKAIVMF",
     "alert_id": "Q0PTFUAY586W6H",
-    "state": "blocked",
-    "blockers": [
-      "destination_mismatch"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "370",
       "audience_id": "19033",
       "destination_type": "big_query",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:41:00-07:00",
       "checked_export_run_ids": [
         "19033-big_query_14477-scheduled__2026-05-14T00:00:00+00:00",
         "19033-web_personalization_12538-scheduled__2026-05-14T00:00:00+00:00"
@@ -4936,15 +5113,18 @@
     "check_id": "chk_q1yqv4erkaivmf_q0qay8fhcazl34",
     "incident_id": "Q1YQV4ERKAIVMF",
     "alert_id": "Q0QAY8FHCAZL34",
-    "state": "blocked",
+    "state": "open",
     "blockers": [
-      "destination_mismatch"
+      "evidence_unavailable"
     ],
+    "next_check_at": "2026-05-17T00:21:27.098Z",
     "scope": {
       "env": "prod",
       "org_id": "370",
       "audience_id": "18477",
       "destination_type": "google_adwords",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:39:49-07:00",
       "checked_export_run_ids": [
         "18477-google_adwords_11793-scheduled__2026-05-14T00:00:00+00:00",
         "18477-microsoft_ads_11794-scheduled__2026-05-14T00:00:00+00:00"
@@ -4990,15 +5170,15 @@
     "check_id": "chk_q1yqv4erkaivmf_q0si1v4sebbyql",
     "incident_id": "Q1YQV4ERKAIVMF",
     "alert_id": "Q0SI1V4SEBBYQL",
-    "state": "blocked",
-    "blockers": [
-      "destination_mismatch"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "370",
       "audience_id": "28113",
       "destination_type": "big_query",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:46:41-07:00",
       "checked_export_run_ids": [
         "28113-big_query_17209-scheduled__2026-05-14T00:00:00+00:00",
         "28113-web_personalization_17208-scheduled__2026-05-14T00:00:00+00:00"
@@ -5044,15 +5224,15 @@
     "check_id": "chk_q1yqv4erkaivmf_q0trgew3kqnrpv",
     "incident_id": "Q1YQV4ERKAIVMF",
     "alert_id": "Q0TRGEW3KQNRPV",
-    "state": "blocked",
-    "blockers": [
-      "destination_mismatch"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "370",
       "audience_id": "18634",
       "destination_type": "google_adwords",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:40:36-07:00",
       "checked_export_run_ids": [
         "18634-google_adwords_11819-scheduled__2026-05-14T00:00:00+00:00",
         "18634-microsoft_ads_11820-scheduled__2026-05-14T00:00:00+00:00"
@@ -5115,15 +5295,18 @@
     "check_id": "chk_q1yqv4erkaivmf_q114tdsaz4cjfo",
     "incident_id": "Q1YQV4ERKAIVMF",
     "alert_id": "Q114TDSAZ4CJFO",
-    "state": "blocked",
+    "state": "open",
     "blockers": [
-      "destination_mismatch"
+      "evidence_unavailable"
     ],
+    "next_check_at": "2026-05-17T00:21:27.098Z",
     "scope": {
       "env": "prod",
       "org_id": "370",
       "audience_id": "18590",
       "destination_type": "microsoft_ads",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:40:13-07:00",
       "checked_export_run_ids": [
         "18590-microsoft_ads_11754-scheduled__2026-05-14T00:00:00+00:00",
         "18590-google_adwords_11753-scheduled__2026-05-14T00:00:00+00:00"
@@ -5144,6 +5327,8 @@
       "org_id": "370",
       "audience_id": "680",
       "destination_type": "iterable_object",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:47:20-07:00",
       "checked_export_run_ids": [
         "680-iterable_object_680-scheduled__2026-05-12T17:00:00+00:00"
       ],
@@ -5171,15 +5356,15 @@
     "check_id": "chk_q1yqv4erkaivmf_q13k31y27oywpx",
     "incident_id": "Q1YQV4ERKAIVMF",
     "alert_id": "Q13K31Y27OYWPX",
-    "state": "blocked",
-    "blockers": [
-      "destination_mismatch"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "370",
       "audience_id": "18638",
       "destination_type": "google_adwords",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:40:40-07:00",
       "checked_export_run_ids": [
         "18638-google_adwords_11811-scheduled__2026-05-14T00:00:00+00:00",
         "18638-microsoft_ads_11812-scheduled__2026-05-14T00:00:00+00:00"
@@ -5208,15 +5393,15 @@
     "check_id": "chk_q1yqv4erkaivmf_q17vx1fgmzccc4",
     "incident_id": "Q1YQV4ERKAIVMF",
     "alert_id": "Q17VX1FGMZCCC4",
-    "state": "blocked",
-    "blockers": [
-      "destination_mismatch"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "370",
       "audience_id": "18632",
       "destination_type": "google_adwords",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:40:34-07:00",
       "checked_export_run_ids": [
         "18632-google_adwords_11821-scheduled__2026-05-14T00:00:00+00:00",
         "18632-microsoft_ads_11822-scheduled__2026-05-14T00:00:00+00:00"
@@ -5262,15 +5447,18 @@
     "check_id": "chk_q1yqv4erkaivmf_q19580h4hpmzh3",
     "incident_id": "Q1YQV4ERKAIVMF",
     "alert_id": "Q19580H4HPMZH3",
-    "state": "blocked",
+    "state": "open",
     "blockers": [
-      "destination_mismatch"
+      "evidence_unavailable"
     ],
+    "next_check_at": "2026-05-17T00:21:27.098Z",
     "scope": {
       "env": "prod",
       "org_id": "370",
       "audience_id": "18584",
       "destination_type": "microsoft_ads",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:40:10-07:00",
       "checked_export_run_ids": [
         "18584-microsoft_ads_11758-scheduled__2026-05-14T00:00:00+00:00",
         "18584-google_adwords_11757-scheduled__2026-05-14T00:00:00+00:00"
@@ -5350,15 +5538,15 @@
     "check_id": "chk_q1yqv4erkaivmf_q1fdryk4famd8h",
     "incident_id": "Q1YQV4ERKAIVMF",
     "alert_id": "Q1FDRYK4FAMD8H",
-    "state": "blocked",
-    "blockers": [
-      "destination_mismatch"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "370",
       "audience_id": "23076",
       "destination_type": "big_query",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:41:18-07:00",
       "checked_export_run_ids": [
         "23076-big_query_14438-scheduled__2026-05-14T00:00:00+00:00",
         "23076-web_personalization_14439-scheduled__2026-05-14T00:00:00+00:00"
@@ -5370,15 +5558,15 @@
     "check_id": "chk_q1yqv4erkaivmf_q1gf3rjqf5lfb6",
     "incident_id": "Q1YQV4ERKAIVMF",
     "alert_id": "Q1GF3RJQF5LFB6",
-    "state": "blocked",
-    "blockers": [
-      "destination_mismatch"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "370",
       "audience_id": "18625",
       "destination_type": "microsoft_ads",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:40:26-07:00",
       "checked_export_run_ids": [
         "18625-microsoft_ads_11837-scheduled__2026-05-14T00:00:00+00:00",
         "18625-google_adwords_11836-scheduled__2026-05-14T00:00:00+00:00"
@@ -5441,15 +5629,18 @@
     "check_id": "chk_q1yqv4erkaivmf_q1krl7wnklo5oy",
     "incident_id": "Q1YQV4ERKAIVMF",
     "alert_id": "Q1KRL7WNKLO5OY",
-    "state": "blocked",
+    "state": "open",
     "blockers": [
-      "destination_mismatch"
+      "evidence_unavailable"
     ],
+    "next_check_at": "2026-05-17T00:21:27.098Z",
     "scope": {
       "env": "prod",
       "org_id": "370",
       "audience_id": "18491",
       "destination_type": "google_adwords",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:40:04-07:00",
       "checked_export_run_ids": [
         "18491-google_adwords_11767-scheduled__2026-05-14T00:00:00+00:00",
         "18491-microsoft_ads_11768-scheduled__2026-05-14T00:00:00+00:00"
@@ -5461,15 +5652,15 @@
     "check_id": "chk_q1yqv4erkaivmf_q1l7qc33834pqr",
     "incident_id": "Q1YQV4ERKAIVMF",
     "alert_id": "Q1L7QC33834PQR",
-    "state": "blocked",
-    "blockers": [
-      "destination_mismatch"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "370",
       "audience_id": "18627",
       "destination_type": "microsoft_ads",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:40:29-07:00",
       "checked_export_run_ids": [
         "18627-microsoft_ads_11832-scheduled__2026-05-14T00:00:00+00:00",
         "18627-google_adwords_11831-scheduled__2026-05-14T00:00:00+00:00"
@@ -5498,15 +5689,18 @@
     "check_id": "chk_q1yqv4erkaivmf_q1mh1b4r2gr9vq",
     "incident_id": "Q1YQV4ERKAIVMF",
     "alert_id": "Q1MH1B4R2GR9VQ",
-    "state": "blocked",
+    "state": "open",
     "blockers": [
-      "destination_mismatch"
+      "evidence_unavailable"
     ],
+    "next_check_at": "2026-05-17T00:21:27.098Z",
     "scope": {
       "env": "prod",
       "org_id": "370",
       "audience_id": "18580",
       "destination_type": "google_adwords",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:40:07-07:00",
       "checked_export_run_ids": [
         "18580-google_adwords_11763-scheduled__2026-05-14T00:00:00+00:00",
         "18580-microsoft_ads_11764-scheduled__2026-05-14T00:00:00+00:00"
@@ -5518,15 +5712,18 @@
     "check_id": "chk_q1yqv4erkaivmf_q1neimisc39wm2",
     "incident_id": "Q1YQV4ERKAIVMF",
     "alert_id": "Q1NEIMISC39WM2",
-    "state": "blocked",
+    "state": "open",
     "blockers": [
-      "destination_mismatch"
+      "evidence_unavailable"
     ],
+    "next_check_at": "2026-05-17T00:21:27.098Z",
     "scope": {
       "env": "prod",
       "org_id": "370",
       "audience_id": "18473",
       "destination_type": "microsoft_ads",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:39:44-07:00",
       "checked_export_run_ids": [
         "18473-microsoft_ads_11802-scheduled__2026-05-14T00:00:00+00:00",
         "18473-google_adwords_11801-scheduled__2026-05-14T00:00:00+00:00"
@@ -5623,15 +5820,15 @@
     "check_id": "chk_q1yqv4erkaivmf_q1r97zgeplc7s1",
     "incident_id": "Q1YQV4ERKAIVMF",
     "alert_id": "Q1R97ZGEPLC7S1",
-    "state": "blocked",
-    "blockers": [
-      "destination_mismatch"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "370",
       "audience_id": "18637",
       "destination_type": "google_adwords",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:40:39-07:00",
       "checked_export_run_ids": [
         "18637-google_adwords_11813-scheduled__2026-05-14T00:00:00+00:00",
         "18637-microsoft_ads_11814-scheduled__2026-05-14T00:00:00+00:00"
@@ -5745,15 +5942,15 @@
     "check_id": "chk_q1yqv4erkaivmf_q1zc3ilvb1ihoi",
     "incident_id": "Q1YQV4ERKAIVMF",
     "alert_id": "Q1ZC3ILVB1IHOI",
-    "state": "blocked",
-    "blockers": [
-      "destination_mismatch"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "370",
       "audience_id": "26129",
       "destination_type": "web_personalization",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:46:30-07:00",
       "checked_export_run_ids": [
         "26129-web_personalization_16412-scheduled__2026-05-14T00:00:00+00:00",
         "26129-big_query_16536-scheduled__2026-05-14T00:00:00+00:00"
@@ -5867,15 +6064,18 @@
     "check_id": "chk_q1yqv4erkaivmf_q22g5chlzrmrhs",
     "incident_id": "Q1YQV4ERKAIVMF",
     "alert_id": "Q22G5CHLZRMRHS",
-    "state": "blocked",
+    "state": "open",
     "blockers": [
-      "destination_mismatch"
+      "evidence_unavailable"
     ],
+    "next_check_at": "2026-05-17T00:21:27.098Z",
     "scope": {
       "env": "prod",
       "org_id": "370",
       "audience_id": "18483",
       "destination_type": "google_adwords",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:39:56-07:00",
       "checked_export_run_ids": [
         "18483-google_adwords_11781-scheduled__2026-05-14T00:00:00+00:00",
         "18483-microsoft_ads_11782-scheduled__2026-05-14T00:00:00+00:00"
@@ -5887,15 +6087,18 @@
     "check_id": "chk_q1yqv4erkaivmf_q22r92iufyld63",
     "incident_id": "Q1YQV4ERKAIVMF",
     "alert_id": "Q22R92IUFYLD63",
-    "state": "blocked",
+    "state": "open",
     "blockers": [
-      "destination_mismatch"
+      "evidence_unavailable"
     ],
+    "next_check_at": "2026-05-17T00:21:27.098Z",
     "scope": {
       "env": "prod",
       "org_id": "370",
       "audience_id": "18478",
       "destination_type": "microsoft_ads",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:39:50-07:00",
       "checked_export_run_ids": [
         "18478-microsoft_ads_11792-scheduled__2026-05-14T00:00:00+00:00",
         "18478-google_adwords_11791-scheduled__2026-05-14T00:00:00+00:00"
@@ -5907,15 +6110,15 @@
     "check_id": "chk_q1yqv4erkaivmf_q22zam9fb09j2z",
     "incident_id": "Q1YQV4ERKAIVMF",
     "alert_id": "Q22ZAM9FB09J2Z",
-    "state": "blocked",
-    "blockers": [
-      "destination_mismatch"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "370",
       "audience_id": "18629",
       "destination_type": "microsoft_ads",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:40:31-07:00",
       "checked_export_run_ids": [
         "18629-microsoft_ads_11828-scheduled__2026-05-14T00:00:00+00:00",
         "18629-google_adwords_11827-scheduled__2026-05-14T00:00:00+00:00"
@@ -5953,6 +6156,8 @@
       "org_id": "370",
       "audience_id": "783",
       "destination_type": "iterable_object",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:47:30-07:00",
       "checked_export_run_ids": [
         "783-iterable_object_783-scheduled__2026-05-12T17:00:00+00:00"
       ],
@@ -5963,15 +6168,15 @@
     "check_id": "chk_q1yqv4erkaivmf_q272jhq2xs89p7",
     "incident_id": "Q1YQV4ERKAIVMF",
     "alert_id": "Q272JHQ2XS89P7",
-    "state": "blocked",
-    "blockers": [
-      "destination_mismatch"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "370",
       "audience_id": "19899",
       "destination_type": "big_query",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:41:16-07:00",
       "checked_export_run_ids": [
         "19899-big_query_14478-scheduled__2026-05-14T00:00:00+00:00",
         "19899-web_personalization_12542-scheduled__2026-05-14T00:00:00+00:00"
@@ -6000,15 +6205,18 @@
     "check_id": "chk_q1yqv4erkaivmf_q28rgwbpcf60cs",
     "incident_id": "Q1YQV4ERKAIVMF",
     "alert_id": "Q28RGWBPCF60CS",
-    "state": "blocked",
+    "state": "open",
     "blockers": [
-      "destination_mismatch"
+      "evidence_unavailable"
     ],
+    "next_check_at": "2026-05-17T00:21:27.098Z",
     "scope": {
       "env": "prod",
       "org_id": "370",
       "audience_id": "18475",
       "destination_type": "microsoft_ads",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:39:47-07:00",
       "checked_export_run_ids": [
         "18475-microsoft_ads_11798-scheduled__2026-05-14T00:00:00+00:00",
         "18475-google_adwords_11797-scheduled__2026-05-14T00:00:00+00:00"
@@ -6054,15 +6262,18 @@
     "check_id": "chk_q1yqv4erkaivmf_q2alajawyu8svk",
     "incident_id": "Q1YQV4ERKAIVMF",
     "alert_id": "Q2ALAJAWYU8SVK",
-    "state": "blocked",
+    "state": "open",
     "blockers": [
-      "destination_mismatch"
+      "evidence_unavailable"
     ],
+    "next_check_at": "2026-05-17T00:21:27.098Z",
     "scope": {
       "env": "prod",
       "org_id": "370",
       "audience_id": "18592",
       "destination_type": "google_adwords",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:40:15-07:00",
       "checked_export_run_ids": [
         "18592-google_adwords_11749-scheduled__2026-05-14T00:00:00+00:00",
         "18592-microsoft_ads_11750-scheduled__2026-05-14T00:00:00+00:00"
@@ -6074,15 +6285,18 @@
     "check_id": "chk_q1yqv4erkaivmf_q2aurjppkc6dmq",
     "incident_id": "Q1YQV4ERKAIVMF",
     "alert_id": "Q2AURJPPKC6DMQ",
-    "state": "blocked",
+    "state": "open",
     "blockers": [
-      "destination_mismatch"
+      "evidence_unavailable"
     ],
+    "next_check_at": "2026-05-17T00:21:27.098Z",
     "scope": {
       "env": "prod",
       "org_id": "370",
       "audience_id": "18480",
       "destination_type": "google_adwords",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:39:53-07:00",
       "checked_export_run_ids": [
         "18480-google_adwords_11787-scheduled__2026-05-14T00:00:00+00:00",
         "18480-microsoft_ads_11788-scheduled__2026-05-14T00:00:00+00:00"
@@ -6111,15 +6325,18 @@
     "check_id": "chk_q1yqv4erkaivmf_q2dqeq8zdpowcc",
     "incident_id": "Q1YQV4ERKAIVMF",
     "alert_id": "Q2DQEQ8ZDPOWCC",
-    "state": "blocked",
+    "state": "open",
     "blockers": [
-      "destination_mismatch"
+      "evidence_unavailable"
     ],
+    "next_check_at": "2026-05-17T00:21:27.098Z",
     "scope": {
       "env": "prod",
       "org_id": "370",
       "audience_id": "18594",
       "destination_type": "microsoft_ads",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:40:17-07:00",
       "checked_export_run_ids": [
         "18594-microsoft_ads_11746-scheduled__2026-05-14T00:00:00+00:00",
         "18594-google_adwords_11745-scheduled__2026-05-14T00:00:00+00:00"
@@ -6148,15 +6365,15 @@
     "check_id": "chk_q1yqv4erkaivmf_q2f08tv5k52pnj",
     "incident_id": "Q1YQV4ERKAIVMF",
     "alert_id": "Q2F08TV5K52PNJ",
-    "state": "blocked",
-    "blockers": [
-      "destination_mismatch"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "370",
       "audience_id": "28647",
       "destination_type": "web_personalization",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:46:47-07:00",
       "checked_export_run_ids": [
         "28647-web_personalization_17505-scheduled__2026-05-14T00:00:00+00:00",
         "28647-big_query_17506-scheduled__2026-05-14T00:00:00+00:00"
@@ -6168,15 +6385,18 @@
     "check_id": "chk_q1yqv4erkaivmf_q2hdcn3zpnt3wc",
     "incident_id": "Q1YQV4ERKAIVMF",
     "alert_id": "Q2HDCN3ZPNT3WC",
-    "state": "blocked",
+    "state": "open",
     "blockers": [
-      "destination_mismatch"
+      "evidence_unavailable"
     ],
+    "next_check_at": "2026-05-17T00:21:27.098Z",
     "scope": {
       "env": "prod",
       "org_id": "370",
       "audience_id": "18490",
       "destination_type": "microsoft_ads",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:40:03-07:00",
       "checked_export_run_ids": [
         "18490-microsoft_ads_11770-scheduled__2026-05-14T00:00:00+00:00",
         "18490-google_adwords_11769-scheduled__2026-05-14T00:00:00+00:00"
@@ -6188,15 +6408,18 @@
     "check_id": "chk_q1yqv4erkaivmf_q2kz363obsf2cb",
     "incident_id": "Q1YQV4ERKAIVMF",
     "alert_id": "Q2KZ363OBSF2CB",
-    "state": "blocked",
+    "state": "open",
     "blockers": [
-      "destination_mismatch"
+      "evidence_unavailable"
     ],
+    "next_check_at": "2026-05-17T00:21:27.098Z",
     "scope": {
       "env": "prod",
       "org_id": "370",
       "audience_id": "18476",
       "destination_type": "microsoft_ads",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:39:48-07:00",
       "checked_export_run_ids": [
         "18476-microsoft_ads_11796-scheduled__2026-05-14T00:00:00+00:00",
         "18476-google_adwords_11795-scheduled__2026-05-14T00:00:00+00:00"
@@ -6225,15 +6448,18 @@
     "check_id": "chk_q1yqv4erkaivmf_q2ns0q9m0h8t7i",
     "incident_id": "Q1YQV4ERKAIVMF",
     "alert_id": "Q2NS0Q9M0H8T7I",
-    "state": "blocked",
+    "state": "open",
     "blockers": [
-      "destination_mismatch"
+      "evidence_unavailable"
     ],
+    "next_check_at": "2026-05-17T00:21:27.098Z",
     "scope": {
       "env": "prod",
       "org_id": "370",
       "audience_id": "18474",
       "destination_type": "microsoft_ads",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:39:46-07:00",
       "checked_export_run_ids": [
         "18474-microsoft_ads_11800-scheduled__2026-05-14T00:00:00+00:00",
         "18474-google_adwords_11799-scheduled__2026-05-14T00:00:00+00:00"
@@ -6330,15 +6556,18 @@
     "check_id": "chk_q1yqv4erkaivmf_q2roahdpsv452b",
     "incident_id": "Q1YQV4ERKAIVMF",
     "alert_id": "Q2ROAHDPSV452B",
-    "state": "blocked",
+    "state": "open",
     "blockers": [
-      "destination_mismatch"
+      "evidence_unavailable"
     ],
+    "next_check_at": "2026-05-17T00:21:27.098Z",
     "scope": {
       "env": "prod",
       "org_id": "370",
       "audience_id": "18471",
       "destination_type": "google_adwords",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:39:42-07:00",
       "checked_export_run_ids": [
         "18471-google_adwords_11805-scheduled__2026-05-14T00:00:00+00:00",
         "18471-microsoft_ads_11806-scheduled__2026-05-14T00:00:00+00:00"
@@ -6376,6 +6605,8 @@
       "org_id": "370",
       "audience_id": "751",
       "destination_type": "iterable_object",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:47:24-07:00",
       "checked_export_run_ids": [
         "751-iterable_object_751-scheduled__2026-05-12T17:00:00+00:00"
       ],
@@ -6386,16 +6617,18 @@
     "check_id": "chk_q1yqv4erkaivmf_q2tjghr0yfusne",
     "incident_id": "Q1YQV4ERKAIVMF",
     "alert_id": "Q2TJGHR0YFUSNE",
-    "state": "blocked",
+    "state": "open",
     "blockers": [
-      "destination_mismatch",
-      "destination_mismatch"
+      "evidence_unavailable"
     ],
+    "next_check_at": "2026-05-17T00:21:27.098Z",
     "scope": {
       "env": "prod",
       "org_id": "370",
       "audience_id": "18583",
       "destination_type": "microsoft_ads",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:40:09-07:00",
       "checked_export_run_ids": [
         "18583-microsoft_ads_11759-scheduled__2026-05-14T00:00:00+00:00",
         "18583-google_adwords_11760-scheduled__2026-05-14T00:00:00+00:00",
@@ -6408,15 +6641,15 @@
     "check_id": "chk_q1yqv4erkaivmf_q2uc9okfiknzpx",
     "incident_id": "Q1YQV4ERKAIVMF",
     "alert_id": "Q2UC9OKFIKNZPX",
-    "state": "blocked",
-    "blockers": [
-      "destination_mismatch"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "370",
       "audience_id": "18635",
       "destination_type": "microsoft_ads",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:40:37-07:00",
       "checked_export_run_ids": [
         "18635-microsoft_ads_11818-scheduled__2026-05-14T00:00:00+00:00",
         "18635-google_adwords_11817-scheduled__2026-05-14T00:00:00+00:00"
@@ -6445,15 +6678,18 @@
     "check_id": "chk_q1yqv4erkaivmf_q2wa3f7cq0p1mf",
     "incident_id": "Q1YQV4ERKAIVMF",
     "alert_id": "Q2WA3F7CQ0P1MF",
-    "state": "blocked",
+    "state": "open",
     "blockers": [
-      "destination_mismatch"
+      "evidence_unavailable"
     ],
+    "next_check_at": "2026-05-17T00:21:27.098Z",
     "scope": {
       "env": "prod",
       "org_id": "370",
       "audience_id": "18591",
       "destination_type": "google_adwords",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:40:14-07:00",
       "checked_export_run_ids": [
         "18591-google_adwords_11751-scheduled__2026-05-14T00:00:00+00:00",
         "18591-microsoft_ads_11752-scheduled__2026-05-14T00:00:00+00:00"
@@ -6465,15 +6701,18 @@
     "check_id": "chk_q1yqv4erkaivmf_q2wln9tnmq3xv1",
     "incident_id": "Q1YQV4ERKAIVMF",
     "alert_id": "Q2WLN9TNMQ3XV1",
-    "state": "blocked",
+    "state": "open",
     "blockers": [
-      "destination_mismatch"
+      "evidence_unavailable"
     ],
+    "next_check_at": "2026-05-17T00:21:27.098Z",
     "scope": {
       "env": "prod",
       "org_id": "370",
       "audience_id": "18593",
       "destination_type": "google_adwords",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:40:16-07:00",
       "checked_export_run_ids": [
         "18593-google_adwords_11747-scheduled__2026-05-14T00:00:00+00:00",
         "18593-microsoft_ads_11748-scheduled__2026-05-14T00:00:00+00:00"
@@ -6485,15 +6724,18 @@
     "check_id": "chk_q1yqv4erkaivmf_q2wqo3r944fcfr",
     "incident_id": "Q1YQV4ERKAIVMF",
     "alert_id": "Q2WQO3R944FCFR",
-    "state": "blocked",
+    "state": "open",
     "blockers": [
-      "destination_mismatch"
+      "evidence_unavailable"
     ],
+    "next_check_at": "2026-05-17T00:21:27.098Z",
     "scope": {
       "env": "prod",
       "org_id": "370",
       "audience_id": "18481",
       "destination_type": "google_adwords",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:39:54-07:00",
       "checked_export_run_ids": [
         "18481-google_adwords_11785-scheduled__2026-05-14T00:00:00+00:00",
         "18481-microsoft_ads_11786-scheduled__2026-05-14T00:00:00+00:00"
@@ -6539,15 +6781,18 @@
     "check_id": "chk_q1yqv4erkaivmf_q2z7o6lg2fjvav",
     "incident_id": "Q1YQV4ERKAIVMF",
     "alert_id": "Q2Z7O6LG2FJVAV",
-    "state": "blocked",
+    "state": "open",
     "blockers": [
-      "destination_mismatch"
+      "evidence_unavailable"
     ],
+    "next_check_at": "2026-05-17T00:21:27.098Z",
     "scope": {
       "env": "prod",
       "org_id": "370",
       "audience_id": "18489",
       "destination_type": "microsoft_ads",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:40:02-07:00",
       "checked_export_run_ids": [
         "18489-microsoft_ads_11771-scheduled__2026-05-14T00:00:00+00:00",
         "18489-google_adwords_11772-scheduled__2026-05-14T00:00:00+00:00"
@@ -6593,15 +6838,18 @@
     "check_id": "chk_q1yqv4erkaivmf_q345nszvzi983s",
     "incident_id": "Q1YQV4ERKAIVMF",
     "alert_id": "Q345NSZVZI983S",
-    "state": "blocked",
+    "state": "open",
     "blockers": [
-      "destination_mismatch"
+      "evidence_unavailable"
     ],
+    "next_check_at": "2026-05-17T00:21:27.098Z",
     "scope": {
       "env": "prod",
       "org_id": "370",
       "audience_id": "18479",
       "destination_type": "google_adwords",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:39:51-07:00",
       "checked_export_run_ids": [
         "18479-google_adwords_11789-scheduled__2026-05-14T00:00:00+00:00",
         "18479-microsoft_ads_11790-scheduled__2026-05-14T00:00:00+00:00"
@@ -6613,15 +6861,18 @@
     "check_id": "chk_q1yqv4erkaivmf_q35zhtufjb1fet",
     "incident_id": "Q1YQV4ERKAIVMF",
     "alert_id": "Q35ZHTUFJB1FET",
-    "state": "blocked",
+    "state": "open",
     "blockers": [
-      "destination_mismatch"
+      "evidence_unavailable"
     ],
+    "next_check_at": "2026-05-17T00:21:27.098Z",
     "scope": {
       "env": "prod",
       "org_id": "370",
       "audience_id": "18472",
       "destination_type": "google_adwords",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:39:43-07:00",
       "checked_export_run_ids": [
         "18472-google_adwords_11803-scheduled__2026-05-14T00:00:00+00:00",
         "18472-microsoft_ads_11804-scheduled__2026-05-14T00:00:00+00:00"
@@ -6650,16 +6901,15 @@
     "check_id": "chk_q1yqv4erkaivmf_q37it6ud34sr6s",
     "incident_id": "Q1YQV4ERKAIVMF",
     "alert_id": "Q37IT6UD34SR6S",
-    "state": "blocked",
-    "blockers": [
-      "destination_mismatch",
-      "destination_mismatch"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "370",
       "audience_id": "18624",
       "destination_type": "microsoft_ads",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:40:25-07:00",
       "checked_export_run_ids": [
         "18624-microsoft_ads_11839-scheduled__2026-05-14T00:00:00+00:00",
         "18624-reddit_ads_14564-scheduled__2026-05-14T00:00:00+00:00",
@@ -6774,15 +7024,15 @@
     "check_id": "chk_q1yqv4erkaivmf_q3e5iuhcp23ogs",
     "incident_id": "Q1YQV4ERKAIVMF",
     "alert_id": "Q3E5IUHCP23OGS",
-    "state": "blocked",
-    "blockers": [
-      "destination_mismatch"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "370",
       "audience_id": "18628",
       "destination_type": "google_adwords",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:40:30-07:00",
       "checked_export_run_ids": [
         "18628-google_adwords_11829-scheduled__2026-05-14T00:00:00+00:00",
         "18628-microsoft_ads_11830-scheduled__2026-05-14T00:00:00+00:00"
@@ -6811,15 +7061,18 @@
     "check_id": "chk_q1yqv4erkaivmf_q3ewgwkycqo6kr",
     "incident_id": "Q1YQV4ERKAIVMF",
     "alert_id": "Q3EWGWKYCQO6KR",
-    "state": "blocked",
+    "state": "open",
     "blockers": [
-      "destination_mismatch"
+      "evidence_unavailable"
     ],
+    "next_check_at": "2026-05-17T00:21:27.098Z",
     "scope": {
       "env": "prod",
       "org_id": "370",
       "audience_id": "18484",
       "destination_type": "microsoft_ads",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:39:57-07:00",
       "checked_export_run_ids": [
         "18484-microsoft_ads_11780-scheduled__2026-05-14T00:00:00+00:00",
         "18484-google_adwords_11779-scheduled__2026-05-14T00:00:00+00:00"
@@ -6865,15 +7118,18 @@
     "check_id": "chk_q1yqv4erkaivmf_q3n0dl9pm3m65g",
     "incident_id": "Q1YQV4ERKAIVMF",
     "alert_id": "Q3N0DL9PM3M65G",
-    "state": "blocked",
+    "state": "open",
     "blockers": [
-      "destination_mismatch"
+      "evidence_unavailable"
     ],
+    "next_check_at": "2026-05-17T00:21:27.098Z",
     "scope": {
       "env": "prod",
       "org_id": "370",
       "audience_id": "18582",
       "destination_type": "microsoft_ads",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:40:08-07:00",
       "checked_export_run_ids": [
         "18582-microsoft_ads_11762-scheduled__2026-05-14T00:00:00+00:00",
         "18582-google_adwords_11761-scheduled__2026-05-14T00:00:00+00:00"
@@ -6953,15 +7209,18 @@
     "check_id": "chk_q1yqv4erkaivmf_q3so8nh5t4r9vx",
     "incident_id": "Q1YQV4ERKAIVMF",
     "alert_id": "Q3SO8NH5T4R9VX",
-    "state": "blocked",
+    "state": "open",
     "blockers": [
-      "destination_mismatch"
+      "evidence_unavailable"
     ],
+    "next_check_at": "2026-05-17T00:21:27.098Z",
     "scope": {
       "env": "prod",
       "org_id": "370",
       "audience_id": "18488",
       "destination_type": "microsoft_ads",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:40:01-07:00",
       "checked_export_run_ids": [
         "18488-microsoft_ads_11774-scheduled__2026-05-14T00:00:00+00:00",
         "18488-google_adwords_11773-scheduled__2026-05-14T00:00:00+00:00"
@@ -7075,15 +7334,18 @@
     "check_id": "chk_q1yqv4erkaivmf_q3w0stffsiez17",
     "incident_id": "Q1YQV4ERKAIVMF",
     "alert_id": "Q3W0STFFSIEZ17",
-    "state": "blocked",
+    "state": "open",
     "blockers": [
-      "destination_mismatch"
+      "evidence_unavailable"
     ],
+    "next_check_at": "2026-05-17T00:21:27.098Z",
     "scope": {
       "env": "prod",
       "org_id": "370",
       "audience_id": "18482",
       "destination_type": "microsoft_ads",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:39:55-07:00",
       "checked_export_run_ids": [
         "18482-microsoft_ads_11784-scheduled__2026-05-14T00:00:00+00:00",
         "18482-google_adwords_11783-scheduled__2026-05-14T00:00:00+00:00"
@@ -7095,15 +7357,18 @@
     "check_id": "chk_q1yqv4erkaivmf_q3x5s80ochxuj4",
     "incident_id": "Q1YQV4ERKAIVMF",
     "alert_id": "Q3X5S80OCHXUJ4",
-    "state": "blocked",
+    "state": "open",
     "blockers": [
-      "destination_mismatch"
+      "evidence_unavailable"
     ],
+    "next_check_at": "2026-05-17T00:21:27.098Z",
     "scope": {
       "env": "prod",
       "org_id": "370",
       "audience_id": "18492",
       "destination_type": "google_adwords",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:40:06-07:00",
       "checked_export_run_ids": [
         "18492-google_adwords_11765-scheduled__2026-05-14T00:00:00+00:00",
         "18492-microsoft_ads_11766-scheduled__2026-05-14T00:00:00+00:00"
@@ -7115,19 +7380,15 @@
     "check_id": "chk_q1yqv4erkaivmf_q3xoue2je9haks",
     "incident_id": "Q1YQV4ERKAIVMF",
     "alert_id": "Q3XOUE2JE9HAKS",
-    "state": "blocked",
-    "blockers": [
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "370",
       "audience_id": "18623",
       "destination_type": "tik_tok",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:40:24-07:00",
       "checked_export_run_ids": [
         "18623-tik_tok_19832-scheduled__2026-05-14T00:00:00+00:00",
         "18623-snapchat_19833-scheduled__2026-05-14T00:00:00+00:00",
@@ -7160,14 +7421,17 @@
     "check_id": "chk_q20xi8kk8ywadb_q1v8k8gs8ktx2i",
     "incident_id": "Q20XI8KK8YWADB",
     "alert_id": "Q1V8K8GS8KTX2I",
-    "state": "blocked",
+    "state": "open",
     "blockers": [
-      "missing_run_identity"
+      "evidence_unavailable"
     ],
+    "next_check_at": "2026-05-17T08:29:51.674Z",
     "scope": {
       "env": "prod",
       "org_id": "174",
       "audience_id": "36378",
+      "match_strategy": "any_export_after_alert",
+      "alert_created_at": "2026-05-15T06:42:11-07:00",
       "checked_export_run_ids": [],
       "glcli": "glcli --env prod bifrost pizza --audience-id 36378 --org-id 174"
     }
@@ -7176,16 +7440,18 @@
     "check_id": "chk_q20xi8kk8ywadb_q34fugoiwl0yyv",
     "incident_id": "Q20XI8KK8YWADB",
     "alert_id": "Q34FUGOIWL0YYV",
-    "state": "blocked",
+    "state": "open",
     "blockers": [
-      "snapshotting_error_requires_review",
-      "snapshotting_error_requires_review"
+      "evidence_unavailable"
     ],
+    "next_check_at": "2026-05-17T07:29:16.781Z",
     "scope": {
       "env": "prod",
       "org_id": "174",
       "audience_id": "23746",
       "destination_type": "marketing_cloud",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-15T08:24:59-07:00",
       "checked_export_run_ids": [
         "23746-marketing_cloud_14765-scheduled__2026-05-06T00:00:00+00:00",
         "23746-marketing_cloud_14765-scheduled__2026-05-13T00:00:00+00:00"
@@ -7290,25 +7556,18 @@
     "check_id": "chk_q2djcy3xc2bsbg_q02703iiw4po6c",
     "incident_id": "Q2DJCY3XC2BSBG",
     "alert_id": "Q02703IIW4PO6C",
-    "state": "blocked",
+    "state": "open",
     "blockers": [
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch"
+      "evidence_unavailable"
     ],
+    "next_check_at": "2026-05-17T14:45:36.917Z",
     "scope": {
       "env": "prod",
       "org_id": "219",
       "audience_id": "31361",
       "destination_type": "facebook",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-15T07:55:14-07:00",
       "checked_export_run_ids": [
         "31361-facebook_19913-scheduled__2026-05-13T00:00:00+00:00",
         "31361-facebook_19085-scheduled__2026-05-13T00:00:00+00:00",
@@ -7333,18 +7592,18 @@
     "check_id": "chk_q2djcy3xc2bsbg_q0788517neyw5k",
     "incident_id": "Q2DJCY3XC2BSBG",
     "alert_id": "Q0788517NEYW5K",
-    "state": "blocked",
+    "state": "open",
     "blockers": [
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch"
+      "evidence_unavailable"
     ],
+    "next_check_at": "2026-05-17T14:45:36.917Z",
     "scope": {
       "env": "prod",
       "org_id": "219",
       "audience_id": "31656",
       "destination_type": "facebook",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-15T07:56:30-07:00",
       "checked_export_run_ids": [
         "31656-facebook_19290-scheduled__2026-05-13T00:00:00+00:00",
         "31656-facebook_20031-scheduled__2026-05-13T00:00:00+00:00",
@@ -7382,26 +7641,18 @@
     "check_id": "chk_q2djcy3xc2bsbg_q0sbo9kd9fonzw",
     "incident_id": "Q2DJCY3XC2BSBG",
     "alert_id": "Q0SBO9KD9FONZW",
-    "state": "blocked",
+    "state": "open",
     "blockers": [
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch"
+      "evidence_unavailable"
     ],
+    "next_check_at": "2026-05-17T14:45:36.917Z",
     "scope": {
       "env": "prod",
       "org_id": "219",
       "audience_id": "31366",
       "destination_type": "facebook",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-15T07:55:24-07:00",
       "checked_export_run_ids": [
         "31366-facebook_19091-scheduled__2026-04-15T00:00:00+00:00",
         "31366-linkedin_ads_19332-scheduled__2026-04-15T00:00:00+00:00",
@@ -7444,15 +7695,18 @@
     "check_id": "chk_q2djcy3xc2bsbg_q1vil2atkpywaw",
     "incident_id": "Q2DJCY3XC2BSBG",
     "alert_id": "Q1VIL2ATKPYWAW",
-    "state": "blocked",
+    "state": "open",
     "blockers": [
-      "destination_mismatch"
+      "evidence_unavailable"
     ],
+    "next_check_at": "2026-05-17T14:45:36.917Z",
     "scope": {
       "env": "prod",
       "org_id": "219",
       "audience_id": "30678",
       "destination_type": "facebook",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-15T07:54:34-07:00",
       "checked_export_run_ids": [
         "30678-facebook_19071-scheduled__2026-04-12T00:00:00+00:00",
         "30678-facebook_19071-scheduled__2026-04-13T00:00:00+00:00",
@@ -7501,20 +7755,18 @@
     "check_id": "chk_q2djcy3xc2bsbg_q2itq0lqy11r6j",
     "incident_id": "Q2DJCY3XC2BSBG",
     "alert_id": "Q2ITQ0LQY11R6J",
-    "state": "blocked",
+    "state": "open",
     "blockers": [
-      "destination_mismatch",
-      "failed_export_count",
-      "export_error",
-      "failed_export_count",
-      "export_error",
-      "destination_mismatch"
+      "evidence_unavailable"
     ],
+    "next_check_at": "2026-05-17T14:45:36.917Z",
     "scope": {
       "env": "prod",
       "org_id": "219",
       "audience_id": "31357",
       "destination_type": "facebook",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-15T07:55:02-07:00",
       "checked_export_run_ids": [
         "31357-facebook_19080-scheduled__2026-04-11T00:00:00+00:00",
         "31357-facebook_19080-scheduled__2026-04-12T00:00:00+00:00",
@@ -7541,23 +7793,18 @@
     "check_id": "chk_q2djcy3xc2bsbg_q2jqjtb6t3okca",
     "incident_id": "Q2DJCY3XC2BSBG",
     "alert_id": "Q2JQJTB6T3OKCA",
-    "state": "blocked",
+    "state": "open",
     "blockers": [
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch"
+      "evidence_unavailable"
     ],
+    "next_check_at": "2026-05-17T14:45:36.917Z",
     "scope": {
       "env": "prod",
       "org_id": "219",
       "audience_id": "31360",
       "destination_type": "facebook",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-15T07:55:11-07:00",
       "checked_export_run_ids": [
         "31360-facebook_19084-scheduled__2026-05-13T00:00:00+00:00",
         "31360-linkedin_ads_20669-scheduled__2026-05-13T00:00:00+00:00",
@@ -7611,16 +7858,18 @@
     "check_id": "chk_q2djcy3xc2bsbg_q2qlb7cn88kwd6",
     "incident_id": "Q2DJCY3XC2BSBG",
     "alert_id": "Q2QLB7CN88KWD6",
-    "state": "blocked",
+    "state": "open",
     "blockers": [
-      "destination_mismatch",
-      "destination_mismatch"
+      "evidence_unavailable"
     ],
+    "next_check_at": "2026-05-17T14:45:36.917Z",
     "scope": {
       "env": "prod",
       "org_id": "219",
       "audience_id": "31343",
       "destination_type": "facebook",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-15T07:54:55-07:00",
       "checked_export_run_ids": [
         "31343-facebook_19066-scheduled__2026-04-11T00:00:00+00:00",
         "31343-facebook_19066-scheduled__2026-04-12T00:00:00+00:00",
@@ -7647,16 +7896,18 @@
     "check_id": "chk_q2djcy3xc2bsbg_q2zehmawdz0tge",
     "incident_id": "Q2DJCY3XC2BSBG",
     "alert_id": "Q2ZEHMAWDZ0TGE",
-    "state": "blocked",
+    "state": "open",
     "blockers": [
-      "destination_mismatch",
-      "destination_mismatch"
+      "evidence_unavailable"
     ],
+    "next_check_at": "2026-05-17T14:45:36.917Z",
     "scope": {
       "env": "prod",
       "org_id": "219",
       "audience_id": "31363",
       "destination_type": "facebook",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-15T07:55:20-07:00",
       "checked_export_run_ids": [
         "31363-facebook_19089-scheduled__2026-04-11T00:00:00+00:00",
         "31363-facebook_19089-scheduled__2026-04-12T00:00:00+00:00",
@@ -7701,31 +7952,18 @@
     "check_id": "chk_q2djcy3xc2bsbg_q3z3figut07hxo",
     "incident_id": "Q2DJCY3XC2BSBG",
     "alert_id": "Q3Z3FIGUT07HXO",
-    "state": "blocked",
+    "state": "open",
     "blockers": [
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch",
-      "destination_mismatch"
+      "evidence_unavailable"
     ],
+    "next_check_at": "2026-05-17T14:45:36.917Z",
     "scope": {
       "env": "prod",
       "org_id": "219",
       "audience_id": "31362",
       "destination_type": "linkedin_ads",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-15T07:55:17-07:00",
       "checked_export_run_ids": [
         "31362-linkedin_ads_19343-scheduled__2026-04-11T00:00:00+00:00",
         "31362-facebook_19087-scheduled__2026-04-11T00:00:00+00:00",
@@ -7767,10 +8005,11 @@
     "check_id": "chk_q2ejwg22cer0la_q2n69vpqcmrhgl",
     "incident_id": "Q2EJWG22CER0LA",
     "alert_id": "Q2N69VPQCMRHGL",
-    "state": "blocked",
+    "state": "open",
     "blockers": [
-      "missing_export_after_alert"
+      "evidence_unavailable"
     ],
+    "next_check_at": "2026-05-17T16:09:54.764Z",
     "scope": {
       "env": "albertsons",
       "org_id": "6",
@@ -9905,7 +10144,7 @@
     "alert_id": "Q2FA9QPTXF9MJM",
     "state": "monitoring",
     "blockers": [],
-    "next_check_at": "2026-05-16T23:38:36.052Z",
+    "next_check_at": "2026-05-17T00:08:23.596Z",
     "scope": {
       "env": "albertsons",
       "org_id": "6",
@@ -10407,7 +10646,7 @@
     "alert_id": "Q2TYR6XMVMLGTB",
     "state": "monitoring",
     "blockers": [],
-    "next_check_at": "2026-05-16T23:38:36.052Z",
+    "next_check_at": "2026-05-17T00:08:23.596Z",
     "scope": {
       "env": "albertsons",
       "org_id": "6",
@@ -10757,7 +10996,7 @@
     "alert_id": "Q3HGOVLPIQWNZ0",
     "state": "monitoring",
     "blockers": [],
-    "next_check_at": "2026-05-16T23:38:36.052Z",
+    "next_check_at": "2026-05-17T00:08:23.596Z",
     "scope": {
       "env": "albertsons",
       "org_id": "6",
@@ -11196,14 +11435,17 @@
     "check_id": "chk_q31xllhunnmak9_q14qgyrqtynkjv",
     "incident_id": "Q31XLLHUNNMAK9",
     "alert_id": "Q14QGYRQTYNKJV",
-    "state": "blocked",
+    "state": "open",
     "blockers": [
-      "missing_run_identity"
+      "evidence_unavailable"
     ],
+    "next_check_at": "2026-05-17T09:59:30.585Z",
     "scope": {
       "env": "prod",
       "org_id": "451",
       "audience_id": "995",
+      "match_strategy": "any_export_after_alert",
+      "alert_created_at": "2026-05-15T16:32:16-07:00",
       "checked_export_run_ids": [],
       "glcli": "glcli --env prod bifrost pizza --audience-id 995 --org-id 451"
     }
@@ -11212,14 +11454,17 @@
     "check_id": "chk_q33kfl1kesemvc_q33gt851b14yv7",
     "incident_id": "Q33KFL1KESEMVC",
     "alert_id": "Q33GT851B14YV7",
-    "state": "blocked",
+    "state": "open",
     "blockers": [
-      "missing_run_identity"
+      "evidence_unavailable"
     ],
+    "next_check_at": "2026-05-17T09:59:09.262Z",
     "scope": {
       "env": "prod",
       "org_id": "378",
       "audience_id": "34484",
+      "match_strategy": "any_export_after_alert",
+      "alert_created_at": "2026-05-15T17:25:50-07:00",
       "checked_export_run_ids": [],
       "glcli": "glcli --env prod bifrost pizza --audience-id 34484 --org-id 378"
     }
@@ -11444,10 +11689,11 @@
     "check_id": "chk_q38jr11g2enk2w_q32j02dn0jryz0",
     "incident_id": "Q38JR11G2ENK2W",
     "alert_id": "Q32J02DN0JRYZ0",
-    "state": "blocked",
+    "state": "open",
     "blockers": [
-      "missing_export_after_alert"
+      "evidence_unavailable"
     ],
+    "next_check_at": "2026-05-17T16:09:54.764Z",
     "scope": {
       "env": "albertsons",
       "org_id": "6",
@@ -11543,14 +11789,14 @@
     "check_id": "chk_q3hwkw0fs3vthe_q2bk8g803n1mik",
     "incident_id": "Q3HWKW0FS3VTHE",
     "alert_id": "Q2BK8G803N1MIK",
-    "state": "blocked",
-    "blockers": [
-      "missing_run_identity"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "310",
       "audience_id": "34059",
+      "match_strategy": "any_export_after_alert",
+      "alert_created_at": "2026-05-14T08:06:41-07:00",
       "checked_export_run_ids": [],
       "glcli": "glcli --env prod bifrost pizza --audience-id 34059 --org-id 310"
     }
@@ -11591,6 +11837,8 @@
       "audience_id": "32921",
       "endpoint_id": "app_dv360_1807",
       "destination_type": "dv360",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T07:57:56-07:00",
       "checked_export_run_ids": [
         "4586c1f25f5e00da3db3dcf3da099324"
       ],
@@ -11832,10 +12080,11 @@
     "check_id": "chk_q3pj7w2k3y9ljv_q0s5d7l5pk1nbx",
     "incident_id": "Q3PJ7W2K3Y9LJV",
     "alert_id": "Q0S5D7L5PK1NBX",
-    "state": "blocked",
+    "state": "open",
     "blockers": [
-      "failed_export_count"
+      "evidence_unavailable"
     ],
+    "next_check_at": "2026-05-17T13:16:35.108Z",
     "scope": {
       "env": "prod",
       "org_id": "274",
@@ -11850,17 +12099,19 @@
     "check_id": "chk_q3pj7w2k3y9ljv_q15x94n0mbravv",
     "incident_id": "Q3PJ7W2K3Y9LJV",
     "alert_id": "Q15X94N0MBRAVV",
-    "state": "blocked",
+    "state": "open",
     "blockers": [
-      "failed_export_count",
-      "export_error"
+      "evidence_unavailable"
     ],
+    "next_check_at": "2026-05-17T13:16:35.108Z",
     "scope": {
       "env": "prod",
       "org_id": "274",
       "audience_id": "723",
       "endpoint_id": "app_salesforce_audience_1406",
       "destination_type": "salesforce_audience_object",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-15T08:53:02-07:00",
       "checked_export_run_ids": [
         "723-salesforce_audience_object_723-scheduled__2026-05-14T00:00:00+00:00"
       ],
@@ -11942,6 +12193,8 @@
       "audience_id": "31982",
       "endpoint_id": "app_salesforce_audience_2196",
       "destination_type": "salesforce_audience",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-14T08:15:15-07:00",
       "checked_export_run_ids": [
         "31982-salesforce_audience_21336-scheduled__2026-05-14T00:00:00+00:00"
       ],
@@ -11954,12 +12207,15 @@
     "alert_id": "Q0XF5RYJ4EGXJZ",
     "state": "blocked",
     "blockers": [
-      "missing_run_identity"
+      "failed_export_count",
+      "export_error"
     ],
     "scope": {
       "env": "prod",
       "org_id": "451",
       "audience_id": "981",
+      "match_strategy": "any_export_after_alert",
+      "alert_created_at": "2026-05-13T17:01:38-07:00",
       "checked_export_run_ids": [],
       "glcli": "glcli --env prod bifrost pizza --audience-id 981 --org-id 451"
     }
@@ -11968,14 +12224,14 @@
     "check_id": "chk_q3xqabqfppvnt5_q1x4zb5gqbrsu1",
     "incident_id": "Q3XQABQFPPVNT5",
     "alert_id": "Q1X4ZB5GQBRSU1",
-    "state": "blocked",
-    "blockers": [
-      "missing_run_identity"
-    ],
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "prod",
       "org_id": "451",
       "audience_id": "984",
+      "match_strategy": "any_export_after_alert",
+      "alert_created_at": "2026-05-13T17:03:15-07:00",
       "checked_export_run_ids": [],
       "glcli": "glcli --env prod bifrost pizza --audience-id 984 --org-id 451"
     }
@@ -11986,12 +12242,15 @@
     "alert_id": "Q20R8OKEQNMTTK",
     "state": "blocked",
     "blockers": [
-      "missing_run_identity"
+      "failed_export_count",
+      "export_error"
     ],
     "scope": {
       "env": "prod",
       "org_id": "451",
       "audience_id": "31982",
+      "match_strategy": "any_export_after_alert",
+      "alert_created_at": "2026-05-13T19:19:06-07:00",
       "checked_export_run_ids": [],
       "glcli": "glcli --env prod bifrost pizza --audience-id 31982 --org-id 451"
     }

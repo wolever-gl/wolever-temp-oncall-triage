@@ -28,15 +28,14 @@ Representative alerts:
 ## Export Checks
 
 - Checks: 1.
-- States: `blocked`=1
-- Blockers seen: `failed_export_count`
+- States: `open`=1
+- Blockers seen: `evidence_unavailable`
 
 Check evidence:
-- chk_q3pj7w2k3y9ljv_q0s5d7l5pk1nbx (Q3PJ7W2K3Y9LJV/Q0S5D7L5PK1NBX): state=`blocked`.
+- chk_q3pj7w2k3y9ljv_q0s5d7l5pk1nbx (Q3PJ7W2K3Y9LJV/Q0S5D7L5PK1NBX): state=`open`, next_check_at=`2026-05-17T13:16:35.108Z`.
   Scope: env=prod; org=274; audience=723.
   Command: `glcli --env prod bifrost pizza --audience-id 723 --org-id 274`
-  Blockers: `failed_export_count`
-  Run 723-salesforce_audience_object_723-scheduled__2026-05-15T00:00:00+00:00: health=`blocked`; blockers=failed_export_count; created=2026-05-16T00:20:50.756957+00:00; snapshotting=snapshotting_finished; export=export_finished; failed=2496.
+  Blockers: `evidence_unavailable`
 
 ## Next Action
 

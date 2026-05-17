@@ -29,13 +29,14 @@ Representative alerts:
 
 - Checks: 1.
 - States: `blocked`=1
-- Blockers seen: `missing_run_identity`
+- Blockers seen: `export_error`, `failed_export_count`
 
 Check evidence:
 - chk_q3xqabqfppvnt5_q20r8okeqnmttk (Q3XQABQFPPVNT5/Q20R8OKEQNMTTK): state=`blocked`.
   Scope: env=prod; org=451; audience=31982.
   Command: `glcli --env prod bifrost pizza --audience-id 31982 --org-id 451`
-  Blockers: `missing_run_identity`
+  Blockers: `failed_export_count`, `export_error`
+  Run 31982-salesforce_audience_21336-scheduled__2026-05-16T00:00:00+00:00: health=`blocked`; blockers=failed_export_count, export_error; created=2026-05-16T00:18:45.617445+00:00; snapshotting=snapshotting_finished; export=export_error; failed=14.
 
 ## Recent Evidence
 

@@ -32,8 +32,8 @@ Representative alerts:
 ## Export Checks
 
 - Checks: 4.
-- States: `blocked`=4
-- Blockers seen: `export_error`, `failed_export_count`, `missing_run_identity`
+- States: `blocked`=3, `healthy_closed`=1
+- Blockers seen: `export_error`, `failed_export_count`
 
 Check evidence:
 - chk_q3xqabqfppvnt5_q07jgzi66746xa (Q3XQABQFPPVNT5/Q07JGZI66746XA): state=`blocked`.
@@ -45,15 +45,17 @@ Check evidence:
 - chk_q3xqabqfppvnt5_q0xf5ryj4egxjz (Q3XQABQFPPVNT5/Q0XF5RYJ4EGXJZ): state=`blocked`.
   Scope: env=prod; org=451; audience=981.
   Command: `glcli --env prod bifrost pizza --audience-id 981 --org-id 451`
-  Blockers: `missing_run_identity`
-- chk_q3xqabqfppvnt5_q1x4zb5gqbrsu1 (Q3XQABQFPPVNT5/Q1X4ZB5GQBRSU1): state=`blocked`.
+  Blockers: `failed_export_count`, `export_error`
+  Run 981-campaign_manager_360_object_981-scheduled__2026-05-15T00:00:00+00:00: health=`blocked`; blockers=failed_export_count, export_error; created=2026-05-16T00:01:26.085781+00:00; snapshotting=snapshotting_finished; export=export_error; failed=1299.
+- chk_q3xqabqfppvnt5_q1x4zb5gqbrsu1 (Q3XQABQFPPVNT5/Q1X4ZB5GQBRSU1): state=`healthy_closed`.
   Scope: env=prod; org=451; audience=984.
   Command: `glcli --env prod bifrost pizza --audience-id 984 --org-id 451`
-  Blockers: `missing_run_identity`
+  Run 984-campaign_manager_360_object_984-scheduled__2026-05-15T00:00:00+00:00: health=`healthy`; created=2026-05-16T00:02:18.543254+00:00; snapshotting=snapshotting_finished; export=export_finished; failed=0.
 - chk_q3xqabqfppvnt5_q20r8okeqnmttk (Q3XQABQFPPVNT5/Q20R8OKEQNMTTK): state=`blocked`.
   Scope: env=prod; org=451; audience=31982.
   Command: `glcli --env prod bifrost pizza --audience-id 31982 --org-id 451`
-  Blockers: `missing_run_identity`
+  Blockers: `failed_export_count`, `export_error`
+  Run 31982-salesforce_audience_21336-scheduled__2026-05-16T00:00:00+00:00: health=`blocked`; blockers=failed_export_count, export_error; created=2026-05-16T00:18:45.617445+00:00; snapshotting=snapshotting_finished; export=export_error; failed=14.
 
 ## Recent Evidence
 

@@ -43,17 +43,17 @@ Check evidence:
   Checked runs: `12719-live_ramp_activation_4469-webapp__2026-05-07T00:40:33+00:00`
   Command: `glcli --env albertsons bifrost pizza --audience-id 12719 --org-id 6`
   Run 12719-live_ramp_activation_4469-webapp__2026-05-07T00:40:33+00:00: health=`monitoring`; created=2026-05-07T00:46:17.756011+00:00; snapshotting=snapshotting_finished; export=export_processing; failed=0.
-- chk_q2t09vcln9mrz8_q2fa9qptxf9mjm (Q2T09VCLN9MRZ8/Q2FA9QPTXF9MJM): state=`monitoring`, next_check_at=`2026-05-16T23:38:36.052Z`.
+- chk_q2t09vcln9mrz8_q2fa9qptxf9mjm (Q2T09VCLN9MRZ8/Q2FA9QPTXF9MJM): state=`monitoring`, next_check_at=`2026-05-17T00:08:23.596Z`.
   Scope: env=albertsons; org=6; audience=2189; destination=live_ramp_activation.
   Checked runs: `2189-live_ramp_activation_678-scheduled__2026-05-05T00:00:00+00:00`
   Command: `glcli --env albertsons bifrost pizza --audience-id 2189 --org-id 6`
   Run 2189-live_ramp_activation_678-scheduled__2026-05-05T00:00:00+00:00: health=`monitoring`; created=2026-05-05T01:42:54.344376+00:00; snapshotting=snapshotting_processing; export=no_batches; failed=0.
-- chk_q2t09vcln9mrz8_q2tyr6xmvmlgtb (Q2T09VCLN9MRZ8/Q2TYR6XMVMLGTB): state=`monitoring`, next_check_at=`2026-05-16T23:38:36.052Z`.
+- chk_q2t09vcln9mrz8_q2tyr6xmvmlgtb (Q2T09VCLN9MRZ8/Q2TYR6XMVMLGTB): state=`monitoring`, next_check_at=`2026-05-17T00:08:23.596Z`.
   Scope: env=albertsons; org=6; audience=10073; destination=live_ramp_activation.
   Checked runs: `10073-live_ramp_activation_2061-scheduled__2026-05-08T00:00:00+00:00`
   Command: `glcli --env albertsons bifrost pizza --audience-id 10073 --org-id 6`
   Run 10073-live_ramp_activation_2061-scheduled__2026-05-08T00:00:00+00:00: health=`monitoring`; created=2026-05-08T00:22:09.764588+00:00; snapshotting=snapshotting_processing; export=no_batches; failed=0.
-- chk_q2t09vcln9mrz8_q3hgovlpiqwnz0 (Q2T09VCLN9MRZ8/Q3HGOVLPIQWNZ0): state=`monitoring`, next_check_at=`2026-05-16T23:38:36.052Z`.
+- chk_q2t09vcln9mrz8_q3hgovlpiqwnz0 (Q2T09VCLN9MRZ8/Q3HGOVLPIQWNZ0): state=`monitoring`, next_check_at=`2026-05-17T00:08:23.596Z`.
   Scope: env=albertsons; org=6; audience=8473; destination=live_ramp_activation.
   Checked runs: `8473-live_ramp_activation_1649-scheduled__2026-05-06T00:00:00+00:00`
   Command: `glcli --env albertsons bifrost pizza --audience-id 8473 --org-id 6`

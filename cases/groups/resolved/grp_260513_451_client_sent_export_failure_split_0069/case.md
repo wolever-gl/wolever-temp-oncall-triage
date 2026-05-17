@@ -28,14 +28,13 @@ Representative alerts:
 ## Export Checks
 
 - Checks: 1.
-- States: `blocked`=1
-- Blockers seen: `missing_run_identity`
+- States: `healthy_closed`=1
 
 Check evidence:
-- chk_q3xqabqfppvnt5_q1x4zb5gqbrsu1 (Q3XQABQFPPVNT5/Q1X4ZB5GQBRSU1): state=`blocked`.
+- chk_q3xqabqfppvnt5_q1x4zb5gqbrsu1 (Q3XQABQFPPVNT5/Q1X4ZB5GQBRSU1): state=`healthy_closed`.
   Scope: env=prod; org=451; audience=984.
   Command: `glcli --env prod bifrost pizza --audience-id 984 --org-id 451`
-  Blockers: `missing_run_identity`
+  Run 984-campaign_manager_360_object_984-scheduled__2026-05-15T00:00:00+00:00: health=`healthy`; created=2026-05-16T00:02:18.543254+00:00; snapshotting=snapshotting_finished; export=export_finished; failed=0.
 
 ## Recent Evidence
 

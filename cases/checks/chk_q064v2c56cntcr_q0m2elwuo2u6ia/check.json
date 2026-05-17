@@ -3,12 +3,14 @@
   "source": "pagerduty",
   "incident_id": "Q064V2C56CNTCR",
   "alert_id": "Q0M2ELWUO2U6IA",
-  "state": "open",
+  "state": "healthy_closed",
   "scope": {
     "env": "prod",
     "org_id": "395",
     "audience_id": "32523",
     "destination_type": "snowflake",
+    "match_strategy": "checked_export_run_ids",
+    "alert_created_at": "2026-05-14T07:37:44-07:00",
     "checked_export_run_ids": [
       "32523-snowflake_20058-scheduled__2026-05-13T23:00:00+00:00"
     ],
@@ -73,6 +75,6 @@
   "blockers": [],
   "evidence_artifacts": [],
   "created_at": "2026-05-16T01:01:37.728Z",
-  "updated_at": "2026-05-16T01:17:44.826Z",
-  "proposed_state": "healthy_closed"
+  "updated_at": "2026-05-16T23:54:41.364Z",
+  "closed_at": "2026-05-16T23:54:41.364Z"
 }

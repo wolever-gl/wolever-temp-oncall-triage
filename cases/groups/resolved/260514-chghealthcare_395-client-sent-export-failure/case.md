@@ -4,14 +4,14 @@
 
 > Generated file. Do not edit directly; put free-form investigation notes in `notes.md`.
 
-State: `open`
-Tags: `triage:needs_review`
+State: `resolved`
+Tags: `triage:needs_review`, `resolved:export-healthy`
 Incidents: [Q064V2C56CNTCR](https://growthloop.pagerduty.com/incidents/Q064V2C56CNTCR)
 Alerts: 8
 
 ## Current Summary
 
-chghealthcare (Global Medical Staffing) - Audience 30299: Audience Export failure for 30299 sent to client.
+Auto-resolved from Pizza export checks: all 8 alert-scoped export check(s) are healthy_closed with no blockers.
 
 ## Alert Scope
 
@@ -35,42 +35,46 @@ Representative alerts:
 ## Export Checks
 
 - Checks: 8.
-- States: `blocked`=8
-- Blockers seen: `missing_run_identity`
+- States: `healthy_closed`=8
 
 Check evidence:
-- chk_q064v2c56cntcr_q07518j3n04ycl (Q064V2C56CNTCR/Q07518J3N04YCL): state=`blocked`.
+- chk_q064v2c56cntcr_q07518j3n04ycl (Q064V2C56CNTCR/Q07518J3N04YCL): state=`healthy_closed`.
   Scope: env=prod; org=395; audience=16985.
   Command: `glcli --env prod bifrost pizza --audience-id 16985 --org-id 395`
-  Blockers: `missing_run_identity`
-- chk_q064v2c56cntcr_q0giqnjauiknv2 (Q064V2C56CNTCR/Q0GIQNJAUIKNV2): state=`blocked`.
+  Run 16985-marketing_cloud_10988-scheduled__2026-05-16T23:00:00+00:00: health=`healthy`; created=2026-05-16T23:26:27.614602+00:00; snapshotting=snapshotting_finished; export=export_finished; failed=0.
+- chk_q064v2c56cntcr_q0giqnjauiknv2 (Q064V2C56CNTCR/Q0GIQNJAUIKNV2): state=`healthy_closed`.
   Scope: env=prod; org=395; audience=30299.
   Command: `glcli --env prod bifrost pizza --audience-id 30299 --org-id 395`
-  Blockers: `missing_run_identity`
-- chk_q064v2c56cntcr_q129bwe1uj28ko (Q064V2C56CNTCR/Q129BWE1UJ28KO): state=`blocked`.
+  Run 30299-marketing_cloud_18543-scheduled__2026-05-16T23:00:00+00:00: health=`healthy`; created=2026-05-16T23:46:05.530425+00:00; snapshotting=snapshotting_finished_no_deltas; export=no_batches; failed=0.
+- chk_q064v2c56cntcr_q129bwe1uj28ko (Q064V2C56CNTCR/Q129BWE1UJ28KO): state=`healthy_closed`.
   Scope: env=prod; org=395; audience=20770.
   Command: `glcli --env prod bifrost pizza --audience-id 20770 --org-id 395`
-  Blockers: `missing_run_identity`
-- chk_q064v2c56cntcr_q2frfvn6pl13ym (Q064V2C56CNTCR/Q2FRFVN6PL13YM): state=`blocked`.
+  Run 20770-marketing_cloud_13156-scheduled__2026-05-16T23:00:00+00:00: health=`healthy`; created=2026-05-16T23:15:50.908253+00:00; snapshotting=snapshotting_finished_no_deltas; export=no_batches; failed=0.
+- chk_q064v2c56cntcr_q2frfvn6pl13ym (Q064V2C56CNTCR/Q2FRFVN6PL13YM): state=`healthy_closed`.
   Scope: env=prod; org=395; audience=17010.
   Command: `glcli --env prod bifrost pizza --audience-id 17010 --org-id 395`
-  Blockers: `missing_run_identity`
-- chk_q064v2c56cntcr_q2mf89niillm2j (Q064V2C56CNTCR/Q2MF89NIILLM2J): state=`blocked`.
+  Run 17010-marketing_cloud_11011-scheduled__2026-05-16T23:00:00+00:00: health=`healthy`; created=2026-05-16T23:27:03.163843+00:00; snapshotting=snapshotting_finished; export=export_finished; failed=0.
+- chk_q064v2c56cntcr_q2mf89niillm2j (Q064V2C56CNTCR/Q2MF89NIILLM2J): state=`healthy_closed`.
   Scope: env=prod; org=395; audience=16998.
   Command: `glcli --env prod bifrost pizza --audience-id 16998 --org-id 395`
-  Blockers: `missing_run_identity`
-- chk_q064v2c56cntcr_q329mnjyn3cvyv (Q064V2C56CNTCR/Q329MNJYN3CVYV): state=`blocked`.
+  Run 16998-marketing_cloud_11001-scheduled__2026-05-16T23:00:00+00:00: health=`healthy`; created=2026-05-16T23:27:00.442318+00:00; snapshotting=snapshotting_finished; export=export_finished; failed=0.
+- chk_q064v2c56cntcr_q329mnjyn3cvyv (Q064V2C56CNTCR/Q329MNJYN3CVYV): state=`healthy_closed`.
   Scope: env=prod; org=395; audience=30367.
   Command: `glcli --env prod bifrost pizza --audience-id 30367 --org-id 395`
-  Blockers: `missing_run_identity`
-- chk_q064v2c56cntcr_q3g4q7e1ok3xu8 (Q064V2C56CNTCR/Q3G4Q7E1OK3XU8): state=`blocked`.
+  Run 30367-marketing_cloud_18540-scheduled__2026-05-16T23:00:00+00:00: health=`healthy`; created=2026-05-16T23:45:21.162070+00:00; snapshotting=snapshotting_finished; export=no_batches; failed=0.
+- chk_q064v2c56cntcr_q3g4q7e1ok3xu8 (Q064V2C56CNTCR/Q3G4Q7E1OK3XU8): state=`healthy_closed`.
   Scope: env=prod; org=395; audience=16992.
   Command: `glcli --env prod bifrost pizza --audience-id 16992 --org-id 395`
-  Blockers: `missing_run_identity`
-- chk_q064v2c56cntcr_q3z8gh96uiqeaz (Q064V2C56CNTCR/Q3Z8GH96UIQEAZ): state=`blocked`.
+  Run 16992-marketing_cloud_10994-scheduled__2026-05-16T23:00:00+00:00: health=`healthy`; created=2026-05-16T23:26:39.460749+00:00; snapshotting=snapshotting_finished; export=export_finished; failed=0.
+- chk_q064v2c56cntcr_q3z8gh96uiqeaz (Q064V2C56CNTCR/Q3Z8GH96UIQEAZ): state=`healthy_closed`.
   Scope: env=prod; org=395; audience=36059.
   Command: `glcli --env prod bifrost pizza --audience-id 36059 --org-id 395`
-  Blockers: `missing_run_identity`
+  Run 36059-marketing_cloud_21999-scheduled__2026-05-16T16:30:00+00:00: health=`healthy`; created=2026-05-16T16:47:48.187567+00:00; snapshotting=snapshotting_finished; export=export_finished; failed=0.
+
+## Recent Evidence
+
+- Auto-resolved from Pizza export checks: all 8 alert-scoped export check(s) are healthy_closed with no blockers.
+  Source: `check-exports`; kind: `export_check`; captured: `2026-05-16T23:54:40.074Z`.
 
 ## Next Action
 

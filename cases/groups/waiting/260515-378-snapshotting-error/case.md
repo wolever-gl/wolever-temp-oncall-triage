@@ -50,6 +50,9 @@ Check evidence:
 
 ## Recent Evidence
 
+- Support report thread for this case: Cincinnati Reds SignalRoute 891 export failure is tracked in #eng-support at the linked message. Current investigation shows the latest run is blocked by the same tickets_status schema mismatch in snapshot_history_write_up, so the case remains waiting on source/schema or snapshot-history state remediation before retry.
+  Source: `Slack #eng-support report thread`; kind: `slack_thread`; captured: `2026-05-17T00:06:45.837Z`.
+  Links: [eng_support_report](https://flywheeltechnologies.slack.com/archives/C02J2RJ6VSL/p1778976369448979).
 - Fresh scoped logs for Cincinnati Reds SignalRoute 891 latest run 891-dynamics_object_891-scheduled__2026-05-16T22:00:00+00:00 show snapshot_history_write_up failed in Quervice/BigQuery: tickets_status from hall_of_fame_orders.status is INT64 but reds-wheelhouse-prod.flywheel_system.snapshotting_signal_891_snapshot_history.tickets_status is STRING. glerror marks category=validation, owner=system, retryable=false. No later healthy Pizza run exists; remediation needs source/schema or snapshot-history schema handling before this can recover.
   Source: `flywheel-prod-328213 snapshotting logs`; kind: `gcloud_logs`; captured: `2026-05-16T23:50:49.156Z`.
   Command: `PATH=/Users/wolever/.local/share/mise/installs/gcloud/562.0.0/bin:$PATH gcloud logging read 'jsonPayload.export_run_id_hash="33e3307850942af4a2496b3c3f5693d3" AND resource.labels.namespace_name="snapshotting-30755505"' --project=flywheel-prod-328213 --freshness=24h --limit=50`

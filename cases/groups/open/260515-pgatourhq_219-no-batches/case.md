@@ -48,56 +48,36 @@ Representative alerts:
 ## Export Checks
 
 - Checks: 13.
-- States: `blocked`=9, `healthy_closed`=4
-- Blockers seen: `destination_mismatch`, `export_error`, `failed_export_count`
+- States: `healthy_closed`=4, `open`=9
+- Blockers seen: `evidence_unavailable`
 
 Check evidence:
-- chk_q2djcy3xc2bsbg_q02703iiw4po6c (Q2DJCY3XC2BSBG/Q02703IIW4PO6C): state=`blocked`.
+- chk_q2djcy3xc2bsbg_q02703iiw4po6c (Q2DJCY3XC2BSBG/Q02703IIW4PO6C): state=`open`, next_check_at=`2026-05-17T14:45:36.917Z`.
   Scope: env=prod; org=219; audience=31361; destination=facebook.
   Checked runs: `31361-facebook_19913-scheduled__2026-05-13T00:00:00+00:00`, `31361-facebook_19085-scheduled__2026-05-13T00:00:00+00:00`, `31361-linkedin_ads_19875-scheduled__2026-05-13T00:00:00+00:00`, `31361-linkedin_ads_19856-scheduled__2026-05-13T00:00:00+00:00`, and 11 more
   Command: `glcli --env prod bifrost pizza --audience-id 31361 --org-id 219`
-  Blockers: `destination_mismatch`, `destination_mismatch`, `destination_mismatch`, `destination_mismatch`, `destination_mismatch`, `destination_mismatch`, `destination_mismatch`, `destination_mismatch`, and 3 more
-  Run 31361-facebook_19913-scheduled__2026-05-13T00:00:00+00:00: health=`healthy`; created=2026-05-13T00:34:32.560722+00:00; snapshotting=snapshotting_finished; export=export_finished; failed=0.
-  Run 31361-facebook_19085-scheduled__2026-05-13T00:00:00+00:00: health=`healthy`; created=2026-05-13T00:46:19.080916+00:00; snapshotting=snapshotting_finished; export=export_finished; failed=0.
-  Run 31361-linkedin_ads_19875-scheduled__2026-05-13T00:00:00+00:00: health=`blocked`; blockers=destination_mismatch; created=2026-05-13T00:53:10.678330+00:00; snapshotting=snapshotting_finished; export=export_finished; failed=0.
-  Run 31361-linkedin_ads_19856-scheduled__2026-05-13T00:00:00+00:00: health=`blocked`; blockers=destination_mismatch; created=2026-05-13T00:53:31.808078+00:00; snapshotting=snapshotting_finished; export=export_finished; failed=0.
-  Showing 4 of 15 run evaluations.
-- chk_q2djcy3xc2bsbg_q0788517neyw5k (Q2DJCY3XC2BSBG/Q0788517NEYW5K): state=`blocked`.
+  Blockers: `evidence_unavailable`
+- chk_q2djcy3xc2bsbg_q0788517neyw5k (Q2DJCY3XC2BSBG/Q0788517NEYW5K): state=`open`, next_check_at=`2026-05-17T14:45:36.917Z`.
   Scope: env=prod; org=219; audience=31656; destination=facebook.
   Checked runs: `31656-facebook_19290-scheduled__2026-05-13T00:00:00+00:00`, `31656-facebook_20031-scheduled__2026-05-13T00:00:00+00:00`, `31656-tik_tok_21085-scheduled__2026-05-13T00:00:00+00:00`, `31656-tik_tok_21089-scheduled__2026-05-13T00:00:00+00:00`, and 6 more
   Command: `glcli --env prod bifrost pizza --audience-id 31656 --org-id 219`
-  Blockers: `destination_mismatch`, `destination_mismatch`, `destination_mismatch`, `destination_mismatch`
-  Run 31656-facebook_19290-scheduled__2026-05-13T00:00:00+00:00: health=`healthy`; created=2026-05-13T00:39:00.021002+00:00; snapshotting=snapshotting_finished; export=export_finished; failed=0.
-  Run 31656-facebook_20031-scheduled__2026-05-13T00:00:00+00:00: health=`healthy`; created=2026-05-13T00:39:40.000984+00:00; snapshotting=snapshotting_finished; export=export_finished; failed=0.
-  Run 31656-tik_tok_21085-scheduled__2026-05-13T00:00:00+00:00: health=`blocked`; blockers=destination_mismatch; created=2026-05-13T00:39:59.324674+00:00; snapshotting=snapshotting_finished; export=export_finished; failed=0.
-  Run 31656-tik_tok_21089-scheduled__2026-05-13T00:00:00+00:00: health=`blocked`; blockers=destination_mismatch; created=2026-05-13T00:40:53.145960+00:00; snapshotting=snapshotting_finished; export=export_finished; failed=0.
-  Showing 4 of 10 run evaluations.
+  Blockers: `evidence_unavailable`
 - chk_q2djcy3xc2bsbg_q09i74zyevzpsq (Q2DJCY3XC2BSBG/Q09I74ZYEVZPSQ): state=`healthy_closed`.
   Scope: env=prod; org=219; audience=31381; destination=live_ramp_sftp.
   Checked runs: `31381-live_ramp_sftp_19096-scheduled__2026-04-14T00:00:00+00:00`, `31381-live_ramp_sftp_19096-scheduled__2026-05-14T00:00:00+00:00`
   Command: `glcli --env prod bifrost pizza --audience-id 31381 --org-id 219`
   Run 31381-live_ramp_sftp_19096-scheduled__2026-04-14T00:00:00+00:00: health=`healthy`; created=2026-04-14T00:36:13.995092+00:00; snapshotting=snapshotting_finished_no_deltas; export=no_batches; failed=0.
   Run 31381-live_ramp_sftp_19096-scheduled__2026-05-14T00:00:00+00:00: health=`healthy`; created=2026-05-14T00:22:19.823083+00:00; snapshotting=snapshotting_finished; export=export_finished; failed=0.
-- chk_q2djcy3xc2bsbg_q0sbo9kd9fonzw (Q2DJCY3XC2BSBG/Q0SBO9KD9FONZW): state=`blocked`.
+- chk_q2djcy3xc2bsbg_q0sbo9kd9fonzw (Q2DJCY3XC2BSBG/Q0SBO9KD9FONZW): state=`open`, next_check_at=`2026-05-17T14:45:36.917Z`.
   Scope: env=prod; org=219; audience=31366; destination=facebook.
   Checked runs: `31366-facebook_19091-scheduled__2026-04-15T00:00:00+00:00`, `31366-linkedin_ads_19332-scheduled__2026-04-15T00:00:00+00:00`, `31366-facebook_19091-scheduled__2026-04-16T00:00:00+00:00`, `31366-linkedin_ads_19332-scheduled__2026-04-16T00:00:00+00:00`, and 29 more
   Command: `glcli --env prod bifrost pizza --audience-id 31366 --org-id 219`
-  Blockers: `destination_mismatch`, `destination_mismatch`, `destination_mismatch`, `destination_mismatch`, `destination_mismatch`, `destination_mismatch`, `destination_mismatch`, `destination_mismatch`, and 4 more
-  Run 31366-facebook_19091-scheduled__2026-04-15T00:00:00+00:00: health=`healthy`; created=2026-04-15T03:59:28.614083+00:00; snapshotting=snapshotting_finished_no_deltas; export=no_batches; failed=0.
-  Run 31366-linkedin_ads_19332-scheduled__2026-04-15T00:00:00+00:00: health=`blocked`; blockers=destination_mismatch; created=2026-04-15T03:59:34.768327+00:00; snapshotting=snapshotting_finished_no_deltas; export=no_batches; failed=0.
-  Run 31366-facebook_19091-scheduled__2026-04-16T00:00:00+00:00: health=`healthy`; created=2026-04-16T00:27:02.794080+00:00; snapshotting=snapshotting_finished_no_deltas; export=no_batches; failed=0.
-  Run 31366-linkedin_ads_19332-scheduled__2026-04-16T00:00:00+00:00: health=`blocked`; blockers=destination_mismatch; created=2026-04-16T00:27:05.187142+00:00; snapshotting=snapshotting_finished_no_deltas; export=no_batches; failed=0.
-  Showing 4 of 33 run evaluations.
-- chk_q2djcy3xc2bsbg_q1vil2atkpywaw (Q2DJCY3XC2BSBG/Q1VIL2ATKPYWAW): state=`blocked`.
+  Blockers: `evidence_unavailable`
+- chk_q2djcy3xc2bsbg_q1vil2atkpywaw (Q2DJCY3XC2BSBG/Q1VIL2ATKPYWAW): state=`open`, next_check_at=`2026-05-17T14:45:36.917Z`.
   Scope: env=prod; org=219; audience=30678; destination=facebook.
   Checked runs: `30678-facebook_19071-scheduled__2026-04-12T00:00:00+00:00`, `30678-facebook_19071-scheduled__2026-04-13T00:00:00+00:00`, `30678-facebook_19071-scheduled__2026-04-15T00:00:00+00:00`, `30678-facebook_19071-scheduled__2026-04-17T00:00:00+00:00`, and 4 more
   Command: `glcli --env prod bifrost pizza --audience-id 30678 --org-id 219`
-  Blockers: `destination_mismatch`
-  Run 30678-facebook_19071-scheduled__2026-04-12T00:00:00+00:00: health=`healthy`; created=2026-04-12T00:16:44.349191+00:00; snapshotting=snapshotting_finished_no_deltas; export=no_batches; failed=0.
-  Run 30678-facebook_19071-scheduled__2026-04-13T00:00:00+00:00: health=`healthy`; created=2026-04-13T00:16:34.663919+00:00; snapshotting=snapshotting_finished_no_deltas; export=no_batches; failed=0.
-  Run 30678-facebook_19071-scheduled__2026-04-15T00:00:00+00:00: health=`healthy`; created=2026-04-15T02:18:34.875164+00:00; snapshotting=snapshotting_finished_no_deltas; export=no_batches; failed=0.
-  Run 30678-facebook_19071-scheduled__2026-04-17T00:00:00+00:00: health=`healthy`; created=2026-04-17T00:16:44.053837+00:00; snapshotting=snapshotting_finished_no_deltas; export=no_batches; failed=0.
-  Showing 4 of 8 run evaluations.
+  Blockers: `evidence_unavailable`
 - chk_q2djcy3xc2bsbg_q278x02prsovh4 (Q2DJCY3XC2BSBG/Q278X02PRSOVH4): state=`healthy_closed`.
   Scope: env=prod; org=219; audience=31918; destination=facebook.
   Checked runs: `31918-facebook_19538-scheduled__2026-04-11T00:00:00+00:00`, `31918-facebook_19538-scheduled__2026-04-12T00:00:00+00:00`, `31918-facebook_19538-scheduled__2026-04-13T00:00:00+00:00`, `31918-facebook_19538-scheduled__2026-04-14T00:00:00+00:00`, and 11 more
@@ -107,26 +87,16 @@ Check evidence:
   Run 31918-facebook_19538-scheduled__2026-04-13T00:00:00+00:00: health=`healthy`; created=2026-04-13T00:31:54.672486+00:00; snapshotting=snapshotting_finished_no_deltas; export=no_batches; failed=0.
   Run 31918-facebook_19538-scheduled__2026-04-14T00:00:00+00:00: health=`healthy`; created=2026-04-14T00:30:51.364845+00:00; snapshotting=snapshotting_finished_no_deltas; export=no_batches; failed=0.
   Showing 4 of 15 run evaluations.
-- chk_q2djcy3xc2bsbg_q2itq0lqy11r6j (Q2DJCY3XC2BSBG/Q2ITQ0LQY11R6J): state=`blocked`.
+- chk_q2djcy3xc2bsbg_q2itq0lqy11r6j (Q2DJCY3XC2BSBG/Q2ITQ0LQY11R6J): state=`open`, next_check_at=`2026-05-17T14:45:36.917Z`.
   Scope: env=prod; org=219; audience=31357; destination=facebook.
   Checked runs: `31357-facebook_19080-scheduled__2026-04-11T00:00:00+00:00`, `31357-facebook_19080-scheduled__2026-04-12T00:00:00+00:00`, `31357-facebook_19080-scheduled__2026-04-13T00:00:00+00:00`, `31357-facebook_19080-scheduled__2026-04-14T00:00:00+00:00`, and 13 more
   Command: `glcli --env prod bifrost pizza --audience-id 31357 --org-id 219`
-  Blockers: `destination_mismatch`, `failed_export_count`, `export_error`, `failed_export_count`, `export_error`, `destination_mismatch`
-  Run 31357-facebook_19080-scheduled__2026-04-11T00:00:00+00:00: health=`healthy`; created=2026-04-11T00:39:42.050626+00:00; snapshotting=snapshotting_finished_no_deltas; export=no_batches; failed=0.
-  Run 31357-facebook_19080-scheduled__2026-04-12T00:00:00+00:00: health=`healthy`; created=2026-04-12T00:34:51.188067+00:00; snapshotting=snapshotting_finished_no_deltas; export=no_batches; failed=0.
-  Run 31357-facebook_19080-scheduled__2026-04-13T00:00:00+00:00: health=`healthy`; created=2026-04-13T00:27:02.831786+00:00; snapshotting=snapshotting_finished_no_deltas; export=no_batches; failed=0.
-  Run 31357-facebook_19080-scheduled__2026-04-14T00:00:00+00:00: health=`healthy`; created=2026-04-14T00:29:08.576390+00:00; snapshotting=snapshotting_finished_no_deltas; export=no_batches; failed=0.
-  Showing 4 of 17 run evaluations.
-- chk_q2djcy3xc2bsbg_q2jqjtb6t3okca (Q2DJCY3XC2BSBG/Q2JQJTB6T3OKCA): state=`blocked`.
+  Blockers: `evidence_unavailable`
+- chk_q2djcy3xc2bsbg_q2jqjtb6t3okca (Q2DJCY3XC2BSBG/Q2JQJTB6T3OKCA): state=`open`, next_check_at=`2026-05-17T14:45:36.917Z`.
   Scope: env=prod; org=219; audience=31360; destination=facebook.
   Checked runs: `31360-facebook_19084-scheduled__2026-05-13T00:00:00+00:00`, `31360-linkedin_ads_20669-scheduled__2026-05-13T00:00:00+00:00`, `31360-linkedin_ads_19342-scheduled__2026-05-13T00:00:00+00:00`, `31360-linkedin_ads_19855-scheduled__2026-05-13T00:00:00+00:00`, and 9 more
   Command: `glcli --env prod bifrost pizza --audience-id 31360 --org-id 219`
-  Blockers: `destination_mismatch`, `destination_mismatch`, `destination_mismatch`, `destination_mismatch`, `destination_mismatch`, `destination_mismatch`, `destination_mismatch`, `destination_mismatch`, and 1 more
-  Run 31360-facebook_19084-scheduled__2026-05-13T00:00:00+00:00: health=`healthy`; created=2026-05-13T00:32:10.859459+00:00; snapshotting=snapshotting_finished; export=export_finished; failed=0.
-  Run 31360-linkedin_ads_20669-scheduled__2026-05-13T00:00:00+00:00: health=`blocked`; blockers=destination_mismatch; created=2026-05-13T00:32:12.071828+00:00; snapshotting=snapshotting_finished; export=export_finished; failed=0.
-  Run 31360-linkedin_ads_19342-scheduled__2026-05-13T00:00:00+00:00: health=`blocked`; blockers=destination_mismatch; created=2026-05-13T00:32:33.185344+00:00; snapshotting=snapshotting_finished; export=export_finished; failed=0.
-  Run 31360-linkedin_ads_19855-scheduled__2026-05-13T00:00:00+00:00: health=`blocked`; blockers=destination_mismatch; created=2026-05-13T00:32:57.118077+00:00; snapshotting=snapshotting_finished; export=export_finished; failed=0.
-  Showing 4 of 13 run evaluations.
+  Blockers: `evidence_unavailable`
 - chk_q2djcy3xc2bsbg_q2nht7fc3ci1k6 (Q2DJCY3XC2BSBG/Q2NHT7FC3CI1K6): state=`healthy_closed`.
   Scope: env=prod; org=219; audience=31374; destination=facebook.
   Checked runs: `31374-facebook_19093-scheduled__2026-04-11T00:00:00+00:00`, `31374-facebook_19093-scheduled__2026-04-12T00:00:00+00:00`, `31374-facebook_19093-scheduled__2026-04-13T00:00:00+00:00`, `31374-facebook_19093-scheduled__2026-04-14T00:00:00+00:00`, and 11 more
@@ -136,16 +106,11 @@ Check evidence:
   Run 31374-facebook_19093-scheduled__2026-04-13T00:00:00+00:00: health=`healthy`; created=2026-04-13T00:35:41.254577+00:00; snapshotting=snapshotting_finished_no_deltas; export=no_batches; failed=0.
   Run 31374-facebook_19093-scheduled__2026-04-14T00:00:00+00:00: health=`healthy`; created=2026-04-14T00:36:11.368296+00:00; snapshotting=snapshotting_finished_no_deltas; export=no_batches; failed=0.
   Showing 4 of 15 run evaluations.
-- chk_q2djcy3xc2bsbg_q2qlb7cn88kwd6 (Q2DJCY3XC2BSBG/Q2QLB7CN88KWD6): state=`blocked`.
+- chk_q2djcy3xc2bsbg_q2qlb7cn88kwd6 (Q2DJCY3XC2BSBG/Q2QLB7CN88KWD6): state=`open`, next_check_at=`2026-05-17T14:45:36.917Z`.
   Scope: env=prod; org=219; audience=31343; destination=facebook.
   Checked runs: `31343-facebook_19066-scheduled__2026-04-11T00:00:00+00:00`, `31343-facebook_19066-scheduled__2026-04-12T00:00:00+00:00`, `31343-live_ramp_sftp_19065-scheduled__2026-04-13T00:00:00+00:00`, `31343-facebook_19066-scheduled__2026-04-13T00:00:00+00:00`, and 13 more
   Command: `glcli --env prod bifrost pizza --audience-id 31343 --org-id 219`
-  Blockers: `destination_mismatch`, `destination_mismatch`
-  Run 31343-facebook_19066-scheduled__2026-04-11T00:00:00+00:00: health=`healthy`; created=2026-04-11T00:38:44.715260+00:00; snapshotting=snapshotting_finished_no_deltas; export=no_batches; failed=0.
-  Run 31343-facebook_19066-scheduled__2026-04-12T00:00:00+00:00: health=`healthy`; created=2026-04-12T00:18:50.777950+00:00; snapshotting=snapshotting_finished_no_deltas; export=no_batches; failed=0.
-  Run 31343-live_ramp_sftp_19065-scheduled__2026-04-13T00:00:00+00:00: health=`blocked`; blockers=destination_mismatch; created=2026-04-13T00:26:07.555844+00:00; snapshotting=snapshotting_finished_no_deltas; export=no_batches; failed=0.
-  Run 31343-facebook_19066-scheduled__2026-04-13T00:00:00+00:00: health=`healthy`; created=2026-04-13T00:26:35.290483+00:00; snapshotting=snapshotting_finished_no_deltas; export=no_batches; failed=0.
-  Showing 4 of 17 run evaluations.
+  Blockers: `evidence_unavailable`
 - Showing 10 of 13 checks; see `indexes/checks.json` and `checks/*/check.json` for the full evidence set.
 
 ## Next Action

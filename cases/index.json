@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-05-16T23:52:14.546Z",
-  "open_count": 40,
+  "generated_at": "2026-05-17T16:10:45.875Z",
+  "open_count": 36,
   "groups": [
     {
       "group_id": "260511-albertsons_6-snapshotting-processing",
@@ -93,20 +93,6 @@
       "path": "groups/open/260513-allegro_3-facebook-export-error/case.md"
     },
     {
-      "group_id": "260514-451-client-sent-export-failure",
-      "state": "open",
-      "tags": [
-        "triage:needs_review"
-      ],
-      "title": "451 client-sent-export-failure",
-      "summary": "ASU Enterprise Partners (Alumni) - Audience 26039: Audience Export failure for 26039 sent to client.",
-      "incident_ids": [
-        "Q1UC14QNZK76EZ"
-      ],
-      "alert_count": 9,
-      "path": "groups/open/260514-451-client-sent-export-failure/case.md"
-    },
-    {
       "group_id": "260514-451-salesforce-audience-export-error",
       "state": "open",
       "tags": [
@@ -167,20 +153,6 @@
       "path": "groups/open/260514-allegro_3-dv360-export-processing/case.md"
     },
     {
-      "group_id": "260514-chghealthcare_395-client-sent-export-failure",
-      "state": "open",
-      "tags": [
-        "triage:needs_review"
-      ],
-      "title": "chghealthcare_395 client-sent-export-failure",
-      "summary": "chghealthcare (Global Medical Staffing) - Audience 30299: Audience Export failure for 30299 sent to client.",
-      "incident_ids": [
-        "Q064V2C56CNTCR"
-      ],
-      "alert_count": 8,
-      "path": "groups/open/260514-chghealthcare_395-client-sent-export-failure/case.md"
-    },
-    {
       "group_id": "260514-chghealthcare_395-no-batches",
       "state": "open",
       "tags": [
@@ -193,35 +165,6 @@
       ],
       "alert_count": 174,
       "path": "groups/open/260514-chghealthcare_395-no-batches/case.md"
-    },
-    {
-      "group_id": "260514-evgo_402-client-sent-export-failure",
-      "state": "open",
-      "tags": [
-        "triage:needs_review"
-      ],
-      "title": "evgo_402 client-sent-export-failure",
-      "summary": "EVgo (default) - SignalRoute 373: SignalRoute Export failure for 373 sent to client.",
-      "incident_ids": [
-        "Q157KO5ON9TWGO"
-      ],
-      "alert_count": 1,
-      "path": "groups/open/260514-evgo_402-client-sent-export-failure/case.md"
-    },
-    {
-      "group_id": "260514-ford_310-client-sent-export-failure-02",
-      "state": "open",
-      "tags": [
-        "triage:needs_review",
-        "triage:no-batches-zero-rows"
-      ],
-      "title": "ford_310 client-sent-export-failure",
-      "summary": "Needs investigation: Ford audience 34059 is not a recovered client-sent duplicate; current 2026-05-16 Pizza rows across destinations are snapshotting_finished/no_batches with total_rows=0 and failures=0.",
-      "incident_ids": [
-        "Q3HWKW0FS3VTHE"
-      ],
-      "alert_count": 1,
-      "path": "groups/open/260514-ford_310-client-sent-export-failure-02/case.md"
     },
     {
       "group_id": "260514-ford_310-dv360-export-error",
@@ -760,6 +703,21 @@
       "path": "groups/resolved/260514-378-client-sent-export-failure/case.md"
     },
     {
+      "group_id": "260514-451-client-sent-export-failure",
+      "state": "resolved",
+      "tags": [
+        "triage:needs_review",
+        "resolved:export-healthy"
+      ],
+      "title": "451 client-sent-export-failure",
+      "summary": "Auto-resolved from Pizza export checks: all 9 alert-scoped export check(s) are healthy_closed with no blockers.",
+      "incident_ids": [
+        "Q1UC14QNZK76EZ"
+      ],
+      "alert_count": 9,
+      "path": "groups/resolved/260514-451-client-sent-export-failure/case.md"
+    },
+    {
       "group_id": "260514-albertsons_6-client-sent-export-failure",
       "state": "resolved",
       "tags": [
@@ -791,6 +749,36 @@
       "path": "groups/resolved/260514-birchwood_274-client-sent-export-failure/case.md"
     },
     {
+      "group_id": "260514-chghealthcare_395-client-sent-export-failure",
+      "state": "resolved",
+      "tags": [
+        "triage:needs_review",
+        "resolved:export-healthy"
+      ],
+      "title": "chghealthcare_395 client-sent-export-failure",
+      "summary": "Auto-resolved from Pizza export checks: all 8 alert-scoped export check(s) are healthy_closed with no blockers.",
+      "incident_ids": [
+        "Q064V2C56CNTCR"
+      ],
+      "alert_count": 8,
+      "path": "groups/resolved/260514-chghealthcare_395-client-sent-export-failure/case.md"
+    },
+    {
+      "group_id": "260514-evgo_402-client-sent-export-failure",
+      "state": "resolved",
+      "tags": [
+        "triage:needs_review",
+        "resolved:export-healthy"
+      ],
+      "title": "evgo_402 client-sent-export-failure",
+      "summary": "Auto-resolved from Pizza export checks: all 1 alert-scoped export check(s) are healthy_closed with no blockers.",
+      "incident_ids": [
+        "Q157KO5ON9TWGO"
+      ],
+      "alert_count": 1,
+      "path": "groups/resolved/260514-evgo_402-client-sent-export-failure/case.md"
+    },
+    {
       "group_id": "260514-ford_310-client-sent-export-failure",
       "state": "resolved",
       "tags": [
@@ -805,6 +793,22 @@
       ],
       "alert_count": 1,
       "path": "groups/resolved/260514-ford_310-client-sent-export-failure/case.md"
+    },
+    {
+      "group_id": "260514-ford_310-client-sent-export-failure-02",
+      "state": "resolved",
+      "tags": [
+        "triage:needs_review",
+        "triage:no-batches-zero-rows",
+        "resolved:export-healthy"
+      ],
+      "title": "ford_310 client-sent-export-failure",
+      "summary": "Auto-resolved from Pizza export checks: all 1 alert-scoped export check(s) are healthy_closed with no blockers.",
+      "incident_ids": [
+        "Q3HWKW0FS3VTHE"
+      ],
+      "alert_count": 1,
+      "path": "groups/resolved/260514-ford_310-client-sent-export-failure-02/case.md"
     },
     {
       "group_id": "260514-trumanshow_336-no-batches",

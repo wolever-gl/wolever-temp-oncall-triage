@@ -4,14 +4,14 @@
 
 > Generated file. Do not edit directly; put free-form investigation notes in `notes.md`.
 
-State: `open`
-Tags: `triage:needs_review`
+State: `resolved`
+Tags: `triage:needs_review`, `resolved:export-healthy`
 Incidents: [Q157KO5ON9TWGO](https://growthloop.pagerduty.com/incidents/Q157KO5ON9TWGO)
 Alerts: 1
 
 ## Current Summary
 
-EVgo (default) - SignalRoute 373: SignalRoute Export failure for 373 sent to client.
+Auto-resolved from Pizza export checks: all 1 alert-scoped export check(s) are healthy_closed with no blockers.
 
 ## Alert Scope
 
@@ -28,14 +28,18 @@ Representative alerts:
 ## Export Checks
 
 - Checks: 1.
-- States: `blocked`=1
-- Blockers seen: `missing_run_identity`
+- States: `healthy_closed`=1
 
 Check evidence:
-- chk_q157ko5on9twgo_q08oe2lvf6xgmu (Q157KO5ON9TWGO/Q08OE2LVF6XGMU): state=`blocked`.
+- chk_q157ko5on9twgo_q08oe2lvf6xgmu (Q157KO5ON9TWGO/Q08OE2LVF6XGMU): state=`healthy_closed`.
   Scope: env=prod; org=402; audience=373.
   Command: `glcli --env prod bifrost pizza --audience-id 373 --org-id 402`
-  Blockers: `missing_run_identity`
+  Run 373-braze_object_373-scheduled__2026-05-16T23:30:00+00:00: health=`healthy`; created=2026-05-16T23:45:29.138127+00:00; snapshotting=snapshotting_finished_no_deltas; export=no_batches; failed=0.
+
+## Recent Evidence
+
+- Auto-resolved from Pizza export checks: all 1 alert-scoped export check(s) are healthy_closed with no blockers.
+  Source: `check-exports`; kind: `export_check`; captured: `2026-05-17T00:06:08.181Z`.
 
 ## Next Action
 

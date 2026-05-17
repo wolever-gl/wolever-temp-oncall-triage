@@ -48,8 +48,8 @@ Representative alerts:
 ## Export Checks
 
 - Checks: 151.
-- States: `blocked`=62, `healthy_closed`=89
-- Blockers seen: `destination_mismatch`, `failed_export_count`
+- States: `blocked`=5, `healthy_closed`=115, `open`=31
+- Blockers seen: `evidence_unavailable`, `failed_export_count`
 
 Check evidence:
 - chk_q1yqv4erkaivmf_q00wz1wweqkptm (Q1YQV4ERKAIVMF/Q00WZ1WWEQKPTM): state=`healthy_closed`.
@@ -63,21 +63,16 @@ Check evidence:
   Command: `glcli --env prod bifrost pizza --audience-id 671 --org-id 370`
   Blockers: `failed_export_count`
   Run 671-iterable_object_671-scheduled__2026-05-12T17:00:00+00:00: health=`blocked`; blockers=failed_export_count; created=2026-05-13T17:08:31.890041+00:00; snapshotting=snapshotting_finished; export=export_finished; failed=5237.
-- chk_q1yqv4erkaivmf_q02t2crnhmdygp (Q1YQV4ERKAIVMF/Q02T2CRNHMDYGP): state=`blocked`.
+- chk_q1yqv4erkaivmf_q02t2crnhmdygp (Q1YQV4ERKAIVMF/Q02T2CRNHMDYGP): state=`healthy_closed`.
   Scope: env=prod; org=370; audience=32411; destination=facebook.
   Checked runs: `32411-facebook_19862-scheduled__2026-05-14T00:00:00+00:00`, `32411-snapchat_19863-scheduled__2026-05-14T00:00:00+00:00`, `32411-tik_tok_19864-scheduled__2026-05-14T00:00:00+00:00`
   Command: `glcli --env prod bifrost pizza --audience-id 32411 --org-id 370`
-  Blockers: `destination_mismatch`, `destination_mismatch`
   Run 32411-facebook_19862-scheduled__2026-05-14T00:00:00+00:00: health=`healthy`; created=2026-05-14T01:25:50.877538+00:00; snapshotting=snapshotting_finished; export=export_finished; failed=0.
-  Run 32411-snapchat_19863-scheduled__2026-05-14T00:00:00+00:00: health=`blocked`; blockers=destination_mismatch; created=2026-05-14T01:26:14.093074+00:00; snapshotting=snapshotting_finished; export=export_finished; failed=0.
-  Run 32411-tik_tok_19864-scheduled__2026-05-14T00:00:00+00:00: health=`blocked`; blockers=destination_mismatch; created=2026-05-14T01:26:14.099833+00:00; snapshotting=snapshotting_finished; export=export_finished; failed=0.
-- chk_q1yqv4erkaivmf_q03kgz1pfd2o15 (Q1YQV4ERKAIVMF/Q03KGZ1PFD2O15): state=`blocked`.
+- chk_q1yqv4erkaivmf_q03kgz1pfd2o15 (Q1YQV4ERKAIVMF/Q03KGZ1PFD2O15): state=`open`, next_check_at=`2026-05-17T00:21:27.098Z`.
   Scope: env=prod; org=370; audience=18486; destination=microsoft_ads.
   Checked runs: `18486-microsoft_ads_11776-scheduled__2026-05-14T00:00:00+00:00`, `18486-google_adwords_11775-scheduled__2026-05-14T00:00:00+00:00`
   Command: `glcli --env prod bifrost pizza --audience-id 18486 --org-id 370`
-  Blockers: `destination_mismatch`
-  Run 18486-microsoft_ads_11776-scheduled__2026-05-14T00:00:00+00:00: health=`healthy`; created=2026-05-14T00:29:08.741447+00:00; snapshotting=snapshotting_finished; export=export_finished; failed=0.
-  Run 18486-google_adwords_11775-scheduled__2026-05-14T00:00:00+00:00: health=`blocked`; blockers=destination_mismatch; created=2026-05-14T00:29:08.788900+00:00; snapshotting=snapshotting_finished; export=export_finished; failed=0.
+  Blockers: `evidence_unavailable`
 - chk_q1yqv4erkaivmf_q04m7qqsuex4gp (Q1YQV4ERKAIVMF/Q04M7QQSUEX4GP): state=`healthy_closed`.
   Scope: env=prod; org=370; audience=23897; destination=gam360.
   Checked runs: `23897-gam360_15464-scheduled__2026-05-14T00:00:00+00:00`
@@ -93,27 +88,21 @@ Check evidence:
   Checked runs: `23722-gam360_15469-scheduled__2026-05-14T00:00:00+00:00`
   Command: `glcli --env prod bifrost pizza --audience-id 23722 --org-id 370`
   Run 23722-gam360_15469-scheduled__2026-05-14T00:00:00+00:00: health=`healthy`; created=2026-05-14T01:12:07.822311+00:00; snapshotting=snapshotting_finished; export=export_finished; failed=0.
-- chk_q1yqv4erkaivmf_q05l0szm3f4dwy (Q1YQV4ERKAIVMF/Q05L0SZM3F4DWY): state=`blocked`.
+- chk_q1yqv4erkaivmf_q05l0szm3f4dwy (Q1YQV4ERKAIVMF/Q05L0SZM3F4DWY): state=`open`, next_check_at=`2026-05-17T00:21:27.098Z`.
   Scope: env=prod; org=370; audience=18485; destination=google_adwords.
   Checked runs: `18485-google_adwords_11777-scheduled__2026-05-14T00:00:00+00:00`, `18485-microsoft_ads_11778-scheduled__2026-05-14T00:00:00+00:00`
   Command: `glcli --env prod bifrost pizza --audience-id 18485 --org-id 370`
-  Blockers: `destination_mismatch`
-  Run 18485-google_adwords_11777-scheduled__2026-05-14T00:00:00+00:00: health=`healthy`; created=2026-05-14T00:28:43.776163+00:00; snapshotting=snapshotting_finished; export=export_finished; failed=0.
-  Run 18485-microsoft_ads_11778-scheduled__2026-05-14T00:00:00+00:00: health=`blocked`; blockers=destination_mismatch; created=2026-05-14T00:29:08.742497+00:00; snapshotting=snapshotting_finished; export=export_finished; failed=0.
-- chk_q1yqv4erkaivmf_q05yt5m83l51du (Q1YQV4ERKAIVMF/Q05YT5M83L51DU): state=`blocked`.
+  Blockers: `evidence_unavailable`
+- chk_q1yqv4erkaivmf_q05yt5m83l51du (Q1YQV4ERKAIVMF/Q05YT5M83L51DU): state=`open`, next_check_at=`2026-05-17T00:21:27.098Z`.
   Scope: env=prod; org=370; audience=18589; destination=microsoft_ads.
   Checked runs: `18589-microsoft_ads_11756-scheduled__2026-05-14T00:00:00+00:00`, `18589-google_adwords_11755-scheduled__2026-05-14T00:00:00+00:00`
   Command: `glcli --env prod bifrost pizza --audience-id 18589 --org-id 370`
-  Blockers: `destination_mismatch`
-  Run 18589-microsoft_ads_11756-scheduled__2026-05-14T00:00:00+00:00: health=`healthy`; created=2026-05-14T00:39:14.318928+00:00; snapshotting=snapshotting_finished; export=export_finished; failed=0.
-  Run 18589-google_adwords_11755-scheduled__2026-05-14T00:00:00+00:00: health=`blocked`; blockers=destination_mismatch; created=2026-05-14T00:40:52.462959+00:00; snapshotting=snapshotting_finished; export=export_finished; failed=0.
-- chk_q1yqv4erkaivmf_q066sp19m6sjt4 (Q1YQV4ERKAIVMF/Q066SP19M6SJT4): state=`blocked`.
+  Blockers: `evidence_unavailable`
+- chk_q1yqv4erkaivmf_q066sp19m6sjt4 (Q1YQV4ERKAIVMF/Q066SP19M6SJT4): state=`healthy_closed`.
   Scope: env=prod; org=370; audience=18636; destination=google_adwords.
   Checked runs: `18636-google_adwords_11815-scheduled__2026-05-14T00:00:00+00:00`, `18636-microsoft_ads_11816-scheduled__2026-05-14T00:00:00+00:00`
   Command: `glcli --env prod bifrost pizza --audience-id 18636 --org-id 370`
-  Blockers: `destination_mismatch`
   Run 18636-google_adwords_11815-scheduled__2026-05-14T00:00:00+00:00: health=`healthy`; created=2026-05-14T01:21:45.077993+00:00; snapshotting=snapshotting_finished; export=export_finished; failed=0.
-  Run 18636-microsoft_ads_11816-scheduled__2026-05-14T00:00:00+00:00: health=`blocked`; blockers=destination_mismatch; created=2026-05-14T01:21:45.079875+00:00; snapshotting=snapshotting_finished; export=export_finished; failed=0.
 - Showing 10 of 151 checks; see `indexes/checks.json` and `checks/*/check.json` for the full evidence set.
 
 ## Next Action

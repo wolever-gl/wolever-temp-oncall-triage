@@ -3,7 +3,7 @@
   "source": "pagerduty",
   "incident_id": "Q38JR11G2ENK2W",
   "alert_id": "Q32J02DN0JRYZ0",
-  "state": "blocked",
+  "state": "open",
   "scope": {
     "env": "albertsons",
     "org_id": "6",
@@ -16,9 +16,12 @@
   "scope_key": "albertsons|6|10073|unknown_destination|unknown_endpoint|unknown_run",
   "run_evaluations": [],
   "blockers": [
-    "missing_export_after_alert"
+    "evidence_unavailable"
   ],
-  "evidence_artifacts": [],
+  "evidence_artifacts": [
+    "pizza_fetch_error:Unable to connect. Is the computer able to access the url?"
+  ],
   "created_at": "2026-05-16T20:47:19.456Z",
-  "updated_at": "2026-05-16T23:11:12.412Z"
+  "updated_at": "2026-05-17T15:54:54.764Z",
+  "next_check_at": "2026-05-17T16:09:54.764Z"
 }

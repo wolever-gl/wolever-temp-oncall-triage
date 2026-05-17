@@ -3,12 +3,14 @@
   "source": "pagerduty",
   "incident_id": "Q064V2C56CNTCR",
   "alert_id": "Q0G18JH1KRU2EL",
-  "state": "blocked",
+  "state": "healthy_closed",
   "scope": {
     "env": "prod",
     "org_id": "395",
     "audience_id": "31806",
     "destination_type": "snowflake",
+    "match_strategy": "checked_export_run_ids",
+    "alert_created_at": "2026-05-14T07:37:04-07:00",
     "checked_export_run_ids": [
       "31806-snowflake_19528-scheduled__2026-05-13T23:00:00+00:00",
       "31806-pulse_point_19529-scheduled__2026-05-13T23:00:00+00:00"
@@ -69,67 +71,11 @@
           "snapshotting_state": "snapshotting_finished"
         }
       }
-    },
-    {
-      "export_run_id": "31806-pulse_point_19529-scheduled__2026-05-13T23:00:00+00:00",
-      "health": "blocked",
-      "match_basis": "checked_export_run_id",
-      "blockers": [
-        "destination_mismatch"
-      ],
-      "selected_row": {
-        "export_run_id": "31806-pulse_point_19529-scheduled__2026-05-13T23:00:00+00:00",
-        "audience_id": "31806",
-        "endpoint_id": "app_pulsepoint_1408",
-        "destination_type": "pulse_point",
-        "created_at": "2026-05-13T23:57:27.609794+00:00",
-        "snapshotting_state": "snapshotting_finished",
-        "export_state": "export_finished",
-        "failed_export_count": 0,
-        "raw": {
-          "export_state": "export_finished",
-          "successful_add_count": 110,
-          "successful_remove_count": 90,
-          "failed_export_count": 0,
-          "rejected_row_count": 0,
-          "total_row_count": 200,
-          "successful_expanded_add_count": 0,
-          "successful_expanded_remove_count": 0,
-          "failed_expanded_export_count": 0,
-          "rejected_expanded_row_count": 0,
-          "total_expanded_row_count": 200,
-          "enhanced_match_count": 0,
-          "enhanced_row_count": 0,
-          "enhanced_total_records": 0,
-          "total_batch_count": 1,
-          "completed_batch_count": 1,
-          "successful_batch_count": 1,
-          "failed_batch_count": 0,
-          "failure_reason": null,
-          "info": {
-            "internal_export_id": "6872cecb3f6a32c76968309fe179e6e9-20260513235625",
-            "export_run_id": "31806-pulse_point_19529-scheduled__2026-05-13T23:00:00+00:00",
-            "audience_id": "82153",
-            "internal_audience_id": "31806",
-            "audience_name": "",
-            "organization_id": "395",
-            "organization_name": "chghealthcare",
-            "platform": "pulse_point",
-            "endpoint_id": "app_pulsepoint_1408",
-            "export_timestamp": "2026-05-13 23:56:25",
-            "error_file_uri": "gs://flywheel-prod-328213-temporary/batch_errors/cf87cf77-5edd-49ff-aded-e26b123a152a.csv",
-            "created_at": "2026-05-13T23:57:27.609794+00:00",
-            "export_complete_response": null
-          },
-          "snapshotting_state": "snapshotting_finished"
-        }
-      }
     }
   ],
-  "blockers": [
-    "destination_mismatch"
-  ],
+  "blockers": [],
   "evidence_artifacts": [],
   "created_at": "2026-05-16T01:01:37.728Z",
-  "updated_at": "2026-05-16T01:17:44.826Z"
+  "updated_at": "2026-05-16T23:54:41.364Z",
+  "closed_at": "2026-05-16T23:54:41.364Z"
 }

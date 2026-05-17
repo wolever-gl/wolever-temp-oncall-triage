@@ -4,14 +4,14 @@
 
 > Generated file. Do not edit directly; put free-form investigation notes in `notes.md`.
 
-State: `open`
-Tags: `triage:needs_review`, `triage:no-batches-zero-rows`
+State: `resolved`
+Tags: `triage:needs_review`, `triage:no-batches-zero-rows`, `resolved:export-healthy`
 Incidents: [Q3HWKW0FS3VTHE](https://growthloop.pagerduty.com/incidents/Q3HWKW0FS3VTHE)
 Alerts: 1
 
 ## Current Summary
 
-Needs investigation: Ford audience 34059 is not a recovered client-sent duplicate; current 2026-05-16 Pizza rows across destinations are snapshotting_finished/no_batches with total_rows=0 and failures=0.
+Auto-resolved from Pizza export checks: all 1 alert-scoped export check(s) are healthy_closed with no blockers.
 
 ## Alert Scope
 
@@ -28,17 +28,18 @@ Representative alerts:
 ## Export Checks
 
 - Checks: 1.
-- States: `blocked`=1
-- Blockers seen: `missing_run_identity`
+- States: `healthy_closed`=1
 
 Check evidence:
-- chk_q3hwkw0fs3vthe_q2bk8g803n1mik (Q3HWKW0FS3VTHE/Q2BK8G803N1MIK): state=`blocked`.
+- chk_q3hwkw0fs3vthe_q2bk8g803n1mik (Q3HWKW0FS3VTHE/Q2BK8G803N1MIK): state=`healthy_closed`.
   Scope: env=prod; org=310; audience=34059.
   Command: `glcli --env prod bifrost pizza --audience-id 34059 --org-id 310`
-  Blockers: `missing_run_identity`
+  Run 34059-dv360_20857-scheduled__2026-05-16T00:00:00+00:00: health=`healthy`; created=2026-05-16T00:48:39.354809+00:00; snapshotting=snapshotting_finished; export=export_finished; failed=0.
 
 ## Recent Evidence
 
+- Auto-resolved from Pizza export checks: all 1 alert-scoped export check(s) are healthy_closed with no blockers.
+  Source: `check-exports`; kind: `export_check`; captured: `2026-05-17T00:06:13.396Z`.
 - Audience 34059 remains zero-row/no-batches rather than recovered: latest 2026-05-16 runs for DV360, Facebook, TTD, TikTok, Reddit, and Pinterest are all snapshotting_finished/no_batches with total_rows=0 and failures=0. This needs manual investigation of why the audience is empty/no-batch across destinations.
   Source: `glcli prod bifrost pizza`; kind: `pizza`; captured: `2026-05-16T22:39:00.571Z`.
   Command: `PATH=/Users/wolever/.local/share/mise/installs/gcloud/562.0.0/bin:$PATH glcli --env prod bifrost pizza --audience-id 34059 --org-id 310 --format=json`

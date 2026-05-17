@@ -33,7 +33,7 @@ Representative alerts:
 - Blockers seen: `evidence_unavailable`
 
 Check evidence:
-- chk_q08b553anq9kmi_q3ghbyts94814g (Q08B553ANQ9KMI/Q3GHBYTS94814G): state=`open`, next_check_at=`2026-05-16T01:32:44.826Z`.
+- chk_q08b553anq9kmi_q3ghbyts94814g (Q08B553ANQ9KMI/Q3GHBYTS94814G): state=`open`, next_check_at=`2026-05-17T16:09:29.997Z`.
   Scope: env=royals; org=4; audience=203; destination=salesforce_audience_object.
   Checked runs: `203-salesforce_audience_object_203-scheduled__2026-05-15T13:00:00+00:00`
   Command: `glcli --env royals bifrost pizza --audience-id 203 --org-id 4`

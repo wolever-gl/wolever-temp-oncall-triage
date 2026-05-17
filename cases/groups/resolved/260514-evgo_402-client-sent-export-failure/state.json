@@ -1,15 +1,16 @@
 {
   "group_id": "260514-evgo_402-client-sent-export-failure",
-  "state": "open",
+  "state": "resolved",
   "tags": [
-    "triage:needs_review"
+    "triage:needs_review",
+    "resolved:export-healthy"
   ],
   "title": "evgo_402 client-sent-export-failure",
-  "summary": "EVgo (default) - SignalRoute 373: SignalRoute Export failure for 373 sent to client.",
+  "summary": "Auto-resolved from Pizza export checks: all 1 alert-scoped export check(s) are healthy_closed with no blockers.",
   "deterministic_key": "v3|incident:Q157KO5ON9TWGO|org:evgo_402|class:client-sent-export-failure",
   "grouping_version": 3,
   "created_at": "2026-05-16T00:38:01.850Z",
-  "updated_at": "2026-05-16T20:47:41.809Z",
+  "updated_at": "2026-05-17T00:06:08.203Z",
   "alert_refs": [
     {
       "incident_id": "Q157KO5ON9TWGO",
