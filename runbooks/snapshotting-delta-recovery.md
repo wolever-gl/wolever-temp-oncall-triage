@@ -15,7 +15,10 @@ window, or whether files from the failed run were already generated and need a
 manual re-drop/retry.
 
 This runbook is intentionally stricter than `retry-later-succeeded`: future
-successful runs are not enough by themselves for delta exports.
+successful runs are not enough by themselves for delta exports. The important
+distinction is whether the failed run could have generated delta files. A run
+that fails before delta generation/unload is lower risk than a run that reached
+delta or unload stages.
 
 ## Applicability
 
@@ -79,7 +82,42 @@ gcloud logging read 'timestamp>="<start>" AND timestamp<="<end>" AND resource.ty
 
 ### Safe To Resolve As Recovered
 
-Resolve with `resolved:retry_succeeded` only when all of these are true:
+Resolve with `resolved:retry_succeeded` when either safe recovery path is
+satisfied.
+
+#### Path A: Failed Before Delta Files Existed
+
+Use this path when the failed run died before it could create delta files. All
+of these must be true:
+
+- Scoped logs show the failed run did not complete `delta_history_write_up`.
+- Scoped logs show the failed run did not complete `unload`.
+- Scoped logs show the failed run did not complete `unloaded_deltas_write`.
+- The failure occurred in an earlier stage such as pre-snapshot validation,
+  snapshot history, metadata, query compilation, or another stage before delta
+  rows/files were generated.
+- A later same target/export id run completed enough of the same export path to
+  prove recovery:
+  - for a full delta recovery, it completed `snapshot_history_write_up`,
+    `metadata_write_up`, `delta_history_write_up`, `unload`, and
+    `unloaded_deltas_write`;
+  - if the alert was only about the pre-delta snapshotting failure, destination
+    row-level failures/rejects in the later run should be handled separately
+    with a destination-specific case or tag, not treated as evidence that delta
+    files from the failed run were stranded.
+- Pizza/logs for the later run show the snapshotting/delta stages succeeded.
+
+Reasoning: if the failed run never completed `delta_history_write_up`, `unload`,
+or `unloaded_deltas_write`, then it did not create delta files that could be
+stranded or missed. A subsequent successful same-scope run can recover the
+snapshotting/delta window. Later destination row failures may still matter, but
+they are a separate destination-delivery question, not a blocker for resolving
+the original pre-delta snapshotting failure.
+
+#### Path B: Failed After Delta Rows May Exist
+
+Use this stricter path when the failed run reached or may have reached delta
+generation. All of these must be true:
 
 - The failed run did not complete `unload`.
 - The failed run did not complete `unloaded_deltas_write`.
@@ -109,7 +147,10 @@ Leave open or transition to `waiting` only after communication evidence when:
 - Logs show `delta_history_write_up` succeeded for the failed run, but you cannot
   prove whether its deltas were later selected by unload.
 - The failure is due to schema, query, permissions, credentials, or client data.
-  These are not retry-later cases.
+  These are not retry-later cases unless the scoped evidence proves the failure
+  happened before delta files existed and a later same-scope run recovered the
+  snapshotting/delta path. In that pre-delta case, resolve the snapshotting
+  failure and track any remaining client/destination issue separately.
 
 Use `waiting:*` only when the blocker has been communicated to the owning team or
 client and the case includes durable evidence of that communication.
