@@ -119,6 +119,154 @@ console.log(JSON.stringify({
     }
   });
 
+  test("rejects waiting transitions without communication evidence", async () => {
+    const workspaceDir = await mkdtemp(path.join(tmpdir(), "oncall-triage-v2-"));
+    try {
+      await importPagerDutyIncident({ workspaceDir, incident: "QTEST123", alertsFile: fixture });
+      const grouped = await groupImportedAlerts(workspaceDir);
+      const groupId = grouped.groups[0]!;
+
+      await appendEvidence(workspaceDir, groupId, {
+        ts: "2026-05-16T17:00:00.000Z",
+        kind: "triage",
+        source: "gcloud scoped logs",
+        summary: "Scoped logs show a client-side blocker, but no one has been notified yet.",
+        data: {
+          links: [{ label: "Scoped run logs", url: "https://console.cloud.google.com/logs/query;query=test?project=flywheel-prod-328213" }],
+        },
+      });
+
+      await expect(transitionGroup({
+        workspaceDir,
+        groupId,
+        state: "waiting",
+        summary: "Waiting on the client-side blocker.",
+      })).rejects.toThrow("Cannot move");
+
+      const group = (await loadAllGroups(workspaceDir))[0]!;
+      expect(group.state).toBe("open");
+    } finally {
+      await rm(workspaceDir, { recursive: true, force: true });
+    }
+  });
+
+  test("allows waiting transitions after communication evidence is recorded", async () => {
+    const workspaceDir = await mkdtemp(path.join(tmpdir(), "oncall-triage-v2-"));
+    try {
+      await importPagerDutyIncident({ workspaceDir, incident: "QTEST123", alertsFile: fixture });
+      const grouped = await groupImportedAlerts(workspaceDir);
+      const groupId = grouped.groups[0]!;
+
+      await appendEvidence(workspaceDir, groupId, {
+        ts: "2026-05-16T17:00:00.000Z",
+        kind: "support_thread",
+        source: "slack",
+        summary: "Support thread opened with the owning team for the client-side blocker.",
+        data: {
+          links: [{ label: "Support thread", url: "https://flywheeltechnologies.slack.com/archives/C02J2RJ6VSL/p1778964420710189" }],
+        },
+      });
+
+      const group = await transitionGroup({
+        workspaceDir,
+        groupId,
+        state: "waiting",
+        tag: "waiting:client_schema",
+        summary: "Waiting on client schema remediation; support thread opened.",
+      });
+
+      expect(group.state).toBe("waiting");
+      expect(group.tags).toContain("waiting:client_schema");
+      const caseMarkdown = await readFile(groupFile(workspaceDir, "waiting", groupId, "case.md"), "utf8");
+      expect(caseMarkdown).toContain("Support thread opened");
+    } finally {
+      await rm(workspaceDir, { recursive: true, force: true });
+    }
+  });
+
+  test("allows waiting transitions with explicit communication notes", async () => {
+    const workspaceDir = await mkdtemp(path.join(tmpdir(), "oncall-triage-v2-"));
+    try {
+      await importPagerDutyIncident({ workspaceDir, incident: "QTEST123", alertsFile: fixture });
+      const grouped = await groupImportedAlerts(workspaceDir);
+      const groupId = grouped.groups[0]!;
+      await writeFile(
+        groupFile(workspaceDir, "new", groupId, "notes.md"),
+        "Communication: notified Support in #eng-support thread https://flywheeltechnologies.slack.com/archives/C02J2RJ6VSL/p1778964420710189.\n",
+      );
+
+      const group = await transitionGroup({
+        workspaceDir,
+        groupId,
+        state: "waiting",
+        summary: "Waiting on owner response in the linked support thread.",
+      });
+
+      expect(group.state).toBe("waiting");
+      const caseMarkdown = await readFile(groupFile(workspaceDir, "waiting", groupId, "case.md"), "utf8");
+      expect(caseMarkdown).toContain("## Notes");
+      expect(caseMarkdown).toContain("notified Support");
+    } finally {
+      await rm(workspaceDir, { recursive: true, force: true });
+    }
+  });
+
+  test("tag grouping cannot create a waiting group without communication evidence", async () => {
+    const workspaceDir = await mkdtemp(path.join(tmpdir(), "oncall-triage-v2-"));
+    try {
+      await importPagerDutyIncident({ workspaceDir, incident: "QTEST123", alertsFile: fixture });
+      await groupImportedAlerts(workspaceDir);
+      const tagger = await writeFixtureTagger(workspaceDir);
+      await runAlertTagger({
+        workspaceDir,
+        filters: { orgId: "chghealthcare_395" },
+        scriptPath: tagger,
+        tags: ["evidence:client-blocker"],
+      });
+
+      await expect(groupTaggedAlerts({
+        title: "Client schema blocker",
+        summary: "Alerts share a client-side blocker.",
+        rationale: "Agent verified the blocker evidence.",
+        tags: ["evidence:client-blocker"],
+        state: "waiting",
+        groupTags: ["waiting:client_schema"],
+        workspaceDir,
+      })).rejects.toThrow("Cannot create a group directly in waiting");
+    } finally {
+      await rm(workspaceDir, { recursive: true, force: true });
+    }
+  });
+
+  test("tag grouping cannot move an existing group to waiting without communication evidence", async () => {
+    const workspaceDir = await mkdtemp(path.join(tmpdir(), "oncall-triage-v2-"));
+    try {
+      await importPagerDutyIncident({ workspaceDir, incident: "QTEST123", alertsFile: fixture });
+      const grouped = await groupImportedAlerts(workspaceDir);
+      const groupId = grouped.groups[0]!;
+      const tagger = await writeFixtureTagger(workspaceDir);
+      await runAlertTagger({
+        workspaceDir,
+        filters: { orgId: "chghealthcare_395" },
+        scriptPath: tagger,
+        tags: ["evidence:client-blocker"],
+      });
+
+      await expect(groupTaggedAlerts({
+        title: "Client schema blocker",
+        summary: "Alerts share a client-side blocker.",
+        rationale: "Agent verified the blocker evidence.",
+        tags: ["evidence:client-blocker"],
+        groupId,
+        state: "waiting",
+        groupTags: ["waiting:client_schema"],
+        workspaceDir,
+      })).rejects.toThrow("Cannot move");
+    } finally {
+      await rm(workspaceDir, { recursive: true, force: true });
+    }
+  });
+
   test("transitions group state and records decision trail", async () => {
     const workspaceDir = await mkdtemp(path.join(tmpdir(), "oncall-triage-v2-"));
     try {
@@ -440,4 +588,21 @@ console.log(JSON.stringify({
 
 function groupFile(workspaceDir: string, state: string, groupId: string, file: string): string {
   return path.join(workspaceDir, "groups", state, groupId, file);
+}
+
+async function writeFixtureTagger(workspaceDir: string): Promise<string> {
+  const tagger = path.join(workspaceDir, "tagger.ts");
+  await writeFile(
+    tagger,
+    `const alertPath = process.argv[process.argv.indexOf("--alert") + 1];
+const alert = await Bun.file(alertPath).json();
+console.log(JSON.stringify({
+  decision: alert.org_id === "chghealthcare_395" ? "tag" : "skip",
+  tags: ["evidence:client-blocker"],
+  confidence: "high",
+  summary: "Fixture tagger matched chghealthcare alert."
+}));
+`,
+  );
+  return tagger;
 }

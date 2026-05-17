@@ -183,7 +183,9 @@ and `evidence.jsonl`.
 `evidence` appends to `evidence.jsonl` and refreshes `case.md` with a Recent
 Evidence section. Use repeated `--link <label=url>` values for Google Cloud
 Logs, Slack, PagerDuty, or other investigation links, and repeated `--command`
-values for exact commands worth preserving.
+values for exact commands worth preserving. Moving a case to `waiting` requires
+communication evidence in `evidence.jsonl` or `notes.md`; blocker evidence alone
+is not enough.
 
 `import-pd` validates PagerDuty wrapper alert counts before grouping. If the raw
 wrapper says `Alerts (N)`, the parsed derived facts must contain `N` alert facts
@@ -269,6 +271,23 @@ bun run oncall-triage transition cases \
   --summary "Later export is processing; recheck after the next monitor window."
 ```
 
+Before moving a case to `waiting`, record where the blocker was communicated:
+
+```bash
+bun run oncall-triage evidence cases \
+  --group 260515-acme_123-a456-marketing-cloud-processing \
+  --kind support_thread \
+  --source "Slack #eng-support" \
+  --summary "Support thread opened with the owning team for the client-side blocker." \
+  --link "Support thread=https://flywheeltechnologies.slack.com/archives/C02J2RJ6VSL/p1778964420710189"
+
+bun run oncall-triage transition cases \
+  --group 260515-acme_123-a456-marketing-cloud-processing \
+  --state waiting \
+  --tag waiting:client_schema \
+  --summary "Waiting on client schema remediation; support thread opened."
+```
+
 `sync-pd` refreshes stored incident records from PagerDuty, optionally imports
 explicit incidents, and resolves groups whose attached PagerDuty incidents have
 all closed externally.
@@ -306,7 +325,7 @@ Top-level group states:
 
 - `new` - imported and grouped, but no evidence collection or triage work has started yet.
 - `open` - work has started and the case is under investigation or ready for an agent/human to decide the next action.
-- `waiting` - blocked on an external owner only after the blocker has been communicated and the case includes durable evidence of that communication.
+- `waiting` - blocked on an external owner only after the blocker has been communicated and the case includes durable evidence of that communication. The CLI enforces this using `evidence.jsonl` and `notes.md`; do not edit generated `case.md` to satisfy it.
 - `monitoring` - system progress or retry behavior is underway and a later check is needed.
 - `resolved` - terminal evidence shows the issue is recovered, closed, merged, or otherwise complete.
 

@@ -242,6 +242,9 @@ export async function transitionGroup(options: {
 }): Promise<GroupState> {
   const group = await readGroupState(options.workspaceDir, options.groupId);
   const now = new Date().toISOString();
+  if (options.state === "waiting" && group.state !== "waiting") {
+    await assertWaitingCommunicationEvidence(options.workspaceDir, group.group_id);
+  }
   group.state = options.state;
   if (options.tag && !group.tags.includes(options.tag)) group.tags.push(options.tag);
   group.summary = options.summary;
@@ -478,6 +481,14 @@ export async function groupTaggedAlerts(options: {
   const groupId = options.groupId ?? uniqueGroupId(agentGroupIdBase(selectedAlerts, options.title), existingGroups.map((group) => group.group_id));
   const now = new Date().toISOString();
   const previousTarget = existingGroups.find((group) => group.group_id === groupId);
+  if (options.state === "waiting") {
+    if (!previousTarget) {
+      throw new Error("Cannot create a group directly in waiting. Create/open the group, append communication evidence, then transition it to waiting.");
+    }
+    if (previousTarget.state !== "waiting") {
+      await assertWaitingCommunicationEvidence(options.workspaceDir, previousTarget.group_id);
+    }
+  }
   const target = buildTaggedGroup({
     ...(previousTarget ? { previousTarget } : {}),
     groupId,
@@ -1081,6 +1092,49 @@ async function readGroupNotes(workspaceDir: string, groupId: string): Promise<st
     if ((err as NodeJS.ErrnoException).code === "ENOENT") return undefined;
     throw err;
   }
+}
+
+async function assertWaitingCommunicationEvidence(workspaceDir: string, groupId: string): Promise<void> {
+  if (await hasWaitingCommunicationEvidence(workspaceDir, groupId)) return;
+  throw new Error(
+    `Cannot move ${groupId} to waiting without communication evidence. ` +
+      "Append evidence with kind communication_thread, support_thread, slack_thread, customer_message, owner_handoff, or ticket and a durable link, or document the communication in notes.md.",
+  );
+}
+
+async function hasWaitingCommunicationEvidence(workspaceDir: string, groupId: string): Promise<boolean> {
+  const [events, notes] = await Promise.all([
+    readEvidenceEvents(workspaceDir, groupId),
+    readGroupNotes(workspaceDir, groupId),
+  ]);
+  return events.some(isCommunicationEvidenceEvent) || isCommunicationEvidenceNote(notes);
+}
+
+const COMMUNICATION_EVIDENCE_KINDS = new Set([
+  "communication",
+  "communication_thread",
+  "support_thread",
+  "slack_thread",
+  "customer_message",
+  "owner_handoff",
+  "ticket",
+]);
+
+function isCommunicationEvidenceEvent(event: EvidenceEvent): boolean {
+  if (!COMMUNICATION_EVIDENCE_KINDS.has(event.kind)) return false;
+  return event.summary.trim().length > 0 && hasDurableCommunicationLocator(event.data);
+}
+
+function hasDurableCommunicationLocator(data: unknown): boolean {
+  if (!data || typeof data !== "object" || Array.isArray(data)) return false;
+  return collectEvidenceLinks(data as Record<string, unknown>).length > 0;
+}
+
+function isCommunicationEvidenceNote(notes: string | undefined): boolean {
+  if (!notes) return false;
+  const hasCommunicationLanguage = /\b(communicat(?:ed|ion)|notified|asked|messaged|escalated|support thread|slack thread|handoff|ticket)\b/i.test(notes);
+  const hasLocator = /https?:\/\/|slack\.com|#[a-z0-9_-]+|\b(ticket|thread|case|owner|support)\b/i.test(notes);
+  return hasCommunicationLanguage && hasLocator;
 }
 
 async function readGroupAlerts(workspaceDir: string, group: GroupState): Promise<AlertFact[]> {

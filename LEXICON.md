@@ -67,6 +67,8 @@ Invariants:
 - `waiting` means the blocking issue has already been communicated to the owner
   who can act on it. The case must include evidence of that communication, such
   as a Slack message, customer note, ticket, PagerDuty note, or linked handoff.
+  Framework transitions enforce this from `evidence.jsonl` and `notes.md`;
+  generated `case.md` is only a view and must not be edited to satisfy the rule.
 - A group with evidence of an external blocker but no communication evidence is
   still `open`; the agent should report findings and prepare the message or
   escalation rather than marking it `waiting`.

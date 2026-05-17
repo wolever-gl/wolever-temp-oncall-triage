@@ -331,7 +331,9 @@ function usageText(): string {
   bun run oncall-triage sync-pd <workspace> [--incident <pd-url-or-id>]
   bun run oncall-triage preflight <workspace> [--filter group.state=<state>] [--filter group.id=<id>]
   bun run oncall-triage check-exports <workspace> [--apply] [--auto-resolve] [--filter group.id=<id>] [--filter alert.destination=<destination>] [--filter alert.incident=<id>] [--filter alert.org=<org_id>] [--filter alert.audience=<id>] [--filter alert.state=<state>] [--pizza-rows-file <file>] [--limit <n>]
-  bun run oncall-triage evidence <workspace> --group <id> --summary <text> [--kind <kind>] [--source <source>] [--link <label=url>] [--command <command>]`;
+  bun run oncall-triage evidence <workspace> --group <id> --summary <text> [--kind <kind>] [--source <source>] [--link <label=url>] [--command <command>]
+
+Waiting transitions require prior communication evidence in evidence.jsonl or notes.md. Use evidence --kind communication_thread/support_thread/slack_thread with a durable link before transition --state waiting.`;
 }
 
 main(process.argv.slice(2)).catch((err) => {

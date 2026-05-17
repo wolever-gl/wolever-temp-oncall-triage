@@ -9,7 +9,7 @@
 - Agents may write compact PagerDuty breadcrumbs, but they do not replace the raw import.
 - Group state is limited to `new`, `open`, `waiting`, `monitoring`, and `resolved`, with namespaced tags for finer detail.
 - Deterministic first-pass grouping creates `new` groups. A group becomes `open` once evidence collection or triage work starts, so the queue distinguishes "known but untouched" from "investigation started."
-- `waiting` requires durable evidence that the blocker has been communicated to the owning party; finding an external blocker is not enough by itself.
+- `waiting` requires durable evidence that the blocker has been communicated to the owning party; finding an external blocker is not enough by itself. Framework transitions enforce this from `evidence.jsonl` and `notes.md`, not generated `case.md`.
 - There is no scheduler in v2; future work is represented with `next_check_at`.
 - Runbooks are structured instructions that may include tool functions or scripts.
 - Agents are allowed to explore before choosing a runbook, then proceed to remediation or resolution.
