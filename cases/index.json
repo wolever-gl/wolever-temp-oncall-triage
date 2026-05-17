@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-17T16:37:18.075Z",
+  "generated_at": "2026-05-17T16:44:03.489Z",
   "open_count": 34,
   "groups": [
     {
@@ -186,11 +186,11 @@
       "state": "open",
       "tags": [
         "triage:needs_review",
-        "resolved:recovered",
-        "triage:needs_delta_recovery_evidence"
+        "triage:needs_delta_recovery_evidence",
+        "triage:destination_failures_remain"
       ],
       "title": "174 snapshotting-error",
-      "summary": "Reopened: do not resolve until snapshotting-delta-recovery is satisfied. Later Pizza success exists, but the case still needs scoped stage evidence proving no stranded delta files or missed delta window from the failed scheduled runs.",
+      "summary": "Runbook evidence gathered. Failed scheduled runs for audience 23746 died in pre_snapshotting_check on missing warehouse field LTDEVENTSREVENUE before any snapshot/delta/unload write stages. A later same export id webapp run completed the required snapshotting/delta/unload stages, but Pizza still shows 8 failures and 857 rejects, so this remains open for destination-failure review rather than resolved.",
       "incident_ids": [
         "Q20XI8KK8YWADB"
       ],
@@ -202,11 +202,11 @@
       "state": "open",
       "tags": [
         "triage:needs_review",
-        "resolved:recovered",
-        "triage:needs_recovery_evidence"
+        "triage:needs_recovery_evidence",
+        "triage:destination_failures_remain"
       ],
       "title": "174 zero-success",
-      "summary": "Reopened: later Pizza rows show export_finished, but preflight correctly did not auto-close because the later runs still had failed rows and the case lacks scoped evidence that the alert condition is safely recovered.",
+      "summary": "Zero-success condition recovered, but not cleanly enough to auto-close. Audience 36378 produced successful Marketing Cloud exports after the alert, including the alert-time webapp run and a later scheduled run, but both evidence and preflight show nonzero failed rows. Keep open for destination-failure review or an explicit policy decision that small row-level SFMC failures are acceptable for this alert type.",
       "incident_ids": [
         "Q20XI8KK8YWADB"
       ],

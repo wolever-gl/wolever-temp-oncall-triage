@@ -3,15 +3,15 @@
   "state": "open",
   "tags": [
     "triage:needs_review",
-    "resolved:recovered",
-    "triage:needs_recovery_evidence"
+    "triage:needs_recovery_evidence",
+    "triage:destination_failures_remain"
   ],
   "title": "174 zero-success",
-  "summary": "Reopened: later Pizza rows show export_finished, but preflight correctly did not auto-close because the later runs still had failed rows and the case lacks scoped evidence that the alert condition is safely recovered.",
+  "summary": "Zero-success condition recovered, but not cleanly enough to auto-close. Audience 36378 produced successful Marketing Cloud exports after the alert, including the alert-time webapp run and a later scheduled run, but both evidence and preflight show nonzero failed rows. Keep open for destination-failure review or an explicit policy decision that small row-level SFMC failures are acceptable for this alert type.",
   "deterministic_key": "v3|incident:Q20XI8KK8YWADB|org:174|class:zero-success",
   "grouping_version": 3,
   "created_at": "2026-05-16T00:38:01.850Z",
-  "updated_at": "2026-05-17T16:37:07.104Z",
+  "updated_at": "2026-05-17T16:43:03.993Z",
   "alert_refs": [
     {
       "incident_id": "Q20XI8KK8YWADB",
