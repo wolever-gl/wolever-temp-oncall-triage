@@ -45,14 +45,23 @@ Representative alerts:
 
 ## Export Checks
 
-- Checks: 11.
-- States: `blocked`=8, `monitoring`=3
+- Checks: 14.
+- States: `blocked`=10, `monitoring`=4
 - Blockers seen: `missing_export_after_alert`, `snapshotting_error_requires_review`
 
 Check evidence:
 - chk_q2ejwg22cer0la_q2n69vpqcmrhgl (Q2EJWG22CER0LA/Q2N69VPQCMRHGL): state=`blocked`.
   Scope: env=albertsons; org=6; audience=8473.
   Command: `glcli --env albertsons bifrost pizza --audience-id 8473 --org-id 6`
+  Blockers: `missing_export_after_alert`
+- chk_q2t09vcln9mrz8_q0gx8az1gwykl9 (Q2T09VCLN9MRZ8/Q0GX8AZ1GWYKL9): state=`blocked`.
+  Scope: env=albertsons; org=6; audience=10372.
+  Command: `glcli --env albertsons bifrost pizza --audience-id 10372 --org-id 6`
+  Blockers: `snapshotting_error_requires_review`
+  Run 10372-live_ramp_activation_2261-scheduled__2026-05-19T00:00:00+00:00: health=`blocked`; blockers=snapshotting_error_requires_review; created=2026-05-19T04:52:01.250831+00:00; snapshotting=snapshotting_error; export=no_batches; failed=0.
+- chk_q2t09vcln9mrz8_q0odpxtye0fork (Q2T09VCLN9MRZ8/Q0ODPXTYE0FORK): state=`blocked`.
+  Scope: env=albertsons; org=6; audience=10370.
+  Command: `glcli --env albertsons bifrost pizza --audience-id 10370 --org-id 6`
   Blockers: `missing_export_after_alert`
 - chk_q2t09vcln9mrz8_q14v88y9w3xati (Q2T09VCLN9MRZ8/Q14V88Y9W3XATI): state=`blocked`.
   Scope: env=albertsons; org=6; audience=10074; destination=live_ramp_activation.
@@ -78,11 +87,11 @@ Check evidence:
   Command: `glcli --env albertsons bifrost pizza --audience-id 10663 --org-id 6`
   Blockers: `snapshotting_error_requires_review`
   Run 10663-live_ramp_activation_2367-scheduled__2026-05-06T00:00:00+00:00: health=`blocked`; blockers=snapshotting_error_requires_review; created=2026-05-06T05:32:37.973456+00:00; snapshotting=snapshotting_error; export=no_batches; failed=0.
-- chk_q2t09vcln9mrz8_q24l2jiwvy4gis (Q2T09VCLN9MRZ8/Q24L2JIWVY4GIS): state=`blocked`.
+- chk_q2t09vcln9mrz8_q24l2jiwvy4gis (Q2T09VCLN9MRZ8/Q24L2JIWVY4GIS): state=`monitoring`, next_check_at=`2026-06-15T16:41:35.352Z`.
   Scope: env=albertsons; org=6; audience=2189.
   Command: `glcli --env albertsons bifrost pizza --audience-id 2189 --org-id 6`
-  Blockers: `missing_export_after_alert`
-- chk_q2t09vcln9mrz8_q2fa9qptxf9mjm (Q2T09VCLN9MRZ8/Q2FA9QPTXF9MJM): state=`monitoring`, next_check_at=`2026-05-18T20:36:12.917Z`.
+  Run 2189-live_ramp_activation_678-manual__2026-05-18T20:23:35+00:00: health=`monitoring`; created=2026-05-18T20:29:49.982482+00:00; snapshotting=snapshotting_processing; export=no_batches; failed=0.
+- chk_q2t09vcln9mrz8_q2fa9qptxf9mjm (Q2T09VCLN9MRZ8/Q2FA9QPTXF9MJM): state=`monitoring`, next_check_at=`2026-06-15T16:41:35.352Z`.
   Scope: env=albertsons; org=6; audience=2189; destination=live_ramp_activation.
   Checked runs: `2189-live_ramp_activation_678-scheduled__2026-05-05T00:00:00+00:00`
   Command: `glcli --env albertsons bifrost pizza --audience-id 2189 --org-id 6`
@@ -93,17 +102,7 @@ Check evidence:
   Command: `glcli --env albertsons bifrost pizza --audience-id 10749 --org-id 6`
   Blockers: `snapshotting_error_requires_review`
   Run 10749-live_ramp_activation_2412-scheduled__2026-05-05T00:00:00+00:00: health=`blocked`; blockers=snapshotting_error_requires_review; created=2026-05-05T06:16:10.782768+00:00; snapshotting=snapshotting_error; export=no_batches; failed=0.
-- chk_q2t09vcln9mrz8_q2tyr6xmvmlgtb (Q2T09VCLN9MRZ8/Q2TYR6XMVMLGTB): state=`monitoring`, next_check_at=`2026-05-18T20:36:12.917Z`.
-  Scope: env=albertsons; org=6; audience=10073; destination=live_ramp_activation.
-  Checked runs: `10073-live_ramp_activation_2061-scheduled__2026-05-08T00:00:00+00:00`
-  Command: `glcli --env albertsons bifrost pizza --audience-id 10073 --org-id 6`
-  Run 10073-live_ramp_activation_2061-scheduled__2026-05-08T00:00:00+00:00: health=`monitoring`; created=2026-05-08T00:22:09.764588+00:00; snapshotting=snapshotting_processing; export=no_batches; failed=0.
-- chk_q2t09vcln9mrz8_q3hgovlpiqwnz0 (Q2T09VCLN9MRZ8/Q3HGOVLPIQWNZ0): state=`monitoring`, next_check_at=`2026-05-18T20:36:12.917Z`.
-  Scope: env=albertsons; org=6; audience=8473; destination=live_ramp_activation.
-  Checked runs: `8473-live_ramp_activation_1649-scheduled__2026-05-06T00:00:00+00:00`
-  Command: `glcli --env albertsons bifrost pizza --audience-id 8473 --org-id 6`
-  Run 8473-live_ramp_activation_1649-scheduled__2026-05-06T00:00:00+00:00: health=`monitoring`; created=2026-05-06T01:51:06.242469+00:00; snapshotting=snapshotting_processing; export=no_batches; failed=0.
-- Showing 10 of 11 checks; see `indexes/checks.json` and `checks/*/check.json` for the full evidence set.
+- Showing 10 of 14 checks; see `indexes/checks.json` and `checks/*/check.json` for the full evidence set.
 
 ## Recent Evidence
 

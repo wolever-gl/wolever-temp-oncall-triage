@@ -29,17 +29,15 @@ Representative alerts:
 ## Export Checks
 
 - Checks: 1.
-- States: `blocked`=1
-- Blockers seen: `export_error`
+- States: `open`=1
+- Blockers seen: `evidence_unavailable`
 
 Check evidence:
-- chk_q12a5qfim3f9ln_q05ntdx4nq1hyu (Q12A5QFIM3F9LN/Q05NTDX4NQ1HYU): state=`blocked`.
+- chk_q12a5qfim3f9ln_q05ntdx4nq1hyu (Q12A5QFIM3F9LN/Q05NTDX4NQ1HYU): state=`open`, next_check_at=`2026-06-15T16:45:07.930Z`.
   Scope: env=prod; org=336; audience=36199; endpoint=app_adobe_experience_platform_2175; destination=adobe_experience_platform.
   Checked runs: `36199-adobe_experience_platform_22089-webapp__2026-05-08T13:13:49+00:00`, `36199-adobe_experience_platform_22089-webapp__2026-05-08T13:13:49+00:00`
   Command: `glcli --env prod bifrost pizza --audience-id 36199 --org-id 336`
-  Blockers: `export_error`, `export_error`
-  Run 36199-adobe_experience_platform_22089-webapp__2026-05-08T13:13:49+00:00: health=`blocked`; blockers=export_error; created=2026-05-11T17:09:28.265578+00:00; snapshotting=snapshotting_finished; export=export_error; failed=0.
-  Run 36199-adobe_experience_platform_22089-webapp__2026-05-08T13:13:49+00:00: health=`blocked`; blockers=export_error; created=2026-05-11T17:09:28.265578+00:00; snapshotting=snapshotting_finished; export=export_error; failed=0.
+  Blockers: `evidence_unavailable`
 
 ## Recent Evidence
 

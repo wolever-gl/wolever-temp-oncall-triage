@@ -1,33 +1,5 @@
 [
   {
-    "group_id": "260518-unknown_org-flywheel-prod-n-birchwood-n-main-daily-v-n-n-n-p",
-    "state": "new",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "unknown_org flywheel-prod-n-birchwood-n-main-daily-v-n-n-n-p",
-    "summary": "[flywheel-prod-328213] *birchwood_274_main_daily_v1.0.3:* pipeline failed! *Execution Time*: 2026-05-17 08:00:00+00:00 *Log Url*: https://6b1c82ba369c41068abf46769283471e-dot-us-central1.composer.googleusercontent.com/dags/birchwood_274_main_daily_v1.0.3/grid?dag_run_id=scheduled__2026-05-17T08%3A00%3A00%2B00%3A00&task_id=dbt_pipeline.dbt_build&base_date=2026-05-17T08%3A00%3A00%2B0000&tab=logs",
-    "incident_ids": [
-      "Q24RX6QMXPYKQR"
-    ],
-    "alert_count": 1,
-    "path": "groups/new/260518-unknown_org-flywheel-prod-n-birchwood-n-main-daily-v-n-n-n-p/case.md"
-  },
-  {
-    "group_id": "260518-unknown_org-insufficient-data-for-bifrost-queue-develop-sqs",
-    "state": "new",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "unknown_org insufficient-data-for-bifrost-queue-develop-sqs-",
-    "summary": "Insufficient data for bifrost_queue_develop_sqs_too_old_messages_bifrost_v2",
-    "incident_ids": [
-      "Q0OAGU4OVU9E01"
-    ],
-    "alert_count": 1,
-    "path": "groups/new/260518-unknown_org-insufficient-data-for-bifrost-queue-develop-sqs/case.md"
-  },
-  {
     "group_id": "260511-allegro_3-dv360-export-error",
     "state": "open",
     "tags": [
@@ -237,20 +209,6 @@
     "path": "groups/open/260515-3-client-sent-export-failure/case.md"
   },
   {
-    "group_id": "260515-378-client-sent-export-failure",
-    "state": "open",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "378 client-sent-export-failure",
-    "summary": "Cincinnati Reds (default) - Audience 34484: Audience Export failure for 34484 sent to client.",
-    "incident_ids": [
-      "Q33KFL1KESEMVC"
-    ],
-    "alert_count": 1,
-    "path": "groups/open/260515-378-client-sent-export-failure/case.md"
-  },
-  {
     "group_id": "260515-451-snapshotting-error",
     "state": "open",
     "tags": [
@@ -320,66 +278,6 @@
     ],
     "alert_count": 1,
     "path": "groups/open/260515-royals_4-snapshotting-error/case.md"
-  },
-  {
-    "group_id": "260518-albertsons_6-albertsons-6-client-sent-missing-export-after-alert",
-    "state": "open",
-    "tags": [
-      "triage:needs-evidence",
-      "triage:tag_grouped"
-    ],
-    "title": "albertsons_6 client sent missing export after alert",
-    "summary": "Albertsons client-sent export failure alerts where preflight found Pizza rows but no matching export after the alert.",
-    "incident_ids": [
-      "Q2CAIXK91KMVOP"
-    ],
-    "alert_count": 1,
-    "path": "groups/open/260518-albertsons_6-albertsons-6-client-sent-missing-export-after-alert/case.md"
-  },
-  {
-    "group_id": "260518-allegro_3-dv360-export-processing",
-    "state": "open",
-    "tags": [
-      "triage:needs_review",
-      "triage:blocked-env-unavailable"
-    ],
-    "title": "allegro_3 dv360 export-processing",
-    "summary": "Triage preflight attempted, but Allegro export checks were skipped because this laptop cannot access the Allegro Bifrost proxy. Manual triage needs an environment with Allegro access or non-Pizza evidence.",
-    "incident_ids": [
-      "Q2IX58AKEIP919"
-    ],
-    "alert_count": 1,
-    "path": "groups/open/260518-allegro_3-dv360-export-processing/case.md"
-  },
-  {
-    "group_id": "260518-allegro_3-facebook-export-error",
-    "state": "open",
-    "tags": [
-      "triage:needs_review",
-      "triage:blocked-env-unavailable"
-    ],
-    "title": "allegro_3 facebook export-error",
-    "summary": "Triage preflight attempted, but Allegro export checks were skipped because this laptop cannot access the Allegro Bifrost proxy. Manual triage needs an environment with Allegro access or non-Pizza evidence.",
-    "incident_ids": [
-      "Q29WSMU9ECGBC8"
-    ],
-    "alert_count": 1,
-    "path": "groups/open/260518-allegro_3-facebook-export-error/case.md"
-  },
-  {
-    "group_id": "260518-allegro_3-facebook-export-error-02",
-    "state": "open",
-    "tags": [
-      "triage:needs_review",
-      "triage:blocked-env-unavailable"
-    ],
-    "title": "allegro_3 facebook export-error",
-    "summary": "Triage preflight attempted, but Allegro export checks were skipped because this laptop cannot access the Allegro Bifrost proxy. Manual triage needs an environment with Allegro access or non-Pizza evidence.",
-    "incident_ids": [
-      "Q2HVIA79CPFWPS"
-    ],
-    "alert_count": 1,
-    "path": "groups/open/260518-allegro_3-facebook-export-error-02/case.md"
   },
   {
     "group_id": "260511-albertsons_6-albertsons-6-export-in-progress",
@@ -765,6 +663,21 @@
     "path": "groups/resolved/260514-trumanshow_336-no-batches/case.md"
   },
   {
+    "group_id": "260515-378-client-sent-export-failure",
+    "state": "resolved",
+    "tags": [
+      "triage:needs_review",
+      "resolved:export-healthy"
+    ],
+    "title": "378 client-sent-export-failure",
+    "summary": "Auto-resolved from Pizza export checks: all 1 alert-scoped export check(s) are healthy_closed with no blockers.",
+    "incident_ids": [
+      "Q33KFL1KESEMVC"
+    ],
+    "alert_count": 1,
+    "path": "groups/resolved/260515-378-client-sent-export-failure/case.md"
+  },
+  {
     "group_id": "260515-451-client-sent-export-failure",
     "state": "resolved",
     "tags": [
@@ -929,6 +842,100 @@
     ],
     "alert_count": 1,
     "path": "groups/resolved/260516-evgo_402-client-sent-export-failure/case.md"
+  },
+  {
+    "group_id": "260518-albertsons_6-albertsons-6-client-sent-missing-export-after-alert",
+    "state": "resolved",
+    "tags": [
+      "triage:needs-evidence",
+      "triage:tag_grouped",
+      "resolved:pd_closed_external"
+    ],
+    "title": "albertsons_6 client sent missing export after alert",
+    "summary": "All attached PagerDuty incidents are resolved externally.",
+    "incident_ids": [
+      "Q2CAIXK91KMVOP"
+    ],
+    "alert_count": 1,
+    "path": "groups/resolved/260518-albertsons_6-albertsons-6-client-sent-missing-export-after-alert/case.md"
+  },
+  {
+    "group_id": "260518-allegro_3-dv360-export-processing",
+    "state": "resolved",
+    "tags": [
+      "triage:needs_review",
+      "triage:blocked-env-unavailable",
+      "resolved:pd_closed_external"
+    ],
+    "title": "allegro_3 dv360 export-processing",
+    "summary": "All attached PagerDuty incidents are resolved externally.",
+    "incident_ids": [
+      "Q2IX58AKEIP919"
+    ],
+    "alert_count": 1,
+    "path": "groups/resolved/260518-allegro_3-dv360-export-processing/case.md"
+  },
+  {
+    "group_id": "260518-allegro_3-facebook-export-error",
+    "state": "resolved",
+    "tags": [
+      "triage:needs_review",
+      "triage:blocked-env-unavailable",
+      "resolved:pd_closed_external"
+    ],
+    "title": "allegro_3 facebook export-error",
+    "summary": "All attached PagerDuty incidents are resolved externally.",
+    "incident_ids": [
+      "Q29WSMU9ECGBC8"
+    ],
+    "alert_count": 1,
+    "path": "groups/resolved/260518-allegro_3-facebook-export-error/case.md"
+  },
+  {
+    "group_id": "260518-allegro_3-facebook-export-error-02",
+    "state": "resolved",
+    "tags": [
+      "triage:needs_review",
+      "triage:blocked-env-unavailable",
+      "resolved:pd_closed_external"
+    ],
+    "title": "allegro_3 facebook export-error",
+    "summary": "All attached PagerDuty incidents are resolved externally.",
+    "incident_ids": [
+      "Q2HVIA79CPFWPS"
+    ],
+    "alert_count": 1,
+    "path": "groups/resolved/260518-allegro_3-facebook-export-error-02/case.md"
+  },
+  {
+    "group_id": "260518-unknown_org-flywheel-prod-n-birchwood-n-main-daily-v-n-n-n-p",
+    "state": "resolved",
+    "tags": [
+      "triage:needs_review",
+      "resolved:pd_closed_external"
+    ],
+    "title": "unknown_org flywheel-prod-n-birchwood-n-main-daily-v-n-n-n-p",
+    "summary": "All attached PagerDuty incidents are resolved externally.",
+    "incident_ids": [
+      "Q24RX6QMXPYKQR"
+    ],
+    "alert_count": 1,
+    "path": "groups/resolved/260518-unknown_org-flywheel-prod-n-birchwood-n-main-daily-v-n-n-n-p/case.md"
+  },
+  {
+    "group_id": "260518-unknown_org-insufficient-data-for-bifrost-queue-develop-sqs",
+    "state": "resolved",
+    "tags": [
+      "triage:needs_review",
+      "resolved:pd_closed_external"
+    ],
+    "title": "unknown_org insufficient-data-for-bifrost-queue-develop-sqs-",
+    "summary": "All attached PagerDuty incidents are resolved externally.",
+    "incident_ids": [
+      "Q0OAGU4OVU9E01"
+    ],
+    "alert_count": 1,
+    "path": "groups/resolved/260518-unknown_org-insufficient-data-for-bifrost-queue-develop-sqs/case.md"
   },
   {
     "group_id": "grp_260513_451_client_sent_export_failure_split_0069",

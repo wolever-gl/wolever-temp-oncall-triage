@@ -1,0 +1,27 @@
+{
+  "group_id": "260518-albertsons_6-albertsons-6-client-sent-missing-export-after-alert",
+  "state": "resolved",
+  "tags": [
+    "triage:needs-evidence",
+    "triage:tag_grouped",
+    "resolved:pd_closed_external"
+  ],
+  "title": "albertsons_6 client sent missing export after alert",
+  "summary": "All attached PagerDuty incidents are resolved externally.",
+  "deterministic_key": "tag|260518-albertsons_6-albertsons-6-client-sent-missing-export-after-alert",
+  "grouping_version": 3,
+  "created_at": "2026-05-18T22:10:02.192Z",
+  "updated_at": "2026-06-15T16:19:13.969Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q2CAIXK91KMVOP",
+      "alert_id": "Q03J7N55FWQB24"
+    }
+  ],
+  "incident_ids": [
+    "Q2CAIXK91KMVOP"
+  ],
+  "related_group_ids": [
+    "260518-albertsons_6-client-sent-export-failure"
+  ]
+}

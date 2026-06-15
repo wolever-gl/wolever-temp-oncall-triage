@@ -33,7 +33,7 @@ Representative alerts:
 ## Export Checks
 
 - Checks: 4.
-- States: `blocked`=4
+- States: `blocked`=3, `healthy_closed`=1
 - Blockers seen: `export_error`, `failed_export_count`, `missing_export_after_alert`
 
 Check evidence:
@@ -53,11 +53,10 @@ Check evidence:
   Command: `glcli --env prod bifrost pizza --audience-id 981 --org-id 451`
   Blockers: `failed_export_count`, `export_error`
   Run 981-campaign_manager_360_object_981-scheduled__2026-05-13T00:00:00+00:00: health=`blocked`; blockers=failed_export_count, export_error; created=2026-05-14T00:01:10.649180+00:00; snapshotting=snapshotting_finished; export=export_error; failed=1893.
-- chk_q3xqabqfppvnt5_q0xf5ryj4egxjz (Q3XQABQFPPVNT5/Q0XF5RYJ4EGXJZ): state=`blocked`.
+- chk_q3xqabqfppvnt5_q0xf5ryj4egxjz (Q3XQABQFPPVNT5/Q0XF5RYJ4EGXJZ): state=`healthy_closed`.
   Scope: env=prod; org=451; audience=981.
   Command: `glcli --env prod bifrost pizza --audience-id 981 --org-id 451`
-  Blockers: `failed_export_count`, `export_error`
-  Run 981-campaign_manager_360_object_981-scheduled__2026-05-16T00:00:00+00:00: health=`blocked`; blockers=failed_export_count, export_error; created=2026-05-17T00:01:49.876651+00:00; snapshotting=snapshotting_finished; export=export_error; failed=1235.
+  Run 981-campaign_manager_360_object_981-scheduled__2026-06-14T00:00:00+00:00: health=`healthy`; created=2026-06-15T00:02:57.790390+00:00; snapshotting=snapshotting_finished_no_deltas; export=no_batches; failed=0.
 
 ## Recent Evidence
 

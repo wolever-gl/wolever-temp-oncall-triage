@@ -47,12 +47,12 @@ Representative alerts:
 - Blockers seen: `evidence_unavailable`
 
 Check evidence:
-- chk_q3hynv525mk1rw_q02ktnbyr73t4z (Q3HYNV525MK1RW/Q02KTNBYR73T4Z): state=`open`, next_check_at=`2026-05-16T20:55:58.231Z`.
+- chk_q3hynv525mk1rw_q02ktnbyr73t4z (Q3HYNV525MK1RW/Q02KTNBYR73T4Z): state=`open`, next_check_at=`2026-06-15T16:35:14.275Z`.
   Scope: env=allegro; org=3; audience=82; endpoint=app_dv360_1; destination=dv360.
   Checked runs: `82-dv360_161-scheduled__2026-05-02T00:00:00+00:00`, `82-dv360_161-scheduled__2026-05-03T00:00:00+00:00`, `82-dv360_161-scheduled__2026-05-04T00:00:00+00:00`, `82-dv360_161-scheduled__2026-05-05T00:00:00+00:00`, and 6 more
   Command: `glcli --env allegro bifrost pizza --audience-id 82 --org-id 3`
   Blockers: `evidence_unavailable`
-- chk_q3hynv525mk1rw_q1cx75rdla3zw2 (Q3HYNV525MK1RW/Q1CX75RDLA3ZW2): state=`open`, next_check_at=`2026-05-16T20:55:58.231Z`.
+- chk_q3hynv525mk1rw_q1cx75rdla3zw2 (Q3HYNV525MK1RW/Q1CX75RDLA3ZW2): state=`open`, next_check_at=`2026-06-15T16:35:14.275Z`.
   Scope: env=allegro; org=3; audience=84; endpoint=app_dv360_1; destination=dv360.
   Checked runs: `84-dv360_165-scheduled__2026-05-02T00:00:00+00:00`, `84-dv360_165-scheduled__2026-05-03T00:00:00+00:00`, `84-dv360_165-scheduled__2026-05-04T00:00:00+00:00`, `84-dv360_165-scheduled__2026-05-05T00:00:00+00:00`, and 6 more
   Command: `glcli --env allegro bifrost pizza --audience-id 84 --org-id 3`
@@ -62,17 +62,17 @@ Check evidence:
   Checked runs: `64-dv360_122-scheduled__2026-05-02T00:00:00+00:00`, `64-dv360_122-scheduled__2026-05-03T00:00:00+00:00`, `64-dv360_122-scheduled__2026-05-04T00:00:00+00:00`, `64-dv360_122-scheduled__2026-05-05T00:00:00+00:00`, and 6 more
   Command: `glcli --env allegro bifrost pizza --audience-id 64 --org-id 3`
   Blockers: `evidence_unavailable`
-- chk_q3hynv525mk1rw_q2lkzvledh0zac (Q3HYNV525MK1RW/Q2LKZVLEDH0ZAC): state=`open`, next_check_at=`2026-05-16T20:55:58.231Z`.
+- chk_q3hynv525mk1rw_q2lkzvledh0zac (Q3HYNV525MK1RW/Q2LKZVLEDH0ZAC): state=`open`, next_check_at=`2026-06-15T16:35:14.275Z`.
   Scope: env=allegro; org=3; audience=731; endpoint=app_dv360_1; destination=dv360.
   Checked runs: `731-dv360_1679-webapp__2026-05-05T13:28:32+00:00`
   Command: `glcli --env allegro bifrost pizza --audience-id 731 --org-id 3`
   Blockers: `evidence_unavailable`
-- chk_q3hynv525mk1rw_q2nsjaqibggo06 (Q3HYNV525MK1RW/Q2NSJAQIBGGO06): state=`open`, next_check_at=`2026-05-16T20:55:58.231Z`.
+- chk_q3hynv525mk1rw_q2nsjaqibggo06 (Q3HYNV525MK1RW/Q2NSJAQIBGGO06): state=`open`, next_check_at=`2026-06-15T16:35:14.275Z`.
   Scope: env=allegro; org=3; audience=83; endpoint=app_dv360_1; destination=dv360.
   Checked runs: `83-dv360_163-scheduled__2026-05-02T00:00:00+00:00`, `83-dv360_163-scheduled__2026-05-03T00:00:00+00:00`, `83-dv360_163-scheduled__2026-05-04T00:00:00+00:00`, `83-dv360_163-scheduled__2026-05-05T00:00:00+00:00`, and 6 more
   Command: `glcli --env allegro bifrost pizza --audience-id 83 --org-id 3`
   Blockers: `evidence_unavailable`
-- chk_q3hynv525mk1rw_q2vixxegdi3cdn (Q3HYNV525MK1RW/Q2VIXXEGDI3CDN): state=`open`, next_check_at=`2026-05-16T20:55:58.231Z`.
+- chk_q3hynv525mk1rw_q2vixxegdi3cdn (Q3HYNV525MK1RW/Q2VIXXEGDI3CDN): state=`open`, next_check_at=`2026-06-15T16:35:14.275Z`.
   Scope: env=allegro; org=3; audience=85; endpoint=app_dv360_1; destination=dv360.
   Checked runs: `85-dv360_167-scheduled__2026-05-02T00:00:00+00:00`, `85-dv360_167-scheduled__2026-05-03T00:00:00+00:00`, `85-dv360_167-scheduled__2026-05-04T00:00:00+00:00`, `85-dv360_167-scheduled__2026-05-05T00:00:00+00:00`, and 6 more
   Command: `glcli --env allegro bifrost pizza --audience-id 85 --org-id 3`
@@ -82,7 +82,7 @@ Check evidence:
   Checked runs: `79-dv360_155-scheduled__2026-05-02T00:00:00+00:00`, `79-dv360_155-scheduled__2026-05-03T00:00:00+00:00`, `79-dv360_155-scheduled__2026-05-04T00:00:00+00:00`, `79-dv360_155-scheduled__2026-05-05T00:00:00+00:00`, and 6 more
   Command: `glcli --env allegro bifrost pizza --audience-id 79 --org-id 3`
   Blockers: `evidence_unavailable`
-- chk_q3hynv525mk1rw_q3xs5z1467iiot (Q3HYNV525MK1RW/Q3XS5Z1467IIOT): state=`open`, next_check_at=`2026-05-16T20:55:58.231Z`.
+- chk_q3hynv525mk1rw_q3xs5z1467iiot (Q3HYNV525MK1RW/Q3XS5Z1467IIOT): state=`open`, next_check_at=`2026-06-15T16:35:14.275Z`.
   Scope: env=allegro; org=3; audience=81; endpoint=app_dv360_1; destination=dv360.
   Checked runs: `81-dv360_159-scheduled__2026-05-02T00:00:00+00:00`, `81-dv360_159-scheduled__2026-05-03T00:00:00+00:00`, `81-dv360_159-scheduled__2026-05-04T00:00:00+00:00`, `81-dv360_159-scheduled__2026-05-05T00:00:00+00:00`, and 6 more
   Command: `glcli --env allegro bifrost pizza --audience-id 81 --org-id 3`

@@ -40,21 +40,21 @@ Representative alerts:
 
 - Checks: 6.
 - States: `blocked`=6
-- Blockers seen: `snapshotting_error_requires_review`
+- Blockers seen: `missing_pizza_row`, `snapshotting_error_requires_review`
 
 Check evidence:
 - chk_q1uc14qnzk76ez_q0bblwstoj1die (Q1UC14QNZK76EZ/Q0BBLWSTOJ1DIE): state=`blocked`.
   Scope: env=prod; org=451; audience=24855; destination=facebook.
   Checked runs: `24855-facebook_18293-scheduled__2026-05-15T00:00:00+00:00`
   Command: `glcli --env prod bifrost pizza --audience-id 24855 --org-id 451`
-  Blockers: `snapshotting_error_requires_review`
-  Run 24855-facebook_18293-scheduled__2026-05-15T00:00:00+00:00: health=`blocked`; blockers=snapshotting_error_requires_review; created=2026-05-15T00:40:31.488722+00:00; snapshotting=snapshotting_error; export=no_batches; failed=0.
+  Blockers: `missing_pizza_row`
+  Run 24855-facebook_18293-scheduled__2026-05-15T00:00:00+00:00: health=`missing`; blockers=missing_pizza_row.
 - chk_q1uc14qnzk76ez_q102pd4gx1c4a2 (Q1UC14QNZK76EZ/Q102PD4GX1C4A2): state=`blocked`.
   Scope: env=prod; org=451; audience=25885; destination=google_adwords.
   Checked runs: `25885-google_adwords_16088-scheduled__2026-05-15T00:00:00+00:00`, `25885-microsoft_ads_16087-scheduled__2026-05-15T00:00:00+00:00`
   Command: `glcli --env prod bifrost pizza --audience-id 25885 --org-id 451`
-  Blockers: `snapshotting_error_requires_review`
-  Run 25885-google_adwords_16088-scheduled__2026-05-15T00:00:00+00:00: health=`blocked`; blockers=snapshotting_error_requires_review; created=2026-05-15T00:55:09.967241+00:00; snapshotting=snapshotting_error; export=no_batches; failed=0.
+  Blockers: `missing_pizza_row`
+  Run 25885-google_adwords_16088-scheduled__2026-05-15T00:00:00+00:00: health=`missing`; blockers=missing_pizza_row.
 - chk_q1uc14qnzk76ez_q13ewj3twg2u5c (Q1UC14QNZK76EZ/Q13EWJ3TWG2U5C): state=`blocked`.
   Scope: env=prod; org=451; audience=25147; destination=marketing_cloud.
   Checked runs: `25147-marketing_cloud_15450-scheduled__2026-05-15T00:00:00+00:00`
@@ -65,20 +65,20 @@ Check evidence:
   Scope: env=prod; org=451; audience=26037; destination=reddit_ads.
   Checked runs: `26037-reddit_ads_16102-scheduled__2026-05-15T00:00:00+00:00`, `26037-linkedin_ads_16093-scheduled__2026-05-15T00:00:00+00:00`, `26037-microsoft_ads_16084-scheduled__2026-05-15T00:00:00+00:00`, `26037-google_adwords_18971-scheduled__2026-05-15T00:00:00+00:00`, and 3 more
   Command: `glcli --env prod bifrost pizza --audience-id 26037 --org-id 451`
-  Blockers: `snapshotting_error_requires_review`
-  Run 26037-reddit_ads_16102-scheduled__2026-05-15T00:00:00+00:00: health=`blocked`; blockers=snapshotting_error_requires_review; created=2026-05-15T00:56:46.532436+00:00; snapshotting=snapshotting_error; export=no_batches; failed=0.
+  Blockers: `missing_pizza_row`
+  Run 26037-reddit_ads_16102-scheduled__2026-05-15T00:00:00+00:00: health=`missing`; blockers=missing_pizza_row.
 - chk_q1uc14qnzk76ez_q2vj695tkn2fpf (Q1UC14QNZK76EZ/Q2VJ695TKN2FPF): state=`blocked`.
   Scope: env=prod; org=451; audience=26039; destination=viant.
   Checked runs: `26039-viant_16920-scheduled__2026-05-15T00:00:00+00:00`, `26039-google_adwords_18977-scheduled__2026-05-15T00:00:00+00:00`
   Command: `glcli --env prod bifrost pizza --audience-id 26039 --org-id 451`
-  Blockers: `snapshotting_error_requires_review`
-  Run 26039-viant_16920-scheduled__2026-05-15T00:00:00+00:00: health=`blocked`; blockers=snapshotting_error_requires_review; created=2026-05-15T01:00:26.957613+00:00; snapshotting=snapshotting_error; export=no_batches; failed=0.
+  Blockers: `missing_pizza_row`
+  Run 26039-viant_16920-scheduled__2026-05-15T00:00:00+00:00: health=`missing`; blockers=missing_pizza_row.
 - chk_q1uc14qnzk76ez_q3qyqwzlehzn1l (Q1UC14QNZK76EZ/Q3QYQWZLEHZN1L): state=`blocked`.
   Scope: env=prod; org=451; audience=25884; destination=reddit_ads.
   Checked runs: `25884-reddit_ads_16101-scheduled__2026-05-15T00:00:00+00:00`
   Command: `glcli --env prod bifrost pizza --audience-id 25884 --org-id 451`
-  Blockers: `snapshotting_error_requires_review`
-  Run 25884-reddit_ads_16101-scheduled__2026-05-15T00:00:00+00:00: health=`blocked`; blockers=snapshotting_error_requires_review; created=2026-05-15T00:51:15.643440+00:00; snapshotting=snapshotting_error; export=no_batches; failed=0.
+  Blockers: `missing_pizza_row`
+  Run 25884-reddit_ads_16101-scheduled__2026-05-15T00:00:00+00:00: health=`missing`; blockers=missing_pizza_row.
 
 ## Next Action
 

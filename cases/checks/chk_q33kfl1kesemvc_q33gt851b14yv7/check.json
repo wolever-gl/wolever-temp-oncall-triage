@@ -3,7 +3,7 @@
   "source": "pagerduty",
   "incident_id": "Q33KFL1KESEMVC",
   "alert_id": "Q33GT851B14YV7",
-  "state": "blocked",
+  "state": "healthy_closed",
   "scope": {
     "env": "prod",
     "org_id": "378",
@@ -16,57 +16,64 @@
   "scope_key": "prod|378|34484|unknown_destination|unknown_endpoint|unknown_run",
   "run_evaluations": [
     {
-      "export_run_id": "34484-iterable_21078-scheduled__2026-05-17T00:00:00+00:00",
-      "health": "blocked",
+      "export_run_id": "34484-iterable_21078-scheduled__2026-06-15T00:00:00+00:00",
+      "health": "healthy",
       "match_basis": "any_export_after_alert",
-      "blockers": [
-        "snapshotting_error_requires_review"
-      ],
+      "blockers": [],
       "selected_row": {
-        "export_run_id": "34484-iterable_21078-scheduled__2026-05-17T00:00:00+00:00",
+        "export_run_id": "34484-iterable_21078-scheduled__2026-06-15T00:00:00+00:00",
         "audience_id": "34484",
+        "endpoint_id": "app_iterable_806",
         "destination_type": "iterable",
-        "created_at": "2026-05-17T00:25:11.743119+00:00",
-        "snapshotting_state": "snapshotting_error",
-        "export_state": "no_batches",
+        "created_at": "2026-06-15T00:25:27.922686+00:00",
+        "snapshotting_state": "snapshotting_finished",
+        "export_state": "export_finished",
         "failed_export_count": 0,
         "raw": {
-          "export_state": "no_batches",
-          "successful_add_count": 0,
+          "export_state": "export_finished",
+          "successful_add_count": 30,
           "successful_remove_count": 0,
           "failed_export_count": 0,
-          "rejected_row_count": 0,
-          "total_row_count": 0,
+          "rejected_row_count": 29,
+          "total_row_count": 59,
           "successful_expanded_add_count": 0,
           "successful_expanded_remove_count": 0,
           "failed_expanded_export_count": 0,
-          "rejected_expanded_row_count": 0,
-          "total_expanded_row_count": 0,
+          "rejected_expanded_row_count": 29,
+          "total_expanded_row_count": 59,
           "enhanced_match_count": 0,
           "enhanced_row_count": 0,
           "enhanced_total_records": 0,
-          "total_batch_count": 0,
-          "completed_batch_count": 0,
-          "successful_batch_count": 0,
+          "total_batch_count": 1,
+          "completed_batch_count": 1,
+          "successful_batch_count": 1,
           "failed_batch_count": 0,
-          "failure_reason": "base_table_not_empty_check_failed",
+          "failure_reason": null,
           "info": {
+            "internal_export_id": "34484-iterable_21078-scheduled__2026-06-15T00:00:00+00:00-20260615002429",
+            "export_run_id": "34484-iterable_21078-scheduled__2026-06-15T00:00:00+00:00",
+            "audience_id": "9423343",
             "internal_audience_id": "34484",
-            "export_run_id": "34484-iterable_21078-scheduled__2026-05-17T00:00:00+00:00",
-            "export_timestamp": "2026-05-17 00:25:11",
-            "created_at": "2026-05-17T00:25:11.743119+00:00"
+            "audience_name": "Consumer Club Birthday Journey Audience ",
+            "organization_id": "378",
+            "organization_name": "cincinnatireds",
+            "platform": "iterable",
+            "endpoint_id": "app_iterable_806",
+            "export_timestamp": "2026-06-15 00:25:25",
+            "error_file_uri": "gs://flywheel-prod-328213-temporary/batch_errors/fbae7ddc-e7b9-4be5-8e27-0714c2cec5a5.csv",
+            "created_at": "2026-06-15T00:25:27.922686+00:00",
+            "export_complete_response": null
           },
-          "snapshotting_state": "snapshotting_error"
+          "snapshotting_state": "snapshotting_finished"
         }
       }
     }
   ],
-  "blockers": [
-    "snapshotting_error_requires_review"
-  ],
+  "blockers": [],
   "evidence_artifacts": [
     "pizza_fetch_error:Unable to connect. Is the computer able to access the url?"
   ],
   "created_at": "2026-05-16T16:37:29.744Z",
-  "updated_at": "2026-05-17T16:19:45.142Z"
+  "updated_at": "2026-06-15T16:24:06.543Z",
+  "closed_at": "2026-06-15T16:24:06.543Z"
 }

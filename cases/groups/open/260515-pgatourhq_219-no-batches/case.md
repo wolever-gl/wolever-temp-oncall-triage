@@ -49,7 +49,7 @@ Representative alerts:
 
 - Checks: 13.
 - States: `blocked`=1, `healthy_closed`=12
-- Blockers seen: `export_error`, `failed_export_count`
+- Blockers seen: `export_error`, `failed_export_count`, `missing_pizza_row`
 
 Check evidence:
 - chk_q2djcy3xc2bsbg_q02703iiw4po6c (Q2DJCY3XC2BSBG/Q02703IIW4PO6C): state=`healthy_closed`.
@@ -106,11 +106,11 @@ Check evidence:
   Scope: env=prod; org=219; audience=31357; destination=facebook.
   Checked runs: `31357-facebook_19080-scheduled__2026-04-11T00:00:00+00:00`, `31357-facebook_19080-scheduled__2026-04-12T00:00:00+00:00`, `31357-facebook_19080-scheduled__2026-04-13T00:00:00+00:00`, `31357-facebook_19080-scheduled__2026-04-14T00:00:00+00:00`, and 13 more
   Command: `glcli --env prod bifrost pizza --audience-id 31357 --org-id 219`
-  Blockers: `failed_export_count`, `export_error`, `failed_export_count`, `export_error`
-  Run 31357-facebook_19080-scheduled__2026-04-11T00:00:00+00:00: health=`healthy`; created=2026-04-11T00:39:42.050626+00:00; snapshotting=snapshotting_finished_no_deltas; export=no_batches; failed=0.
-  Run 31357-facebook_19080-scheduled__2026-04-12T00:00:00+00:00: health=`healthy`; created=2026-04-12T00:34:51.188067+00:00; snapshotting=snapshotting_finished_no_deltas; export=no_batches; failed=0.
-  Run 31357-facebook_19080-scheduled__2026-04-13T00:00:00+00:00: health=`healthy`; created=2026-04-13T00:27:02.831786+00:00; snapshotting=snapshotting_finished_no_deltas; export=no_batches; failed=0.
-  Run 31357-facebook_19080-scheduled__2026-04-14T00:00:00+00:00: health=`healthy`; created=2026-04-14T00:29:08.576390+00:00; snapshotting=snapshotting_finished_no_deltas; export=no_batches; failed=0.
+  Blockers: `missing_pizza_row`, `missing_pizza_row`, `missing_pizza_row`, `missing_pizza_row`, `missing_pizza_row`, `missing_pizza_row`, `missing_pizza_row`, `missing_pizza_row`, and 4 more
+  Run 31357-facebook_19080-scheduled__2026-04-11T00:00:00+00:00: health=`missing`; blockers=missing_pizza_row.
+  Run 31357-facebook_19080-scheduled__2026-04-12T00:00:00+00:00: health=`missing`; blockers=missing_pizza_row.
+  Run 31357-facebook_19080-scheduled__2026-04-13T00:00:00+00:00: health=`missing`; blockers=missing_pizza_row.
+  Run 31357-facebook_19080-scheduled__2026-04-14T00:00:00+00:00: health=`missing`; blockers=missing_pizza_row.
   Showing 4 of 15 run evaluations.
 - chk_q2djcy3xc2bsbg_q2jqjtb6t3okca (Q2DJCY3XC2BSBG/Q2JQJTB6T3OKCA): state=`healthy_closed`.
   Scope: env=prod; org=219; audience=31360; destination=facebook.

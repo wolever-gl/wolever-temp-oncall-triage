@@ -1,0 +1,2 @@
+{"ts":"2026-05-16T16:36:53.567Z","actor":"oncall-triage","decision":"created_group","rationale":"Conservative deterministic grouping created a new group for v3|incident:Q33KFL1KESEMVC|org:378|class:client-sent-export-failure."}
+{"ts":"2026-06-15T16:24:10.067Z","actor":"check-exports","decision":"transitioned_to_resolved","rationale":"Auto-resolved from Pizza export checks: all 1 alert-scoped export check(s) are healthy_closed with no blockers."}

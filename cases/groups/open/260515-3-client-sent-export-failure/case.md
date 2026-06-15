@@ -32,7 +32,7 @@ Representative alerts:
 - Blockers seen: `evidence_unavailable`
 
 Check evidence:
-- chk_q15fi03xbq4ow5_q28o1dlldev7da (Q15FI03XBQ4OW5/Q28O1DLLDEV7DA): state=`open`, next_check_at=`2026-05-17T16:34:20.206Z`.
+- chk_q15fi03xbq4ow5_q28o1dlldev7da (Q15FI03XBQ4OW5/Q28O1DLLDEV7DA): state=`open`, next_check_at=`2026-06-15T16:38:36.151Z`.
   Scope: env=costco; org=3; audience=5689.
   Command: `glcli --env costco bifrost pizza --audience-id 5689 --org-id 3`
   Blockers: `evidence_unavailable`

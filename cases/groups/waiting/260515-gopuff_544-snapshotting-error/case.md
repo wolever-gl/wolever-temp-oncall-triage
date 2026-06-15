@@ -26,6 +26,19 @@ Representative alerts:
 - Q1X9CE7BIDK9MV/Q2FR98BS698HII: 2026-05-15T08:23:25-07:00; gopuff_544; audience 36168; facebook; snapshotting_error/no_batches. gopuff (default): Exports for audience 36168 failed with states: <(snapshotting_error,no_batches)>
   Runs: `36168-facebook_22063-scheduled__2026-05-15T00:00:00+00:00`
 
+## Export Checks
+
+- Checks: 1.
+- States: `open`=1
+- Blockers seen: `evidence_unavailable`
+
+Check evidence:
+- chk_q1x9ce7bidk9mv_q2fr98bs698hii (Q1X9CE7BIDK9MV/Q2FR98BS698HII): state=`open`, next_check_at=`2026-06-15T16:46:10.463Z`.
+  Scope: env=prod; org=544; audience=36168; destination=facebook.
+  Checked runs: `36168-facebook_22063-scheduled__2026-05-15T00:00:00+00:00`
+  Command: `glcli --env prod bifrost pizza --audience-id 36168 --org-id 544`
+  Blockers: `evidence_unavailable`
+
 ## Recent Evidence
 
 - Client support follow-up started for missing source schema field CORE.GOPUFF_ORDER_ITEMS.CLASS; waiting on support/client remediation.

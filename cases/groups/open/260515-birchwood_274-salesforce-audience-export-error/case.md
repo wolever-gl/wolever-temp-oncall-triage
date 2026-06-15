@@ -30,15 +30,14 @@ Representative alerts:
 ## Export Checks
 
 - Checks: 2.
-- States: `blocked`=2
+- States: `blocked`=1, `healthy_closed`=1
 - Blockers seen: `export_error`, `failed_export_count`
 
 Check evidence:
-- chk_q3pj7w2k3y9ljv_q0s5d7l5pk1nbx (Q3PJ7W2K3Y9LJV/Q0S5D7L5PK1NBX): state=`blocked`.
+- chk_q3pj7w2k3y9ljv_q0s5d7l5pk1nbx (Q3PJ7W2K3Y9LJV/Q0S5D7L5PK1NBX): state=`healthy_closed`.
   Scope: env=prod; org=274; audience=723.
   Command: `glcli --env prod bifrost pizza --audience-id 723 --org-id 274`
-  Blockers: `failed_export_count`
-  Run 723-salesforce_audience_object_723-scheduled__2026-05-16T00:00:00+00:00: health=`blocked`; blockers=failed_export_count; created=2026-05-17T00:05:29.033464+00:00; snapshotting=snapshotting_finished; export=export_finished; failed=2628.
+  Run 723-salesforce_audience_object_723-scheduled__2026-05-31T00:00:00+00:00: health=`healthy`; created=2026-06-01T00:04:19.794491+00:00; snapshotting=snapshotting_finished_no_deltas; export=no_batches; failed=0.
 - chk_q3pj7w2k3y9ljv_q15x94n0mbravv (Q3PJ7W2K3Y9LJV/Q15X94N0MBRAVV): state=`blocked`.
   Scope: env=prod; org=274; audience=723; endpoint=app_salesforce_audience_1406; destination=salesforce_audience_object.
   Checked runs: `723-salesforce_audience_object_723-scheduled__2026-05-14T00:00:00+00:00`

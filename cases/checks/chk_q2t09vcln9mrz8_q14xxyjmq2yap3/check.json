@@ -9,6 +9,8 @@
     "org_id": "6",
     "audience_id": "10372",
     "destination_type": "live_ramp_activation",
+    "match_strategy": "checked_export_run_ids",
+    "alert_created_at": "2026-05-11T07:36:14-07:00",
     "checked_export_run_ids": [
       "10372-live_ramp_activation_2261-scheduled__2026-05-05T00:00:00+00:00"
     ],
@@ -67,5 +69,5 @@
   ],
   "evidence_artifacts": [],
   "created_at": "2026-05-16T01:35:43.498Z",
-  "updated_at": "2026-05-16T21:34:59.617Z"
+  "updated_at": "2026-06-15T16:26:35.352Z"
 }

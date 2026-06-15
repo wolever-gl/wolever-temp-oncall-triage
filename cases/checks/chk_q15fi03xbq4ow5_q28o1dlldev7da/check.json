@@ -21,9 +21,10 @@
   "evidence_artifacts": [
     "pizza_fetch_error:Unable to connect. Is the computer able to access the url?",
     "pizza_fetch_error:Unable to connect. Is the computer able to access the url?",
+    "pizza_fetch_error:Unable to connect. Is the computer able to access the url?",
     "pizza_fetch_error:Unable to connect. Is the computer able to access the url?"
   ],
   "created_at": "2026-05-16T16:37:45.724Z",
-  "updated_at": "2026-05-17T16:19:20.206Z",
-  "next_check_at": "2026-05-17T16:34:20.206Z"
+  "updated_at": "2026-06-15T16:23:36.151Z",
+  "next_check_at": "2026-06-15T16:38:36.151Z"
 }

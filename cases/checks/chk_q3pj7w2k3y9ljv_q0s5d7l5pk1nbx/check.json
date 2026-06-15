@@ -3,7 +3,7 @@
   "source": "pagerduty",
   "incident_id": "Q3PJ7W2K3Y9LJV",
   "alert_id": "Q0S5D7L5PK1NBX",
-  "state": "blocked",
+  "state": "healthy_closed",
   "scope": {
     "env": "prod",
     "org_id": "274",
@@ -16,67 +16,54 @@
   "scope_key": "prod|274|723|unknown_destination|unknown_endpoint|unknown_run",
   "run_evaluations": [
     {
-      "export_run_id": "723-salesforce_audience_object_723-scheduled__2026-05-16T00:00:00+00:00",
-      "health": "blocked",
+      "export_run_id": "723-salesforce_audience_object_723-scheduled__2026-05-31T00:00:00+00:00",
+      "health": "healthy",
       "match_basis": "any_export_after_alert",
-      "blockers": [
-        "failed_export_count"
-      ],
+      "blockers": [],
       "selected_row": {
-        "export_run_id": "723-salesforce_audience_object_723-scheduled__2026-05-16T00:00:00+00:00",
+        "export_run_id": "723-salesforce_audience_object_723-scheduled__2026-05-31T00:00:00+00:00",
         "audience_id": "723",
-        "endpoint_id": "app_salesforce_audience_1406",
         "destination_type": "salesforce_audience_object",
-        "created_at": "2026-05-17T00:05:29.033464+00:00",
-        "snapshotting_state": "snapshotting_finished",
-        "export_state": "export_finished",
-        "failed_export_count": 2628,
+        "created_at": "2026-06-01T00:04:19.794491+00:00",
+        "snapshotting_state": "snapshotting_finished_no_deltas",
+        "export_state": "no_batches",
+        "failed_export_count": 0,
         "raw": {
-          "export_state": "export_finished",
-          "successful_add_count": 544,
+          "export_state": "no_batches",
+          "successful_add_count": 0,
           "successful_remove_count": 0,
-          "failed_export_count": 2628,
+          "failed_export_count": 0,
           "rejected_row_count": 0,
-          "total_row_count": 3172,
+          "total_row_count": 0,
           "successful_expanded_add_count": 0,
           "successful_expanded_remove_count": 0,
           "failed_expanded_export_count": 0,
           "rejected_expanded_row_count": 0,
-          "total_expanded_row_count": 3172,
+          "total_expanded_row_count": 0,
           "enhanced_match_count": 0,
           "enhanced_row_count": 0,
           "enhanced_total_records": 0,
-          "total_batch_count": 1,
-          "completed_batch_count": 1,
-          "successful_batch_count": 1,
+          "total_batch_count": 0,
+          "completed_batch_count": 0,
+          "successful_batch_count": 0,
           "failed_batch_count": 0,
           "failure_reason": null,
           "info": {
-            "internal_export_id": "723-salesforce_audience_object_723-scheduled__2026-05-16T00:00:00+00:00-20260517000214",
-            "export_run_id": "723-salesforce_audience_object_723-scheduled__2026-05-16T00:00:00+00:00",
-            "audience_id": null,
             "internal_audience_id": "723",
-            "audience_name": "",
-            "organization_id": "274",
-            "organization_name": "birchwood",
-            "platform": "salesforce_audience_object",
-            "endpoint_id": "app_salesforce_audience_1406",
-            "export_timestamp": "2026-05-17 00:04:55",
-            "error_file_uri": "gs://flywheel-prod-328213-temporary/batch_errors/76dadd03-6efe-4acc-8f38-c7645a0048df.csv",
-            "created_at": "2026-05-17T00:05:29.033464+00:00",
-            "export_complete_response": null
+            "export_run_id": "723-salesforce_audience_object_723-scheduled__2026-05-31T00:00:00+00:00",
+            "export_timestamp": "2026-06-01 00:04:19",
+            "created_at": "2026-06-01T00:04:19.794491+00:00"
           },
-          "snapshotting_state": "snapshotting_finished"
+          "snapshotting_state": "snapshotting_finished_no_deltas"
         }
       }
     }
   ],
-  "blockers": [
-    "failed_export_count"
-  ],
+  "blockers": [],
   "evidence_artifacts": [
     "pizza_fetch_error:Unable to connect. Is the computer able to access the url?"
   ],
   "created_at": "2026-05-16T20:47:27.956Z",
-  "updated_at": "2026-05-17T16:20:10.954Z"
+  "updated_at": "2026-06-15T16:24:22.953Z",
+  "closed_at": "2026-06-15T16:24:22.953Z"
 }

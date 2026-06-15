@@ -1,17 +1,10 @@
 # On-call Triage Cases
 
-Generated: 2026-05-18T22:53:26.946Z
-Open groups: 34
+Generated: 2026-06-15T16:31:49.834Z
+Open groups: 27
 Alert facts: 704
 
-## New (2)
-
-| Tags | Group | Summary | Incidents | Alerts |
-|---|---|---|---|---:|
-| `triage:needs_review` | [260518-unknown_org-flywheel-prod-n-birchwood-n-main-daily-v-n-n-n-p](groups/new/260518-unknown_org-flywheel-prod-n-birchwood-n-main-daily-v-n-n-n-p/case.md) | [flywheel-prod-328213] *birchwood_274_main_daily_v1.0.3:* pipeline failed! *Execution Time*: 2026-05-17 08:00:00+00:00 *Log Url*: https://6b1c82ba369c41068abf46769283471e-dot-us-central1.composer.googleusercontent.com/dags/birchwood_274_main_daily_v1.0.3/grid?dag_run_id=scheduled__2026-05-17T08%3A00%3A00%2B00%3A00&task_id=dbt_pipeline.dbt_build&base_date=2026-05-17T08%3A00%3A00%2B0000&tab=logs | Q24RX6QMXPYKQR | 1 |
-| `triage:needs_review` | [260518-unknown_org-insufficient-data-for-bifrost-queue-develop-sqs](groups/new/260518-unknown_org-insufficient-data-for-bifrost-queue-develop-sqs/case.md) | Insufficient data for bifrost_queue_develop_sqs_too_old_messages_bifrost_v2 | Q0OAGU4OVU9E01 | 1 |
-
-## Open (24)
+## Open (19)
 
 | Tags | Group | Summary | Incidents | Alerts |
 |---|---|---|---|---:|
@@ -29,16 +22,11 @@ Alert facts: 704
 | `triage:needs_review`<br>`triage:needs_delta_recovery_evidence`<br>`triage:destination_failures_remain` | [260515-174-snapshotting-error](groups/open/260515-174-snapshotting-error/case.md) | Runbook evidence gathered. Failed scheduled runs for audience 23746 died in pre_snapshotting_check on missing warehouse field LTDEVENTSREVENUE before any snapshot/delta/unload write stages. A later same export id webapp run completed the required snapshotting/delta/unload stages, but Pizza still shows 8 failures and 857 rejects, so this remains open for destination-failure review rather than resolved. | Q20XI8KK8YWADB | 1 |
 | `triage:needs_review`<br>`triage:needs_recovery_evidence`<br>`triage:destination_failures_remain` | [260515-174-zero-success](groups/open/260515-174-zero-success/case.md) | Zero-success condition recovered, but not cleanly enough to auto-close. Audience 36378 produced successful Marketing Cloud exports after the alert, including the alert-time webapp run and a later scheduled run, but both evidence and preflight show nonzero failed rows. Keep open for destination-failure review or an explicit policy decision that small row-level SFMC failures are acceptable for this alert type. | Q20XI8KK8YWADB | 1 |
 | `triage:needs_review` | [260515-3-client-sent-export-failure](groups/open/260515-3-client-sent-export-failure/case.md) | Costco Non Prod (default) - Audience 5689: Audience Export failure for 5689 sent to client. | Q15FI03XBQ4OW5 | 1 |
-| `triage:needs_review` | [260515-378-client-sent-export-failure](groups/open/260515-378-client-sent-export-failure/case.md) | Cincinnati Reds (default) - Audience 34484: Audience Export failure for 34484 sent to client. | Q33KFL1KESEMVC | 1 |
 | `triage:needs_review` | [260515-451-snapshotting-error](groups/open/260515-451-snapshotting-error/case.md) | ASU Enterprise Partners (Alumni): Exports for audience 26039 failed with states: <(snapshotting_error,no_batches)> | Q1UC14QNZK76EZ | 6 |
 | `triage:needs_review`<br>`triage:blocked-env-unavailable` | [260515-allegro_3-dv360-export-processing](groups/open/260515-allegro_3-dv360-export-processing/case.md) | Triage preflight attempted, but Allegro export checks were skipped because this laptop cannot access the Allegro Bifrost proxy. Manual triage needs an environment with Allegro access or non-Pizza evidence. | Q3GQQRY1UQLBSN | 1 |
 | `triage:needs_review` | [260515-birchwood_274-salesforce-audience-export-error](groups/open/260515-birchwood_274-salesforce-audience-export-error/case.md) | birchwood (default): Exports for signal 723 failed with states: <(snapshotting_finished,export_error)> | Q3PJ7W2K3Y9LJV | 2 |
 | `triage:needs_review` | [260515-pgatourhq_219-no-batches](groups/open/260515-pgatourhq_219-no-batches/case.md) | pgatourhq (New World Order): Exports for audience 31918 failed with states: <(snapshotting_finished,no_batches)> | Q2DJCY3XC2BSBG | 13 |
 | `triage:needs_review` | [260515-royals_4-snapshotting-error](groups/open/260515-royals_4-snapshotting-error/case.md) | royals (default): Exports for signal 203 failed with states: <(snapshotting_error,no_batches)> | Q08B553ANQ9KMI | 1 |
-| `triage:needs-evidence`<br>`triage:tag_grouped` | [260518-albertsons_6-albertsons-6-client-sent-missing-export-after-alert](groups/open/260518-albertsons_6-albertsons-6-client-sent-missing-export-after-alert/case.md) | Albertsons client-sent export failure alerts where preflight found Pizza rows but no matching export after the alert. | Q2CAIXK91KMVOP | 1 |
-| `triage:needs_review`<br>`triage:blocked-env-unavailable` | [260518-allegro_3-dv360-export-processing](groups/open/260518-allegro_3-dv360-export-processing/case.md) | Triage preflight attempted, but Allegro export checks were skipped because this laptop cannot access the Allegro Bifrost proxy. Manual triage needs an environment with Allegro access or non-Pizza evidence. | Q2IX58AKEIP919 | 1 |
-| `triage:needs_review`<br>`triage:blocked-env-unavailable` | [260518-allegro_3-facebook-export-error](groups/open/260518-allegro_3-facebook-export-error/case.md) | Triage preflight attempted, but Allegro export checks were skipped because this laptop cannot access the Allegro Bifrost proxy. Manual triage needs an environment with Allegro access or non-Pizza evidence. | Q29WSMU9ECGBC8 | 1 |
-| `triage:needs_review`<br>`triage:blocked-env-unavailable` | [260518-allegro_3-facebook-export-error-02](groups/open/260518-allegro_3-facebook-export-error-02/case.md) | Triage preflight attempted, but Allegro export checks were skipped because this laptop cannot access the Allegro Bifrost proxy. Manual triage needs an environment with Allegro access or non-Pizza evidence. | Q2HVIA79CPFWPS | 1 |
 
 ## Monitoring (2)
 
@@ -58,7 +46,7 @@ Alert facts: 704
 | `triage:needs_review`<br>`waiting:source-schema` | [260515-378-snapshotting-error](groups/waiting/260515-378-snapshotting-error/case.md) | Waiting on source/schema remediation for Cincinnati Reds SignalRoute 891: latest Pizza run still fails snapshot_history_write_up with a non-retryable BigQuery column type mismatch (source tickets_status INT64 into snapshot history tickets_status STRING); no later healthy export exists. | Q1QD2CX8MRAYBW | 2 |
 | `triage:needs_review`<br>`triage:client_schema_missing`<br>`waiting:client_schema` | [260515-gopuff_544-snapshotting-error](groups/waiting/260515-gopuff_544-snapshotting-error/case.md) | Waiting on support/client remediation for missing source column CORE.GOPUFF_ORDER_ITEMS.CLASS in GoPuff Snowflake source schema; support thread opened. | Q1X9CE7BIDK9MV | 1 |
 
-## Resolved (32)
+## Resolved (39)
 
 | Tags | Group | Summary | Incidents | Alerts |
 |---|---|---|---|---:|
@@ -78,6 +66,7 @@ Alert facts: 704
 | `triage:needs_review`<br>`triage:no-batches-zero-rows`<br>`resolved:export-healthy` | [260514-ford_310-client-sent-export-failure-02](groups/resolved/260514-ford_310-client-sent-export-failure-02/case.md) | Auto-resolved from Pizza export checks: all 1 alert-scoped export check(s) are healthy_closed with no blockers. | Q3HWKW0FS3VTHE | 1 |
 | `triage:needs_review`<br>`triage:customer_bq_permission`<br>`resolved:internal-test-account` | [260514-growthloop_268-client-sent-export-failure](groups/resolved/260514-growthloop_268-client-sent-export-failure/case.md) | Resolved: this is a GrowthLoop internal test account/audience, so it is not customer-impacting and does not need external follow-up. | Q3PW7IHI1KCDWS | 1 |
 | `triage:needs_review`<br>`resolved:export-healthy` | [260514-trumanshow_336-no-batches](groups/resolved/260514-trumanshow_336-no-batches/case.md) | Auto-resolved from Pizza export checks: all 2 alert-scoped export check(s) are healthy_closed with no blockers. | Q12A5QFIM3F9LN | 2 |
+| `triage:needs_review`<br>`resolved:export-healthy` | [260515-378-client-sent-export-failure](groups/resolved/260515-378-client-sent-export-failure/case.md) | Auto-resolved from Pizza export checks: all 1 alert-scoped export check(s) are healthy_closed with no blockers. | Q33KFL1KESEMVC | 1 |
 | `triage:needs_review`<br>`resolved:merged` | [260515-451-client-sent-export-failure](groups/resolved/260515-451-client-sent-export-failure/case.md) | Merged into 260514-451-campaign-manager-360-export-error: SignalRoute 995 client-sent alert is another ASU CM360 endpoint app_campaign_manager_360_2130 failure in the same client/config family as the waiting SignalRoute 981 CM360 case; latest logs show StandardCM360Service NOT_FOUND/INVALID_ARGUMENT for the same Floodlight config/activity family, so track remediation with the existing ASU CM360 waiting case. | Q31XLLHUNNMAK9 | 1 |
 | `triage:needs_review`<br>`resolved:pd_closed_external` | [260515-76ers_131-zero-success](groups/resolved/260515-76ers_131-zero-success/case.md) | All attached PagerDuty incidents are resolved externally. | Q0Z4MMEOFYDHC7 | 1 |
 | `triage:needs_review`<br>`resolved:export-healthy` | [260515-chghealthcare_395-marketing-cloud-export-error](groups/resolved/260515-chghealthcare_395-marketing-cloud-export-error/case.md) | Auto-resolved from Pizza export checks: all 1 alert-scoped export check(s) are healthy_closed with no blockers. | Q29I2IVNNVK80X | 1 |
@@ -89,6 +78,12 @@ Alert facts: 704
 | `triage:needs_review`<br>`resolved:export-healthy` | [260515-priceline_370-tik-tok-export-processing](groups/resolved/260515-priceline_370-tik-tok-export-processing/case.md) | Auto-resolved from Pizza export checks: all 1 alert-scoped export check(s) are healthy_closed with no blockers. | Q0X2D8TR82ZQV9 | 1 |
 | `triage:needs_review`<br>`resolved:pd_closed_external` | [260515-whirlpool_525-no-batches](groups/resolved/260515-whirlpool_525-no-batches/case.md) | All attached PagerDuty incidents are resolved externally. | Q3WZUE4915S6J4 | 2 |
 | `triage:needs_review`<br>`resolved:retry_succeeded` | [260516-evgo_402-client-sent-export-failure](groups/resolved/260516-evgo_402-client-sent-export-failure/case.md) | Resolved as retry/false alarm: failed Braze run 29790-braze_18238-scheduled__2026-05-16T14:00:00+00:00 hit transient Snowflake connector response-ended-prematurely during snapshotting, but later same-scope scheduled runs at 15:00 and 16:00 UTC completed export_finished with zero failures/rejects. | Q22U9UI0BTFNJC | 1 |
+| `triage:needs-evidence`<br>`triage:tag_grouped`<br>`resolved:pd_closed_external` | [260518-albertsons_6-albertsons-6-client-sent-missing-export-after-alert](groups/resolved/260518-albertsons_6-albertsons-6-client-sent-missing-export-after-alert/case.md) | All attached PagerDuty incidents are resolved externally. | Q2CAIXK91KMVOP | 1 |
+| `triage:needs_review`<br>`triage:blocked-env-unavailable`<br>`resolved:pd_closed_external` | [260518-allegro_3-dv360-export-processing](groups/resolved/260518-allegro_3-dv360-export-processing/case.md) | All attached PagerDuty incidents are resolved externally. | Q2IX58AKEIP919 | 1 |
+| `triage:needs_review`<br>`triage:blocked-env-unavailable`<br>`resolved:pd_closed_external` | [260518-allegro_3-facebook-export-error](groups/resolved/260518-allegro_3-facebook-export-error/case.md) | All attached PagerDuty incidents are resolved externally. | Q29WSMU9ECGBC8 | 1 |
+| `triage:needs_review`<br>`triage:blocked-env-unavailable`<br>`resolved:pd_closed_external` | [260518-allegro_3-facebook-export-error-02](groups/resolved/260518-allegro_3-facebook-export-error-02/case.md) | All attached PagerDuty incidents are resolved externally. | Q2HVIA79CPFWPS | 1 |
+| `triage:needs_review`<br>`resolved:pd_closed_external` | [260518-unknown_org-flywheel-prod-n-birchwood-n-main-daily-v-n-n-n-p](groups/resolved/260518-unknown_org-flywheel-prod-n-birchwood-n-main-daily-v-n-n-n-p/case.md) | All attached PagerDuty incidents are resolved externally. | Q24RX6QMXPYKQR | 1 |
+| `triage:needs_review`<br>`resolved:pd_closed_external` | [260518-unknown_org-insufficient-data-for-bifrost-queue-develop-sqs](groups/resolved/260518-unknown_org-insufficient-data-for-bifrost-queue-develop-sqs/case.md) | All attached PagerDuty incidents are resolved externally. | Q0OAGU4OVU9E01 | 1 |
 | `triage:needs_review`<br>`evidence:retry-succeeded` | [grp_260513_451_client_sent_export_failure_split_0069](groups/resolved/grp_260513_451_client_sent_export_failure_split_0069/case.md) | Resolved: ASU SignalRoute 984 has a later Campaign Manager 360 export_finished run after the client-sent alert. | Q3XQABQFPPVNT5 | 1 |
 | `triage:needs_review`<br>`resolved:merged` | [grp_260513_451_client_sent_export_failure_split_0070](groups/resolved/grp_260513_451_client_sent_export_failure_split_0070/case.md) | Merged into 260514-451-campaign-manager-360-export-error: SignalRoute 981 client-sent alert is the notification counterpart of the Campaign Manager 360 export-error case; latest Pizza still shows 981 export_error. | Q3XQABQFPPVNT5 | 1 |
 | `triage:needs_review`<br>`evidence:retry-succeeded` | [grp_260513_ford_310_no_batches_split_0072](groups/resolved/grp_260513_ford_310_no_batches_split_0072/case.md) | Resolved: Ford audience 34010 reddit_ads had a failed-count alert on 2026-05-13, but later 2026-05-14 through 2026-05-16 runs succeeded with zero failures. | Q1TJJ4MEVOF1W3 | 1 |

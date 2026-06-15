@@ -32,8 +32,8 @@ Representative alerts:
 ## Export Checks
 
 - Checks: 4.
-- States: `blocked`=3, `healthy_closed`=1
-- Blockers seen: `export_error`, `failed_export_count`
+- States: `blocked`=1, `healthy_closed`=2, `open`=1
+- Blockers seen: `evidence_unavailable`, `export_error`, `failed_export_count`
 
 Check evidence:
 - chk_q3xqabqfppvnt5_q07jgzi66746xa (Q3XQABQFPPVNT5/Q07JGZI66746XA): state=`blocked`.
@@ -42,20 +42,18 @@ Check evidence:
   Command: `glcli --env prod bifrost pizza --audience-id 31982 --org-id 451`
   Blockers: `failed_export_count`, `export_error`
   Run 31982-salesforce_audience_21336-scheduled__2026-05-14T00:00:00+00:00: health=`blocked`; blockers=failed_export_count, export_error; created=2026-05-14T01:11:00.672570+00:00; snapshotting=snapshotting_finished; export=export_error; failed=32.
-- chk_q3xqabqfppvnt5_q0xf5ryj4egxjz (Q3XQABQFPPVNT5/Q0XF5RYJ4EGXJZ): state=`blocked`.
+- chk_q3xqabqfppvnt5_q0xf5ryj4egxjz (Q3XQABQFPPVNT5/Q0XF5RYJ4EGXJZ): state=`healthy_closed`.
   Scope: env=prod; org=451; audience=981.
   Command: `glcli --env prod bifrost pizza --audience-id 981 --org-id 451`
-  Blockers: `failed_export_count`, `export_error`
-  Run 981-campaign_manager_360_object_981-scheduled__2026-05-16T00:00:00+00:00: health=`blocked`; blockers=failed_export_count, export_error; created=2026-05-17T00:01:49.876651+00:00; snapshotting=snapshotting_finished; export=export_error; failed=1235.
+  Run 981-campaign_manager_360_object_981-scheduled__2026-06-14T00:00:00+00:00: health=`healthy`; created=2026-06-15T00:02:57.790390+00:00; snapshotting=snapshotting_finished_no_deltas; export=no_batches; failed=0.
 - chk_q3xqabqfppvnt5_q1x4zb5gqbrsu1 (Q3XQABQFPPVNT5/Q1X4ZB5GQBRSU1): state=`healthy_closed`.
   Scope: env=prod; org=451; audience=984.
   Command: `glcli --env prod bifrost pizza --audience-id 984 --org-id 451`
   Run 984-campaign_manager_360_object_984-scheduled__2026-05-15T00:00:00+00:00: health=`healthy`; created=2026-05-16T00:02:18.543254+00:00; snapshotting=snapshotting_finished; export=export_finished; failed=0.
-- chk_q3xqabqfppvnt5_q20r8okeqnmttk (Q3XQABQFPPVNT5/Q20R8OKEQNMTTK): state=`blocked`.
+- chk_q3xqabqfppvnt5_q20r8okeqnmttk (Q3XQABQFPPVNT5/Q20R8OKEQNMTTK): state=`open`, next_check_at=`2026-06-15T16:41:59.827Z`.
   Scope: env=prod; org=451; audience=31982.
   Command: `glcli --env prod bifrost pizza --audience-id 31982 --org-id 451`
-  Blockers: `failed_export_count`, `export_error`
-  Run 31982-salesforce_audience_21336-scheduled__2026-05-17T00:00:00+00:00: health=`blocked`; blockers=failed_export_count, export_error; created=2026-05-17T01:18:17.480327+00:00; snapshotting=snapshotting_finished; export=export_error; failed=48.
+  Blockers: `evidence_unavailable`
 
 ## Recent Evidence
 

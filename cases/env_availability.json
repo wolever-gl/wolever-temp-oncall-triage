@@ -7,10 +7,22 @@
       "source": "operator"
     },
     "allegro": {
-      "status": "available",
-      "reason": "VPN enabled; retry Pizza/export preflight checks.",
-      "updated_at": "2026-05-18",
-      "source": "operator"
+      "status": "unavailable",
+      "reason": "Bifrost proxy started but Pizza /v1/exports requests failed with connectivity errors during 2026-06-15 open-case preflight.",
+      "updated_at": "2026-06-15",
+      "source": "preflight"
+    },
+    "costco": {
+      "status": "unavailable",
+      "reason": "Bifrost proxy started but Pizza /v1/exports requests failed with connectivity errors during 2026-06-15 open-case preflight.",
+      "updated_at": "2026-06-15",
+      "source": "preflight"
+    },
+    "royals": {
+      "status": "unavailable",
+      "reason": "Bifrost proxy started but Pizza /v1/exports requests failed with connectivity errors during 2026-06-15 open-case preflight.",
+      "updated_at": "2026-06-15",
+      "source": "preflight"
     }
   }
 }

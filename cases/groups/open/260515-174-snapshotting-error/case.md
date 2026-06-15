@@ -29,15 +29,17 @@ Representative alerts:
 ## Export Checks
 
 - Checks: 1.
-- States: `open`=1
-- Blockers seen: `evidence_unavailable`
+- States: `blocked`=1
+- Blockers seen: `snapshotting_error_requires_review`
 
 Check evidence:
-- chk_q20xi8kk8ywadb_q34fugoiwl0yyv (Q20XI8KK8YWADB/Q34FUGOIWL0YYV): state=`open`, next_check_at=`2026-05-17T16:57:03.034Z`.
+- chk_q20xi8kk8ywadb_q34fugoiwl0yyv (Q20XI8KK8YWADB/Q34FUGOIWL0YYV): state=`blocked`.
   Scope: env=prod; org=174; audience=23746; destination=marketing_cloud.
   Checked runs: `23746-marketing_cloud_14765-scheduled__2026-05-06T00:00:00+00:00`, `23746-marketing_cloud_14765-scheduled__2026-05-13T00:00:00+00:00`
   Command: `glcli --env prod bifrost pizza --audience-id 23746 --org-id 174`
-  Blockers: `evidence_unavailable`
+  Blockers: `snapshotting_error_requires_review`, `snapshotting_error_requires_review`
+  Run 23746-marketing_cloud_14765-scheduled__2026-05-06T00:00:00+00:00: health=`blocked`; blockers=snapshotting_error_requires_review; created=2026-05-06T00:16:39.410494+00:00; snapshotting=snapshotting_error; export=no_batches; failed=0.
+  Run 23746-marketing_cloud_14765-scheduled__2026-05-13T00:00:00+00:00: health=`blocked`; blockers=snapshotting_error_requires_review; created=2026-05-13T00:16:05.954540+00:00; snapshotting=snapshotting_error; export=no_batches; failed=0.
 
 ## Recent Evidence
 

@@ -1,0 +1,1 @@
+{"ts":"2026-06-15T16:19:16.265Z","kind":"pd_sync","source":"pagerduty","summary":"All attached PagerDuty incidents are resolved externally. Attached incidents: Q2IX58AKEIP919.","data":{"resolved_incidents":["Q2IX58AKEIP919"],"incident_statuses":[{"incident_id":"Q2IX58AKEIP919","status":"resolved","resolved_at":"2026-05-27T15:57:00Z"}]}}

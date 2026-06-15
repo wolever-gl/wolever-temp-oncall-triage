@@ -30,23 +30,19 @@ Representative alerts:
 ## Export Checks
 
 - Checks: 2.
-- States: `blocked`=2
-- Blockers seen: `snapshotting_error_requires_review`
+- States: `open`=2
+- Blockers seen: `evidence_unavailable`
 
 Check evidence:
-- chk_q1qd2cx8mraybw_q08txnt2toyp3q (Q1QD2CX8MRAYBW/Q08TXNT2TOYP3Q): state=`blocked`.
+- chk_q1qd2cx8mraybw_q08txnt2toyp3q (Q1QD2CX8MRAYBW/Q08TXNT2TOYP3Q): state=`open`, next_check_at=`2026-06-15T16:45:29.153Z`.
   Scope: env=prod; org=378; audience=891; destination=dynamics_object.
   Checked runs: `891-dynamics_object_891-scheduled__2026-05-15T12:00:00+00:00`, `891-dynamics_object_891-scheduled__2026-05-15T13:00:00+00:00`, `891-dynamics_object_891-scheduled__2026-05-15T14:00:00+00:00`
   Command: `glcli --env prod bifrost pizza --audience-id 891 --org-id 378`
-  Blockers: `snapshotting_error_requires_review`, `snapshotting_error_requires_review`, `snapshotting_error_requires_review`
-  Run 891-dynamics_object_891-scheduled__2026-05-15T12:00:00+00:00: health=`blocked`; blockers=snapshotting_error_requires_review; created=2026-05-15T13:01:27.047005+00:00; snapshotting=snapshotting_error; export=no_batches; failed=0.
-  Run 891-dynamics_object_891-scheduled__2026-05-15T13:00:00+00:00: health=`blocked`; blockers=snapshotting_error_requires_review; created=2026-05-15T14:02:02.411761+00:00; snapshotting=snapshotting_error; export=no_batches; failed=0.
-  Run 891-dynamics_object_891-scheduled__2026-05-15T14:00:00+00:00: health=`blocked`; blockers=snapshotting_error_requires_review; created=2026-05-15T15:01:24.740215+00:00; snapshotting=snapshotting_error; export=no_batches; failed=0.
-- chk_q1qd2cx8mraybw_q3as52wt001fd8 (Q1QD2CX8MRAYBW/Q3AS52WT001FD8): state=`blocked`.
+  Blockers: `evidence_unavailable`
+- chk_q1qd2cx8mraybw_q3as52wt001fd8 (Q1QD2CX8MRAYBW/Q3AS52WT001FD8): state=`open`, next_check_at=`2026-06-15T16:45:29.153Z`.
   Scope: env=prod; org=378; audience=891.
   Command: `glcli --env prod bifrost pizza --audience-id 891 --org-id 378`
-  Blockers: `snapshotting_error_requires_review`
-  Run 891-dynamics_object_891-scheduled__2026-05-16T22:00:00+00:00: health=`blocked`; blockers=snapshotting_error_requires_review; created=2026-05-16T23:01:35.303004+00:00; snapshotting=snapshotting_error; export=no_batches; failed=0.
+  Blockers: `evidence_unavailable`
 
 ## Recent Evidence
 
