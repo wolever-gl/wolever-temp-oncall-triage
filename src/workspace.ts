@@ -5,8 +5,8 @@ import { execFile } from "node:child_process";
 import { promisify } from "node:util";
 import { tmpdir } from "node:os";
 import { appendJsonl, ensureDir, listDirs, readJson, relativePath, slug, writeJson } from "./fsutil";
-import { fetchPagerDutyIncidentStatus, loadAlertFacts, parseAlertFacts } from "./pagerduty";
-import { filterAlertFacts } from "./filters";
+import { fetchPagerDutyIncidentAlerts, fetchPagerDutyIncidentStatus, loadAlertFacts, parseAlertFacts, resolvePagerDutyIncidentAlerts, type PagerDutyAlertStatusRecord } from "./pagerduty";
+import { filterAlertFacts, matchesGroupFilter, type GroupFilter } from "./filters";
 import type {
   ActionEvent,
   AlertAnnotation,
@@ -163,6 +163,90 @@ export async function syncPagerDutyWorkspace(options: {
 
   await regenerateIndex(options.workspaceDir);
   return { imported, refreshed, resolved_groups };
+}
+
+export interface ClosePagerDutyAlertsResult {
+  apply: boolean;
+  selected_groups: string[];
+  resolved_only_refs: Array<AlertRef & { group_ids: string[] }>;
+  already_resolved: Array<AlertRef & { status: PagerDutyIncidentStatus }>;
+  missing: AlertRef[];
+  to_resolve: Array<AlertRef & { status: PagerDutyIncidentStatus; group_ids: string[] }>;
+  resolved: AlertRef[];
+}
+
+export async function closePagerDutyAlertsForResolvedGroups(options: {
+  workspaceDir: string;
+  groupFilter?: GroupFilter;
+  apply?: boolean;
+  fetchIncidentAlerts?: (incident: string) => Promise<PagerDutyAlertStatusRecord[]>;
+  resolveIncidentAlerts?: (incident: string, alertIds: string[]) => Promise<void>;
+}): Promise<ClosePagerDutyAlertsResult> {
+  const allGroups = await loadAllGroups(options.workspaceDir);
+  const selectedGroups = allGroups
+    .filter((group) => matchesCloseGroupFilter(group, options.groupFilter))
+    .filter((group) => group.state === "resolved")
+    .sort((a, b) => a.group_id.localeCompare(b.group_id));
+  const selectedGroupIds = selectedGroups.map((group) => group.group_id);
+  const nonResolvedRefKeys = new Set<string>();
+  const resolvedRefs = new Map<string, AlertRef & { group_ids: string[] }>();
+
+  for (const group of allGroups) {
+    for (const ref of group.alert_refs) {
+      const key = refKey(ref);
+      if (group.state === "resolved" && selectedGroupIds.includes(group.group_id)) {
+        const existing = resolvedRefs.get(key) ?? { ...ref, group_ids: [] };
+        existing.group_ids.push(group.group_id);
+        resolvedRefs.set(key, existing);
+      } else if (group.state !== "resolved") {
+        nonResolvedRefKeys.add(key);
+      }
+    }
+  }
+
+  const resolved_only_refs = [...resolvedRefs.values()]
+    .filter((ref) => !nonResolvedRefKeys.has(refKey(ref)))
+    .sort(compareRefs);
+  const fetchIncidentAlerts = options.fetchIncidentAlerts ?? fetchPagerDutyIncidentAlerts;
+  const resolveIncidentAlerts = options.resolveIncidentAlerts ?? resolvePagerDutyIncidentAlerts;
+  const already_resolved: ClosePagerDutyAlertsResult["already_resolved"] = [];
+  const missing: AlertRef[] = [];
+  const to_resolve: ClosePagerDutyAlertsResult["to_resolve"] = [];
+
+  for (const [incidentId, refs] of refsByIncident(resolved_only_refs)) {
+    const alerts = await fetchIncidentAlerts(incidentId);
+    const alertsById = new Map(alerts.map((alert) => [alert.id, alert]));
+    for (const ref of refs) {
+      const alert = alertsById.get(ref.alert_id);
+      if (!alert) {
+        missing.push({ incident_id: ref.incident_id, alert_id: ref.alert_id });
+        continue;
+      }
+      if (isResolvedIncident(alert.status)) {
+        already_resolved.push({ incident_id: ref.incident_id, alert_id: ref.alert_id, status: alert.status });
+        continue;
+      }
+      to_resolve.push({ ...ref, status: alert.status });
+    }
+  }
+
+  const resolved: AlertRef[] = [];
+  if (options.apply) {
+    for (const [incidentId, refs] of refsByIncident(to_resolve)) {
+      await resolveIncidentAlerts(incidentId, refs.map((ref) => ref.alert_id));
+      resolved.push(...refs.map((ref) => ({ incident_id: ref.incident_id, alert_id: ref.alert_id })));
+    }
+  }
+
+  return {
+    apply: Boolean(options.apply),
+    selected_groups: selectedGroupIds,
+    resolved_only_refs,
+    already_resolved: already_resolved.sort(compareRefs),
+    missing: missing.sort(compareRefs),
+    to_resolve: to_resolve.sort(compareRefs),
+    resolved: resolved.sort(compareRefs),
+  };
 }
 
 export async function groupImportedAlerts(workspaceDir: string): Promise<{ created: number; attached: number; groups: string[] }> {
@@ -730,6 +814,24 @@ function destinationFromRun(runId: string | undefined): string | undefined {
 
 function isResolvedIncident(status: PagerDutyIncidentStatus | undefined): boolean {
   return status === "resolved" || status === "closed";
+}
+
+function matchesCloseGroupFilter(group: GroupState, filter: GroupFilter | undefined): boolean {
+  return filter ? matchesGroupFilter(group, filter) : true;
+}
+
+function refsByIncident<T extends AlertRef>(refs: T[]): Array<[string, T[]]> {
+  const grouped = new Map<string, T[]>();
+  for (const ref of refs) {
+    const existing = grouped.get(ref.incident_id) ?? [];
+    existing.push(ref);
+    grouped.set(ref.incident_id, existing);
+  }
+  return [...grouped.entries()].sort(([left], [right]) => left.localeCompare(right));
+}
+
+function compareRefs(left: AlertRef, right: AlertRef): number {
+  return left.incident_id.localeCompare(right.incident_id) || left.alert_id.localeCompare(right.alert_id);
 }
 
 function newGroup(alert: AlertFact, key: string, now: string, existingGroupIds: string[]): GroupState {

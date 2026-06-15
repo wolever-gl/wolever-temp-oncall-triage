@@ -1,0 +1,42 @@
+{
+  "annotation": {
+    "ts": "2026-05-18T22:02:07.852Z",
+    "alert_ref": {
+      "incident_id": "Q38JR11G2ENK2W",
+      "alert_id": "Q2M2BHX98MHZQ4"
+    },
+    "tags": [],
+    "decision": "needs_evidence",
+    "confidence": "low",
+    "summary": "Audience 12878: needs-more-export-evidence (classification=needs-more-export-evidence; check=open; healthy_runs=0; monitoring_runs=0; blocked_runs=0; blockers=evidence_unavailable).",
+    "source": {
+      "kind": "tagger",
+      "run_id": "tagrun_20260518220205_260516_albertsons_liveramp_progress",
+      "script_sha256": "874bd465281720cd743319cf67015bf2e8487c95e86cb107752300f05ddac306",
+      "script_path": "cases/assets/taggers/tagrun_20260518220205_260516_albertsons_liveramp_progress/260516-albertsons-liveramp-progress.ts"
+    },
+    "evidence": [
+      {
+        "kind": "export_check",
+        "matched": false,
+        "source": "/Users/wolever/Scratch/oncall-triage-v2/cases/checks/chk_q38jr11g2enk2w_q2m2bhx98mhzq4/check.json",
+        "summary": "classification=needs-more-export-evidence; check=open; healthy_runs=0; monitoring_runs=0; blocked_runs=0; blockers=evidence_unavailable",
+        "data": {
+          "classification": "needs-more-export-evidence",
+          "check_state": "open",
+          "blockers": [
+            "evidence_unavailable"
+          ],
+          "checked_export_run_ids": [],
+          "run_evaluations": [],
+          "updated_at": "2026-05-18T20:02:22.257Z"
+        }
+      }
+    ]
+  },
+  "process": {
+    "stdout": "{\"decision\":\"needs_evidence\",\"tags\":[],\"confidence\":\"low\",\"summary\":\"Audience 12878: needs-more-export-evidence (classification=needs-more-export-evidence; check=open; healthy_runs=0; monitoring_runs=0; blocked_runs=0; blockers=evidence_unavailable).\",\"evidence\":[{\"kind\":\"export_check\",\"matched\":false,\"source\":\"/Users/wolever/Scratch/oncall-triage-v2/cases/checks/chk_q38jr11g2enk2w_q2m2bhx98mhzq4/check.json\",\"summary\":\"classification=needs-more-export-evidence; check=open; healthy_runs=0; monitoring_runs=0; blocked_runs=0; blockers=evidence_unavailable\",\"data\":{\"classification\":\"needs-more-export-evidence\",\"check_state\":\"open\",\"blockers\":[\"evidence_unavailable\"],\"checked_export_run_ids\":[],\"run_evaluations\":[],\"updated_at\":\"2026-05-18T20:02:22.257Z\"}}]}\n",
+    "stderr": "",
+    "exit_code": 0
+  }
+}

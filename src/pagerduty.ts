@@ -22,6 +22,12 @@ export interface PagerDutyIncidentStatusRecord {
   resolved_at?: string;
 }
 
+export interface PagerDutyAlertStatusRecord {
+  id: string;
+  status: PagerDutyIncidentStatus;
+  summary?: string;
+}
+
 export async function fetchPagerDutyIncidentStatus(input: string): Promise<PagerDutyIncidentStatusRecord> {
   const incident_id = parseIncidentId(input);
   const token = await pagerDutyApiToken();
@@ -47,6 +53,34 @@ export async function fetchPagerDutyIncidentStatus(input: string): Promise<Pager
     refreshed_at: new Date().toISOString(),
     ...(status === "resolved" && resolved_at ? { resolved_at } : {}),
   };
+}
+
+export async function fetchPagerDutyIncidentAlerts(incident: string): Promise<PagerDutyAlertStatusRecord[]> {
+  const incident_id = parseIncidentId(incident);
+  const alerts: PagerDutyAlertStatusRecord[] = [];
+  for (let offset = 0; ; ) {
+    const response = await pagerDutyFetch(`/incidents/${incident_id}/alerts?limit=100&offset=${offset}`, { method: "GET" });
+    const payload = (await response.json()) as unknown;
+    const pageAlerts = isRecord(payload) && Array.isArray(payload.alerts) ? payload.alerts : [];
+    alerts.push(...pageAlerts.map(normalizePagerDutyAlertStatus));
+    const more = isRecord(payload) && payload.more === true;
+    if (!more) break;
+    const limit = isRecord(payload) && typeof payload.limit === "number" ? payload.limit : 100;
+    const payloadOffset = isRecord(payload) && typeof payload.offset === "number" ? payload.offset : offset;
+    offset = payloadOffset + limit;
+  }
+  return alerts;
+}
+
+export async function resolvePagerDutyIncidentAlerts(incident: string, alertIds: string[]): Promise<void> {
+  if (alertIds.length === 0) return;
+  const incident_id = parseIncidentId(incident);
+  await pagerDutyFetch(`/incidents/${incident_id}/alerts`, {
+    method: "PUT",
+    body: JSON.stringify({
+      alerts: alertIds.map((id) => ({ id, type: "alert", status: "resolved" })),
+    }),
+  });
 }
 
 export async function fetchPagerDutyAlerts(incident: string): Promise<string> {
@@ -382,6 +416,38 @@ async function pagerDutyApiToken(): Promise<string | undefined> {
     (await Bun.secrets.get({ service: "gaia-skill-pagerduty", name: "token" })) ??
     Bun.env.PAGERDUTY_API_TOKEN
   );
+}
+
+async function pagerDutyFetch(pathname: string, init: RequestInit): Promise<Response> {
+  const token = await pagerDutyApiToken();
+  if (!token) throw new Error("Missing PagerDuty API token secret: gaia-skill-pagerduty/api-token");
+
+  const response = await fetch(`${PD_API_BASE}${pathname}`, {
+    ...init,
+    headers: {
+      Accept: "application/vnd.pagerduty+json;version=2",
+      "Content-Type": "application/json",
+      Authorization: `Token token=${token}`,
+      From: Bun.env.PAGERDUTY_FROM ?? "david.wolever@growthloop.com",
+      ...(init.headers ?? {}),
+    },
+  });
+  if (!response.ok) {
+    throw new Error(`pagerduty ${init.method ?? "GET"} failed ${pathname}: ${response.status} ${response.statusText} ${await response.text()}`);
+  }
+  return response;
+}
+
+function normalizePagerDutyAlertStatus(entry: unknown): PagerDutyAlertStatusRecord {
+  const obj = isRecord(entry) ? entry : {};
+  const id = stringField(obj, "id", "alert_id");
+  if (!id) throw new Error("PagerDuty alert response included an alert without an id.");
+  const summary = stringField(obj, "summary");
+  return {
+    id,
+    status: normalizeStatus(stringField(obj, "status")),
+    ...(summary ? { summary } : {}),
+  };
 }
 
 function matchValue(input: string, regex: RegExp): string | undefined {

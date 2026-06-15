@@ -1,0 +1,53 @@
+{
+  "annotation": {
+    "ts": "2026-05-18T21:37:50.452Z",
+    "alert_ref": {
+      "incident_id": "Q2T09VCLN9MRZ8",
+      "alert_id": "Q3HGOVLPIQWNZ0"
+    },
+    "tags": [
+      "evidence:albertsons-schema-issue",
+      "triage:schema-issue"
+    ],
+    "decision": "tag",
+    "confidence": "medium",
+    "summary": "Q2T09VCLN9MRZ8/Q3HGOVLPIQWNZ0 audience 8473 has scoped Albertsons schema evidence (gcloud_log_evidence).",
+    "source": {
+      "kind": "tagger",
+      "run_id": "tagrun_20260518213748_260518_albertsons_schema_issues",
+      "script_sha256": "ab86850e19eb381902fa37cdd6366d2d32e4c7c684035c486dad77b420d9c532",
+      "script_path": "cases/assets/taggers/tagrun_20260518213748_260518_albertsons_schema_issues/260518-albertsons-schema-issues.ts"
+    },
+    "evidence": [
+      {
+        "kind": "gcloud_log_evidence",
+        "matched": true,
+        "source": "/Users/wolever/Scratch/oncall-triage-v2/cases/artifacts/260518-albertsons-schema-log-evidence.json",
+        "summary": "Quervice audience-results requests for audience 8473 failed with FieldNotFoundException while processing Albertsons queries.",
+        "data": {
+          "audience_id": "8473",
+          "path": "/v1/audiences/results",
+          "exception": "FieldNotFoundException",
+          "first_seen": "2026-05-13T13:50:22.835088241Z",
+          "last_seen": "2026-05-18T05:25:52.420399014Z",
+          "request_ids": [
+            "9422c451-9e66-46be-a522-65e3e09628f2",
+            "9f40e682-7fa2-43e5-a29c-4953c5df5700",
+            "19faa5ab-800a-408e-8ff4-fb2df34369d3",
+            "7806c6b9-cfb4-4526-8554-ffb5067957dc"
+          ],
+          "query_source": {
+            "project": "gl-client-albertsons",
+            "namespace": "quervice-21201878",
+            "query": "resource.type=\"k8s_container\" timestamp >= \"2026-05-11T00:00:00Z\" timestamp < \"2026-05-19T00:00:00Z\" resource.labels.namespace_name=\"quervice-21201878\" jsonPayload.organization_id=\"albertsons_6\" jsonPayload.path=\"/v1/audiences/results\" \"FieldNotFoundException\""
+          }
+        }
+      }
+    ]
+  },
+  "process": {
+    "stdout": "{\"decision\":\"tag\",\"tags\":[\"evidence:albertsons-schema-issue\",\"triage:schema-issue\"],\"confidence\":\"medium\",\"summary\":\"Q2T09VCLN9MRZ8/Q3HGOVLPIQWNZ0 audience 8473 has scoped Albertsons schema evidence (gcloud_log_evidence).\",\"evidence\":[{\"kind\":\"gcloud_log_evidence\",\"matched\":true,\"source\":\"/Users/wolever/Scratch/oncall-triage-v2/cases/artifacts/260518-albertsons-schema-log-evidence.json\",\"summary\":\"Quervice audience-results requests for audience 8473 failed with FieldNotFoundException while processing Albertsons queries.\",\"data\":{\"audience_id\":\"8473\",\"path\":\"/v1/audiences/results\",\"exception\":\"FieldNotFoundException\",\"first_seen\":\"2026-05-13T13:50:22.835088241Z\",\"last_seen\":\"2026-05-18T05:25:52.420399014Z\",\"request_ids\":[\"9422c451-9e66-46be-a522-65e3e09628f2\",\"9f40e682-7fa2-43e5-a29c-4953c5df5700\",\"19faa5ab-800a-408e-8ff4-fb2df34369d3\",\"7806c6b9-cfb4-4526-8554-ffb5067957dc\"],\"query_source\":{\"project\":\"gl-client-albertsons\",\"namespace\":\"quervice-21201878\",\"query\":\"resource.type=\\\"k8s_container\\\" timestamp >= \\\"2026-05-11T00:00:00Z\\\" timestamp < \\\"2026-05-19T00:00:00Z\\\" resource.labels.namespace_name=\\\"quervice-21201878\\\" jsonPayload.organization_id=\\\"albertsons_6\\\" jsonPayload.path=\\\"/v1/audiences/results\\\" \\\"FieldNotFoundException\\\"\"}}}]}\n",
+    "stderr": "",
+    "exit_code": 0
+  }
+}

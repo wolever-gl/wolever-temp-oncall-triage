@@ -1,19 +1,31 @@
 [
   {
-    "group_id": "260511-albertsons_6-snapshotting-processing",
-    "state": "open",
+    "group_id": "260518-unknown_org-flywheel-prod-n-birchwood-n-main-daily-v-n-n-n-p",
+    "state": "new",
     "tags": [
-      "triage:needs_review",
-      "monitoring:export-processing",
-      "triage:snapshotting-error"
+      "triage:needs_review"
     ],
-    "title": "albertsons_6 snapshotting-processing",
-    "summary": "Needs review: Albertsons 8473 and 10073 remain snapshotting_processing/no_batches, but audience 2189 now has latest Pizza snapshotting_error/no_batches and should be investigated manually.",
+    "title": "unknown_org flywheel-prod-n-birchwood-n-main-daily-v-n-n-n-p",
+    "summary": "[flywheel-prod-328213] *birchwood_274_main_daily_v1.0.3:* pipeline failed! *Execution Time*: 2026-05-17 08:00:00+00:00 *Log Url*: https://6b1c82ba369c41068abf46769283471e-dot-us-central1.composer.googleusercontent.com/dags/birchwood_274_main_daily_v1.0.3/grid?dag_run_id=scheduled__2026-05-17T08%3A00%3A00%2B00%3A00&task_id=dbt_pipeline.dbt_build&base_date=2026-05-17T08%3A00%3A00%2B0000&tab=logs",
     "incident_ids": [
-      "Q2T09VCLN9MRZ8"
+      "Q24RX6QMXPYKQR"
     ],
-    "alert_count": 4,
-    "path": "groups/open/260511-albertsons_6-snapshotting-processing/case.md"
+    "alert_count": 1,
+    "path": "groups/new/260518-unknown_org-flywheel-prod-n-birchwood-n-main-daily-v-n-n-n-p/case.md"
+  },
+  {
+    "group_id": "260518-unknown_org-insufficient-data-for-bifrost-queue-develop-sqs",
+    "state": "new",
+    "tags": [
+      "triage:needs_review"
+    ],
+    "title": "unknown_org insufficient-data-for-bifrost-queue-develop-sqs-",
+    "summary": "Insufficient data for bifrost_queue_develop_sqs_too_old_messages_bifrost_v2",
+    "incident_ids": [
+      "Q0OAGU4OVU9E01"
+    ],
+    "alert_count": 1,
+    "path": "groups/new/260518-unknown_org-insufficient-data-for-bifrost-queue-develop-sqs/case.md"
   },
   {
     "group_id": "260511-allegro_3-dv360-export-error",
@@ -310,86 +322,81 @@
     "path": "groups/open/260515-royals_4-snapshotting-error/case.md"
   },
   {
-    "group_id": "grp_260513_albertsons_6_client_sent_export_failure_split_0066",
+    "group_id": "260518-albertsons_6-albertsons-6-client-sent-missing-export-after-alert",
+    "state": "open",
+    "tags": [
+      "triage:needs-evidence",
+      "triage:tag_grouped"
+    ],
+    "title": "albertsons_6 client sent missing export after alert",
+    "summary": "Albertsons client-sent export failure alerts where preflight found Pizza rows but no matching export after the alert.",
+    "incident_ids": [
+      "Q2CAIXK91KMVOP"
+    ],
+    "alert_count": 1,
+    "path": "groups/open/260518-albertsons_6-albertsons-6-client-sent-missing-export-after-alert/case.md"
+  },
+  {
+    "group_id": "260518-allegro_3-dv360-export-processing",
     "state": "open",
     "tags": [
       "triage:needs_review",
-      "triage:snapshotting-error",
-      "bug:service-quervice",
-      "triage:manual_retry_needed",
-      "monitoring:snapshotting-retry",
-      "monitoring:retry-processing",
-      "triage:retry_failed"
+      "triage:blocked-env-unavailable"
     ],
-    "title": "albertsons_6 client-sent-export-failure split",
-    "summary": "Manual retry did not recover Albertsons LiveRamp audiences 8473 or 10073. Heartbeat Pizza recheck found both latest relevant runs back in terminal snapshotting_error/no_batches with pre_snapshotting_check unknown error; needs platform/Quervice follow-up before another retry.",
+    "title": "allegro_3 dv360 export-processing",
+    "summary": "Triage preflight attempted, but Allegro export checks were skipped because this laptop cannot access the Allegro Bifrost proxy. Manual triage needs an environment with Allegro access or non-Pizza evidence.",
+    "incident_ids": [
+      "Q2IX58AKEIP919"
+    ],
+    "alert_count": 1,
+    "path": "groups/open/260518-allegro_3-dv360-export-processing/case.md"
+  },
+  {
+    "group_id": "260518-allegro_3-facebook-export-error",
+    "state": "open",
+    "tags": [
+      "triage:needs_review",
+      "triage:blocked-env-unavailable"
+    ],
+    "title": "allegro_3 facebook export-error",
+    "summary": "Triage preflight attempted, but Allegro export checks were skipped because this laptop cannot access the Allegro Bifrost proxy. Manual triage needs an environment with Allegro access or non-Pizza evidence.",
+    "incident_ids": [
+      "Q29WSMU9ECGBC8"
+    ],
+    "alert_count": 1,
+    "path": "groups/open/260518-allegro_3-facebook-export-error/case.md"
+  },
+  {
+    "group_id": "260518-allegro_3-facebook-export-error-02",
+    "state": "open",
+    "tags": [
+      "triage:needs_review",
+      "triage:blocked-env-unavailable"
+    ],
+    "title": "allegro_3 facebook export-error",
+    "summary": "Triage preflight attempted, but Allegro export checks were skipped because this laptop cannot access the Allegro Bifrost proxy. Manual triage needs an environment with Allegro access or non-Pizza evidence.",
+    "incident_ids": [
+      "Q2HVIA79CPFWPS"
+    ],
+    "alert_count": 1,
+    "path": "groups/open/260518-allegro_3-facebook-export-error-02/case.md"
+  },
+  {
+    "group_id": "260511-albertsons_6-albertsons-6-export-in-progress",
+    "state": "monitoring",
+    "tags": [
+      "monitoring:export-processing",
+      "triage:tag_grouped"
+    ],
+    "title": "albertsons_6 export in progress",
+    "summary": "Albertsons audience failures where the latest evidence shows export processing or waiting with no current blocker.",
     "incident_ids": [
       "Q2EJWG22CER0LA",
+      "Q2T09VCLN9MRZ8",
       "Q38JR11G2ENK2W"
     ],
-    "alert_count": 2,
-    "path": "groups/open/grp_260513_albertsons_6_client_sent_export_failure_split_0066/case.md"
-  },
-  {
-    "group_id": "260512-albertsons_6-liveramp-waiting-uploads",
-    "state": "monitoring",
-    "tags": [
-      "triage:tag_grouped",
-      "waiting:uploads",
-      "monitoring:export-processing"
-    ],
-    "title": "Albertsons LiveRamp uploads still processing",
-    "summary": "Auto-monitored from Pizza export checks: 4 alert-scoped export check(s) are still processing and 0 are already healthy.",
-    "incident_ids": [
-      "Q2T09VCLN9MRZ8"
-    ],
-    "alert_count": 4,
-    "path": "groups/monitoring/260512-albertsons_6-liveramp-waiting-uploads/case.md"
-  },
-  {
-    "group_id": "260513-albertsons_6-client-sent-export-failure",
-    "state": "monitoring",
-    "tags": [
-      "triage:needs_review",
-      "monitoring:export-processing"
-    ],
-    "title": "albertsons_6 client-sent-export-failure",
-    "summary": "Auto-monitored from Pizza export checks: 2 alert-scoped export check(s) are still processing and 0 are already healthy.",
-    "incident_ids": [
-      "Q2EJWG22CER0LA"
-    ],
-    "alert_count": 3,
-    "path": "groups/monitoring/260513-albertsons_6-client-sent-export-failure/case.md"
-  },
-  {
-    "group_id": "260513-albertsons_6-zero-success",
-    "state": "monitoring",
-    "tags": [
-      "triage:needs_review",
-      "monitoring:export-processing"
-    ],
-    "title": "albertsons_6 zero-success",
-    "summary": "Monitoring: audience 12742 has recovered, while audience 12801 remains export_processing with zero failures.",
-    "incident_ids": [
-      "Q2EJWG22CER0LA"
-    ],
-    "alert_count": 2,
-    "path": "groups/monitoring/260513-albertsons_6-zero-success/case.md"
-  },
-  {
-    "group_id": "260515-albertsons_6-zero-success-02",
-    "state": "monitoring",
-    "tags": [
-      "triage:needs_review",
-      "monitoring:export-processing"
-    ],
-    "title": "albertsons_6 zero-success",
-    "summary": "Monitoring: 5 Albertsons zero-success audiences have recovered and 5 remain export_processing with zero failures.",
-    "incident_ids": [
-      "Q38JR11G2ENK2W"
-    ],
-    "alert_count": 10,
-    "path": "groups/monitoring/260515-albertsons_6-zero-success-02/case.md"
+    "alert_count": 7,
+    "path": "groups/monitoring/260511-albertsons_6-albertsons-6-export-in-progress/case.md"
   },
   {
     "group_id": "grp_260514_ford_310_dv360_export_error_split_0074",
@@ -411,37 +418,22 @@
     "path": "groups/monitoring/grp_260514_ford_310_dv360_export_error_split_0074/case.md"
   },
   {
-    "group_id": "260505-albertsons_6-snapshotting-schema-error",
+    "group_id": "260511-albertsons_6-albertsons-6-schema-issues",
     "state": "waiting",
     "tags": [
-      "triage:snapshotting-schema",
+      "triage:schema-issue",
       "triage:tag_grouped",
-      "waiting:source-schema"
+      "waiting:schema-remediation"
     ],
-    "title": "Albertsons snapshotting schema errors",
-    "summary": "Blocked on Albertsons source/schema remediation: scoped snapshotting logs show missing fields in RFM_Category_Group, and live pizza shows no later successful terminal export for the five alert-scoped runs.",
-    "next_action": "Track customer/source-owner follow-up in Slack thread https://flywheeltechnologies.slack.com/archives/C02J2RJ6VSL/p1778902074333359, then recheck the five alert-scoped audiences for a later snapshotting_finished/export_finished run before resolving.",
+    "title": "albertsons_6 schema issues",
+    "summary": "Waiting on Albertsons schema remediation; schema issue evidence has been communicated in the linked support Slack thread.",
     "incident_ids": [
-      "Q2T09VCLN9MRZ8"
+      "Q2EJWG22CER0LA",
+      "Q2T09VCLN9MRZ8",
+      "Q38JR11G2ENK2W"
     ],
-    "alert_count": 5,
-    "path": "groups/waiting/260505-albertsons_6-snapshotting-schema-error/case.md"
-  },
-  {
-    "group_id": "260511-albertsons_6-snapshotting-error",
-    "state": "waiting",
-    "tags": [
-      "triage:needs_review",
-      "waiting:client_schema",
-      "triage:client_schema_missing"
-    ],
-    "title": "albertsons_6 snapshotting-error",
-    "summary": "Waiting on support/client remediation: five Albertsons LiveRamp export-run alerts still fail snapshotting with missing_table_field, and three client-sent alerts for the same schema-affected audiences were merged here.",
-    "incident_ids": [
-      "Q2T09VCLN9MRZ8"
-    ],
-    "alert_count": 9,
-    "path": "groups/waiting/260511-albertsons_6-snapshotting-error/case.md"
+    "alert_count": 14,
+    "path": "groups/waiting/260511-albertsons_6-albertsons-6-schema-issues/case.md"
   },
   {
     "group_id": "260514-451-campaign-manager-360-export-error",
@@ -523,20 +515,38 @@
     "path": "groups/waiting/260515-gopuff_544-snapshotting-error/case.md"
   },
   {
-    "group_id": "260504-albertsons_6-liveramp-recovered",
+    "group_id": "260511-albertsons_6-albertsons-6-export-complete",
+    "state": "resolved",
+    "tags": [
+      "resolved:export-healthy",
+      "triage:tag_grouped"
+    ],
+    "title": "albertsons_6 export complete",
+    "summary": "Albertsons audience failures whose alert-scoped exports are now healthy or complete.",
+    "incident_ids": [
+      "Q269WMZF4MKMNL",
+      "Q2EJWG22CER0LA",
+      "Q2T09VCLN9MRZ8",
+      "Q38JR11G2ENK2W"
+    ],
+    "alert_count": 15,
+    "path": "groups/resolved/260511-albertsons_6-albertsons-6-export-complete/case.md"
+  },
+  {
+    "group_id": "260511-albertsons_6-albertsons-6-recovered-after-export-failure-02",
     "state": "resolved",
     "tags": [
       "resolved:later-export-succeeded",
       "triage:tag_grouped"
     ],
-    "title": "Albertsons LiveRamp exports recovered",
-    "summary": "Exports with prior LiveRamp failures have later healthy checked runs.",
+    "title": "albertsons_6 recovered after export failure",
+    "summary": "Albertsons audience failures where the failed LiveRamp export has later healthy export evidence.",
     "incident_ids": [
       "Q2T09VCLN9MRZ8",
       "Q38JR11G2ENK2W"
     ],
     "alert_count": 140,
-    "path": "groups/resolved/260504-albertsons_6-liveramp-recovered/case.md"
+    "path": "groups/resolved/260511-albertsons_6-albertsons-6-recovered-after-export-failure-02/case.md"
   },
   {
     "group_id": "260511-albertsons_6-live-ramp-export-error",
@@ -550,71 +560,8 @@
     "incident_ids": [
       "Q2T09VCLN9MRZ8"
     ],
-    "alert_count": 142,
-    "path": "groups/resolved/260511-albertsons_6-live-ramp-export-error/case.md"
-  },
-  {
-    "group_id": "260511-albertsons_6-live-ramp-export-processing",
-    "state": "resolved",
-    "tags": [
-      "triage:needs_review",
-      "evidence:albertsons-liveramp-progress",
-      "resolved:merged"
-    ],
-    "title": "albertsons_6 live-ramp export-processing",
-    "summary": "Merged into 260512-albertsons_6-liveramp-waiting-uploads: Same alert and same export-in-progress evidence; keep the broader Albertsons LiveRamp uploads monitoring group as the live case.",
-    "next_action": "Follow target group 260512-albertsons_6-liveramp-waiting-uploads.",
-    "incident_ids": [
-      "Q2T09VCLN9MRZ8"
-    ],
-    "alert_count": 1,
-    "path": "groups/resolved/260511-albertsons_6-live-ramp-export-processing/case.md"
-  },
-  {
-    "group_id": "260511-albertsons_6-liveramp-complete",
-    "state": "resolved",
-    "tags": [
-      "resolved:export-healthy",
-      "triage:tag_grouped"
-    ],
-    "title": "Albertsons LiveRamp exports complete",
-    "summary": "Checked exports are healthy with no blocking export evidence.",
-    "incident_ids": [
-      "Q2T09VCLN9MRZ8"
-    ],
-    "alert_count": 4,
-    "path": "groups/resolved/260511-albertsons_6-liveramp-complete/case.md"
-  },
-  {
-    "group_id": "260511-albertsons_6-no-batches",
-    "state": "resolved",
-    "tags": [
-      "triage:needs_review",
-      "resolved:export-healthy"
-    ],
-    "title": "albertsons_6 no-batches",
-    "summary": "Resolved from Albertsons LiveRamp tagger evidence: the only alert-scoped export is healthy/export-complete.",
-    "incident_ids": [
-      "Q2T09VCLN9MRZ8"
-    ],
-    "alert_count": 1,
-    "path": "groups/resolved/260511-albertsons_6-no-batches/case.md"
-  },
-  {
-    "group_id": "260512-albertsons_6-client-sent-export-failure",
-    "state": "resolved",
-    "tags": [
-      "triage:needs_review",
-      "resolved:merged"
-    ],
-    "title": "albertsons_6 client-sent-export-failure",
-    "summary": "Merged into 260511-albertsons_6-snapshotting-error: Remaining client-sent alerts for audiences 10370, 10372, and 10749 match the existing Albertsons missing RFM_Category_Group client-schema waiting case.",
-    "next_action": "Follow target group 260511-albertsons_6-snapshotting-error.",
-    "incident_ids": [
-      "Q2T09VCLN9MRZ8"
-    ],
     "alert_count": 3,
-    "path": "groups/resolved/260512-albertsons_6-client-sent-export-failure/case.md"
+    "path": "groups/resolved/260511-albertsons_6-live-ramp-export-error/case.md"
   },
   {
     "group_id": "260513-451-client-sent-export-failure",
@@ -694,19 +641,19 @@
     "path": "groups/resolved/260514-451-client-sent-export-failure/case.md"
   },
   {
-    "group_id": "260514-albertsons_6-client-sent-export-failure",
+    "group_id": "260514-albertsons_6-albertsons-6-client-sent-recovered-02",
     "state": "resolved",
     "tags": [
-      "triage:needs_review",
-      "evidence:retry-succeeded"
+      "resolved:export-healthy",
+      "triage:tag_grouped"
     ],
-    "title": "albertsons_6 client-sent-export-failure",
-    "summary": "Resolved: the remaining six 5/14 Albertsons client-sent alerts all have later Pizza export_finished runs after the alert time.",
+    "title": "albertsons_6 client sent recovered",
+    "summary": "Albertsons client-sent export failure alerts with same-audience recovered export evidence.",
     "incident_ids": [
       "Q38JR11G2ENK2W"
     ],
-    "alert_count": 8,
-    "path": "groups/resolved/260514-albertsons_6-client-sent-export-failure/case.md"
+    "alert_count": 6,
+    "path": "groups/resolved/260514-albertsons_6-albertsons-6-client-sent-recovered-02/case.md"
   },
   {
     "group_id": "260514-birchwood_274-client-sent-export-failure",
@@ -849,36 +796,6 @@
     "path": "groups/resolved/260515-76ers_131-zero-success/case.md"
   },
   {
-    "group_id": "260515-albertsons_6-live-ramp-export-error",
-    "state": "resolved",
-    "tags": [
-      "triage:needs_review",
-      "resolved:later-export-succeeded"
-    ],
-    "title": "albertsons_6 live-ramp export-error",
-    "summary": "Resolved from Albertsons LiveRamp tagger evidence: the alert had a later healthy run after the export error.",
-    "incident_ids": [
-      "Q38JR11G2ENK2W"
-    ],
-    "alert_count": 1,
-    "path": "groups/resolved/260515-albertsons_6-live-ramp-export-error/case.md"
-  },
-  {
-    "group_id": "260515-albertsons_6-zero-success",
-    "state": "resolved",
-    "tags": [
-      "triage:needs_review",
-      "resolved:export-healthy"
-    ],
-    "title": "albertsons_6 zero-success",
-    "summary": "Resolved by zero-success tagger: all attached alerts now have healthy Pizza evidence, either export_finished or snapshotting_finished_no_deltas/no_batches with zero failures.",
-    "incident_ids": [
-      "Q269WMZF4MKMNL"
-    ],
-    "alert_count": 2,
-    "path": "groups/resolved/260515-albertsons_6-zero-success/case.md"
-  },
-  {
     "group_id": "260515-chghealthcare_395-marketing-cloud-export-error",
     "state": "resolved",
     "tags": [
@@ -1014,22 +931,6 @@
     "path": "groups/resolved/260516-evgo_402-client-sent-export-failure/case.md"
   },
   {
-    "group_id": "grp_260512_albertsons_6_client_sent_export_failure_split_0065",
-    "state": "resolved",
-    "tags": [
-      "triage:needs_review",
-      "resolved:merged"
-    ],
-    "title": "albertsons_6 client-sent-export-failure split",
-    "summary": "Merged into 260511-albertsons_6-snapshotting-processing: Audience 2189 client-sent failure is the notification counterpart of the existing snapshotting_processing/no_batches monitoring case.",
-    "next_action": "Follow target group 260511-albertsons_6-snapshotting-processing.",
-    "incident_ids": [
-      "Q2T09VCLN9MRZ8"
-    ],
-    "alert_count": 1,
-    "path": "groups/resolved/grp_260512_albertsons_6_client_sent_export_failure_split_0065/case.md"
-  },
-  {
     "group_id": "grp_260513_451_client_sent_export_failure_split_0069",
     "state": "resolved",
     "tags": [
@@ -1089,40 +990,6 @@
     ],
     "alert_count": 1,
     "path": "groups/resolved/grp_260514_451_campaign_manager_360_export_error_split_0071/case.md"
-  },
-  {
-    "group_id": "grp_260514_albertsons_6_client_sent_export_failure_split_0067",
-    "state": "resolved",
-    "tags": [
-      "triage:needs_review",
-      "triage:snapshotting-error",
-      "bug:service-quervice",
-      "resolved:merged"
-    ],
-    "title": "albertsons_6 client-sent-export-failure split",
-    "summary": "Merged into grp_260513_albertsons_6_client_sent_export_failure_split_0066: Same Albertsons platform failure class: both audience 8473 and 10073 failed LiveRamp snapshotting pre_snapshotting_check with Quervice 502/upstream premature close and no later success. Track as one Quervice service-side investigation.",
-    "next_action": "Follow target group grp_260513_albertsons_6_client_sent_export_failure_split_0066.",
-    "incident_ids": [
-      "Q38JR11G2ENK2W"
-    ],
-    "alert_count": 1,
-    "path": "groups/resolved/grp_260514_albertsons_6_client_sent_export_failure_split_0067/case.md"
-  },
-  {
-    "group_id": "grp_260514_albertsons_6_client_sent_export_failure_split_0068",
-    "state": "resolved",
-    "tags": [
-      "triage:needs_review",
-      "monitoring:export-processing",
-      "resolved:export-healthy"
-    ],
-    "title": "albertsons_6 client-sent-export-failure split",
-    "summary": "Auto-resolved from Pizza export checks: all 1 alert-scoped export check(s) are healthy_closed with no blockers.",
-    "incident_ids": [
-      "Q38JR11G2ENK2W"
-    ],
-    "alert_count": 1,
-    "path": "groups/resolved/grp_260514_albertsons_6_client_sent_export_failure_split_0068/case.md"
   },
   {
     "group_id": "grp_260514_ford_310_client_sent_export_failure_split_0073",

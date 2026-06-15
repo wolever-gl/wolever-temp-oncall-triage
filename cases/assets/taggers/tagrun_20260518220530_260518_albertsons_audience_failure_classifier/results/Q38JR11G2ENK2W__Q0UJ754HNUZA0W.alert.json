@@ -1,0 +1,17 @@
+{
+  "alert_id": "Q0UJ754HNUZA0W",
+  "incident_id": "Q38JR11G2ENK2W",
+  "incident_url": "https://growthloop.pagerduty.com/incidents/Q38JR11G2ENK2W",
+  "alert_status": "triggered",
+  "created_at": "2026-05-14T13:48:49-07:00",
+  "summary": "albertsons (Albertsons Media) - Audience 12874: 0 successfull_exports from pizza tracker found 10 minutes after new export",
+  "parser_version": 2,
+  "org_id": "albertsons_6",
+  "org_slug": "albertsons",
+  "org_id_numeric": "6",
+  "audience_kind": "audience",
+  "audience_id": "12874",
+  "source_glcli": "glcli --env albertsons bifrost pizza --audience-id 12874 --org-id 6",
+  "error_signature": "albertsons (albertsons media) - audience <n>: <n> successfull_exports from pizza tracker found <n> minutes after new exp",
+  "raw": "17. Q0UJ754HNUZA0W | triggered | 2026-05-14T13:48:49-07:00\n   untrusted_message: \"albertsons (Albertsons Media) - Audience 12874: 0 successfull_exports from pizza tracker found 10 minutes after new export\"\n   audience_id: \"12874\"\n   audience_url: \"https://albertsons.growthloop.com/v2/dataset_groups/99/audiences/12874?impersonate_user_id=29&impersonate_team_id=9\"\n   glcli: glcli --env albertsons bifrost pizza --audience-id 12874 --org-id 6"
+}

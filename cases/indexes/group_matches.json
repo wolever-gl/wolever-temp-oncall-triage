@@ -27,6 +27,15 @@
     "rationale": "Initial deterministic grouping for 260515-royals_4-snapshotting-error."
   },
   {
+    "match_key": "v3|incident:Q0OAGU4OVU9E01|org:unknown_org|class:insufficient-data-for-bifrost-queue-develop-sqs-",
+    "status": "active",
+    "target_group_id": "260518-unknown_org-insufficient-data-for-bifrost-queue-develop-sqs",
+    "reason": "created",
+    "created_at": "2026-05-18T20:05:19.515Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260518-unknown_org-insufficient-data-for-bifrost-queue-develop-sqs."
+  },
+  {
     "match_key": "v3|incident:Q0UU3VAZ2I5R5H|org:allegro_3|class:client-sent-export-failure",
     "status": "active",
     "target_group_id": "260513-allegro_3-client-sent-export-failure",
@@ -243,13 +252,22 @@
     "rationale": "Initial deterministic grouping for 260516-evgo_402-client-sent-export-failure."
   },
   {
-    "match_key": "v3|incident:Q269WMZF4MKMNL|org:albertsons_6|class:zero-success",
+    "match_key": "v3|incident:Q24RX6QMXPYKQR|org:unknown_org|class:flywheel-prod-n-birchwood-n-main-daily-v-n-n-n-p",
     "status": "active",
-    "target_group_id": "260515-albertsons_6-zero-success",
+    "target_group_id": "260518-unknown_org-flywheel-prod-n-birchwood-n-main-daily-v-n-n-n-p",
     "reason": "created",
+    "created_at": "2026-05-18T20:05:19.515Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260518-unknown_org-flywheel-prod-n-birchwood-n-main-daily-v-n-n-n-p."
+  },
+  {
+    "match_key": "v3|incident:Q269WMZF4MKMNL|org:albertsons_6|class:zero-success",
+    "status": "redirect",
+    "target_group_id": "260511-albertsons_6-albertsons-6-export-complete",
+    "reason": "merged",
     "created_at": "2026-05-16T00:38:01.850Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260515-albertsons_6-zero-success."
+    "rationale": "Grouped by normalized classifier tag classification:export_complete from tagrun_20260518220530."
   },
   {
     "match_key": "v3|incident:Q28HZS5TYC0NM9|org:flagstar_305|class:no-batches",
@@ -268,6 +286,24 @@
     "created_at": "2026-05-16T00:38:01.850Z",
     "created_by": "oncall-triage",
     "rationale": "Initial deterministic grouping for 260515-chghealthcare_395-marketing-cloud-export-error."
+  },
+  {
+    "match_key": "v3|incident:Q29WSMU9ECGBC8|org:allegro_3|dest:facebook|class:export-error",
+    "status": "active",
+    "target_group_id": "260518-allegro_3-facebook-export-error",
+    "reason": "created",
+    "created_at": "2026-05-18T20:05:19.515Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260518-allegro_3-facebook-export-error."
+  },
+  {
+    "match_key": "v3|incident:Q2CAIXK91KMVOP|org:albertsons_6|class:client-sent-export-failure",
+    "status": "redirect",
+    "target_group_id": "260518-albertsons_6-albertsons-6-client-sent-missing-export-after-alert",
+    "reason": "merged",
+    "created_at": "2026-05-18T20:05:19.515Z",
+    "created_by": "oncall-triage",
+    "rationale": "Grouped by normalized classifier tag classification:client_sent_missing_export_after_alert from tagrun_20260518220530."
   },
   {
     "match_key": "v3|incident:Q2CEMYYJ9N4IAX|org:nerdwallet_373|dest:tik-tok|class:export-processing",
@@ -289,21 +325,39 @@
   },
   {
     "match_key": "v3|incident:Q2EJWG22CER0LA|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260513-albertsons_6-client-sent-export-failure",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260511-albertsons_6-albertsons-6-export-in-progress",
+    "reason": "merged",
     "created_at": "2026-05-16T00:38:01.850Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260513-albertsons_6-client-sent-export-failure."
+    "rationale": "Grouped by normalized classifier tag classification:export_in_progress from tagrun_20260518220530."
   },
   {
     "match_key": "v3|incident:Q2EJWG22CER0LA|org:albertsons_6|class:zero-success",
-    "status": "active",
-    "target_group_id": "260513-albertsons_6-zero-success",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260511-albertsons_6-albertsons-6-export-in-progress",
+    "reason": "merged",
     "created_at": "2026-05-16T00:38:01.850Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260513-albertsons_6-zero-success."
+    "rationale": "Grouped by normalized classifier tag classification:export_in_progress from tagrun_20260518220530."
+  },
+  {
+    "match_key": "v3|incident:Q2HVIA79CPFWPS|org:allegro_3|dest:facebook|class:export-error",
+    "status": "active",
+    "target_group_id": "260518-allegro_3-facebook-export-error-02",
+    "reason": "created",
+    "created_at": "2026-05-18T20:05:19.515Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260518-allegro_3-facebook-export-error-02."
+  },
+  {
+    "match_key": "v3|incident:Q2IX58AKEIP919|org:allegro_3|dest:dv360|class:export-processing",
+    "status": "active",
+    "target_group_id": "260518-allegro_3-dv360-export-processing",
+    "reason": "created",
+    "created_at": "2026-05-18T20:05:19.515Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260518-allegro_3-dv360-export-processing."
   },
   {
     "match_key": "v3|incident:Q2KT0WUDEVL42Q|org:allegro_3|class:client-sent-export-failure",
@@ -352,30 +406,30 @@
   },
   {
     "match_key": "v3|incident:Q2T09VCLN9MRZ8|org:albertsons_6|class:no-batches",
-    "status": "active",
-    "target_group_id": "260511-albertsons_6-no-batches",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260511-albertsons_6-albertsons-6-export-complete",
+    "reason": "merged",
     "created_at": "2026-05-16T16:36:53.567Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260511-albertsons_6-no-batches."
+    "rationale": "Grouped by normalized classifier tag classification:export_complete from tagrun_20260518220530."
   },
   {
     "match_key": "v3|incident:Q2T09VCLN9MRZ8|org:albertsons_6|class:snapshotting-error",
-    "status": "active",
-    "target_group_id": "260511-albertsons_6-snapshotting-error",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260511-albertsons_6-albertsons-6-schema-issues",
+    "reason": "merged",
     "created_at": "2026-05-16T16:36:53.567Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260511-albertsons_6-snapshotting-error."
+    "rationale": "Grouped by evidence-tagged schema issue annotations from 260518-albertsons-schema-issues tagger, including archived Quervice FieldNotFoundException evidence keyed by audience id."
   },
   {
     "match_key": "v3|incident:Q2T09VCLN9MRZ8|org:albertsons_6|class:snapshotting-processing",
-    "status": "active",
-    "target_group_id": "260511-albertsons_6-snapshotting-processing",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260511-albertsons_6-albertsons-6-schema-issues",
+    "reason": "merged",
     "created_at": "2026-05-16T16:36:53.567Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260511-albertsons_6-snapshotting-processing."
+    "rationale": "Grouped by evidence-tagged schema issue annotations from 260518-albertsons-schema-issues tagger, including archived Quervice FieldNotFoundException evidence keyed by audience id."
   },
   {
     "match_key": "v3|incident:Q2T09VCLN9MRZ8|org:albertsons_6|dest:live-ramp|class:export-error",
@@ -415,30 +469,30 @@
   },
   {
     "match_key": "v3|incident:Q38JR11G2ENK2W|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260514-albertsons_6-client-sent-export-failure",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260514-albertsons_6-albertsons-6-client-sent-recovered-02",
+    "reason": "merged",
     "created_at": "2026-05-16T00:38:01.850Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260514-albertsons_6-client-sent-export-failure."
+    "rationale": "Grouped by normalized classifier tag classification:client_sent_recovered from tagrun_20260518220530."
   },
   {
     "match_key": "v3|incident:Q38JR11G2ENK2W|org:albertsons_6|class:zero-success",
-    "status": "active",
-    "target_group_id": "260515-albertsons_6-zero-success-02",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260511-albertsons_6-albertsons-6-export-in-progress",
+    "reason": "merged",
     "created_at": "2026-05-16T00:38:01.850Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260515-albertsons_6-zero-success-02."
+    "rationale": "Grouped by normalized classifier tag classification:export_in_progress from tagrun_20260518220530."
   },
   {
     "match_key": "v3|incident:Q38JR11G2ENK2W|org:albertsons_6|dest:live-ramp|class:export-error",
-    "status": "active",
-    "target_group_id": "260515-albertsons_6-live-ramp-export-error",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260511-albertsons_6-albertsons-6-recovered-after-export-failure",
+    "reason": "merged",
     "created_at": "2026-05-16T16:36:53.567Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260515-albertsons_6-live-ramp-export-error."
+    "rationale": "Grouped by normalized classifier tag classification:recovered_after_export_failure from tagrun_20260518220530."
   },
   {
     "match_key": "v3|incident:Q3GQQRY1UQLBSN|org:allegro_3|dest:dv360|class:export-processing",

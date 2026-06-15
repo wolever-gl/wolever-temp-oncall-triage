@@ -1,0 +1,42 @@
+{
+  "annotation": {
+    "ts": "2026-05-18T22:02:05.122Z",
+    "alert_ref": {
+      "incident_id": "Q2EJWG22CER0LA",
+      "alert_id": "Q2N69VPQCMRHGL"
+    },
+    "tags": [],
+    "decision": "needs_evidence",
+    "confidence": "low",
+    "summary": "Audience 8473: needs-more-export-evidence (classification=needs-more-export-evidence; check=blocked; healthy_runs=0; monitoring_runs=0; blocked_runs=0; blockers=missing_export_after_alert).",
+    "source": {
+      "kind": "tagger",
+      "run_id": "tagrun_20260518220205_260516_albertsons_liveramp_progress",
+      "script_sha256": "874bd465281720cd743319cf67015bf2e8487c95e86cb107752300f05ddac306",
+      "script_path": "cases/assets/taggers/tagrun_20260518220205_260516_albertsons_liveramp_progress/260516-albertsons-liveramp-progress.ts"
+    },
+    "evidence": [
+      {
+        "kind": "export_check",
+        "matched": false,
+        "source": "/Users/wolever/Scratch/oncall-triage-v2/cases/checks/chk_q2ejwg22cer0la_q2n69vpqcmrhgl/check.json",
+        "summary": "classification=needs-more-export-evidence; check=blocked; healthy_runs=0; monitoring_runs=0; blocked_runs=0; blockers=missing_export_after_alert",
+        "data": {
+          "classification": "needs-more-export-evidence",
+          "check_state": "blocked",
+          "blockers": [
+            "missing_export_after_alert"
+          ],
+          "checked_export_run_ids": [],
+          "run_evaluations": [],
+          "updated_at": "2026-05-17T16:21:16.755Z"
+        }
+      }
+    ]
+  },
+  "process": {
+    "stdout": "{\"decision\":\"needs_evidence\",\"tags\":[],\"confidence\":\"low\",\"summary\":\"Audience 8473: needs-more-export-evidence (classification=needs-more-export-evidence; check=blocked; healthy_runs=0; monitoring_runs=0; blocked_runs=0; blockers=missing_export_after_alert).\",\"evidence\":[{\"kind\":\"export_check\",\"matched\":false,\"source\":\"/Users/wolever/Scratch/oncall-triage-v2/cases/checks/chk_q2ejwg22cer0la_q2n69vpqcmrhgl/check.json\",\"summary\":\"classification=needs-more-export-evidence; check=blocked; healthy_runs=0; monitoring_runs=0; blocked_runs=0; blockers=missing_export_after_alert\",\"data\":{\"classification\":\"needs-more-export-evidence\",\"check_state\":\"blocked\",\"blockers\":[\"missing_export_after_alert\"],\"checked_export_run_ids\":[],\"run_evaluations\":[],\"updated_at\":\"2026-05-17T16:21:16.755Z\"}}]}\n",
+    "stderr": "",
+    "exit_code": 0
+  }
+}

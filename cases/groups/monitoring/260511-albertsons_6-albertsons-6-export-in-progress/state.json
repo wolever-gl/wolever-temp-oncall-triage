@@ -1,0 +1,56 @@
+{
+  "group_id": "260511-albertsons_6-albertsons-6-export-in-progress",
+  "state": "monitoring",
+  "tags": [
+    "monitoring:export-processing",
+    "triage:tag_grouped"
+  ],
+  "title": "albertsons_6 export in progress",
+  "summary": "Albertsons audience failures where the latest evidence shows export processing or waiting with no current blocker.",
+  "deterministic_key": "tag|260511-albertsons_6-albertsons-6-export-in-progress",
+  "grouping_version": 3,
+  "created_at": "2026-05-18T22:09:53.777Z",
+  "updated_at": "2026-05-18T22:09:53.777Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q2EJWG22CER0LA",
+      "alert_id": "Q2S03JXYQD34WM"
+    },
+    {
+      "incident_id": "Q2EJWG22CER0LA",
+      "alert_id": "Q311OEQ3IZ6GPG"
+    },
+    {
+      "incident_id": "Q2EJWG22CER0LA",
+      "alert_id": "Q3U0RMO0GSEU83"
+    },
+    {
+      "incident_id": "Q2T09VCLN9MRZ8",
+      "alert_id": "Q06RN07M3BVDQB"
+    },
+    {
+      "incident_id": "Q38JR11G2ENK2W",
+      "alert_id": "Q0ZDIAGV3OJULA"
+    },
+    {
+      "incident_id": "Q38JR11G2ENK2W",
+      "alert_id": "Q2M2BHX98MHZQ4"
+    },
+    {
+      "incident_id": "Q38JR11G2ENK2W",
+      "alert_id": "Q3WNLOQE86QYWA"
+    }
+  ],
+  "incident_ids": [
+    "Q2EJWG22CER0LA",
+    "Q2T09VCLN9MRZ8",
+    "Q38JR11G2ENK2W"
+  ],
+  "related_group_ids": [
+    "260511-albertsons_6-live-ramp-export-processing",
+    "260512-albertsons_6-liveramp-waiting-uploads",
+    "260513-albertsons_6-client-sent-export-failure",
+    "260513-albertsons_6-zero-success",
+    "260515-albertsons_6-zero-success-02"
+  ]
+}

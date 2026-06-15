@@ -1,2 +1,0 @@
-{"ts":"2026-05-16T21:46:46.979Z","actor":"agent","decision":"transitioned_to_open","rationale":"Needs investigation: audience 10073 remains failed; latest Pizza is 2026-05-15 snapshotting_error/no_batches during pre_snapshotting_check with no later success."}
-{"ts":"2026-05-16T21:47:24.695Z","actor":"agent","decision":"transitioned_to_open","rationale":"Needs platform investigation: audience 10073 snapshotting failed when Quervice returned 502/upstream premature close during pre_snapshotting_check; latest Pizza remains snapshotting_error/no_batches with no later success."}

@@ -1,0 +1,15 @@
+Alerts (1)
+----------------
+1. Q3Z9IW2NW1HVDW | triggered | 2026-05-18T07:32:57-07:00
+   untrusted_message: "allegro (Advertising): Exports for audience 1097 failed with states: <(snapshotting_finished,export_error)>"
+   audience_id: "1097"
+   web_app_url: "https://allegro.flywheelproducts.com/v2/dataset_groups/27/audiences/1097?impersonate_user_id=2&impersonate_team_id=4"
+   endpoint_id: "app_facebook_27"
+   checked_export_run_ids: "1097-facebook_1473-scheduled__2026-05-18T00:00:00+00:00"
+   glcli: glcli --env allegro bifrost pizza --audience-id 1097 --org-id 3
+   logs: "https://console.cloud.google.com/logs/query;query=resource.type%3D%22k8s_container%22%0A%0AjsonPayload.organization_id%3D%22allegro_3%22%0AjsonPayload.internal_audience_id%3D%221097%22%0A%0A;summaryFields=jsonPayload%252Fbatch_id:false:32:beginning;timeRange=2026-05-18T14:22:56Z%2F2026-05-18T14:42:56Z?project=sc-24037-cdp-prod"
+
+Deduped glcli commands by audience
+-----------------------------------
+audience_id 1097:
+  glcli --env allegro bifrost pizza --audience-id 1097 --org-id 3

@@ -1,0 +1,4 @@
+Alerts (1)
+----------------
+1. Q3PQYOTMMVHRGR | triggered | 2026-05-18T04:52:18-07:00
+   untrusted_message: "[flywheel-prod-328213] *birchwood_274_main_daily_v1.0.3:* pipeline failed! *Execution Time*: 2026-05-17 08:00:00+00:00 *Log Url*: https://6b1c82ba369c41068abf46769283471e-dot-us-central1.composer.googleusercontent.com/dags/birchwood_274_main_daily_v1.0.3/grid?dag_run_id=scheduled__2026-05-17T08%3A00%3A00%2B00%3A00&task_id=dbt_pipeline.dbt_build&base_date=2026-05-17T08%3A00%3A00%2B0000&tab=logs"

@@ -33,8 +33,8 @@ Representative alerts:
 ## Export Checks
 
 - Checks: 4.
-- States: `blocked`=2, `healthy_closed`=2
-- Blockers seen: `missing_pizza_row`
+- States: `blocked`=1, `healthy_closed`=2, `open`=1
+- Blockers seen: `evidence_unavailable`, `missing_pizza_row`
 
 Check evidence:
 - chk_q1tjj4mevof1w3_q1dmvwd0f3t9di (Q1TJJ4MEVOF1W3/Q1DMVWD0F3T9DI): state=`healthy_closed`.
@@ -45,12 +45,11 @@ Check evidence:
   Scope: env=prod; org=310; audience=34062.
   Command: `glcli --env prod bifrost pizza --audience-id 34062 --org-id 310`
   Run 34062-facebook_20861-scheduled__2026-05-16T00:00:00+00:00: health=`healthy`; created=2026-05-16T00:49:52.777650+00:00; snapshotting=snapshotting_finished; export=export_finished; failed=0.
-- chk_q3hwkw0fs3vthe_q2tvz6zmw55s6y (Q3HWKW0FS3VTHE/Q2TVZ6ZMW55S6Y): state=`blocked`.
+- chk_q3hwkw0fs3vthe_q2tvz6zmw55s6y (Q3HWKW0FS3VTHE/Q2TVZ6ZMW55S6Y): state=`open`, next_check_at=`2026-05-18T20:18:24.284Z`.
   Scope: env=prod; org=310; audience=34062; endpoint=app_dv360_1807; destination=dv360.
   Checked runs: `d9e26d081f921aafeb5f8bdd4bf6d8c5`
   Command: `glcli --env prod bifrost pizza --audience-id 34062 --org-id 310`
-  Blockers: `missing_pizza_row`
-  Run d9e26d081f921aafeb5f8bdd4bf6d8c5: health=`missing`; blockers=missing_pizza_row.
+  Blockers: `evidence_unavailable`
 - chk_q3hwkw0fs3vthe_q3q4n4m8uov684 (Q3HWKW0FS3VTHE/Q3Q4N4M8UOV684): state=`blocked`.
   Scope: env=prod; org=310; audience=32921; endpoint=app_dv360_1807; destination=dv360.
   Checked runs: `4586c1f25f5e00da3db3dcf3da099324`

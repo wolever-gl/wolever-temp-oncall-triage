@@ -1,2 +1,0 @@
-{"ts":"2026-05-16T16:36:53.567Z","actor":"oncall-triage","decision":"created_group","rationale":"Conservative deterministic grouping created a new group for v3|incident:Q2T09VCLN9MRZ8|org:albertsons_6|class:no-batches."}
-{"ts":"2026-05-16T21:15:32.731Z","actor":"agent","decision":"transitioned_to_resolved","rationale":"Resolved from Albertsons LiveRamp tagger evidence: the only alert-scoped export is healthy/export-complete."}

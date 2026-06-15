@@ -3,7 +3,7 @@
   "source": "pagerduty",
   "incident_id": "Q3HWKW0FS3VTHE",
   "alert_id": "Q2TVZ6ZMW55S6Y",
-  "state": "blocked",
+  "state": "open",
   "scope": {
     "env": "prod",
     "org_id": "310",
@@ -18,20 +18,14 @@
     "glcli": "glcli --env prod bifrost pizza --audience-id 34062 --org-id 310"
   },
   "scope_key": "prod|310|34062|dv360|app_dv360_1807|d9e26d081f921aafeb5f8bdd4bf6d8c5",
-  "run_evaluations": [
-    {
-      "export_run_id": "d9e26d081f921aafeb5f8bdd4bf6d8c5",
-      "health": "missing",
-      "match_basis": "checked_export_run_id",
-      "blockers": [
-        "missing_pizza_row"
-      ]
-    }
-  ],
+  "run_evaluations": [],
   "blockers": [
-    "missing_pizza_row"
+    "evidence_unavailable"
   ],
-  "evidence_artifacts": [],
+  "evidence_artifacts": [
+    "pizza_fetch_error:Unable to connect. Is the computer able to access the url?"
+  ],
   "created_at": "2026-05-16T20:48:34.127Z",
-  "updated_at": "2026-05-17T16:17:13.817Z"
+  "updated_at": "2026-05-18T20:03:24.284Z",
+  "next_check_at": "2026-05-18T20:18:24.284Z"
 }

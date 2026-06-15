@@ -1,8 +1,13 @@
+import path from "node:path";
+import { stat } from "node:fs/promises";
+import { homedir } from "node:os";
 import type { ExportCheckScope, PizzaExportRow } from "./schema";
 
 export interface LivePizzaFetchOptions {
   portBase?: number;
   glcliBin?: string;
+  gcloudBin?: string;
+  authMaxAgeMs?: number;
   onProgress?: (message: string) => void;
 }
 
@@ -18,11 +23,20 @@ interface BifrostProxy {
   stderr: Promise<string>;
 }
 
+const DEFAULT_AUTH_MAX_AGE_MS = 12 * 60 * 60 * 1000;
+
 export function createLivePizzaFetcher(options: LivePizzaFetchOptions = {}): LivePizzaFetcher {
   let nextPort = options.portBase ?? 29000 + Math.floor(Math.random() * 1000);
   const proxies = new Map<string, BifrostProxy>();
+  let authReady: Promise<void> | undefined;
   const fetcher = (async (scope) => {
     if (!scope.env || !scope.org_id || !scope.audience_id) return [];
+    authReady ??= ensureFreshGoogleAuth({
+      gcloudBin: options.gcloudBin ?? Bun.env.GCLOUD_BIN ?? "gcloud",
+      maxAgeMs: options.authMaxAgeMs ?? DEFAULT_AUTH_MAX_AGE_MS,
+      ...(options.onProgress ? { onProgress: options.onProgress } : {}),
+    });
+    await authReady;
     let proxy = proxies.get(scope.env);
     if (!proxy) {
       nextPort += 1;
@@ -40,6 +54,57 @@ export function createLivePizzaFetcher(options: LivePizzaFetchOptions = {}): Liv
     proxies.clear();
   };
   return fetcher;
+}
+
+async function ensureFreshGoogleAuth(options: {
+  gcloudBin: string;
+  maxAgeMs: number;
+  onProgress?: (message: string) => void;
+}): Promise<void> {
+  const cache = await googleAuthCacheAgeMs(new Date());
+  if (cache !== undefined && cache <= options.maxAgeMs) {
+    options.onProgress?.(`gcloud auth: credentials cache is fresh (${formatDuration(cache)} old).`);
+    return;
+  }
+
+  const reason = cache === undefined ? "credentials cache is missing" : `credentials cache is stale (${formatDuration(cache)} old)`;
+  const command = [options.gcloudBin, "auth", "login", "--update-adc"];
+  options.onProgress?.(`gcloud auth: ${reason}; running ${shellQuote(command)}.`);
+  const proc = Bun.spawn(command, {
+    stdin: "inherit",
+    stdout: "inherit",
+    stderr: "inherit",
+  });
+  const exitCode = await proc.exited;
+  if (exitCode !== 0) throw new Error(`gcloud auth login --update-adc failed with exit code ${exitCode}`);
+  options.onProgress?.("gcloud auth: login completed.");
+}
+
+export async function googleAuthCacheAgeMs(now: Date): Promise<number | undefined> {
+  const files = googleAuthCacheFiles();
+  const adcMtime = await fileMtimeMs(files[0]!);
+  if (adcMtime === undefined) return undefined;
+  const mtimes = await Promise.all(files.map(fileMtimeMs));
+  const newest = mtimes.filter((mtime): mtime is number => mtime !== undefined).sort((a, b) => b - a)[0];
+  return newest === undefined ? undefined : Math.max(0, now.getTime() - newest);
+}
+
+async function fileMtimeMs(file: string): Promise<number | undefined> {
+  try {
+    return (await stat(file)).mtimeMs;
+  } catch (err) {
+    if ((err as NodeJS.ErrnoException).code === "ENOENT") return undefined;
+    throw err;
+  }
+}
+
+function googleAuthCacheFiles(): string[] {
+  const configDir = Bun.env.CLOUDSDK_CONFIG ?? path.join(homedir(), ".config", "gcloud");
+  return [
+    path.join(configDir, "application_default_credentials.json"),
+    path.join(configDir, "credentials.db"),
+    path.join(configDir, "access_tokens.db"),
+  ];
 }
 
 async function startBifrostProxy(
@@ -199,6 +264,13 @@ function numberField(obj: Record<string, unknown>, key: string): number | undefi
 
 function delay(ms: number): Promise<void> {
   return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+function formatDuration(ms: number): string {
+  const minutes = Math.round(ms / 60_000);
+  if (minutes < 60) return `${minutes}m`;
+  const hours = Math.round(minutes / 60);
+  return `${hours}h`;
 }
 
 function shellQuote(args: string[]): string {

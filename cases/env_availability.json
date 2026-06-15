@@ -1,9 +1,15 @@
 {
   "environments": {
+    "albertsons": {
+      "status": "available",
+      "reason": "VPN enabled; retry Pizza/export preflight checks.",
+      "updated_at": "2026-05-18",
+      "source": "operator"
+    },
     "allegro": {
-      "status": "unavailable",
-      "reason": "This laptop cannot access the Allegro Bifrost proxy; skip Pizza/export preflight checks for this environment.",
-      "updated_at": "2026-05-16",
+      "status": "available",
+      "reason": "VPN enabled; retry Pizza/export preflight checks.",
+      "updated_at": "2026-05-18",
       "source": "operator"
     }
   }

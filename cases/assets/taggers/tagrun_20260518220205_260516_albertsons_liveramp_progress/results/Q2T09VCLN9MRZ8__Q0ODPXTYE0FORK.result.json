@@ -1,0 +1,32 @@
+{
+  "annotation": {
+    "ts": "2026-05-18T22:02:05.194Z",
+    "alert_ref": {
+      "incident_id": "Q2T09VCLN9MRZ8",
+      "alert_id": "Q0ODPXTYE0FORK"
+    },
+    "tags": [],
+    "decision": "needs_evidence",
+    "confidence": "low",
+    "summary": "No export check found for Q2T09VCLN9MRZ8/Q0ODPXTYE0FORK; run check-exports for this alert first.",
+    "source": {
+      "kind": "tagger",
+      "run_id": "tagrun_20260518220205_260516_albertsons_liveramp_progress",
+      "script_sha256": "874bd465281720cd743319cf67015bf2e8487c95e86cb107752300f05ddac306",
+      "script_path": "cases/assets/taggers/tagrun_20260518220205_260516_albertsons_liveramp_progress/260516-albertsons-liveramp-progress.ts"
+    },
+    "evidence": [
+      {
+        "kind": "export_check",
+        "matched": false,
+        "source": "/Users/wolever/Scratch/oncall-triage-v2/cases/checks/chk_q2t09vcln9mrz8_q0odpxtye0fork/check.json",
+        "summary": "ENOENT: no such file or directory, open '/Users/wolever/Scratch/oncall-triage-v2/cases/checks/chk_q2t09vcln9mrz8_q0odpxtye0fork/check.json'"
+      }
+    ]
+  },
+  "process": {
+    "stdout": "{\"decision\":\"needs_evidence\",\"confidence\":\"low\",\"summary\":\"No export check found for Q2T09VCLN9MRZ8/Q0ODPXTYE0FORK; run check-exports for this alert first.\",\"evidence\":[{\"kind\":\"export_check\",\"matched\":false,\"source\":\"/Users/wolever/Scratch/oncall-triage-v2/cases/checks/chk_q2t09vcln9mrz8_q0odpxtye0fork/check.json\",\"summary\":\"ENOENT: no such file or directory, open '/Users/wolever/Scratch/oncall-triage-v2/cases/checks/chk_q2t09vcln9mrz8_q0odpxtye0fork/check.json'\"}]}\n",
+    "stderr": "",
+    "exit_code": 0
+  }
+}

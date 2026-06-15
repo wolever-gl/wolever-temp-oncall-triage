@@ -3,8 +3,8 @@ import { mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import path from "node:path";
 import { checkExportsWorkspace } from "./checkExports";
-import { appendEvidence, groupImportedAlerts, groupTaggedAlerts, importPagerDutyIncident, loadAllGroups, loadMatchRules, mergeGroups, queryAlertFacts, readIncidentRecord, regenerateIndex, runAlertTagger, splitGroup, syncPagerDutyWorkspace, transitionGroup } from "./workspace";
-import type { PagerDutyIncidentStatusRecord } from "./pagerduty";
+import { appendEvidence, closePagerDutyAlertsForResolvedGroups, groupImportedAlerts, groupTaggedAlerts, importPagerDutyIncident, initWorkspace, loadAllGroups, loadMatchRules, mergeGroups, queryAlertFacts, readIncidentRecord, regenerateIndex, runAlertTagger, splitGroup, syncPagerDutyWorkspace, transitionGroup, writeGroupState } from "./workspace";
+import type { PagerDutyAlertStatusRecord, PagerDutyIncidentStatusRecord } from "./pagerduty";
 import type { PizzaExportRow } from "./schema";
 
 const fixture = path.resolve(import.meta.dir, "..", "fixtures", "pagerduty-alerts.json");
@@ -584,6 +584,70 @@ console.log(JSON.stringify({
       await rm(workspaceDir, { recursive: true, force: true });
     }
   });
+
+  test("close-pd plans only resolved-group alert refs absent from non-resolved groups", async () => {
+    const workspaceDir = await mkdtemp(path.join(tmpdir(), "oncall-triage-v2-"));
+    try {
+      await writeClosePdFixtureGroups(workspaceDir);
+      const resolveCalls: Array<{ incident: string; alertIds: string[] }> = [];
+
+      const result = await closePagerDutyAlertsForResolvedGroups({
+        workspaceDir,
+        groupFilter: { state: "resolved" },
+        fetchIncidentAlerts: closePdAlertFetcher({
+          QINC1: [
+            { id: "A1", status: "triggered" },
+            { id: "A2", status: "triggered" },
+            { id: "A3", status: "resolved" },
+          ],
+        }),
+        resolveIncidentAlerts: async (incident, alertIds) => {
+          resolveCalls.push({ incident, alertIds });
+        },
+      });
+
+      expect(result.selected_groups).toEqual(["resolved-one"]);
+      expect(result.resolved_only_refs.map((ref) => ref.alert_id)).toEqual(["A1", "A3", "A4"]);
+      expect(result.to_resolve.map((ref) => `${ref.incident_id}/${ref.alert_id}:${ref.status}`)).toEqual(["QINC1/A1:triggered"]);
+      expect(result.already_resolved.map((ref) => ref.alert_id)).toEqual(["A3"]);
+      expect(result.missing.map((ref) => ref.alert_id)).toEqual(["A4"]);
+      expect(result.resolved).toEqual([]);
+      expect(resolveCalls).toEqual([]);
+    } finally {
+      await rm(workspaceDir, { recursive: true, force: true });
+    }
+  });
+
+  test("close-pd applies PagerDuty resolution only for live non-resolved alerts", async () => {
+    const workspaceDir = await mkdtemp(path.join(tmpdir(), "oncall-triage-v2-"));
+    try {
+      await writeClosePdFixtureGroups(workspaceDir);
+      const resolveCalls: Array<{ incident: string; alertIds: string[] }> = [];
+
+      const result = await closePagerDutyAlertsForResolvedGroups({
+        workspaceDir,
+        groupFilter: { id: "resolved-one" },
+        apply: true,
+        fetchIncidentAlerts: closePdAlertFetcher({
+          QINC1: [
+            { id: "A1", status: "acknowledged" },
+            { id: "A2", status: "triggered" },
+            { id: "A3", status: "resolved" },
+            { id: "A4", status: "closed" },
+          ],
+        }),
+        resolveIncidentAlerts: async (incident, alertIds) => {
+          resolveCalls.push({ incident, alertIds });
+        },
+      });
+
+      expect(result.to_resolve.map((ref) => ref.alert_id)).toEqual(["A1"]);
+      expect(result.resolved).toEqual([{ incident_id: "QINC1", alert_id: "A1" }]);
+      expect(resolveCalls).toEqual([{ incident: "QINC1", alertIds: ["A1"] }]);
+    } finally {
+      await rm(workspaceDir, { recursive: true, force: true });
+    }
+  });
 });
 
 function groupFile(workspaceDir: string, state: string, groupId: string, file: string): string {
@@ -605,4 +669,50 @@ console.log(JSON.stringify({
 `,
   );
   return tagger;
+}
+
+async function writeClosePdFixtureGroups(workspaceDir: string): Promise<void> {
+  await initWorkspace(workspaceDir);
+  const now = "2026-05-18T12:00:00.000Z";
+  await writeGroupState(workspaceDir, {
+    group_id: "resolved-one",
+    state: "resolved",
+    tags: ["resolved:test"],
+    title: "Resolved fixture",
+    summary: "Resolved fixture.",
+    deterministic_key: "fixture:resolved",
+    grouping_version: 3,
+    created_at: now,
+    updated_at: now,
+    alert_refs: [
+      { incident_id: "QINC1", alert_id: "A1" },
+      { incident_id: "QINC1", alert_id: "A2" },
+      { incident_id: "QINC1", alert_id: "A3" },
+      { incident_id: "QINC1", alert_id: "A4" },
+    ],
+    incident_ids: ["QINC1"],
+    related_group_ids: [],
+  });
+  await writeGroupState(workspaceDir, {
+    group_id: "open-one",
+    state: "open",
+    tags: ["triage:needs_review"],
+    title: "Open fixture",
+    summary: "Open fixture.",
+    deterministic_key: "fixture:open",
+    grouping_version: 3,
+    created_at: now,
+    updated_at: now,
+    alert_refs: [{ incident_id: "QINC1", alert_id: "A2" }],
+    incident_ids: ["QINC1"],
+    related_group_ids: [],
+  });
+}
+
+function closePdAlertFetcher(fixtures: Record<string, PagerDutyAlertStatusRecord[]>): (incident: string) => Promise<PagerDutyAlertStatusRecord[]> {
+  return async (incident: string): Promise<PagerDutyAlertStatusRecord[]> => {
+    const alerts = fixtures[incident];
+    if (!alerts) throw new Error(`Missing PagerDuty fixture for ${incident}`);
+    return alerts;
+  };
 }

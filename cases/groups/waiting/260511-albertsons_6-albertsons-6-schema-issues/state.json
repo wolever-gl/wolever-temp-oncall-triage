@@ -1,0 +1,90 @@
+{
+  "group_id": "260511-albertsons_6-albertsons-6-schema-issues",
+  "state": "waiting",
+  "tags": [
+    "triage:schema-issue",
+    "triage:tag_grouped",
+    "waiting:schema-remediation"
+  ],
+  "title": "albertsons_6 schema issues",
+  "summary": "Waiting on Albertsons schema remediation; schema issue evidence has been communicated in the linked support Slack thread.",
+  "deterministic_key": "tag|260511-albertsons_6-albertsons-6-schema-issues",
+  "grouping_version": 3,
+  "created_at": "2026-05-18T21:38:13.605Z",
+  "updated_at": "2026-05-18T22:53:25.419Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q2EJWG22CER0LA",
+      "alert_id": "Q2N69VPQCMRHGL"
+    },
+    {
+      "incident_id": "Q2T09VCLN9MRZ8",
+      "alert_id": "Q0GX8AZ1GWYKL9"
+    },
+    {
+      "incident_id": "Q2T09VCLN9MRZ8",
+      "alert_id": "Q0ODPXTYE0FORK"
+    },
+    {
+      "incident_id": "Q2T09VCLN9MRZ8",
+      "alert_id": "Q14V88Y9W3XATI"
+    },
+    {
+      "incident_id": "Q2T09VCLN9MRZ8",
+      "alert_id": "Q14XXYJMQ2YAP3"
+    },
+    {
+      "incident_id": "Q2T09VCLN9MRZ8",
+      "alert_id": "Q1MJ4HIBTPB61E"
+    },
+    {
+      "incident_id": "Q2T09VCLN9MRZ8",
+      "alert_id": "Q214HEH2KED82E"
+    },
+    {
+      "incident_id": "Q2T09VCLN9MRZ8",
+      "alert_id": "Q24L2JIWVY4GIS"
+    },
+    {
+      "incident_id": "Q2T09VCLN9MRZ8",
+      "alert_id": "Q2FA9QPTXF9MJM"
+    },
+    {
+      "incident_id": "Q2T09VCLN9MRZ8",
+      "alert_id": "Q2MNS4QOMCJWAW"
+    },
+    {
+      "incident_id": "Q2T09VCLN9MRZ8",
+      "alert_id": "Q2TYR6XMVMLGTB"
+    },
+    {
+      "incident_id": "Q2T09VCLN9MRZ8",
+      "alert_id": "Q3HGOVLPIQWNZ0"
+    },
+    {
+      "incident_id": "Q2T09VCLN9MRZ8",
+      "alert_id": "Q3TL521CW7Y2J2"
+    },
+    {
+      "incident_id": "Q38JR11G2ENK2W",
+      "alert_id": "Q32J02DN0JRYZ0"
+    }
+  ],
+  "incident_ids": [
+    "Q2EJWG22CER0LA",
+    "Q2T09VCLN9MRZ8",
+    "Q38JR11G2ENK2W"
+  ],
+  "related_group_ids": [
+    "260505-albertsons_6-snapshotting-schema-error",
+    "260511-albertsons_6-snapshotting-error",
+    "260511-albertsons_6-snapshotting-processing",
+    "260512-albertsons_6-client-sent-export-failure",
+    "260512-albertsons_6-liveramp-waiting-uploads",
+    "260513-albertsons_6-client-sent-export-failure",
+    "260514-albertsons_6-client-sent-export-failure",
+    "grp_260512_albertsons_6_client_sent_export_failure_split_0065",
+    "grp_260513_albertsons_6_client_sent_export_failure_split_0066",
+    "grp_260514_albertsons_6_client_sent_export_failure_split_0067"
+  ]
+}

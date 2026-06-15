@@ -1,0 +1,93 @@
+{
+  "annotation": {
+    "ts": "2026-05-18T21:23:33.902Z",
+    "alert_ref": {
+      "incident_id": "Q2T09VCLN9MRZ8",
+      "alert_id": "Q1MJ4HIBTPB61E"
+    },
+    "tags": [
+      "evidence:albertsons-schema-issue",
+      "triage:schema-issue"
+    ],
+    "decision": "tag",
+    "confidence": "high",
+    "summary": "Q2T09VCLN9MRZ8/Q1MJ4HIBTPB61E audience 10370 has scoped Albertsons schema evidence (export_check, alert_annotation, group_evidence).",
+    "source": {
+      "kind": "tagger",
+      "run_id": "tagrun_20260518212333_260518_albertsons_schema_issues",
+      "script_sha256": "0c838644e397e5201cc1466a0f574fa39a20ae5be85ebedd2df3cd84113f2c91",
+      "script_path": "cases/assets/taggers/tagrun_20260518212333_260518_albertsons_schema_issues/260518-albertsons-schema-issues.ts"
+    },
+    "evidence": [
+      {
+        "kind": "export_check",
+        "matched": true,
+        "source": "/Users/wolever/Scratch/oncall-triage-v2/cases/checks/chk_q2t09vcln9mrz8_q1mj4hibtpb61e/check.json",
+        "summary": "Export check contains schema evidence: check=blocked; matches=1.",
+        "data": {
+          "check_state": "blocked",
+          "blockers": [
+            "snapshotting_error_requires_review"
+          ],
+          "run_evaluations": [
+            {
+              "export_run_id": "10370-live_ramp_activation_2259-scheduled__2026-05-05T00:00:00+00:00",
+              "health": "blocked",
+              "blockers": [
+                "snapshotting_error_requires_review"
+              ],
+              "snapshotting_state": "snapshotting_error",
+              "export_state": "no_batches",
+              "failure_reason": "missing_table_field",
+              "row_created_at": "2026-05-05T04:50:59.351764+00:00"
+            }
+          ],
+          "updated_at": "2026-05-16T21:34:59.617Z"
+        }
+      },
+      {
+        "kind": "alert_annotation",
+        "matched": true,
+        "source": "/Users/wolever/Scratch/oncall-triage-v2/cases/indexes/alert_annotations.jsonl",
+        "summary": "Existing alert annotations contain schema evidence (3 match(es)).",
+        "data": {
+          "tags": [
+            "evidence:albertsons-liveramp-snapshotting-error",
+            "evidence:snapshotting-schema-error"
+          ],
+          "summaries": [
+            "Audience 10370: snapshotting-schema-error (classification=snapshotting-schema-error; check=blocked; healthy_runs=0; monitoring_runs=0; blocked_runs=1; blockers=snapshotting_error_requires_review).",
+            "Audience 10370: snapshotting-schema-error (classification=snapshotting-schema-error; check=blocked; healthy_runs=0; monitoring_runs=0; blocked_runs=1; blockers=snapshotting_error_requires_review).",
+            "Audience 10370: snapshotting-schema-error (classification=snapshotting-schema-error; check=blocked; healthy_runs=0; monitoring_runs=0; blocked_runs=1; blockers=snapshotting_error_requires_review)."
+          ]
+        }
+      },
+      {
+        "kind": "group_evidence",
+        "matched": true,
+        "source": "/Users/wolever/Scratch/oncall-triage-v2/cases/groups/waiting/260505-albertsons_6-snapshotting-schema-error/evidence.jsonl",
+        "summary": "Scoped group evidence contains schema evidence for Q2T09VCLN9MRZ8/Q1MJ4HIBTPB61E audience 10370.",
+        "data": {
+          "group_id": "260505-albertsons_6-snapshotting-schema-error",
+          "evidence": [
+            {
+              "kind": "glcli_pizza",
+              "source": "glcli --env albertsons bifrost pizza",
+              "summary": "Live pizza corroboration found no later successful terminal export for any grouped audience. Original checked runs are snapshotting_error/no_batches with failure_reason=missing_table_field; latest rows are still snapshotting_processing/no_batches or snapshotting_error/no_batches."
+            },
+            {
+              "kind": "gcloud_logs",
+              "source": "gcloud logging read gl-client-albertsons snapshotting-30755505",
+              "summary": "Scoped snapshotting ERROR logs joined by grouped audience ids show Quervice pre_snapshotting_check failures because audience definitions reference missing fields in source table RFM_Category_Group."
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "process": {
+    "stdout": "{\"decision\":\"tag\",\"tags\":[\"evidence:albertsons-schema-issue\",\"triage:schema-issue\"],\"confidence\":\"high\",\"summary\":\"Q2T09VCLN9MRZ8/Q1MJ4HIBTPB61E audience 10370 has scoped Albertsons schema evidence (export_check, alert_annotation, group_evidence).\",\"evidence\":[{\"kind\":\"export_check\",\"matched\":true,\"source\":\"/Users/wolever/Scratch/oncall-triage-v2/cases/checks/chk_q2t09vcln9mrz8_q1mj4hibtpb61e/check.json\",\"summary\":\"Export check contains schema evidence: check=blocked; matches=1.\",\"data\":{\"check_state\":\"blocked\",\"blockers\":[\"snapshotting_error_requires_review\"],\"run_evaluations\":[{\"export_run_id\":\"10370-live_ramp_activation_2259-scheduled__2026-05-05T00:00:00+00:00\",\"health\":\"blocked\",\"blockers\":[\"snapshotting_error_requires_review\"],\"snapshotting_state\":\"snapshotting_error\",\"export_state\":\"no_batches\",\"failure_reason\":\"missing_table_field\",\"row_created_at\":\"2026-05-05T04:50:59.351764+00:00\"}],\"updated_at\":\"2026-05-16T21:34:59.617Z\"}},{\"kind\":\"alert_annotation\",\"matched\":true,\"source\":\"/Users/wolever/Scratch/oncall-triage-v2/cases/indexes/alert_annotations.jsonl\",\"summary\":\"Existing alert annotations contain schema evidence (3 match(es)).\",\"data\":{\"tags\":[\"evidence:albertsons-liveramp-snapshotting-error\",\"evidence:snapshotting-schema-error\"],\"summaries\":[\"Audience 10370: snapshotting-schema-error (classification=snapshotting-schema-error; check=blocked; healthy_runs=0; monitoring_runs=0; blocked_runs=1; blockers=snapshotting_error_requires_review).\",\"Audience 10370: snapshotting-schema-error (classification=snapshotting-schema-error; check=blocked; healthy_runs=0; monitoring_runs=0; blocked_runs=1; blockers=snapshotting_error_requires_review).\",\"Audience 10370: snapshotting-schema-error (classification=snapshotting-schema-error; check=blocked; healthy_runs=0; monitoring_runs=0; blocked_runs=1; blockers=snapshotting_error_requires_review).\"]}},{\"kind\":\"group_evidence\",\"matched\":true,\"source\":\"/Users/wolever/Scratch/oncall-triage-v2/cases/groups/waiting/260505-albertsons_6-snapshotting-schema-error/evidence.jsonl\",\"summary\":\"Scoped group evidence contains schema evidence for Q2T09VCLN9MRZ8/Q1MJ4HIBTPB61E audience 10370.\",\"data\":{\"group_id\":\"260505-albertsons_6-snapshotting-schema-error\",\"evidence\":[{\"kind\":\"glcli_pizza\",\"source\":\"glcli --env albertsons bifrost pizza\",\"summary\":\"Live pizza corroboration found no later successful terminal export for any grouped audience. Original checked runs are snapshotting_error/no_batches with failure_reason=missing_table_field; latest rows are still snapshotting_processing/no_batches or snapshotting_error/no_batches.\"},{\"kind\":\"gcloud_logs\",\"source\":\"gcloud logging read gl-client-albertsons snapshotting-30755505\",\"summary\":\"Scoped snapshotting ERROR logs joined by grouped audience ids show Quervice pre_snapshotting_check failures because audience definitions reference missing fields in source table RFM_Category_Group.\"}]}}]}\n",
+    "stderr": "",
+    "exit_code": 0
+  }
+}

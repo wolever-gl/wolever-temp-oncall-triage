@@ -1,0 +1,18 @@
+{
+  "check_id": "chk_q0oagu4ovu9e01_q32b1a845lyzlp",
+  "source": "pagerduty",
+  "incident_id": "Q0OAGU4OVU9E01",
+  "alert_id": "Q32B1A845LYZLP",
+  "state": "not_applicable",
+  "scope": {
+    "match_strategy": "checked_export_run_ids",
+    "alert_created_at": "2026-05-18T12:58:37-07:00",
+    "checked_export_run_ids": []
+  },
+  "scope_key": "unknown_env|unknown_org|unknown_audience|unknown_destination|unknown_endpoint|unknown_run",
+  "run_evaluations": [],
+  "blockers": [],
+  "evidence_artifacts": [],
+  "created_at": "2026-05-18T20:06:06.388Z",
+  "updated_at": "2026-05-18T20:06:06.388Z"
+}

@@ -2,7 +2,7 @@
 import { autoMonitorExportGroup, autoResolveHealthyExportGroup, checkExportsWorkspace, loadPizzaRowsFile } from "./checkExports";
 import { matchesGroupFilter, mergeAlertFilter, parseFilterValues, type AlertFilter, type CommandFilters, type GroupFilter } from "./filters";
 import { createLivePizzaFetcher } from "./pizza";
-import { appendEvidence, groupImportedAlerts, groupTaggedAlerts, importPagerDutyIncident, initWorkspace, loadAllGroups, mergeGroups, queryAlertFacts, readGroupState, regenerateIndex, runAlertTagger, splitGroup, syncPagerDutyWorkspace, transitionGroup } from "./workspace";
+import { appendEvidence, closePagerDutyAlertsForResolvedGroups, groupImportedAlerts, groupTaggedAlerts, importPagerDutyIncident, initWorkspace, loadAllGroups, mergeGroups, queryAlertFacts, readGroupState, regenerateIndex, runAlertTagger, splitGroup, syncPagerDutyWorkspace, transitionGroup } from "./workspace";
 import type { GroupState, GroupStateName } from "./schema";
 
 async function main(argv: string[]): Promise<void> {
@@ -128,6 +128,27 @@ async function main(argv: string[]): Promise<void> {
       ...(args.incident ? { incidents: values(args, "incident") } : {}),
     });
     console.log(`Synced PagerDuty: imported=${result.imported.length}, refreshed=${result.refreshed.length}, resolved_groups=${result.resolved_groups.length}`);
+    return;
+  }
+  if (command === "close-pd") {
+    rejectRemovedSelectorAliases(args, ["group", "state"]);
+    const parsedFilters = commandFiltersFromArgs(args);
+    if (hasAlertFilter(parsedFilters.alert)) throw new Error("close-pd only supports group filters.");
+    const result = await closePagerDutyAlertsForResolvedGroups({
+      workspaceDir,
+      groupFilter: hasGroupFilter(parsedFilters.group) ? parsedFilters.group : { state: "resolved" },
+      apply: Boolean(args.apply),
+    });
+    console.log(`${result.apply ? "Closed" : "Dry-run close-pd"}: groups=${result.selected_groups.length}, resolved_only_refs=${result.resolved_only_refs.length}, already_resolved=${result.already_resolved.length}, missing=${result.missing.length}, ${result.apply ? "resolved" : "would_resolve"}=${result.apply ? result.resolved.length : result.to_resolve.length}`);
+    for (const [incidentId, refs] of groupCloseRowsByIncident(result.to_resolve)) {
+      const statuses = refs.map((ref) => `${ref.alert_id}:${ref.status}`).join(", ");
+      console.log(`${result.apply ? "Resolved" : "Would resolve"} ${incidentId}: ${refs.length} alert(s): ${statuses}`);
+    }
+    if (result.missing.length > 0) {
+      for (const [incidentId, refs] of groupCloseRowsByIncident(result.missing)) {
+        console.log(`Missing ${incidentId}: ${refs.map((ref) => ref.alert_id).join(", ")}`);
+      }
+    }
     return;
   }
   if (command === "check-exports") {
@@ -291,6 +312,20 @@ function hasGroupFilter(filter: GroupFilter): boolean {
   return Boolean(filter.id || filter.state || filter.incidentId || (filter.tags && filter.tags.length > 0));
 }
 
+function hasAlertFilter(filter: AlertFilter): boolean {
+  return Boolean(filter.incidentId || filter.orgId || filter.audienceId || filter.destination || filter.state || filter.alertRefs || filter.limit);
+}
+
+function groupCloseRowsByIncident<T extends { incident_id: string }>(refs: T[]): Array<[string, T[]]> {
+  const grouped = new Map<string, T[]>();
+  for (const ref of refs) {
+    const existing = grouped.get(ref.incident_id) ?? [];
+    existing.push(ref);
+    grouped.set(ref.incident_id, existing);
+  }
+  return [...grouped.entries()].sort(([left], [right]) => left.localeCompare(right));
+}
+
 function rejectRemovedSelectorAliases(args: Record<string, string | string[]>, flags: string[]): void {
   const used = flags.filter((flag) => args[flag] !== undefined);
   if (used.length === 0) return;
@@ -329,6 +364,7 @@ function usageText(): string {
   bun run oncall-triage merge <workspace> --source <id> --target <id> --rationale <text>
   bun run oncall-triage split <workspace> --group <id> --alerts <comma-separated-alert-ids> --rationale <text>
   bun run oncall-triage sync-pd <workspace> [--incident <pd-url-or-id>]
+  bun run oncall-triage close-pd <workspace> [--filter group.state=resolved] [--filter group.id=<id>] [--test] [--apply]
   bun run oncall-triage preflight <workspace> [--filter group.state=<state>] [--filter group.id=<id>]
   bun run oncall-triage check-exports <workspace> [--apply] [--auto-resolve] [--filter group.id=<id>] [--filter alert.destination=<destination>] [--filter alert.incident=<id>] [--filter alert.org=<org_id>] [--filter alert.audience=<id>] [--filter alert.state=<state>] [--pizza-rows-file <file>] [--limit <n>]
   bun run oncall-triage evidence <workspace> --group <id> --summary <text> [--kind <kind>] [--source <source>] [--link <label=url>] [--command <command>]

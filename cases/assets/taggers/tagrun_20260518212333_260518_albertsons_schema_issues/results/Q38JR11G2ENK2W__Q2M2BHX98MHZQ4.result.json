@@ -1,0 +1,24 @@
+{
+  "annotation": {
+    "ts": "2026-05-18T21:23:37.449Z",
+    "alert_ref": {
+      "incident_id": "Q38JR11G2ENK2W",
+      "alert_id": "Q2M2BHX98MHZQ4"
+    },
+    "tags": [],
+    "decision": "skip",
+    "confidence": "medium",
+    "summary": "Q38JR11G2ENK2W/Q2M2BHX98MHZQ4 audience 12878 has no scoped schema evidence.",
+    "source": {
+      "kind": "tagger",
+      "run_id": "tagrun_20260518212333_260518_albertsons_schema_issues",
+      "script_sha256": "0c838644e397e5201cc1466a0f574fa39a20ae5be85ebedd2df3cd84113f2c91",
+      "script_path": "cases/assets/taggers/tagrun_20260518212333_260518_albertsons_schema_issues/260518-albertsons-schema-issues.ts"
+    }
+  },
+  "process": {
+    "stdout": "{\"decision\":\"skip\",\"confidence\":\"medium\",\"summary\":\"Q38JR11G2ENK2W/Q2M2BHX98MHZQ4 audience 12878 has no scoped schema evidence.\"}\n",
+    "stderr": "",
+    "exit_code": 0
+  }
+}

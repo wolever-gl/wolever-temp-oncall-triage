@@ -1,0 +1,23 @@
+{
+  "group_id": "260518-unknown_org-insufficient-data-for-bifrost-queue-develop-sqs",
+  "state": "new",
+  "tags": [
+    "triage:needs_review"
+  ],
+  "title": "unknown_org insufficient-data-for-bifrost-queue-develop-sqs-",
+  "summary": "Insufficient data for bifrost_queue_develop_sqs_too_old_messages_bifrost_v2",
+  "deterministic_key": "v3|incident:Q0OAGU4OVU9E01|org:unknown_org|class:insufficient-data-for-bifrost-queue-develop-sqs-",
+  "grouping_version": 3,
+  "created_at": "2026-05-18T20:05:19.515Z",
+  "updated_at": "2026-05-18T20:05:19.515Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q0OAGU4OVU9E01",
+      "alert_id": "Q32B1A845LYZLP"
+    }
+  ],
+  "incident_ids": [
+    "Q0OAGU4OVU9E01"
+  ],
+  "related_group_ids": []
+}

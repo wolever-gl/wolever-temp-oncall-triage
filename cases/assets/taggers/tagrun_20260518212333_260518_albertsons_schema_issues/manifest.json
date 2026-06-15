@@ -1,0 +1,12 @@
+{
+  "run_id": "tagrun_20260518212333_260518_albertsons_schema_issues",
+  "created_at": "2026-05-18T21:23:33.032Z",
+  "script_path": "cases/assets/taggers/tagrun_20260518212333_260518_albertsons_schema_issues/260518-albertsons-schema-issues.ts",
+  "script_sha256": "0c838644e397e5201cc1466a0f574fa39a20ae5be85ebedd2df3cd84113f2c91",
+  "filters": {
+    "orgId": "albertsons_6"
+  },
+  "requested_tags": [],
+  "candidate_count": 183,
+  "processed_count": 183
+}

@@ -39,8 +39,9 @@ Use this repo as a case-workspace system, not a spreadsheet workflow.
 - Use namespaced tags such as `triage:*`, `waiting:*`, `monitoring:*`, and `resolved:*`.
 - No scheduler for now. Use `next_check_at` fields when a future revisit is needed.
 - Runbooks are structured instructions and may include tool functions or scripts.
-- Before manual case investigation, run the export preflight when the case has
-  export-alert evidence:
+- Before manual case investigation, check Google auth freshness and run
+  `gcloud auth login --update-adc` when credentials are missing or stale, then
+  run the export preflight when the case has export-alert evidence:
   `bun run oncall-triage preflight cases --filter group.id=<group-id>`.
   For a full pass across new cases, run
   `bun run oncall-triage preflight cases --filter group.state=new`.

@@ -1,0 +1,80 @@
+{
+  "annotation": {
+    "ts": "2026-05-18T22:05:34.680Z",
+    "alert_ref": {
+      "incident_id": "Q38JR11G2ENK2W",
+      "alert_id": "Q02ZG08UGCS5OA"
+    },
+    "tags": [
+      "classification:client_sent_recovered",
+      "evidence:albertsons-audience-classified",
+      "resolved:export-healthy"
+    ],
+    "decision": "tag",
+    "confidence": "high",
+    "summary": "Q38JR11G2ENK2W/Q02ZG08UGCS5OA audience 12874 classified as client_sent_recovered from same-audience recovered export evidence.",
+    "source": {
+      "kind": "tagger",
+      "run_id": "tagrun_20260518220530_260518_albertsons_audience_failure_classifier",
+      "script_sha256": "3bdc639f0839dc39f7bf01f0447bcf938c8197bdb3424a6f4000e623722078bc",
+      "script_path": "cases/assets/taggers/tagrun_20260518220530_260518_albertsons_audience_failure_classifier/260518-albertsons-audience-failure-classifier.ts"
+    },
+    "evidence": [
+      {
+        "kind": "same_audience_annotation",
+        "matched": true,
+        "summaries": [
+          "Q38JR11G2ENK2W/Q0UJ754HNUZA0W audience 12874 has no scoped schema evidence.",
+          "Q38JR11G2ENK2W/Q02ZG08UGCS5OA audience 12874 has no scoped schema evidence.",
+          "Q38JR11G2ENK2W/Q0UJ754HNUZA0W audience 12874 has no scoped schema evidence.",
+          "Audience 12874: needs-more-export-evidence (classification=needs-more-export-evidence; check=blocked; healthy_runs=0; monitoring_runs=0; blocked_runs=0; blockers=missing_run_identity).",
+          "Audience 12874: export-complete (classification=export-complete; check=healthy_closed; healthy_runs=1; monitoring_runs=0; blocked_runs=0)."
+        ],
+        "sources": [
+          {
+            "kind": "tagger",
+            "run_id": "tagrun_20260518212333_260518_albertsons_schema_issues",
+            "script_sha256": "0c838644e397e5201cc1466a0f574fa39a20ae5be85ebedd2df3cd84113f2c91",
+            "script_path": "cases/assets/taggers/tagrun_20260518212333_260518_albertsons_schema_issues/260518-albertsons-schema-issues.ts"
+          },
+          {
+            "kind": "tagger",
+            "run_id": "tagrun_20260518213748_260518_albertsons_schema_issues",
+            "script_sha256": "ab86850e19eb381902fa37cdd6366d2d32e4c7c684035c486dad77b420d9c532",
+            "script_path": "cases/assets/taggers/tagrun_20260518213748_260518_albertsons_schema_issues/260518-albertsons-schema-issues.ts"
+          },
+          {
+            "kind": "tagger",
+            "run_id": "tagrun_20260518213748_260518_albertsons_schema_issues",
+            "script_sha256": "ab86850e19eb381902fa37cdd6366d2d32e4c7c684035c486dad77b420d9c532",
+            "script_path": "cases/assets/taggers/tagrun_20260518213748_260518_albertsons_schema_issues/260518-albertsons-schema-issues.ts"
+          },
+          {
+            "kind": "tagger",
+            "run_id": "tagrun_20260518220205_260516_albertsons_liveramp_progress",
+            "script_sha256": "874bd465281720cd743319cf67015bf2e8487c95e86cb107752300f05ddac306",
+            "script_path": "cases/assets/taggers/tagrun_20260518220205_260516_albertsons_liveramp_progress/260516-albertsons-liveramp-progress.ts"
+          },
+          {
+            "kind": "tagger",
+            "run_id": "tagrun_20260518220205_260516_albertsons_liveramp_progress",
+            "script_sha256": "874bd465281720cd743319cf67015bf2e8487c95e86cb107752300f05ddac306",
+            "script_path": "cases/assets/taggers/tagrun_20260518220205_260516_albertsons_liveramp_progress/260516-albertsons-liveramp-progress.ts"
+          }
+        ]
+      },
+      {
+        "kind": "group_evidence",
+        "source": "/Users/wolever/Scratch/oncall-triage-v2/cases/groups/resolved/260514-albertsons_6-client-sent-export-failure/evidence.jsonl",
+        "summary": "Remaining 5/14 Albertsons client-sent audiences have later successful runs: 12213 export_finished at 2026-05-15 04:41:01 UTC; 12862 export_finished at 2026-05-16 00:59:11 UTC; 12865 export_finished at 2026-05-16 00:32:34 UTC; 12866 export_finished at 2026-05-16 00:34:44 UTC; 12873 export_finished at 2026-05-16 00:29:57 UTC; 12874 export_finished at 2026-05-16 00:33:54 UTC.",
+        "group_id": "260514-albertsons_6-client-sent-export-failure",
+        "state": "resolved"
+      }
+    ]
+  },
+  "process": {
+    "stdout": "{\"decision\":\"tag\",\"tags\":[\"evidence:albertsons-audience-classified\",\"classification:client_sent_recovered\",\"resolved:export-healthy\"],\"confidence\":\"high\",\"summary\":\"Q38JR11G2ENK2W/Q02ZG08UGCS5OA audience 12874 classified as client_sent_recovered from same-audience recovered export evidence.\",\"evidence\":[{\"kind\":\"same_audience_annotation\",\"matched\":true,\"summaries\":[\"Q38JR11G2ENK2W/Q0UJ754HNUZA0W audience 12874 has no scoped schema evidence.\",\"Q38JR11G2ENK2W/Q02ZG08UGCS5OA audience 12874 has no scoped schema evidence.\",\"Q38JR11G2ENK2W/Q0UJ754HNUZA0W audience 12874 has no scoped schema evidence.\",\"Audience 12874: needs-more-export-evidence (classification=needs-more-export-evidence; check=blocked; healthy_runs=0; monitoring_runs=0; blocked_runs=0; blockers=missing_run_identity).\",\"Audience 12874: export-complete (classification=export-complete; check=healthy_closed; healthy_runs=1; monitoring_runs=0; blocked_runs=0).\"],\"sources\":[{\"kind\":\"tagger\",\"run_id\":\"tagrun_20260518212333_260518_albertsons_schema_issues\",\"script_sha256\":\"0c838644e397e5201cc1466a0f574fa39a20ae5be85ebedd2df3cd84113f2c91\",\"script_path\":\"cases/assets/taggers/tagrun_20260518212333_260518_albertsons_schema_issues/260518-albertsons-schema-issues.ts\"},{\"kind\":\"tagger\",\"run_id\":\"tagrun_20260518213748_260518_albertsons_schema_issues\",\"script_sha256\":\"ab86850e19eb381902fa37cdd6366d2d32e4c7c684035c486dad77b420d9c532\",\"script_path\":\"cases/assets/taggers/tagrun_20260518213748_260518_albertsons_schema_issues/260518-albertsons-schema-issues.ts\"},{\"kind\":\"tagger\",\"run_id\":\"tagrun_20260518213748_260518_albertsons_schema_issues\",\"script_sha256\":\"ab86850e19eb381902fa37cdd6366d2d32e4c7c684035c486dad77b420d9c532\",\"script_path\":\"cases/assets/taggers/tagrun_20260518213748_260518_albertsons_schema_issues/260518-albertsons-schema-issues.ts\"},{\"kind\":\"tagger\",\"run_id\":\"tagrun_20260518220205_260516_albertsons_liveramp_progress\",\"script_sha256\":\"874bd465281720cd743319cf67015bf2e8487c95e86cb107752300f05ddac306\",\"script_path\":\"cases/assets/taggers/tagrun_20260518220205_260516_albertsons_liveramp_progress/260516-albertsons-liveramp-progress.ts\"},{\"kind\":\"tagger\",\"run_id\":\"tagrun_20260518220205_260516_albertsons_liveramp_progress\",\"script_sha256\":\"874bd465281720cd743319cf67015bf2e8487c95e86cb107752300f05ddac306\",\"script_path\":\"cases/assets/taggers/tagrun_20260518220205_260516_albertsons_liveramp_progress/260516-albertsons-liveramp-progress.ts\"}]},{\"kind\":\"group_evidence\",\"source\":\"/Users/wolever/Scratch/oncall-triage-v2/cases/groups/resolved/260514-albertsons_6-client-sent-export-failure/evidence.jsonl\",\"summary\":\"Remaining 5/14 Albertsons client-sent audiences have later successful runs: 12213 export_finished at 2026-05-15 04:41:01 UTC; 12862 export_finished at 2026-05-16 00:59:11 UTC; 12865 export_finished at 2026-05-16 00:32:34 UTC; 12866 export_finished at 2026-05-16 00:34:44 UTC; 12873 export_finished at 2026-05-16 00:29:57 UTC; 12874 export_finished at 2026-05-16 00:33:54 UTC.\",\"group_id\":\"260514-albertsons_6-client-sent-export-failure\",\"state\":\"resolved\"}]}\n",
+    "stderr": "",
+    "exit_code": 0
+  }
+}

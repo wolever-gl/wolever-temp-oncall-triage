@@ -24,7 +24,9 @@ Triage is an evidence loop, not a one-shot grouping pass:
 2. Open `cases/index.md` and take the highest-priority non-resolved group. Start
    with the top `New` group unless there is a stronger operational reason to
    continue an `open`, `monitoring`, or `waiting` group.
-3. Before manual investigation, run the case-scoped export preflight:
+3. Before manual investigation, check Google auth freshness and run
+   `gcloud auth login --update-adc` when credentials are missing or stale,
+   then run the case-scoped export preflight:
 
    ```bash
    bun run oncall-triage preflight cases --filter group.id=<group-id>
@@ -161,9 +163,10 @@ instead. Command arguments with distinct meanings, such as
 `check-exports` keeps one live Bifrost proxy open per environment for the
 duration of a command run, reuses it across checks, and closes it before exit.
 With `--filter group.id=<group-id> --apply --auto-resolve`, it acts as the first
-investigation preflight for a case: run Pizza for the group's alert facts,
-write export-check evidence, and resolve the group when every alert-scoped
-check is `healthy_closed`.
+investigation preflight for a case: first check Google auth freshness and
+refresh credentials with `gcloud auth login --update-adc` when needed, then run
+Pizza for the group's alert facts, write export-check evidence, and resolve the
+group when every alert-scoped check is `healthy_closed`.
 `preflight --filter group.id=<group-id>` runs that case-scoped operation for one group.
 Without `group.id`, `preflight` runs it across every group in a
 selected state, defaulting to `new`.

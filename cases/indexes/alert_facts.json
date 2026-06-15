@@ -11498,5 +11498,85 @@
     "summary": "EVgo (EVgo Prod) - Audience 29790: Audience Export failure for 29790 sent to client.",
     "org_id": "evgo_402",
     "audience_id": "29790"
+  },
+  {
+    "incident_id": "Q24RX6QMXPYKQR",
+    "alert_id": "Q3PQYOTMMVHRGR",
+    "created_at": "2026-05-18T04:52:18-07:00",
+    "summary": "[flywheel-prod-328213] *birchwood_274_main_daily_v1.0.3:* pipeline failed! *Execution Time*: 2026-05-17 08:00:00+00:00 *Log Url*: https://6b1c82ba369c41068abf46769283471e-dot-us-central1.composer.googleusercontent.com/dags/birchwood_274_main_daily_v1.0.3/grid?dag_run_id=scheduled__2026-05-17T08%3A00%3A00%2B00%3A00&task_id=dbt_pipeline.dbt_build&base_date=2026-05-17T08%3A00%3A00%2B0000&tab=logs",
+    "export_check_strategy": "checked_export_run_ids"
+  },
+  {
+    "incident_id": "Q2CAIXK91KMVOP",
+    "alert_id": "Q03J7N55FWQB24",
+    "created_at": "2026-05-18T06:52:43-07:00",
+    "summary": "albertsons (Albertsons Media) - Audience 11826: Audience Export failure for 11826 sent to client.",
+    "org_id": "albertsons_6",
+    "audience_id": "11826",
+    "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q29WSMU9ECGBC8",
+    "alert_id": "Q3Z9IW2NW1HVDW",
+    "created_at": "2026-05-18T07:32:57-07:00",
+    "summary": "allegro (Advertising): Exports for audience 1097 failed with states: <(snapshotting_finished,export_error)>",
+    "org_id": "allegro_3",
+    "audience_id": "1097",
+    "destination_type": "facebook",
+    "destination_product": "facebook",
+    "endpoint_id": "app_facebook_27",
+    "state_tuple": {
+      "snapshotting": "snapshotting_finished",
+      "export": "export_error"
+    },
+    "checked_export_run_ids": [
+      "1097-facebook_1473-scheduled__2026-05-18T00:00:00+00:00"
+    ],
+    "export_check_strategy": "checked_export_run_ids"
+  },
+  {
+    "incident_id": "Q2HVIA79CPFWPS",
+    "alert_id": "Q00B2REAKTB2PD",
+    "created_at": "2026-05-18T07:32:58-07:00",
+    "summary": "allegro (Advertising): Exports for audience 1107 failed with states: <(snapshotting_finished,export_error)>",
+    "org_id": "allegro_3",
+    "audience_id": "1107",
+    "destination_type": "facebook",
+    "destination_product": "facebook",
+    "endpoint_id": "app_facebook_27",
+    "state_tuple": {
+      "snapshotting": "snapshotting_finished",
+      "export": "export_error"
+    },
+    "checked_export_run_ids": [
+      "1107-facebook_1502-scheduled__2026-05-18T00:00:00+00:00"
+    ],
+    "export_check_strategy": "checked_export_run_ids"
+  },
+  {
+    "incident_id": "Q2IX58AKEIP919",
+    "alert_id": "Q241163C11ECDT",
+    "created_at": "2026-05-18T07:33:19-07:00",
+    "summary": "allegro (Marketing): Exports for audience 1266 failed with states: <(snapshotting_finished,export_processing)>",
+    "org_id": "allegro_3",
+    "audience_id": "1266",
+    "destination_type": "dv360",
+    "destination_product": "dv360",
+    "endpoint_id": "app_dv360_5",
+    "state_tuple": {
+      "snapshotting": "snapshotting_finished",
+      "export": "export_processing"
+    },
+    "checked_export_run_ids": [
+      "1266-dv360_1668-scheduled__2026-05-18T00:00:00+00:00"
+    ],
+    "export_check_strategy": "checked_export_run_ids"
+  },
+  {
+    "incident_id": "Q0OAGU4OVU9E01",
+    "alert_id": "Q32B1A845LYZLP",
+    "created_at": "2026-05-18T12:58:37-07:00",
+    "summary": "Insufficient data for bifrost_queue_develop_sqs_too_old_messages_bifrost_v2",
+    "export_check_strategy": "checked_export_run_ids"
   }
 ]

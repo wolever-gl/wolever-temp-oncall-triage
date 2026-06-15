@@ -3511,6 +3511,18 @@
     }
   },
   {
+    "check_id": "chk_q0oagu4ovu9e01_q32b1a845lyzlp",
+    "incident_id": "Q0OAGU4OVU9E01",
+    "alert_id": "Q32B1A845LYZLP",
+    "state": "not_applicable",
+    "blockers": [],
+    "scope": {
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-18T12:58:37-07:00",
+      "checked_export_run_ids": []
+    }
+  },
+  {
     "check_id": "chk_q0x2d8tr82zqv9_q0jcb7g5h5g6u4",
     "incident_id": "Q0X2D8TR82ZQV9",
     "alert_id": "Q0JCB7G5H5G6U4",
@@ -7377,6 +7389,18 @@
     }
   },
   {
+    "check_id": "chk_q24rx6qmxpykqr_q3pqyotmmvhrgr",
+    "incident_id": "Q24RX6QMXPYKQR",
+    "alert_id": "Q3PQYOTMMVHRGR",
+    "state": "not_applicable",
+    "blockers": [],
+    "scope": {
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-18T04:52:18-07:00",
+      "checked_export_run_ids": []
+    }
+  },
+  {
     "check_id": "chk_q269wmzf4mkmnl_q0bqkjwvbsb8ay",
     "incident_id": "Q269WMZF4MKMNL",
     "alert_id": "Q0BQKJWVBSB8AY",
@@ -7424,6 +7448,47 @@
         "36059-marketing_cloud_21999-scheduled__2026-05-14T16:30:00+00:00"
       ],
       "glcli": "glcli --env prod bifrost pizza --audience-id 36059 --org-id 395"
+    }
+  },
+  {
+    "check_id": "chk_q29wsmu9ecgbc8_q3z9iw2nw1hvdw",
+    "incident_id": "Q29WSMU9ECGBC8",
+    "alert_id": "Q3Z9IW2NW1HVDW",
+    "state": "open",
+    "blockers": [
+      "evidence_unavailable"
+    ],
+    "next_check_at": "2026-05-18T20:41:05.290Z",
+    "scope": {
+      "env": "allegro",
+      "org_id": "3",
+      "audience_id": "1097",
+      "endpoint_id": "app_facebook_27",
+      "destination_type": "facebook",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-18T07:32:57-07:00",
+      "checked_export_run_ids": [
+        "1097-facebook_1473-scheduled__2026-05-18T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env allegro bifrost pizza --audience-id 1097 --org-id 3"
+    }
+  },
+  {
+    "check_id": "chk_q2caixk91kmvop_q03j7n55fwqb24",
+    "incident_id": "Q2CAIXK91KMVOP",
+    "alert_id": "Q03J7N55FWQB24",
+    "state": "blocked",
+    "blockers": [
+      "missing_export_after_alert"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "11826",
+      "match_strategy": "any_export_after_alert",
+      "alert_created_at": "2026-05-18T06:52:43-07:00",
+      "checked_export_run_ids": [],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 11826 --org-id 6"
     }
   },
   {
@@ -7964,6 +8029,52 @@
       "alert_created_at": "2026-05-12T16:05:54-07:00",
       "checked_export_run_ids": [],
       "glcli": "glcli --env albertsons bifrost pizza --audience-id 12801 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q2hvia79cpfwps_q00b2reaktb2pd",
+    "incident_id": "Q2HVIA79CPFWPS",
+    "alert_id": "Q00B2REAKTB2PD",
+    "state": "open",
+    "blockers": [
+      "evidence_unavailable"
+    ],
+    "next_check_at": "2026-05-18T20:41:32.692Z",
+    "scope": {
+      "env": "allegro",
+      "org_id": "3",
+      "audience_id": "1107",
+      "endpoint_id": "app_facebook_27",
+      "destination_type": "facebook",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-18T07:32:58-07:00",
+      "checked_export_run_ids": [
+        "1107-facebook_1502-scheduled__2026-05-18T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env allegro bifrost pizza --audience-id 1107 --org-id 3"
+    }
+  },
+  {
+    "check_id": "chk_q2ix58akeip919_q241163c11ecdt",
+    "incident_id": "Q2IX58AKEIP919",
+    "alert_id": "Q241163C11ECDT",
+    "state": "open",
+    "blockers": [
+      "evidence_unavailable"
+    ],
+    "next_check_at": "2026-05-18T20:40:37.702Z",
+    "scope": {
+      "env": "allegro",
+      "org_id": "3",
+      "audience_id": "1266",
+      "endpoint_id": "app_dv360_5",
+      "destination_type": "dv360",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-18T07:33:19-07:00",
+      "checked_export_run_ids": [
+        "1266-dv360_1668-scheduled__2026-05-18T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env allegro bifrost pizza --audience-id 1266 --org-id 3"
     }
   },
   {
@@ -10022,7 +10133,7 @@
     "alert_id": "Q2FA9QPTXF9MJM",
     "state": "monitoring",
     "blockers": [],
-    "next_check_at": "2026-05-17T16:31:26.859Z",
+    "next_check_at": "2026-05-18T20:36:12.917Z",
     "scope": {
       "env": "albertsons",
       "org_id": "6",
@@ -10524,7 +10635,7 @@
     "alert_id": "Q2TYR6XMVMLGTB",
     "state": "monitoring",
     "blockers": [],
-    "next_check_at": "2026-05-17T16:31:26.859Z",
+    "next_check_at": "2026-05-18T20:36:12.917Z",
     "scope": {
       "env": "albertsons",
       "org_id": "6",
@@ -10874,7 +10985,7 @@
     "alert_id": "Q3HGOVLPIQWNZ0",
     "state": "monitoring",
     "blockers": [],
-    "next_check_at": "2026-05-17T16:31:26.859Z",
+    "next_check_at": "2026-05-18T20:36:12.917Z",
     "scope": {
       "env": "albertsons",
       "org_id": "6",
@@ -11531,10 +11642,11 @@
     "check_id": "chk_q38jr11g2enk2w_q2m2bhx98mhzq4",
     "incident_id": "Q38JR11G2ENK2W",
     "alert_id": "Q2M2BHX98MHZQ4",
-    "state": "blocked",
+    "state": "open",
     "blockers": [
-      "missing_export_after_alert"
+      "evidence_unavailable"
     ],
+    "next_check_at": "2026-05-18T20:17:22.257Z",
     "scope": {
       "env": "albertsons",
       "org_id": "6",
@@ -11615,9 +11727,11 @@
     "check_id": "chk_q38jr11g2enk2w_q3wnloqe86qywa",
     "incident_id": "Q38JR11G2ENK2W",
     "alert_id": "Q3WNLOQE86QYWA",
-    "state": "monitoring",
-    "blockers": [],
-    "next_check_at": "2026-05-16T23:26:07.319Z",
+    "state": "open",
+    "blockers": [
+      "evidence_unavailable"
+    ],
+    "next_check_at": "2026-05-18T20:17:22.257Z",
     "scope": {
       "env": "albertsons",
       "org_id": "6",
@@ -11680,10 +11794,11 @@
     "check_id": "chk_q3hwkw0fs3vthe_q2tvz6zmw55s6y",
     "incident_id": "Q3HWKW0FS3VTHE",
     "alert_id": "Q2TVZ6ZMW55S6Y",
-    "state": "blocked",
+    "state": "open",
     "blockers": [
-      "missing_pizza_row"
+      "evidence_unavailable"
     ],
+    "next_check_at": "2026-05-18T20:18:24.284Z",
     "scope": {
       "env": "prod",
       "org_id": "310",
