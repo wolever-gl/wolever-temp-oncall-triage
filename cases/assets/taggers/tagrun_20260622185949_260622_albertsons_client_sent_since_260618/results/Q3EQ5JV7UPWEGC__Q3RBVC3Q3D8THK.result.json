@@ -1,0 +1,26 @@
+{
+  "annotation": {
+    "ts": "2026-06-22T18:59:52.495Z",
+    "alert_ref": {
+      "incident_id": "Q3EQ5JV7UPWEGC",
+      "alert_id": "Q3RBVC3Q3D8THK"
+    },
+    "tags": [
+      "evidence:albertsons-client-sent-since-260618"
+    ],
+    "decision": "tag",
+    "confidence": "high",
+    "summary": "Albertsons sent-to-client export failure since 2026-06-18 for audience 1993.",
+    "source": {
+      "kind": "tagger",
+      "run_id": "tagrun_20260622185949_260622_albertsons_client_sent_since_260618",
+      "script_sha256": "1172a928dda32895163c85b485704e070ad1e9de8ff98687d9bfe8afee1edbde",
+      "script_path": "cases/assets/taggers/tagrun_20260622185949_260622_albertsons_client_sent_since_260618/260622-albertsons-client-sent-since-260618.ts"
+    }
+  },
+  "process": {
+    "stdout": "{\"decision\":\"tag\",\"tags\":[\"evidence:albertsons-client-sent-since-260618\"],\"confidence\":\"high\",\"summary\":\"Albertsons sent-to-client export failure since 2026-06-18 for audience 1993.\"}\n",
+    "stderr": "",
+    "exit_code": 0
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "alert_id": "Q2WAJ28HX2P4SY",
+  "incident_id": "Q1E4EUPF9HDZNA",
+  "incident_url": "https://growthloop.pagerduty.com/incidents/Q1E4EUPF9HDZNA",
+  "alert_status": "triggered",
+  "created_at": "2026-06-04T07:40:09-07:00",
+  "summary": "albertsons (Albertsons Media): Exports for audience 11596 failed with states: <(snapshotting_finished,export_processing)>",
+  "parser_version": 2,
+  "org_id": "albertsons_6",
+  "org_slug": "albertsons",
+  "org_id_numeric": "6",
+  "audience_kind": "audience",
+  "audience_id": "11596",
+  "endpoint_id": "app_liveramp_activation_44",
+  "checked_export_run_ids": [
+    "11596-live_ramp_activation_3712-scheduled__2026-05-26T00:00:00+00:00",
+    "11596-live_ramp_activation_3712-scheduled__2026-06-02T00:00:00+00:00"
+  ],
+  "export_check_strategy": "checked_export_run_ids",
+  "parsed_run_ids": [
+    {
+      "raw": "11596-live_ramp_activation_3712-scheduled__2026-05-26T00:00:00+00:00",
+      "audience_id": "11596",
+      "destination_type": "live_ramp_activation",
+      "endpoint_id": "3712",
+      "trigger_type": "scheduled",
+      "scheduled_at": "2026-05-26T00:00:00+00:00"
+    },
+    {
+      "raw": "11596-live_ramp_activation_3712-scheduled__2026-06-02T00:00:00+00:00",
+      "audience_id": "11596",
+      "destination_type": "live_ramp_activation",
+      "endpoint_id": "3712",
+      "trigger_type": "scheduled",
+      "scheduled_at": "2026-06-02T00:00:00+00:00"
+    }
+  ],
+  "destination_type": "live_ramp_activation",
+  "destination_product": "live-ramp",
+  "state_tuple": {
+    "snapshotting": "snapshotting_finished",
+    "export": "export_processing"
+  },
+  "source_glcli": "glcli --env albertsons bifrost pizza --audience-id 11596 --org-id 6",
+  "logs_url": "https://console.cloud.google.com/logs/query;query=resource.type%3D%22k8s_container%22%0A%0AjsonPayload.organization_id%3D%22albertsons_6%22%0AjsonPayload.internal_audience_id%3D%2211596%22%0A%0A;summaryFields=jsonPayload%252Fbatch_id:false:32:beginning;timeRange=2026-06-04T14:30:09Z%2F2026-06-04T14:50:09Z?project=gl-client-albertsons",
+  "error_signature": "albertsons (albertsons media): exports for audience <n> failed with states: <(snapshotting_finished,export_processing)>",
+  "raw": "20. Q2WAJ28HX2P4SY | triggered | 2026-06-04T07:40:09-07:00\n   untrusted_message: \"albertsons (Albertsons Media): Exports for audience 11596 failed with states: <(snapshotting_finished,export_processing)>\"\n   audience_id: \"11596\"\n   endpoint_id: \"app_liveramp_activation_44\"\n   checked_export_run_ids: \"11596-live_ramp_activation_3712-scheduled__2026-05-26T00:00:00+00:00, 11596-live_ramp_activation_3712-scheduled__2026-06-02T00:00:00+00:00\"\n   glcli: glcli --env albertsons bifrost pizza --audience-id 11596 --org-id 6\n   logs: \"https://console.cloud.google.com/logs/query;query=resource.type%3D%22k8s_container%22%0A%0AjsonPayload.organization_id%3D%22albertsons_6%22%0AjsonPayload.internal_audience_id%3D%2211596%22%0A%0A;summaryFields=jsonPayload%252Fbatch_id:false:32:beginning;timeRange=2026-06-04T14:30:09Z%2F2026-06-04T14:50:09Z?project=gl-client-albertsons\""
+}

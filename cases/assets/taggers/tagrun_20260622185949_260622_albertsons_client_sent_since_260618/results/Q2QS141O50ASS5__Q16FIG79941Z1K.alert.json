@@ -1,0 +1,18 @@
+{
+  "alert_id": "Q16FIG79941Z1K",
+  "incident_id": "Q2QS141O50ASS5",
+  "incident_url": "https://growthloop.pagerduty.com/incidents/Q2QS141O50ASS5",
+  "alert_status": "triggered",
+  "created_at": "2026-06-20T23:16:44-07:00",
+  "summary": "albertsons (Albertsons Media) - Audience 12477: Audience Export failure for 12477 sent to client.",
+  "parser_version": 2,
+  "org_id": "albertsons_6",
+  "org_slug": "albertsons",
+  "org_id_numeric": "6",
+  "audience_kind": "audience",
+  "audience_id": "12477",
+  "export_check_strategy": "any_export_after_alert",
+  "source_glcli": "glcli --env albertsons bifrost pizza --audience-id 12477 --org-id 6",
+  "error_signature": "albertsons (albertsons media) - audience <n>: audience export failure for <n> sent to client.",
+  "raw": "1. Q16FIG79941Z1K | triggered | 2026-06-20T23:16:44-07:00\n   untrusted_message: \"albertsons (Albertsons Media) - Audience 12477: Audience Export failure for 12477 sent to client.\"\n   audience_id: \"12477\"\n   glcli: glcli --env albertsons bifrost pizza --audience-id 12477 --org-id 6"
+}

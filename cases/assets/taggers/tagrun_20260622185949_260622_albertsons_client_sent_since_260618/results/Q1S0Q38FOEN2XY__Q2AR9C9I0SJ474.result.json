@@ -1,0 +1,24 @@
+{
+  "annotation": {
+    "ts": "2026-06-22T18:59:51.152Z",
+    "alert_ref": {
+      "incident_id": "Q1S0Q38FOEN2XY",
+      "alert_id": "Q2AR9C9I0SJ474"
+    },
+    "tags": [],
+    "decision": "skip",
+    "confidence": "high",
+    "summary": "Alert is outside the Albertsons sent-to-client slice since 2026-06-18.",
+    "source": {
+      "kind": "tagger",
+      "run_id": "tagrun_20260622185949_260622_albertsons_client_sent_since_260618",
+      "script_sha256": "1172a928dda32895163c85b485704e070ad1e9de8ff98687d9bfe8afee1edbde",
+      "script_path": "cases/assets/taggers/tagrun_20260622185949_260622_albertsons_client_sent_since_260618/260622-albertsons-client-sent-since-260618.ts"
+    }
+  },
+  "process": {
+    "stdout": "{\"decision\":\"skip\",\"confidence\":\"high\",\"summary\":\"Alert is outside the Albertsons sent-to-client slice since 2026-06-18.\"}\n",
+    "stderr": "",
+    "exit_code": 0
+  }
+}

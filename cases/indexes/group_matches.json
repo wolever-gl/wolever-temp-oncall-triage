@@ -136,12 +136,12 @@
   },
   {
     "match_key": "v3|incident:Q04P1G18UYQXA3|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-client-sent-export-failure",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-client-sent-export-failure."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q04WTJB5QGHOHK|org:costco_4|class:costco-default-no-data-found-for-active-audience",
@@ -163,12 +163,12 @@
   },
   {
     "match_key": "v3|incident:Q054DZZ6GFL4FT|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-client-sent-export-failure-02",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-client-sent-export-failure-02."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q05I07B3Q0N74R|org:chghealthcare_395|class:client-sent-export-failure",
@@ -262,12 +262,12 @@
   },
   {
     "match_key": "v3|incident:Q08JZJLDOM5LPT|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260619-albertsons_6-client-sent-export-failure",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260619-albertsons_6-client-sent-export-failure."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q08K52BJ77IU2X|org:chghealthcare_395|dest:pulse-point|class:export-error",
@@ -298,12 +298,12 @@
   },
   {
     "match_key": "v3|incident:Q0A1CEKFCH7ONE|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-client-sent-export-failure-03",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-client-sent-export-failure-03."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q0ANZAZWZHOW2E|org:chghealthcare_395|dest:pulse-point|class:export-error",
@@ -388,12 +388,12 @@
   },
   {
     "match_key": "v3|incident:Q0EAB0NW8E0E1B|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260621-albertsons_6-client-sent-export-failure",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260621-albertsons_6-client-sent-export-failure."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q0EDKU11QNT7TN|org:pirates_3|class:snapshotting-error",
@@ -406,12 +406,12 @@
   },
   {
     "match_key": "v3|incident:Q0EQCF34RA3FHN|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-client-sent-export-failure-04",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-client-sent-export-failure-04."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q0EQI9LPS2T5T9|org:costco_4|class:costco-default-no-data-found-for-active-audience",
@@ -478,12 +478,12 @@
   },
   {
     "match_key": "v3|incident:Q0HFO3KTKSKQUS|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260619-albertsons_6-client-sent-export-failure-02",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260619-albertsons_6-client-sent-export-failure-02."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q0HXGHFI6OI4MO|org:chghealthcare_395|dest:pulse-point|class:export-error",
@@ -496,21 +496,21 @@
   },
   {
     "match_key": "v3|incident:Q0IG1B3YD4QMMP|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260620-albertsons_6-client-sent-export-failure",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260620-albertsons_6-client-sent-export-failure."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q0IKE5RSWGLPCM|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260620-albertsons_6-client-sent-export-failure-02",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260620-albertsons_6-client-sent-export-failure-02."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q0IL94HA9T56IR|org:allegro_3|class:client-sent-export-failure",
@@ -559,12 +559,12 @@
   },
   {
     "match_key": "v3|incident:Q0JHNJP2ZLQPBQ|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260620-albertsons_6-client-sent-export-failure-03",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260620-albertsons_6-client-sent-export-failure-03."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q0KI83XEUJJB5C|org:pirates_3|class:snapshotting-error",
@@ -667,21 +667,21 @@
   },
   {
     "match_key": "v3|incident:Q0OC6V7EIETXTN|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260619-albertsons_6-client-sent-export-failure-03",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260619-albertsons_6-client-sent-export-failure-03."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q0OHE9K53ZIX45|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260619-albertsons_6-client-sent-export-failure-04",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260619-albertsons_6-client-sent-export-failure-04."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q0OZ0872TDR2Y2|org:albertsons_6|class:albertsons-albertsons-media-no-exports-for-audie",
@@ -712,12 +712,12 @@
   },
   {
     "match_key": "v3|incident:Q0P4ONJOGF8NUI|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260619-albertsons_6-client-sent-export-failure-05",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260619-albertsons_6-client-sent-export-failure-05."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q0PZO16CQ3LVV1|org:priceline_370|class:client-sent-export-failure",
@@ -757,12 +757,12 @@
   },
   {
     "match_key": "v3|incident:Q0RD55JHSF7WN4|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260619-albertsons_6-client-sent-export-failure-06",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260619-albertsons_6-client-sent-export-failure-06."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q0RGK12D17FKM7|org:chghealthcare_395|class:client-sent-export-failure",
@@ -856,12 +856,12 @@
   },
   {
     "match_key": "v3|incident:Q0WQMS2QB89JFJ|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260620-albertsons_6-client-sent-export-failure-04",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260620-albertsons_6-client-sent-export-failure-04."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q0Y548UMIWGK74|org:costco_4|class:costco-default-no-data-found-for-active-audience",
@@ -910,21 +910,21 @@
   },
   {
     "match_key": "v3|incident:Q0YS1762L6N8Z7|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-client-sent-export-failure-05",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-client-sent-export-failure-05."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q0YT01CZ1KSH37|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260621-albertsons_6-client-sent-export-failure-02",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260621-albertsons_6-client-sent-export-failure-02."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q100B615QUQZXD|org:chghealthcare_395|class:client-sent-export-failure",
@@ -946,21 +946,21 @@
   },
   {
     "match_key": "v3|incident:Q10NGEYDK847U7|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-client-sent-export-failure-06",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-client-sent-export-failure-06."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q113K36ZJAIDCD|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260621-albertsons_6-client-sent-export-failure-03",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260621-albertsons_6-client-sent-export-failure-03."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q113OWJLGU5VXS|org:chghealthcare_395|class:client-sent-export-failure",
@@ -1018,21 +1018,21 @@
   },
   {
     "match_key": "v3|incident:Q12ZI7SEKYJILC|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-client-sent-export-failure-07",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-client-sent-export-failure-07."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q13AGUZO2RZY3E|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-client-sent-export-failure-08",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-client-sent-export-failure-08."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q13B8W35HWJE0F|org:albertsons_6|class:albertsons-albertsons-media-no-exports-for-audie",
@@ -1072,12 +1072,12 @@
   },
   {
     "match_key": "v3|incident:Q14QMYQC78PXAR|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-client-sent-export-failure-09",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-client-sent-export-failure-09."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q14TQQPCIK31F4|org:chghealthcare_395|class:client-sent-export-failure",
@@ -1162,21 +1162,21 @@
   },
   {
     "match_key": "v3|incident:Q16ZT0NICO1CYX|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260620-albertsons_6-client-sent-export-failure-05",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260620-albertsons_6-client-sent-export-failure-05."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q17HQGEWPTMD9O|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-client-sent-export-failure-10",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-client-sent-export-failure-10."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q18KSG1W3CFWRE|org:royals_4|class:snapshotting-error",
@@ -1198,39 +1198,39 @@
   },
   {
     "match_key": "v3|incident:Q18NVJLAMQN5RH|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-client-sent-export-failure-11",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-client-sent-export-failure-11."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q18OLT4XU8V6Z5|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260620-albertsons_6-client-sent-export-failure-06",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260620-albertsons_6-client-sent-export-failure-06."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q18PJFCK0IYHAO|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-client-sent-export-failure-12",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-client-sent-export-failure-12."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q18RUDPFI5PNR0|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260619-albertsons_6-client-sent-export-failure-07",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260619-albertsons_6-client-sent-export-failure-07."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q1950VJIJROFR2|org:priceline_370|class:client-sent-export-failure",
@@ -1270,21 +1270,21 @@
   },
   {
     "match_key": "v3|incident:Q1ACSEHK5LJQY2|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-client-sent-export-failure-13",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-client-sent-export-failure-13."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q1ADWD3D2HKZOL|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260621-albertsons_6-client-sent-export-failure-04",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260621-albertsons_6-client-sent-export-failure-04."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q1B3HV678YSRR6|org:ford_310|dest:the-trade-desk-crm|class:export-error",
@@ -1333,12 +1333,12 @@
   },
   {
     "match_key": "v3|incident:Q1DGAIPDFK6TU8|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260621-albertsons_6-client-sent-export-failure-05",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260621-albertsons_6-client-sent-export-failure-05."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q1E4EUPF9HDZNA|org:albertsons_6|class:client-sent-export-failure",
@@ -1405,12 +1405,12 @@
   },
   {
     "match_key": "v3|incident:Q1GCO98PUY1PWA|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260620-albertsons_6-client-sent-export-failure-07",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260620-albertsons_6-client-sent-export-failure-07."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q1H2G1LPQBKYIZ|org:174|class:client-sent-export-failure",
@@ -1495,21 +1495,21 @@
   },
   {
     "match_key": "v3|incident:Q1J91U7JRE3G0A|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260620-albertsons_6-client-sent-export-failure-08",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260620-albertsons_6-client-sent-export-failure-08."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q1JYMIHQDW3DKC|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-client-sent-export-failure-14",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-client-sent-export-failure-14."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q1K75MDC7O41J9|org:pirates_3|class:snapshotting-error",
@@ -1540,30 +1540,30 @@
   },
   {
     "match_key": "v3|incident:Q1KSN4OF9JBR2I|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260620-albertsons_6-client-sent-export-failure-09",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260620-albertsons_6-client-sent-export-failure-09."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q1L90F6Y8KCM2I|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260621-albertsons_6-client-sent-export-failure-06",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260621-albertsons_6-client-sent-export-failure-06."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q1L98NGVCG68W3|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260620-albertsons_6-client-sent-export-failure-10",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260620-albertsons_6-client-sent-export-failure-10."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q1LQVOJX0IHFLI|org:priceline_370|class:client-sent-export-failure",
@@ -1612,21 +1612,21 @@
   },
   {
     "match_key": "v3|incident:Q1OYMJJW2EGJN4|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-client-sent-export-failure-15",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-client-sent-export-failure-15."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q1PT0PN71XE637|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260621-albertsons_6-client-sent-export-failure-07",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260621-albertsons_6-client-sent-export-failure-07."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q1Q6JC0PWT03MJ|org:ford_310|dest:dv360|class:export-error",
@@ -1639,12 +1639,12 @@
   },
   {
     "match_key": "v3|incident:Q1QN8ACMUP2CPJ|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260621-albertsons_6-client-sent-export-failure-08",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260621-albertsons_6-client-sent-export-failure-08."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q1QO6SVB5ASX6E|org:allegro_3|class:client-sent-export-failure",
@@ -1711,12 +1711,12 @@
   },
   {
     "match_key": "v3|incident:Q1SE40Q7Y7DZY1|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-client-sent-export-failure-16",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-client-sent-export-failure-16."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q1SZOH3EECUYD9|org:costco_4|class:costco-default-no-data-found-for-active-audience",
@@ -1756,21 +1756,21 @@
   },
   {
     "match_key": "v3|incident:Q1U4985AOBV356|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260619-albertsons_6-client-sent-export-failure-08",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260619-albertsons_6-client-sent-export-failure-08."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q1UNEJEBO3VF43|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260621-albertsons_6-client-sent-export-failure-09",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260621-albertsons_6-client-sent-export-failure-09."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q1V27H9N7CL01X|org:trumanshow_336|class:client-sent-export-failure",
@@ -1792,12 +1792,12 @@
   },
   {
     "match_key": "v3|incident:Q1VZ0A4IVOZMGM|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-client-sent-export-failure-17",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-client-sent-export-failure-17."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q1W9XRN89PJ7U8|org:royals_4|class:snapshotting-error",
@@ -1828,12 +1828,12 @@
   },
   {
     "match_key": "v3|incident:Q1WWDFQD22KH2T|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260619-albertsons_6-client-sent-export-failure-09",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260619-albertsons_6-client-sent-export-failure-09."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q1X467GY84NHLS|org:chghealthcare_395|class:client-sent-export-failure",
@@ -1846,12 +1846,12 @@
   },
   {
     "match_key": "v3|incident:Q1XD2X4JC4C1LK|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-client-sent-export-failure-18",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-client-sent-export-failure-18."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q1XG43NWEJBMVJ|org:albertsons_6|class:client-sent-export-failure",
@@ -1864,12 +1864,12 @@
   },
   {
     "match_key": "v3|incident:Q1XN54NBKWPTCA|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260619-albertsons_6-client-sent-export-failure-10",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260619-albertsons_6-client-sent-export-failure-10."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q1Y4FAMGUUZ21W|org:priceline_370|class:priceline-default-exports-for-signal-n-failed-wi",
@@ -1936,12 +1936,12 @@
   },
   {
     "match_key": "v3|incident:Q20IPIQEPYPPOW|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260620-albertsons_6-client-sent-export-failure-11",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260620-albertsons_6-client-sent-export-failure-11."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q20US2DGF53Z3Z|org:76ers_131|class:zero-success",
@@ -1954,12 +1954,12 @@
   },
   {
     "match_key": "v3|incident:Q216GNQKKLVQTK|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260620-albertsons_6-client-sent-export-failure-12",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260620-albertsons_6-client-sent-export-failure-12."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q21GFIZRJV32YX|org:albertsons_6|class:albertsons-albertsons-media-no-exports-for-audie",
@@ -1981,12 +1981,12 @@
   },
   {
     "match_key": "v3|incident:Q22I1EXSC9RRA2|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260620-albertsons_6-client-sent-export-failure-13",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260620-albertsons_6-client-sent-export-failure-13."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q22K7VXPB5IRHX|org:costco_4|class:costco-default-no-data-found-for-active-audience",
@@ -1999,30 +1999,30 @@
   },
   {
     "match_key": "v3|incident:Q23L4D717K60Q2|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260619-albertsons_6-client-sent-export-failure-11",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260619-albertsons_6-client-sent-export-failure-11."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q244V4I2RLF881|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260619-albertsons_6-client-sent-export-failure-12",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260619-albertsons_6-client-sent-export-failure-12."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q245CIL2A3XI32|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-client-sent-export-failure-19",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-client-sent-export-failure-19."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q252C2NNBIQ8WP|org:fanatics_502|dest:magnite-id-graph|class:export-processing",
@@ -2035,30 +2035,30 @@
   },
   {
     "match_key": "v3|incident:Q25BIFU3F6S1BJ|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260621-albertsons_6-client-sent-export-failure-10",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260621-albertsons_6-client-sent-export-failure-10."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q25HOZVKOE3XJP|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-client-sent-export-failure-20",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-client-sent-export-failure-20."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q265RICMV6HVUE|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-client-sent-export-failure-21",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-client-sent-export-failure-21."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q26Q12V4KYA7TN|org:allegro_3|class:client-sent-export-failure",
@@ -2071,12 +2071,12 @@
   },
   {
     "match_key": "v3|incident:Q26Q3LA7L8E1DE|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260621-albertsons_6-client-sent-export-failure-11",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260621-albertsons_6-client-sent-export-failure-11."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q27H5HW3X0PG0Q|org:unknown_org|class:prefect-flow-run-notification-flow-run-journey-p",
@@ -2098,12 +2098,12 @@
   },
   {
     "match_key": "v3|incident:Q29K2JM784UPYK|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-client-sent-export-failure-22",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-client-sent-export-failure-22."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q2A4A4EPMJW7D8|org:priceline_370|class:client-sent-export-failure",
@@ -2134,12 +2134,12 @@
   },
   {
     "match_key": "v3|incident:Q2AUKUD4JDAL43|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260620-albertsons_6-client-sent-export-failure-14",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260620-albertsons_6-client-sent-export-failure-14."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q2B6XFXPBXDS4M|org:chghealthcare_395|dest:pulse-point|class:export-error",
@@ -2152,12 +2152,12 @@
   },
   {
     "match_key": "v3|incident:Q2BFPCENXYY06A|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260621-albertsons_6-client-sent-export-failure-12",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260621-albertsons_6-client-sent-export-failure-12."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q2C6TN3RA4JUKE|org:verizon_309|class:snapshotting-error",
@@ -2206,12 +2206,12 @@
   },
   {
     "match_key": "v3|incident:Q2DET6AW1NICU7|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260619-albertsons_6-client-sent-export-failure-13",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260619-albertsons_6-client-sent-export-failure-13."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q2E7MG6P1H0D3P|org:allegro_3|dest:dv360|class:export-processing",
@@ -2242,12 +2242,12 @@
   },
   {
     "match_key": "v3|incident:Q2ENO9MKSYEG5U|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260620-albertsons_6-client-sent-export-failure-15",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260620-albertsons_6-client-sent-export-failure-15."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q2EWWRJOPCWCF4|org:costco_4|class:costco-default-no-data-found-for-active-audience",
@@ -2350,12 +2350,12 @@
   },
   {
     "match_key": "v3|incident:Q2HCCF9I2UIFGY|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260619-albertsons_6-client-sent-export-failure-14",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260619-albertsons_6-client-sent-export-failure-14."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q2I0P8BOG77FWF|org:albertsons_6|class:client-sent-export-failure",
@@ -2368,12 +2368,12 @@
   },
   {
     "match_key": "v3|incident:Q2I8GXY9IW8UBR|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260620-albertsons_6-client-sent-export-failure-16",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260620-albertsons_6-client-sent-export-failure-16."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q2IHPM0C5B5TZL|org:chghealthcare_395|class:client-sent-export-failure",
@@ -2440,12 +2440,12 @@
   },
   {
     "match_key": "v3|incident:Q2KTIWM0PFB99C|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260620-albertsons_6-client-sent-export-failure-17",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260620-albertsons_6-client-sent-export-failure-17."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q2LW94S8WREK14|org:chghealthcare_395|class:client-sent-export-failure",
@@ -2476,21 +2476,21 @@
   },
   {
     "match_key": "v3|incident:Q2QPIOCASCVFH7|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-client-sent-export-failure-23",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-client-sent-export-failure-23."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q2QS141O50ASS5|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260620-albertsons_6-client-sent-export-failure-18",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260620-albertsons_6-client-sent-export-failure-18."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q2RBHDDNF2AKA9|org:ford_310|class:client-sent-export-failure",
@@ -2800,21 +2800,21 @@
   },
   {
     "match_key": "v3|incident:Q337ZKYTMRUI8M|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-client-sent-export-failure-24",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-client-sent-export-failure-24."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q3395UST1KKB67|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260619-albertsons_6-client-sent-export-failure-15",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260619-albertsons_6-client-sent-export-failure-15."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q33G1FKNUOJQ4Q|org:priceline_370|dest:iterable|class:export-processing",
@@ -2827,12 +2827,12 @@
   },
   {
     "match_key": "v3|incident:Q33XKCHKMWQNOF|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260619-albertsons_6-client-sent-export-failure-16",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260619-albertsons_6-client-sent-export-failure-16."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q34AH3IU2OMFFB|org:trumanshow_336|class:no-batches",
@@ -2845,21 +2845,21 @@
   },
   {
     "match_key": "v3|incident:Q34BCNUF3B97Z5|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260619-albertsons_6-client-sent-export-failure-17",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260619-albertsons_6-client-sent-export-failure-17."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q34HBEEWBS1ZXB|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-client-sent-export-failure-25",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-client-sent-export-failure-25."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q357X1DD8NHKAU|org:chghealthcare_395|class:client-sent-export-failure",
@@ -2899,12 +2899,12 @@
   },
   {
     "match_key": "v3|incident:Q368INPJJF6K5Y|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260619-albertsons_6-client-sent-export-failure-18",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260619-albertsons_6-client-sent-export-failure-18."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q36KG67I5QPOE8|org:chghealthcare_395|dest:pulse-point|class:export-error",
@@ -2917,12 +2917,12 @@
   },
   {
     "match_key": "v3|incident:Q36YSJ446NTMYA|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260619-albertsons_6-client-sent-export-failure-19",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260619-albertsons_6-client-sent-export-failure-19."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q37NI86Y0Q3WN2|org:chghealthcare_395|class:client-sent-export-failure",
@@ -2953,30 +2953,30 @@
   },
   {
     "match_key": "v3|incident:Q38PBYM679MM76|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260620-albertsons_6-client-sent-export-failure-19",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260620-albertsons_6-client-sent-export-failure-19."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q38RZMT4FW9XSA|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260621-albertsons_6-client-sent-export-failure-13",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260621-albertsons_6-client-sent-export-failure-13."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q38ZCOXDOWS5O7|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260619-albertsons_6-client-sent-export-failure-20",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260619-albertsons_6-client-sent-export-failure-20."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q3A36H88A6UETC|org:chghealthcare_395|dest:pulse-point|class:export-error",
@@ -3043,12 +3043,12 @@
   },
   {
     "match_key": "v3|incident:Q3BRQDTT1MF67X|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260619-albertsons_6-client-sent-export-failure-21",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260619-albertsons_6-client-sent-export-failure-21."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q3C7ZSQXUGF4ZZ|org:costco_4|class:costco-default-no-data-found-for-active-audience",
@@ -3124,12 +3124,12 @@
   },
   {
     "match_key": "v3|incident:Q3EQ5JV7UPWEGC|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260621-albertsons_6-client-sent-export-failure-14",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260621-albertsons_6-client-sent-export-failure-14."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q3EWG5PY4MPK8A|org:albertsons_6|class:albertsons-albertsons-media-no-exports-for-audie",
@@ -3142,12 +3142,12 @@
   },
   {
     "match_key": "v3|incident:Q3F3T8YUI45U70|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-client-sent-export-failure-26",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-client-sent-export-failure-26."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q3F9LDXG6UJ2NC|org:444|class:zero-success",
@@ -3160,12 +3160,12 @@
   },
   {
     "match_key": "v3|incident:Q3FGTTIU517U3C|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260621-albertsons_6-client-sent-export-failure-15",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260621-albertsons_6-client-sent-export-failure-15."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q3FKI9QP563B5H|org:unknown_org|class:prefect-flow-run-notification-flow-run-journey-p",
@@ -3178,21 +3178,21 @@
   },
   {
     "match_key": "v3|incident:Q3FT9KIAST446H|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260621-albertsons_6-client-sent-export-failure-16",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260621-albertsons_6-client-sent-export-failure-16."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q3G9BPSTSE0VSL|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-client-sent-export-failure-27",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-client-sent-export-failure-27."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q3GEYJNR2Y8JGX|org:costco_4|class:costco-default-no-data-found-for-active-audience",
@@ -3259,12 +3259,12 @@
   },
   {
     "match_key": "v3|incident:Q3H5F2DZGCX6KP|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260620-albertsons_6-client-sent-export-failure-20",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260620-albertsons_6-client-sent-export-failure-20."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q3H6E8MZVP8J04|org:chghealthcare_395|class:client-sent-export-failure",
@@ -3286,12 +3286,12 @@
   },
   {
     "match_key": "v3|incident:Q3I4EBBUGMQWXS|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260620-albertsons_6-client-sent-export-failure-21",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260620-albertsons_6-client-sent-export-failure-21."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q3I7WFMCCHK300|org:flagstar_305|class:snapshotting-error",
@@ -3304,21 +3304,21 @@
   },
   {
     "match_key": "v3|incident:Q3IROJH5XM5T4U|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260619-albertsons_6-client-sent-export-failure-22",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260619-albertsons_6-client-sent-export-failure-22."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q3IYSJLR3WPN0Z|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-client-sent-export-failure-28",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-client-sent-export-failure-28."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q3NL9MR59FOSMG|org:albertsons_6|class:snapshotting-error",
@@ -3340,12 +3340,12 @@
   },
   {
     "match_key": "v3|incident:Q3O313HUCTB2WD|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-client-sent-export-failure-29",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-client-sent-export-failure-29."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q3OJICG8DM3BS0|org:pirates_3|class:snapshotting-error",
@@ -3358,12 +3358,12 @@
   },
   {
     "match_key": "v3|incident:Q3OYVZGGFDK3NF|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-client-sent-export-failure-30",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-client-sent-export-failure-30."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q3P1RPN1LQ18L5|org:chghealthcare_395|dest:pulse-point|class:export-error",
@@ -3385,12 +3385,12 @@
   },
   {
     "match_key": "v3|incident:Q3PNSJLQ4RSPPH|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260620-albertsons_6-client-sent-export-failure-22",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260620-albertsons_6-client-sent-export-failure-22."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q3PRQ1I8AG1Y5N|org:costco_4|class:costco-default-no-data-found-for-active-audience",
@@ -3430,12 +3430,12 @@
   },
   {
     "match_key": "v3|incident:Q3QA1TY3F36XGZ|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260619-albertsons_6-client-sent-export-failure-23",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260619-albertsons_6-client-sent-export-failure-23."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q3QCKCZMRUR8MC|org:albertsons_6|class:snapshotting-error",
@@ -3448,12 +3448,12 @@
   },
   {
     "match_key": "v3|incident:Q3QEKPH9YZV412|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260621-albertsons_6-client-sent-export-failure-17",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260621-albertsons_6-client-sent-export-failure-17."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q3R9IKKO33UMAF|org:ford_310|dest:dv360|class:export-error",
@@ -3502,12 +3502,12 @@
   },
   {
     "match_key": "v3|incident:Q3SBABZA6XMU3P|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260619-albertsons_6-client-sent-export-failure-24",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260619-albertsons_6-client-sent-export-failure-24."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q3TADUNNJQ5F9G|org:priceline_370|class:client-sent-export-failure",
@@ -3583,12 +3583,12 @@
   },
   {
     "match_key": "v3|incident:Q3YT89ZSLIMHSI|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260619-albertsons_6-client-sent-export-failure-25",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260619-albertsons_6-client-sent-export-failure-25."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q3YVFCFEYI2MJI|org:growthloop_268|class:zero-success",
@@ -3619,12 +3619,12 @@
   },
   {
     "match_key": "v3|incident:Q3ZWG4W8WKUGMK|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260619-albertsons_6-client-sent-export-failure-26",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260619-albertsons_6-client-sent-export-failure-26."
+    "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
     "match_key": "v3|incident:Q3ZWQM35XX8FLX|org:albertsons_6|class:client-sent-export-failure",
