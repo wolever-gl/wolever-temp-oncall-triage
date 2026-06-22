@@ -1,7 +1,0 @@
-{"ts":"2026-05-16T00:38:01.850Z","actor":"oncall-triage","decision":"created_group","rationale":"Conservative deterministic grouping created a new group for v3|incident:Q1UC14QNZK76EZ|org:451|class:snapshotting-error."}
-{"ts":"2026-05-16T00:38:01.850Z","actor":"oncall-triage","decision":"attached_alert_to_existing_group","rationale":"Alert matched deterministic key v3|incident:Q1UC14QNZK76EZ|org:451|class:snapshotting-error."}
-{"ts":"2026-05-16T00:38:01.850Z","actor":"oncall-triage","decision":"attached_alert_to_existing_group","rationale":"Alert matched deterministic key v3|incident:Q1UC14QNZK76EZ|org:451|class:snapshotting-error."}
-{"ts":"2026-05-16T00:38:01.850Z","actor":"oncall-triage","decision":"attached_alert_to_existing_group","rationale":"Alert matched deterministic key v3|incident:Q1UC14QNZK76EZ|org:451|class:snapshotting-error."}
-{"ts":"2026-05-16T00:38:01.850Z","actor":"oncall-triage","decision":"attached_alert_to_existing_group","rationale":"Alert matched deterministic key v3|incident:Q1UC14QNZK76EZ|org:451|class:snapshotting-error."}
-{"ts":"2026-05-16T00:38:01.850Z","actor":"oncall-triage","decision":"attached_alert_to_existing_group","rationale":"Alert matched deterministic key v3|incident:Q1UC14QNZK76EZ|org:451|class:snapshotting-error."}
-{"ts":"2026-05-16T21:03:40.868Z","actor":"check-exports","decision":"started_work","rationale":"Export evidence check evaluated alert facts for this group."}

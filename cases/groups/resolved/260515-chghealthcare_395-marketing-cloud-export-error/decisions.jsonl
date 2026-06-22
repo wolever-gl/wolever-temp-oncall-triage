@@ -1,3 +1,0 @@
-{"ts":"2026-05-16T00:38:01.850Z","actor":"oncall-triage","decision":"created_group","rationale":"Conservative deterministic grouping created a new group for v3|incident:Q29I2IVNNVK80X|org:chghealthcare_395|dest:marketing-cloud|class:export-error."}
-{"ts":"2026-05-16T21:05:34.888Z","actor":"check-exports","decision":"started_work","rationale":"Export evidence check evaluated alert facts for this group."}
-{"ts":"2026-05-16T21:05:40.456Z","actor":"check-exports","decision":"transitioned_to_resolved","rationale":"Auto-resolved from Pizza export checks: all 1 alert-scoped export check(s) are healthy_closed with no blockers."}

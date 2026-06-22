@@ -1,0 +1,11 @@
+Alerts (1)
+----------------
+1. Q14O6QSODWSCM5 | triggered | 2026-06-20T00:52:42-07:00
+   untrusted_message: "albertsons (Albertsons Media) - Audience 11579: Audience Export failure for 11579 sent to client."
+   audience_id: "11579"
+   glcli: glcli --env albertsons bifrost pizza --audience-id 11579 --org-id 6
+
+Deduped glcli commands by audience
+-----------------------------------
+audience_id 11579:
+  glcli --env albertsons bifrost pizza --audience-id 11579 --org-id 6

@@ -1,0 +1,23 @@
+{
+  "group_id": "260618-allegro_3-client-sent-export-failure",
+  "state": "new",
+  "tags": [
+    "triage:needs_review"
+  ],
+  "title": "allegro_3 client-sent-export-failure",
+  "summary": "allegro (Advertising) - Audience 869: Audience Export failure for 869 sent to client.",
+  "deterministic_key": "v3|incident:Q0BWK21VGZ7RL7|org:allegro_3|class:client-sent-export-failure",
+  "grouping_version": 3,
+  "created_at": "2026-06-22T18:54:54.145Z",
+  "updated_at": "2026-06-22T18:54:54.145Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q0BWK21VGZ7RL7",
+      "alert_id": "Q2NVER0YOZOE89"
+    }
+  ],
+  "incident_ids": [
+    "Q0BWK21VGZ7RL7"
+  ],
+  "related_group_ids": []
+}

@@ -1,0 +1,23 @@
+{
+  "group_id": "260622-braves_524-salesforce-audience-export-error-02",
+  "state": "new",
+  "tags": [
+    "triage:needs_review"
+  ],
+  "title": "braves_524 salesforce-audience export-error",
+  "summary": "Braves (default): Exports for audience 31889 failed with states: <(snapshotting_finished,export_error)>",
+  "deterministic_key": "v3|incident:Q3Q916L0ZN6JD8|org:braves_524|dest:salesforce-audience|class:export-error",
+  "grouping_version": 3,
+  "created_at": "2026-06-22T18:54:54.145Z",
+  "updated_at": "2026-06-22T18:54:54.145Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q3Q916L0ZN6JD8",
+      "alert_id": "Q2MPMWAUMRBBL5"
+    }
+  ],
+  "incident_ids": [
+    "Q3Q916L0ZN6JD8"
+  ],
+  "related_group_ids": []
+}

@@ -1,0 +1,23 @@
+{
+  "group_id": "260617-unknown_org-eversana-master-shionogi-journey-n-journey-expor",
+  "state": "new",
+  "tags": [
+    "triage:needs_review"
+  ],
+  "title": "unknown_org eversana-master-shionogi-journey-n-journey-expor",
+  "summary": "eversana_master (Shionogi) - Journey 2967: Journey Export failure for 2967 sent to client.",
+  "deterministic_key": "v3|incident:Q0N2V4SWNWY0KU|org:unknown_org|class:eversana-master-shionogi-journey-n-journey-expor",
+  "grouping_version": 3,
+  "created_at": "2026-06-22T18:54:54.145Z",
+  "updated_at": "2026-06-22T18:54:54.145Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q0N2V4SWNWY0KU",
+      "alert_id": "Q2QV2WH5T056AN"
+    }
+  ],
+  "incident_ids": [
+    "Q0N2V4SWNWY0KU"
+  ],
+  "related_group_ids": []
+}

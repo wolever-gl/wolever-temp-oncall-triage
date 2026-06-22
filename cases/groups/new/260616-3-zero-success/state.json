@@ -1,0 +1,23 @@
+{
+  "group_id": "260616-3-zero-success",
+  "state": "new",
+  "tags": [
+    "triage:needs_review"
+  ],
+  "title": "3 zero-success",
+  "summary": "Costco Non Prod (default) - Audience 6251: 0 successfull_exports from pizza tracker found 10 minutes after new export",
+  "deterministic_key": "v3|incident:Q2W124RXHVEH5G|org:3|class:zero-success",
+  "grouping_version": 3,
+  "created_at": "2026-06-22T18:54:54.145Z",
+  "updated_at": "2026-06-22T18:54:54.145Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q2W124RXHVEH5G",
+      "alert_id": "Q3Q5EGMLXRBYSU"
+    }
+  ],
+  "incident_ids": [
+    "Q2W124RXHVEH5G"
+  ],
+  "related_group_ids": []
+}

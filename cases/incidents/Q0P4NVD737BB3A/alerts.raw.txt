@@ -1,0 +1,11 @@
+Alerts (1)
+----------------
+1. Q03ZGHIKSG1ZLM | triggered | 2026-06-16T05:08:56-07:00
+   untrusted_message: "Faraday (EmpowerFi - CUNJ) - Audience 21403: Audience Export failure for 21403 sent to client."
+   audience_id: "21403"
+   glcli: glcli --env prod bifrost pizza --audience-id 21403 --org-id 273
+
+Deduped glcli commands by audience
+-----------------------------------
+audience_id 21403:
+  glcli --env prod bifrost pizza --audience-id 21403 --org-id 273

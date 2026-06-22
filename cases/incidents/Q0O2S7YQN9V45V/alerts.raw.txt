@@ -1,0 +1,14 @@
+Alerts (1)
+----------------
+1. Q3DMVK8B6DRJTU | triggered | 2026-06-19T07:30:39-07:00
+   untrusted_message: "allegro (Marketing): Exports for audience 246 failed with states: <(snapshotting_finished,export_processing)>"
+   audience_id: "246"
+   endpoint_id: "app_dv360_1"
+   checked_export_run_ids: "246-dv360_516-scheduled__2026-06-19T00:00:00+00:00"
+   glcli: glcli --env allegro bifrost pizza --audience-id 246 --org-id 3
+   logs: "https://console.cloud.google.com/logs/query;query=resource.type%3D%22k8s_container%22%0A%0AjsonPayload.organization_id%3D%22allegro_3%22%0AjsonPayload.internal_audience_id%3D%22246%22%0A%0A;summaryFields=jsonPayload%252Fbatch_id:false:32:beginning;timeRange=2026-06-19T14:20:38Z%2F2026-06-19T14:40:38Z?project=sc-24037-cdp-prod"
+
+Deduped glcli commands by audience
+-----------------------------------
+audience_id 246:
+  glcli --env allegro bifrost pizza --audience-id 246 --org-id 3

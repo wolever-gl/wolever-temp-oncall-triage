@@ -1,0 +1,14 @@
+Alerts (1)
+----------------
+1. Q171DROXRROPG3 | triggered | 2026-06-22T07:31:51-07:00
+   untrusted_message: "allegro (Marketing): Exports for audience 707 failed with states: <(snapshotting_finished,export_error)>"
+   audience_id: "707"
+   endpoint_id: "app_dv360_1"
+   checked_export_run_ids: "707-dv360_1774-webapp__2026-06-19T11:27:34+00:00"
+   glcli: glcli --env allegro bifrost pizza --audience-id 707 --org-id 3
+   logs: "https://console.cloud.google.com/logs/query;query=resource.type%3D%22k8s_container%22%0A%0AjsonPayload.organization_id%3D%22allegro_3%22%0AjsonPayload.internal_audience_id%3D%22707%22%0A%0A;summaryFields=jsonPayload%252Fbatch_id:false:32:beginning;timeRange=2026-06-22T14:21:50Z%2F2026-06-22T14:41:50Z?project=sc-24037-cdp-prod"
+
+Deduped glcli commands by audience
+-----------------------------------
+audience_id 707:
+  glcli --env allegro bifrost pizza --audience-id 707 --org-id 3

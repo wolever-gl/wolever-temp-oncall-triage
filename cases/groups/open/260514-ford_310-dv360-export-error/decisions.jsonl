@@ -1,6 +1,0 @@
-{"ts":"2026-05-16T00:38:01.850Z","actor":"oncall-triage","decision":"created_group","rationale":"Conservative deterministic grouping created a new group for v3|incident:Q3HWKW0FS3VTHE|org:ford_310|dest:dv360|class:export-error."}
-{"ts":"2026-05-16T00:38:01.850Z","actor":"oncall-triage","decision":"attached_alert_to_existing_group","rationale":"Alert matched deterministic key v3|incident:Q3HWKW0FS3VTHE|org:ford_310|dest:dv360|class:export-error."}
-{"ts":"2026-05-16T20:48:34.127Z","actor":"check-exports","decision":"started_work","rationale":"Export evidence check evaluated alert facts for this group."}
-{"ts":"2026-05-16T22:38:43.922Z","actor":"agent","decision":"transitioned_to_open","rationale":"Needs investigation: Ford audience 32921 still fails DV360 on the latest 2026-05-16 scheduled run (export_error, failures=9580), while sibling destinations are export_finished. Audience 34062 was split out as recovered."}
-{"ts":"2026-05-16T23:46:13.045Z","actor":"oncall-triage","decision":"attached_alert_to_existing_group","rationale":"Alert matched deterministic key v3|incident:Q1TJJ4MEVOF1W3|org:ford_310|class:client-sent-export-failure."}
-{"ts":"2026-05-16T23:46:13.045Z","actor":"oncall-triage","decision":"attached_alert_to_existing_group","rationale":"Alert matched deterministic key v3|incident:Q3HWKW0FS3VTHE|org:ford_310|dest:dv360|class:export-error."}

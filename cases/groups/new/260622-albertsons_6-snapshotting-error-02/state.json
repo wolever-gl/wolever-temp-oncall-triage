@@ -1,0 +1,23 @@
+{
+  "group_id": "260622-albertsons_6-snapshotting-error-02",
+  "state": "new",
+  "tags": [
+    "triage:needs_review"
+  ],
+  "title": "albertsons_6 snapshotting-error",
+  "summary": "albertsons (Albertsons Media): Exports for audience 9670 failed with states: <(snapshotting_error,no_batches)>",
+  "deterministic_key": "v3|incident:Q0B75DL9CGNBG0|org:albertsons_6|class:snapshotting-error",
+  "grouping_version": 3,
+  "created_at": "2026-06-22T18:54:54.145Z",
+  "updated_at": "2026-06-22T18:54:54.145Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q0B75DL9CGNBG0",
+      "alert_id": "Q36FUJN2V8R8TZ"
+    }
+  ],
+  "incident_ids": [
+    "Q0B75DL9CGNBG0"
+  ],
+  "related_group_ids": []
+}

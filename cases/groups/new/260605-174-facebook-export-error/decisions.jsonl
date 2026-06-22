@@ -1,0 +1,2 @@
+{"ts":"2026-06-22T18:54:54.145Z","actor":"oncall-triage","decision":"created_group","rationale":"Conservative deterministic grouping created a new group for v3|incident:Q1H2G1LPQBKYIZ|org:174|dest:facebook|class:export-error."}
+{"ts":"2026-06-22T18:54:54.145Z","actor":"oncall-triage","decision":"attached_alert_to_existing_group","rationale":"Alert matched deterministic key v3|incident:Q1H2G1LPQBKYIZ|org:174|dest:facebook|class:export-error."}

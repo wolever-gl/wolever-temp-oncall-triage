@@ -1,0 +1,23 @@
+{
+  "group_id": "260617-ford_310-the-trade-desk-crm-export-error",
+  "state": "new",
+  "tags": [
+    "triage:needs_review"
+  ],
+  "title": "ford_310 the-trade-desk-crm export-error",
+  "summary": "ford (Marketing Production): Exports for audience 33347 failed with states: <(snapshotting_finished,export_error)>",
+  "deterministic_key": "v3|incident:Q1B3HV678YSRR6|org:ford_310|dest:the-trade-desk-crm|class:export-error",
+  "grouping_version": 3,
+  "created_at": "2026-06-22T18:54:54.145Z",
+  "updated_at": "2026-06-22T18:54:54.145Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q1B3HV678YSRR6",
+      "alert_id": "Q0G4U86YQZR17F"
+    }
+  ],
+  "incident_ids": [
+    "Q1B3HV678YSRR6"
+  ],
+  "related_group_ids": []
+}

@@ -1,0 +1,23 @@
+{
+  "group_id": "260622-fanatics_502-snowflake-export-error",
+  "state": "new",
+  "tags": [
+    "triage:needs_review"
+  ],
+  "title": "fanatics_502 snowflake export-error",
+  "summary": "fanatics (default): Exports for audience 30807 failed with states: <(snapshotting_finished,export_error)>",
+  "deterministic_key": "v3|incident:Q04FOTACA3H398|org:fanatics_502|dest:snowflake|class:export-error",
+  "grouping_version": 3,
+  "created_at": "2026-06-22T18:54:54.145Z",
+  "updated_at": "2026-06-22T18:54:54.145Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q04FOTACA3H398",
+      "alert_id": "Q21IWIYI0PU0YE"
+    }
+  ],
+  "incident_ids": [
+    "Q04FOTACA3H398"
+  ],
+  "related_group_ids": []
+}

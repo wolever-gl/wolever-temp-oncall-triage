@@ -1,0 +1,11 @@
+Alerts (1)
+----------------
+1. Q19I6L86AKW09A | triggered | 2026-06-15T16:58:07-07:00
+   untrusted_message: "chghealthcare (Omni-Division) - Audience 31800: Audience Export failure for 31800 sent to client."
+   audience_id: "31800"
+   glcli: glcli --env prod bifrost pizza --audience-id 31800 --org-id 395
+
+Deduped glcli commands by audience
+-----------------------------------
+audience_id 31800:
+  glcli --env prod bifrost pizza --audience-id 31800 --org-id 395

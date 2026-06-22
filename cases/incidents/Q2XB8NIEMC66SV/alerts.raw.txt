@@ -1,0 +1,11 @@
+Alerts (1)
+----------------
+1. Q1OE1APFK1UXUG | triggered | 2026-06-19T21:42:00-07:00
+   untrusted_message: "ford (Marketing Production) - Audience 32920: Audience Export failure for 32920 sent to client."
+   audience_id: "32920"
+   glcli: glcli --env prod bifrost pizza --audience-id 32920 --org-id 310
+
+Deduped glcli commands by audience
+-----------------------------------
+audience_id 32920:
+  glcli --env prod bifrost pizza --audience-id 32920 --org-id 310

@@ -1,4 +1,0 @@
-{"ts":"2026-05-16T00:38:01.850Z","actor":"oncall-triage","decision":"created_group","rationale":"Conservative deterministic grouping created a new group for v3|incident:Q3HWKW0FS3VTHE|org:ford_310|class:client-sent-export-failure."}
-{"ts":"2026-05-16T20:48:01.778Z","actor":"check-exports","decision":"started_work","rationale":"Export evidence check evaluated alert facts for this group."}
-{"ts":"2026-05-16T22:39:04.476Z","actor":"agent","decision":"transitioned_to_open","rationale":"Needs investigation: Ford audience 34059 is not a recovered client-sent duplicate; current 2026-05-16 Pizza rows across destinations are snapshotting_finished/no_batches with total_rows=0 and failures=0."}
-{"ts":"2026-05-17T00:06:13.414Z","actor":"check-exports","decision":"transitioned_to_resolved","rationale":"Auto-resolved from Pizza export checks: all 1 alert-scoped export check(s) are healthy_closed with no blockers."}

@@ -1,0 +1,11 @@
+Alerts (1)
+----------------
+1. Q2D9T8955Q5ILW | triggered | 2026-06-15T07:42:42-07:00
+   untrusted_message: "growthloop (default) - Audience 38430: 0 successfull_exports from pizza tracker found 10 minutes after new export"
+   audience_id: "38430"
+   glcli: glcli --env prod bifrost pizza --audience-id 38430 --org-id 268
+
+Deduped glcli commands by audience
+-----------------------------------
+audience_id 38430:
+  glcli --env prod bifrost pizza --audience-id 38430 --org-id 268

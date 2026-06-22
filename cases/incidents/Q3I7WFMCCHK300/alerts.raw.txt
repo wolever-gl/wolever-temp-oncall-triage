@@ -1,0 +1,13 @@
+Alerts (1)
+----------------
+1. Q0HGP71YKK2DEV | triggered | 2026-06-22T07:54:30-07:00
+   untrusted_message: "flagstar (default): Exports for audience 31062 failed with states: <(snapshotting_error,no_batches)>"
+   audience_id: "31062"
+   checked_export_run_ids: "31062-marketing_cloud_18833-scheduled__2026-06-22T00:00:00+00:00"
+   glcli: glcli --env prod bifrost pizza --audience-id 31062 --org-id 305
+   logs: "https://console.cloud.google.com/logs/query;query=resource.type%3D%22k8s_container%22%0A%0AjsonPayload.organization_id%3D%22flagstar_305%22%0AjsonPayload.internal_audience_id%3D%2231062%22%0A%0A;summaryFields=jsonPayload%252Fbatch_id:false:32:beginning;timeRange=2026-06-22T14:44:29Z%2F2026-06-22T15:04:29Z?project=flywheel-prod-328213"
+
+Deduped glcli commands by audience
+-----------------------------------
+audience_id 31062:
+  glcli --env prod bifrost pizza --audience-id 31062 --org-id 305

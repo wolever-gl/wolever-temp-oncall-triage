@@ -1,0 +1,23 @@
+{
+  "group_id": "260622-allegro_3-dv360-export-error-02",
+  "state": "new",
+  "tags": [
+    "triage:needs_review"
+  ],
+  "title": "allegro_3 dv360 export-error",
+  "summary": "allegro (Marketing): Exports for audience 707 failed with states: <(snapshotting_finished,export_error)>",
+  "deterministic_key": "v3|incident:Q2U45YSOGF3QHG|org:allegro_3|dest:dv360|class:export-error",
+  "grouping_version": 3,
+  "created_at": "2026-06-22T18:54:54.145Z",
+  "updated_at": "2026-06-22T18:54:54.145Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q2U45YSOGF3QHG",
+      "alert_id": "Q0UL6KATA6LTLK"
+    }
+  ],
+  "incident_ids": [
+    "Q2U45YSOGF3QHG"
+  ],
+  "related_group_ids": []
+}

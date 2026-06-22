@@ -1,0 +1,11 @@
+Alerts (1)
+----------------
+1. Q1ZFAGDJN20HZ5 | triggered | 2026-06-18T09:37:32-07:00
+   untrusted_message: "76ers (default) - Audience 38573: 0 successfull_exports from pizza tracker found 10 minutes after new export"
+   audience_id: "38573"
+   glcli: glcli --env prod bifrost pizza --audience-id 38573 --org-id 131
+
+Deduped glcli commands by audience
+-----------------------------------
+audience_id 38573:
+  glcli --env prod bifrost pizza --audience-id 38573 --org-id 131

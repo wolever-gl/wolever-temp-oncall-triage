@@ -1,0 +1,23 @@
+{
+  "group_id": "260618-76ers_131-zero-success-02",
+  "state": "new",
+  "tags": [
+    "triage:needs_review"
+  ],
+  "title": "76ers_131 zero-success",
+  "summary": "76ers (default) - Audience 38560: 0 successfull_exports from pizza tracker found 10 minutes after new export",
+  "deterministic_key": "v3|incident:Q2EICDLFIHOLB7|org:76ers_131|class:zero-success",
+  "grouping_version": 3,
+  "created_at": "2026-06-22T18:54:54.145Z",
+  "updated_at": "2026-06-22T18:54:54.145Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q2EICDLFIHOLB7",
+      "alert_id": "Q1FKF135XTZ2C7"
+    }
+  ],
+  "incident_ids": [
+    "Q2EICDLFIHOLB7"
+  ],
+  "related_group_ids": []
+}

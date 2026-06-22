@@ -1,0 +1,14 @@
+Alerts (1)
+----------------
+1. Q09IIKFTSQETHB | triggered | 2026-06-15T07:40:38-07:00
+   untrusted_message: "priceline (default): Exports for signal 1009 failed with states: <(snapshotting_finished,export_error), (snapshotting_finished,export_processing)>"
+   audience_id: "1009"
+   endpoint_id: "app_facebook_conversions_2347"
+   checked_export_run_ids: "1009-facebook_conversions_object_1009-webapp__2026-06-05T15:42:02+00:00, 1009-facebook_conversions_object_1009-scheduled__2026-05-31T00:00:00+00:00, 1009-facebook_conversions_object_1009-webapp__2026-06-12T20:47:10+00:00, 1009-facebook_conversions_object_1009-scheduled__2026-06-07T00:00:00+00:00"
+   glcli: glcli --env prod bifrost pizza --audience-id 1009 --org-id 370
+   logs: "https://console.cloud.google.com/logs/query;query=resource.type%3D%22k8s_container%22%0A%0AjsonPayload.organization_id%3D%22priceline_370%22%0AjsonPayload.internal_audience_id%3D%221009%22%0A%0A;summaryFields=jsonPayload%252Fbatch_id:false:32:beginning;timeRange=2026-06-15T14:27:19Z%2F2026-06-15T14:47:19Z?project=flywheel-prod-328213"
+
+Deduped glcli commands by audience
+-----------------------------------
+audience_id 1009:
+  glcli --env prod bifrost pizza --audience-id 1009 --org-id 370

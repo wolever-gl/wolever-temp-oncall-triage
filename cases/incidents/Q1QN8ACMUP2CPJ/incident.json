@@ -1,0 +1,9 @@
+{
+  "incident_id": "Q1QN8ACMUP2CPJ",
+  "incident_url": "https://growthloop.pagerduty.com/incidents/Q1QN8ACMUP2CPJ",
+  "imported_at": "2026-06-22T18:52:17.729Z",
+  "source": "pagerduty",
+  "alert_count": 1,
+  "status": "unknown",
+  "refreshed_at": "2026-06-22T18:52:17.729Z"
+}

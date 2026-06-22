@@ -1,0 +1,14 @@
+Alerts (1)
+----------------
+1. Q1KA72EYWL61UU | triggered | 2026-06-16T08:14:55-07:00
+   untrusted_message: "fanatics (default): Exports for audience 36234 failed with states: <(snapshotting_finished,export_processing)>"
+   audience_id: "36234"
+   endpoint_id: "app_magnite_id_graph_1920"
+   checked_export_run_ids: "36234-magnite_id_graph_22111-scheduled__2026-06-16T00:00:00+00:00, 36234-magnite_id_graph_22111-scheduled__2026-06-16T00:00:00+00:00"
+   glcli: glcli --env prod bifrost pizza --audience-id 36234 --org-id 502
+   logs: "https://console.cloud.google.com/logs/query;query=resource.type%3D%22k8s_container%22%0A%0AjsonPayload.organization_id%3D%22fanatics_502%22%0AjsonPayload.internal_audience_id%3D%2236234%22%0A%0A;summaryFields=jsonPayload%252Fbatch_id:false:32:beginning;timeRange=2026-06-16T15:04:54Z%2F2026-06-16T15:24:54Z?project=flywheel-prod-328213"
+
+Deduped glcli commands by audience
+-----------------------------------
+audience_id 36234:
+  glcli --env prod bifrost pizza --audience-id 36234 --org-id 502

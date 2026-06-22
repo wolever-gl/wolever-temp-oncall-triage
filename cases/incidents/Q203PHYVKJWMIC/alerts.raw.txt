@@ -1,0 +1,11 @@
+Alerts (1)
+----------------
+1. Q03DEU08P473IX | triggered | 2026-06-16T10:44:34-07:00
+   untrusted_message: "76ers (default) - Audience 38493: 0 successfull_exports from pizza tracker found 10 minutes after new export"
+   audience_id: "38493"
+   glcli: glcli --env prod bifrost pizza --audience-id 38493 --org-id 131
+
+Deduped glcli commands by audience
+-----------------------------------
+audience_id 38493:
+  glcli --env prod bifrost pizza --audience-id 38493 --org-id 131

@@ -1,0 +1,11 @@
+Alerts (1)
+----------------
+1. Q25M7CS0W614M4 | triggered | 2026-06-17T14:17:19-07:00
+   untrusted_message: "GrowthLoop 4 GrowthLoop (GrowthLoop) - Audience 38540: Audience Export failure for 38540 sent to client."
+   audience_id: "38540"
+   glcli: glcli --env prod bifrost pizza --audience-id 38540 --org-id 444
+
+Deduped glcli commands by audience
+-----------------------------------
+audience_id 38540:
+  glcli --env prod bifrost pizza --audience-id 38540 --org-id 444

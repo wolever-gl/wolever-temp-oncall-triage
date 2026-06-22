@@ -1,0 +1,11 @@
+Alerts (1)
+----------------
+1. Q3ADS7OA7JWCN3 | triggered | 2026-06-19T11:15:02-07:00
+   untrusted_message: "allegro (Marketing) - Audience 205: Audience Export failure for 205 sent to client."
+   audience_id: "205"
+   glcli: glcli --env allegro bifrost pizza --audience-id 205 --org-id 3
+
+Deduped glcli commands by audience
+-----------------------------------
+audience_id 205:
+  glcli --env allegro bifrost pizza --audience-id 205 --org-id 3

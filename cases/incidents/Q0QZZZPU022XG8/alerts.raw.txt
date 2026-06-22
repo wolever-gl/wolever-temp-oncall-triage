@@ -1,0 +1,14 @@
+Alerts (1)
+----------------
+1. Q01PQXH8VWNEUS | triggered | 2026-06-19T07:30:08-07:00
+   untrusted_message: "allegro (Marketing): Exports for audience 64 failed with states: <(snapshotting_finished,export_error)>"
+   audience_id: "64"
+   endpoint_id: "app_facebook_2"
+   checked_export_run_ids: "64-facebook_125-scheduled__2026-06-10T00:00:00+00:00, 64-facebook_125-scheduled__2026-06-11T00:00:00+00:00, 64-facebook_125-scheduled__2026-06-12T00:00:00+00:00, 64-facebook_125-scheduled__2026-06-13T00:00:00+00:00, 64-facebook_125-scheduled__2026-06-14T00:00:00+00:00, 64-facebook_125-scheduled__2026-06-15T00:00:00+00:00, 64-facebook_125-scheduled__2026-06-16T00:00:00+00:00, 64-facebook_125-scheduled__2026-06-17T00:00:00+00:00, 64-facebook_125-scheduled__2026-06-18T00:00:00+00:00, 64-facebook_125-scheduled__2026-06-19T00:00:00+00:00"
+   glcli: glcli --env allegro bifrost pizza --audience-id 64 --org-id 3
+   logs: "https://console.cloud.google.com/logs/query;query=resource.type%3D%22k8s_container%22%0A%0AjsonPayload.organization_id%3D%22allegro_3%22%0AjsonPayload.internal_audience_id%3D%2264%22%0A%0A;summaryFields=jsonPayload%252Fbatch_id:false:32:beginning;timeRange=2026-06-19T14:20:07Z%2F2026-06-19T14:40:07Z?project=sc-24037-cdp-prod"
+
+Deduped glcli commands by audience
+-----------------------------------
+audience_id 64:
+  glcli --env allegro bifrost pizza --audience-id 64 --org-id 3

@@ -1,3 +1,0 @@
-{"ts":"2026-06-22T15:05:55.227Z","actor":"oncall-triage","decision":"created_group","rationale":"Conservative deterministic grouping created a new group for v3|incident:Q2T09VCLN9MRZ8|org:albertsons_6|dest:live-ramp|class:export-processing."}
-{"ts":"2026-06-22T15:06:45.985Z","actor":"check-exports","decision":"started_work","rationale":"Export evidence check evaluated alert facts for this group."}
-{"ts":"2026-06-22T15:06:55.788Z","actor":"check-exports","decision":"transitioned_to_monitoring","rationale":"Auto-monitored from Pizza export checks: 1 alert-scoped export check(s) are still processing and 0 are already healthy."}

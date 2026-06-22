@@ -1,0 +1,23 @@
+{
+  "group_id": "260615-albertsons_6-live-ramp-export-error",
+  "state": "new",
+  "tags": [
+    "triage:needs_review"
+  ],
+  "title": "albertsons_6 live-ramp export-error",
+  "summary": "albertsons (Albertsons Media): Exports for audience 11579 failed with states: <(snapshotting_finished,export_error)>",
+  "deterministic_key": "v3|incident:Q2CD9OGM7RSCXU|org:albertsons_6|dest:live-ramp|class:export-error",
+  "grouping_version": 3,
+  "created_at": "2026-06-22T18:54:54.145Z",
+  "updated_at": "2026-06-22T18:54:54.145Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q2CD9OGM7RSCXU",
+      "alert_id": "Q16XDBUY1UMK8S"
+    }
+  ],
+  "incident_ids": [
+    "Q2CD9OGM7RSCXU"
+  ],
+  "related_group_ids": []
+}

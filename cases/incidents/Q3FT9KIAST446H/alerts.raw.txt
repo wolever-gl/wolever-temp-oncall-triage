@@ -1,0 +1,11 @@
+Alerts (1)
+----------------
+1. Q02ZYDO56S0FI1 | triggered | 2026-06-21T22:51:51-07:00
+   untrusted_message: "albertsons (Albertsons Media) - Audience 2421: Audience Export failure for 2421 sent to client."
+   audience_id: "2421"
+   glcli: glcli --env albertsons bifrost pizza --audience-id 2421 --org-id 6
+
+Deduped glcli commands by audience
+-----------------------------------
+audience_id 2421:
+  glcli --env albertsons bifrost pizza --audience-id 2421 --org-id 6

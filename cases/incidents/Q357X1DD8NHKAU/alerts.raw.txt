@@ -1,0 +1,11 @@
+Alerts (1)
+----------------
+1. Q2BUG6N3KM7OGQ | triggered | 2026-06-20T16:59:24-07:00
+   untrusted_message: "chghealthcare (Omni-Division) - Audience 34238: Audience Export failure for 34238 sent to client."
+   audience_id: "34238"
+   glcli: glcli --env prod bifrost pizza --audience-id 34238 --org-id 395
+
+Deduped glcli commands by audience
+-----------------------------------
+audience_id 34238:
+  glcli --env prod bifrost pizza --audience-id 34238 --org-id 395

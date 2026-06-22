@@ -1,0 +1,23 @@
+{
+  "group_id": "260618-priceline_370-iterable-export-processing",
+  "state": "new",
+  "tags": [
+    "triage:needs_review"
+  ],
+  "title": "priceline_370 iterable export-processing",
+  "summary": "priceline (default): Exports for signal 671 failed with states: <(snapshotting_finished,export_processing)>",
+  "deterministic_key": "v3|incident:Q33G1FKNUOJQ4Q|org:priceline_370|dest:iterable|class:export-processing",
+  "grouping_version": 3,
+  "created_at": "2026-06-22T18:54:54.145Z",
+  "updated_at": "2026-06-22T18:54:54.145Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q33G1FKNUOJQ4Q",
+      "alert_id": "Q31D2FFRRZ277Q"
+    }
+  ],
+  "incident_ids": [
+    "Q33G1FKNUOJQ4Q"
+  ],
+  "related_group_ids": []
+}

@@ -1,0 +1,11 @@
+Alerts (1)
+----------------
+1. Q2HSB75QSIRGMV | triggered | 2026-06-18T15:07:51-07:00
+   untrusted_message: "NJ Devils (default) - Audience 38598: 0 successfull_exports from pizza tracker found 10 minutes after new export"
+   audience_id: "38598"
+   glcli: glcli --env prod bifrost pizza --audience-id 38598 --org-id 174
+
+Deduped glcli commands by audience
+-----------------------------------
+audience_id 38598:
+  glcli --env prod bifrost pizza --audience-id 38598 --org-id 174

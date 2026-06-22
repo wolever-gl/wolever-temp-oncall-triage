@@ -1,0 +1,11 @@
+Alerts (1)
+----------------
+1. Q1WCSUND726N02 | triggered | 2026-06-17T20:55:42-07:00
+   untrusted_message: "fanatics (default) - Audience 30807: Audience Export failure for 30807 sent to client."
+   audience_id: "30807"
+   glcli: glcli --env prod bifrost pizza --audience-id 30807 --org-id 502
+
+Deduped glcli commands by audience
+-----------------------------------
+audience_id 30807:
+  glcli --env prod bifrost pizza --audience-id 30807 --org-id 502

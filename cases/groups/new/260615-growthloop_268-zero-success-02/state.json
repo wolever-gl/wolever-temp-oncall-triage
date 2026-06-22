@@ -1,0 +1,23 @@
+{
+  "group_id": "260615-growthloop_268-zero-success-02",
+  "state": "new",
+  "tags": [
+    "triage:needs_review"
+  ],
+  "title": "growthloop_268 zero-success",
+  "summary": "growthloop (default) - Audience 38458: 0 successfull_exports from pizza tracker found 10 minutes after new export",
+  "deterministic_key": "v3|incident:Q3YVFCFEYI2MJI|org:growthloop_268|class:zero-success",
+  "grouping_version": 3,
+  "created_at": "2026-06-22T18:54:54.145Z",
+  "updated_at": "2026-06-22T18:54:54.145Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q3YVFCFEYI2MJI",
+      "alert_id": "Q2W56IY29TQC8R"
+    }
+  ],
+  "incident_ids": [
+    "Q3YVFCFEYI2MJI"
+  ],
+  "related_group_ids": []
+}

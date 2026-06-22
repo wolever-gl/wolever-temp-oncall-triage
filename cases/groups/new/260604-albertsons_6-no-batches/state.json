@@ -1,0 +1,23 @@
+{
+  "group_id": "260604-albertsons_6-no-batches",
+  "state": "new",
+  "tags": [
+    "triage:needs_review"
+  ],
+  "title": "albertsons_6 no-batches",
+  "summary": "albertsons (Albertsons Media): Exports for audience 11048 failed with states: <(snapshotting_finished,no_batches)>",
+  "deterministic_key": "v3|incident:Q1E4EUPF9HDZNA|org:albertsons_6|class:no-batches",
+  "grouping_version": 3,
+  "created_at": "2026-06-22T18:54:54.145Z",
+  "updated_at": "2026-06-22T18:54:54.145Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q1E4EUPF9HDZNA",
+      "alert_id": "Q2E6SESXB0EPQT"
+    }
+  ],
+  "incident_ids": [
+    "Q1E4EUPF9HDZNA"
+  ],
+  "related_group_ids": []
+}

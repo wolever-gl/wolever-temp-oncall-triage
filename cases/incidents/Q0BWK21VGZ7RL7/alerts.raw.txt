@@ -1,0 +1,11 @@
+Alerts (1)
+----------------
+1. Q2NVER0YOZOE89 | triggered | 2026-06-18T02:14:48-07:00
+   untrusted_message: "allegro (Advertising) - Audience 869: Audience Export failure for 869 sent to client."
+   audience_id: "869"
+   glcli: glcli --env allegro bifrost pizza --audience-id 869 --org-id 3
+
+Deduped glcli commands by audience
+-----------------------------------
+audience_id 869:
+  glcli --env allegro bifrost pizza --audience-id 869 --org-id 3

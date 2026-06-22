@@ -1,0 +1,57 @@
+Alerts (8)
+----------------
+1. Q3DTLJYDZ4NONK | triggered | 2026-06-06T20:18:54-07:00
+   untrusted_message: "ASU Enterprise Partners (Alumni) - Audience 26039: Audience Export failure for 26039 sent to client."
+   audience_id: "26039"
+   glcli: glcli --env prod bifrost pizza --audience-id 26039 --org-id 451
+2. Q1BGR34WR9RA7U | triggered | 2026-06-06T19:22:31-07:00
+   untrusted_message: "ASU Enterprise Partners (Alumni) - Audience 25885: Audience Export failure for 25885 sent to client."
+   audience_id: "25885"
+   glcli: glcli --env prod bifrost pizza --audience-id 25885 --org-id 451
+3. Q0EJUVME0TY8CC | triggered | 2026-06-04T14:42:24-07:00
+   untrusted_message: "ASU Enterprise Partners (General - ASU Data) - Audience 24855: Audience Export failure for 24855 sent to client."
+   audience_id: "24855"
+   glcli: glcli --env prod bifrost pizza --audience-id 24855 --org-id 451
+4. Q0PDUEWCNJAOWX | triggered | 2026-06-04T08:02:11-07:00
+   untrusted_message: "ASU Enterprise Partners (General - ASU Data): Exports for audience 26037 failed with states: <(snapshotting_finished,export_error)>"
+   audience_id: "26037"
+   endpoint_id: "app_linkedin_ads_1600"
+   checked_export_run_ids: "26037-linkedin_ads_16093-scheduled__2026-06-04T00:00:00+00:00"
+   glcli: glcli --env prod bifrost pizza --audience-id 26037 --org-id 451
+   logs: "https://console.cloud.google.com/logs/query;query=resource.type%3D%22k8s_container%22%0A%0AjsonPayload.organization_id%3D%22asuenterprisepartners_451%22%0AjsonPayload.internal_audience_id%3D%2226037%22%0A%0A;summaryFields=jsonPayload%252Fbatch_id:false:32:beginning;timeRange=2026-06-04T14:52:10Z%2F2026-06-04T15:12:10Z?project=flywheel-prod-328213"
+5. Q3CFJFCVA0N716 | triggered | 2026-06-04T08:02:09-07:00
+   untrusted_message: "ASU Enterprise Partners (General - ASU Data): Exports for audience 25884 failed with states: <(snapshotting_finished,export_error)>"
+   audience_id: "25884"
+   endpoint_id: "app_linkedin_ads_1600"
+   checked_export_run_ids: "25884-linkedin_ads_16092-scheduled__2026-06-04T00:00:00+00:00"
+   glcli: glcli --env prod bifrost pizza --audience-id 25884 --org-id 451
+   logs: "https://console.cloud.google.com/logs/query;query=resource.type%3D%22k8s_container%22%0A%0AjsonPayload.organization_id%3D%22asuenterprisepartners_451%22%0AjsonPayload.internal_audience_id%3D%2225884%22%0A%0A;summaryFields=jsonPayload%252Fbatch_id:false:32:beginning;timeRange=2026-06-04T14:52:09Z%2F2026-06-04T15:12:09Z?project=flywheel-prod-328213"
+6. Q32NAVAXQ1M214 | triggered | 2026-06-04T08:02:05-07:00
+   untrusted_message: "ASU Enterprise Partners (General - ASU Data): Exports for audience 24842 failed with states: <(snapshotting_finished,no_batches)>"
+   audience_id: "24842"
+   checked_export_run_ids: "24842-reddit_ads_22519-webapp__2026-06-03T21:16:59+00:00, 24842-microsoft_ads_22505-scheduled__2026-06-04T00:00:00+00:00, 24842-pinterest_22512-scheduled__2026-06-04T00:00:00+00:00"
+   glcli: glcli --env prod bifrost pizza --audience-id 24842 --org-id 451
+   logs: "https://console.cloud.google.com/logs/query;query=resource.type%3D%22k8s_container%22%0A%0AjsonPayload.organization_id%3D%22asuenterprisepartners_451%22%0AjsonPayload.internal_audience_id%3D%2224842%22%0A%0A;summaryFields=jsonPayload%252Fbatch_id:false:32:beginning;timeRange=2026-06-04T14:52:05Z%2F2026-06-04T15:12:05Z?project=flywheel-prod-328213"
+7. Q0BKKBBFH5CINN | triggered | 2026-06-03T19:28:52-07:00
+   untrusted_message: "ASU Enterprise Partners (General - ASU Data) - Audience 26037: Audience Export failure for 26037 sent to client."
+   audience_id: "26037"
+   glcli: glcli --env prod bifrost pizza --audience-id 26037 --org-id 451
+8. Q0NTWAEKYBE138 | triggered | 2026-06-03T19:01:27-07:00
+   untrusted_message: "ASU Enterprise Partners (General - ASU Data) - Audience 25884: Audience Export failure for 25884 sent to client."
+   audience_id: "25884"
+   glcli: glcli --env prod bifrost pizza --audience-id 25884 --org-id 451
+
+Deduped glcli commands by audience
+-----------------------------------
+audience_id 26039:
+  glcli --env prod bifrost pizza --audience-id 26039 --org-id 451
+audience_id 25885:
+  glcli --env prod bifrost pizza --audience-id 25885 --org-id 451
+audience_id 24855:
+  glcli --env prod bifrost pizza --audience-id 24855 --org-id 451
+audience_id 26037:
+  glcli --env prod bifrost pizza --audience-id 26037 --org-id 451
+audience_id 25884:
+  glcli --env prod bifrost pizza --audience-id 25884 --org-id 451
+audience_id 24842:
+  glcli --env prod bifrost pizza --audience-id 24842 --org-id 451

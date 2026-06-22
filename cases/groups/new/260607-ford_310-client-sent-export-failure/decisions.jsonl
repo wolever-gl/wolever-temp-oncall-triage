@@ -1,0 +1,3 @@
+{"ts":"2026-06-22T18:54:54.145Z","actor":"oncall-triage","decision":"created_group","rationale":"Conservative deterministic grouping created a new group for v3|incident:Q2FAMW1B9VZV5J|org:ford_310|class:client-sent-export-failure."}
+{"ts":"2026-06-22T18:54:54.145Z","actor":"oncall-triage","decision":"attached_alert_to_existing_group","rationale":"Alert matched deterministic key v3|incident:Q2FAMW1B9VZV5J|org:ford_310|class:client-sent-export-failure."}
+{"ts":"2026-06-22T18:54:54.145Z","actor":"oncall-triage","decision":"attached_alert_to_existing_group","rationale":"Alert matched deterministic key v3|incident:Q2FAMW1B9VZV5J|org:ford_310|class:client-sent-export-failure."}

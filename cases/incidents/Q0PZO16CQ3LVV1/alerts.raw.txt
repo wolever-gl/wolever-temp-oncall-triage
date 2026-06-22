@@ -1,0 +1,11 @@
+Alerts (1)
+----------------
+1. Q2HIVMPCL2DQV3 | triggered | 2026-06-18T18:05:36-07:00
+   untrusted_message: "priceline (default) - Audience 18482: Audience Export failure for 18482 sent to client."
+   audience_id: "18482"
+   glcli: glcli --env prod bifrost pizza --audience-id 18482 --org-id 370
+
+Deduped glcli commands by audience
+-----------------------------------
+audience_id 18482:
+  glcli --env prod bifrost pizza --audience-id 18482 --org-id 370

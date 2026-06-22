@@ -169,6 +169,7 @@ export async function importActivePagerDutyIncidents(options: {
   workspaceDir: string;
   fetchActiveIncidents?: () => Promise<PagerDutyIncidentListRecord[]>;
   importIncident?: (incident: string) => Promise<{ incident_id: string; alert_count: number }>;
+  onProgress?: (message: string) => void;
 }): Promise<{
   active_incidents: string[];
   imported: Array<{ incident_id: string; alert_count: number }>;
@@ -177,16 +178,24 @@ export async function importActivePagerDutyIncidents(options: {
   await initWorkspace(options.workspaceDir);
   const fetchActiveIncidents = options.fetchActiveIncidents ?? fetchActivePagerDutyIncidents;
   const importIncident = options.importIncident ?? ((incident: string) => importPagerDutyIncident({ workspaceDir: options.workspaceDir, incident }));
+  options.onProgress?.("Discovering active PagerDuty incidents...");
   const activeIncidents = await fetchActiveIncidents();
   const activeIncidentIds = sortedUnique(activeIncidents.map((incident) => incident.incident_id));
   const imported: Array<{ incident_id: string; alert_count: number }> = [];
+  options.onProgress?.(`Discovered ${activeIncidentIds.length} active PagerDuty incident(s).`);
 
-  for (const incidentId of activeIncidentIds) {
-    imported.push(await importIncident(incidentId));
+  for (let idx = 0; idx < activeIncidentIds.length; idx++) {
+    const incidentId = activeIncidentIds[idx]!;
+    options.onProgress?.(`Importing ${idx + 1}/${activeIncidentIds.length}: ${incidentId}`);
+    const importedIncident = await importIncident(incidentId);
+    imported.push(importedIncident);
+    options.onProgress?.(`Imported ${importedIncident.incident_id}: ${importedIncident.alert_count} alert(s).`);
   }
 
+  options.onProgress?.("Grouping imported alerts...");
   const grouped = await groupImportedAlerts(options.workspaceDir);
   await regenerateIndex(options.workspaceDir);
+  options.onProgress?.(`Grouped imported alerts: created=${grouped.created}, attached=${grouped.attached}.`);
   return { active_incidents: activeIncidentIds, imported, grouped };
 }
 

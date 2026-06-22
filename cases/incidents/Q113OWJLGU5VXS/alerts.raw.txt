@@ -1,0 +1,11 @@
+Alerts (1)
+----------------
+1. Q3D1NE5RH69J7I | triggered | 2026-06-15T16:27:20-07:00
+   untrusted_message: "chghealthcare (CompHealth) - Audience 19070: Audience Export failure for 19070 sent to client."
+   audience_id: "19070"
+   glcli: glcli --env prod bifrost pizza --audience-id 19070 --org-id 395
+
+Deduped glcli commands by audience
+-----------------------------------
+audience_id 19070:
+  glcli --env prod bifrost pizza --audience-id 19070 --org-id 395

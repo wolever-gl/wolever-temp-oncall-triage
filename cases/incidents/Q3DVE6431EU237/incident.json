@@ -1,0 +1,9 @@
+{
+  "incident_id": "Q3DVE6431EU237",
+  "incident_url": "https://growthloop.pagerduty.com/incidents/Q3DVE6431EU237",
+  "imported_at": "2026-06-22T18:54:10.764Z",
+  "source": "pagerduty",
+  "alert_count": 1,
+  "status": "unknown",
+  "refreshed_at": "2026-06-22T18:54:10.764Z"
+}

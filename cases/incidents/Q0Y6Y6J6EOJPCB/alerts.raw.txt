@@ -1,0 +1,13 @@
+Alerts (1)
+----------------
+1. Q398VAHRAO29RN | triggered | 2026-06-22T07:54:56-07:00
+   untrusted_message: "NJ Devils (default): Exports for audience 6735 failed with states: <(snapshotting_error,no_batches)>"
+   audience_id: "6735"
+   checked_export_run_ids: "6735-linkedin_ads_22258-webapp__2026-05-20T20:10:48+00:00, 6735-linkedin_ads_22258-scheduled__2026-06-20T00:00:00+00:00"
+   glcli: glcli --env prod bifrost pizza --audience-id 6735 --org-id 174
+   logs: "https://console.cloud.google.com/logs/query;query=resource.type%3D%22k8s_container%22%0A%0AjsonPayload.organization_id%3D%22njdevils_174%22%0AjsonPayload.internal_audience_id%3D%226735%22%0A%0A;summaryFields=jsonPayload%252Fbatch_id:false:32:beginning;timeRange=2026-06-22T14:44:56Z%2F2026-06-22T15:04:56Z?project=flywheel-prod-328213"
+
+Deduped glcli commands by audience
+-----------------------------------
+audience_id 6735:
+  glcli --env prod bifrost pizza --audience-id 6735 --org-id 174

@@ -1,1 +1,0 @@
-{"ts":"2026-06-15T16:19:19.766Z","kind":"pd_sync","source":"pagerduty","summary":"All attached PagerDuty incidents are resolved externally. Attached incidents: Q24RX6QMXPYKQR.","data":{"resolved_incidents":["Q24RX6QMXPYKQR"],"incident_statuses":[{"incident_id":"Q24RX6QMXPYKQR","status":"resolved","resolved_at":"2026-05-20T18:18:11Z"}]}}

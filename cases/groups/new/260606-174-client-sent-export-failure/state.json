@@ -1,0 +1,35 @@
+{
+  "group_id": "260606-174-client-sent-export-failure",
+  "state": "new",
+  "tags": [
+    "triage:needs_review"
+  ],
+  "title": "174 client-sent-export-failure",
+  "summary": "NJ Devils (default) - Audience 17206: Audience Export failure for 17206 sent to client.",
+  "deterministic_key": "v3|incident:Q1H2G1LPQBKYIZ|org:174|class:client-sent-export-failure",
+  "grouping_version": 3,
+  "created_at": "2026-06-22T18:54:54.145Z",
+  "updated_at": "2026-06-22T18:54:54.145Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q1H2G1LPQBKYIZ",
+      "alert_id": "Q1YF50ATPD3XZL"
+    },
+    {
+      "incident_id": "Q1H2G1LPQBKYIZ",
+      "alert_id": "Q20J9ZU32WRHTI"
+    },
+    {
+      "incident_id": "Q1H2G1LPQBKYIZ",
+      "alert_id": "Q0ANXDZ22B4JYD"
+    },
+    {
+      "incident_id": "Q1H2G1LPQBKYIZ",
+      "alert_id": "Q0BU4ZPYRD89TH"
+    }
+  ],
+  "incident_ids": [
+    "Q1H2G1LPQBKYIZ"
+  ],
+  "related_group_ids": []
+}

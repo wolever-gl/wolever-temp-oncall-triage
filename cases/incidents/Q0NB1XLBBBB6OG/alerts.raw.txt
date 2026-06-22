@@ -1,0 +1,13 @@
+Alerts (1)
+----------------
+1. Q1Z6210KIQRYAM | triggered | 2026-06-22T07:38:19-07:00
+   untrusted_message: "albertsons (Albertsons Media): No exports for audience 10746 found in scheduled interval"
+   audience_id: "10746"
+   checked_export_run_ids: ""
+   glcli: glcli --env albertsons bifrost pizza --audience-id 10746 --org-id 6
+   logs: "https://console.cloud.google.com/logs/query;query=resource.type%3D%22k8s_container%22%0A%0AjsonPayload.organization_id%3D%22albertsons_6%22%0AjsonPayload.internal_audience_id%3D%2210746%22%0A%0A;summaryFields=jsonPayload%252Fbatch_id:false:32:beginning;timeRange=2026-06-22T14:28:18Z%2F2026-06-22T14:48:18Z?project=gl-client-albertsons"
+
+Deduped glcli commands by audience
+-----------------------------------
+audience_id 10746:
+  glcli --env albertsons bifrost pizza --audience-id 10746 --org-id 6

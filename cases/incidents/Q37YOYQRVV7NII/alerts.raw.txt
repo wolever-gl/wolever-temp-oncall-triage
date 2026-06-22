@@ -1,0 +1,13 @@
+Alerts (1)
+----------------
+1. Q2WLB0Z7HQ00MB | triggered | 2026-06-18T07:30:06-07:00
+   untrusted_message: "royals (default): Exports for signal 102 failed with states: <(snapshotting_error,no_batches)>"
+   audience_id: "102"
+   checked_export_run_ids: "102-salesforce_audience_object_102-scheduled__2026-06-18T11:00:00+00:00, 102-salesforce_audience_object_102-scheduled__2026-06-18T12:00:00+00:00, 102-salesforce_audience_object_102-scheduled__2026-06-18T13:00:00+00:00"
+   glcli: glcli --env royals bifrost pizza --audience-id 102 --org-id 4
+   logs: "https://console.cloud.google.com/logs/query;query=resource.type%3D%22k8s_container%22%0A%0AjsonPayload.organization_id%3D%22royals_4%22%0AjsonPayload.internal_audience_id%3D%22102%22%0A%0A;summaryFields=jsonPayload%252Fbatch_id:false:32:beginning;timeRange=2026-06-18T14:20:02Z%2F2026-06-18T14:40:02Z?project=royals-gcp-cdp"
+
+Deduped glcli commands by audience
+-----------------------------------
+audience_id 102:
+  glcli --env royals bifrost pizza --audience-id 102 --org-id 4

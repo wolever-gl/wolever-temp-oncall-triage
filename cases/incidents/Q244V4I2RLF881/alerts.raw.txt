@@ -1,0 +1,11 @@
+Alerts (1)
+----------------
+1. Q38XBMN8SB5LRS | triggered | 2026-06-19T21:39:37-07:00
+   untrusted_message: "albertsons (Albertsons Media) - Audience 10107: Audience Export failure for 10107 sent to client."
+   audience_id: "10107"
+   glcli: glcli --env albertsons bifrost pizza --audience-id 10107 --org-id 6
+
+Deduped glcli commands by audience
+-----------------------------------
+audience_id 10107:
+  glcli --env albertsons bifrost pizza --audience-id 10107 --org-id 6

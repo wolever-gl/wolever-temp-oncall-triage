@@ -1,0 +1,11 @@
+Alerts (1)
+----------------
+1. Q3IRX9X5EI9FR8 | triggered | 2026-06-17T16:37:01-07:00
+   untrusted_message: "chghealthcare (Weatherby Healthcare) - Audience 26145: Audience Export failure for 26145 sent to client."
+   audience_id: "26145"
+   glcli: glcli --env prod bifrost pizza --audience-id 26145 --org-id 395
+
+Deduped glcli commands by audience
+-----------------------------------
+audience_id 26145:
+  glcli --env prod bifrost pizza --audience-id 26145 --org-id 395

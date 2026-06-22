@@ -1,0 +1,23 @@
+{
+  "group_id": "260615-3-client-sent-export-failure",
+  "state": "new",
+  "tags": [
+    "triage:needs_review"
+  ],
+  "title": "3 client-sent-export-failure",
+  "summary": "Costco Non Prod (default) - Audience 6249: Audience Export failure for 6249 sent to client.",
+  "deterministic_key": "v3|incident:Q3DXQ2VY491QPC|org:3|class:client-sent-export-failure",
+  "grouping_version": 3,
+  "created_at": "2026-06-22T18:54:54.145Z",
+  "updated_at": "2026-06-22T18:54:54.145Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q3DXQ2VY491QPC",
+      "alert_id": "Q21XIE8B3BHP9O"
+    }
+  ],
+  "incident_ids": [
+    "Q3DXQ2VY491QPC"
+  ],
+  "related_group_ids": []
+}

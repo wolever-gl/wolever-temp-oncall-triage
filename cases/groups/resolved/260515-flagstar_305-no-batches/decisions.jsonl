@@ -1,2 +1,0 @@
-{"ts":"2026-05-16T00:38:01.850Z","actor":"oncall-triage","decision":"created_group","rationale":"Conservative deterministic grouping created a new group for v3|incident:Q28HZS5TYC0NM9|org:flagstar_305|class:no-batches."}
-{"ts":"2026-05-16T16:37:00.344Z","actor":"pagerduty-sync","decision":"transitioned_to_resolved","rationale":"All attached PagerDuty incidents are resolved externally."}

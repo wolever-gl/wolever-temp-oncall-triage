@@ -1,0 +1,14 @@
+Alerts (1)
+----------------
+1. Q2MPMWAUMRBBL5 | triggered | 2026-06-22T07:51:23-07:00
+   untrusted_message: "Braves (default): Exports for audience 31889 failed with states: <(snapshotting_finished,export_error)>"
+   audience_id: "31889"
+   endpoint_id: "app_salesforce_audience_1885"
+   checked_export_run_ids: "31889-salesforce_audience_22370-scheduled__2026-06-22T00:00:00+00:00"
+   glcli: glcli --env prod bifrost pizza --audience-id 31889 --org-id 524
+   logs: "https://console.cloud.google.com/logs/query;query=resource.type%3D%22k8s_container%22%0A%0AjsonPayload.organization_id%3D%22braves_524%22%0AjsonPayload.internal_audience_id%3D%2231889%22%0A%0A;summaryFields=jsonPayload%252Fbatch_id:false:32:beginning;timeRange=2026-06-22T14:41:22Z%2F2026-06-22T15:01:22Z?project=flywheel-prod-328213"
+
+Deduped glcli commands by audience
+-----------------------------------
+audience_id 31889:
+  glcli --env prod bifrost pizza --audience-id 31889 --org-id 524

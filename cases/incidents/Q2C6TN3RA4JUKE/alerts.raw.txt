@@ -1,0 +1,13 @@
+Alerts (1)
+----------------
+1. Q0JLINX22LVDKZ | triggered | 2026-06-22T07:59:01-07:00
+   untrusted_message: "verizon (Sandbox): Exports for audience 38460 failed with states: <(snapshotting_error,no_batches)>"
+   audience_id: "38460"
+   checked_export_run_ids: "38460-adobe_experience_platform_22718-webapp__2026-06-16T02:57:46+00:00"
+   glcli: glcli --env prod bifrost pizza --audience-id 38460 --org-id 309
+   logs: "https://console.cloud.google.com/logs/query;query=resource.type%3D%22k8s_container%22%0A%0AjsonPayload.organization_id%3D%22verizon_309%22%0AjsonPayload.internal_audience_id%3D%2238460%22%0A%0A;summaryFields=jsonPayload%252Fbatch_id:false:32:beginning;timeRange=2026-06-22T14:49:00Z%2F2026-06-22T15:09:00Z?project=flywheel-prod-328213"
+
+Deduped glcli commands by audience
+-----------------------------------
+audience_id 38460:
+  glcli --env prod bifrost pizza --audience-id 38460 --org-id 309

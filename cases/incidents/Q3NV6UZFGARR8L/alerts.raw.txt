@@ -1,0 +1,11 @@
+Alerts (1)
+----------------
+1. Q1371PXS6Z9Q5H | triggered | 2026-06-16T14:01:09-07:00
+   untrusted_message: "Cincinnati Reds (default) - Audience 38500: Audience Export failure for 38500 sent to client."
+   audience_id: "38500"
+   glcli: glcli --env prod bifrost pizza --audience-id 38500 --org-id 378
+
+Deduped glcli commands by audience
+-----------------------------------
+audience_id 38500:
+  glcli --env prod bifrost pizza --audience-id 38500 --org-id 378

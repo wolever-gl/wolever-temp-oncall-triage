@@ -1,0 +1,11 @@
+Alerts (1)
+----------------
+1. Q2H04AO87R8CEL | triggered | 2026-06-04T07:11:15-07:00
+   untrusted_message: "gopuff (default) - Audience 37063: Audience Export failure for 37063 sent to client."
+   audience_id: "37063"
+   glcli: glcli --env prod bifrost pizza --audience-id 37063 --org-id 544
+
+Deduped glcli commands by audience
+-----------------------------------
+audience_id 37063:
+  glcli --env prod bifrost pizza --audience-id 37063 --org-id 544

@@ -1,0 +1,53 @@
+Alerts (7)
+----------------
+1. Q1YF50ATPD3XZL | triggered | 2026-06-06T04:24:24-07:00
+   untrusted_message: "NJ Devils (default) - Audience 17206: Audience Export failure for 17206 sent to client."
+   audience_id: "17206"
+   glcli: glcli --env prod bifrost pizza --audience-id 17206 --org-id 174
+2. Q3UWOJDOIO35GQ | triggered | 2026-06-05T07:59:36-07:00
+   untrusted_message: "NJ Devils (default): Exports for audience 25474 failed with states: <(snapshotting_finished,export_error)>"
+   audience_id: "25474"
+   endpoint_id: "app_facebook_263"
+   checked_export_run_ids: "25474-facebook_15654-scheduled__2026-06-05T00:00:00+00:00"
+   glcli: glcli --env prod bifrost pizza --audience-id 25474 --org-id 174
+   logs: "https://console.cloud.google.com/logs/query;query=resource.type%3D%22k8s_container%22%0A%0AjsonPayload.organization_id%3D%22njdevils_174%22%0AjsonPayload.internal_audience_id%3D%2225474%22%0A%0A;summaryFields=jsonPayload%252Fbatch_id:false:32:beginning;timeRange=2026-06-05T14:49:36Z%2F2026-06-05T15:09:36Z?project=flywheel-prod-328213"
+3. Q20J9ZU32WRHTI | triggered | 2026-06-04T18:27:36-07:00
+   untrusted_message: "NJ Devils (default) - Audience 25474: Audience Export failure for 25474 sent to client."
+   audience_id: "25474"
+   glcli: glcli --env prod bifrost pizza --audience-id 25474 --org-id 174
+4. Q0ANXDZ22B4JYD | triggered | 2026-06-04T17:19:08-07:00
+   untrusted_message: "NJ Devils (default) - Audience 28188: Audience Export failure for 28188 sent to client."
+   audience_id: "28188"
+   glcli: glcli --env prod bifrost pizza --audience-id 28188 --org-id 174
+5. Q360QWB0ARJAJZ | triggered | 2026-06-03T08:05:10-07:00
+   untrusted_message: "NJ Devils (default): Exports for audience 27576 failed with states: <(snapshotting_finished,export_error)>"
+   audience_id: "27576"
+   endpoint_id: "app_facebook_263"
+   checked_export_run_ids: "27576-facebook_16836-scheduled__2026-05-27T00:00:00+00:00, 27576-facebook_16836-scheduled__2026-06-03T00:00:00+00:00"
+   glcli: glcli --env prod bifrost pizza --audience-id 27576 --org-id 174
+   logs: "https://console.cloud.google.com/logs/query;query=resource.type%3D%22k8s_container%22%0A%0AjsonPayload.organization_id%3D%22njdevils_174%22%0AjsonPayload.internal_audience_id%3D%2227576%22%0A%0A;summaryFields=jsonPayload%252Fbatch_id:false:32:beginning;timeRange=2026-06-03T14:55:09Z%2F2026-06-03T15:15:09Z?project=flywheel-prod-328213"
+6. Q3Q0CAZMA3UQDX | triggered | 2026-06-03T08:03:11-07:00
+   untrusted_message: "NJ Devils (default): Exports for audience 3866 failed with states: <(snapshotting_error,no_batches)>"
+   audience_id: "3866"
+   checked_export_run_ids: "3866-snapchat_22454-webapp__2026-06-02T13:49:55+00:00"
+   glcli: glcli --env prod bifrost pizza --audience-id 3866 --org-id 174
+   logs: "https://console.cloud.google.com/logs/query;query=resource.type%3D%22k8s_container%22%0A%0AjsonPayload.organization_id%3D%22njdevils_174%22%0AjsonPayload.internal_audience_id%3D%223866%22%0A%0A;summaryFields=jsonPayload%252Fbatch_id:false:32:beginning;timeRange=2026-06-03T14:53:10Z%2F2026-06-03T15:13:10Z?project=flywheel-prod-328213"
+7. Q0BU4ZPYRD89TH | triggered | 2026-06-03T03:42:31-07:00
+   untrusted_message: "NJ Devils (default) - Audience 27534: Audience Export failure for 27534 sent to client."
+   audience_id: "27534"
+   glcli: glcli --env prod bifrost pizza --audience-id 27534 --org-id 174
+
+Deduped glcli commands by audience
+-----------------------------------
+audience_id 17206:
+  glcli --env prod bifrost pizza --audience-id 17206 --org-id 174
+audience_id 25474:
+  glcli --env prod bifrost pizza --audience-id 25474 --org-id 174
+audience_id 28188:
+  glcli --env prod bifrost pizza --audience-id 28188 --org-id 174
+audience_id 27576:
+  glcli --env prod bifrost pizza --audience-id 27576 --org-id 174
+audience_id 3866:
+  glcli --env prod bifrost pizza --audience-id 3866 --org-id 174
+audience_id 27534:
+  glcli --env prod bifrost pizza --audience-id 27534 --org-id 174

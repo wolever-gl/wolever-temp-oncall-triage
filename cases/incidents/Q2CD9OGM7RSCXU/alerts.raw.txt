@@ -1,0 +1,14 @@
+Alerts (1)
+----------------
+1. Q16XDBUY1UMK8S | triggered | 2026-06-15T07:38:45-07:00
+   untrusted_message: "albertsons (Albertsons Media): Exports for audience 11579 failed with states: <(snapshotting_finished,export_error)>"
+   audience_id: "11579"
+   endpoint_id: "app_liveramp_activation_26"
+   checked_export_run_ids: "11579-live_ramp_activation_3543-scheduled__2026-06-15T00:00:00+00:00"
+   glcli: glcli --env albertsons bifrost pizza --audience-id 11579 --org-id 6
+   logs: "https://console.cloud.google.com/logs/query;query=resource.type%3D%22k8s_container%22%0A%0AjsonPayload.organization_id%3D%22albertsons_6%22%0AjsonPayload.internal_audience_id%3D%2211579%22%0A%0A;summaryFields=jsonPayload%252Fbatch_id:false:32:beginning;timeRange=2026-06-15T14:28:45Z%2F2026-06-15T14:48:45Z?project=gl-client-albertsons"
+
+Deduped glcli commands by audience
+-----------------------------------
+audience_id 11579:
+  glcli --env albertsons bifrost pizza --audience-id 11579 --org-id 6

@@ -1,0 +1,11 @@
+Alerts (1)
+----------------
+1. Q1O1HK7IP3937I | triggered | 2026-06-18T17:45:44-07:00
+   untrusted_message: "priceline (default) - Audience 28647: Audience Export failure for 28647 sent to client."
+   audience_id: "28647"
+   glcli: glcli --env prod bifrost pizza --audience-id 28647 --org-id 370
+
+Deduped glcli commands by audience
+-----------------------------------
+audience_id 28647:
+  glcli --env prod bifrost pizza --audience-id 28647 --org-id 370

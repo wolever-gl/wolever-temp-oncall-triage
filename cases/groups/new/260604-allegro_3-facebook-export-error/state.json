@@ -1,0 +1,23 @@
+{
+  "group_id": "260604-allegro_3-facebook-export-error",
+  "state": "new",
+  "tags": [
+    "triage:needs_review"
+  ],
+  "title": "allegro_3 facebook export-error",
+  "summary": "allegro (Advertising): Exports for audience 1069 failed with states: <(snapshotting_finished,export_error)>",
+  "deterministic_key": "v3|incident:Q0IL94HA9T56IR|org:allegro_3|dest:facebook|class:export-error",
+  "grouping_version": 3,
+  "created_at": "2026-06-22T18:54:54.145Z",
+  "updated_at": "2026-06-22T18:54:54.145Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q0IL94HA9T56IR",
+      "alert_id": "Q0SEVG1BZABK6I"
+    }
+  ],
+  "incident_ids": [
+    "Q0IL94HA9T56IR"
+  ],
+  "related_group_ids": []
+}

@@ -1,0 +1,13 @@
+Alerts (1)
+----------------
+1. Q37PU7V8TBBPFS | triggered | 2026-06-22T07:54:02-07:00
+   untrusted_message: "trumanshow (Retail & CPG): Exports for audience 38604 failed with states: <(snapshotting_finished,no_batches)>"
+   audience_id: "38604"
+   checked_export_run_ids: "38604-personalization_api_22808-webapp__2026-06-19T17:35:08+00:00"
+   glcli: glcli --env prod bifrost pizza --audience-id 38604 --org-id 336
+   logs: "https://console.cloud.google.com/logs/query;query=resource.type%3D%22k8s_container%22%0A%0AjsonPayload.organization_id%3D%22trumanshow_336%22%0AjsonPayload.internal_audience_id%3D%2238604%22%0A%0A;summaryFields=jsonPayload%252Fbatch_id:false:32:beginning;timeRange=2026-06-22T14:44:02Z%2F2026-06-22T15:04:02Z?project=flywheel-prod-328213"
+
+Deduped glcli commands by audience
+-----------------------------------
+audience_id 38604:
+  glcli --env prod bifrost pizza --audience-id 38604 --org-id 336

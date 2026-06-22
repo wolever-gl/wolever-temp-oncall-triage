@@ -1,0 +1,23 @@
+Alerts (3)
+----------------
+1. Q2932GTM81FIBB | triggered | 2026-06-07T10:28:21-07:00
+   untrusted_message: "ford (Marketing Production) - Audience 33347: Audience Export failure for 33347 sent to client."
+   audience_id: "33347"
+   glcli: glcli --env prod bifrost pizza --audience-id 33347 --org-id 310
+2. Q1NVQOLD406GRF | triggered | 2026-06-06T06:22:43-07:00
+   untrusted_message: "ford (Marketing Production) - Audience 34010: Audience Export failure for 34010 sent to client."
+   audience_id: "34010"
+   glcli: glcli --env prod bifrost pizza --audience-id 34010 --org-id 310
+3. Q1BCN36AR4EM6L | triggered | 2026-06-05T10:56:39-07:00
+   untrusted_message: "ford (Marketing Production) - Audience 34059: Audience Export failure for 34059 sent to client."
+   audience_id: "34059"
+   glcli: glcli --env prod bifrost pizza --audience-id 34059 --org-id 310
+
+Deduped glcli commands by audience
+-----------------------------------
+audience_id 33347:
+  glcli --env prod bifrost pizza --audience-id 33347 --org-id 310
+audience_id 34010:
+  glcli --env prod bifrost pizza --audience-id 34010 --org-id 310
+audience_id 34059:
+  glcli --env prod bifrost pizza --audience-id 34059 --org-id 310

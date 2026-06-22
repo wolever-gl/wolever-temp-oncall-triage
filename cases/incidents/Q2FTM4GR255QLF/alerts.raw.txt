@@ -1,0 +1,14 @@
+Alerts (1)
+----------------
+1. Q2P5ITJGIVK5ZI | triggered | 2026-06-22T08:08:14-07:00
+   untrusted_message: "fanatics (default): Exports for audience 30899 failed with states: <(snapshotting_finished,export_error)>"
+   audience_id: "30899"
+   endpoint_id: "app_snowflake_1746"
+   checked_export_run_ids: "30899-snowflake_21612-scheduled__2026-06-18T00:00:00+00:00"
+   glcli: glcli --env prod bifrost pizza --audience-id 30899 --org-id 502
+   logs: "https://console.cloud.google.com/logs/query;query=resource.type%3D%22k8s_container%22%0A%0AjsonPayload.organization_id%3D%22fanatics_502%22%0AjsonPayload.internal_audience_id%3D%2230899%22%0A%0A;summaryFields=jsonPayload%252Fbatch_id:false:32:beginning;timeRange=2026-06-22T14:58:13Z%2F2026-06-22T15:18:13Z?project=flywheel-prod-328213"
+
+Deduped glcli commands by audience
+-----------------------------------
+audience_id 30899:
+  glcli --env prod bifrost pizza --audience-id 30899 --org-id 502

@@ -1,0 +1,27 @@
+{
+  "group_id": "260603-unknown_org-eversana-taiho-prod-lonsurf-prod-journey-n-journ",
+  "state": "new",
+  "tags": [
+    "triage:needs_review"
+  ],
+  "title": "unknown_org eversana-taiho-prod-lonsurf-prod-journey-n-journ",
+  "summary": "eversana_taiho_prod (LONSURF Prod) - Journey 2908: Journey Export failure for 2908 sent to client.",
+  "deterministic_key": "v3|incident:Q1NDIBCXZOIFE8|org:unknown_org|class:eversana-taiho-prod-lonsurf-prod-journey-n-journ",
+  "grouping_version": 3,
+  "created_at": "2026-06-22T18:54:54.145Z",
+  "updated_at": "2026-06-22T18:54:54.145Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q1NDIBCXZOIFE8",
+      "alert_id": "Q1WRUPU8B6GMVL"
+    },
+    {
+      "incident_id": "Q1NDIBCXZOIFE8",
+      "alert_id": "Q3RGT87Q5AM2A5"
+    }
+  ],
+  "incident_ids": [
+    "Q1NDIBCXZOIFE8"
+  ],
+  "related_group_ids": []
+}

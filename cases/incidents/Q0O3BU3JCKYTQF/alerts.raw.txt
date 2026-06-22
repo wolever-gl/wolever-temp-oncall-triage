@@ -1,0 +1,13 @@
+Alerts (1)
+----------------
+1. Q0LTHPJ74JYUVB | triggered | 2026-06-22T07:30:00-07:00
+   untrusted_message: "cmegroup (default): Exports for audience 27 failed with states: <(snapshotting_error,no_batches)>"
+   audience_id: "27"
+   checked_export_run_ids: "27-google_adwords_42-scheduled__2026-06-22T00:00:00+00:00"
+   glcli: glcli --env cme bifrost pizza --audience-id 27 --org-id 3
+   logs: "https://console.cloud.google.com/logs/query;query=resource.type%3D%22k8s_container%22%0A%0AjsonPayload.organization_id%3D%22cmegroup_3%22%0AjsonPayload.internal_audience_id%3D%2227%22%0A%0A;summaryFields=jsonPayload%252Fbatch_id:false:32:beginning;timeRange=2026-06-22T14:20:00Z%2F2026-06-22T14:40:00Z?project=gl-client-cme"
+
+Deduped glcli commands by audience
+-----------------------------------
+audience_id 27:
+  glcli --env cme bifrost pizza --audience-id 27 --org-id 3

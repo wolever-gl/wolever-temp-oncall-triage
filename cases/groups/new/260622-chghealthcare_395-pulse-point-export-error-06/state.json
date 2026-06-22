@@ -1,0 +1,23 @@
+{
+  "group_id": "260622-chghealthcare_395-pulse-point-export-error-06",
+  "state": "new",
+  "tags": [
+    "triage:needs_review"
+  ],
+  "title": "chghealthcare_395 pulse-point export-error",
+  "summary": "chghealthcare (Weatherby Healthcare): Exports for audience 31575 failed with states: <(snapshotting_finished,export_error)>",
+  "deterministic_key": "v3|incident:Q2RQ5RSII4P5F5|org:chghealthcare_395|dest:pulse-point|class:export-error",
+  "grouping_version": 3,
+  "created_at": "2026-06-22T18:54:54.145Z",
+  "updated_at": "2026-06-22T18:54:54.145Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q2RQ5RSII4P5F5",
+      "alert_id": "Q20I8C019UXKAG"
+    }
+  ],
+  "incident_ids": [
+    "Q2RQ5RSII4P5F5"
+  ],
+  "related_group_ids": []
+}

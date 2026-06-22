@@ -1,0 +1,23 @@
+{
+  "group_id": "260616-fanatics_502-magnite-id-graph-export-processing-02",
+  "state": "new",
+  "tags": [
+    "triage:needs_review"
+  ],
+  "title": "fanatics_502 magnite-id-graph export-processing",
+  "summary": "fanatics (default): Exports for audience 31238 failed with states: <(snapshotting_finished,export_processing)>",
+  "deterministic_key": "v3|incident:Q3CJV4Z2MW22Y4|org:fanatics_502|dest:magnite-id-graph|class:export-processing",
+  "grouping_version": 3,
+  "created_at": "2026-06-22T18:54:54.145Z",
+  "updated_at": "2026-06-22T18:54:54.145Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q3CJV4Z2MW22Y4",
+      "alert_id": "Q1JDV22LVHD7SD"
+    }
+  ],
+  "incident_ids": [
+    "Q3CJV4Z2MW22Y4"
+  ],
+  "related_group_ids": []
+}

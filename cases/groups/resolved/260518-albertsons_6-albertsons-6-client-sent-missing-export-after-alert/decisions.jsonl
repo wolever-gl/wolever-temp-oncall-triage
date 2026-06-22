@@ -1,2 +1,0 @@
-{"ts":"2026-05-18T22:10:02.192Z","actor":"agent","decision":"created_group_from_tags","rationale":"Grouped by normalized classifier tag classification:client_sent_missing_export_after_alert from tagrun_20260518220530."}
-{"ts":"2026-06-15T16:19:13.969Z","actor":"pagerduty-sync","decision":"transitioned_to_resolved","rationale":"All attached PagerDuty incidents are resolved externally."}

@@ -1,0 +1,14 @@
+Alerts (1)
+----------------
+1. Q074L17BXSTKVJ | triggered | 2026-06-16T07:40:13-07:00
+   untrusted_message: "chghealthcare (Omni-Division): Exports for audience 27542 failed with states: <(snapshotting_finished,export_error)>"
+   audience_id: "27542"
+   endpoint_id: "app_pulsepoint_1645"
+   checked_export_run_ids: "27542-pulse_point_17212-scheduled__2026-06-15T23:00:00+00:00"
+   glcli: glcli --env prod bifrost pizza --audience-id 27542 --org-id 395
+   logs: "https://console.cloud.google.com/logs/query;query=resource.type%3D%22k8s_container%22%0A%0AjsonPayload.organization_id%3D%22chghealthcare_395%22%0AjsonPayload.internal_audience_id%3D%2227542%22%0A%0A;summaryFields=jsonPayload%252Fbatch_id:false:32:beginning;timeRange=2026-06-16T14:30:13Z%2F2026-06-16T14:50:13Z?project=flywheel-prod-328213"
+
+Deduped glcli commands by audience
+-----------------------------------
+audience_id 27542:
+  glcli --env prod bifrost pizza --audience-id 27542 --org-id 395

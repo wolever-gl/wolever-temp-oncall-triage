@@ -1,0 +1,23 @@
+{
+  "group_id": "260622-trumanshow_336-snapshotting-error",
+  "state": "new",
+  "tags": [
+    "triage:needs_review"
+  ],
+  "title": "trumanshow_336 snapshotting-error",
+  "summary": "trumanshow (Healthcare & Education): Exports for audience 37376 failed with states: <(snapshotting_error,no_batches)>",
+  "deterministic_key": "v3|incident:Q013DQMS89S80I|org:trumanshow_336|class:snapshotting-error",
+  "grouping_version": 3,
+  "created_at": "2026-06-22T18:54:54.145Z",
+  "updated_at": "2026-06-22T18:54:54.145Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q013DQMS89S80I",
+      "alert_id": "Q22PW476GL9QOA"
+    }
+  ],
+  "incident_ids": [
+    "Q013DQMS89S80I"
+  ],
+  "related_group_ids": []
+}

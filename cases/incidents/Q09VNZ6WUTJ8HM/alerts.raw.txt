@@ -1,0 +1,14 @@
+Alerts (1)
+----------------
+1. Q1JCHVGXPGRZVV | triggered | 2026-06-16T08:08:55-07:00
+   untrusted_message: "Faraday (EmpowerFi - CUNJ): Exports for audience 21403 failed with states: <(snapshotting_finished,export_error)>"
+   audience_id: "21403"
+   endpoint_id: "app_facebook_1606"
+   checked_export_run_ids: "21403-facebook_13599-scheduled__2026-06-11T00:00:00+00:00"
+   glcli: glcli --env prod bifrost pizza --audience-id 21403 --org-id 273
+   logs: "https://console.cloud.google.com/logs/query;query=resource.type%3D%22k8s_container%22%0A%0AjsonPayload.organization_id%3D%22faraday_273%22%0AjsonPayload.internal_audience_id%3D%2221403%22%0A%0A;summaryFields=jsonPayload%252Fbatch_id:false:32:beginning;timeRange=2026-06-16T14:58:54Z%2F2026-06-16T15:18:54Z?project=flywheel-prod-328213"
+
+Deduped glcli commands by audience
+-----------------------------------
+audience_id 21403:
+  glcli --env prod bifrost pizza --audience-id 21403 --org-id 273

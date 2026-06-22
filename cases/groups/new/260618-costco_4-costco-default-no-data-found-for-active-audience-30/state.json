@@ -1,0 +1,23 @@
+{
+  "group_id": "260618-costco_4-costco-default-no-data-found-for-active-audience-30",
+  "state": "new",
+  "tags": [
+    "triage:needs_review"
+  ],
+  "title": "costco_4 costco-default-no-data-found-for-active-audience",
+  "summary": "Costco (default): No data found for active audience 5755",
+  "deterministic_key": "v3|incident:Q360V28IWPL0S7|org:costco_4|class:costco-default-no-data-found-for-active-audience",
+  "grouping_version": 3,
+  "created_at": "2026-06-22T18:54:54.145Z",
+  "updated_at": "2026-06-22T18:54:54.145Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q360V28IWPL0S7",
+      "alert_id": "Q0OZU9J32PM01P"
+    }
+  ],
+  "incident_ids": [
+    "Q360V28IWPL0S7"
+  ],
+  "related_group_ids": []
+}

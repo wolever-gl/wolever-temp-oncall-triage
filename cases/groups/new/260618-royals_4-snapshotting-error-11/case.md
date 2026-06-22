@@ -1,0 +1,35 @@
+<!-- AUTO-GENERATED: Do not edit case.md directly. Put free-form investigation notes in notes.md. -->
+
+# royals_4 snapshotting-error
+
+> Generated file. Do not edit directly; put free-form investigation notes in `notes.md`.
+
+State: `new`
+Tags: `triage:needs_review`
+Incidents: [Q2KTAOZSEEYM5X](https://growthloop.pagerduty.com/incidents/Q2KTAOZSEEYM5X)
+Alerts: 1
+
+## Current Summary
+
+royals (default): Exports for signal 178 failed with states: <(snapshotting_error,no_batches)>
+
+## Alert Scope
+
+- Alert facts: 1 imported, 1 linked to this group.
+- Orgs: `royals_4`
+- Audiences: `178`
+- Destinations: `salesforce_audience_object`
+- State tuples: `snapshotting_error/no_batches`
+- Commands seen: `glcli --env royals bifrost pizza --audience-id 178 --org-id 4`
+
+Representative alerts:
+- Q2KTAOZSEEYM5X/Q0CGFB7K2KMMQI: 2026-06-18T07:30:10-07:00; royals_4; audience 178; salesforce_audience_object; snapshotting_error/no_batches. royals (default): Exports for signal 178 failed with states: <(snapshotting_error,no_batches)>
+  Runs: `178-salesforce_audience_object_178-scheduled__2026-06-18T13:45:00+00:00`, `178-salesforce_audience_object_178-scheduled__2026-06-18T14:00:00+00:00`
+
+## Next Action
+
+Agent should gather evidence, choose/apply a runbook when appropriate, and update this case.
+
+## Decision Trail
+
+See `lineage.jsonl`, `decisions.jsonl`, `evidence.jsonl`, and `actions.jsonl` for the durable audit trail.

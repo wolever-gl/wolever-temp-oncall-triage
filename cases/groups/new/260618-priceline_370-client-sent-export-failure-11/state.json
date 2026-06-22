@@ -1,0 +1,23 @@
+{
+  "group_id": "260618-priceline_370-client-sent-export-failure-11",
+  "state": "new",
+  "tags": [
+    "triage:needs_review"
+  ],
+  "title": "priceline_370 client-sent-export-failure",
+  "summary": "priceline (default) - Audience 18480: Audience Export failure for 18480 sent to client.",
+  "deterministic_key": "v3|incident:Q316XM91D7LCYZ|org:priceline_370|class:client-sent-export-failure",
+  "grouping_version": 3,
+  "created_at": "2026-06-22T18:54:54.145Z",
+  "updated_at": "2026-06-22T18:54:54.145Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q316XM91D7LCYZ",
+      "alert_id": "Q2IMMQ69BW5FW5"
+    }
+  ],
+  "incident_ids": [
+    "Q316XM91D7LCYZ"
+  ],
+  "related_group_ids": []
+}

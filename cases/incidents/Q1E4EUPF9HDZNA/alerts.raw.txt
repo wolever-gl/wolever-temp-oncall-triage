@@ -1,0 +1,174 @@
+Alerts (26)
+----------------
+1. Q34RH0AKYBP4BS | triggered | 2026-06-07T16:20:46-07:00
+   untrusted_message: "albertsons (Albertsons Media) - Audience 12944: Audience Export failure for 12944 sent to client."
+   audience_id: "12944"
+   glcli: glcli --env albertsons bifrost pizza --audience-id 12944 --org-id 6
+2. Q16ZD1ZBD6MIYP | triggered | 2026-06-07T10:37:57-07:00
+   untrusted_message: "albertsons (Albertsons Media) - Audience 12929: Audience Export failure for 12929 sent to client."
+   audience_id: "12929"
+   glcli: glcli --env albertsons bifrost pizza --audience-id 12929 --org-id 6
+3. Q3SDYIGIP22NE8 | triggered | 2026-06-06T23:03:03-07:00
+   untrusted_message: "albertsons (Albertsons Media) - Audience 12777: Audience Export failure for 12777 sent to client."
+   audience_id: "12777"
+   glcli: glcli --env albertsons bifrost pizza --audience-id 12777 --org-id 6
+4. Q12NGOFR9OAKBQ | triggered | 2026-06-06T12:13:06-07:00
+   untrusted_message: "albertsons (Albertsons Media) - Audience 12778: Audience Export failure for 12778 sent to client."
+   audience_id: "12778"
+   glcli: glcli --env albertsons bifrost pizza --audience-id 12778 --org-id 6
+5. Q0Z73DMLSNOJJ4 | triggered | 2026-06-06T06:07:09-07:00
+   untrusted_message: "albertsons (Albertsons Media) - Audience 12943: Audience Export failure for 12943 sent to client."
+   audience_id: "12943"
+   glcli: glcli --env albertsons bifrost pizza --audience-id 12943 --org-id 6
+6. Q3W6MNJGHCIHZ2 | triggered | 2026-06-05T10:38:48-07:00
+   untrusted_message: "albertsons (Albertsons Media) - Audience 12977: Audience Export failure for 12977 sent to client."
+   audience_id: "12977"
+   glcli: glcli --env albertsons bifrost pizza --audience-id 12977 --org-id 6
+7. Q24CCE5JZDSNGO | triggered | 2026-06-05T10:17:07-07:00
+   untrusted_message: "albertsons (Albertsons Media) - Audience 12975: Audience Export failure for 12975 sent to client."
+   audience_id: "12975"
+   glcli: glcli --env albertsons bifrost pizza --audience-id 12975 --org-id 6
+8. Q27DZFH7TFAM6D | triggered | 2026-06-05T10:15:32-07:00
+   untrusted_message: "albertsons (Albertsons Media) - Audience 12982: Audience Export failure for 12982 sent to client."
+   audience_id: "12982"
+   glcli: glcli --env albertsons bifrost pizza --audience-id 12982 --org-id 6
+9. Q2KR6HAFZDVJ66 | triggered | 2026-06-05T10:15:16-07:00
+   untrusted_message: "albertsons (Albertsons Media) - Audience 12981: Audience Export failure for 12981 sent to client."
+   audience_id: "12981"
+   glcli: glcli --env albertsons bifrost pizza --audience-id 12981 --org-id 6
+10. Q0UKDFROHGMAHX | triggered | 2026-06-05T10:14:37-07:00
+   untrusted_message: "albertsons (Albertsons Media) - Audience 12973: Audience Export failure for 12973 sent to client."
+   audience_id: "12973"
+   glcli: glcli --env albertsons bifrost pizza --audience-id 12973 --org-id 6
+11. Q304J002NKFIYC | triggered | 2026-06-05T10:14:15-07:00
+   untrusted_message: "albertsons (Albertsons Media) - Audience 12978: Audience Export failure for 12978 sent to client."
+   audience_id: "12978"
+   glcli: glcli --env albertsons bifrost pizza --audience-id 12978 --org-id 6
+12. Q0AILIITL15LVB | triggered | 2026-06-05T10:14:10-07:00
+   untrusted_message: "albertsons (Albertsons Media) - Audience 12976: Audience Export failure for 12976 sent to client."
+   audience_id: "12976"
+   glcli: glcli --env albertsons bifrost pizza --audience-id 12976 --org-id 6
+13. Q16TO30QDG1BM3 | triggered | 2026-06-05T10:14:08-07:00
+   untrusted_message: "albertsons (Albertsons Media) - Audience 12971: Audience Export failure for 12971 sent to client."
+   audience_id: "12971"
+   glcli: glcli --env albertsons bifrost pizza --audience-id 12971 --org-id 6
+14. Q15QOMNUU07G2Q | triggered | 2026-06-05T08:11:51-07:00
+   untrusted_message: "albertsons (Albertsons Media): Exports for audience 12875 failed with states: <(snapshotting_finished,export_error)>"
+   audience_id: "12875"
+   endpoint_id: "app_liveramp_activation_41"
+   checked_export_run_ids: "12875-live_ramp_activation_4613-scheduled__2026-06-05T00:00:00+00:00, 12875-live_ramp_activation_4613-webapp__2026-06-05T05:45:52+00:00"
+   glcli: glcli --env albertsons bifrost pizza --audience-id 12875 --org-id 6
+   logs: "https://console.cloud.google.com/logs/query;query=resource.type%3D%22k8s_container%22%0A%0AjsonPayload.organization_id%3D%22albertsons_6%22%0AjsonPayload.internal_audience_id%3D%2212875%22%0A%0A;summaryFields=jsonPayload%252Fbatch_id:false:32:beginning;timeRange=2026-06-05T15:01:51Z%2F2026-06-05T15:21:51Z?project=gl-client-albertsons"
+15. Q2L0ANGULZSN05 | triggered | 2026-06-05T08:11:49-07:00
+   untrusted_message: "albertsons (Albertsons Media): Exports for audience 12862 failed with states: <(snapshotting_finished,export_error)>"
+   audience_id: "12862"
+   endpoint_id: "app_liveramp_activation_41"
+   checked_export_run_ids: "12862-live_ramp_activation_4610-scheduled__2026-06-05T00:00:00+00:00, 12862-live_ramp_activation_4610-webapp__2026-06-05T05:45:01+00:00"
+   glcli: glcli --env albertsons bifrost pizza --audience-id 12862 --org-id 6
+   logs: "https://console.cloud.google.com/logs/query;query=resource.type%3D%22k8s_container%22%0A%0AjsonPayload.organization_id%3D%22albertsons_6%22%0AjsonPayload.internal_audience_id%3D%2212862%22%0A%0A;summaryFields=jsonPayload%252Fbatch_id:false:32:beginning;timeRange=2026-06-05T15:01:49Z%2F2026-06-05T15:21:49Z?project=gl-client-albertsons"
+16. Q3VSW000L0VZB7 | triggered | 2026-06-05T08:10:34-07:00
+   untrusted_message: "albertsons (Albertsons Media): Exports for audience 12399 failed with states: <(snapshotting_finished,export_error)>"
+   audience_id: "12399"
+   endpoint_id: "app_liveramp_activation_41"
+   checked_export_run_ids: "12399-live_ramp_activation_4176-scheduled__2026-05-28T00:00:00+00:00, 12399-live_ramp_activation_4176-scheduled__2026-06-04T00:00:00+00:00"
+   glcli: glcli --env albertsons bifrost pizza --audience-id 12399 --org-id 6
+   logs: "https://console.cloud.google.com/logs/query;query=resource.type%3D%22k8s_container%22%0A%0AjsonPayload.organization_id%3D%22albertsons_6%22%0AjsonPayload.internal_audience_id%3D%2212399%22%0A%0A;summaryFields=jsonPayload%252Fbatch_id:false:32:beginning;timeRange=2026-06-05T14:59:53Z%2F2026-06-05T15:19:53Z?project=gl-client-albertsons"
+17. Q239L21T41CUJE | triggered | 2026-06-05T08:09:52-07:00
+   untrusted_message: "albertsons (Albertsons Media): Exports for audience 12214 failed with states: <(snapshotting_finished,export_error)>"
+   audience_id: "12214"
+   endpoint_id: "app_liveramp_activation_41"
+   checked_export_run_ids: "12214-live_ramp_activation_4017-scheduled__2026-05-29T00:00:00+00:00, 12214-live_ramp_activation_4017-scheduled__2026-06-05T00:00:00+00:00"
+   glcli: glcli --env albertsons bifrost pizza --audience-id 12214 --org-id 6
+   logs: "https://console.cloud.google.com/logs/query;query=resource.type%3D%22k8s_container%22%0A%0AjsonPayload.organization_id%3D%22albertsons_6%22%0AjsonPayload.internal_audience_id%3D%2212214%22%0A%0A;summaryFields=jsonPayload%252Fbatch_id:false:32:beginning;timeRange=2026-06-05T14:59:03Z%2F2026-06-05T15:19:03Z?project=gl-client-albertsons"
+18. Q2V756BRVPWMSB | triggered | 2026-06-05T06:15:34-07:00
+   untrusted_message: "albertsons (Albertsons Media) - Audience 12933: Audience Export failure for 12933 sent to client."
+   audience_id: "12933"
+   glcli: glcli --env albertsons bifrost pizza --audience-id 12933 --org-id 6
+19. Q00QZ6RVPK1SRI | triggered | 2026-06-04T18:58:14-07:00
+   untrusted_message: "albertsons (Albertsons Media) - Audience 12214: Audience Export failure for 12214 sent to client."
+   audience_id: "12214"
+   glcli: glcli --env albertsons bifrost pizza --audience-id 12214 --org-id 6
+20. Q2WAJ28HX2P4SY | triggered | 2026-06-04T07:40:09-07:00
+   untrusted_message: "albertsons (Albertsons Media): Exports for audience 11596 failed with states: <(snapshotting_finished,export_processing)>"
+   audience_id: "11596"
+   endpoint_id: "app_liveramp_activation_44"
+   checked_export_run_ids: "11596-live_ramp_activation_3712-scheduled__2026-05-26T00:00:00+00:00, 11596-live_ramp_activation_3712-scheduled__2026-06-02T00:00:00+00:00"
+   glcli: glcli --env albertsons bifrost pizza --audience-id 11596 --org-id 6
+   logs: "https://console.cloud.google.com/logs/query;query=resource.type%3D%22k8s_container%22%0A%0AjsonPayload.organization_id%3D%22albertsons_6%22%0AjsonPayload.internal_audience_id%3D%2211596%22%0A%0A;summaryFields=jsonPayload%252Fbatch_id:false:32:beginning;timeRange=2026-06-04T14:30:09Z%2F2026-06-04T14:50:09Z?project=gl-client-albertsons"
+21. Q2E6SESXB0EPQT | triggered | 2026-06-04T07:39:03-07:00
+   untrusted_message: "albertsons (Albertsons Media): Exports for audience 11048 failed with states: <(snapshotting_finished,no_batches)>"
+   audience_id: "11048"
+   checked_export_run_ids: "11048-live_ramp_activation_2993-scheduled__2026-06-03T00:00:00+00:00"
+   glcli: glcli --env albertsons bifrost pizza --audience-id 11048 --org-id 6
+   logs: "https://console.cloud.google.com/logs/query;query=resource.type%3D%22k8s_container%22%0A%0AjsonPayload.organization_id%3D%22albertsons_6%22%0AjsonPayload.internal_audience_id%3D%2211048%22%0A%0A;summaryFields=jsonPayload%252Fbatch_id:false:32:beginning;timeRange=2026-06-04T14:29:03Z%2F2026-06-04T14:49:03Z?project=gl-client-albertsons"
+22. Q03DGVA8UR7AXG | triggered | 2026-06-04T04:39:24-07:00
+   untrusted_message: "albertsons (Albertsons Media) - Audience 12774: Audience Export failure for 12774 sent to client."
+   audience_id: "12774"
+   glcli: glcli --env albertsons bifrost pizza --audience-id 12774 --org-id 6
+23. Q0S6CCAVA6U8NV | triggered | 2026-06-03T20:11:51-07:00
+   untrusted_message: "albertsons (Albertsons Media) - Audience 12399: Audience Export failure for 12399 sent to client."
+   audience_id: "12399"
+   glcli: glcli --env albertsons bifrost pizza --audience-id 12399 --org-id 6
+24. Q2QGT8UVLQM7GG | triggered | 2026-06-03T11:44:20-07:00
+   untrusted_message: "albertsons (Albertsons Media) - Audience 12980: Audience Export failure for 12980 sent to client."
+   audience_id: "12980"
+   glcli: glcli --env albertsons bifrost pizza --audience-id 12980 --org-id 6
+25. Q0XLBYTF1I9RWI | triggered | 2026-06-03T11:44:20-07:00
+   untrusted_message: "albertsons (Albertsons Media) - Audience 12979: Audience Export failure for 12979 sent to client."
+   audience_id: "12979"
+   glcli: glcli --env albertsons bifrost pizza --audience-id 12979 --org-id 6
+26. Q3UQ83PSBFGFKS | triggered | 2026-06-03T11:44:18-07:00
+   untrusted_message: "albertsons (Albertsons Media) - Audience 12970: Audience Export failure for 12970 sent to client."
+   audience_id: "12970"
+   glcli: glcli --env albertsons bifrost pizza --audience-id 12970 --org-id 6
+
+Deduped glcli commands by audience
+-----------------------------------
+audience_id 12944:
+  glcli --env albertsons bifrost pizza --audience-id 12944 --org-id 6
+audience_id 12929:
+  glcli --env albertsons bifrost pizza --audience-id 12929 --org-id 6
+audience_id 12777:
+  glcli --env albertsons bifrost pizza --audience-id 12777 --org-id 6
+audience_id 12778:
+  glcli --env albertsons bifrost pizza --audience-id 12778 --org-id 6
+audience_id 12943:
+  glcli --env albertsons bifrost pizza --audience-id 12943 --org-id 6
+audience_id 12977:
+  glcli --env albertsons bifrost pizza --audience-id 12977 --org-id 6
+audience_id 12975:
+  glcli --env albertsons bifrost pizza --audience-id 12975 --org-id 6
+audience_id 12982:
+  glcli --env albertsons bifrost pizza --audience-id 12982 --org-id 6
+audience_id 12981:
+  glcli --env albertsons bifrost pizza --audience-id 12981 --org-id 6
+audience_id 12973:
+  glcli --env albertsons bifrost pizza --audience-id 12973 --org-id 6
+audience_id 12978:
+  glcli --env albertsons bifrost pizza --audience-id 12978 --org-id 6
+audience_id 12976:
+  glcli --env albertsons bifrost pizza --audience-id 12976 --org-id 6
+audience_id 12971:
+  glcli --env albertsons bifrost pizza --audience-id 12971 --org-id 6
+audience_id 12875:
+  glcli --env albertsons bifrost pizza --audience-id 12875 --org-id 6
+audience_id 12862:
+  glcli --env albertsons bifrost pizza --audience-id 12862 --org-id 6
+audience_id 12399:
+  glcli --env albertsons bifrost pizza --audience-id 12399 --org-id 6
+audience_id 12214:
+  glcli --env albertsons bifrost pizza --audience-id 12214 --org-id 6
+audience_id 12933:
+  glcli --env albertsons bifrost pizza --audience-id 12933 --org-id 6
+audience_id 11596:
+  glcli --env albertsons bifrost pizza --audience-id 11596 --org-id 6
+audience_id 11048:
+  glcli --env albertsons bifrost pizza --audience-id 11048 --org-id 6
+audience_id 12774:
+  glcli --env albertsons bifrost pizza --audience-id 12774 --org-id 6
+audience_id 12980:
+  glcli --env albertsons bifrost pizza --audience-id 12980 --org-id 6
+audience_id 12979:
+  glcli --env albertsons bifrost pizza --audience-id 12979 --org-id 6
+audience_id 12970:
+  glcli --env albertsons bifrost pizza --audience-id 12970 --org-id 6

@@ -1,9 +1,0 @@
-{
-  "incident_id": "Q2DJCY3XC2BSBG",
-  "incident_url": "https://growthloop.pagerduty.com/incidents/Q2DJCY3XC2BSBG",
-  "imported_at": "2026-05-16T00:38:01.478Z",
-  "source": "fixture",
-  "alert_count": 13,
-  "status": "triggered",
-  "refreshed_at": "2026-06-22T18:35:54.937Z"
-}

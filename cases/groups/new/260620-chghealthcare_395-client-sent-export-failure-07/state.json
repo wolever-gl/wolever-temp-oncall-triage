@@ -1,0 +1,23 @@
+{
+  "group_id": "260620-chghealthcare_395-client-sent-export-failure-07",
+  "state": "new",
+  "tags": [
+    "triage:needs_review"
+  ],
+  "title": "chghealthcare_395 client-sent-export-failure",
+  "summary": "chghealthcare (CompHealth) - Audience 31904: Audience Export failure for 31904 sent to client.",
+  "deterministic_key": "v3|incident:Q3A7D1ICRBKS8O|org:chghealthcare_395|class:client-sent-export-failure",
+  "grouping_version": 3,
+  "created_at": "2026-06-22T18:54:54.145Z",
+  "updated_at": "2026-06-22T18:54:54.145Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q3A7D1ICRBKS8O",
+      "alert_id": "Q0JAASRJG3XTUX"
+    }
+  ],
+  "incident_ids": [
+    "Q3A7D1ICRBKS8O"
+  ],
+  "related_group_ids": []
+}

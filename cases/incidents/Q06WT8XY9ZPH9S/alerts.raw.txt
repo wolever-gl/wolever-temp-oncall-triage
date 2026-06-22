@@ -1,0 +1,11 @@
+Alerts (1)
+----------------
+1. Q3A2GM89AE16JM | triggered | 2026-06-16T16:58:35-07:00
+   untrusted_message: "chghealthcare (Omni-Division) - Audience 29870: Audience Export failure for 29870 sent to client."
+   audience_id: "29870"
+   glcli: glcli --env prod bifrost pizza --audience-id 29870 --org-id 395
+
+Deduped glcli commands by audience
+-----------------------------------
+audience_id 29870:
+  glcli --env prod bifrost pizza --audience-id 29870 --org-id 395

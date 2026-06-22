@@ -30,7 +30,7 @@ async function main(argv: string[]): Promise<void> {
     return;
   }
   if (command === "import-active-pd") {
-    const result = await importActivePagerDutyIncidents({ workspaceDir });
+    const result = await importActivePagerDutyIncidents({ workspaceDir, onProgress: (message) => console.log(message) });
     console.log(`Imported active PagerDuty incidents: active=${result.active_incidents.length}, imported=${result.imported.length}, groups_created=${result.grouped.created}, alerts_attached=${result.grouped.attached}`);
     for (const imported of result.imported) console.log(`- ${imported.incident_id}: ${imported.alert_count} alert(s)`);
     return;

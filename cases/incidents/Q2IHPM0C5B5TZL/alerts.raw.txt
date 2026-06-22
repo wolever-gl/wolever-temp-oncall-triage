@@ -1,0 +1,11 @@
+Alerts (1)
+----------------
+1. Q11TA1WW577T0D | triggered | 2026-06-15T16:41:04-07:00
+   untrusted_message: "chghealthcare (Omni-Division) - Audience 27539: Audience Export failure for 27539 sent to client."
+   audience_id: "27539"
+   glcli: glcli --env prod bifrost pizza --audience-id 27539 --org-id 395
+
+Deduped glcli commands by audience
+-----------------------------------
+audience_id 27539:
+  glcli --env prod bifrost pizza --audience-id 27539 --org-id 395

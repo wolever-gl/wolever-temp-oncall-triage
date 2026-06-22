@@ -1,0 +1,11 @@
+Alerts (1)
+----------------
+1. Q39KO3CZLBB02V | triggered | 2026-06-20T17:24:25-07:00
+   untrusted_message: "trumanshow (Retail & CPG) - Audience 35783: Audience Export failure for 35783 sent to client."
+   audience_id: "35783"
+   glcli: glcli --env prod bifrost pizza --audience-id 35783 --org-id 336
+
+Deduped glcli commands by audience
+-----------------------------------
+audience_id 35783:
+  glcli --env prod bifrost pizza --audience-id 35783 --org-id 336

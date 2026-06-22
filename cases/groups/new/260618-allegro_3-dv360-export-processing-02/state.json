@@ -1,0 +1,23 @@
+{
+  "group_id": "260618-allegro_3-dv360-export-processing-02",
+  "state": "new",
+  "tags": [
+    "triage:needs_review"
+  ],
+  "title": "allegro_3 dv360 export-processing",
+  "summary": "allegro (Marketing): Exports for audience 998 failed with states: <(snapshotting_finished,export_processing)>",
+  "deterministic_key": "v3|incident:Q2G1JRGCIPGJN7|org:allegro_3|dest:dv360|class:export-processing",
+  "grouping_version": 3,
+  "created_at": "2026-06-22T18:54:54.145Z",
+  "updated_at": "2026-06-22T18:54:54.145Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q2G1JRGCIPGJN7",
+      "alert_id": "Q2XQ9YLVQCWU0I"
+    }
+  ],
+  "incident_ids": [
+    "Q2G1JRGCIPGJN7"
+  ],
+  "related_group_ids": []
+}

@@ -1,0 +1,23 @@
+{
+  "group_id": "260616-chghealthcare_395-pulse-point-export-error-11",
+  "state": "new",
+  "tags": [
+    "triage:needs_review"
+  ],
+  "title": "chghealthcare_395 pulse-point export-error",
+  "summary": "chghealthcare (CompHealth): Exports for audience 31437 failed with states: <(snapshotting_finished,export_error)>",
+  "deterministic_key": "v3|incident:Q3A36H88A6UETC|org:chghealthcare_395|dest:pulse-point|class:export-error",
+  "grouping_version": 3,
+  "created_at": "2026-06-22T18:54:54.145Z",
+  "updated_at": "2026-06-22T18:54:54.145Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q3A36H88A6UETC",
+      "alert_id": "Q1DR7XYFNM8DDG"
+    }
+  ],
+  "incident_ids": [
+    "Q3A36H88A6UETC"
+  ],
+  "related_group_ids": []
+}

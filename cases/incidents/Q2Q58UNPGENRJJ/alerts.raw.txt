@@ -1,0 +1,14 @@
+Alerts (1)
+----------------
+1. Q01AYHJ36J8TY9 | triggered | 2026-06-17T07:38:24-07:00
+   untrusted_message: "chghealthcare (Weatherby Healthcare): Exports for audience 26083 failed with states: <(snapshotting_finished,export_error)>"
+   audience_id: "26083"
+   endpoint_id: "app_pulsepoint_1408"
+   checked_export_run_ids: "26083-pulse_point_19618-scheduled__2026-06-16T23:00:00+00:00"
+   glcli: glcli --env prod bifrost pizza --audience-id 26083 --org-id 395
+   logs: "https://console.cloud.google.com/logs/query;query=resource.type%3D%22k8s_container%22%0A%0AjsonPayload.organization_id%3D%22chghealthcare_395%22%0AjsonPayload.internal_audience_id%3D%2226083%22%0A%0A;summaryFields=jsonPayload%252Fbatch_id:false:32:beginning;timeRange=2026-06-17T14:28:24Z%2F2026-06-17T14:48:24Z?project=flywheel-prod-328213"
+
+Deduped glcli commands by audience
+-----------------------------------
+audience_id 26083:
+  glcli --env prod bifrost pizza --audience-id 26083 --org-id 395

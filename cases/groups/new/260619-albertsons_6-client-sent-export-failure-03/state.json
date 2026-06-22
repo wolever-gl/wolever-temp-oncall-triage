@@ -1,0 +1,23 @@
+{
+  "group_id": "260619-albertsons_6-client-sent-export-failure-03",
+  "state": "new",
+  "tags": [
+    "triage:needs_review"
+  ],
+  "title": "albertsons_6 client-sent-export-failure",
+  "summary": "albertsons (Albertsons Media) - Audience 11289: Audience Export failure for 11289 sent to client.",
+  "deterministic_key": "v3|incident:Q0OC6V7EIETXTN|org:albertsons_6|class:client-sent-export-failure",
+  "grouping_version": 3,
+  "created_at": "2026-06-22T18:54:54.145Z",
+  "updated_at": "2026-06-22T18:54:54.145Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q0OC6V7EIETXTN",
+      "alert_id": "Q2BMDCL1DS236R"
+    }
+  ],
+  "incident_ids": [
+    "Q0OC6V7EIETXTN"
+  ],
+  "related_group_ids": []
+}

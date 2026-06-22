@@ -1,0 +1,11 @@
+Alerts (1)
+----------------
+1. Q1FNLRWPNT5B9V | triggered | 2026-06-15T16:27:33-07:00
+   untrusted_message: "chghealthcare (Global Medical Staffing) - Audience 18684: Audience Export failure for 18684 sent to client."
+   audience_id: "18684"
+   glcli: glcli --env prod bifrost pizza --audience-id 18684 --org-id 395
+
+Deduped glcli commands by audience
+-----------------------------------
+audience_id 18684:
+  glcli --env prod bifrost pizza --audience-id 18684 --org-id 395

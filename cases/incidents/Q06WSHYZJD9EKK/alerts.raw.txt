@@ -1,0 +1,14 @@
+Alerts (1)
+----------------
+1. Q0RVBTBYRZOWQF | triggered | 2026-06-22T07:58:07-07:00
+   untrusted_message: "ASU Enterprise Partners (General - ASU Data): Exports for audience 24855 failed with states: <(snapshotting_finished,export_error)>"
+   audience_id: "24855"
+   endpoint_id: "app_linkedin_ads_1600"
+   checked_export_run_ids: "24855-linkedin_ads_22541-scheduled__2026-06-22T00:00:00+00:00, 24855-linkedin_ads_22542-scheduled__2026-06-22T00:00:00+00:00"
+   glcli: glcli --env prod bifrost pizza --audience-id 24855 --org-id 451
+   logs: "https://console.cloud.google.com/logs/query;query=resource.type%3D%22k8s_container%22%0A%0AjsonPayload.organization_id%3D%22asuenterprisepartners_451%22%0AjsonPayload.internal_audience_id%3D%2224855%22%0A%0A;summaryFields=jsonPayload%252Fbatch_id:false:32:beginning;timeRange=2026-06-22T14:48:07Z%2F2026-06-22T15:08:07Z?project=flywheel-prod-328213"
+
+Deduped glcli commands by audience
+-----------------------------------
+audience_id 24855:
+  glcli --env prod bifrost pizza --audience-id 24855 --org-id 451

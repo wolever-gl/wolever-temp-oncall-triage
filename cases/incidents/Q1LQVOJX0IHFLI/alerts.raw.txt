@@ -1,0 +1,11 @@
+Alerts (1)
+----------------
+1. Q047UUDZ59XYZG | triggered | 2026-06-18T17:49:41-07:00
+   untrusted_message: "priceline (default) - Audience 18478: Audience Export failure for 18478 sent to client."
+   audience_id: "18478"
+   glcli: glcli --env prod bifrost pizza --audience-id 18478 --org-id 370
+
+Deduped glcli commands by audience
+-----------------------------------
+audience_id 18478:
+  glcli --env prod bifrost pizza --audience-id 18478 --org-id 370

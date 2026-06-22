@@ -1,0 +1,13 @@
+Alerts (1)
+----------------
+1. Q271H37U0WOW2X | triggered | 2026-06-18T07:38:28-07:00
+   untrusted_message: "Costco (default): No data found for active audience 5727"
+   audience_id: "5727"
+   checked_export_run_ids: ""
+   glcli: glcli --env costco bifrost pizza --audience-id 5727 --org-id 4
+   logs: "https://console.cloud.google.com/logs/query;query=resource.type%3D%22k8s_container%22%0A%0AjsonPayload.organization_id%3D%22costco_4%22%0AjsonPayload.internal_audience_id%3D%225727%22%0A%0A;summaryFields=jsonPayload%252Fbatch_id:false:32:beginning;timeRange=2026-06-18T14:28:28Z%2F2026-06-18T14:48:28Z?project=gl-client-costco"
+
+Deduped glcli commands by audience
+-----------------------------------
+audience_id 5727:
+  glcli --env costco bifrost pizza --audience-id 5727 --org-id 4

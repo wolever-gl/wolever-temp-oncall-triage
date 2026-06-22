@@ -1,0 +1,11 @@
+Alerts (1)
+----------------
+1. Q16M6Z3K9MSTHE | triggered | 2026-06-17T18:30:44-07:00
+   untrusted_message: "fanatics (default) - Audience 35291: Audience Export failure for 35291 sent to client."
+   audience_id: "35291"
+   glcli: glcli --env prod bifrost pizza --audience-id 35291 --org-id 502
+
+Deduped glcli commands by audience
+-----------------------------------
+audience_id 35291:
+  glcli --env prod bifrost pizza --audience-id 35291 --org-id 502

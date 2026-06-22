@@ -1,0 +1,11 @@
+Alerts (1)
+----------------
+1. Q3IIGETEUPYM33 | triggered | 2026-06-20T18:11:41-07:00
+   untrusted_message: "allegro (Advertising) - Audience 310: Audience Export failure for 310 sent to client."
+   audience_id: "310"
+   glcli: glcli --env allegro bifrost pizza --audience-id 310 --org-id 3
+
+Deduped glcli commands by audience
+-----------------------------------
+audience_id 310:
+  glcli --env allegro bifrost pizza --audience-id 310 --org-id 3
