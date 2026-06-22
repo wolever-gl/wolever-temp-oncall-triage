@@ -1,0 +1,5 @@
+{"ts":"2026-06-22T15:05:55.227Z","actor":"oncall-triage","decision":"created_group","rationale":"Conservative deterministic grouping created a new group for v3|incident:Q2T09VCLN9MRZ8|org:albertsons_6|class:client-sent-export-failure."}
+{"ts":"2026-06-22T15:05:55.227Z","actor":"oncall-triage","decision":"attached_alert_to_existing_group","rationale":"Alert matched deterministic key v3|incident:Q2T09VCLN9MRZ8|org:albertsons_6|class:client-sent-export-failure."}
+{"ts":"2026-06-22T15:05:55.227Z","actor":"oncall-triage","decision":"attached_alert_to_existing_group","rationale":"Alert matched deterministic key v3|incident:Q2T09VCLN9MRZ8|org:albertsons_6|class:client-sent-export-failure."}
+{"ts":"2026-06-22T15:05:55.227Z","actor":"oncall-triage","decision":"attached_alert_to_existing_group","rationale":"Alert matched deterministic key v3|incident:Q2T09VCLN9MRZ8|org:albertsons_6|class:client-sent-export-failure."}
+{"ts":"2026-06-22T15:06:58.855Z","actor":"check-exports","decision":"started_work","rationale":"Export evidence check evaluated alert facts for this group."}

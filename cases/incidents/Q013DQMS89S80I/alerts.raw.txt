@@ -1,0 +1,13 @@
+Alerts (1)
+----------------
+1. Q22PW476GL9QOA | triggered | 2026-06-22T07:53:51-07:00
+   untrusted_message: "trumanshow (Healthcare & Education): Exports for audience 37376 failed with states: <(snapshotting_error,no_batches)>"
+   audience_id: "37376"
+   checked_export_run_ids: "37376-iterable_22434-webapp__2026-06-01T21:26:26+00:00, 37376-iterable_22434-webapp__2026-06-01T21:36:38+00:00, 37376-iterable_22434-webapp__2026-06-01T21:43:02+00:00, 37376-iterable_22434-webapp__2026-06-01T21:57:18+00:00"
+   glcli: glcli --env prod bifrost pizza --audience-id 37376 --org-id 336
+   logs: "https://console.cloud.google.com/logs/query;query=resource.type%3D%22k8s_container%22%0A%0AjsonPayload.organization_id%3D%22trumanshow_336%22%0AjsonPayload.internal_audience_id%3D%2237376%22%0A%0A;summaryFields=jsonPayload%252Fbatch_id:false:32:beginning;timeRange=2026-06-22T14:43:50Z%2F2026-06-22T15:03:50Z?project=flywheel-prod-328213"
+
+Deduped glcli commands by audience
+-----------------------------------
+audience_id 37376:
+  glcli --env prod bifrost pizza --audience-id 37376 --org-id 336

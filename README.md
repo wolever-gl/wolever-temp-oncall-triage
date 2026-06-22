@@ -134,6 +134,7 @@ cases/
 bun install
 
 bun run oncall-triage init cases
+bun run oncall-triage import-active-pd cases
 bun run oncall-triage import-pd cases --incident Q123ABC
 bun run oncall-triage group cases
 bun run oncall-triage tag cases --script ./tagger.ts --filter alert.org=acme_123 --limit 5 --test
@@ -189,6 +190,28 @@ Logs, Slack, PagerDuty, or other investigation links, and repeated `--command`
 values for exact commands worth preserving. Moving a case to `waiting` requires
 communication evidence in `evidence.jsonl` or `notes.md`; blocker evidence alone
 is not enough.
+
+When a triage decision depends on logs, keep the case self-orienting by saving a
+compact representative artifact under `cases/artifacts/` and appending evidence
+that names the artifact, the exact log query, and the relevant findings. Prefer
+small per-audience or per-run summaries over dumping raw logs into `case.md`.
+For example:
+
+```bash
+bun run oncall-triage evidence cases \
+  --group <group-id> \
+  --kind log_evidence \
+  --source "gcloud logging" \
+  --summary "Scoped logs show schema lookup failures for the affected audiences." \
+  --artifact "Schema log artifact=cases/artifacts/YYMMDD-schema-log-evidence.json" \
+  --log-query 'resource.type="k8s_container" jsonPayload.organization_id="org_123" "FieldNotFoundException"' \
+  --finding "Audience 123: FieldNotFoundException for missing field customer_id in audience-results request."
+```
+
+For a new triage pass, start with `import-active-pd`. It lists active
+PagerDuty incidents (`triggered` and `acknowledged`), imports each through the
+same alert-preserving PagerDuty wrapper path as `import-pd`, groups imported
+alerts, and regenerates the case indexes.
 
 `import-pd` validates PagerDuty wrapper alert counts before grouping. If the raw
 wrapper says `Alerts (N)`, the parsed derived facts must contain `N` alert facts

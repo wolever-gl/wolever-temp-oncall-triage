@@ -28,6 +28,35 @@ export interface PagerDutyAlertStatusRecord {
   summary?: string;
 }
 
+export interface PagerDutyIncidentListRecord {
+  incident_id: string;
+  status: PagerDutyIncidentStatus;
+  created_at?: string;
+  title?: string;
+  html_url?: string;
+}
+
+export async function fetchActivePagerDutyIncidents(): Promise<PagerDutyIncidentListRecord[]> {
+  const incidents: PagerDutyIncidentListRecord[] = [];
+  for (let offset = 0; ; ) {
+    const params = new URLSearchParams();
+    params.set("limit", "100");
+    params.set("offset", String(offset));
+    params.append("statuses[]", "triggered");
+    params.append("statuses[]", "acknowledged");
+    const response = await pagerDutyFetch(`/incidents?${params.toString()}`, { method: "GET" });
+    const payload = (await response.json()) as unknown;
+    const pageIncidents = isRecord(payload) && Array.isArray(payload.incidents) ? payload.incidents : [];
+    incidents.push(...pageIncidents.map(normalizePagerDutyIncidentListRecord));
+    const more = isRecord(payload) && payload.more === true;
+    if (!more) break;
+    const limit = isRecord(payload) && typeof payload.limit === "number" ? payload.limit : 100;
+    const payloadOffset = isRecord(payload) && typeof payload.offset === "number" ? payload.offset : offset;
+    offset = payloadOffset + limit;
+  }
+  return incidents.sort((a, b) => (a.created_at ?? "").localeCompare(b.created_at ?? "") || a.incident_id.localeCompare(b.incident_id));
+}
+
 export async function fetchPagerDutyIncidentStatus(input: string): Promise<PagerDutyIncidentStatusRecord> {
   const incident_id = parseIncidentId(input);
   const token = await pagerDutyApiToken();
@@ -447,6 +476,22 @@ function normalizePagerDutyAlertStatus(entry: unknown): PagerDutyAlertStatusReco
     id,
     status: normalizeStatus(stringField(obj, "status")),
     ...(summary ? { summary } : {}),
+  };
+}
+
+function normalizePagerDutyIncidentListRecord(entry: unknown): PagerDutyIncidentListRecord {
+  const obj = isRecord(entry) ? entry : {};
+  const id = stringField(obj, "id", "incident_id");
+  if (!id) throw new Error("PagerDuty incident response included an incident without an id.");
+  const title = stringField(obj, "title", "summary", "description");
+  const created_at = stringField(obj, "created_at");
+  const html_url = stringField(obj, "html_url");
+  return {
+    incident_id: id,
+    status: normalizeStatus(stringField(obj, "status")),
+    ...(created_at ? { created_at } : {}),
+    ...(title ? { title } : {}),
+    ...(html_url ? { html_url } : {}),
   };
 }
 

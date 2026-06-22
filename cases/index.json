@@ -1,7 +1,44 @@
 {
-  "generated_at": "2026-06-15T16:31:49.834Z",
+  "generated_at": "2026-06-22T18:45:57.127Z",
   "open_count": 27,
   "groups": [
+    {
+      "group_id": "260511-albertsons_6-albertsons-6-export-in-progress",
+      "state": "open",
+      "tags": [
+        "monitoring:export-processing",
+        "triage:tag_grouped",
+        "triage:blockers-found"
+      ],
+      "title": "albertsons_6 export in progress",
+      "summary": "Reopened after 2026-06-22 preflight: Albertsons export-in-progress bucket now has blockers. Audience 11688 has failed_export_count/export_error; audiences 8473 and 12801 have missing_export_after_alert. Audiences 11820 and 12719 remain monitoring; several others refreshed to healthy_closed.",
+      "incident_ids": [
+        "Q2EJWG22CER0LA",
+        "Q2T09VCLN9MRZ8",
+        "Q38JR11G2ENK2W"
+      ],
+      "alert_count": 16,
+      "path": "groups/open/260511-albertsons_6-albertsons-6-export-in-progress/case.md"
+    },
+    {
+      "group_id": "260511-albertsons_6-albertsons-6-schema-issues",
+      "state": "open",
+      "tags": [
+        "triage:schema-issue",
+        "triage:tag_grouped",
+        "waiting:schema-remediation",
+        "triage:recent-scope"
+      ],
+      "title": "albertsons_6 schema issues",
+      "summary": "Recent-scope schema review for 2026-06-15 through 2026-06-22. Prior May evidence is out of scope for this pass; current evidence should focus on recent Quervice/snapshotting schema-field failures before any new support handoff.",
+      "incident_ids": [
+        "Q2EJWG22CER0LA",
+        "Q2T09VCLN9MRZ8",
+        "Q38JR11G2ENK2W"
+      ],
+      "alert_count": 14,
+      "path": "groups/open/260511-albertsons_6-albertsons-6-schema-issues/case.md"
+    },
     {
       "group_id": "260511-allegro_3-dv360-export-error",
       "state": "open",
@@ -283,23 +320,6 @@
       "path": "groups/open/260515-royals_4-snapshotting-error/case.md"
     },
     {
-      "group_id": "260511-albertsons_6-albertsons-6-export-in-progress",
-      "state": "monitoring",
-      "tags": [
-        "monitoring:export-processing",
-        "triage:tag_grouped"
-      ],
-      "title": "albertsons_6 export in progress",
-      "summary": "Albertsons audience failures where the latest evidence shows export processing or waiting with no current blocker.",
-      "incident_ids": [
-        "Q2EJWG22CER0LA",
-        "Q2T09VCLN9MRZ8",
-        "Q38JR11G2ENK2W"
-      ],
-      "alert_count": 7,
-      "path": "groups/monitoring/260511-albertsons_6-albertsons-6-export-in-progress/case.md"
-    },
-    {
       "group_id": "grp_260514_ford_310_dv360_export_error_split_0074",
       "state": "monitoring",
       "tags": [
@@ -317,24 +337,6 @@
       ],
       "alert_count": 2,
       "path": "groups/monitoring/grp_260514_ford_310_dv360_export_error_split_0074/case.md"
-    },
-    {
-      "group_id": "260511-albertsons_6-albertsons-6-schema-issues",
-      "state": "waiting",
-      "tags": [
-        "triage:schema-issue",
-        "triage:tag_grouped",
-        "waiting:schema-remediation"
-      ],
-      "title": "albertsons_6 schema issues",
-      "summary": "Waiting on Albertsons schema remediation; schema issue evidence has been communicated in the linked support Slack thread.",
-      "incident_ids": [
-        "Q2EJWG22CER0LA",
-        "Q2T09VCLN9MRZ8",
-        "Q38JR11G2ENK2W"
-      ],
-      "alert_count": 14,
-      "path": "groups/waiting/260511-albertsons_6-albertsons-6-schema-issues/case.md"
     },
     {
       "group_id": "260514-451-campaign-manager-360-export-error",
@@ -461,8 +463,41 @@
       "incident_ids": [
         "Q2T09VCLN9MRZ8"
       ],
-      "alert_count": 3,
+      "alert_count": 142,
       "path": "groups/resolved/260511-albertsons_6-live-ramp-export-error/case.md"
+    },
+    {
+      "group_id": "260511-albertsons_6-live-ramp-export-processing",
+      "state": "resolved",
+      "tags": [
+        "triage:needs_review",
+        "monitoring:export-processing",
+        "resolved:merged"
+      ],
+      "title": "albertsons_6 live-ramp export-processing",
+      "summary": "Merged into 260511-albertsons_6-albertsons-6-export-in-progress: Duplicate Albertsons export-processing workspace after refreshed deterministic grouping; alert Q2T09VCLN9MRZ8/Q06RN07M3BVDQB is already tracked in the monitoring export-in-progress group with current preflight state=monitoring.",
+      "next_action": "Follow target group 260511-albertsons_6-albertsons-6-export-in-progress.",
+      "incident_ids": [
+        "Q2T09VCLN9MRZ8"
+      ],
+      "alert_count": 1,
+      "path": "groups/resolved/260511-albertsons_6-live-ramp-export-processing/case.md"
+    },
+    {
+      "group_id": "260512-albertsons_6-client-sent-export-failure",
+      "state": "resolved",
+      "tags": [
+        "triage:needs_review",
+        "resolved:merged"
+      ],
+      "title": "albertsons_6 client-sent-export-failure",
+      "summary": "Merged into 260511-albertsons_6-albertsons-6-schema-issues: Client-sent alerts are notification counterparts for the same Albertsons schema-remediation audiences already tracked in the waiting schema group; latest preflight shows the same blocked schema/missing-export evidence for 10370, 10372, and 10749, plus monitoring for 2189.",
+      "next_action": "Follow target group 260511-albertsons_6-albertsons-6-schema-issues.",
+      "incident_ids": [
+        "Q2T09VCLN9MRZ8"
+      ],
+      "alert_count": 4,
+      "path": "groups/resolved/260512-albertsons_6-client-sent-export-failure/case.md"
     },
     {
       "group_id": "260513-451-client-sent-export-failure",
@@ -553,7 +588,7 @@
       "incident_ids": [
         "Q38JR11G2ENK2W"
       ],
-      "alert_count": 6,
+      "alert_count": 8,
       "path": "groups/resolved/260514-albertsons_6-albertsons-6-client-sent-recovered-02/case.md"
     },
     {
@@ -710,6 +745,22 @@
       ],
       "alert_count": 1,
       "path": "groups/resolved/260515-76ers_131-zero-success/case.md"
+    },
+    {
+      "group_id": "260515-albertsons_6-live-ramp-export-error",
+      "state": "resolved",
+      "tags": [
+        "triage:needs_review",
+        "resolved:merged"
+      ],
+      "title": "albertsons_6 live-ramp export-error",
+      "summary": "Merged into 260511-albertsons_6-albertsons-6-recovered-after-export-failure-02: Duplicate Albertsons LiveRamp export-error workspace after refreshed deterministic grouping; alert Q38JR11G2ENK2W/Q11T0GQ29JF4Y8 is already attached to the recovered-after-export-failure group, and scoped preflight shows the alert-time webapp run failed but the same audience/export scheduled run later finished healthy.",
+      "next_action": "Follow target group 260511-albertsons_6-albertsons-6-recovered-after-export-failure-02.",
+      "incident_ids": [
+        "Q38JR11G2ENK2W"
+      ],
+      "alert_count": 1,
+      "path": "groups/resolved/260515-albertsons_6-live-ramp-export-error/case.md"
     },
     {
       "group_id": "260515-chghealthcare_395-marketing-cloud-export-error",
@@ -1019,5 +1070,5 @@
       "path": "groups/resolved/grp_260514_ford_310_client_sent_export_failure_split_0073/case.md"
     }
   ],
-  "alert_count": 704
+  "alert_count": 727
 }

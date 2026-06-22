@@ -5,7 +5,7 @@ import { execFile } from "node:child_process";
 import { promisify } from "node:util";
 import { tmpdir } from "node:os";
 import { appendJsonl, ensureDir, listDirs, readJson, relativePath, slug, writeJson } from "./fsutil";
-import { fetchPagerDutyIncidentAlerts, fetchPagerDutyIncidentStatus, loadAlertFacts, parseAlertFacts, resolvePagerDutyIncidentAlerts, type PagerDutyAlertStatusRecord } from "./pagerduty";
+import { fetchActivePagerDutyIncidents, fetchPagerDutyIncidentAlerts, fetchPagerDutyIncidentStatus, loadAlertFacts, parseAlertFacts, resolvePagerDutyIncidentAlerts, type PagerDutyAlertStatusRecord, type PagerDutyIncidentListRecord } from "./pagerduty";
 import { filterAlertFacts, matchesGroupFilter, type GroupFilter } from "./filters";
 import type {
   ActionEvent,
@@ -163,6 +163,31 @@ export async function syncPagerDutyWorkspace(options: {
 
   await regenerateIndex(options.workspaceDir);
   return { imported, refreshed, resolved_groups };
+}
+
+export async function importActivePagerDutyIncidents(options: {
+  workspaceDir: string;
+  fetchActiveIncidents?: () => Promise<PagerDutyIncidentListRecord[]>;
+  importIncident?: (incident: string) => Promise<{ incident_id: string; alert_count: number }>;
+}): Promise<{
+  active_incidents: string[];
+  imported: Array<{ incident_id: string; alert_count: number }>;
+  grouped: { created: number; attached: number; groups: string[] };
+}> {
+  await initWorkspace(options.workspaceDir);
+  const fetchActiveIncidents = options.fetchActiveIncidents ?? fetchActivePagerDutyIncidents;
+  const importIncident = options.importIncident ?? ((incident: string) => importPagerDutyIncident({ workspaceDir: options.workspaceDir, incident }));
+  const activeIncidents = await fetchActiveIncidents();
+  const activeIncidentIds = sortedUnique(activeIncidents.map((incident) => incident.incident_id));
+  const imported: Array<{ incident_id: string; alert_count: number }> = [];
+
+  for (const incidentId of activeIncidentIds) {
+    imported.push(await importIncident(incidentId));
+  }
+
+  const grouped = await groupImportedAlerts(options.workspaceDir);
+  await regenerateIndex(options.workspaceDir);
+  return { active_incidents: activeIncidentIds, imported, grouped };
 }
 
 export interface ClosePagerDutyAlertsResult {
@@ -1360,8 +1385,17 @@ function renderEvidenceData(data: unknown): string[] {
   const lines: string[] = [];
   const links = collectEvidenceLinks(record);
   if (links.length > 0) lines.push(`Links: ${links.map((link) => `[${link.label}](${link.url})`).join(", ")}.`);
+  const artifacts = collectEvidenceArtifacts(record.artifacts);
+  for (const artifact of artifacts) lines.push(`Artifact: ${artifact.label}: \`${artifact.path}\``);
+  const logQueries = collectStringList(record.log_queries);
+  for (const query of logQueries) lines.push(`Log query: \`${query}\``);
   const commands = collectStringList(record.commands);
   for (const command of commands) lines.push(`Command: \`${command}\``);
+  const findings = collectEvidenceFindings(record.findings);
+  if (findings.length > 0) {
+    lines.push("Findings:");
+    for (const finding of findings) lines.push(`- ${finding}`);
+  }
   return lines;
 }
 
@@ -1394,6 +1428,42 @@ function collectEvidenceLinks(record: Record<string, unknown>): { label: string;
 function collectStringList(value: unknown): string[] {
   if (!Array.isArray(value)) return [];
   return value.filter((item): item is string => typeof item === "string" && item.trim().length > 0);
+}
+
+function collectEvidenceArtifacts(value: unknown): { label: string; path: string }[] {
+  if (!Array.isArray(value)) return [];
+  const artifacts: { label: string; path: string }[] = [];
+  for (const artifact of value) {
+    if (typeof artifact === "string" && artifact.trim().length > 0) {
+      artifacts.push({ label: "Artifact", path: artifact.trim() });
+      continue;
+    }
+    if (!artifact || typeof artifact !== "object") continue;
+    const record = artifact as Record<string, unknown>;
+    const artifactPath = record.path;
+    if (typeof artifactPath !== "string" || artifactPath.trim().length === 0) continue;
+    const label = typeof record.label === "string" && record.label.trim().length > 0 ? record.label.trim() : "Artifact";
+    artifacts.push({ label, path: artifactPath.trim() });
+  }
+  return artifacts;
+}
+
+function collectEvidenceFindings(value: unknown): string[] {
+  if (!Array.isArray(value)) return [];
+  const findings: string[] = [];
+  for (const item of value) {
+    if (typeof item === "string" && item.trim().length > 0) {
+      findings.push(item.trim());
+      continue;
+    }
+    if (!item || typeof item !== "object") continue;
+    const record = item as Record<string, unknown>;
+    const audience = typeof record.audience_id === "string" ? `Audience ${record.audience_id}: ` : "";
+    const summary = typeof record.summary === "string" ? record.summary : undefined;
+    if (!summary) continue;
+    findings.push(`${audience}${summary}`);
+  }
+  return findings;
 }
 
 function formatAlertStateTuple(alert: AlertFact): string | undefined {

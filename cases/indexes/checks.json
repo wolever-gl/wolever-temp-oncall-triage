@@ -8000,7 +8000,7 @@
     "alert_id": "Q2S03JXYQD34WM",
     "state": "monitoring",
     "blockers": [],
-    "next_check_at": "2026-05-16T23:25:55.908Z",
+    "next_check_at": "2026-06-22T18:09:18.971Z",
     "scope": {
       "env": "albertsons",
       "org_id": "6",
@@ -8015,9 +8015,11 @@
     "check_id": "chk_q2ejwg22cer0la_q311oeq3iz6gpg",
     "incident_id": "Q2EJWG22CER0LA",
     "alert_id": "Q311OEQ3IZ6GPG",
-    "state": "monitoring",
-    "blockers": [],
-    "next_check_at": "2026-05-16T23:25:55.908Z",
+    "state": "blocked",
+    "blockers": [
+      "failed_export_count",
+      "export_error"
+    ],
     "scope": {
       "env": "albertsons",
       "org_id": "6",
@@ -8225,7 +8227,7 @@
     "alert_id": "Q06RN07M3BVDQB",
     "state": "monitoring",
     "blockers": [],
-    "next_check_at": "2026-05-16T23:15:27.526Z",
+    "next_check_at": "2026-06-22T18:09:18.971Z",
     "scope": {
       "env": "albertsons",
       "org_id": "6",
@@ -9908,7 +9910,7 @@
     "alert_id": "Q24L2JIWVY4GIS",
     "state": "monitoring",
     "blockers": [],
-    "next_check_at": "2026-06-15T16:41:35.352Z",
+    "next_check_at": "2026-06-22T15:21:58.855Z",
     "scope": {
       "env": "albertsons",
       "org_id": "6",
@@ -11616,9 +11618,8 @@
     "check_id": "chk_q38jr11g2enk2w_q0zdiagv3ojula",
     "incident_id": "Q38JR11G2ENK2W",
     "alert_id": "Q0ZDIAGV3OJULA",
-    "state": "monitoring",
+    "state": "healthy_closed",
     "blockers": [],
-    "next_check_at": "2026-05-16T23:26:07.319Z",
     "scope": {
       "env": "albertsons",
       "org_id": "6",
@@ -11643,6 +11644,8 @@
       "audience_id": "12862",
       "endpoint_id": "app_liveramp_activation_41",
       "destination_type": "live_ramp_activation",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-05-15T07:40:43-07:00",
       "checked_export_run_ids": [
         "12862-live_ramp_activation_4610-webapp__2026-05-14T20:37:56+00:00",
         "12862-live_ramp_activation_4610-scheduled__2026-05-15T00:00:00+00:00"
@@ -11734,11 +11737,8 @@
     "check_id": "chk_q38jr11g2enk2w_q2m2bhx98mhzq4",
     "incident_id": "Q38JR11G2ENK2W",
     "alert_id": "Q2M2BHX98MHZQ4",
-    "state": "open",
-    "blockers": [
-      "evidence_unavailable"
-    ],
-    "next_check_at": "2026-05-18T20:17:22.257Z",
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "albertsons",
       "org_id": "6",
@@ -11819,11 +11819,8 @@
     "check_id": "chk_q38jr11g2enk2w_q3wnloqe86qywa",
     "incident_id": "Q38JR11G2ENK2W",
     "alert_id": "Q3WNLOQE86QYWA",
-    "state": "open",
-    "blockers": [
-      "evidence_unavailable"
-    ],
-    "next_check_at": "2026-05-18T20:17:22.257Z",
+    "state": "healthy_closed",
+    "blockers": [],
     "scope": {
       "env": "albertsons",
       "org_id": "6",

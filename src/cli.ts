@@ -2,7 +2,7 @@
 import { autoMonitorExportGroup, autoResolveHealthyExportGroup, checkExportsWorkspace, loadPizzaRowsFile } from "./checkExports";
 import { matchesGroupFilter, mergeAlertFilter, parseFilterValues, type AlertFilter, type CommandFilters, type GroupFilter } from "./filters";
 import { createLivePizzaFetcher } from "./pizza";
-import { appendEvidence, closePagerDutyAlertsForResolvedGroups, groupImportedAlerts, groupTaggedAlerts, importPagerDutyIncident, initWorkspace, loadAllGroups, mergeGroups, queryAlertFacts, readGroupState, regenerateIndex, runAlertTagger, splitGroup, syncPagerDutyWorkspace, transitionGroup } from "./workspace";
+import { appendEvidence, closePagerDutyAlertsForResolvedGroups, groupImportedAlerts, groupTaggedAlerts, importActivePagerDutyIncidents, importPagerDutyIncident, initWorkspace, loadAllGroups, mergeGroups, queryAlertFacts, readGroupState, regenerateIndex, runAlertTagger, splitGroup, syncPagerDutyWorkspace, transitionGroup } from "./workspace";
 import type { GroupState, GroupStateName } from "./schema";
 
 async function main(argv: string[]): Promise<void> {
@@ -27,6 +27,12 @@ async function main(argv: string[]): Promise<void> {
       ...(allowPartial ? { allowPartial } : {}),
     });
     console.log(`Imported ${result.alert_count} alert(s) from ${result.incident_id}`);
+    return;
+  }
+  if (command === "import-active-pd") {
+    const result = await importActivePagerDutyIncidents({ workspaceDir });
+    console.log(`Imported active PagerDuty incidents: active=${result.active_incidents.length}, imported=${result.imported.length}, groups_created=${result.grouped.created}, alerts_attached=${result.grouped.attached}`);
+    for (const imported of result.imported) console.log(`- ${imported.incident_id}: ${imported.alert_count} alert(s)`);
     return;
   }
   if (command === "alerts") {
@@ -232,12 +238,23 @@ async function main(argv: string[]): Promise<void> {
     const summary = required(args, "summary");
     const links = values(args, "link").map(parseEvidenceLink);
     const commands = values(args, "command");
+    const artifacts = values(args, "artifact").map(parseEvidenceArtifact);
+    const findings = values(args, "finding");
+    const logQueries = values(args, "log-query");
     await appendEvidence(workspaceDir, groupId, {
       ts: new Date().toISOString(),
       kind: optional(args, "kind") ?? "note",
       source: optional(args, "source") ?? "agent",
       summary,
-      ...((links.length > 0 || commands.length > 0) ? { data: { ...(links.length > 0 ? { links } : {}), ...(commands.length > 0 ? { commands } : {}) } } : {}),
+      ...((links.length > 0 || commands.length > 0 || artifacts.length > 0 || findings.length > 0 || logQueries.length > 0) ? {
+        data: {
+          ...(links.length > 0 ? { links } : {}),
+          ...(commands.length > 0 ? { commands } : {}),
+          ...(artifacts.length > 0 ? { artifacts } : {}),
+          ...(findings.length > 0 ? { findings } : {}),
+          ...(logQueries.length > 0 ? { log_queries: logQueries } : {}),
+        },
+      } : {}),
     });
     console.log(`Appended evidence to ${groupId}`);
     return;
@@ -347,6 +364,14 @@ function parseEvidenceLink(value: string): { label: string; url: string } {
   return { label: label || "Link", url };
 }
 
+function parseEvidenceArtifact(value: string): { label: string; path: string } {
+  const separator = value.indexOf("=");
+  const label = separator >= 0 ? value.slice(0, separator).trim() : "Artifact";
+  const artifactPath = separator >= 0 ? value.slice(separator + 1).trim() : value.trim();
+  if (artifactPath.length === 0) throw new Error(`--artifact must be either <path> or <label>=<path>: ${value}`);
+  return { label: label || "Artifact", path: artifactPath };
+}
+
 function usage(): void {
   console.log(usageText());
 }
@@ -355,6 +380,7 @@ function usageText(): string {
   return `Usage:
   bun run oncall-triage init <workspace>
   bun run oncall-triage import-pd <workspace> --incident <pd-url-or-id> [--alerts-file <file>] [--allow-partial true]
+  bun run oncall-triage import-active-pd <workspace>
   bun run oncall-triage alerts <workspace> [--filter alert.org=<org_id>] [--filter alert.incident=<id>] [--filter alert.audience=<id>] [--filter alert.destination=<destination>] [--filter alert.state=<state>]
   bun run oncall-triage tag <workspace> --script <file> [--filter alert.org=<org_id>] [--filter alert.incident=<id>] [--filter alert.audience=<id>] [--filter alert.destination=<destination>] [--filter alert.state=<state>] [--tag <tag>] [--limit <n>] [--test]
   bun run oncall-triage group <workspace>
@@ -367,7 +393,7 @@ function usageText(): string {
   bun run oncall-triage close-pd <workspace> [--filter group.state=resolved] [--filter group.id=<id>] [--test] [--apply]
   bun run oncall-triage preflight <workspace> [--filter group.state=<state>] [--filter group.id=<id>]
   bun run oncall-triage check-exports <workspace> [--apply] [--auto-resolve] [--filter group.id=<id>] [--filter alert.destination=<destination>] [--filter alert.incident=<id>] [--filter alert.org=<org_id>] [--filter alert.audience=<id>] [--filter alert.state=<state>] [--pizza-rows-file <file>] [--limit <n>]
-  bun run oncall-triage evidence <workspace> --group <id> --summary <text> [--kind <kind>] [--source <source>] [--link <label=url>] [--command <command>]
+  bun run oncall-triage evidence <workspace> --group <id> --summary <text> [--kind <kind>] [--source <source>] [--link <label=url>] [--command <command>] [--artifact <label=path>] [--log-query <query>] [--finding <text>]
 
 Waiting transitions require prior communication evidence in evidence.jsonl or notes.md. Use evidence --kind communication_thread/support_thread/slack_thread with a durable link before transition --state waiting.`;
 }

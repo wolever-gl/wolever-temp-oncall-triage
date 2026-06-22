@@ -1,0 +1,2 @@
+{"ts":"2026-06-22T15:05:55.227Z","actor":"oncall-triage","decision":"created_group","rationale":"Conservative deterministic grouping created a new group for v3|incident:Q38JR11G2ENK2W|org:albertsons_6|dest:live-ramp|class:export-error."}
+{"ts":"2026-06-22T15:07:11.015Z","actor":"check-exports","decision":"started_work","rationale":"Export evidence check evaluated alert facts for this group."}

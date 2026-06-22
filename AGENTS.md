@@ -12,6 +12,10 @@ Use this repo as a case-workspace system, not a spreadsheet workflow.
 - Imported PagerDuty raw text is immutable. Parsed alert facts are versioned derived facts.
 - Assume facts and event logs should be immutable unless there is a strong reason otherwise.
 - PagerDuty wrapper imports must preserve every alert. If the wrapper says `Alerts (N)`, parsed facts must match `N` unless an explicit partial-import escape hatch is used.
+- PagerDuty wrapper tooling failures must be loud. If the wrapper cannot install
+  or find the `pd` binary, stop and diagnose or report that tooling failure
+  before broad PagerDuty discovery; do not silently bypass the wrapper through
+  another path.
 - Incident titles may enrich display or low-confidence hints, but they are not matching inputs.
 - Match rules are the shared mechanism for active grouping keys, aliases, redirects, and ambiguous split keys.
 - Generated cohorts and related groups are navigation aids, not persisted truth, until an agent records an explicit relationship or merge.
@@ -41,6 +45,8 @@ Use this repo as a case-workspace system, not a spreadsheet workflow.
 - Runbooks are structured instructions and may include tool functions or scripts.
 - Before manual case investigation, check Google auth freshness and run
   `gcloud auth login --update-adc` when credentials are missing or stale, then
+  import active PagerDuty cases with
+  `bun run oncall-triage import-active-pd cases`, then
   run the export preflight when the case has export-alert evidence:
   `bun run oncall-triage preflight cases --filter group.id=<group-id>`.
   For a full pass across new cases, run

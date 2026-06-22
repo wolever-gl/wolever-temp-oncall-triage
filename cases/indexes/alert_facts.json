@@ -11578,5 +11578,354 @@
     "created_at": "2026-05-18T12:58:37-07:00",
     "summary": "Insufficient data for bifrost_queue_develop_sqs_too_old_messages_bifrost_v2",
     "export_check_strategy": "checked_export_run_ids"
+  },
+  {
+    "incident_id": "Q00MFBGA6P78P8",
+    "alert_id": "Q1NDLW0YSMVD3J",
+    "created_at": "2026-06-15T07:33:40-07:00",
+    "summary": "allegro (Marketing): Exports for audience 1266 failed with states: <(snapshotting_finished,export_processing)>",
+    "org_id": "allegro_3",
+    "audience_id": "1266",
+    "destination_type": "dv360",
+    "destination_product": "dv360",
+    "endpoint_id": "app_dv360_5",
+    "state_tuple": {
+      "snapshotting": "snapshotting_finished",
+      "export": "export_processing"
+    },
+    "checked_export_run_ids": [
+      "1266-dv360_1668-scheduled__2026-06-15T00:00:00+00:00"
+    ],
+    "export_check_strategy": "checked_export_run_ids"
+  },
+  {
+    "incident_id": "Q04L3ZGFN8PH8R",
+    "alert_id": "Q0XE8N1UMDDEBM",
+    "created_at": "2026-06-15T16:59:07-07:00",
+    "summary": "chghealthcare (Omni-Division) - Audience 31808: Audience Export failure for 31808 sent to client.",
+    "org_id": "chghealthcare_395",
+    "audience_id": "31808",
+    "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q004R9HPG7ZZ1L",
+    "alert_id": "Q33B23IQ8F57WW",
+    "created_at": "2026-06-16T07:38:19-07:00",
+    "summary": "chghealthcare (CompHealth): Exports for audience 19070 failed with states: <(snapshotting_finished,export_error)>",
+    "org_id": "chghealthcare_395",
+    "audience_id": "19070",
+    "destination_type": "pulse_point",
+    "destination_product": "pulse-point",
+    "endpoint_id": "app_pulsepoint_1409",
+    "state_tuple": {
+      "snapshotting": "snapshotting_finished",
+      "export": "export_error"
+    },
+    "checked_export_run_ids": [
+      "19070-pulse_point_12048-scheduled__2026-06-15T23:00:00+00:00"
+    ],
+    "export_check_strategy": "checked_export_run_ids"
+  },
+  {
+    "incident_id": "Q05TNQMJXCI19W",
+    "alert_id": "Q26YSYOBHDLV2Y",
+    "created_at": "2026-06-17T07:39:45-07:00",
+    "summary": "chghealthcare (Omni-Division): Exports for audience 29870 failed with states: <(snapshotting_finished,export_error)>",
+    "org_id": "chghealthcare_395",
+    "audience_id": "29870",
+    "destination_type": "pulse_point",
+    "destination_product": "pulse-point",
+    "endpoint_id": "app_pulsepoint_1645",
+    "state_tuple": {
+      "snapshotting": "snapshotting_finished",
+      "export": "export_error"
+    },
+    "checked_export_run_ids": [
+      "29870-pulse_point_20920-scheduled__2026-06-16T23:00:00+00:00"
+    ],
+    "export_check_strategy": "checked_export_run_ids"
+  },
+  {
+    "incident_id": "Q05I07B3Q0N74R",
+    "alert_id": "Q2QLHQQFO5BI04",
+    "created_at": "2026-06-17T16:53:27-07:00",
+    "summary": "chghealthcare (Weatherby Healthcare) - Audience 31696: Audience Export failure for 31696 sent to client.",
+    "org_id": "chghealthcare_395",
+    "audience_id": "31696",
+    "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q004XR0M9EE199",
+    "alert_id": "Q1S9JRWEGMPX15",
+    "created_at": "2026-06-18T07:30:01-07:00",
+    "summary": "pirates (default): Exports for audience 1436 failed with states: <(snapshotting_error,no_batches)>",
+    "org_id": "pirates_3",
+    "audience_id": "1436",
+    "destination_type": "dynamics",
+    "destination_product": "dynamics",
+    "state_tuple": {
+      "snapshotting": "snapshotting_error",
+      "export": "no_batches"
+    },
+    "checked_export_run_ids": [
+      "1436-dynamics_775-scheduled__2026-06-18T12:00:00+00:00",
+      "1436-dynamics_775-scheduled__2026-06-18T13:00:00+00:00",
+      "1436-dynamics_775-scheduled__2026-06-18T14:00:00+00:00"
+    ],
+    "export_check_strategy": "checked_export_run_ids"
+  },
+  {
+    "incident_id": "Q04I15TNP1B3TD",
+    "alert_id": "Q1E2788YIL0ZTF",
+    "created_at": "2026-06-18T07:30:08-07:00",
+    "summary": "royals (default): Exports for signal 116 failed with states: <(snapshotting_error,no_batches)>",
+    "org_id": "royals_4",
+    "audience_id": "116",
+    "destination_type": "salesforce_audience_object",
+    "destination_product": "salesforce-audience",
+    "state_tuple": {
+      "snapshotting": "snapshotting_error",
+      "export": "no_batches"
+    },
+    "checked_export_run_ids": [
+      "116-salesforce_audience_object_116-scheduled__2026-06-18T11:00:00+00:00",
+      "116-salesforce_audience_object_116-scheduled__2026-06-18T12:00:00+00:00",
+      "116-salesforce_audience_object_116-scheduled__2026-06-18T13:00:00+00:00"
+    ],
+    "export_check_strategy": "checked_export_run_ids"
+  },
+  {
+    "incident_id": "Q04MNBY530NDTB",
+    "alert_id": "Q2VB99YUC08X0B",
+    "created_at": "2026-06-18T07:33:05-07:00",
+    "summary": "allegro (Marketing): Exports for audience 1017 failed with states: <(snapshotting_finished,export_processing)>",
+    "org_id": "allegro_3",
+    "audience_id": "1017",
+    "destination_type": "dv360",
+    "destination_product": "dv360",
+    "endpoint_id": "app_dv360_1",
+    "state_tuple": {
+      "snapshotting": "snapshotting_finished",
+      "export": "export_processing"
+    },
+    "checked_export_run_ids": [
+      "1017-dv360_1323-scheduled__2026-06-18T00:00:00+00:00"
+    ],
+    "export_check_strategy": "checked_export_run_ids"
+  },
+  {
+    "incident_id": "Q04YXL91LDM3WS",
+    "alert_id": "Q2QCLS4JILDJQU",
+    "created_at": "2026-06-18T07:43:45-07:00",
+    "summary": "chghealthcare (Omni-Division): Exports for audience 31799 failed with states: <(snapshotting_finished,export_error)>",
+    "org_id": "chghealthcare_395",
+    "audience_id": "31799",
+    "destination_type": "pulse_point",
+    "destination_product": "pulse-point",
+    "endpoint_id": "app_pulsepoint_1640",
+    "state_tuple": {
+      "snapshotting": "snapshotting_finished",
+      "export": "export_error"
+    },
+    "checked_export_run_ids": [
+      "31799-pulse_point_19409-scheduled__2026-06-17T23:00:00+00:00"
+    ],
+    "export_check_strategy": "checked_export_run_ids"
+  },
+  {
+    "incident_id": "Q04WTJB5QGHOHK",
+    "alert_id": "Q1765QYJDXIT0R",
+    "created_at": "2026-06-18T07:53:31-07:00",
+    "summary": "Costco (default): No data found for active audience 5847",
+    "org_id": "costco_4",
+    "audience_id": "5847",
+    "export_check_strategy": "checked_export_run_ids"
+  },
+  {
+    "incident_id": "Q023L8XUOMOHKA",
+    "alert_id": "Q2O2YAMM3PAH0U",
+    "created_at": "2026-06-18T07:55:24-07:00",
+    "summary": "Costco (default): No data found for active audience 5854",
+    "org_id": "costco_4",
+    "audience_id": "5854",
+    "export_check_strategy": "checked_export_run_ids"
+  },
+  {
+    "incident_id": "Q019L5N9ZHBLEV",
+    "alert_id": "Q3EX3LOMD0CV26",
+    "created_at": "2026-06-18T17:48:08-07:00",
+    "summary": "priceline (default) - Audience 18474: Audience Export failure for 18474 sent to client.",
+    "org_id": "priceline_370",
+    "audience_id": "18474",
+    "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q040Y5OHNXE3KP",
+    "alert_id": "Q341N8P7OVYFYC",
+    "created_at": "2026-06-19T07:30:25-07:00",
+    "summary": "allegro (Marketing): Exports for audience 152 failed with states: <(snapshotting_finished,export_processing)>",
+    "org_id": "allegro_3",
+    "audience_id": "152",
+    "destination_type": "dv360",
+    "destination_product": "dv360",
+    "endpoint_id": "app_dv360_1",
+    "state_tuple": {
+      "snapshotting": "snapshotting_finished",
+      "export": "export_processing"
+    },
+    "checked_export_run_ids": [
+      "152-dv360_317-scheduled__2026-06-19T00:00:00+00:00"
+    ],
+    "export_check_strategy": "checked_export_run_ids"
+  },
+  {
+    "incident_id": "Q020ROD7MVBBRJ",
+    "alert_id": "Q0DV9RH23CBA6G",
+    "created_at": "2026-06-19T07:30:27-07:00",
+    "summary": "allegro (Marketing): Exports for audience 160 failed with states: <(snapshotting_finished,export_processing)>",
+    "org_id": "allegro_3",
+    "audience_id": "160",
+    "destination_type": "dv360",
+    "destination_product": "dv360",
+    "endpoint_id": "app_dv360_1",
+    "state_tuple": {
+      "snapshotting": "snapshotting_finished",
+      "export": "export_processing"
+    },
+    "checked_export_run_ids": [
+      "160-dv360_327-scheduled__2026-06-19T00:00:00+00:00"
+    ],
+    "export_check_strategy": "checked_export_run_ids"
+  },
+  {
+    "incident_id": "Q04P1G18UYQXA3",
+    "alert_id": "Q308UE9MGQA2OM",
+    "created_at": "2026-06-22T04:10:36-07:00",
+    "summary": "albertsons (Albertsons Media) - Audience 11236: Audience Export failure for 11236 sent to client.",
+    "org_id": "albertsons_6",
+    "audience_id": "11236",
+    "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q05QT2VUY5NLIC",
+    "alert_id": "Q083HD3KBH9L9I",
+    "created_at": "2026-06-22T07:33:34-07:00",
+    "summary": "albertsons (Albertsons Media): Exports for audience 3283 failed with states: <(snapshotting_error,no_batches)>",
+    "org_id": "albertsons_6",
+    "audience_id": "3283",
+    "destination_type": "live_ramp_activation",
+    "destination_product": "live-ramp",
+    "state_tuple": {
+      "snapshotting": "snapshotting_error",
+      "export": "no_batches"
+    },
+    "checked_export_run_ids": [
+      "3283-live_ramp_activation_1278-scheduled__2026-06-22T00:00:00+00:00"
+    ],
+    "export_check_strategy": "checked_export_run_ids"
+  },
+  {
+    "incident_id": "Q01RMY4QJ0EDMW",
+    "alert_id": "Q188P9C2NJ8A5Y",
+    "created_at": "2026-06-22T07:36:01-07:00",
+    "summary": "albertsons (Albertsons Media): No exports for audience 9705 found in scheduled interval",
+    "org_id": "albertsons_6",
+    "audience_id": "9705",
+    "export_check_strategy": "checked_export_run_ids"
+  },
+  {
+    "incident_id": "Q022HUJ54DU2R9",
+    "alert_id": "Q1CS2KTQNQU7NF",
+    "created_at": "2026-06-22T07:40:50-07:00",
+    "summary": "chghealthcare (Weatherby Healthcare): Exports for audience 31726 failed with states: <(snapshotting_finished,export_error)>",
+    "org_id": "chghealthcare_395",
+    "audience_id": "31726",
+    "destination_type": "pulse_point",
+    "destination_product": "pulse-point",
+    "endpoint_id": "app_pulsepoint_1408",
+    "state_tuple": {
+      "snapshotting": "snapshotting_finished",
+      "export": "export_error"
+    },
+    "checked_export_run_ids": [
+      "31726-pulse_point_19520-scheduled__2026-06-21T23:00:00+00:00"
+    ],
+    "export_check_strategy": "checked_export_run_ids"
+  },
+  {
+    "incident_id": "Q013DQMS89S80I",
+    "alert_id": "Q22PW476GL9QOA",
+    "created_at": "2026-06-22T07:53:51-07:00",
+    "summary": "trumanshow (Healthcare & Education): Exports for audience 37376 failed with states: <(snapshotting_error,no_batches)>",
+    "org_id": "trumanshow_336",
+    "audience_id": "37376",
+    "destination_type": "iterable",
+    "destination_product": "iterable",
+    "state_tuple": {
+      "snapshotting": "snapshotting_error",
+      "export": "no_batches"
+    },
+    "checked_export_run_ids": [
+      "37376-iterable_22434-webapp__2026-06-01T21:26:26+00:00",
+      "37376-iterable_22434-webapp__2026-06-01T21:36:38+00:00",
+      "37376-iterable_22434-webapp__2026-06-01T21:43:02+00:00",
+      "37376-iterable_22434-webapp__2026-06-01T21:57:18+00:00"
+    ],
+    "export_check_strategy": "checked_export_run_ids"
+  },
+  {
+    "incident_id": "Q04M030A9T2DXG",
+    "alert_id": "Q00XSOLDNZF41W",
+    "created_at": "2026-06-22T07:54:23-07:00",
+    "summary": "trumanshow (BJS): Exports for signal 1007 failed with states: <(snapshotting_error,no_batches)>",
+    "org_id": "trumanshow_336",
+    "audience_id": "1007",
+    "destination_type": "personalization_api_object",
+    "destination_product": "personalization-api",
+    "state_tuple": {
+      "snapshotting": "snapshotting_error",
+      "export": "no_batches"
+    },
+    "checked_export_run_ids": [
+      "1007-personalization_api_object_1007-scheduled__2026-06-21T00:00:00+00:00"
+    ],
+    "export_check_strategy": "checked_export_run_ids"
+  },
+  {
+    "incident_id": "Q04FOTACA3H398",
+    "alert_id": "Q21IWIYI0PU0YE",
+    "created_at": "2026-06-22T08:07:09-07:00",
+    "summary": "fanatics (default): Exports for audience 30807 failed with states: <(snapshotting_finished,export_error)>",
+    "org_id": "fanatics_502",
+    "audience_id": "30807",
+    "destination_type": "snowflake",
+    "destination_product": "snowflake",
+    "endpoint_id": "app_snowflake_1746",
+    "state_tuple": {
+      "snapshotting": "snapshotting_finished",
+      "export": "export_error"
+    },
+    "checked_export_run_ids": [
+      "30807-snowflake_21614-scheduled__2026-06-18T00:00:00+00:00"
+    ],
+    "export_check_strategy": "checked_export_run_ids"
+  },
+  {
+    "incident_id": "Q054DZZ6GFL4FT",
+    "alert_id": "Q1QZ9JCZZESMEY",
+    "created_at": "2026-06-22T10:48:07-07:00",
+    "summary": "albertsons (Albertsons Media) - Audience 12270: Audience Export failure for 12270 sent to client.",
+    "org_id": "albertsons_6",
+    "audience_id": "12270",
+    "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q18PJFCK0IYHAO",
+    "alert_id": "Q2TVHR26NUJHQC",
+    "created_at": "2026-06-22T10:49:57-07:00",
+    "summary": "albertsons (Albertsons Media) - Audience 9323: Audience Export failure for 9323 sent to client.",
+    "org_id": "albertsons_6",
+    "audience_id": "9323",
+    "export_check_strategy": "any_export_after_alert"
   }
 ]

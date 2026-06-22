@@ -1,0 +1,13 @@
+Alerts (1)
+----------------
+1. Q1S9JRWEGMPX15 | triggered | 2026-06-18T07:30:01-07:00
+   untrusted_message: "pirates (default): Exports for audience 1436 failed with states: <(snapshotting_error,no_batches)>"
+   audience_id: "1436"
+   checked_export_run_ids: "1436-dynamics_775-scheduled__2026-06-18T12:00:00+00:00, 1436-dynamics_775-scheduled__2026-06-18T13:00:00+00:00, 1436-dynamics_775-scheduled__2026-06-18T14:00:00+00:00"
+   glcli: glcli --env pirates bifrost pizza --audience-id 1436 --org-id 3
+   logs: "https://console.cloud.google.com/logs/query;query=resource.type%3D%22k8s_container%22%0A%0AjsonPayload.organization_id%3D%22pirates_3%22%0AjsonPayload.internal_audience_id%3D%221436%22%0A%0A;summaryFields=jsonPayload%252Fbatch_id:false:32:beginning;timeRange=2026-06-18T14:20:00Z%2F2026-06-18T14:40:00Z?project=pirates-dataeng-prod"
+
+Deduped glcli commands by audience
+-----------------------------------
+audience_id 1436:
+  glcli --env pirates bifrost pizza --audience-id 1436 --org-id 3

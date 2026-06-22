@@ -3,7 +3,7 @@ import { mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import path from "node:path";
 import { checkExportsWorkspace } from "./checkExports";
-import { appendEvidence, closePagerDutyAlertsForResolvedGroups, groupImportedAlerts, groupTaggedAlerts, importPagerDutyIncident, initWorkspace, loadAllGroups, loadMatchRules, mergeGroups, queryAlertFacts, readIncidentRecord, regenerateIndex, runAlertTagger, splitGroup, syncPagerDutyWorkspace, transitionGroup, writeGroupState } from "./workspace";
+import { appendEvidence, closePagerDutyAlertsForResolvedGroups, groupImportedAlerts, groupTaggedAlerts, importActivePagerDutyIncidents, importPagerDutyIncident, initWorkspace, loadAllGroups, loadMatchRules, mergeGroups, queryAlertFacts, readIncidentRecord, regenerateIndex, runAlertTagger, splitGroup, syncPagerDutyWorkspace, transitionGroup, writeGroupState } from "./workspace";
 import type { PagerDutyAlertStatusRecord, PagerDutyIncidentStatusRecord } from "./pagerduty";
 import type { PizzaExportRow } from "./schema";
 
@@ -334,6 +334,40 @@ console.log(JSON.stringify({
     }
   });
 
+  test("renders log evidence artifacts, queries, and representative findings in case markdown", async () => {
+    const workspaceDir = await mkdtemp(path.join(tmpdir(), "oncall-triage-v2-"));
+    try {
+      await importPagerDutyIncident({ workspaceDir, incident: "QTEST123", alertsFile: fixture });
+      const grouped = await groupImportedAlerts(workspaceDir);
+      const groupId = grouped.groups[0]!;
+
+      await appendEvidence(workspaceDir, groupId, {
+        ts: "2026-05-16T17:00:00.000Z",
+        kind: "log_evidence",
+        source: "gcloud logging",
+        summary: "Scoped logs show schema lookup failures for representative audiences.",
+        data: {
+          artifacts: [{ label: "Schema log artifact", path: "cases/artifacts/260516-schema-log-evidence.json" }],
+          log_queries: [
+            'resource.type="k8s_container" jsonPayload.organization_id="albertsons_6" "FieldNotFoundException"',
+          ],
+          findings: [
+            "Audience 10370: FieldNotFoundException for missing field customer_id in audience results request.",
+            { audience_id: "10372", summary: "FieldNotFoundException while evaluating audience schema." },
+          ],
+        },
+      });
+
+      const caseMarkdown = await readFile(groupFile(workspaceDir, "open", groupId, "case.md"), "utf8");
+      expect(caseMarkdown).toContain("Artifact: Schema log artifact: `cases/artifacts/260516-schema-log-evidence.json`");
+      expect(caseMarkdown).toContain('Log query: `resource.type="k8s_container" jsonPayload.organization_id="albertsons_6" "FieldNotFoundException"`');
+      expect(caseMarkdown).toContain("Audience 10370: FieldNotFoundException for missing field customer_id");
+      expect(caseMarkdown).toContain("Audience 10372: FieldNotFoundException while evaluating audience schema.");
+    } finally {
+      await rm(workspaceDir, { recursive: true, force: true });
+    }
+  });
+
   test("regenerating the index refreshes case markdown with export check evidence", async () => {
     const workspaceDir = await mkdtemp(path.join(tmpdir(), "oncall-triage-v2-"));
     try {
@@ -580,6 +614,34 @@ console.log(JSON.stringify({
         const evidence = await readFile(groupFile(workspaceDir, "resolved", group.group_id, "evidence.jsonl"), "utf8");
         expect(evidence).toContain("pd_sync");
       }
+    } finally {
+      await rm(workspaceDir, { recursive: true, force: true });
+    }
+  });
+
+  test("import-active-pd imports discovered active incidents and groups them", async () => {
+    const workspaceDir = await mkdtemp(path.join(tmpdir(), "oncall-triage-v2-"));
+    try {
+      const result = await importActivePagerDutyIncidents({
+        workspaceDir,
+        fetchActiveIncidents: async () => [
+          { incident_id: "QTEST456", status: "acknowledged", created_at: "2026-05-15T17:00:00Z" },
+          { incident_id: "QTEST123", status: "triggered", created_at: "2026-05-15T16:00:00Z" },
+          { incident_id: "QTEST123", status: "triggered", created_at: "2026-05-15T16:00:00Z" },
+        ],
+        importIncident: async (incident) => importPagerDutyIncident({ workspaceDir, incident, alertsFile: fixture }),
+      });
+
+      expect(result.active_incidents).toEqual(["QTEST123", "QTEST456"]);
+      expect(result.imported).toEqual([
+        { incident_id: "QTEST123", alert_count: 3 },
+        { incident_id: "QTEST456", alert_count: 3 },
+      ]);
+      expect(result.grouped.created).toBe(2);
+
+      const groups = await loadAllGroups(workspaceDir);
+      expect(groups).toHaveLength(2);
+      expect(groups.flatMap((group) => group.incident_ids).sort()).toEqual(["QTEST123", "QTEST456"]);
     } finally {
       await rm(workspaceDir, { recursive: true, force: true });
     }
