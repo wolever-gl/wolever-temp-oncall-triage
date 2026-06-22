@@ -26,6 +26,20 @@ Representative alerts:
 - Q0BSIBMDIB33PB/Q34QYOTE1NH8GZ: 2026-06-22T07:30:43-07:00; albertsons_6; audience 1972; live_ramp_activation; snapshotting_error/no_batches. albertsons (Albertsons Media): Exports for audience 1972 failed with states: <(snapshotting_error,no_batches)>
   Runs: `1972-live_ramp_activation_484-scheduled__2026-06-22T00:00:00+00:00`
 
+## Export Checks
+
+- Checks: 1.
+- States: `blocked`=1
+- Blockers seen: `snapshotting_error_requires_review`
+
+Check evidence:
+- chk_q0bsibmdib33pb_q34qyote1nh8gz (Q0BSIBMDIB33PB/Q34QYOTE1NH8GZ): state=`blocked`.
+  Scope: env=albertsons; org=6; audience=1972; destination=live_ramp_activation.
+  Checked runs: `1972-live_ramp_activation_484-scheduled__2026-06-22T00:00:00+00:00`
+  Command: `glcli --env albertsons bifrost pizza --audience-id 1972 --org-id 6`
+  Blockers: `snapshotting_error_requires_review`
+  Run 1972-live_ramp_activation_484-scheduled__2026-06-22T00:00:00+00:00: health=`blocked`; blockers=snapshotting_error_requires_review; created=2026-06-22T07:21:50.081902+00:00; snapshotting=snapshotting_error; export=no_batches; failed=0.
+
 ## Next Action
 
 Agent should gather evidence, choose/apply a runbook when appropriate, and update this case.

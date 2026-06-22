@@ -1566,6 +1566,15 @@
     "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
+    "match_key": "v3|incident:Q1LPO13841C1IC|org:albertsons_6|class:client-sent-export-failure",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-bigquery-type-mismatch",
+    "reason": "merged",
+    "created_at": "2026-06-22T19:46:10.094Z",
+    "created_by": "oncall-triage",
+    "rationale": "New Albertsons sent-to-client alert for audience 11651 has latest Pizza row snapshotting_error/no_batches with pre_snapshotting_check BigQuery expression type incompatibility; same remediation path as the existing BigQuery type mismatch cohort."
+  },
+  {
     "match_key": "v3|incident:Q1LQVOJX0IHFLI|org:priceline_370|class:client-sent-export-failure",
     "status": "active",
     "target_group_id": "260618-priceline_370-client-sent-export-failure-06",
@@ -2025,6 +2034,15 @@
     "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
+    "match_key": "v3|incident:Q24B1M4BAXAHKN|org:albertsons_6|class:client-sent-export-failure",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-bigquery-type-mismatch",
+    "reason": "merged",
+    "created_at": "2026-06-22T19:46:10.094Z",
+    "created_by": "oncall-triage",
+    "rationale": "New Albertsons sent-to-client alert for audience 12901 has latest Pizza row snapshotting_error/no_batches with pre_snapshotting_check BigQuery expression type incompatibility; same remediation path as the existing BigQuery type mismatch cohort."
+  },
+  {
     "match_key": "v3|incident:Q252C2NNBIQ8WP|org:fanatics_502|dest:magnite-id-graph|class:export-processing",
     "status": "active",
     "target_group_id": "260603-fanatics_502-magnite-id-graph-export-processing",
@@ -2457,6 +2475,15 @@
     "rationale": "Initial deterministic grouping for 260615-chghealthcare_395-client-sent-export-failure-07."
   },
   {
+    "match_key": "v3|incident:Q2O4YGBMUXZEFB|org:trumanshow_336|class:zero-success",
+    "status": "active",
+    "target_group_id": "260622-trumanshow_336-zero-success",
+    "reason": "created",
+    "created_at": "2026-06-22T19:46:10.094Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260622-trumanshow_336-zero-success."
+  },
+  {
     "match_key": "v3|incident:Q2Q14Q7TLRO3V3|org:unknown_org|class:prefect-flow-run-notification-flow-run-journey-p",
     "status": "active",
     "target_group_id": "260622-unknown_org-prefect-flow-run-notification-flow-run-journey-p",
@@ -2509,6 +2536,15 @@
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
     "rationale": "Initial deterministic grouping for 260622-chghealthcare_395-pulse-point-export-error-06."
+  },
+  {
+    "match_key": "v3|incident:Q2RVKX275SCHT7|org:albertsons_6|class:client-sent-export-failure",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-bigquery-type-mismatch",
+    "reason": "merged",
+    "created_at": "2026-06-22T19:46:10.094Z",
+    "created_by": "oncall-triage",
+    "rationale": "New Albertsons sent-to-client alert for audience 10678 has latest Pizza row snapshotting_error/no_batches with pre_snapshotting_check BigQuery expression type incompatibility; same remediation path as the existing BigQuery type mismatch cohort."
   },
   {
     "match_key": "v3|incident:Q2SD1O3BRD8DHQ|org:evgo_402|class:client-sent-export-failure",

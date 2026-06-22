@@ -1,5 +1,23 @@
 [
   {
+    "check_id": "chk_q01rmy4qj0edmw_q188p9c2nj8a5y",
+    "incident_id": "Q01RMY4QJ0EDMW",
+    "alert_id": "Q188P9C2NJ8A5Y",
+    "state": "blocked",
+    "blockers": [
+      "missing_run_identity"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "9705",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:36:01-07:00",
+      "checked_export_run_ids": [],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 9705 --org-id 6"
+    }
+  },
+  {
     "check_id": "chk_q04p1g18uyqxa3_q308ue9mgqa2om",
     "incident_id": "Q04P1G18UYQXA3",
     "alert_id": "Q308UE9MGQA2OM",
@@ -66,6 +84,45 @@
     }
   },
   {
+    "check_id": "chk_q0bsibmdib33pb_q34qyote1nh8gz",
+    "incident_id": "Q0BSIBMDIB33PB",
+    "alert_id": "Q34QYOTE1NH8GZ",
+    "state": "blocked",
+    "blockers": [
+      "snapshotting_error_requires_review"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "1972",
+      "destination_type": "live_ramp_activation",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:30:43-07:00",
+      "checked_export_run_ids": [
+        "1972-live_ramp_activation_484-scheduled__2026-06-22T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 1972 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q0c71wmfrhz86m_q16s6x2yue978g",
+    "incident_id": "Q0C71WMFRHZ86M",
+    "alert_id": "Q16S6X2YUE978G",
+    "state": "blocked",
+    "blockers": [
+      "missing_run_identity"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "10260",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:36:59-07:00",
+      "checked_export_run_ids": [],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 10260 --org-id 6"
+    }
+  },
+  {
     "check_id": "chk_q0eab0nw8e0e1b_q0bpe188k88nc7",
     "incident_id": "Q0EAB0NW8E0E1B",
     "alert_id": "Q0BPE188K88NC7",
@@ -99,6 +156,24 @@
       "alert_created_at": "2026-06-22T05:27:32-07:00",
       "checked_export_run_ids": [],
       "glcli": "glcli --env albertsons bifrost pizza --audience-id 11120 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q0ge0xgkvcgeza_q1vthi2niz195p",
+    "incident_id": "Q0GE0XGKVCGEZA",
+    "alert_id": "Q1VTHI2NIZ195P",
+    "state": "blocked",
+    "blockers": [
+      "missing_run_identity"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "10768",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:38:23-07:00",
+      "checked_export_run_ids": [],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 10768 --org-id 6"
     }
   },
   {
@@ -153,6 +228,24 @@
     }
   },
   {
+    "check_id": "chk_q0j2qib5t4acap_q0l0202zm8p9px",
+    "incident_id": "Q0J2QIB5T4ACAP",
+    "alert_id": "Q0L0202ZM8P9PX",
+    "state": "blocked",
+    "blockers": [
+      "missing_run_identity"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "10792",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:38:26-07:00",
+      "checked_export_run_ids": [],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 10792 --org-id 6"
+    }
+  },
+  {
     "check_id": "chk_q0jhnjp2zlqpbq_q22i09xp2e6e1d",
     "incident_id": "Q0JHNJP2ZLQPBQ",
     "alert_id": "Q22I09XP2E6E1D",
@@ -168,6 +261,24 @@
       "alert_created_at": "2026-06-20T20:23:54-07:00",
       "checked_export_run_ids": [],
       "glcli": "glcli --env albertsons bifrost pizza --audience-id 12499 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q0lwnp6litrpiu_q20cjs37sv7q05",
+    "incident_id": "Q0LWNP6LITRPIU",
+    "alert_id": "Q20CJS37SV7Q05",
+    "state": "blocked",
+    "blockers": [
+      "missing_run_identity"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "9665",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:35:55-07:00",
+      "checked_export_run_ids": [],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 9665 --org-id 6"
     }
   },
   {
@@ -203,6 +314,24 @@
     }
   },
   {
+    "check_id": "chk_q0oz0872tdr2y2_q2m3ib0ephbhut",
+    "incident_id": "Q0OZ0872TDR2Y2",
+    "alert_id": "Q2M3IB0EPHBHUT",
+    "state": "blocked",
+    "blockers": [
+      "missing_run_identity"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "10026",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:36:36-07:00",
+      "checked_export_run_ids": [],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 10026 --org-id 6"
+    }
+  },
+  {
     "check_id": "chk_q0p4onjogf8nui_q2g9fwmic7ufbq",
     "incident_id": "Q0P4ONJOGF8NUI",
     "alert_id": "Q2G9FWMIC7UFBQ",
@@ -218,6 +347,24 @@
       "alert_created_at": "2026-06-19T20:35:22-07:00",
       "checked_export_run_ids": [],
       "glcli": "glcli --env albertsons bifrost pizza --audience-id 9696 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q0qck7wwm8cb9y_q2tp35r456nebi",
+    "incident_id": "Q0QCK7WWM8CB9Y",
+    "alert_id": "Q2TP35R456NEBI",
+    "state": "blocked",
+    "blockers": [
+      "missing_run_identity"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "10027",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:36:36-07:00",
+      "checked_export_run_ids": [],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 10027 --org-id 6"
     }
   },
   {
@@ -287,6 +434,24 @@
       "alert_created_at": "2026-06-21T22:35:03-07:00",
       "checked_export_run_ids": [],
       "glcli": "glcli --env albertsons bifrost pizza --audience-id 12070 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q10a7owtqlclx0_q271aq4am1661d",
+    "incident_id": "Q10A7OWTQLCLX0",
+    "alert_id": "Q271AQ4AM1661D",
+    "state": "blocked",
+    "blockers": [
+      "missing_run_identity"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "9666",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:35:55-07:00",
+      "checked_export_run_ids": [],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 9666 --org-id 6"
     }
   },
   {
@@ -360,6 +525,42 @@
     }
   },
   {
+    "check_id": "chk_q13b8w35hwje0f_q26srxviphy94y",
+    "incident_id": "Q13B8W35HWJE0F",
+    "alert_id": "Q26SRXVIPHY94Y",
+    "state": "blocked",
+    "blockers": [
+      "missing_run_identity"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "10688",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:38:13-07:00",
+      "checked_export_run_ids": [],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 10688 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q13elbh1205k6i_q0umk7bgj90mwi",
+    "incident_id": "Q13ELBH1205K6I",
+    "alert_id": "Q0UMK7BGJ90MWI",
+    "state": "blocked",
+    "blockers": [
+      "missing_run_identity"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "10693",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:38:15-07:00",
+      "checked_export_run_ids": [],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 10693 --org-id 6"
+    }
+  },
+  {
     "check_id": "chk_q14qmyqc78pxar_q0ngyggx72talo",
     "incident_id": "Q14QMYQC78PXAR",
     "alert_id": "Q0NGYGGX72TALO",
@@ -375,6 +576,24 @@
       "alert_created_at": "2026-06-22T01:03:22-07:00",
       "checked_export_run_ids": [],
       "glcli": "glcli --env albertsons bifrost pizza --audience-id 13102 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q15mygkqeldc1u_q01wumjrymthem",
+    "incident_id": "Q15MYGKQELDC1U",
+    "alert_id": "Q01WUMJRYMTHEM",
+    "state": "blocked",
+    "blockers": [
+      "missing_run_identity"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "10742",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:38:18-07:00",
+      "checked_export_run_ids": [],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 10742 --org-id 6"
     }
   },
   {
@@ -484,6 +703,28 @@
     }
   },
   {
+    "check_id": "chk_q19mjo5xif1nhb_q1ijllegnnkso5",
+    "incident_id": "Q19MJO5XIF1NHB",
+    "alert_id": "Q1IJLLEGNNKSO5",
+    "state": "blocked",
+    "blockers": [
+      "export_error"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "12535",
+      "endpoint_id": "app_liveramp_activation_44",
+      "destination_type": "live_ramp_activation",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-18T07:41:12-07:00",
+      "checked_export_run_ids": [
+        "12535-live_ramp_activation_4309-scheduled__2026-06-15T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 12535 --org-id 6"
+    }
+  },
+  {
     "check_id": "chk_q1acsehk5ljqy2_q1aus6jvpqgcqi",
     "incident_id": "Q1ACSEHK5LJQY2",
     "alert_id": "Q1AUS6JVPQGCQI",
@@ -551,6 +792,24 @@
       "alert_created_at": "2026-06-20T00:30:09-07:00",
       "checked_export_run_ids": [],
       "glcli": "glcli --env albertsons bifrost pizza --audience-id 11390 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q1hxgwvofqnlbq_q3cjzpgatbieiy",
+    "incident_id": "Q1HXGWVOFQNLBQ",
+    "alert_id": "Q3CJZPGATBIEIY",
+    "state": "blocked",
+    "blockers": [
+      "missing_run_identity"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "2159",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:31:21-07:00",
+      "checked_export_run_ids": [],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 2159 --org-id 6"
     }
   },
   {
@@ -638,6 +897,24 @@
     }
   },
   {
+    "check_id": "chk_q1lpo13841c1ic_q3fktk3g0yz8pq",
+    "incident_id": "Q1LPO13841C1IC",
+    "alert_id": "Q3FKTK3G0YZ8PQ",
+    "state": "blocked",
+    "blockers": [
+      "missing_export_after_alert"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "11651",
+      "match_strategy": "any_export_after_alert",
+      "alert_created_at": "2026-06-22T12:01:34-07:00",
+      "checked_export_run_ids": [],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 11651 --org-id 6"
+    }
+  },
+  {
     "check_id": "chk_q1oymjjw2egjn4_q2ryedvo4rpbh8",
     "incident_id": "Q1OYMJJW2EGJN4",
     "alert_id": "Q2RYEDVO4RPBH8",
@@ -690,6 +967,1156 @@
     }
   },
   {
+    "check_id": "chk_q1r7d9hwjfbv7d_q10yrcg470hjyu",
+    "incident_id": "Q1R7D9HWJFBV7D",
+    "alert_id": "Q10YRCG470HJYU",
+    "state": "blocked",
+    "blockers": [
+      "export_error"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "12537",
+      "endpoint_id": "app_liveramp_activation_44",
+      "destination_type": "live_ramp_activation",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-18T07:41:12-07:00",
+      "checked_export_run_ids": [
+        "12537-live_ramp_activation_4311-scheduled__2026-06-15T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 12537 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q1s0q38foen2xy_q038otuaze8a8r",
+    "incident_id": "Q1S0Q38FOEN2XY",
+    "alert_id": "Q038OTUAZE8A8R",
+    "state": "blocked",
+    "blockers": [
+      "missing_run_identity"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "13010",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:43:56-07:00",
+      "checked_export_run_ids": [],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 13010 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q1s0q38foen2xy_q04peho7q7b29t",
+    "incident_id": "Q1S0Q38FOEN2XY",
+    "alert_id": "Q04PEHO7Q7B29T",
+    "state": "blocked",
+    "blockers": [
+      "snapshotting_error_requires_review"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "12498",
+      "destination_type": "live_ramp_activation",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:42:33-07:00",
+      "checked_export_run_ids": [
+        "12498-live_ramp_activation_4272-scheduled__2026-06-21T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 12498 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q1s0q38foen2xy_q04s47zk76c24b",
+    "incident_id": "Q1S0Q38FOEN2XY",
+    "alert_id": "Q04S47ZK76C24B",
+    "state": "blocked",
+    "blockers": [
+      "snapshotting_error_requires_review"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "12591",
+      "destination_type": "live_ramp_activation",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:42:56-07:00",
+      "checked_export_run_ids": [
+        "12591-live_ramp_activation_4362-scheduled__2026-06-22T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 12591 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q1s0q38foen2xy_q0710ttpxjlkdr",
+    "incident_id": "Q1S0Q38FOEN2XY",
+    "alert_id": "Q0710TTPXJLKDR",
+    "state": "blocked",
+    "blockers": [
+      "snapshotting_error_requires_review"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "11148",
+      "destination_type": "live_ramp_activation",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:39:09-07:00",
+      "checked_export_run_ids": [
+        "11148-live_ramp_activation_3045-scheduled__2026-06-22T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 11148 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q1s0q38foen2xy_q07l8hvm5vf8z0",
+    "incident_id": "Q1S0Q38FOEN2XY",
+    "alert_id": "Q07L8HVM5VF8Z0",
+    "state": "blocked",
+    "blockers": [
+      "snapshotting_error_requires_review"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "12477",
+      "destination_type": "live_ramp_activation",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:42:28-07:00",
+      "checked_export_run_ids": [
+        "12477-live_ramp_activation_4251-scheduled__2026-06-21T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 12477 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q1s0q38foen2xy_q07ps9setozbsq",
+    "incident_id": "Q1S0Q38FOEN2XY",
+    "alert_id": "Q07PS9SETOZBSQ",
+    "state": "blocked",
+    "blockers": [
+      "snapshotting_error_requires_review"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "12991",
+      "destination_type": "live_ramp_activation",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:43:55-07:00",
+      "checked_export_run_ids": [
+        "12991-live_ramp_activation_4875-scheduled__2026-06-22T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 12991 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q1s0q38foen2xy_q09v12hxzeac1j",
+    "incident_id": "Q1S0Q38FOEN2XY",
+    "alert_id": "Q09V12HXZEAC1J",
+    "state": "blocked",
+    "blockers": [
+      "missing_run_identity"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "11710",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:40:18-07:00",
+      "checked_export_run_ids": [],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 11710 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q1s0q38foen2xy_q0bqgan8yguajj",
+    "incident_id": "Q1S0Q38FOEN2XY",
+    "alert_id": "Q0BQGAN8YGUAJJ",
+    "state": "blocked",
+    "blockers": [
+      "missing_run_identity"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "13250",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:44:13-07:00",
+      "checked_export_run_ids": [],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 13250 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q1s0q38foen2xy_q0cdmm59v4cuuz",
+    "incident_id": "Q1S0Q38FOEN2XY",
+    "alert_id": "Q0CDMM59V4CUUZ",
+    "state": "blocked",
+    "blockers": [
+      "missing_run_identity"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "11700",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:40:15-07:00",
+      "checked_export_run_ids": [],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 11700 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q1s0q38foen2xy_q0fa1rrq0oq1xg",
+    "incident_id": "Q1S0Q38FOEN2XY",
+    "alert_id": "Q0FA1RRQ0OQ1XG",
+    "state": "blocked",
+    "blockers": [
+      "missing_run_identity"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "13059",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:43:59-07:00",
+      "checked_export_run_ids": [],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 13059 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q1s0q38foen2xy_q0gb6gmztnla6n",
+    "incident_id": "Q1S0Q38FOEN2XY",
+    "alert_id": "Q0GB6GMZTNLA6N",
+    "state": "blocked",
+    "blockers": [
+      "snapshotting_error_requires_review"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "12258",
+      "destination_type": "live_ramp_activation",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:41:40-07:00",
+      "checked_export_run_ids": [
+        "12258-live_ramp_activation_4050-scheduled__2026-06-22T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 12258 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q1s0q38foen2xy_q0ix8nofzkpwf5",
+    "incident_id": "Q1S0Q38FOEN2XY",
+    "alert_id": "Q0IX8NOFZKPWF5",
+    "state": "blocked",
+    "blockers": [
+      "snapshotting_error_requires_review"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "12499",
+      "destination_type": "live_ramp_activation",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:42:33-07:00",
+      "checked_export_run_ids": [
+        "12499-live_ramp_activation_4273-scheduled__2026-06-21T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 12499 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q1s0q38foen2xy_q0nmc9y9w3rqgn",
+    "incident_id": "Q1S0Q38FOEN2XY",
+    "alert_id": "Q0NMC9Y9W3RQGN",
+    "state": "blocked",
+    "blockers": [
+      "snapshotting_error_requires_review"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "12514",
+      "destination_type": "live_ramp_activation",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:42:37-07:00",
+      "checked_export_run_ids": [
+        "12514-live_ramp_activation_4288-scheduled__2026-06-22T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 12514 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q1s0q38foen2xy_q0u1lxtt47o3nz",
+    "incident_id": "Q1S0Q38FOEN2XY",
+    "alert_id": "Q0U1LXTT47O3NZ",
+    "state": "blocked",
+    "blockers": [
+      "snapshotting_error_requires_review"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "11120",
+      "destination_type": "live_ramp_activation",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:39:04-07:00",
+      "checked_export_run_ids": [
+        "11120-live_ramp_activation_3053-scheduled__2026-06-22T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 11120 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q1s0q38foen2xy_q0ul47e3yfqtvv",
+    "incident_id": "Q1S0Q38FOEN2XY",
+    "alert_id": "Q0UL47E3YFQTVV",
+    "state": "blocked",
+    "blockers": [
+      "snapshotting_error_requires_review"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "11290",
+      "destination_type": "live_ramp_activation",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:39:31-07:00",
+      "checked_export_run_ids": [
+        "11290-live_ramp_activation_3403-scheduled__2026-06-19T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 11290 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q1s0q38foen2xy_q11e6ohrimo8mk",
+    "incident_id": "Q1S0Q38FOEN2XY",
+    "alert_id": "Q11E6OHRIMO8MK",
+    "state": "blocked",
+    "blockers": [
+      "snapshotting_error_requires_review"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "11374",
+      "destination_type": "live_ramp_activation",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:39:41-07:00",
+      "checked_export_run_ids": [
+        "11374-live_ramp_activation_3406-scheduled__2026-06-22T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 11374 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q1s0q38foen2xy_q13khj175t37n6",
+    "incident_id": "Q1S0Q38FOEN2XY",
+    "alert_id": "Q13KHJ175T37N6",
+    "state": "blocked",
+    "blockers": [
+      "snapshotting_error_requires_review"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "11117",
+      "destination_type": "live_ramp_activation",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:39:03-07:00",
+      "checked_export_run_ids": [
+        "11117-live_ramp_activation_3056-scheduled__2026-06-22T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 11117 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q1s0q38foen2xy_q14gyog9d1d7ex",
+    "incident_id": "Q1S0Q38FOEN2XY",
+    "alert_id": "Q14GYOG9D1D7EX",
+    "state": "blocked",
+    "blockers": [
+      "missing_run_identity"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "11709",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:40:17-07:00",
+      "checked_export_run_ids": [],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 11709 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q1s0q38foen2xy_q16jwd96f28mid",
+    "incident_id": "Q1S0Q38FOEN2XY",
+    "alert_id": "Q16JWD96F28MID",
+    "state": "blocked",
+    "blockers": [
+      "missing_run_identity"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "11480",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:39:52-07:00",
+      "checked_export_run_ids": [],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 11480 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q1s0q38foen2xy_q1n343uudxpuwl",
+    "incident_id": "Q1S0Q38FOEN2XY",
+    "alert_id": "Q1N343UUDXPUWL",
+    "state": "blocked",
+    "blockers": [
+      "snapshotting_error_requires_review"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "11366",
+      "destination_type": "live_ramp_activation",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:39:41-07:00",
+      "checked_export_run_ids": [
+        "11366-live_ramp_activation_3401-scheduled__2026-06-22T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 11366 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q1s0q38foen2xy_q1q8nbnaoy7fko",
+    "incident_id": "Q1S0Q38FOEN2XY",
+    "alert_id": "Q1Q8NBNAOY7FKO",
+    "state": "blocked",
+    "blockers": [
+      "missing_run_identity"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "11481",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:39:52-07:00",
+      "checked_export_run_ids": [],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 11481 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q1s0q38foen2xy_q1vnjui4tcc77r",
+    "incident_id": "Q1S0Q38FOEN2XY",
+    "alert_id": "Q1VNJUI4TCC77R",
+    "state": "blocked",
+    "blockers": [
+      "missing_run_identity"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "11858",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:40:25-07:00",
+      "checked_export_run_ids": [],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 11858 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q1s0q38foen2xy_q1wg41mfjwgpfa",
+    "incident_id": "Q1S0Q38FOEN2XY",
+    "alert_id": "Q1WG41MFJWGPFA",
+    "state": "blocked",
+    "blockers": [
+      "missing_run_identity"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "13251",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:44:13-07:00",
+      "checked_export_run_ids": [],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 13251 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q1s0q38foen2xy_q1x5boawjqg1ye",
+    "incident_id": "Q1S0Q38FOEN2XY",
+    "alert_id": "Q1X5BOAWJQG1YE",
+    "state": "blocked",
+    "blockers": [
+      "missing_run_identity"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "13077",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:44:01-07:00",
+      "checked_export_run_ids": [],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 13077 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q1s0q38foen2xy_q213wsvkvpkmtm",
+    "incident_id": "Q1S0Q38FOEN2XY",
+    "alert_id": "Q213WSVKVPKMTM",
+    "state": "blocked",
+    "blockers": [
+      "snapshotting_error_requires_review"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "10935",
+      "destination_type": "live_ramp_activation",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:38:41-07:00",
+      "checked_export_run_ids": [
+        "10935-live_ramp_activation_4988-scheduled__2026-06-20T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 10935 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q1s0q38foen2xy_q25lg3u2i3i5v9",
+    "incident_id": "Q1S0Q38FOEN2XY",
+    "alert_id": "Q25LG3U2I3I5V9",
+    "state": "blocked",
+    "blockers": [
+      "snapshotting_error_requires_review"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "12265",
+      "destination_type": "live_ramp_activation",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:41:42-07:00",
+      "checked_export_run_ids": [
+        "12265-live_ramp_activation_4059-scheduled__2026-06-22T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 12265 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q1s0q38foen2xy_q2alnnsps6r5pr",
+    "incident_id": "Q1S0Q38FOEN2XY",
+    "alert_id": "Q2ALNNSPS6R5PR",
+    "state": "blocked",
+    "blockers": [
+      "missing_run_identity"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "12862",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:43:40-07:00",
+      "checked_export_run_ids": [],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 12862 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q1s0q38foen2xy_q2ar9c9i0sj474",
+    "incident_id": "Q1S0Q38FOEN2XY",
+    "alert_id": "Q2AR9C9I0SJ474",
+    "state": "blocked",
+    "blockers": [
+      "missing_run_identity"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "13048",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:43:57-07:00",
+      "checked_export_run_ids": [],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 13048 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q1s0q38foen2xy_q2b61ax94wqdoc",
+    "incident_id": "Q1S0Q38FOEN2XY",
+    "alert_id": "Q2B61AX94WQDOC",
+    "state": "blocked",
+    "blockers": [
+      "missing_run_identity"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "11859",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:40:25-07:00",
+      "checked_export_run_ids": [],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 11859 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q1s0q38foen2xy_q2cb97bkxquijl",
+    "incident_id": "Q1S0Q38FOEN2XY",
+    "alert_id": "Q2CB97BKXQUIJL",
+    "state": "blocked",
+    "blockers": [
+      "missing_run_identity"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "13252",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:44:13-07:00",
+      "checked_export_run_ids": [],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 13252 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q1s0q38foen2xy_q2dyxoak6qj78m",
+    "incident_id": "Q1S0Q38FOEN2XY",
+    "alert_id": "Q2DYXOAK6QJ78M",
+    "state": "blocked",
+    "blockers": [
+      "snapshotting_error_requires_review"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "11390",
+      "destination_type": "live_ramp_activation",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:39:43-07:00",
+      "checked_export_run_ids": [
+        "11390-live_ramp_activation_3414-scheduled__2026-06-22T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 11390 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q1s0q38foen2xy_q2fye59wuslzes",
+    "incident_id": "Q1S0Q38FOEN2XY",
+    "alert_id": "Q2FYE59WUSLZES",
+    "state": "blocked",
+    "blockers": [
+      "snapshotting_error_requires_review"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "11379",
+      "destination_type": "live_ramp_activation",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:39:42-07:00",
+      "checked_export_run_ids": [
+        "11379-live_ramp_activation_3409-scheduled__2026-06-22T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 11379 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q1s0q38foen2xy_q2g29jrlkf3ckp",
+    "incident_id": "Q1S0Q38FOEN2XY",
+    "alert_id": "Q2G29JRLKF3CKP",
+    "state": "blocked",
+    "blockers": [
+      "missing_run_identity"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "13163",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:44:07-07:00",
+      "checked_export_run_ids": [],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 13163 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q1s0q38foen2xy_q2giwfmk1iezt5",
+    "incident_id": "Q1S0Q38FOEN2XY",
+    "alert_id": "Q2GIWFMK1IEZT5",
+    "state": "blocked",
+    "blockers": [
+      "missing_run_identity"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "12557",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:42:48-07:00",
+      "checked_export_run_ids": [],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 12557 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q1s0q38foen2xy_q2i7ppsfxce9d0",
+    "incident_id": "Q1S0Q38FOEN2XY",
+    "alert_id": "Q2I7PPSFXCE9D0",
+    "state": "blocked",
+    "blockers": [
+      "snapshotting_error_requires_review"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "11147",
+      "destination_type": "live_ramp_activation",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:39:08-07:00",
+      "checked_export_run_ids": [
+        "11147-live_ramp_activation_3046-scheduled__2026-06-22T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 11147 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q1s0q38foen2xy_q2ist76k5ay6mr",
+    "incident_id": "Q1S0Q38FOEN2XY",
+    "alert_id": "Q2IST76K5AY6MR",
+    "state": "blocked",
+    "blockers": [
+      "snapshotting_error_requires_review"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "12609",
+      "destination_type": "live_ramp_activation",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:43:01-07:00",
+      "checked_export_run_ids": [
+        "12609-live_ramp_activation_4380-scheduled__2026-06-22T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 12609 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q1s0q38foen2xy_q2kxzg35s46his",
+    "incident_id": "Q1S0Q38FOEN2XY",
+    "alert_id": "Q2KXZG35S46HIS",
+    "state": "blocked",
+    "blockers": [
+      "missing_run_identity"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "11707",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:40:17-07:00",
+      "checked_export_run_ids": [],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 11707 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q1s0q38foen2xy_q2oh5t8vxgzmun",
+    "incident_id": "Q1S0Q38FOEN2XY",
+    "alert_id": "Q2OH5T8VXGZMUN",
+    "state": "blocked",
+    "blockers": [
+      "snapshotting_error_requires_review"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "11375",
+      "destination_type": "live_ramp_activation",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:39:41-07:00",
+      "checked_export_run_ids": [
+        "11375-live_ramp_activation_3407-scheduled__2026-06-22T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 11375 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q1s0q38foen2xy_q2puj74i70r6fa",
+    "incident_id": "Q1S0Q38FOEN2XY",
+    "alert_id": "Q2PUJ74I70R6FA",
+    "state": "blocked",
+    "blockers": [
+      "missing_run_identity"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "11271",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:39:28-07:00",
+      "checked_export_run_ids": [],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 11271 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q1s0q38foen2xy_q2rb5wg2wudfpr",
+    "incident_id": "Q1S0Q38FOEN2XY",
+    "alert_id": "Q2RB5WG2WUDFPR",
+    "state": "blocked",
+    "blockers": [
+      "snapshotting_error_requires_review"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "11473",
+      "destination_type": "live_ramp_activation",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:39:50-07:00",
+      "checked_export_run_ids": [
+        "11473-live_ramp_activation_3461-scheduled__2026-06-22T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 11473 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q1s0q38foen2xy_q2sa2el0f19v60",
+    "incident_id": "Q1S0Q38FOEN2XY",
+    "alert_id": "Q2SA2EL0F19V60",
+    "state": "blocked",
+    "blockers": [
+      "snapshotting_error_requires_review"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "11349",
+      "destination_type": "live_ramp_activation",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:39:37-07:00",
+      "checked_export_run_ids": [
+        "11349-live_ramp_activation_3389-scheduled__2026-06-19T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 11349 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q1s0q38foen2xy_q2xzfhffwbpse0",
+    "incident_id": "Q1S0Q38FOEN2XY",
+    "alert_id": "Q2XZFHFFWBPSE0",
+    "state": "blocked",
+    "blockers": [
+      "missing_run_identity"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "10795",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:38:27-07:00",
+      "checked_export_run_ids": [],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 10795 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q1s0q38foen2xy_q3005u6gtlcofc",
+    "incident_id": "Q1S0Q38FOEN2XY",
+    "alert_id": "Q3005U6GTLCOFC",
+    "state": "blocked",
+    "blockers": [
+      "snapshotting_error_requires_review"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "11293",
+      "destination_type": "live_ramp_sftp",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:39:32-07:00",
+      "checked_export_run_ids": [
+        "11293-live_ramp_sftp_3788-scheduled__2026-06-19T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 11293 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q1s0q38foen2xy_q311410o90efhr",
+    "incident_id": "Q1S0Q38FOEN2XY",
+    "alert_id": "Q311410O90EFHR",
+    "state": "blocked",
+    "blockers": [
+      "snapshotting_error_requires_review"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "12592",
+      "destination_type": "live_ramp_activation",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:42:57-07:00",
+      "checked_export_run_ids": [
+        "12592-live_ramp_activation_4363-scheduled__2026-06-22T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 12592 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q1s0q38foen2xy_q31kxcl512orcs",
+    "incident_id": "Q1S0Q38FOEN2XY",
+    "alert_id": "Q31KXCL512ORCS",
+    "state": "blocked",
+    "blockers": [
+      "snapshotting_error_requires_review"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "11631",
+      "destination_type": "live_ramp_activation",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:40:07-07:00",
+      "checked_export_run_ids": [
+        "11631-live_ramp_activation_3551-scheduled__2026-06-19T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 11631 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q1s0q38foen2xy_q36627jv84n6mc",
+    "incident_id": "Q1S0Q38FOEN2XY",
+    "alert_id": "Q36627JV84N6MC",
+    "state": "blocked",
+    "blockers": [
+      "missing_run_identity"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "13041",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:43:56-07:00",
+      "checked_export_run_ids": [],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 13041 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q1s0q38foen2xy_q37k6yhsudcibr",
+    "incident_id": "Q1S0Q38FOEN2XY",
+    "alert_id": "Q37K6YHSUDCIBR",
+    "state": "blocked",
+    "blockers": [
+      "missing_run_identity"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "11272",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:39:28-07:00",
+      "checked_export_run_ids": [],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 11272 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q1s0q38foen2xy_q3bj8zq6g9winc",
+    "incident_id": "Q1S0Q38FOEN2XY",
+    "alert_id": "Q3BJ8ZQ6G9WINC",
+    "state": "blocked",
+    "blockers": [
+      "missing_run_identity"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "11283",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:39:30-07:00",
+      "checked_export_run_ids": [],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 11283 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q1s0q38foen2xy_q3cacw0rzjx8f5",
+    "incident_id": "Q1S0Q38FOEN2XY",
+    "alert_id": "Q3CACW0RZJX8F5",
+    "state": "blocked",
+    "blockers": [
+      "missing_run_identity"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "11202",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:39:18-07:00",
+      "checked_export_run_ids": [],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 11202 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q1s0q38foen2xy_q3dannre1urwvm",
+    "incident_id": "Q1S0Q38FOEN2XY",
+    "alert_id": "Q3DANNRE1URWVM",
+    "state": "blocked",
+    "blockers": [
+      "snapshotting_error_requires_review"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "12606",
+      "destination_type": "live_ramp_activation",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:43:01-07:00",
+      "checked_export_run_ids": [
+        "12606-live_ramp_activation_4377-scheduled__2026-06-22T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 12606 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q1s0q38foen2xy_q3e7d32gq7okre",
+    "incident_id": "Q1S0Q38FOEN2XY",
+    "alert_id": "Q3E7D32GQ7OKRE",
+    "state": "blocked",
+    "blockers": [
+      "missing_run_identity"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "12297",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:41:48-07:00",
+      "checked_export_run_ids": [],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 12297 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q1s0q38foen2xy_q3n3slvzh82u85",
+    "incident_id": "Q1S0Q38FOEN2XY",
+    "alert_id": "Q3N3SLVZH82U85",
+    "state": "blocked",
+    "blockers": [
+      "snapshotting_error_requires_review"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "11474",
+      "destination_type": "live_ramp_activation",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:39:51-07:00",
+      "checked_export_run_ids": [
+        "11474-live_ramp_activation_3462-scheduled__2026-06-22T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 11474 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q1s0q38foen2xy_q3qspyaezcwwx1",
+    "incident_id": "Q1S0Q38FOEN2XY",
+    "alert_id": "Q3QSPYAEZCWWX1",
+    "state": "blocked",
+    "blockers": [
+      "snapshotting_error_requires_review"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "13102",
+      "destination_type": "live_ramp_activation",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:44:03-07:00",
+      "checked_export_run_ids": [
+        "13102-live_ramp_activation_5004-scheduled__2026-06-22T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 13102 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q1s0q38foen2xy_q3s11mfv0l0a4a",
+    "incident_id": "Q1S0Q38FOEN2XY",
+    "alert_id": "Q3S11MFV0L0A4A",
+    "state": "blocked",
+    "blockers": [
+      "missing_run_identity"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "12630",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:43:05-07:00",
+      "checked_export_run_ids": [],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 12630 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q1s0q38foen2xy_q3tt5utah8h3h3",
+    "incident_id": "Q1S0Q38FOEN2XY",
+    "alert_id": "Q3TT5UTAH8H3H3",
+    "state": "blocked",
+    "blockers": [
+      "missing_run_identity"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "11708",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:40:17-07:00",
+      "checked_export_run_ids": [],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 11708 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q1s0q38foen2xy_q3ufnvve8ab3r1",
+    "incident_id": "Q1S0Q38FOEN2XY",
+    "alert_id": "Q3UFNVVE8AB3R1",
+    "state": "blocked",
+    "blockers": [
+      "missing_run_identity"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "12921",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:43:47-07:00",
+      "checked_export_run_ids": [],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 12921 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q1s0q38foen2xy_q3y4krga8y1e3x",
+    "incident_id": "Q1S0Q38FOEN2XY",
+    "alert_id": "Q3Y4KRGA8Y1E3X",
+    "state": "blocked",
+    "blockers": [
+      "missing_run_identity"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "13066",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:43:59-07:00",
+      "checked_export_run_ids": [],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 13066 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q1s0q38foen2xy_q3zu55f3brte3k",
+    "incident_id": "Q1S0Q38FOEN2XY",
+    "alert_id": "Q3ZU55F3BRTE3K",
+    "state": "blocked",
+    "blockers": [
+      "missing_run_identity"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "11270",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:39:27-07:00",
+      "checked_export_run_ids": [],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 11270 --org-id 6"
+    }
+  },
+  {
     "check_id": "chk_q1se40q7y7dzy1_q3sr79me6962xj",
     "incident_id": "Q1SE40Q7Y7DZY1",
     "alert_id": "Q3SR79ME6962XJ",
@@ -705,6 +2132,27 @@
       "alert_created_at": "2026-06-22T00:27:24-07:00",
       "checked_export_run_ids": [],
       "glcli": "glcli --env albertsons bifrost pizza --audience-id 12592 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q1tbcjprhs9rax_q1zkrefe2uti22",
+    "incident_id": "Q1TBCJPRHS9RAX",
+    "alert_id": "Q1ZKREFE2UTI22",
+    "state": "blocked",
+    "blockers": [
+      "snapshotting_error_requires_review"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "9373",
+      "destination_type": "live_ramp_activation",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:35:43-07:00",
+      "checked_export_run_ids": [
+        "9373-live_ramp_activation_1859-scheduled__2026-06-19T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 9373 --org-id 6"
     }
   },
   {
@@ -844,6 +2292,24 @@
     }
   },
   {
+    "check_id": "chk_q21gfizrjv32yx_q2fennl4mpioli",
+    "incident_id": "Q21GFIZRJV32YX",
+    "alert_id": "Q2FENNL4MPIOLI",
+    "state": "blocked",
+    "blockers": [
+      "missing_run_identity"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "10779",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:38:25-07:00",
+      "checked_export_run_ids": [],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 10779 --org-id 6"
+    }
+  },
+  {
     "check_id": "chk_q22i1exsc9rra2_q03nnfw8ygltm3",
     "incident_id": "Q22I1EXSC9RRA2",
     "alert_id": "Q03NNFW8YGLTM3",
@@ -909,6 +2375,24 @@
       "alert_created_at": "2026-06-22T09:47:39-07:00",
       "checked_export_run_ids": [],
       "glcli": "glcli --env albertsons bifrost pizza --audience-id 11159 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q24b1m4baxahkn_q31gdzh2lp6jme",
+    "incident_id": "Q24B1M4BAXAHKN",
+    "alert_id": "Q31GDZH2LP6JME",
+    "state": "blocked",
+    "blockers": [
+      "missing_export_after_alert"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "12901",
+      "match_strategy": "any_export_after_alert",
+      "alert_created_at": "2026-06-22T12:01:35-07:00",
+      "checked_export_run_ids": [],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 12901 --org-id 6"
     }
   },
   {
@@ -1026,6 +2510,24 @@
     }
   },
   {
+    "check_id": "chk_q2cj2dghy6j8dj_q2x9n08u3pwkqw",
+    "incident_id": "Q2CJ2DGHY6J8DJ",
+    "alert_id": "Q2X9N08U3PWKQW",
+    "state": "blocked",
+    "blockers": [
+      "missing_run_identity"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "10612",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:38:07-07:00",
+      "checked_export_run_ids": [],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 10612 --org-id 6"
+    }
+  },
+  {
     "check_id": "chk_q2det6aw1nicu7_q3hg1sdrvacmzr",
     "incident_id": "Q2DET6AW1NICU7",
     "alert_id": "Q3HG1SDRVACMZR",
@@ -1041,6 +2543,27 @@
       "alert_created_at": "2026-06-19T21:33:14-07:00",
       "checked_export_run_ids": [],
       "glcli": "glcli --env albertsons bifrost pizza --audience-id 11283 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q2ecaaljooo1r6_q1ro4kl8svvgtf",
+    "incident_id": "Q2ECAALJOOO1R6",
+    "alert_id": "Q1RO4KL8SVVGTF",
+    "state": "blocked",
+    "blockers": [
+      "snapshotting_error_requires_review"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "6999",
+      "destination_type": "live_ramp_activation",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:34:11-07:00",
+      "checked_export_run_ids": [
+        "6999-live_ramp_activation_1435-scheduled__2026-06-18T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 6999 --org-id 6"
     }
   },
   {
@@ -1110,6 +2633,24 @@
     }
   },
   {
+    "check_id": "chk_q2o4ygbmuxzefb_q14to1umn0jd4y",
+    "incident_id": "Q2O4YGBMUXZEFB",
+    "alert_id": "Q14TO1UMN0JD4Y",
+    "state": "blocked",
+    "blockers": [
+      "missing_export_after_alert"
+    ],
+    "scope": {
+      "env": "prod",
+      "org_id": "336",
+      "audience_id": "34403",
+      "match_strategy": "any_export_after_alert",
+      "alert_created_at": "2026-06-22T12:08:00-07:00",
+      "checked_export_run_ids": [],
+      "glcli": "glcli --env prod bifrost pizza --audience-id 34403 --org-id 336"
+    }
+  },
+  {
     "check_id": "chk_q2qpiocascvfh7_q0sjvysm487cfq",
     "incident_id": "Q2QPIOCASCVFH7",
     "alert_id": "Q0SJVYSM487CFQ",
@@ -1143,6 +2684,135 @@
       "alert_created_at": "2026-06-20T23:16:44-07:00",
       "checked_export_run_ids": [],
       "glcli": "glcli --env albertsons bifrost pizza --audience-id 12477 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q2rvkx275scht7_q05oj6d50kfc6z",
+    "incident_id": "Q2RVKX275SCHT7",
+    "alert_id": "Q05OJ6D50KFC6Z",
+    "state": "blocked",
+    "blockers": [
+      "missing_export_after_alert"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "10678",
+      "match_strategy": "any_export_after_alert",
+      "alert_created_at": "2026-06-22T12:00:54-07:00",
+      "checked_export_run_ids": [],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 10678 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q2st7mhn83wrvp_q1bkce9f02urai",
+    "incident_id": "Q2ST7MHN83WRVP",
+    "alert_id": "Q1BKCE9F02URAI",
+    "state": "blocked",
+    "blockers": [
+      "missing_run_identity"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "10613",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:38:07-07:00",
+      "checked_export_run_ids": [],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 10613 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q2vmabqvtj3gzg_q12tffxhh1nmg2",
+    "incident_id": "Q2VMABQVTJ3GZG",
+    "alert_id": "Q12TFFXHH1NMG2",
+    "state": "blocked",
+    "blockers": [
+      "snapshotting_error_requires_review"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "1954",
+      "destination_type": "live_ramp_activation",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:30:38-07:00",
+      "checked_export_run_ids": [
+        "1954-live_ramp_activation_464-scheduled__2026-06-22T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 1954 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q2yp3cmcuobco8_q1gaa5o3vh101u",
+    "incident_id": "Q2YP3CMCUOBCO8",
+    "alert_id": "Q1GAA5O3VH101U",
+    "state": "blocked",
+    "blockers": [
+      "missing_run_identity"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "10046",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:36:39-07:00",
+      "checked_export_run_ids": [],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 10046 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q2yquvrhhfjiz3_q2jagzw3eufjdo",
+    "incident_id": "Q2YQUVRHHFJIZ3",
+    "alert_id": "Q2JAGZW3EUFJDO",
+    "state": "blocked",
+    "blockers": [
+      "missing_run_identity"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "9703",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:36:00-07:00",
+      "checked_export_run_ids": [],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 9703 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q2z35s4pqm9d26_q09tw4x0zeurab",
+    "incident_id": "Q2Z35S4PQM9D26",
+    "alert_id": "Q09TW4X0ZEURAB",
+    "state": "blocked",
+    "blockers": [
+      "missing_run_identity"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "10689",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:38:14-07:00",
+      "checked_export_run_ids": [],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 10689 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q323cs0dql0pyq_q0sxnqce7ixrw8",
+    "incident_id": "Q323CS0DQL0PYQ",
+    "alert_id": "Q0SXNQCE7IXRW8",
+    "state": "blocked",
+    "blockers": [
+      "missing_run_identity"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "10048",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:36:40-07:00",
+      "checked_export_run_ids": [],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 10048 --org-id 6"
     }
   },
   {
@@ -1227,6 +2897,24 @@
       "alert_created_at": "2026-06-22T01:51:51-07:00",
       "checked_export_run_ids": [],
       "glcli": "glcli --env albertsons bifrost pizza --audience-id 11250 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q358imgilliald_q0hnotd0slyt02",
+    "incident_id": "Q358IMGILLIALD",
+    "alert_id": "Q0HNOTD0SLYT02",
+    "state": "blocked",
+    "blockers": [
+      "missing_run_identity"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "10304",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:37:02-07:00",
+      "checked_export_run_ids": [],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 10304 --org-id 6"
     }
   },
   {
@@ -1316,6 +3004,46 @@
     }
   },
   {
+    "check_id": "chk_q3be6h76wfunbr_q2nz5fsinhuvgk",
+    "incident_id": "Q3BE6H76WFUNBR",
+    "alert_id": "Q2NZ5FSINHUVGK",
+    "state": "blocked",
+    "blockers": [
+      "snapshotting_error_requires_review"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "8938",
+      "destination_type": "live_ramp_sftp",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:35:18-07:00",
+      "checked_export_run_ids": [
+        "8938-live_ramp_sftp_3203-scheduled__2026-06-18T00:00:00+00:00",
+        "8938-live_ramp_activation_2895-scheduled__2026-06-19T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 8938 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q3bp8re86r1hc0_q14g8qwqhqucbt",
+    "incident_id": "Q3BP8RE86R1HC0",
+    "alert_id": "Q14G8QWQHQUCBT",
+    "state": "blocked",
+    "blockers": [
+      "missing_export_after_alert"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "11674",
+      "match_strategy": "any_export_after_alert",
+      "alert_created_at": "2026-06-17T22:53:04-07:00",
+      "checked_export_run_ids": [],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 11674 --org-id 6"
+    }
+  },
+  {
     "check_id": "chk_q3brqdtt1mf67x_q3isrr7yeq90zj",
     "incident_id": "Q3BRQDTT1MF67X",
     "alert_id": "Q3ISRR7YEQ90ZJ",
@@ -1345,6 +3073,24 @@
       "alert_created_at": "2026-06-21T22:25:49-07:00",
       "checked_export_run_ids": [],
       "glcli": "glcli --env albertsons bifrost pizza --audience-id 1993 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q3ewg5py4mpk8a_q10vetw6c0dsz2",
+    "incident_id": "Q3EWG5PY4MPK8A",
+    "alert_id": "Q10VETW6C0DSZ2",
+    "state": "blocked",
+    "blockers": [
+      "missing_run_identity"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "9739",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:36:05-07:00",
+      "checked_export_run_ids": [],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 9739 --org-id 6"
     }
   },
   {
@@ -1552,6 +3298,27 @@
     }
   },
   {
+    "check_id": "chk_q3qckczmrur8mc_q0j23qkoizpcym",
+    "incident_id": "Q3QCKCZMRUR8MC",
+    "alert_id": "Q0J23QKOIZPCYM",
+    "state": "blocked",
+    "blockers": [
+      "snapshotting_error_requires_review"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "9929",
+      "destination_type": "live_ramp_activation",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:36:20-07:00",
+      "checked_export_run_ids": [
+        "9929-live_ramp_activation_2015-scheduled__2026-06-19T00:00:00+00:00"
+      ],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 9929 --org-id 6"
+    }
+  },
+  {
     "check_id": "chk_q3qekph9yzv412_q309d51601m72i",
     "incident_id": "Q3QEKPH9YZV412",
     "alert_id": "Q309D51601M72I",
@@ -1567,6 +3334,24 @@
       "alert_created_at": "2026-06-21T20:08:34-07:00",
       "checked_export_run_ids": [],
       "glcli": "glcli --env albertsons bifrost pizza --audience-id 11474 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q3rbhkeka0jlgo_q13jf5982sp9zt",
+    "incident_id": "Q3RBHKEKA0JLGO",
+    "alert_id": "Q13JF5982SP9ZT",
+    "state": "blocked",
+    "blockers": [
+      "missing_run_identity"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "9704",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:36:01-07:00",
+      "checked_export_run_ids": [],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 9704 --org-id 6"
     }
   },
   {
@@ -1586,6 +3371,24 @@
     }
   },
   {
+    "check_id": "chk_q3tt7atb5c8ibd_q1n5evtqhmhd2o",
+    "incident_id": "Q3TT7ATB5C8IBD",
+    "alert_id": "Q1N5EVTQHMHD2O",
+    "state": "blocked",
+    "blockers": [
+      "missing_run_identity"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "10015",
+      "match_strategy": "checked_export_run_ids",
+      "alert_created_at": "2026-06-22T07:36:34-07:00",
+      "checked_export_run_ids": [],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 10015 --org-id 6"
+    }
+  },
+  {
     "check_id": "chk_q3yt89zslimhsi_q2hj8wqgxx5i9x",
     "incident_id": "Q3YT89ZSLIMHSI",
     "alert_id": "Q2HJ8WQGXX5I9X",
@@ -1599,6 +3402,24 @@
       "alert_created_at": "2026-06-19T21:35:32-07:00",
       "checked_export_run_ids": [],
       "glcli": "glcli --env albertsons bifrost pizza --audience-id 10024 --org-id 6"
+    }
+  },
+  {
+    "check_id": "chk_q3yxyzp98njxia_q0zla8c0rn1fha",
+    "incident_id": "Q3YXYZP98NJXIA",
+    "alert_id": "Q0ZLA8C0RN1FHA",
+    "state": "blocked",
+    "blockers": [
+      "missing_export_after_alert"
+    ],
+    "scope": {
+      "env": "albertsons",
+      "org_id": "6",
+      "audience_id": "11825",
+      "match_strategy": "any_export_after_alert",
+      "alert_created_at": "2026-06-17T19:53:49-07:00",
+      "checked_export_run_ids": [],
+      "glcli": "glcli --env albertsons bifrost pizza --audience-id 11825 --org-id 6"
     }
   },
   {

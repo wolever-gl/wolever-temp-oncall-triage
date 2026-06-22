@@ -1120,34 +1120,6 @@
     "path": "groups/new/260617-444-zero-success-02/case.md"
   },
   {
-    "group_id": "260617-albertsons_6-client-sent-export-failure",
-    "state": "new",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "albertsons_6 client-sent-export-failure",
-    "summary": "albertsons (Albertsons Media) - Audience 11674: Audience Export failure for 11674 sent to client.",
-    "incident_ids": [
-      "Q3BP8RE86R1HC0"
-    ],
-    "alert_count": 1,
-    "path": "groups/new/260617-albertsons_6-client-sent-export-failure/case.md"
-  },
-  {
-    "group_id": "260617-albertsons_6-client-sent-export-failure-02",
-    "state": "new",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "albertsons_6 client-sent-export-failure",
-    "summary": "albertsons (Albertsons Media) - Audience 11825: Audience Export failure for 11825 sent to client.",
-    "incident_ids": [
-      "Q3YXYZP98NJXIA"
-    ],
-    "alert_count": 1,
-    "path": "groups/new/260617-albertsons_6-client-sent-export-failure-02/case.md"
-  },
-  {
     "group_id": "260617-chghealthcare_395-client-sent-export-failure",
     "state": "new",
     "tags": [
@@ -1440,34 +1412,6 @@
     ],
     "alert_count": 1,
     "path": "groups/new/260618-76ers_131-zero-success-03/case.md"
-  },
-  {
-    "group_id": "260618-albertsons_6-live-ramp-export-error",
-    "state": "new",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "albertsons_6 live-ramp export-error",
-    "summary": "albertsons (Albertsons Media): Exports for audience 12535 failed with states: <(snapshotting_finished,export_error)>",
-    "incident_ids": [
-      "Q19MJO5XIF1NHB"
-    ],
-    "alert_count": 1,
-    "path": "groups/new/260618-albertsons_6-live-ramp-export-error/case.md"
-  },
-  {
-    "group_id": "260618-albertsons_6-live-ramp-export-error-02",
-    "state": "new",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "albertsons_6 live-ramp export-error",
-    "summary": "albertsons (Albertsons Media): Exports for audience 12537 failed with states: <(snapshotting_finished,export_error)>",
-    "incident_ids": [
-      "Q1R7D9HWJFBV7D"
-    ],
-    "alert_count": 1,
-    "path": "groups/new/260618-albertsons_6-live-ramp-export-error-02/case.md"
   },
   {
     "group_id": "260618-allegro_3-client-sent-export-failure",
@@ -3234,20 +3178,6 @@
     "path": "groups/new/260622-451-linkedin-ads-export-error-02/case.md"
   },
   {
-    "group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie",
-    "state": "new",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "albertsons_6 albertsons-albertsons-media-no-exports-for-audie",
-    "summary": "albertsons (Albertsons Media): No exports for audience 9705 found in scheduled interval",
-    "incident_ids": [
-      "Q01RMY4QJ0EDMW"
-    ],
-    "alert_count": 1,
-    "path": "groups/new/260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie/case.md"
-  },
-  {
     "group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-02",
     "state": "new",
     "tags": [
@@ -3260,20 +3190,6 @@
     ],
     "alert_count": 1,
     "path": "groups/new/260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-02/case.md"
-  },
-  {
-    "group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-03",
-    "state": "new",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "albertsons_6 albertsons-albertsons-media-no-exports-for-audie",
-    "summary": "albertsons (Albertsons Media): No exports for audience 10260 found in scheduled interval",
-    "incident_ids": [
-      "Q0C71WMFRHZ86M"
-    ],
-    "alert_count": 1,
-    "path": "groups/new/260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-03/case.md"
   },
   {
     "group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-04",
@@ -3290,48 +3206,6 @@
     "path": "groups/new/260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-04/case.md"
   },
   {
-    "group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-05",
-    "state": "new",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "albertsons_6 albertsons-albertsons-media-no-exports-for-audie",
-    "summary": "albertsons (Albertsons Media): No exports for audience 10768 found in scheduled interval",
-    "incident_ids": [
-      "Q0GE0XGKVCGEZA"
-    ],
-    "alert_count": 1,
-    "path": "groups/new/260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-05/case.md"
-  },
-  {
-    "group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-06",
-    "state": "new",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "albertsons_6 albertsons-albertsons-media-no-exports-for-audie",
-    "summary": "albertsons (Albertsons Media): No exports for audience 10792 found in scheduled interval",
-    "incident_ids": [
-      "Q0J2QIB5T4ACAP"
-    ],
-    "alert_count": 1,
-    "path": "groups/new/260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-06/case.md"
-  },
-  {
-    "group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-07",
-    "state": "new",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "albertsons_6 albertsons-albertsons-media-no-exports-for-audie",
-    "summary": "albertsons (Albertsons Media): No exports for audience 9665 found in scheduled interval",
-    "incident_ids": [
-      "Q0LWNP6LITRPIU"
-    ],
-    "alert_count": 1,
-    "path": "groups/new/260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-07/case.md"
-  },
-  {
     "group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-08",
     "state": "new",
     "tags": [
@@ -3344,20 +3218,6 @@
     ],
     "alert_count": 1,
     "path": "groups/new/260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-08/case.md"
-  },
-  {
-    "group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-09",
-    "state": "new",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "albertsons_6 albertsons-albertsons-media-no-exports-for-audie",
-    "summary": "albertsons (Albertsons Media): No exports for audience 10026 found in scheduled interval",
-    "incident_ids": [
-      "Q0OZ0872TDR2Y2"
-    ],
-    "alert_count": 1,
-    "path": "groups/new/260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-09/case.md"
   },
   {
     "group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-10",
@@ -3374,20 +3234,6 @@
     "path": "groups/new/260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-10/case.md"
   },
   {
-    "group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-11",
-    "state": "new",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "albertsons_6 albertsons-albertsons-media-no-exports-for-audie",
-    "summary": "albertsons (Albertsons Media): No exports for audience 10027 found in scheduled interval",
-    "incident_ids": [
-      "Q0QCK7WWM8CB9Y"
-    ],
-    "alert_count": 1,
-    "path": "groups/new/260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-11/case.md"
-  },
-  {
     "group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-12",
     "state": "new",
     "tags": [
@@ -3400,62 +3246,6 @@
     ],
     "alert_count": 1,
     "path": "groups/new/260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-12/case.md"
-  },
-  {
-    "group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-13",
-    "state": "new",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "albertsons_6 albertsons-albertsons-media-no-exports-for-audie",
-    "summary": "albertsons (Albertsons Media): No exports for audience 9666 found in scheduled interval",
-    "incident_ids": [
-      "Q10A7OWTQLCLX0"
-    ],
-    "alert_count": 1,
-    "path": "groups/new/260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-13/case.md"
-  },
-  {
-    "group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-14",
-    "state": "new",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "albertsons_6 albertsons-albertsons-media-no-exports-for-audie",
-    "summary": "albertsons (Albertsons Media): No exports for audience 10688 found in scheduled interval",
-    "incident_ids": [
-      "Q13B8W35HWJE0F"
-    ],
-    "alert_count": 1,
-    "path": "groups/new/260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-14/case.md"
-  },
-  {
-    "group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-15",
-    "state": "new",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "albertsons_6 albertsons-albertsons-media-no-exports-for-audie",
-    "summary": "albertsons (Albertsons Media): No exports for audience 10693 found in scheduled interval",
-    "incident_ids": [
-      "Q13ELBH1205K6I"
-    ],
-    "alert_count": 1,
-    "path": "groups/new/260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-15/case.md"
-  },
-  {
-    "group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-16",
-    "state": "new",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "albertsons_6 albertsons-albertsons-media-no-exports-for-audie",
-    "summary": "albertsons (Albertsons Media): No exports for audience 10742 found in scheduled interval",
-    "incident_ids": [
-      "Q15MYGKQELDC1U"
-    ],
-    "alert_count": 1,
-    "path": "groups/new/260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-16/case.md"
   },
   {
     "group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-17",
@@ -3472,20 +3262,6 @@
     "path": "groups/new/260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-17/case.md"
   },
   {
-    "group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-18",
-    "state": "new",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "albertsons_6 albertsons-albertsons-media-no-exports-for-audie",
-    "summary": "albertsons (Albertsons Media): No exports for audience 2159 found in scheduled interval",
-    "incident_ids": [
-      "Q1HXGWVOFQNLBQ"
-    ],
-    "alert_count": 1,
-    "path": "groups/new/260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-18/case.md"
-  },
-  {
     "group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-19",
     "state": "new",
     "tags": [
@@ -3500,48 +3276,6 @@
     "path": "groups/new/260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-19/case.md"
   },
   {
-    "group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-20",
-    "state": "new",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "albertsons_6 albertsons-albertsons-media-no-exports-for-audie",
-    "summary": "albertsons (Albertsons Media): No exports for audience 13252 found in scheduled interval",
-    "incident_ids": [
-      "Q1S0Q38FOEN2XY"
-    ],
-    "alert_count": 30,
-    "path": "groups/new/260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-20/case.md"
-  },
-  {
-    "group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-21",
-    "state": "new",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "albertsons_6 albertsons-albertsons-media-no-exports-for-audie",
-    "summary": "albertsons (Albertsons Media): No exports for audience 10779 found in scheduled interval",
-    "incident_ids": [
-      "Q21GFIZRJV32YX"
-    ],
-    "alert_count": 1,
-    "path": "groups/new/260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-21/case.md"
-  },
-  {
-    "group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-22",
-    "state": "new",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "albertsons_6 albertsons-albertsons-media-no-exports-for-audie",
-    "summary": "albertsons (Albertsons Media): No exports for audience 10612 found in scheduled interval",
-    "incident_ids": [
-      "Q2CJ2DGHY6J8DJ"
-    ],
-    "alert_count": 1,
-    "path": "groups/new/260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-22/case.md"
-  },
-  {
     "group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-23",
     "state": "new",
     "tags": [
@@ -3554,20 +3288,6 @@
     ],
     "alert_count": 1,
     "path": "groups/new/260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-23/case.md"
-  },
-  {
-    "group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-24",
-    "state": "new",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "albertsons_6 albertsons-albertsons-media-no-exports-for-audie",
-    "summary": "albertsons (Albertsons Media): No exports for audience 10613 found in scheduled interval",
-    "incident_ids": [
-      "Q2ST7MHN83WRVP"
-    ],
-    "alert_count": 1,
-    "path": "groups/new/260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-24/case.md"
   },
   {
     "group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-25",
@@ -3596,118 +3316,6 @@
     ],
     "alert_count": 1,
     "path": "groups/new/260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-26/case.md"
-  },
-  {
-    "group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-27",
-    "state": "new",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "albertsons_6 albertsons-albertsons-media-no-exports-for-audie",
-    "summary": "albertsons (Albertsons Media): No exports for audience 10046 found in scheduled interval",
-    "incident_ids": [
-      "Q2YP3CMCUOBCO8"
-    ],
-    "alert_count": 1,
-    "path": "groups/new/260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-27/case.md"
-  },
-  {
-    "group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-28",
-    "state": "new",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "albertsons_6 albertsons-albertsons-media-no-exports-for-audie",
-    "summary": "albertsons (Albertsons Media): No exports for audience 9703 found in scheduled interval",
-    "incident_ids": [
-      "Q2YQUVRHHFJIZ3"
-    ],
-    "alert_count": 1,
-    "path": "groups/new/260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-28/case.md"
-  },
-  {
-    "group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-29",
-    "state": "new",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "albertsons_6 albertsons-albertsons-media-no-exports-for-audie",
-    "summary": "albertsons (Albertsons Media): No exports for audience 10689 found in scheduled interval",
-    "incident_ids": [
-      "Q2Z35S4PQM9D26"
-    ],
-    "alert_count": 1,
-    "path": "groups/new/260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-29/case.md"
-  },
-  {
-    "group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-30",
-    "state": "new",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "albertsons_6 albertsons-albertsons-media-no-exports-for-audie",
-    "summary": "albertsons (Albertsons Media): No exports for audience 10048 found in scheduled interval",
-    "incident_ids": [
-      "Q323CS0DQL0PYQ"
-    ],
-    "alert_count": 1,
-    "path": "groups/new/260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-30/case.md"
-  },
-  {
-    "group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-31",
-    "state": "new",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "albertsons_6 albertsons-albertsons-media-no-exports-for-audie",
-    "summary": "albertsons (Albertsons Media): No exports for audience 10304 found in scheduled interval",
-    "incident_ids": [
-      "Q358IMGILLIALD"
-    ],
-    "alert_count": 1,
-    "path": "groups/new/260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-31/case.md"
-  },
-  {
-    "group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-32",
-    "state": "new",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "albertsons_6 albertsons-albertsons-media-no-exports-for-audie",
-    "summary": "albertsons (Albertsons Media): No exports for audience 9739 found in scheduled interval",
-    "incident_ids": [
-      "Q3EWG5PY4MPK8A"
-    ],
-    "alert_count": 1,
-    "path": "groups/new/260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-32/case.md"
-  },
-  {
-    "group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-33",
-    "state": "new",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "albertsons_6 albertsons-albertsons-media-no-exports-for-audie",
-    "summary": "albertsons (Albertsons Media): No exports for audience 9704 found in scheduled interval",
-    "incident_ids": [
-      "Q3RBHKEKA0JLGO"
-    ],
-    "alert_count": 1,
-    "path": "groups/new/260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-33/case.md"
-  },
-  {
-    "group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-34",
-    "state": "new",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "albertsons_6 albertsons-albertsons-media-no-exports-for-audie",
-    "summary": "albertsons (Albertsons Media): No exports for audience 10015 found in scheduled interval",
-    "incident_ids": [
-      "Q3TT7ATB5C8IBD"
-    ],
-    "alert_count": 1,
-    "path": "groups/new/260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-34/case.md"
   },
   {
     "group_id": "260622-albertsons_6-live-ramp-export-error",
@@ -3780,48 +3388,6 @@
     "path": "groups/new/260622-albertsons_6-snapshotting-error-04/case.md"
   },
   {
-    "group_id": "260622-albertsons_6-snapshotting-error-05",
-    "state": "new",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "albertsons_6 snapshotting-error",
-    "summary": "albertsons (Albertsons Media): Exports for audience 13102 failed with states: <(snapshotting_error,no_batches)>",
-    "incident_ids": [
-      "Q1S0Q38FOEN2XY"
-    ],
-    "alert_count": 28,
-    "path": "groups/new/260622-albertsons_6-snapshotting-error-05/case.md"
-  },
-  {
-    "group_id": "260622-albertsons_6-snapshotting-error-06",
-    "state": "new",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "albertsons_6 snapshotting-error",
-    "summary": "albertsons (Albertsons Media): Exports for audience 9373 failed with states: <(snapshotting_error,no_batches)>",
-    "incident_ids": [
-      "Q1TBCJPRHS9RAX"
-    ],
-    "alert_count": 1,
-    "path": "groups/new/260622-albertsons_6-snapshotting-error-06/case.md"
-  },
-  {
-    "group_id": "260622-albertsons_6-snapshotting-error-07",
-    "state": "new",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "albertsons_6 snapshotting-error",
-    "summary": "albertsons (Albertsons Media): Exports for audience 6999 failed with states: <(snapshotting_error,no_batches)>",
-    "incident_ids": [
-      "Q2ECAALJOOO1R6"
-    ],
-    "alert_count": 1,
-    "path": "groups/new/260622-albertsons_6-snapshotting-error-07/case.md"
-  },
-  {
     "group_id": "260622-albertsons_6-snapshotting-error-08",
     "state": "new",
     "tags": [
@@ -3836,20 +3402,6 @@
     "path": "groups/new/260622-albertsons_6-snapshotting-error-08/case.md"
   },
   {
-    "group_id": "260622-albertsons_6-snapshotting-error-09",
-    "state": "new",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "albertsons_6 snapshotting-error",
-    "summary": "albertsons (Albertsons Media): Exports for audience 8938 failed with states: <(snapshotting_error,no_batches)>",
-    "incident_ids": [
-      "Q3BE6H76WFUNBR"
-    ],
-    "alert_count": 1,
-    "path": "groups/new/260622-albertsons_6-snapshotting-error-09/case.md"
-  },
-  {
     "group_id": "260622-albertsons_6-snapshotting-error-10",
     "state": "new",
     "tags": [
@@ -3862,20 +3414,6 @@
     ],
     "alert_count": 1,
     "path": "groups/new/260622-albertsons_6-snapshotting-error-10/case.md"
-  },
-  {
-    "group_id": "260622-albertsons_6-snapshotting-error-11",
-    "state": "new",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "albertsons_6 snapshotting-error",
-    "summary": "albertsons (Albertsons Media): Exports for audience 9929 failed with states: <(snapshotting_error,no_batches)>",
-    "incident_ids": [
-      "Q3QCKCZMRUR8MC"
-    ],
-    "alert_count": 1,
-    "path": "groups/new/260622-albertsons_6-snapshotting-error-11/case.md"
   },
   {
     "group_id": "260622-allegro_3-dv360-export-error",
@@ -4340,15 +3878,633 @@
     "path": "groups/new/260622-verizon_309-snapshotting-error/case.md"
   },
   {
-    "group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "group_id": "260617-albertsons_6-client-sent-export-failure",
+    "state": "open",
+    "tags": [
+      "triage:needs_review"
+    ],
+    "title": "albertsons_6 client-sent-export-failure",
+    "summary": "albertsons (Albertsons Media) - Audience 11674: Audience Export failure for 11674 sent to client.",
+    "incident_ids": [
+      "Q3BP8RE86R1HC0"
+    ],
+    "alert_count": 1,
+    "path": "groups/open/260617-albertsons_6-client-sent-export-failure/case.md"
+  },
+  {
+    "group_id": "260617-albertsons_6-client-sent-export-failure-02",
+    "state": "open",
+    "tags": [
+      "triage:needs_review"
+    ],
+    "title": "albertsons_6 client-sent-export-failure",
+    "summary": "albertsons (Albertsons Media) - Audience 11825: Audience Export failure for 11825 sent to client.",
+    "incident_ids": [
+      "Q3YXYZP98NJXIA"
+    ],
+    "alert_count": 1,
+    "path": "groups/open/260617-albertsons_6-client-sent-export-failure-02/case.md"
+  },
+  {
+    "group_id": "260618-albertsons_6-live-ramp-export-error",
+    "state": "open",
+    "tags": [
+      "triage:needs_review"
+    ],
+    "title": "albertsons_6 live-ramp export-error",
+    "summary": "albertsons (Albertsons Media): Exports for audience 12535 failed with states: <(snapshotting_finished,export_error)>",
+    "incident_ids": [
+      "Q19MJO5XIF1NHB"
+    ],
+    "alert_count": 1,
+    "path": "groups/open/260618-albertsons_6-live-ramp-export-error/case.md"
+  },
+  {
+    "group_id": "260618-albertsons_6-live-ramp-export-error-02",
+    "state": "open",
+    "tags": [
+      "triage:needs_review"
+    ],
+    "title": "albertsons_6 live-ramp export-error",
+    "summary": "albertsons (Albertsons Media): Exports for audience 12537 failed with states: <(snapshotting_finished,export_error)>",
+    "incident_ids": [
+      "Q1R7D9HWJFBV7D"
+    ],
+    "alert_count": 1,
+    "path": "groups/open/260618-albertsons_6-live-ramp-export-error-02/case.md"
+  },
+  {
+    "group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie",
+    "state": "open",
+    "tags": [
+      "triage:needs_review"
+    ],
+    "title": "albertsons_6 albertsons-albertsons-media-no-exports-for-audie",
+    "summary": "albertsons (Albertsons Media): No exports for audience 9705 found in scheduled interval",
+    "incident_ids": [
+      "Q01RMY4QJ0EDMW"
+    ],
+    "alert_count": 1,
+    "path": "groups/open/260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie/case.md"
+  },
+  {
+    "group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-03",
+    "state": "open",
+    "tags": [
+      "triage:needs_review"
+    ],
+    "title": "albertsons_6 albertsons-albertsons-media-no-exports-for-audie",
+    "summary": "albertsons (Albertsons Media): No exports for audience 10260 found in scheduled interval",
+    "incident_ids": [
+      "Q0C71WMFRHZ86M"
+    ],
+    "alert_count": 1,
+    "path": "groups/open/260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-03/case.md"
+  },
+  {
+    "group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-05",
+    "state": "open",
+    "tags": [
+      "triage:needs_review"
+    ],
+    "title": "albertsons_6 albertsons-albertsons-media-no-exports-for-audie",
+    "summary": "albertsons (Albertsons Media): No exports for audience 10768 found in scheduled interval",
+    "incident_ids": [
+      "Q0GE0XGKVCGEZA"
+    ],
+    "alert_count": 1,
+    "path": "groups/open/260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-05/case.md"
+  },
+  {
+    "group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-06",
+    "state": "open",
+    "tags": [
+      "triage:needs_review"
+    ],
+    "title": "albertsons_6 albertsons-albertsons-media-no-exports-for-audie",
+    "summary": "albertsons (Albertsons Media): No exports for audience 10792 found in scheduled interval",
+    "incident_ids": [
+      "Q0J2QIB5T4ACAP"
+    ],
+    "alert_count": 1,
+    "path": "groups/open/260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-06/case.md"
+  },
+  {
+    "group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-07",
+    "state": "open",
+    "tags": [
+      "triage:needs_review"
+    ],
+    "title": "albertsons_6 albertsons-albertsons-media-no-exports-for-audie",
+    "summary": "albertsons (Albertsons Media): No exports for audience 9665 found in scheduled interval",
+    "incident_ids": [
+      "Q0LWNP6LITRPIU"
+    ],
+    "alert_count": 1,
+    "path": "groups/open/260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-07/case.md"
+  },
+  {
+    "group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-09",
+    "state": "open",
+    "tags": [
+      "triage:needs_review"
+    ],
+    "title": "albertsons_6 albertsons-albertsons-media-no-exports-for-audie",
+    "summary": "albertsons (Albertsons Media): No exports for audience 10026 found in scheduled interval",
+    "incident_ids": [
+      "Q0OZ0872TDR2Y2"
+    ],
+    "alert_count": 1,
+    "path": "groups/open/260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-09/case.md"
+  },
+  {
+    "group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-11",
+    "state": "open",
+    "tags": [
+      "triage:needs_review"
+    ],
+    "title": "albertsons_6 albertsons-albertsons-media-no-exports-for-audie",
+    "summary": "albertsons (Albertsons Media): No exports for audience 10027 found in scheduled interval",
+    "incident_ids": [
+      "Q0QCK7WWM8CB9Y"
+    ],
+    "alert_count": 1,
+    "path": "groups/open/260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-11/case.md"
+  },
+  {
+    "group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-13",
+    "state": "open",
+    "tags": [
+      "triage:needs_review"
+    ],
+    "title": "albertsons_6 albertsons-albertsons-media-no-exports-for-audie",
+    "summary": "albertsons (Albertsons Media): No exports for audience 9666 found in scheduled interval",
+    "incident_ids": [
+      "Q10A7OWTQLCLX0"
+    ],
+    "alert_count": 1,
+    "path": "groups/open/260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-13/case.md"
+  },
+  {
+    "group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-14",
+    "state": "open",
+    "tags": [
+      "triage:needs_review"
+    ],
+    "title": "albertsons_6 albertsons-albertsons-media-no-exports-for-audie",
+    "summary": "albertsons (Albertsons Media): No exports for audience 10688 found in scheduled interval",
+    "incident_ids": [
+      "Q13B8W35HWJE0F"
+    ],
+    "alert_count": 1,
+    "path": "groups/open/260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-14/case.md"
+  },
+  {
+    "group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-15",
+    "state": "open",
+    "tags": [
+      "triage:needs_review"
+    ],
+    "title": "albertsons_6 albertsons-albertsons-media-no-exports-for-audie",
+    "summary": "albertsons (Albertsons Media): No exports for audience 10693 found in scheduled interval",
+    "incident_ids": [
+      "Q13ELBH1205K6I"
+    ],
+    "alert_count": 1,
+    "path": "groups/open/260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-15/case.md"
+  },
+  {
+    "group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-16",
+    "state": "open",
+    "tags": [
+      "triage:needs_review"
+    ],
+    "title": "albertsons_6 albertsons-albertsons-media-no-exports-for-audie",
+    "summary": "albertsons (Albertsons Media): No exports for audience 10742 found in scheduled interval",
+    "incident_ids": [
+      "Q15MYGKQELDC1U"
+    ],
+    "alert_count": 1,
+    "path": "groups/open/260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-16/case.md"
+  },
+  {
+    "group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-18",
+    "state": "open",
+    "tags": [
+      "triage:needs_review"
+    ],
+    "title": "albertsons_6 albertsons-albertsons-media-no-exports-for-audie",
+    "summary": "albertsons (Albertsons Media): No exports for audience 2159 found in scheduled interval",
+    "incident_ids": [
+      "Q1HXGWVOFQNLBQ"
+    ],
+    "alert_count": 1,
+    "path": "groups/open/260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-18/case.md"
+  },
+  {
+    "group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-20",
+    "state": "open",
+    "tags": [
+      "triage:needs_review"
+    ],
+    "title": "albertsons_6 albertsons-albertsons-media-no-exports-for-audie",
+    "summary": "albertsons (Albertsons Media): No exports for audience 13252 found in scheduled interval",
+    "incident_ids": [
+      "Q1S0Q38FOEN2XY"
+    ],
+    "alert_count": 30,
+    "path": "groups/open/260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-20/case.md"
+  },
+  {
+    "group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-21",
+    "state": "open",
+    "tags": [
+      "triage:needs_review"
+    ],
+    "title": "albertsons_6 albertsons-albertsons-media-no-exports-for-audie",
+    "summary": "albertsons (Albertsons Media): No exports for audience 10779 found in scheduled interval",
+    "incident_ids": [
+      "Q21GFIZRJV32YX"
+    ],
+    "alert_count": 1,
+    "path": "groups/open/260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-21/case.md"
+  },
+  {
+    "group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-22",
+    "state": "open",
+    "tags": [
+      "triage:needs_review"
+    ],
+    "title": "albertsons_6 albertsons-albertsons-media-no-exports-for-audie",
+    "summary": "albertsons (Albertsons Media): No exports for audience 10612 found in scheduled interval",
+    "incident_ids": [
+      "Q2CJ2DGHY6J8DJ"
+    ],
+    "alert_count": 1,
+    "path": "groups/open/260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-22/case.md"
+  },
+  {
+    "group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-24",
+    "state": "open",
+    "tags": [
+      "triage:needs_review"
+    ],
+    "title": "albertsons_6 albertsons-albertsons-media-no-exports-for-audie",
+    "summary": "albertsons (Albertsons Media): No exports for audience 10613 found in scheduled interval",
+    "incident_ids": [
+      "Q2ST7MHN83WRVP"
+    ],
+    "alert_count": 1,
+    "path": "groups/open/260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-24/case.md"
+  },
+  {
+    "group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-27",
+    "state": "open",
+    "tags": [
+      "triage:needs_review"
+    ],
+    "title": "albertsons_6 albertsons-albertsons-media-no-exports-for-audie",
+    "summary": "albertsons (Albertsons Media): No exports for audience 10046 found in scheduled interval",
+    "incident_ids": [
+      "Q2YP3CMCUOBCO8"
+    ],
+    "alert_count": 1,
+    "path": "groups/open/260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-27/case.md"
+  },
+  {
+    "group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-28",
+    "state": "open",
+    "tags": [
+      "triage:needs_review"
+    ],
+    "title": "albertsons_6 albertsons-albertsons-media-no-exports-for-audie",
+    "summary": "albertsons (Albertsons Media): No exports for audience 9703 found in scheduled interval",
+    "incident_ids": [
+      "Q2YQUVRHHFJIZ3"
+    ],
+    "alert_count": 1,
+    "path": "groups/open/260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-28/case.md"
+  },
+  {
+    "group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-29",
+    "state": "open",
+    "tags": [
+      "triage:needs_review"
+    ],
+    "title": "albertsons_6 albertsons-albertsons-media-no-exports-for-audie",
+    "summary": "albertsons (Albertsons Media): No exports for audience 10689 found in scheduled interval",
+    "incident_ids": [
+      "Q2Z35S4PQM9D26"
+    ],
+    "alert_count": 1,
+    "path": "groups/open/260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-29/case.md"
+  },
+  {
+    "group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-30",
+    "state": "open",
+    "tags": [
+      "triage:needs_review"
+    ],
+    "title": "albertsons_6 albertsons-albertsons-media-no-exports-for-audie",
+    "summary": "albertsons (Albertsons Media): No exports for audience 10048 found in scheduled interval",
+    "incident_ids": [
+      "Q323CS0DQL0PYQ"
+    ],
+    "alert_count": 1,
+    "path": "groups/open/260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-30/case.md"
+  },
+  {
+    "group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-31",
+    "state": "open",
+    "tags": [
+      "triage:needs_review"
+    ],
+    "title": "albertsons_6 albertsons-albertsons-media-no-exports-for-audie",
+    "summary": "albertsons (Albertsons Media): No exports for audience 10304 found in scheduled interval",
+    "incident_ids": [
+      "Q358IMGILLIALD"
+    ],
+    "alert_count": 1,
+    "path": "groups/open/260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-31/case.md"
+  },
+  {
+    "group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-32",
+    "state": "open",
+    "tags": [
+      "triage:needs_review"
+    ],
+    "title": "albertsons_6 albertsons-albertsons-media-no-exports-for-audie",
+    "summary": "albertsons (Albertsons Media): No exports for audience 9739 found in scheduled interval",
+    "incident_ids": [
+      "Q3EWG5PY4MPK8A"
+    ],
+    "alert_count": 1,
+    "path": "groups/open/260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-32/case.md"
+  },
+  {
+    "group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-33",
+    "state": "open",
+    "tags": [
+      "triage:needs_review"
+    ],
+    "title": "albertsons_6 albertsons-albertsons-media-no-exports-for-audie",
+    "summary": "albertsons (Albertsons Media): No exports for audience 9704 found in scheduled interval",
+    "incident_ids": [
+      "Q3RBHKEKA0JLGO"
+    ],
+    "alert_count": 1,
+    "path": "groups/open/260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-33/case.md"
+  },
+  {
+    "group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-34",
+    "state": "open",
+    "tags": [
+      "triage:needs_review"
+    ],
+    "title": "albertsons_6 albertsons-albertsons-media-no-exports-for-audie",
+    "summary": "albertsons (Albertsons Media): No exports for audience 10015 found in scheduled interval",
+    "incident_ids": [
+      "Q3TT7ATB5C8IBD"
+    ],
+    "alert_count": 1,
+    "path": "groups/open/260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-34/case.md"
+  },
+  {
+    "group_id": "260622-albertsons_6-bigquery-type-mismatch",
     "state": "open",
     "tags": [
       "triage:albertsons-client-sent",
-      "triage:needs_review",
+      "triage:bigquery-type-mismatch",
       "triage:tag_grouped"
     ],
+    "title": "Albertsons BigQuery type mismatch failures",
+    "summary": "Albertsons export failures whose latest evidence points to BigQuery query/type mismatch during pre_snapshotting_check, including IN UNNEST NUMERIC vs ARRAY<STRING> failures.",
+    "incident_ids": [
+      "Q0EQCF34RA3FHN",
+      "Q0P4ONJOGF8NUI",
+      "Q0YS1762L6N8Z7",
+      "Q13AGUZO2RZY3E",
+      "Q14QMYQC78PXAR",
+      "Q18OLT4XU8V6Z5",
+      "Q18RUDPFI5PNR0",
+      "Q1ADWD3D2HKZOL",
+      "Q1LPO13841C1IC",
+      "Q1U4985AOBV356",
+      "Q1VZ0A4IVOZMGM",
+      "Q245CIL2A3XI32",
+      "Q24B1M4BAXAHKN",
+      "Q25HOZVKOE3XJP",
+      "Q2DET6AW1NICU7",
+      "Q2RVKX275SCHT7",
+      "Q33XKCHKMWQNOF",
+      "Q368INPJJF6K5Y",
+      "Q3IROJH5XM5T4U",
+      "Q3O313HUCTB2WD",
+      "Q3QEKPH9YZV412"
+    ],
+    "alert_count": 21,
+    "path": "groups/open/260622-albertsons_6-bigquery-type-mismatch/case.md"
+  },
+  {
+    "group_id": "260622-albertsons_6-export-error-blank",
+    "state": "open",
+    "tags": [
+      "triage:albertsons-client-sent",
+      "triage:export-error",
+      "triage:tag_grouped"
+    ],
+    "title": "Albertsons LiveRamp API validation failures",
+    "summary": "Albertsons audiences 12468, 12495, and 12506 snapshot/unload successfully, then fail LiveRamp activation validation/API calls with timeouts or 500 responses.",
+    "incident_ids": [
+      "Q16ZT0NICO1CYX",
+      "Q1L98NGVCG68W3",
+      "Q20IPIQEPYPPOW"
+    ],
+    "alert_count": 3,
+    "path": "groups/open/260622-albertsons_6-export-error-blank/case.md"
+  },
+  {
+    "group_id": "260622-albertsons_6-http-client-errors",
+    "state": "open",
+    "tags": [
+      "triage:albertsons-client-sent",
+      "triage:http-client-error",
+      "triage:tag_grouped",
+      "triage:quervice-validation"
+    ],
+    "title": "Albertsons Quervice missing-column pre-snapshotting failures",
+    "summary": "Scoped logs show the HTTP-client label is a wrapper: these Albertsons pre_snapshotting_check failures are Quervice-side, mainly missing fields in Product_Attributes_Product_Group_categoryL; audience 3391 also had 600s timeouts and 502s before a missing-field validation failure.",
+    "incident_ids": [
+      "Q054DZZ6GFL4FT",
+      "Q18PJFCK0IYHAO",
+      "Q337ZKYTMRUI8M"
+    ],
+    "alert_count": 3,
+    "path": "groups/open/260622-albertsons_6-http-client-errors/case.md"
+  },
+  {
+    "group_id": "260622-albertsons_6-inconsistent-pizza-state",
+    "state": "open",
+    "tags": [
+      "triage:albertsons-client-sent",
+      "triage:needs_evidence",
+      "triage:tag_grouped"
+    ],
+    "title": "Albertsons inconsistent Pizza state",
+    "summary": "Albertsons audience 11299 has latest Pizza state snapshotting_error/export_finished, which is internally inconsistent and needs manual review.",
+    "incident_ids": [
+      "Q3F3T8YUI45U70"
+    ],
+    "alert_count": 1,
+    "path": "groups/open/260622-albertsons_6-inconsistent-pizza-state/case.md"
+  },
+  {
+    "group_id": "260622-albertsons_6-quervice-timeouts",
+    "state": "open",
+    "tags": [
+      "triage:albertsons-client-sent",
+      "triage:quervice-timeout",
+      "triage:tag_grouped"
+    ],
+    "title": "Albertsons Quervice pre-snapshotting timeouts",
+    "summary": "Albertsons export failures whose latest evidence points to Quervice pre_snapshotting_check timing out after 600 seconds.",
+    "incident_ids": [
+      "Q0EAB0NW8E0E1B",
+      "Q0HFO3KTKSKQUS",
+      "Q0RD55JHSF7WN4",
+      "Q12ZI7SEKYJILC",
+      "Q1GCO98PUY1PWA",
+      "Q1OYMJJW2EGJN4",
+      "Q1SE40Q7Y7DZY1",
+      "Q1XN54NBKWPTCA",
+      "Q2QPIOCASCVFH7",
+      "Q38RZMT4FW9XSA",
+      "Q3G9BPSTSE0VSL",
+      "Q3I4EBBUGMQWXS"
+    ],
+    "alert_count": 12,
+    "path": "groups/open/260622-albertsons_6-quervice-timeouts/case.md"
+  },
+  {
+    "group_id": "260622-albertsons_6-snapshotting-error-05",
+    "state": "open",
+    "tags": [
+      "triage:needs_review"
+    ],
+    "title": "albertsons_6 snapshotting-error",
+    "summary": "albertsons (Albertsons Media): Exports for audience 13102 failed with states: <(snapshotting_error,no_batches)>",
+    "incident_ids": [
+      "Q1S0Q38FOEN2XY"
+    ],
+    "alert_count": 28,
+    "path": "groups/open/260622-albertsons_6-snapshotting-error-05/case.md"
+  },
+  {
+    "group_id": "260622-albertsons_6-snapshotting-error-06",
+    "state": "open",
+    "tags": [
+      "triage:needs_review"
+    ],
+    "title": "albertsons_6 snapshotting-error",
+    "summary": "albertsons (Albertsons Media): Exports for audience 9373 failed with states: <(snapshotting_error,no_batches)>",
+    "incident_ids": [
+      "Q1TBCJPRHS9RAX"
+    ],
+    "alert_count": 1,
+    "path": "groups/open/260622-albertsons_6-snapshotting-error-06/case.md"
+  },
+  {
+    "group_id": "260622-albertsons_6-snapshotting-error-07",
+    "state": "open",
+    "tags": [
+      "triage:needs_review"
+    ],
+    "title": "albertsons_6 snapshotting-error",
+    "summary": "albertsons (Albertsons Media): Exports for audience 6999 failed with states: <(snapshotting_error,no_batches)>",
+    "incident_ids": [
+      "Q2ECAALJOOO1R6"
+    ],
+    "alert_count": 1,
+    "path": "groups/open/260622-albertsons_6-snapshotting-error-07/case.md"
+  },
+  {
+    "group_id": "260622-albertsons_6-snapshotting-error-09",
+    "state": "open",
+    "tags": [
+      "triage:needs_review"
+    ],
+    "title": "albertsons_6 snapshotting-error",
+    "summary": "albertsons (Albertsons Media): Exports for audience 8938 failed with states: <(snapshotting_error,no_batches)>",
+    "incident_ids": [
+      "Q3BE6H76WFUNBR"
+    ],
+    "alert_count": 1,
+    "path": "groups/open/260622-albertsons_6-snapshotting-error-09/case.md"
+  },
+  {
+    "group_id": "260622-albertsons_6-snapshotting-error-11",
+    "state": "open",
+    "tags": [
+      "triage:needs_review"
+    ],
+    "title": "albertsons_6 snapshotting-error",
+    "summary": "albertsons (Albertsons Media): Exports for audience 9929 failed with states: <(snapshotting_error,no_batches)>",
+    "incident_ids": [
+      "Q3QCKCZMRUR8MC"
+    ],
+    "alert_count": 1,
+    "path": "groups/open/260622-albertsons_6-snapshotting-error-11/case.md"
+  },
+  {
+    "group_id": "260622-albertsons_6-snapshotting-unknowns",
+    "state": "open",
+    "tags": [
+      "triage:albertsons-client-sent",
+      "triage:needs_evidence",
+      "triage:tag_grouped"
+    ],
+    "title": "Albertsons unknown snapshotting failures",
+    "summary": "Albertsons export failures with snapshotting_error/no_batches and blank, unknown, or singleton snapshotting-stage failure reasons.",
+    "incident_ids": [
+      "Q0JHNJP2ZLQPBQ",
+      "Q10NGEYDK847U7",
+      "Q17HQGEWPTMD9O",
+      "Q1DGAIPDFK6TU8",
+      "Q1JYMIHQDW3DKC",
+      "Q1QN8ACMUP2CPJ",
+      "Q244V4I2RLF881",
+      "Q2HCCF9I2UIFGY",
+      "Q2QS141O50ASS5",
+      "Q3FGTTIU517U3C"
+    ],
+    "alert_count": 10,
+    "path": "groups/open/260622-albertsons_6-snapshotting-unknowns/case.md"
+  },
+  {
+    "group_id": "260622-trumanshow_336-zero-success",
+    "state": "open",
+    "tags": [
+      "triage:needs_review"
+    ],
+    "title": "trumanshow_336 zero-success",
+    "summary": "trumanshow (H-E-B) - Audience 34403: 0 successfull_exports from pizza tracker found 10 minutes after new export",
+    "incident_ids": [
+      "Q2O4YGBMUXZEFB"
+    ],
+    "alert_count": 1,
+    "path": "groups/open/260622-trumanshow_336-zero-success/case.md"
+  },
+  {
+    "group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "state": "monitoring",
+    "tags": [
+      "triage:albertsons-client-sent",
+      "triage:needs_review",
+      "triage:tag_grouped",
+      "monitoring:split-blocked-remediation"
+    ],
     "title": "Albertsons client-sent export failures since 2026-06-18",
-    "summary": "Albertsons active PagerDuty alerts since 2026-06-18 whose imported alert summaries say the export failure was sent to client.",
+    "summary": "Blocked alerts were split into remediation-path cases; remaining attached alerts are healthy_closed or monitoring from export preflight.",
     "incident_ids": [
       "Q04P1G18UYQXA3",
       "Q054DZZ6GFL4FT",
@@ -4447,6 +4603,70 @@
       "Q3ZWG4W8WKUGMK"
     ],
     "alert_count": 95,
-    "path": "groups/open/260618-albertsons_6-client-sent-export-failures-since-260618/case.md"
+    "path": "groups/monitoring/260618-albertsons_6-client-sent-export-failures-since-260618/case.md"
+  },
+  {
+    "group_id": "grp_260622_albertsons_6_export_error_blank_split_0322",
+    "state": "monitoring",
+    "tags": [
+      "triage:needs_review",
+      "monitoring:transient-sftp"
+    ],
+    "title": "Albertsons audience 12808 SFTP permission denied",
+    "summary": "Monitoring transient SFTP permission error for Albertsons audience 12808; recheck export/delivery status before resolving.",
+    "next_check_at": "2026-06-23T20:19:52Z",
+    "incident_ids": [
+      "Q38ZCOXDOWS5O7"
+    ],
+    "alert_count": 1,
+    "path": "groups/monitoring/grp_260622_albertsons_6_export_error_blank_split_0322/case.md"
+  },
+  {
+    "group_id": "260622-albertsons_6-client-sent-export-failure",
+    "state": "resolved",
+    "tags": [
+      "triage:needs_review",
+      "resolved:merged"
+    ],
+    "title": "albertsons_6 client-sent-export-failure",
+    "summary": "Merged into 260622-albertsons_6-bigquery-type-mismatch: New Albertsons sent-to-client alert for audience 11651 has latest Pizza row snapshotting_error/no_batches with pre_snapshotting_check BigQuery expression type incompatibility; same remediation path as the existing BigQuery type mismatch cohort.",
+    "next_action": "Follow target group 260622-albertsons_6-bigquery-type-mismatch.",
+    "incident_ids": [
+      "Q1LPO13841C1IC"
+    ],
+    "alert_count": 1,
+    "path": "groups/resolved/260622-albertsons_6-client-sent-export-failure/case.md"
+  },
+  {
+    "group_id": "260622-albertsons_6-client-sent-export-failure-02",
+    "state": "resolved",
+    "tags": [
+      "triage:needs_review",
+      "resolved:merged"
+    ],
+    "title": "albertsons_6 client-sent-export-failure",
+    "summary": "Merged into 260622-albertsons_6-bigquery-type-mismatch: New Albertsons sent-to-client alert for audience 12901 has latest Pizza row snapshotting_error/no_batches with pre_snapshotting_check BigQuery expression type incompatibility; same remediation path as the existing BigQuery type mismatch cohort.",
+    "next_action": "Follow target group 260622-albertsons_6-bigquery-type-mismatch.",
+    "incident_ids": [
+      "Q24B1M4BAXAHKN"
+    ],
+    "alert_count": 1,
+    "path": "groups/resolved/260622-albertsons_6-client-sent-export-failure-02/case.md"
+  },
+  {
+    "group_id": "260622-albertsons_6-client-sent-export-failure-03",
+    "state": "resolved",
+    "tags": [
+      "triage:needs_review",
+      "resolved:merged"
+    ],
+    "title": "albertsons_6 client-sent-export-failure",
+    "summary": "Merged into 260622-albertsons_6-bigquery-type-mismatch: New Albertsons sent-to-client alert for audience 10678 has latest Pizza row snapshotting_error/no_batches with pre_snapshotting_check BigQuery expression type incompatibility; same remediation path as the existing BigQuery type mismatch cohort.",
+    "next_action": "Follow target group 260622-albertsons_6-bigquery-type-mismatch.",
+    "incident_ids": [
+      "Q2RVKX275SCHT7"
+    ],
+    "alert_count": 1,
+    "path": "groups/resolved/260622-albertsons_6-client-sent-export-failure-03/case.md"
   }
 ]

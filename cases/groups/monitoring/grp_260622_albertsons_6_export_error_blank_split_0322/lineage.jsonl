@@ -1,0 +1,1 @@
+{"ts":"2026-06-22T19:52:30.809Z","actor":"agent","kind":"split","related_group_id":"260622-albertsons_6-export-error-blank","summary":"Split from 260622-albertsons_6-export-error-blank.","rationale":"Split SFTP/downstream delivery errors for audience 12808 from the LiveRamp API validation failures for audiences 12468, 12495, and 12506.","alert_ids":["Q2EUBM7M7E8UI5"]}

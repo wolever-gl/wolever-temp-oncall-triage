@@ -1,0 +1,26 @@
+{
+  "annotation": {
+    "ts": "2026-06-22T19:23:20.671Z",
+    "alert_ref": {
+      "incident_id": "Q1L98NGVCG68W3",
+      "alert_id": "Q18PGRI36E5UBP"
+    },
+    "tags": [
+      "evidence:albertsons-export-error-blank"
+    ],
+    "decision": "tag",
+    "confidence": "high",
+    "summary": "Latest failure is snapshotting_finished/export_error with blank failure reason. Audience 12506.",
+    "source": {
+      "kind": "tagger",
+      "run_id": "tagrun_20260622192320_260622_albertsons_blocked_remediation_paths",
+      "script_sha256": "3a45cff7b68aec89f881001f79fd089c4e21c51ba474d419f0976a234e103532",
+      "script_path": "cases/assets/taggers/tagrun_20260622192320_260622_albertsons_blocked_remediation_paths/260622-albertsons-blocked-remediation-paths.ts"
+    }
+  },
+  "process": {
+    "stdout": "{\"decision\":\"tag\",\"tags\":[\"evidence:albertsons-export-error-blank\"],\"confidence\":\"high\",\"summary\":\"Latest failure is snapshotting_finished/export_error with blank failure reason. Audience 12506.\"}\n",
+    "stderr": "",
+    "exit_code": 0
+  }
+}

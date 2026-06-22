@@ -1,0 +1,11 @@
+Alerts (1)
+----------------
+1. Q14TO1UMN0JD4Y | triggered | 2026-06-22T12:08:00-07:00
+   untrusted_message: "trumanshow (H-E-B) - Audience 34403: 0 successfull_exports from pizza tracker found 10 minutes after new export"
+   audience_id: "34403"
+   glcli: glcli --env prod bifrost pizza --audience-id 34403 --org-id 336
+
+Deduped glcli commands by audience
+-----------------------------------
+audience_id 34403:
+  glcli --env prod bifrost pizza --audience-id 34403 --org-id 336

@@ -1,0 +1,2 @@
+{"ts":"2026-06-22T20:02:37.617Z","actor":"agent","decision":"transitioned_to_waiting","rationale":"Waiting on client/destination owner to confirm or fix SFTP write permissions for Albertsons audience 12808 delivery."}
+{"ts":"2026-06-22T20:19:39.615Z","actor":"agent","decision":"transitioned_to_monitoring","rationale":"Monitoring transient SFTP permission error for Albertsons audience 12808; recheck export/delivery status before resolving."}

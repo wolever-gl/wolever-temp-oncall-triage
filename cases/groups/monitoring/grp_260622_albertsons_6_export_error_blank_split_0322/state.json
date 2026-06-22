@@ -1,0 +1,27 @@
+{
+  "group_id": "grp_260622_albertsons_6_export_error_blank_split_0322",
+  "state": "monitoring",
+  "tags": [
+    "triage:needs_review",
+    "monitoring:transient-sftp"
+  ],
+  "title": "Albertsons audience 12808 SFTP permission denied",
+  "summary": "Monitoring transient SFTP permission error for Albertsons audience 12808; recheck export/delivery status before resolving.",
+  "deterministic_key": "tag|260622-albertsons_6-export-error-blank|split|Q2EUBM7M7E8UI5",
+  "grouping_version": 3,
+  "created_at": "2026-06-22T19:52:30.809Z",
+  "updated_at": "2026-06-22T20:19:52Z",
+  "next_check_at": "2026-06-23T20:19:52Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q38ZCOXDOWS5O7",
+      "alert_id": "Q2EUBM7M7E8UI5"
+    }
+  ],
+  "incident_ids": [
+    "Q38ZCOXDOWS5O7"
+  ],
+  "related_group_ids": [
+    "260622-albertsons_6-export-error-blank"
+  ]
+}

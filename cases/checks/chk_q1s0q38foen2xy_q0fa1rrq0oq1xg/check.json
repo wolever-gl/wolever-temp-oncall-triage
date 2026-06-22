@@ -1,0 +1,24 @@
+{
+  "check_id": "chk_q1s0q38foen2xy_q0fa1rrq0oq1xg",
+  "source": "pagerduty",
+  "incident_id": "Q1S0Q38FOEN2XY",
+  "alert_id": "Q0FA1RRQ0OQ1XG",
+  "state": "blocked",
+  "scope": {
+    "env": "albertsons",
+    "org_id": "6",
+    "audience_id": "13059",
+    "match_strategy": "checked_export_run_ids",
+    "alert_created_at": "2026-06-22T07:43:59-07:00",
+    "checked_export_run_ids": [],
+    "glcli": "glcli --env albertsons bifrost pizza --audience-id 13059 --org-id 6"
+  },
+  "scope_key": "albertsons|6|13059|unknown_destination|unknown_endpoint|unknown_run",
+  "run_evaluations": [],
+  "blockers": [
+    "missing_run_identity"
+  ],
+  "evidence_artifacts": [],
+  "created_at": "2026-06-22T19:52:00.407Z",
+  "updated_at": "2026-06-22T19:52:00.407Z"
+}

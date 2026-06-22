@@ -1,0 +1,393 @@
+{
+  "run_id": "tagrun_20260622192320_260622_albertsons_blocked_remediation_paths",
+  "created_at": "2026-06-22T19:23:20.238Z",
+  "script_path": "cases/assets/taggers/tagrun_20260622192320_260622_albertsons_blocked_remediation_paths/260622-albertsons-blocked-remediation-paths.ts",
+  "script_sha256": "3a45cff7b68aec89f881001f79fd089c4e21c51ba474d419f0976a234e103532",
+  "filters": {
+    "alertRefs": [
+      {
+        "incident_id": "Q04P1G18UYQXA3",
+        "alert_id": "Q308UE9MGQA2OM"
+      },
+      {
+        "incident_id": "Q054DZZ6GFL4FT",
+        "alert_id": "Q1QZ9JCZZESMEY"
+      },
+      {
+        "incident_id": "Q08JZJLDOM5LPT",
+        "alert_id": "Q06X3CMK8B7V8H"
+      },
+      {
+        "incident_id": "Q0A1CEKFCH7ONE",
+        "alert_id": "Q2IKYSDVR7S1ZC"
+      },
+      {
+        "incident_id": "Q0EAB0NW8E0E1B",
+        "alert_id": "Q0BPE188K88NC7"
+      },
+      {
+        "incident_id": "Q0EQCF34RA3FHN",
+        "alert_id": "Q1JE1OJKDOIKK2"
+      },
+      {
+        "incident_id": "Q0HFO3KTKSKQUS",
+        "alert_id": "Q3QH573GWZPRWI"
+      },
+      {
+        "incident_id": "Q0IG1B3YD4QMMP",
+        "alert_id": "Q0R629AQZQ1IG0"
+      },
+      {
+        "incident_id": "Q0IKE5RSWGLPCM",
+        "alert_id": "Q172GIPKLQGQSH"
+      },
+      {
+        "incident_id": "Q0JHNJP2ZLQPBQ",
+        "alert_id": "Q22I09XP2E6E1D"
+      },
+      {
+        "incident_id": "Q0OC6V7EIETXTN",
+        "alert_id": "Q2BMDCL1DS236R"
+      },
+      {
+        "incident_id": "Q0OHE9K53ZIX45",
+        "alert_id": "Q1ZV0AGF9YTU8Z"
+      },
+      {
+        "incident_id": "Q0P4ONJOGF8NUI",
+        "alert_id": "Q2G9FWMIC7UFBQ"
+      },
+      {
+        "incident_id": "Q0RD55JHSF7WN4",
+        "alert_id": "Q2MC7F4U2LHCVM"
+      },
+      {
+        "incident_id": "Q0WQMS2QB89JFJ",
+        "alert_id": "Q07WSAC9H33AQ4"
+      },
+      {
+        "incident_id": "Q0YS1762L6N8Z7",
+        "alert_id": "Q0GU11MIKPUM0H"
+      },
+      {
+        "incident_id": "Q0YT01CZ1KSH37",
+        "alert_id": "Q2CDM1YUPWXDYA"
+      },
+      {
+        "incident_id": "Q10NGEYDK847U7",
+        "alert_id": "Q2QB6VD0RWRB1Y"
+      },
+      {
+        "incident_id": "Q113K36ZJAIDCD",
+        "alert_id": "Q163EF0KALUFJ4"
+      },
+      {
+        "incident_id": "Q12ZI7SEKYJILC",
+        "alert_id": "Q3AO34JQ925FQ8"
+      },
+      {
+        "incident_id": "Q13AGUZO2RZY3E",
+        "alert_id": "Q2KBGLS3RPVI1J"
+      },
+      {
+        "incident_id": "Q14QMYQC78PXAR",
+        "alert_id": "Q0NGYGGX72TALO"
+      },
+      {
+        "incident_id": "Q16ZT0NICO1CYX",
+        "alert_id": "Q00IWAVA7CXV8K"
+      },
+      {
+        "incident_id": "Q17HQGEWPTMD9O",
+        "alert_id": "Q0T2U13A5WUQTZ"
+      },
+      {
+        "incident_id": "Q18NVJLAMQN5RH",
+        "alert_id": "Q3EN8SU6XV8V03"
+      },
+      {
+        "incident_id": "Q18OLT4XU8V6Z5",
+        "alert_id": "Q0QGECSMBBEX3H"
+      },
+      {
+        "incident_id": "Q18PJFCK0IYHAO",
+        "alert_id": "Q2TVHR26NUJHQC"
+      },
+      {
+        "incident_id": "Q18RUDPFI5PNR0",
+        "alert_id": "Q1PBK8YQR0P2AC"
+      },
+      {
+        "incident_id": "Q1ACSEHK5LJQY2",
+        "alert_id": "Q1AUS6JVPQGCQI"
+      },
+      {
+        "incident_id": "Q1ADWD3D2HKZOL",
+        "alert_id": "Q30Z4LJ6K2FHM5"
+      },
+      {
+        "incident_id": "Q1DGAIPDFK6TU8",
+        "alert_id": "Q23P64UTESW3SP"
+      },
+      {
+        "incident_id": "Q1GCO98PUY1PWA",
+        "alert_id": "Q201XQSRUQFD39"
+      },
+      {
+        "incident_id": "Q1J91U7JRE3G0A",
+        "alert_id": "Q14PSEAHXA0ZAT"
+      },
+      {
+        "incident_id": "Q1JYMIHQDW3DKC",
+        "alert_id": "Q3YYTSZ1P6WZ64"
+      },
+      {
+        "incident_id": "Q1KSN4OF9JBR2I",
+        "alert_id": "Q1L2YJT7TMFSLH"
+      },
+      {
+        "incident_id": "Q1L90F6Y8KCM2I",
+        "alert_id": "Q1UU46HFICIPR4"
+      },
+      {
+        "incident_id": "Q1L98NGVCG68W3",
+        "alert_id": "Q18PGRI36E5UBP"
+      },
+      {
+        "incident_id": "Q1OYMJJW2EGJN4",
+        "alert_id": "Q2RYEDVO4RPBH8"
+      },
+      {
+        "incident_id": "Q1PT0PN71XE637",
+        "alert_id": "Q3WF25DWVDY5VH"
+      },
+      {
+        "incident_id": "Q1QN8ACMUP2CPJ",
+        "alert_id": "Q2H4EQUZFTWMJA"
+      },
+      {
+        "incident_id": "Q1SE40Q7Y7DZY1",
+        "alert_id": "Q3SR79ME6962XJ"
+      },
+      {
+        "incident_id": "Q1U4985AOBV356",
+        "alert_id": "Q149635IJ2130E"
+      },
+      {
+        "incident_id": "Q1UNEJEBO3VF43",
+        "alert_id": "Q1FVLNGENUH5Q3"
+      },
+      {
+        "incident_id": "Q1VZ0A4IVOZMGM",
+        "alert_id": "Q2171I9RQBL2MK"
+      },
+      {
+        "incident_id": "Q1WWDFQD22KH2T",
+        "alert_id": "Q3OOEJ61SDV6KV"
+      },
+      {
+        "incident_id": "Q1XD2X4JC4C1LK",
+        "alert_id": "Q1SSP9QXE5WANK"
+      },
+      {
+        "incident_id": "Q1XN54NBKWPTCA",
+        "alert_id": "Q0DUU5NY4ZSS03"
+      },
+      {
+        "incident_id": "Q20IPIQEPYPPOW",
+        "alert_id": "Q12UU23AU1QACO"
+      },
+      {
+        "incident_id": "Q216GNQKKLVQTK",
+        "alert_id": "Q39SJ1IOO5G52W"
+      },
+      {
+        "incident_id": "Q22I1EXSC9RRA2",
+        "alert_id": "Q03NNFW8YGLTM3"
+      },
+      {
+        "incident_id": "Q23L4D717K60Q2",
+        "alert_id": "Q1758BE2P3BLH9"
+      },
+      {
+        "incident_id": "Q244V4I2RLF881",
+        "alert_id": "Q38XBMN8SB5LRS"
+      },
+      {
+        "incident_id": "Q245CIL2A3XI32",
+        "alert_id": "Q0GVE8T0AMPJVZ"
+      },
+      {
+        "incident_id": "Q25BIFU3F6S1BJ",
+        "alert_id": "Q2M52SE5GXVBEK"
+      },
+      {
+        "incident_id": "Q25HOZVKOE3XJP",
+        "alert_id": "Q2ZY9H1DQEHORZ"
+      },
+      {
+        "incident_id": "Q265RICMV6HVUE",
+        "alert_id": "Q10O4LYP1WWCPI"
+      },
+      {
+        "incident_id": "Q26Q3LA7L8E1DE",
+        "alert_id": "Q23VKJST79HCKT"
+      },
+      {
+        "incident_id": "Q29K2JM784UPYK",
+        "alert_id": "Q0GWOO5AZHY3M8"
+      },
+      {
+        "incident_id": "Q2AUKUD4JDAL43",
+        "alert_id": "Q36O0HFFN9CSM9"
+      },
+      {
+        "incident_id": "Q2BFPCENXYY06A",
+        "alert_id": "Q0K870K6T298UU"
+      },
+      {
+        "incident_id": "Q2DET6AW1NICU7",
+        "alert_id": "Q3HG1SDRVACMZR"
+      },
+      {
+        "incident_id": "Q2ENO9MKSYEG5U",
+        "alert_id": "Q3R0HKWPOG1RJ1"
+      },
+      {
+        "incident_id": "Q2HCCF9I2UIFGY",
+        "alert_id": "Q1JSLQ3YRQ0UWM"
+      },
+      {
+        "incident_id": "Q2I8GXY9IW8UBR",
+        "alert_id": "Q14O6QSODWSCM5"
+      },
+      {
+        "incident_id": "Q2KTIWM0PFB99C",
+        "alert_id": "Q2R3UQITQJIJII"
+      },
+      {
+        "incident_id": "Q2QPIOCASCVFH7",
+        "alert_id": "Q0SJVYSM487CFQ"
+      },
+      {
+        "incident_id": "Q2QS141O50ASS5",
+        "alert_id": "Q16FIG79941Z1K"
+      },
+      {
+        "incident_id": "Q337ZKYTMRUI8M",
+        "alert_id": "Q1MJO784QBCSKX"
+      },
+      {
+        "incident_id": "Q3395UST1KKB67",
+        "alert_id": "Q2MM8FBDXJN9K3"
+      },
+      {
+        "incident_id": "Q33XKCHKMWQNOF",
+        "alert_id": "Q354HLW0V4Z7CD"
+      },
+      {
+        "incident_id": "Q34BCNUF3B97Z5",
+        "alert_id": "Q20ZGXH9H1CBW7"
+      },
+      {
+        "incident_id": "Q34HBEEWBS1ZXB",
+        "alert_id": "Q2FVVPOL7TPAYW"
+      },
+      {
+        "incident_id": "Q368INPJJF6K5Y",
+        "alert_id": "Q0EMF73EAZJKRG"
+      },
+      {
+        "incident_id": "Q36YSJ446NTMYA",
+        "alert_id": "Q1AJ8NUDAG24H4"
+      },
+      {
+        "incident_id": "Q38PBYM679MM76",
+        "alert_id": "Q2IWZPM9W2XEXD"
+      },
+      {
+        "incident_id": "Q38RZMT4FW9XSA",
+        "alert_id": "Q0RUP2JDIHFHPS"
+      },
+      {
+        "incident_id": "Q38ZCOXDOWS5O7",
+        "alert_id": "Q2EUBM7M7E8UI5"
+      },
+      {
+        "incident_id": "Q3BRQDTT1MF67X",
+        "alert_id": "Q3ISRR7YEQ90ZJ"
+      },
+      {
+        "incident_id": "Q3EQ5JV7UPWEGC",
+        "alert_id": "Q3RBVC3Q3D8THK"
+      },
+      {
+        "incident_id": "Q3F3T8YUI45U70",
+        "alert_id": "Q32IDZ6UZD4FV9"
+      },
+      {
+        "incident_id": "Q3FGTTIU517U3C",
+        "alert_id": "Q2QEBIMMATU5H8"
+      },
+      {
+        "incident_id": "Q3FT9KIAST446H",
+        "alert_id": "Q02ZYDO56S0FI1"
+      },
+      {
+        "incident_id": "Q3G9BPSTSE0VSL",
+        "alert_id": "Q3AC16M9ZQQAU7"
+      },
+      {
+        "incident_id": "Q3H5F2DZGCX6KP",
+        "alert_id": "Q02VQNHIJV38HV"
+      },
+      {
+        "incident_id": "Q3I4EBBUGMQWXS",
+        "alert_id": "Q02BJK3F84AGMQ"
+      },
+      {
+        "incident_id": "Q3IROJH5XM5T4U",
+        "alert_id": "Q31WV46APPT5TW"
+      },
+      {
+        "incident_id": "Q3IYSJLR3WPN0Z",
+        "alert_id": "Q1I3WIBP88BHUZ"
+      },
+      {
+        "incident_id": "Q3O313HUCTB2WD",
+        "alert_id": "Q2JS9D0EYQGBA2"
+      },
+      {
+        "incident_id": "Q3OYVZGGFDK3NF",
+        "alert_id": "Q0OP6U977HVBW1"
+      },
+      {
+        "incident_id": "Q3PNSJLQ4RSPPH",
+        "alert_id": "Q1XYPZ92KL25JA"
+      },
+      {
+        "incident_id": "Q3QA1TY3F36XGZ",
+        "alert_id": "Q2USC2TEZTTXHO"
+      },
+      {
+        "incident_id": "Q3QEKPH9YZV412",
+        "alert_id": "Q309D51601M72I"
+      },
+      {
+        "incident_id": "Q3SBABZA6XMU3P",
+        "alert_id": "Q3FO1TATLWT2QU"
+      },
+      {
+        "incident_id": "Q3YT89ZSLIMHSI",
+        "alert_id": "Q2HJ8WQGXX5I9X"
+      },
+      {
+        "incident_id": "Q3ZWG4W8WKUGMK",
+        "alert_id": "Q0652ORZIRYWKX"
+      }
+    ]
+  },
+  "requested_tags": [],
+  "candidate_count": 95,
+  "processed_count": 95
+}

@@ -1,0 +1,26 @@
+{
+  "annotation": {
+    "ts": "2026-06-22T19:23:20.945Z",
+    "alert_ref": {
+      "incident_id": "Q2HCCF9I2UIFGY",
+      "alert_id": "Q1JSLQ3YRQ0UWM"
+    },
+    "tags": [
+      "evidence:albertsons-snapshotting-unknown"
+    ],
+    "decision": "tag",
+    "confidence": "high",
+    "summary": "Latest failure is snapshotting_error/no_batches with blank, unknown, or singleton snapshotting-stage reason. Audience 10935.",
+    "source": {
+      "kind": "tagger",
+      "run_id": "tagrun_20260622192320_260622_albertsons_blocked_remediation_paths",
+      "script_sha256": "3a45cff7b68aec89f881001f79fd089c4e21c51ba474d419f0976a234e103532",
+      "script_path": "cases/assets/taggers/tagrun_20260622192320_260622_albertsons_blocked_remediation_paths/260622-albertsons-blocked-remediation-paths.ts"
+    }
+  },
+  "process": {
+    "stdout": "{\"decision\":\"tag\",\"tags\":[\"evidence:albertsons-snapshotting-unknown\"],\"confidence\":\"high\",\"summary\":\"Latest failure is snapshotting_error/no_batches with blank, unknown, or singleton snapshotting-stage reason. Audience 10935.\"}\n",
+    "stderr": "",
+    "exit_code": 0
+  }
+}

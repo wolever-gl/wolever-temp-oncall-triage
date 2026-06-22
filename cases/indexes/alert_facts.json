@@ -6680,5 +6680,41 @@
     "summary": "NJ Devils (default) - Audience 38715: 0 successfull_exports from pizza tracker found 10 minutes after new export",
     "audience_id": "38715",
     "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q2RVKX275SCHT7",
+    "alert_id": "Q05OJ6D50KFC6Z",
+    "created_at": "2026-06-22T12:00:54-07:00",
+    "summary": "albertsons (Albertsons Media) - Audience 10678: Audience Export failure for 10678 sent to client.",
+    "org_id": "albertsons_6",
+    "audience_id": "10678",
+    "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q1LPO13841C1IC",
+    "alert_id": "Q3FKTK3G0YZ8PQ",
+    "created_at": "2026-06-22T12:01:34-07:00",
+    "summary": "albertsons (Albertsons Media) - Audience 11651: Audience Export failure for 11651 sent to client.",
+    "org_id": "albertsons_6",
+    "audience_id": "11651",
+    "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q24B1M4BAXAHKN",
+    "alert_id": "Q31GDZH2LP6JME",
+    "created_at": "2026-06-22T12:01:35-07:00",
+    "summary": "albertsons (Albertsons Media) - Audience 12901: Audience Export failure for 12901 sent to client.",
+    "org_id": "albertsons_6",
+    "audience_id": "12901",
+    "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q2O4YGBMUXZEFB",
+    "alert_id": "Q14TO1UMN0JD4Y",
+    "created_at": "2026-06-22T12:08:00-07:00",
+    "summary": "trumanshow (H-E-B) - Audience 34403: 0 successfull_exports from pizza tracker found 10 minutes after new export",
+    "org_id": "trumanshow_336",
+    "audience_id": "34403",
+    "export_check_strategy": "any_export_after_alert"
   }
 ]

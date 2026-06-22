@@ -1,0 +1,38 @@
+{
+  "group_id": "260622-albertsons_6-export-error-blank",
+  "state": "open",
+  "tags": [
+    "triage:albertsons-client-sent",
+    "triage:export-error",
+    "triage:tag_grouped"
+  ],
+  "title": "Albertsons LiveRamp API validation failures",
+  "summary": "Albertsons audiences 12468, 12495, and 12506 snapshot/unload successfully, then fail LiveRamp activation validation/API calls with timeouts or 500 responses.",
+  "deterministic_key": "tag|260622-albertsons_6-export-error-blank",
+  "grouping_version": 3,
+  "created_at": "2026-06-22T19:24:10.174Z",
+  "updated_at": "2026-06-22T19:52:30.809Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q16ZT0NICO1CYX",
+      "alert_id": "Q00IWAVA7CXV8K"
+    },
+    {
+      "incident_id": "Q1L98NGVCG68W3",
+      "alert_id": "Q18PGRI36E5UBP"
+    },
+    {
+      "incident_id": "Q20IPIQEPYPPOW",
+      "alert_id": "Q12UU23AU1QACO"
+    }
+  ],
+  "incident_ids": [
+    "Q16ZT0NICO1CYX",
+    "Q1L98NGVCG68W3",
+    "Q20IPIQEPYPPOW"
+  ],
+  "related_group_ids": [
+    "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "grp_260622_albertsons_6_export_error_blank_split_0322"
+  ]
+}

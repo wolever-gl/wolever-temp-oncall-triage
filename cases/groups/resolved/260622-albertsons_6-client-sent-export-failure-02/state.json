@@ -1,0 +1,27 @@
+{
+  "group_id": "260622-albertsons_6-client-sent-export-failure-02",
+  "state": "resolved",
+  "tags": [
+    "triage:needs_review",
+    "resolved:merged"
+  ],
+  "title": "albertsons_6 client-sent-export-failure",
+  "summary": "Merged into 260622-albertsons_6-bigquery-type-mismatch: New Albertsons sent-to-client alert for audience 12901 has latest Pizza row snapshotting_error/no_batches with pre_snapshotting_check BigQuery expression type incompatibility; same remediation path as the existing BigQuery type mismatch cohort.",
+  "deterministic_key": "v3|incident:Q24B1M4BAXAHKN|org:albertsons_6|class:client-sent-export-failure",
+  "grouping_version": 3,
+  "created_at": "2026-06-22T19:46:10.094Z",
+  "updated_at": "2026-06-22T20:11:49.871Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q24B1M4BAXAHKN",
+      "alert_id": "Q31GDZH2LP6JME"
+    }
+  ],
+  "incident_ids": [
+    "Q24B1M4BAXAHKN"
+  ],
+  "related_group_ids": [
+    "260622-albertsons_6-bigquery-type-mismatch"
+  ],
+  "next_action": "Follow target group 260622-albertsons_6-bigquery-type-mismatch."
+}

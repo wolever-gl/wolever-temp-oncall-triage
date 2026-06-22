@@ -1,0 +1,27 @@
+{
+  "group_id": "260622-albertsons_6-inconsistent-pizza-state",
+  "state": "open",
+  "tags": [
+    "triage:albertsons-client-sent",
+    "triage:needs_evidence",
+    "triage:tag_grouped"
+  ],
+  "title": "Albertsons inconsistent Pizza state",
+  "summary": "Albertsons audience 11299 has latest Pizza state snapshotting_error/export_finished, which is internally inconsistent and needs manual review.",
+  "deterministic_key": "tag|260622-albertsons_6-inconsistent-pizza-state",
+  "grouping_version": 3,
+  "created_at": "2026-06-22T19:24:48.840Z",
+  "updated_at": "2026-06-22T19:24:48.840Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q3F3T8YUI45U70",
+      "alert_id": "Q32IDZ6UZD4FV9"
+    }
+  ],
+  "incident_ids": [
+    "Q3F3T8YUI45U70"
+  ],
+  "related_group_ids": [
+    "260618-albertsons_6-client-sent-export-failures-since-260618"
+  ]
+}
