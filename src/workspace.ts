@@ -167,36 +167,47 @@ export async function syncPagerDutyWorkspace(options: {
 
 export async function importActivePagerDutyIncidents(options: {
   workspaceDir: string;
+  includeKnown?: boolean;
   fetchActiveIncidents?: () => Promise<PagerDutyIncidentListRecord[]>;
   importIncident?: (incident: string) => Promise<{ incident_id: string; alert_count: number }>;
   onProgress?: (message: string) => void;
 }): Promise<{
   active_incidents: string[];
+  skipped_known: string[];
   imported: Array<{ incident_id: string; alert_count: number }>;
   grouped: { created: number; attached: number; groups: string[] };
 }> {
-  await initWorkspace(options.workspaceDir);
   const fetchActiveIncidents = options.fetchActiveIncidents ?? fetchActivePagerDutyIncidents;
   const importIncident = options.importIncident ?? ((incident: string) => importPagerDutyIncident({ workspaceDir: options.workspaceDir, incident }));
   options.onProgress?.("Discovering active PagerDuty incidents...");
   const activeIncidents = await fetchActiveIncidents();
   const activeIncidentIds = sortedUnique(activeIncidents.map((incident) => incident.incident_id));
+  const knownIncidentIds = new Set((await loadIncidentRecords(options.workspaceDir)).map((incident) => incident.incident_id));
+  const skippedKnown = options.includeKnown ? [] : activeIncidentIds.filter((incidentId) => knownIncidentIds.has(incidentId));
+  const incidentIdsToImport = options.includeKnown ? activeIncidentIds : activeIncidentIds.filter((incidentId) => !knownIncidentIds.has(incidentId));
   const imported: Array<{ incident_id: string; alert_count: number }> = [];
   options.onProgress?.(`Discovered ${activeIncidentIds.length} active PagerDuty incident(s).`);
+  if (skippedKnown.length > 0) options.onProgress?.(`Skipping ${skippedKnown.length} already-known active PagerDuty incident(s).`);
 
-  for (let idx = 0; idx < activeIncidentIds.length; idx++) {
-    const incidentId = activeIncidentIds[idx]!;
-    options.onProgress?.(`Importing ${idx + 1}/${activeIncidentIds.length}: ${incidentId}`);
+  for (let idx = 0; idx < incidentIdsToImport.length; idx++) {
+    const incidentId = incidentIdsToImport[idx]!;
+    options.onProgress?.(`Importing ${idx + 1}/${incidentIdsToImport.length}: ${incidentId}`);
     const importedIncident = await importIncident(incidentId);
     imported.push(importedIncident);
     options.onProgress?.(`Imported ${importedIncident.incident_id}: ${importedIncident.alert_count} alert(s).`);
+  }
+
+  if (imported.length === 0) {
+    const grouped = { created: 0, attached: 0, groups: [] };
+    options.onProgress?.("No new PagerDuty incidents imported; skipping grouping.");
+    return { active_incidents: activeIncidentIds, skipped_known: skippedKnown, imported, grouped };
   }
 
   options.onProgress?.("Grouping imported alerts...");
   const grouped = await groupImportedAlerts(options.workspaceDir);
   await regenerateIndex(options.workspaceDir);
   options.onProgress?.(`Grouped imported alerts: created=${grouped.created}, attached=${grouped.attached}.`);
-  return { active_incidents: activeIncidentIds, imported, grouped };
+  return { active_incidents: activeIncidentIds, skipped_known: skippedKnown, imported, grouped };
 }
 
 export interface ClosePagerDutyAlertsResult {

@@ -30,8 +30,12 @@ async function main(argv: string[]): Promise<void> {
     return;
   }
   if (command === "import-active-pd") {
-    const result = await importActivePagerDutyIncidents({ workspaceDir, onProgress: (message) => console.log(message) });
-    console.log(`Imported active PagerDuty incidents: active=${result.active_incidents.length}, imported=${result.imported.length}, groups_created=${result.grouped.created}, alerts_attached=${result.grouped.attached}`);
+    const result = await importActivePagerDutyIncidents({
+      workspaceDir,
+      includeKnown: Boolean(args["include-known"]),
+      onProgress: (message) => console.log(message),
+    });
+    console.log(`Imported active PagerDuty incidents: active=${result.active_incidents.length}, skipped_known=${result.skipped_known.length}, imported=${result.imported.length}, groups_created=${result.grouped.created}, alerts_attached=${result.grouped.attached}`);
     for (const imported of result.imported) console.log(`- ${imported.incident_id}: ${imported.alert_count} alert(s)`);
     return;
   }
@@ -380,7 +384,7 @@ function usageText(): string {
   return `Usage:
   bun run oncall-triage init <workspace>
   bun run oncall-triage import-pd <workspace> --incident <pd-url-or-id> [--alerts-file <file>] [--allow-partial true]
-  bun run oncall-triage import-active-pd <workspace>
+  bun run oncall-triage import-active-pd <workspace> [--include-known]
   bun run oncall-triage alerts <workspace> [--filter alert.org=<org_id>] [--filter alert.incident=<id>] [--filter alert.audience=<id>] [--filter alert.destination=<destination>] [--filter alert.state=<state>]
   bun run oncall-triage tag <workspace> --script <file> [--filter alert.org=<org_id>] [--filter alert.incident=<id>] [--filter alert.audience=<id>] [--filter alert.destination=<destination>] [--filter alert.state=<state>] [--tag <tag>] [--limit <n>] [--test]
   bun run oncall-triage group <workspace>

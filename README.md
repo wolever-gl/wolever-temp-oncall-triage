@@ -211,7 +211,8 @@ bun run oncall-triage evidence cases \
 For a new triage pass, start with `import-active-pd`. It lists active
 PagerDuty incidents (`triggered` and `acknowledged`), imports each through the
 same alert-preserving PagerDuty wrapper path as `import-pd`, groups imported
-alerts, and regenerates the case indexes.
+alerts, and regenerates the case indexes. Active incidents already stored under
+`incidents/` are skipped by default; pass `--include-known` to import them again.
 
 `import-pd` validates PagerDuty wrapper alert counts before grouping. If the raw
 wrapper says `Alerts (N)`, the parsed derived facts must contain `N` alert facts

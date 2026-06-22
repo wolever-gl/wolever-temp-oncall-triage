@@ -633,6 +633,7 @@ console.log(JSON.stringify({
       });
 
       expect(result.active_incidents).toEqual(["QTEST123", "QTEST456"]);
+      expect(result.skipped_known).toEqual([]);
       expect(result.imported).toEqual([
         { incident_id: "QTEST123", alert_count: 3 },
         { incident_id: "QTEST456", alert_count: 3 },
@@ -642,6 +643,81 @@ console.log(JSON.stringify({
       const groups = await loadAllGroups(workspaceDir);
       expect(groups).toHaveLength(2);
       expect(groups.flatMap((group) => group.incident_ids).sort()).toEqual(["QTEST123", "QTEST456"]);
+    } finally {
+      await rm(workspaceDir, { recursive: true, force: true });
+    }
+  });
+
+  test("import-active-pd skips incidents already stored in the workspace", async () => {
+    const workspaceDir = await mkdtemp(path.join(tmpdir(), "oncall-triage-v2-"));
+    try {
+      await importPagerDutyIncident({ workspaceDir, incident: "QTEST123", alertsFile: fixture });
+      const importedIncidents: string[] = [];
+
+      const result = await importActivePagerDutyIncidents({
+        workspaceDir,
+        fetchActiveIncidents: async () => [
+          { incident_id: "QTEST123", status: "triggered", created_at: "2026-05-15T16:00:00Z" },
+          { incident_id: "QTEST456", status: "acknowledged", created_at: "2026-05-15T17:00:00Z" },
+        ],
+        importIncident: async (incident) => {
+          importedIncidents.push(incident);
+          return importPagerDutyIncident({ workspaceDir, incident, alertsFile: fixture });
+        },
+      });
+
+      expect(result.active_incidents).toEqual(["QTEST123", "QTEST456"]);
+      expect(result.skipped_known).toEqual(["QTEST123"]);
+      expect(importedIncidents).toEqual(["QTEST456"]);
+      expect(result.imported).toEqual([{ incident_id: "QTEST456", alert_count: 3 }]);
+    } finally {
+      await rm(workspaceDir, { recursive: true, force: true });
+    }
+  });
+
+  test("import-active-pd does not group existing imported alerts when every active incident is already known", async () => {
+    const workspaceDir = await mkdtemp(path.join(tmpdir(), "oncall-triage-v2-"));
+    try {
+      await importPagerDutyIncident({ workspaceDir, incident: "QTEST123", alertsFile: fixture });
+
+      const result = await importActivePagerDutyIncidents({
+        workspaceDir,
+        fetchActiveIncidents: async () => [
+          { incident_id: "QTEST123", status: "triggered", created_at: "2026-05-15T16:00:00Z" },
+        ],
+        importIncident: async (incident) => importPagerDutyIncident({ workspaceDir, incident, alertsFile: fixture }),
+      });
+
+      expect(result.skipped_known).toEqual(["QTEST123"]);
+      expect(result.imported).toEqual([]);
+      expect(result.grouped).toEqual({ created: 0, attached: 0, groups: [] });
+      expect(await loadAllGroups(workspaceDir)).toEqual([]);
+    } finally {
+      await rm(workspaceDir, { recursive: true, force: true });
+    }
+  });
+
+  test("import-active-pd can include incidents already stored in the workspace", async () => {
+    const workspaceDir = await mkdtemp(path.join(tmpdir(), "oncall-triage-v2-"));
+    try {
+      await importPagerDutyIncident({ workspaceDir, incident: "QTEST123", alertsFile: fixture });
+      const importedIncidents: string[] = [];
+
+      const result = await importActivePagerDutyIncidents({
+        workspaceDir,
+        includeKnown: true,
+        fetchActiveIncidents: async () => [
+          { incident_id: "QTEST123", status: "triggered", created_at: "2026-05-15T16:00:00Z" },
+        ],
+        importIncident: async (incident) => {
+          importedIncidents.push(incident);
+          return importPagerDutyIncident({ workspaceDir, incident, alertsFile: fixture });
+        },
+      });
+
+      expect(result.skipped_known).toEqual([]);
+      expect(importedIncidents).toEqual(["QTEST123"]);
+      expect(result.imported).toEqual([{ incident_id: "QTEST123", alert_count: 3 }]);
     } finally {
       await rm(workspaceDir, { recursive: true, force: true });
     }
