@@ -6,8 +6,8 @@
 
 State: `waiting`
 Tags: `triage:albertsons-client-sent`, `triage:http-client-error`, `triage:quervice-validation`, `triage:tag_grouped`, `waiting:client`
-Incidents: [Q054DZZ6GFL4FT](https://growthloop.pagerduty.com/incidents/Q054DZZ6GFL4FT), [Q0KT9MIUIF06VD](https://growthloop.pagerduty.com/incidents/Q0KT9MIUIF06VD), [Q0LRG7LC17QHC0](https://growthloop.pagerduty.com/incidents/Q0LRG7LC17QHC0), [Q0NEGMFU9SDRIP](https://growthloop.pagerduty.com/incidents/Q0NEGMFU9SDRIP), [Q0YMC0G8MBU3S7](https://growthloop.pagerduty.com/incidents/Q0YMC0G8MBU3S7), [Q18PJFCK0IYHAO](https://growthloop.pagerduty.com/incidents/Q18PJFCK0IYHAO), [Q1C6Q8ZS6DLVIH](https://growthloop.pagerduty.com/incidents/Q1C6Q8ZS6DLVIH), [Q1CEIF2TYUZHSP](https://growthloop.pagerduty.com/incidents/Q1CEIF2TYUZHSP), [Q1LJB8EJA6JZEB](https://growthloop.pagerduty.com/incidents/Q1LJB8EJA6JZEB), [Q1O1OOB7GJ8P4A](https://growthloop.pagerduty.com/incidents/Q1O1OOB7GJ8P4A), [Q1S0Q38FOEN2XY](https://growthloop.pagerduty.com/incidents/Q1S0Q38FOEN2XY), [Q281IJMKYIYEHV](https://growthloop.pagerduty.com/incidents/Q281IJMKYIYEHV), [Q29WSKI7IBRPVW](https://growthloop.pagerduty.com/incidents/Q29WSKI7IBRPVW), [Q2ECAALJOOO1R6](https://growthloop.pagerduty.com/incidents/Q2ECAALJOOO1R6), [Q2IIOBNUV6BSPG](https://growthloop.pagerduty.com/incidents/Q2IIOBNUV6BSPG), [Q2M9PQ0VIYN9Q7](https://growthloop.pagerduty.com/incidents/Q2M9PQ0VIYN9Q7), [Q337ZKYTMRUI8M](https://growthloop.pagerduty.com/incidents/Q337ZKYTMRUI8M), [Q38JIFOCY2F0AO](https://growthloop.pagerduty.com/incidents/Q38JIFOCY2F0AO), [Q3X51HMAYEMKHO](https://growthloop.pagerduty.com/incidents/Q3X51HMAYEMKHO)
-Alerts: 19
+Incidents: [Q054DZZ6GFL4FT](https://growthloop.pagerduty.com/incidents/Q054DZZ6GFL4FT), [Q0KT9MIUIF06VD](https://growthloop.pagerduty.com/incidents/Q0KT9MIUIF06VD), [Q0LRG7LC17QHC0](https://growthloop.pagerduty.com/incidents/Q0LRG7LC17QHC0), [Q0NEGMFU9SDRIP](https://growthloop.pagerduty.com/incidents/Q0NEGMFU9SDRIP), [Q0ONUAJ6HJ075M](https://growthloop.pagerduty.com/incidents/Q0ONUAJ6HJ075M), [Q0YMC0G8MBU3S7](https://growthloop.pagerduty.com/incidents/Q0YMC0G8MBU3S7), [Q0YXEG844L38X5](https://growthloop.pagerduty.com/incidents/Q0YXEG844L38X5), [Q18PJFCK0IYHAO](https://growthloop.pagerduty.com/incidents/Q18PJFCK0IYHAO), [Q1C6Q8ZS6DLVIH](https://growthloop.pagerduty.com/incidents/Q1C6Q8ZS6DLVIH), [Q1CEIF2TYUZHSP](https://growthloop.pagerduty.com/incidents/Q1CEIF2TYUZHSP), [Q1GVCKXSEM4VIF](https://growthloop.pagerduty.com/incidents/Q1GVCKXSEM4VIF), [Q1LJB8EJA6JZEB](https://growthloop.pagerduty.com/incidents/Q1LJB8EJA6JZEB), [Q1O1OOB7GJ8P4A](https://growthloop.pagerduty.com/incidents/Q1O1OOB7GJ8P4A), [Q1S0Q38FOEN2XY](https://growthloop.pagerduty.com/incidents/Q1S0Q38FOEN2XY), [Q26H5N9E0O7N0Z](https://growthloop.pagerduty.com/incidents/Q26H5N9E0O7N0Z), [Q281IJMKYIYEHV](https://growthloop.pagerduty.com/incidents/Q281IJMKYIYEHV), [Q29WSKI7IBRPVW](https://growthloop.pagerduty.com/incidents/Q29WSKI7IBRPVW), [Q2C0F360LV1E6D](https://growthloop.pagerduty.com/incidents/Q2C0F360LV1E6D), [Q2C59EMLGBSSWK](https://growthloop.pagerduty.com/incidents/Q2C59EMLGBSSWK), [Q2ECAALJOOO1R6](https://growthloop.pagerduty.com/incidents/Q2ECAALJOOO1R6), [Q2EEZBO0CVUEW3](https://growthloop.pagerduty.com/incidents/Q2EEZBO0CVUEW3), [Q2IIOBNUV6BSPG](https://growthloop.pagerduty.com/incidents/Q2IIOBNUV6BSPG), [Q2M9PQ0VIYN9Q7](https://growthloop.pagerduty.com/incidents/Q2M9PQ0VIYN9Q7), [Q2W8MBXYOAXD3J](https://growthloop.pagerduty.com/incidents/Q2W8MBXYOAXD3J), [Q337ZKYTMRUI8M](https://growthloop.pagerduty.com/incidents/Q337ZKYTMRUI8M), [Q38JIFOCY2F0AO](https://growthloop.pagerduty.com/incidents/Q38JIFOCY2F0AO), [Q3C6EY1CXX6DTB](https://growthloop.pagerduty.com/incidents/Q3C6EY1CXX6DTB), [Q3PZTO9L0YMZJ9](https://growthloop.pagerduty.com/incidents/Q3PZTO9L0YMZJ9), [Q3X51HMAYEMKHO](https://growthloop.pagerduty.com/incidents/Q3X51HMAYEMKHO)
+Alerts: 29
 
 ## Current Summary
 
@@ -15,7 +15,7 @@ Added SE05 audience 11349, whose pre_snapshotting_check failed because a referen
 
 ## Alert Scope
 
-- Alert facts: 19 imported, 19 linked to this group.
+- Alert facts: 29 imported, 29 linked to this group.
 - Orgs: `albertsons_6`
 - Audiences: `11349`, `12270`, `2125`, `2126`, `2158`, `2173`, `2174`, `2175`, and 8 more
 - Destinations: `live_ramp_activation`
@@ -30,21 +30,17 @@ Representative alerts:
 - Q337ZKYTMRUI8M/Q1MJO784QBCSKX: 2026-06-22T10:39:30-07:00; albertsons_6; audience 3391. albertsons (Albertsons Media) - Audience 3391: Audience Export failure for 3391 sent to client.
 - Q054DZZ6GFL4FT/Q1QZ9JCZZESMEY: 2026-06-22T10:48:07-07:00; albertsons_6; audience 12270. albertsons (Albertsons Media) - Audience 12270: Audience Export failure for 12270 sent to client.
 - Q18PJFCK0IYHAO/Q2TVHR26NUJHQC: 2026-06-22T10:49:57-07:00; albertsons_6; audience 9323. albertsons (Albertsons Media) - Audience 9323: Audience Export failure for 9323 sent to client.
-- Q0LRG7LC17QHC0/Q2L67OM5WJOTID: 2026-06-22T21:28:44-07:00; albertsons_6; audience 8944. albertsons (Albertsons Media) - Audience 8944: Audience Export failure for 8944 sent to client.
-- Q29WSKI7IBRPVW/Q1VMCJ57UJQR3J: 2026-06-23T07:31:19-07:00; albertsons_6; audience 2125; live_ramp_activation; snapshotting_error/no_batches. albertsons (Albertsons Media): Exports for audience 2125 failed with states: <(snapshotting_error,no_batches)>
-  Runs: `2125-live_ramp_activation_628-scheduled__2026-06-23T00:00:00+00:00`
-- Q0KT9MIUIF06VD/Q2DLF16GB8QVJD: 2026-06-23T07:31:20-07:00; albertsons_6; audience 2126; live_ramp_activation; snapshotting_error/no_batches. albertsons (Albertsons Media): Exports for audience 2126 failed with states: <(snapshotting_error,no_batches)>
-  Runs: `2126-live_ramp_activation_629-scheduled__2026-06-23T00:00:00+00:00`
-- Q0NEGMFU9SDRIP/Q0SHHB9EYNWUBZ: 2026-06-23T07:31:25-07:00; albertsons_6; audience 2158; live_ramp_activation; snapshotting_error/no_batches. albertsons (Albertsons Media): Exports for audience 2158 failed with states: <(snapshotting_error,no_batches)>
-  Runs: `2158-live_ramp_activation_657-scheduled__2026-06-23T00:00:00+00:00`
-- Q1C6Q8ZS6DLVIH/Q1HTH8YSKV9L1N: 2026-06-23T07:31:28-07:00; albertsons_6; audience 2173; live_ramp_activation; snapshotting_error/no_batches. albertsons (Albertsons Media): Exports for audience 2173 failed with states: <(snapshotting_error,no_batches)>
-  Runs: `2173-live_ramp_activation_658-scheduled__2026-06-23T00:00:00+00:00`
-- Showing 10 of 19 alert facts; see `indexes/alert_facts.json` for the full imported set.
+- Q26H5N9E0O7N0Z/Q1UHFURH997VC0: 2026-06-22T18:00:09-07:00; albertsons_6; audience 2237. albertsons (Albertsons Media) - Audience 2237: Audience Export failure for 2237 sent to client.
+- Q0YXEG844L38X5/Q21NUVH0SYG7PD: 2026-06-22T18:44:13-07:00; albertsons_6; audience 2126. albertsons (Albertsons Media) - Audience 2126: Audience Export failure for 2126 sent to client.
+- Q0ONUAJ6HJ075M/Q1731P4QP1TL7V: 2026-06-22T19:06:41-07:00; albertsons_6; audience 2173. albertsons (Albertsons Media) - Audience 2173: Audience Export failure for 2173 sent to client.
+- Q1GVCKXSEM4VIF/Q1OROHJ2I696DT: 2026-06-22T19:21:27-07:00; albertsons_6; audience 2175. albertsons (Albertsons Media) - Audience 2175: Audience Export failure for 2175 sent to client.
+- Q3PZTO9L0YMZJ9/Q2Q02QCOTXW7A2: 2026-06-22T19:28:34-07:00; albertsons_6; audience 2125. albertsons (Albertsons Media) - Audience 2125: Audience Export failure for 2125 sent to client.
+- Showing 10 of 29 alert facts; see `indexes/alert_facts.json` for the full imported set.
 
 ## Export Checks
 
-- Checks: 19.
-- States: `blocked`=19
+- Checks: 29.
+- States: `blocked`=29
 - Blockers seen: `missing_export_after_alert`, `snapshotting_error_requires_review`
 
 Check evidence:
@@ -68,12 +64,20 @@ Check evidence:
   Command: `glcli --env albertsons bifrost pizza --audience-id 2158 --org-id 6`
   Blockers: `snapshotting_error_requires_review`
   Run 2158-live_ramp_activation_657-scheduled__2026-06-23T00:00:00+00:00: health=`blocked`; blockers=snapshotting_error_requires_review; created=2026-06-23T08:16:30.869570+00:00; snapshotting=snapshotting_error; export=no_batches; failed=0.
+- chk_q0onuaj6hj075m_q1731p4qp1tl7v (Q0ONUAJ6HJ075M/Q1731P4QP1TL7V): state=`blocked`.
+  Scope: env=albertsons; org=6; audience=2173.
+  Command: `glcli --env albertsons bifrost pizza --audience-id 2173 --org-id 6`
+  Blockers: `missing_export_after_alert`
 - chk_q0ymc0g8mbu3s7_q07n6ly7xhchxk (Q0YMC0G8MBU3S7/Q07N6LY7XHCHXK): state=`blocked`.
   Scope: env=albertsons; org=6; audience=3391; destination=live_ramp_activation.
   Checked runs: `3391-live_ramp_activation_1321-scheduled__2026-06-22T00:00:00+00:00`
   Command: `glcli --env albertsons bifrost pizza --audience-id 3391 --org-id 6`
   Blockers: `snapshotting_error_requires_review`
   Run 3391-live_ramp_activation_1321-scheduled__2026-06-22T00:00:00+00:00: health=`blocked`; blockers=snapshotting_error_requires_review; created=2026-06-22T16:19:48.006128+00:00; snapshotting=snapshotting_error; export=no_batches; failed=0.
+- chk_q0yxeg844l38x5_q21nuvh0syg7pd (Q0YXEG844L38X5/Q21NUVH0SYG7PD): state=`blocked`.
+  Scope: env=albertsons; org=6; audience=2126.
+  Command: `glcli --env albertsons bifrost pizza --audience-id 2126 --org-id 6`
+  Blockers: `missing_export_after_alert`
 - chk_q18pjfck0iyhao_q2tvhr26nujhqc (Q18PJFCK0IYHAO/Q2TVHR26NUJHQC): state=`blocked`.
   Scope: env=albertsons; org=6; audience=9323.
   Command: `glcli --env albertsons bifrost pizza --audience-id 9323 --org-id 6`
@@ -90,19 +94,7 @@ Check evidence:
   Command: `glcli --env albertsons bifrost pizza --audience-id 8944 --org-id 6`
   Blockers: `snapshotting_error_requires_review`
   Run 8944-live_ramp_activation_2488-scheduled__2026-06-23T00:00:00+00:00: health=`blocked`; blockers=snapshotting_error_requires_review; created=2026-06-23T04:28:39.917222+00:00; snapshotting=snapshotting_error; export=no_batches; failed=0.
-- chk_q1ljb8eja6jzeb_q091wb9l3w1etp (Q1LJB8EJA6JZEB/Q091WB9L3W1ETP): state=`blocked`.
-  Scope: env=albertsons; org=6; audience=7053; destination=live_ramp_activation.
-  Checked runs: `7053-live_ramp_activation_1463-scheduled__2026-06-23T00:00:00+00:00`
-  Command: `glcli --env albertsons bifrost pizza --audience-id 7053 --org-id 6`
-  Blockers: `snapshotting_error_requires_review`
-  Run 7053-live_ramp_activation_1463-scheduled__2026-06-23T00:00:00+00:00: health=`blocked`; blockers=snapshotting_error_requires_review; created=2026-06-23T03:29:38.869787+00:00; snapshotting=snapshotting_error; export=no_batches; failed=0.
-- chk_q1o1oob7gj8p4a_q27l5ranb68ku4 (Q1O1OOB7GJ8P4A/Q27L5RANB68KU4): state=`blocked`.
-  Scope: env=albertsons; org=6; audience=2218; destination=live_ramp_activation.
-  Checked runs: `2218-live_ramp_activation_697-scheduled__2026-06-23T00:00:00+00:00`
-  Command: `glcli --env albertsons bifrost pizza --audience-id 2218 --org-id 6`
-  Blockers: `snapshotting_error_requires_review`
-  Run 2218-live_ramp_activation_697-scheduled__2026-06-23T00:00:00+00:00: health=`blocked`; blockers=snapshotting_error_requires_review; created=2026-06-23T02:49:09.028921+00:00; snapshotting=snapshotting_error; export=no_batches; failed=0.
-- Showing 10 of 19 checks; see `indexes/checks.json` and `checks/*/check.json` for the full evidence set.
+- Showing 10 of 29 checks; see `indexes/checks.json` and `checks/*/check.json` for the full evidence set.
 
 ## Recent Evidence
 

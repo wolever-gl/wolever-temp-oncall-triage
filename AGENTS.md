@@ -22,6 +22,10 @@ Use this repo as a case-workspace system, not a spreadsheet workflow.
 - Agents may write compact PagerDuty breadcrumbs when useful.
 - Keep state in `state.json`. `case.md` is generated and must not be edited
   directly.
+- When several groups merge into one target, use one merge command with repeated
+  `--source` flags, for example
+  `bun run oncall-triage merge cases --source A --source B --target C --rationale "..."`
+  instead of looping over one merge per source.
 - Keep free-form human or agent notes in `notes.md`; generated `case.md`
   copies `notes.md` into the case view when the notes file is present.
 - Open cases must be self-orienting in `case.md`: include enough alert scope,
@@ -32,6 +36,7 @@ Use this repo as a case-workspace system, not a spreadsheet workflow.
 - Use the CLI for structural mutations. Direct file edits are fine for narrative and artifact files.
 - Prefer shared namespaced filters for CLI selection, for example
   `--filter group.id=<group-id>`, `--filter group.state=new`,
+  `--filter "group.id in group-a,group-b,group-c"`,
   `--filter alert.org=albertsons_6`, and
   `--filter alert.destination=live-ramp`. Do not use old selector aliases such
   as `--group`, `--org`, `--audience`, `--destination`, or queue `--state` on
@@ -49,6 +54,10 @@ Use this repo as a case-workspace system, not a spreadsheet workflow.
   `bun run oncall-triage import-active-pd cases`, then
   run the export preflight when the case has export-alert evidence:
   `bun run oncall-triage preflight cases --filter group.id=<group-id>`.
+  For a hand-picked list of groups, run one command with
+  `bun run oncall-triage preflight cases --filter "group.id in id1,id2,id3"`;
+  do not loop over individual `group.id=<id>` commands because the single
+  command batches Pizza requests and reuses Bifrost proxies.
   For a full pass across new cases, run
   `bun run oncall-triage preflight cases --filter group.state=new`.
   If it resolves or moves the case to monitoring, stop; if it records blocked

@@ -11,7 +11,7 @@
   "deterministic_key": "tag|260622-albertsons_6-bigquery-type-mismatch",
   "grouping_version": 3,
   "created_at": "2026-06-22T19:23:46.004Z",
-  "updated_at": "2026-06-23T15:31:28.836Z",
+  "updated_at": "2026-06-23T15:36:30.458Z",
   "alert_refs": [
     {
       "incident_id": "Q0B75DL9CGNBG0",
@@ -32,6 +32,10 @@
     {
       "incident_id": "Q13AGUZO2RZY3E",
       "alert_id": "Q2KBGLS3RPVI1J"
+    },
+    {
+      "incident_id": "Q140U7GG9RCAQU",
+      "alert_id": "Q2AU0IE7CCV4T6"
     },
     {
       "incident_id": "Q14QMYQC78PXAR",
@@ -138,8 +142,16 @@
       "alert_id": "Q354HLW0V4Z7CD"
     },
     {
+      "incident_id": "Q35FXUK3R7EP76",
+      "alert_id": "Q2MKFM548X6EUT"
+    },
+    {
       "incident_id": "Q368INPJJF6K5Y",
       "alert_id": "Q0EMF73EAZJKRG"
+    },
+    {
+      "incident_id": "Q3D5BM8QKKHA3E",
+      "alert_id": "Q2EKH842U2JBWZ"
     },
     {
       "incident_id": "Q3IROJH5XM5T4U",
@@ -164,6 +176,7 @@
     "Q0P4ONJOGF8NUI",
     "Q0YS1762L6N8Z7",
     "Q13AGUZO2RZY3E",
+    "Q140U7GG9RCAQU",
     "Q14QMYQC78PXAR",
     "Q18OLT4XU8V6Z5",
     "Q18RUDPFI5PNR0",
@@ -182,7 +195,9 @@
     "Q2RVKX275SCHT7",
     "Q2YTLIYU53UIVU",
     "Q33XKCHKMWQNOF",
+    "Q35FXUK3R7EP76",
     "Q368INPJJF6K5Y",
+    "Q3D5BM8QKKHA3E",
     "Q3IROJH5XM5T4U",
     "Q3O313HUCTB2WD",
     "Q3QCKCZMRUR8MC",
@@ -193,6 +208,9 @@
     "260622-albertsons_6-client-sent-export-failure",
     "260622-albertsons_6-client-sent-export-failure-02",
     "260622-albertsons_6-client-sent-export-failure-03",
+    "260622-albertsons_6-client-sent-export-failure-08",
+    "260622-albertsons_6-client-sent-export-failure-17",
+    "260622-albertsons_6-client-sent-export-failure-22",
     "260622-albertsons_6-snapshotting-error-02",
     "260622-albertsons_6-snapshotting-error-05",
     "260622-albertsons_6-snapshotting-error-06",

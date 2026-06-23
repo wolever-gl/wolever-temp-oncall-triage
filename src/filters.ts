@@ -12,6 +12,7 @@ export interface AlertFilter {
 
 export interface GroupFilter {
   id?: string;
+  ids?: string[];
   state?: GroupStateName;
   tags?: string[];
   incidentId?: string;
@@ -27,6 +28,19 @@ const GROUP_STATES = new Set<GroupStateName>(["new", "open", "waiting", "monitor
 export function parseFilterValues(values: string[]): CommandFilters {
   const filters: CommandFilters = { alert: {}, group: {} };
   for (const value of values) {
+    const inFilter = parseInFilter(value);
+    if (inFilter) {
+      const { key, rawValues } = inFilter;
+      switch (key) {
+        case "group.id":
+          mergeValues(filters.group, "ids", parseList(rawValues), key);
+          break;
+        default:
+          throw new Error(`Unsupported --filter in operator for key: ${key}`);
+      }
+      continue;
+    }
+
     const separator = value.indexOf("=");
     if (separator < 1) throw new Error(`--filter must be key=value: ${value}`);
     const key = value.slice(0, separator).trim();
@@ -86,6 +100,7 @@ export function mergeAlertFilter(left: AlertFilter, right: AlertFilter): AlertFi
 export function mergeGroupFilter(left: GroupFilter, right: GroupFilter): GroupFilter {
   const merged: GroupFilter = { ...left };
   mergeScalar(merged, "id", right.id, "group.id");
+  if (right.ids) merged.ids = merged.ids ? intersectValues(merged.ids, right.ids) : right.ids;
   mergeScalar(merged, "state", right.state, "group.state");
   mergeScalar(merged, "incidentId", right.incidentId, "group.incident");
   if (right.tags) merged.tags = [...(merged.tags ?? []), ...right.tags];
@@ -115,6 +130,7 @@ export function matchesAlertFilter(alert: AlertFact, filters: AlertFilter): bool
 export function matchesGroupFilter(group: GroupState, filters: GroupFilter | undefined): boolean {
   if (!filters) return true;
   if (filters.id && group.group_id !== filters.id) return false;
+  if (filters.ids && !filters.ids.includes(group.group_id)) return false;
   if (filters.state && group.state !== filters.state) return false;
   if (filters.incidentId && !group.incident_ids.includes(filters.incidentId)) return false;
   if (filters.tags && !filters.tags.every((tag) => group.tags.includes(tag))) return false;
@@ -132,9 +148,41 @@ function mergeScalar<T extends object, K extends keyof T>(target: T, key: K, val
   setScalar(target, key, value as NonNullable<T[K]>, label);
 }
 
+function mergeValues<T extends object, K extends keyof T>(target: T, key: K, values: string[], label: string): void {
+  if (values.length === 0) throw new Error(`--filter ${label} in must include at least one value.`);
+  const current = target[key] as string[] | undefined;
+  target[key] = (current ? intersectValues(current, values) : values) as T[K];
+}
+
+function parseInFilter(value: string): { key: string; rawValues: string } | undefined {
+  const match = value.match(/^(.+?)\s+in\s+(.+)$/);
+  if (!match) return undefined;
+  const key = match[1]?.trim();
+  const rawValues = match[2]?.trim();
+  if (!key || !rawValues) throw new Error(`--filter in must be key in value[,value...]: ${value}`);
+  return { key, rawValues };
+}
+
+function parseList(raw: string): string[] {
+  const values = raw
+    .split(/[,\s]+/)
+    .map((value) => value.trim())
+    .filter(Boolean);
+  return sortedUnique(values);
+}
+
+function intersectValues(left: string[], right: string[]): string[] {
+  const rightValues = new Set(right);
+  return left.filter((value) => rightValues.has(value));
+}
+
 function intersectAlertRefs(left: AlertRef[], right: AlertRef[]): AlertRef[] {
   const rightKeys = new Set(right.map(refKey));
   return left.filter((ref) => rightKeys.has(refKey(ref)));
+}
+
+function sortedUnique(values: string[]): string[] {
+  return [...new Set(values)].sort();
 }
 
 function refKey(ref: AlertRef): string {

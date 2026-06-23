@@ -3,7 +3,7 @@ import { mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import path from "node:path";
 import { checkExportsWorkspace } from "./checkExports";
-import { appendEvidence, closePagerDutyAlertsForResolvedGroups, groupImportedAlerts, groupTaggedAlerts, importActivePagerDutyIncidents, importPagerDutyIncident, initWorkspace, loadAllGroups, loadMatchRules, mergeGroups, queryAlertFacts, readIncidentRecord, regenerateIndex, runAlertTagger, splitGroup, syncPagerDutyWorkspace, transitionGroup, writeGroupState } from "./workspace";
+import { appendEvidence, closePagerDutyAlertsForResolvedGroups, groupImportedAlerts, groupTaggedAlerts, importActivePagerDutyIncidents, importPagerDutyIncident, initWorkspace, loadAllGroups, loadMatchRules, mergeGroups, mergeManyGroups, queryAlertFacts, readIncidentRecord, regenerateIndex, runAlertTagger, splitGroup, syncPagerDutyWorkspace, transitionGroup, writeGroupState } from "./workspace";
 import type { PagerDutyAlertStatusRecord, PagerDutyIncidentStatusRecord } from "./pagerduty";
 import type { PizzaExportRow } from "./schema";
 
@@ -466,6 +466,33 @@ console.log(JSON.stringify({
 
       const index = await regenerateIndex(workspaceDir);
       expect(index.groups.find((group) => group.group_id === sourceGroupId)?.state).toBe("resolved");
+    } finally {
+      await rm(workspaceDir, { recursive: true, force: true });
+    }
+  });
+
+  test("merges multiple sources into one target with one call", async () => {
+    const workspaceDir = await mkdtemp(path.join(tmpdir(), "oncall-triage-v2-"));
+    try {
+      await importPagerDutyIncident({ workspaceDir, incident: "QTEST123", alertsFile: fixture });
+      await importPagerDutyIncident({ workspaceDir, incident: "QTEST456", alertsFile: fixture });
+      await importPagerDutyIncident({ workspaceDir, incident: "QTEST789", alertsFile: fixture });
+      const grouped = await groupImportedAlerts(workspaceDir);
+      const sourceGroupIds = [grouped.groups[0]!, grouped.groups[1]!];
+      const targetGroupId = grouped.groups[2]!;
+
+      const result = await mergeManyGroups({
+        workspaceDir,
+        sourceGroupIds,
+        targetGroupId,
+        rationale: "Same root cause across all groups.",
+      });
+
+      expect(result.sources.map((group) => group.state)).toEqual(["resolved", "resolved"]);
+      expect(result.target.alert_refs).toHaveLength(9);
+      const index = await regenerateIndex(workspaceDir);
+      expect(index.groups.filter((group) => sourceGroupIds.includes(group.group_id)).map((group) => group.state)).toEqual(["resolved", "resolved"]);
+      expect(index.groups.find((group) => group.group_id === targetGroupId)?.alert_count).toBe(9);
     } finally {
       await rm(workspaceDir, { recursive: true, force: true });
     }

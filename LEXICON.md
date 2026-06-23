@@ -321,9 +321,10 @@ Invariants:
   `failed_export_count`, `export_error`, and `snapshotting_error` as the
   important failure signals unless a domain-specific tagger explicitly says
   otherwise.
-- For export incidents, prefer the loop: cohort query, per-alert evidence
-  check, tagger classification, then `group --tag`. Do not group the whole
-  cohort merely because alerts share org, destination, or incident.
+- For export incidents, prefer the loop: cohort query, batched `preflight`
+  evidence refresh for the selected groups or queue, tagger classification, then
+  `group --tag`. Do not group the whole cohort merely because alerts share org,
+  destination, or incident.
 
 ### Decision Event
 

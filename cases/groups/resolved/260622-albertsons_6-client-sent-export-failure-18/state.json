@@ -1,0 +1,27 @@
+{
+  "group_id": "260622-albertsons_6-client-sent-export-failure-18",
+  "state": "resolved",
+  "tags": [
+    "triage:needs_review",
+    "resolved:merged"
+  ],
+  "title": "albertsons_6 client-sent-export-failure",
+  "summary": "Merged into 260622-albertsons_6-client-sent-export-failure-04: Targeted preflight for this Albertsons client-sent singleton found the same blocker as the new missing_export_after_alert class: Pizza history exists, but no matching export run after the alert.",
+  "deterministic_key": "v3|incident:Q36ENB8WGMYDAW|org:albertsons_6|class:client-sent-export-failure",
+  "grouping_version": 3,
+  "created_at": "2026-06-23T13:54:15.733Z",
+  "updated_at": "2026-06-23T15:44:11.480Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q36ENB8WGMYDAW",
+      "alert_id": "Q0J8Z3B3E1AQKE"
+    }
+  ],
+  "incident_ids": [
+    "Q36ENB8WGMYDAW"
+  ],
+  "related_group_ids": [
+    "260622-albertsons_6-client-sent-export-failure-04"
+  ],
+  "next_action": "Follow target group 260622-albertsons_6-client-sent-export-failure-04."
+}

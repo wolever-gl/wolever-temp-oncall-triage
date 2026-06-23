@@ -334,12 +334,12 @@
   },
   {
     "match_key": "v3|incident:Q09FHOR4ZDMTUL|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260623-albertsons_6-client-sent-export-failure",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-client-sent-export-failure-04",
+    "reason": "merged",
     "created_at": "2026-06-23T13:54:15.733Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260623-albertsons_6-client-sent-export-failure."
+    "rationale": "Targeted preflight for this Albertsons client-sent singleton found the same blocker as the new missing_export_after_alert class: Pizza history exists, but no matching export run after the alert."
   },
   {
     "match_key": "v3|incident:Q09VNZ6WUTJ8HM|org:faraday_273|dest:facebook|class:export-error",
@@ -784,12 +784,12 @@
   },
   {
     "match_key": "v3|incident:Q0ONUAJ6HJ075M|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-client-sent-export-failure-06",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-http-client-errors",
+    "reason": "merged",
     "created_at": "2026-06-23T13:54:15.733Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-client-sent-export-failure-06."
+    "rationale": "Client-sent failure is for the same Albertsons audience as a 2026-06-23 snapshotting HTTP-client alert already classified as the existing Quervice missing Product_Attributes_Product_Group_categoryL validation class."
   },
   {
     "match_key": "v3|incident:Q0OZ0872TDR2Y2|org:albertsons_6|class:albertsons-albertsons-media-no-exports-for-audie",
@@ -1054,12 +1054,12 @@
   },
   {
     "match_key": "v3|incident:Q0YXEG844L38X5|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-client-sent-export-failure-07",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-http-client-errors",
+    "reason": "merged",
     "created_at": "2026-06-23T13:54:15.733Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-client-sent-export-failure-07."
+    "rationale": "Client-sent failure is for the same Albertsons audience as a 2026-06-23 snapshotting HTTP-client alert already classified as the existing Quervice missing Product_Attributes_Product_Group_categoryL validation class."
   },
   {
     "match_key": "v3|incident:Q100B615QUQZXD|org:chghealthcare_395|class:client-sent-export-failure",
@@ -1198,12 +1198,12 @@
   },
   {
     "match_key": "v3|incident:Q140U7GG9RCAQU|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-client-sent-export-failure-08",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-bigquery-type-mismatch",
+    "reason": "merged",
     "created_at": "2026-06-23T13:54:15.733Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-client-sent-export-failure-08."
+    "rationale": "Client-sent failure is for the same Albertsons audience as a 2026-06-23 snapshotting alert already classified as BigQuery expression type incompatibility."
   },
   {
     "match_key": "v3|incident:Q14JSSBF3DF275|org:allegro_3|dest:dv360|class:export-processing",
@@ -1288,12 +1288,12 @@
   },
   {
     "match_key": "v3|incident:Q16DX9IDPC15VD|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-client-sent-export-failure-09",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-client-sent-export-failure-04",
+    "reason": "merged",
     "created_at": "2026-06-23T13:54:15.733Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-client-sent-export-failure-09."
+    "rationale": "Targeted preflight for this Albertsons client-sent singleton found the same blocker as the new missing_export_after_alert class: Pizza history exists, but no matching export run after the alert."
   },
   {
     "match_key": "v3|incident:Q16EPVNTSF0RPY|org:fanatics_502|dest:snowflake|class:export-error",
@@ -1612,12 +1612,12 @@
   },
   {
     "match_key": "v3|incident:Q1GVCKXSEM4VIF|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-client-sent-export-failure-10",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-http-client-errors",
+    "reason": "merged",
     "created_at": "2026-06-23T13:54:15.733Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-client-sent-export-failure-10."
+    "rationale": "Client-sent failure is for the same Albertsons audience as a 2026-06-23 snapshotting HTTP-client alert already classified as the existing Quervice missing Product_Attributes_Product_Group_categoryL validation class."
   },
   {
     "match_key": "v3|incident:Q1H2G1LPQBKYIZ|org:174|class:client-sent-export-failure",
@@ -1891,12 +1891,12 @@
   },
   {
     "match_key": "v3|incident:Q1QQT96DKTRQSZ|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-client-sent-export-failure-11",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-client-sent-export-failure-04",
+    "reason": "merged",
     "created_at": "2026-06-23T13:54:15.733Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-client-sent-export-failure-11."
+    "rationale": "Targeted preflight for this Albertsons client-sent singleton found the same blocker as the new missing_export_after_alert class: Pizza history exists, but no matching export run after the alert."
   },
   {
     "match_key": "v3|incident:Q1R7D9HWJFBV7D|org:albertsons_6|dest:live-ramp|class:export-error",
@@ -2017,12 +2017,12 @@
   },
   {
     "match_key": "v3|incident:Q1UEOA2CBT90GM|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260623-albertsons_6-client-sent-export-failure-02",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-client-sent-export-failure-04",
+    "reason": "merged",
     "created_at": "2026-06-23T13:54:15.733Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260623-albertsons_6-client-sent-export-failure-02."
+    "rationale": "Targeted preflight for this Albertsons client-sent singleton found the same blocker as the new missing_export_after_alert class: Pizza history exists, but no matching export run after the alert."
   },
   {
     "match_key": "v3|incident:Q1UNEJEBO3VF43|org:albertsons_6|class:client-sent-export-failure",
@@ -2359,12 +2359,12 @@
   },
   {
     "match_key": "v3|incident:Q26H5N9E0O7N0Z|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-client-sent-export-failure-12",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-http-client-errors",
+    "reason": "merged",
     "created_at": "2026-06-23T13:54:15.733Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-client-sent-export-failure-12."
+    "rationale": "Client-sent failure is for the same Albertsons audience as a 2026-06-23 snapshotting HTTP-client alert already classified as the existing Quervice missing Product_Attributes_Product_Group_categoryL validation class."
   },
   {
     "match_key": "v3|incident:Q26Q12V4KYA7TN|org:allegro_3|class:client-sent-export-failure",
@@ -2512,21 +2512,21 @@
   },
   {
     "match_key": "v3|incident:Q2C0F360LV1E6D|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-client-sent-export-failure-13",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-http-client-errors",
+    "reason": "merged",
     "created_at": "2026-06-23T13:54:15.733Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-client-sent-export-failure-13."
+    "rationale": "Client-sent failure is for the same Albertsons audience as a 2026-06-23 snapshotting HTTP-client alert already classified as the existing Quervice missing Product_Attributes_Product_Group_categoryL validation class."
   },
   {
     "match_key": "v3|incident:Q2C59EMLGBSSWK|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-client-sent-export-failure-14",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-http-client-errors",
+    "reason": "merged",
     "created_at": "2026-06-23T13:54:15.733Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-client-sent-export-failure-14."
+    "rationale": "Client-sent failure is for the same Albertsons audience as a 2026-06-23 snapshotting HTTP-client alert already classified as the existing Quervice missing Product_Attributes_Product_Group_categoryL validation class."
   },
   {
     "match_key": "v3|incident:Q2C6TN3RA4JUKE|org:verizon_309|class:snapshotting-error",
@@ -2593,12 +2593,12 @@
   },
   {
     "match_key": "v3|incident:Q2DZPMOJTWNQ11|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-client-sent-export-failure-15",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-client-sent-export-failure-04",
+    "reason": "merged",
     "created_at": "2026-06-23T13:54:15.733Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-client-sent-export-failure-15."
+    "rationale": "Targeted preflight for this Albertsons client-sent singleton found the same blocker as the new missing_export_after_alert class: Pizza history exists, but no matching export run after the alert."
   },
   {
     "match_key": "v3|incident:Q2E7MG6P1H0D3P|org:allegro_3|dest:dv360|class:export-processing",
@@ -2620,12 +2620,12 @@
   },
   {
     "match_key": "v3|incident:Q2EEZBO0CVUEW3|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-client-sent-export-failure-16",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-http-client-errors",
+    "reason": "merged",
     "created_at": "2026-06-23T13:54:15.733Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-client-sent-export-failure-16."
+    "rationale": "Client-sent failure is for the same Albertsons audience as a 2026-06-23 snapshotting HTTP-client alert already classified as the existing Quervice missing Product_Attributes_Product_Group_categoryL validation class."
   },
   {
     "match_key": "v3|incident:Q2EICDLFIHOLB7|org:76ers_131|class:zero-success",
@@ -3151,12 +3151,12 @@
   },
   {
     "match_key": "v3|incident:Q2W8MBXYOAXD3J|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260623-albertsons_6-client-sent-export-failure-03",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-http-client-errors",
+    "reason": "merged",
     "created_at": "2026-06-23T13:54:15.733Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260623-albertsons_6-client-sent-export-failure-03."
+    "rationale": "Client-sent failure is for the same Albertsons audience as a 2026-06-23 snapshotting HTTP-client alert already classified as the existing Quervice missing Product_Attributes_Product_Group_categoryL validation class."
   },
   {
     "match_key": "v3|incident:Q2WQIV69BQY0XT|org:costco_4|class:costco-default-no-data-found-for-active-audience",
@@ -3286,12 +3286,12 @@
   },
   {
     "match_key": "v3|incident:Q30P00WNLHRK9W|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260623-albertsons_6-client-sent-export-failure-04",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-client-sent-export-failure-04",
+    "reason": "merged",
     "created_at": "2026-06-23T13:54:15.733Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260623-albertsons_6-client-sent-export-failure-04."
+    "rationale": "Targeted preflight for this Albertsons client-sent singleton found the same blocker as the new missing_export_after_alert class: Pizza history exists, but no matching export run after the alert."
   },
   {
     "match_key": "v3|incident:Q30WK6C4JC4J5U|org:chghealthcare_395|dest:pulse-point|class:export-error",
@@ -3466,12 +3466,12 @@
   },
   {
     "match_key": "v3|incident:Q35FXUK3R7EP76|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-client-sent-export-failure-17",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-bigquery-type-mismatch",
+    "reason": "merged",
     "created_at": "2026-06-23T13:54:15.733Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-client-sent-export-failure-17."
+    "rationale": "Client-sent failure is for the same Albertsons audience as a 2026-06-23 snapshotting alert already classified as BigQuery expression type incompatibility."
   },
   {
     "match_key": "v3|incident:Q35YEO4G99PYRM|org:cmegroup_3|class:snapshotting-error",
@@ -3511,12 +3511,12 @@
   },
   {
     "match_key": "v3|incident:Q36ENB8WGMYDAW|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-client-sent-export-failure-18",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-client-sent-export-failure-04",
+    "reason": "merged",
     "created_at": "2026-06-23T13:54:15.733Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-client-sent-export-failure-18."
+    "rationale": "Targeted preflight for this Albertsons client-sent singleton found the same blocker as the new missing_export_after_alert class: Pizza history exists, but no matching export run after the alert."
   },
   {
     "match_key": "v3|incident:Q36KG67I5QPOE8|org:chghealthcare_395|dest:pulse-point|class:export-error",
@@ -3628,12 +3628,12 @@
   },
   {
     "match_key": "v3|incident:Q3AEWETRMJ9LHR|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-client-sent-export-failure-19",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-client-sent-export-failure-04",
+    "reason": "merged",
     "created_at": "2026-06-23T13:54:15.733Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-client-sent-export-failure-19."
+    "rationale": "Targeted preflight for this Albertsons client-sent singleton found the same blocker as the new missing_export_after_alert class: Pizza history exists, but no matching export run after the alert."
   },
   {
     "match_key": "v3|incident:Q3BE6H76WFUNBR|org:albertsons_6|class:snapshotting-error",
@@ -3682,12 +3682,12 @@
   },
   {
     "match_key": "v3|incident:Q3C6EY1CXX6DTB|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-client-sent-export-failure-20",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-http-client-errors",
+    "reason": "merged",
     "created_at": "2026-06-23T13:54:15.733Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-client-sent-export-failure-20."
+    "rationale": "Client-sent failure is for the same Albertsons audience as a 2026-06-23 snapshotting HTTP-client alert already classified as the existing Quervice missing Product_Attributes_Product_Group_categoryL validation class."
   },
   {
     "match_key": "v3|incident:Q3C7ZSQXUGF4ZZ|org:costco_4|class:costco-default-no-data-found-for-active-audience",
@@ -3727,30 +3727,30 @@
   },
   {
     "match_key": "v3|incident:Q3D07SXX5MT8PD|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-client-sent-export-failure-21",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-client-sent-export-failure-04",
+    "reason": "merged",
     "created_at": "2026-06-23T13:54:15.733Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-client-sent-export-failure-21."
+    "rationale": "Targeted preflight for this Albertsons client-sent singleton found the same blocker as the new missing_export_after_alert class: Pizza history exists, but no matching export run after the alert."
   },
   {
     "match_key": "v3|incident:Q3D5BM8QKKHA3E|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-client-sent-export-failure-22",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-bigquery-type-mismatch",
+    "reason": "merged",
     "created_at": "2026-06-23T13:54:15.733Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-client-sent-export-failure-22."
+    "rationale": "Client-sent failure is for the same Albertsons audience as a 2026-06-23 snapshotting alert already classified as BigQuery expression type incompatibility."
   },
   {
     "match_key": "v3|incident:Q3DJKJ88F7961S|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-client-sent-export-failure-23",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-client-sent-export-failure-04",
+    "reason": "merged",
     "created_at": "2026-06-23T13:54:15.733Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-client-sent-export-failure-23."
+    "rationale": "Targeted preflight for this Albertsons client-sent singleton found the same blocker as the new missing_export_after_alert class: Pizza history exists, but no matching export run after the alert."
   },
   {
     "match_key": "v3|incident:Q3DL1BM2K2NN9L|org:chghealthcare_395|class:client-sent-export-failure",
@@ -3835,12 +3835,12 @@
   },
   {
     "match_key": "v3|incident:Q3F2J2NZQGCBA8|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-client-sent-export-failure-24",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-client-sent-export-failure-04",
+    "reason": "merged",
     "created_at": "2026-06-23T13:54:15.733Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-client-sent-export-failure-24."
+    "rationale": "Targeted preflight for this Albertsons client-sent singleton found the same blocker as the new missing_export_after_alert class: Pizza history exists, but no matching export run after the alert."
   },
   {
     "match_key": "v3|incident:Q3F3T8YUI45U70|org:albertsons_6|class:client-sent-export-failure",
@@ -4123,12 +4123,12 @@
   },
   {
     "match_key": "v3|incident:Q3PZTO9L0YMZJ9|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-client-sent-export-failure-25",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-http-client-errors",
+    "reason": "merged",
     "created_at": "2026-06-23T13:54:15.733Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-client-sent-export-failure-25."
+    "rationale": "Client-sent failure is for the same Albertsons audience as a 2026-06-23 snapshotting HTTP-client alert already classified as the existing Quervice missing Product_Attributes_Product_Group_categoryL validation class."
   },
   {
     "match_key": "v3|incident:Q3Q6GO065O9UWX|org:chghealthcare_395|dest:pulse-point|class:export-error",
@@ -4240,12 +4240,12 @@
   },
   {
     "match_key": "v3|incident:Q3T8YVL0VO05SK|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260623-albertsons_6-client-sent-export-failure-05",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-client-sent-export-failure-04",
+    "reason": "merged",
     "created_at": "2026-06-23T13:54:15.733Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260623-albertsons_6-client-sent-export-failure-05."
+    "rationale": "Targeted preflight for this Albertsons client-sent singleton found the same blocker as the new missing_export_after_alert class: Pizza history exists, but no matching export run after the alert."
   },
   {
     "match_key": "v3|incident:Q3TADUNNJQ5F9G|org:priceline_370|class:client-sent-export-failure",
@@ -4285,12 +4285,12 @@
   },
   {
     "match_key": "v3|incident:Q3VC2EL90AOSKX|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260623-albertsons_6-client-sent-export-failure-06",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-client-sent-export-failure-04",
+    "reason": "merged",
     "created_at": "2026-06-23T13:54:15.733Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260623-albertsons_6-client-sent-export-failure-06."
+    "rationale": "Targeted preflight for this Albertsons client-sent singleton found the same blocker as the new missing_export_after_alert class: Pizza history exists, but no matching export run after the alert."
   },
   {
     "match_key": "v3|incident:Q3VN9Y4WC7ZHBB|org:ford_310|dest:dv360|class:export-error",

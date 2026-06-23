@@ -2,7 +2,7 @@
 import { autoMonitorExportGroup, autoResolveHealthyExportGroup, checkExportsWorkspace, loadPizzaRowsFile } from "./checkExports";
 import { matchesGroupFilter, mergeAlertFilter, parseFilterValues, type AlertFilter, type CommandFilters, type GroupFilter } from "./filters";
 import { createLivePizzaFetcher } from "./pizza";
-import { appendEvidence, closePagerDutyAlertsForResolvedGroups, groupImportedAlerts, groupTaggedAlerts, importActivePagerDutyIncidents, importPagerDutyIncident, initWorkspace, loadAllGroups, mergeGroups, queryAlertFacts, readGroupState, regenerateIndex, runAlertTagger, splitGroup, syncPagerDutyWorkspace, transitionGroup } from "./workspace";
+import { appendEvidence, closePagerDutyAlertsForResolvedGroups, groupImportedAlerts, groupTaggedAlerts, importActivePagerDutyIncidents, importPagerDutyIncident, initWorkspace, loadAllGroups, mergeManyGroups, queryAlertFacts, readGroupState, regenerateIndex, runAlertTagger, splitGroup, syncPagerDutyWorkspace, transitionGroup } from "./workspace";
 import type { AlertRef, GroupState, GroupStateName } from "./schema";
 
 async function main(argv: string[]): Promise<void> {
@@ -117,11 +117,12 @@ async function main(argv: string[]): Promise<void> {
     return;
   }
   if (command === "merge") {
-    const sourceGroupId = required(args, "source");
+    const sourceGroupIds = values(args, "source");
+    if (sourceGroupIds.length === 0) throw new Error("Missing --source");
     const targetGroupId = required(args, "target");
     const rationale = required(args, "rationale");
-    const result = await mergeGroups({ workspaceDir, sourceGroupId, targetGroupId, rationale });
-    console.log(`Merged ${result.source.group_id} into ${result.target.group_id}`);
+    const result = await mergeManyGroups({ workspaceDir, sourceGroupIds, targetGroupId, rationale });
+    console.log(`Merged ${result.sources.map((source) => source.group_id).join(", ")} into ${result.target.group_id}`);
     return;
   }
   if (command === "split") {
@@ -330,11 +331,23 @@ async function resolveGroups(workspaceDir: string, filter: GroupFilter): Promise
     const group = await readGroupState(workspaceDir, filter.id);
     return matchesGroupFilter(group, filter) ? [group] : [];
   }
+  if (filter.ids && !filter.state && !filter.incidentId && (!filter.tags || filter.tags.length === 0)) {
+    const groups: GroupState[] = [];
+    for (const id of filter.ids) {
+      try {
+        const group = await readGroupState(workspaceDir, id);
+        if (matchesGroupFilter(group, filter)) groups.push(group);
+      } catch (err) {
+        if ((err as NodeJS.ErrnoException).code !== "ENOENT") throw err;
+      }
+    }
+    return groups.sort((a, b) => a.group_id.localeCompare(b.group_id));
+  }
   return (await loadAllGroups(workspaceDir)).filter((group) => matchesGroupFilter(group, filter)).sort((a, b) => a.group_id.localeCompare(b.group_id));
 }
 
 function hasGroupFilter(filter: GroupFilter): boolean {
-  return Boolean(filter.id || filter.state || filter.incidentId || (filter.tags && filter.tags.length > 0));
+  return Boolean(filter.id || (filter.ids && filter.ids.length > 0) || filter.state || filter.incidentId || (filter.tags && filter.tags.length > 0));
 }
 
 function hasAlertFilter(filter: AlertFilter): boolean {
@@ -401,12 +414,12 @@ function usageText(): string {
   bun run oncall-triage group <workspace> --tag <tag> --title <text> --summary <text> --rationale <text> [--group <id>] [--state <new|open|waiting|monitoring|resolved>] [--group-tag <tag>] [--limit <n>] [--test]
   bun run oncall-triage index <workspace>
   bun run oncall-triage transition <workspace> --group <id> --state <new|open|waiting|monitoring|resolved> --summary <text> [--tag <tag>]
-  bun run oncall-triage merge <workspace> --source <id> --target <id> --rationale <text>
+  bun run oncall-triage merge <workspace> --source <id> [--source <id> ...] --target <id> --rationale <text>
   bun run oncall-triage split <workspace> --group <id> --alerts <comma-separated-alert-ids> --rationale <text>
   bun run oncall-triage sync-pd <workspace> [--incident <pd-url-or-id>]
-  bun run oncall-triage close-pd <workspace> [--filter group.state=resolved] [--filter group.id=<id>] [--test] [--apply]
-  bun run oncall-triage preflight <workspace> [--filter group.state=<state>] [--filter group.id=<id>]
-  bun run oncall-triage check-exports <workspace> [--apply] [--auto-resolve] [--filter group.id=<id>] [--filter alert.destination=<destination>] [--filter alert.incident=<id>] [--filter alert.org=<org_id>] [--filter alert.audience=<id>] [--filter alert.state=<state>] [--pizza-rows-file <file>] [--limit <n>]
+  bun run oncall-triage close-pd <workspace> [--filter group.state=resolved] [--filter group.id=<id>] [--filter "group.id in id1,id2"] [--test] [--apply]
+  bun run oncall-triage preflight <workspace> [--filter group.state=<state>] [--filter group.id=<id>] [--filter "group.id in id1,id2"]
+  bun run oncall-triage check-exports <workspace> [--apply] [--auto-resolve] [--filter group.id=<id>] [--filter "group.id in id1,id2"] [--filter alert.destination=<destination>] [--filter alert.incident=<id>] [--filter alert.org=<org_id>] [--filter alert.audience=<id>] [--filter alert.state=<state>] [--pizza-rows-file <file>] [--limit <n>]
   bun run oncall-triage evidence <workspace> --group <id> --summary <text> [--kind <kind>] [--source <source>] [--link <label=url>] [--command <command>] [--artifact <label=path>] [--log-query <query>] [--finding <text>]
 
 Waiting transitions require prior communication evidence in evidence.jsonl or notes.md. Use evidence --kind communication_thread/support_thread/slack_thread with a durable link before transition --state waiting.`;

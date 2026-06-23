@@ -1,0 +1,27 @@
+{
+  "group_id": "260622-albertsons_6-client-sent-export-failure-20",
+  "state": "resolved",
+  "tags": [
+    "triage:needs_review",
+    "resolved:merged"
+  ],
+  "title": "albertsons_6 client-sent-export-failure",
+  "summary": "Merged into 260622-albertsons_6-http-client-errors: Client-sent failure is for the same Albertsons audience as a 2026-06-23 snapshotting HTTP-client alert already classified as the existing Quervice missing Product_Attributes_Product_Group_categoryL validation class.",
+  "deterministic_key": "v3|incident:Q3C6EY1CXX6DTB|org:albertsons_6|class:client-sent-export-failure",
+  "grouping_version": 3,
+  "created_at": "2026-06-23T13:54:15.733Z",
+  "updated_at": "2026-06-23T15:34:57.863Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q3C6EY1CXX6DTB",
+      "alert_id": "Q2PPFZR1Z5HHP3"
+    }
+  ],
+  "incident_ids": [
+    "Q3C6EY1CXX6DTB"
+  ],
+  "related_group_ids": [
+    "260622-albertsons_6-http-client-errors"
+  ],
+  "next_action": "Follow target group 260622-albertsons_6-http-client-errors."
+}

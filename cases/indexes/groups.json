@@ -2486,6 +2486,7 @@
       "Q0P4ONJOGF8NUI",
       "Q0YS1762L6N8Z7",
       "Q13AGUZO2RZY3E",
+      "Q140U7GG9RCAQU",
       "Q14QMYQC78PXAR",
       "Q18OLT4XU8V6Z5",
       "Q18RUDPFI5PNR0",
@@ -2504,13 +2505,15 @@
       "Q2RVKX275SCHT7",
       "Q2YTLIYU53UIVU",
       "Q33XKCHKMWQNOF",
+      "Q35FXUK3R7EP76",
       "Q368INPJJF6K5Y",
+      "Q3D5BM8QKKHA3E",
       "Q3IROJH5XM5T4U",
       "Q3O313HUCTB2WD",
       "Q3QCKCZMRUR8MC",
       "Q3QEKPH9YZV412"
     ],
-    "alert_count": 36,
+    "alert_count": 39,
     "path": "groups/open/260622-albertsons_6-bigquery-type-mismatch/case.md"
   },
   {
@@ -2522,290 +2525,23 @@
     "title": "albertsons_6 client-sent-export-failure",
     "summary": "albertsons (Albertsons Media) - Audience 13072: Audience Export failure for 13072 sent to client.",
     "incident_ids": [
-      "Q0LBNI4LMZSL99"
+      "Q09FHOR4ZDMTUL",
+      "Q0LBNI4LMZSL99",
+      "Q16DX9IDPC15VD",
+      "Q1QQT96DKTRQSZ",
+      "Q1UEOA2CBT90GM",
+      "Q2DZPMOJTWNQ11",
+      "Q30P00WNLHRK9W",
+      "Q36ENB8WGMYDAW",
+      "Q3AEWETRMJ9LHR",
+      "Q3D07SXX5MT8PD",
+      "Q3DJKJ88F7961S",
+      "Q3F2J2NZQGCBA8",
+      "Q3T8YVL0VO05SK",
+      "Q3VC2EL90AOSKX"
     ],
-    "alert_count": 1,
+    "alert_count": 14,
     "path": "groups/open/260622-albertsons_6-client-sent-export-failure-04/case.md"
-  },
-  {
-    "group_id": "260622-albertsons_6-client-sent-export-failure-06",
-    "state": "open",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "albertsons_6 client-sent-export-failure",
-    "summary": "albertsons (Albertsons Media) - Audience 2173: Audience Export failure for 2173 sent to client.",
-    "incident_ids": [
-      "Q0ONUAJ6HJ075M"
-    ],
-    "alert_count": 1,
-    "path": "groups/open/260622-albertsons_6-client-sent-export-failure-06/case.md"
-  },
-  {
-    "group_id": "260622-albertsons_6-client-sent-export-failure-07",
-    "state": "open",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "albertsons_6 client-sent-export-failure",
-    "summary": "albertsons (Albertsons Media) - Audience 2126: Audience Export failure for 2126 sent to client.",
-    "incident_ids": [
-      "Q0YXEG844L38X5"
-    ],
-    "alert_count": 1,
-    "path": "groups/open/260622-albertsons_6-client-sent-export-failure-07/case.md"
-  },
-  {
-    "group_id": "260622-albertsons_6-client-sent-export-failure-08",
-    "state": "open",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "albertsons_6 client-sent-export-failure",
-    "summary": "albertsons (Albertsons Media) - Audience 9792: Audience Export failure for 9792 sent to client.",
-    "incident_ids": [
-      "Q140U7GG9RCAQU"
-    ],
-    "alert_count": 1,
-    "path": "groups/open/260622-albertsons_6-client-sent-export-failure-08/case.md"
-  },
-  {
-    "group_id": "260622-albertsons_6-client-sent-export-failure-09",
-    "state": "open",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "albertsons_6 client-sent-export-failure",
-    "summary": "albertsons (Albertsons Media) - Audience 10680: Audience Export failure for 10680 sent to client.",
-    "incident_ids": [
-      "Q16DX9IDPC15VD"
-    ],
-    "alert_count": 1,
-    "path": "groups/open/260622-albertsons_6-client-sent-export-failure-09/case.md"
-  },
-  {
-    "group_id": "260622-albertsons_6-client-sent-export-failure-10",
-    "state": "open",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "albertsons_6 client-sent-export-failure",
-    "summary": "albertsons (Albertsons Media) - Audience 2175: Audience Export failure for 2175 sent to client.",
-    "incident_ids": [
-      "Q1GVCKXSEM4VIF"
-    ],
-    "alert_count": 1,
-    "path": "groups/open/260622-albertsons_6-client-sent-export-failure-10/case.md"
-  },
-  {
-    "group_id": "260622-albertsons_6-client-sent-export-failure-11",
-    "state": "open",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "albertsons_6 client-sent-export-failure",
-    "summary": "albertsons (Albertsons Media) - Audience 13149: Audience Export failure for 13149 sent to client.",
-    "incident_ids": [
-      "Q1QQT96DKTRQSZ"
-    ],
-    "alert_count": 1,
-    "path": "groups/open/260622-albertsons_6-client-sent-export-failure-11/case.md"
-  },
-  {
-    "group_id": "260622-albertsons_6-client-sent-export-failure-12",
-    "state": "open",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "albertsons_6 client-sent-export-failure",
-    "summary": "albertsons (Albertsons Media) - Audience 2237: Audience Export failure for 2237 sent to client.",
-    "incident_ids": [
-      "Q26H5N9E0O7N0Z"
-    ],
-    "alert_count": 1,
-    "path": "groups/open/260622-albertsons_6-client-sent-export-failure-12/case.md"
-  },
-  {
-    "group_id": "260622-albertsons_6-client-sent-export-failure-13",
-    "state": "open",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "albertsons_6 client-sent-export-failure",
-    "summary": "albertsons (Albertsons Media) - Audience 7053: Audience Export failure for 7053 sent to client.",
-    "incident_ids": [
-      "Q2C0F360LV1E6D"
-    ],
-    "alert_count": 1,
-    "path": "groups/open/260622-albertsons_6-client-sent-export-failure-13/case.md"
-  },
-  {
-    "group_id": "260622-albertsons_6-client-sent-export-failure-14",
-    "state": "open",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "albertsons_6 client-sent-export-failure",
-    "summary": "albertsons (Albertsons Media) - Audience 2174: Audience Export failure for 2174 sent to client.",
-    "incident_ids": [
-      "Q2C59EMLGBSSWK"
-    ],
-    "alert_count": 1,
-    "path": "groups/open/260622-albertsons_6-client-sent-export-failure-14/case.md"
-  },
-  {
-    "group_id": "260622-albertsons_6-client-sent-export-failure-15",
-    "state": "open",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "albertsons_6 client-sent-export-failure",
-    "summary": "albertsons (Albertsons Media) - Audience 11017: Audience Export failure for 11017 sent to client.",
-    "incident_ids": [
-      "Q2DZPMOJTWNQ11"
-    ],
-    "alert_count": 1,
-    "path": "groups/open/260622-albertsons_6-client-sent-export-failure-15/case.md"
-  },
-  {
-    "group_id": "260622-albertsons_6-client-sent-export-failure-16",
-    "state": "open",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "albertsons_6 client-sent-export-failure",
-    "summary": "albertsons (Albertsons Media) - Audience 2218: Audience Export failure for 2218 sent to client.",
-    "incident_ids": [
-      "Q2EEZBO0CVUEW3"
-    ],
-    "alert_count": 1,
-    "path": "groups/open/260622-albertsons_6-client-sent-export-failure-16/case.md"
-  },
-  {
-    "group_id": "260622-albertsons_6-client-sent-export-failure-17",
-    "state": "open",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "albertsons_6 client-sent-export-failure",
-    "summary": "albertsons (Albertsons Media) - Audience 9879: Audience Export failure for 9879 sent to client.",
-    "incident_ids": [
-      "Q35FXUK3R7EP76"
-    ],
-    "alert_count": 1,
-    "path": "groups/open/260622-albertsons_6-client-sent-export-failure-17/case.md"
-  },
-  {
-    "group_id": "260622-albertsons_6-client-sent-export-failure-18",
-    "state": "open",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "albertsons_6 client-sent-export-failure",
-    "summary": "albertsons (Albertsons Media) - Audience 11948: Audience Export failure for 11948 sent to client.",
-    "incident_ids": [
-      "Q36ENB8WGMYDAW"
-    ],
-    "alert_count": 1,
-    "path": "groups/open/260622-albertsons_6-client-sent-export-failure-18/case.md"
-  },
-  {
-    "group_id": "260622-albertsons_6-client-sent-export-failure-19",
-    "state": "open",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "albertsons_6 client-sent-export-failure",
-    "summary": "albertsons (Albertsons Media) - Audience 12865: Audience Export failure for 12865 sent to client.",
-    "incident_ids": [
-      "Q3AEWETRMJ9LHR"
-    ],
-    "alert_count": 1,
-    "path": "groups/open/260622-albertsons_6-client-sent-export-failure-19/case.md"
-  },
-  {
-    "group_id": "260622-albertsons_6-client-sent-export-failure-20",
-    "state": "open",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "albertsons_6 client-sent-export-failure",
-    "summary": "albertsons (Albertsons Media) - Audience 2176: Audience Export failure for 2176 sent to client.",
-    "incident_ids": [
-      "Q3C6EY1CXX6DTB"
-    ],
-    "alert_count": 1,
-    "path": "groups/open/260622-albertsons_6-client-sent-export-failure-20/case.md"
-  },
-  {
-    "group_id": "260622-albertsons_6-client-sent-export-failure-21",
-    "state": "open",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "albertsons_6 client-sent-export-failure",
-    "summary": "albertsons (Albertsons Media) - Audience 11014: Audience Export failure for 11014 sent to client.",
-    "incident_ids": [
-      "Q3D07SXX5MT8PD"
-    ],
-    "alert_count": 1,
-    "path": "groups/open/260622-albertsons_6-client-sent-export-failure-21/case.md"
-  },
-  {
-    "group_id": "260622-albertsons_6-client-sent-export-failure-22",
-    "state": "open",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "albertsons_6 client-sent-export-failure",
-    "summary": "albertsons (Albertsons Media) - Audience 9718: Audience Export failure for 9718 sent to client.",
-    "incident_ids": [
-      "Q3D5BM8QKKHA3E"
-    ],
-    "alert_count": 1,
-    "path": "groups/open/260622-albertsons_6-client-sent-export-failure-22/case.md"
-  },
-  {
-    "group_id": "260622-albertsons_6-client-sent-export-failure-23",
-    "state": "open",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "albertsons_6 client-sent-export-failure",
-    "summary": "albertsons (Albertsons Media) - Audience 11280: Audience Export failure for 11280 sent to client.",
-    "incident_ids": [
-      "Q3DJKJ88F7961S"
-    ],
-    "alert_count": 1,
-    "path": "groups/open/260622-albertsons_6-client-sent-export-failure-23/case.md"
-  },
-  {
-    "group_id": "260622-albertsons_6-client-sent-export-failure-24",
-    "state": "open",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "albertsons_6 client-sent-export-failure",
-    "summary": "albertsons (Albertsons Media) - Audience 10679: Audience Export failure for 10679 sent to client.",
-    "incident_ids": [
-      "Q3F2J2NZQGCBA8"
-    ],
-    "alert_count": 1,
-    "path": "groups/open/260622-albertsons_6-client-sent-export-failure-24/case.md"
-  },
-  {
-    "group_id": "260622-albertsons_6-client-sent-export-failure-25",
-    "state": "open",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "albertsons_6 client-sent-export-failure",
-    "summary": "albertsons (Albertsons Media) - Audience 2125: Audience Export failure for 2125 sent to client.",
-    "incident_ids": [
-      "Q3PZTO9L0YMZJ9"
-    ],
-    "alert_count": 1,
-    "path": "groups/open/260622-albertsons_6-client-sent-export-failure-25/case.md"
   },
   {
     "group_id": "260622-albertsons_6-export-error-blank",
@@ -3549,90 +3285,6 @@
     "path": "groups/open/260622-verizon_309-snapshotting-error/case.md"
   },
   {
-    "group_id": "260623-albertsons_6-client-sent-export-failure",
-    "state": "open",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "albertsons_6 client-sent-export-failure",
-    "summary": "albertsons (Albertsons Media) - Audience 11996: Audience Export failure for 11996 sent to client.",
-    "incident_ids": [
-      "Q09FHOR4ZDMTUL"
-    ],
-    "alert_count": 1,
-    "path": "groups/open/260623-albertsons_6-client-sent-export-failure/case.md"
-  },
-  {
-    "group_id": "260623-albertsons_6-client-sent-export-failure-02",
-    "state": "open",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "albertsons_6 client-sent-export-failure",
-    "summary": "albertsons (Albertsons Media) - Audience 11572: Audience Export failure for 11572 sent to client.",
-    "incident_ids": [
-      "Q1UEOA2CBT90GM"
-    ],
-    "alert_count": 1,
-    "path": "groups/open/260623-albertsons_6-client-sent-export-failure-02/case.md"
-  },
-  {
-    "group_id": "260623-albertsons_6-client-sent-export-failure-03",
-    "state": "open",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "albertsons_6 client-sent-export-failure",
-    "summary": "albertsons (Albertsons Media) - Audience 2158: Audience Export failure for 2158 sent to client.",
-    "incident_ids": [
-      "Q2W8MBXYOAXD3J"
-    ],
-    "alert_count": 1,
-    "path": "groups/open/260623-albertsons_6-client-sent-export-failure-03/case.md"
-  },
-  {
-    "group_id": "260623-albertsons_6-client-sent-export-failure-04",
-    "state": "open",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "albertsons_6 client-sent-export-failure",
-    "summary": "albertsons (Albertsons Media) - Audience 11596: Audience Export failure for 11596 sent to client.",
-    "incident_ids": [
-      "Q30P00WNLHRK9W"
-    ],
-    "alert_count": 1,
-    "path": "groups/open/260623-albertsons_6-client-sent-export-failure-04/case.md"
-  },
-  {
-    "group_id": "260623-albertsons_6-client-sent-export-failure-05",
-    "state": "open",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "albertsons_6 client-sent-export-failure",
-    "summary": "albertsons (Albertsons Media) - Audience 11488: Audience Export failure for 11488 sent to client.",
-    "incident_ids": [
-      "Q3T8YVL0VO05SK"
-    ],
-    "alert_count": 1,
-    "path": "groups/open/260623-albertsons_6-client-sent-export-failure-05/case.md"
-  },
-  {
-    "group_id": "260623-albertsons_6-client-sent-export-failure-06",
-    "state": "open",
-    "tags": [
-      "triage:needs_review"
-    ],
-    "title": "albertsons_6 client-sent-export-failure",
-    "summary": "albertsons (Albertsons Media) - Audience 11489: Audience Export failure for 11489 sent to client.",
-    "incident_ids": [
-      "Q3VC2EL90AOSKX"
-    ],
-    "alert_count": 1,
-    "path": "groups/open/260623-albertsons_6-client-sent-export-failure-06/case.md"
-  },
-  {
     "group_id": "grp_260617_albertsons_6_client_sent_export_failure_split_0322",
     "state": "open",
     "tags": [
@@ -4022,23 +3674,33 @@
       "Q0KT9MIUIF06VD",
       "Q0LRG7LC17QHC0",
       "Q0NEGMFU9SDRIP",
+      "Q0ONUAJ6HJ075M",
       "Q0YMC0G8MBU3S7",
+      "Q0YXEG844L38X5",
       "Q18PJFCK0IYHAO",
       "Q1C6Q8ZS6DLVIH",
       "Q1CEIF2TYUZHSP",
+      "Q1GVCKXSEM4VIF",
       "Q1LJB8EJA6JZEB",
       "Q1O1OOB7GJ8P4A",
       "Q1S0Q38FOEN2XY",
+      "Q26H5N9E0O7N0Z",
       "Q281IJMKYIYEHV",
       "Q29WSKI7IBRPVW",
+      "Q2C0F360LV1E6D",
+      "Q2C59EMLGBSSWK",
       "Q2ECAALJOOO1R6",
+      "Q2EEZBO0CVUEW3",
       "Q2IIOBNUV6BSPG",
       "Q2M9PQ0VIYN9Q7",
+      "Q2W8MBXYOAXD3J",
       "Q337ZKYTMRUI8M",
       "Q38JIFOCY2F0AO",
+      "Q3C6EY1CXX6DTB",
+      "Q3PZTO9L0YMZJ9",
       "Q3X51HMAYEMKHO"
     ],
-    "alert_count": 19,
+    "alert_count": 29,
     "path": "groups/waiting/260622-albertsons_6-http-client-errors/case.md"
   },
   {
@@ -5605,6 +5267,326 @@
     "path": "groups/resolved/260622-albertsons_6-client-sent-export-failure-05/case.md"
   },
   {
+    "group_id": "260622-albertsons_6-client-sent-export-failure-06",
+    "state": "resolved",
+    "tags": [
+      "triage:needs_review",
+      "resolved:merged"
+    ],
+    "title": "albertsons_6 client-sent-export-failure",
+    "summary": "Merged into 260622-albertsons_6-http-client-errors: Client-sent failure is for the same Albertsons audience as a 2026-06-23 snapshotting HTTP-client alert already classified as the existing Quervice missing Product_Attributes_Product_Group_categoryL validation class.",
+    "next_action": "Follow target group 260622-albertsons_6-http-client-errors.",
+    "incident_ids": [
+      "Q0ONUAJ6HJ075M"
+    ],
+    "alert_count": 1,
+    "path": "groups/resolved/260622-albertsons_6-client-sent-export-failure-06/case.md"
+  },
+  {
+    "group_id": "260622-albertsons_6-client-sent-export-failure-07",
+    "state": "resolved",
+    "tags": [
+      "triage:needs_review",
+      "resolved:merged"
+    ],
+    "title": "albertsons_6 client-sent-export-failure",
+    "summary": "Merged into 260622-albertsons_6-http-client-errors: Client-sent failure is for the same Albertsons audience as a 2026-06-23 snapshotting HTTP-client alert already classified as the existing Quervice missing Product_Attributes_Product_Group_categoryL validation class.",
+    "next_action": "Follow target group 260622-albertsons_6-http-client-errors.",
+    "incident_ids": [
+      "Q0YXEG844L38X5"
+    ],
+    "alert_count": 1,
+    "path": "groups/resolved/260622-albertsons_6-client-sent-export-failure-07/case.md"
+  },
+  {
+    "group_id": "260622-albertsons_6-client-sent-export-failure-08",
+    "state": "resolved",
+    "tags": [
+      "triage:needs_review",
+      "resolved:merged"
+    ],
+    "title": "albertsons_6 client-sent-export-failure",
+    "summary": "Merged into 260622-albertsons_6-bigquery-type-mismatch: Client-sent failure is for the same Albertsons audience as a 2026-06-23 snapshotting alert already classified as BigQuery expression type incompatibility.",
+    "next_action": "Follow target group 260622-albertsons_6-bigquery-type-mismatch.",
+    "incident_ids": [
+      "Q140U7GG9RCAQU"
+    ],
+    "alert_count": 1,
+    "path": "groups/resolved/260622-albertsons_6-client-sent-export-failure-08/case.md"
+  },
+  {
+    "group_id": "260622-albertsons_6-client-sent-export-failure-09",
+    "state": "resolved",
+    "tags": [
+      "triage:needs_review",
+      "resolved:merged"
+    ],
+    "title": "albertsons_6 client-sent-export-failure",
+    "summary": "Merged into 260622-albertsons_6-client-sent-export-failure-04: Targeted preflight for this Albertsons client-sent singleton found the same blocker as the new missing_export_after_alert class: Pizza history exists, but no matching export run after the alert.",
+    "next_action": "Follow target group 260622-albertsons_6-client-sent-export-failure-04.",
+    "incident_ids": [
+      "Q16DX9IDPC15VD"
+    ],
+    "alert_count": 1,
+    "path": "groups/resolved/260622-albertsons_6-client-sent-export-failure-09/case.md"
+  },
+  {
+    "group_id": "260622-albertsons_6-client-sent-export-failure-10",
+    "state": "resolved",
+    "tags": [
+      "triage:needs_review",
+      "resolved:merged"
+    ],
+    "title": "albertsons_6 client-sent-export-failure",
+    "summary": "Merged into 260622-albertsons_6-http-client-errors: Client-sent failure is for the same Albertsons audience as a 2026-06-23 snapshotting HTTP-client alert already classified as the existing Quervice missing Product_Attributes_Product_Group_categoryL validation class.",
+    "next_action": "Follow target group 260622-albertsons_6-http-client-errors.",
+    "incident_ids": [
+      "Q1GVCKXSEM4VIF"
+    ],
+    "alert_count": 1,
+    "path": "groups/resolved/260622-albertsons_6-client-sent-export-failure-10/case.md"
+  },
+  {
+    "group_id": "260622-albertsons_6-client-sent-export-failure-11",
+    "state": "resolved",
+    "tags": [
+      "triage:needs_review",
+      "resolved:merged"
+    ],
+    "title": "albertsons_6 client-sent-export-failure",
+    "summary": "Merged into 260622-albertsons_6-client-sent-export-failure-04: Targeted preflight for this Albertsons client-sent singleton found the same blocker as the new missing_export_after_alert class: Pizza history exists, but no matching export run after the alert.",
+    "next_action": "Follow target group 260622-albertsons_6-client-sent-export-failure-04.",
+    "incident_ids": [
+      "Q1QQT96DKTRQSZ"
+    ],
+    "alert_count": 1,
+    "path": "groups/resolved/260622-albertsons_6-client-sent-export-failure-11/case.md"
+  },
+  {
+    "group_id": "260622-albertsons_6-client-sent-export-failure-12",
+    "state": "resolved",
+    "tags": [
+      "triage:needs_review",
+      "resolved:merged"
+    ],
+    "title": "albertsons_6 client-sent-export-failure",
+    "summary": "Merged into 260622-albertsons_6-http-client-errors: Client-sent failure is for the same Albertsons audience as a 2026-06-23 snapshotting HTTP-client alert already classified as the existing Quervice missing Product_Attributes_Product_Group_categoryL validation class.",
+    "next_action": "Follow target group 260622-albertsons_6-http-client-errors.",
+    "incident_ids": [
+      "Q26H5N9E0O7N0Z"
+    ],
+    "alert_count": 1,
+    "path": "groups/resolved/260622-albertsons_6-client-sent-export-failure-12/case.md"
+  },
+  {
+    "group_id": "260622-albertsons_6-client-sent-export-failure-13",
+    "state": "resolved",
+    "tags": [
+      "triage:needs_review",
+      "resolved:merged"
+    ],
+    "title": "albertsons_6 client-sent-export-failure",
+    "summary": "Merged into 260622-albertsons_6-http-client-errors: Client-sent failure is for the same Albertsons audience as a 2026-06-23 snapshotting HTTP-client alert already classified as the existing Quervice missing Product_Attributes_Product_Group_categoryL validation class.",
+    "next_action": "Follow target group 260622-albertsons_6-http-client-errors.",
+    "incident_ids": [
+      "Q2C0F360LV1E6D"
+    ],
+    "alert_count": 1,
+    "path": "groups/resolved/260622-albertsons_6-client-sent-export-failure-13/case.md"
+  },
+  {
+    "group_id": "260622-albertsons_6-client-sent-export-failure-14",
+    "state": "resolved",
+    "tags": [
+      "triage:needs_review",
+      "resolved:merged"
+    ],
+    "title": "albertsons_6 client-sent-export-failure",
+    "summary": "Merged into 260622-albertsons_6-http-client-errors: Client-sent failure is for the same Albertsons audience as a 2026-06-23 snapshotting HTTP-client alert already classified as the existing Quervice missing Product_Attributes_Product_Group_categoryL validation class.",
+    "next_action": "Follow target group 260622-albertsons_6-http-client-errors.",
+    "incident_ids": [
+      "Q2C59EMLGBSSWK"
+    ],
+    "alert_count": 1,
+    "path": "groups/resolved/260622-albertsons_6-client-sent-export-failure-14/case.md"
+  },
+  {
+    "group_id": "260622-albertsons_6-client-sent-export-failure-15",
+    "state": "resolved",
+    "tags": [
+      "triage:needs_review",
+      "resolved:merged"
+    ],
+    "title": "albertsons_6 client-sent-export-failure",
+    "summary": "Merged into 260622-albertsons_6-client-sent-export-failure-04: Targeted preflight for this Albertsons client-sent singleton found the same blocker as the new missing_export_after_alert class: Pizza history exists, but no matching export run after the alert.",
+    "next_action": "Follow target group 260622-albertsons_6-client-sent-export-failure-04.",
+    "incident_ids": [
+      "Q2DZPMOJTWNQ11"
+    ],
+    "alert_count": 1,
+    "path": "groups/resolved/260622-albertsons_6-client-sent-export-failure-15/case.md"
+  },
+  {
+    "group_id": "260622-albertsons_6-client-sent-export-failure-16",
+    "state": "resolved",
+    "tags": [
+      "triage:needs_review",
+      "resolved:merged"
+    ],
+    "title": "albertsons_6 client-sent-export-failure",
+    "summary": "Merged into 260622-albertsons_6-http-client-errors: Client-sent failure is for the same Albertsons audience as a 2026-06-23 snapshotting HTTP-client alert already classified as the existing Quervice missing Product_Attributes_Product_Group_categoryL validation class.",
+    "next_action": "Follow target group 260622-albertsons_6-http-client-errors.",
+    "incident_ids": [
+      "Q2EEZBO0CVUEW3"
+    ],
+    "alert_count": 1,
+    "path": "groups/resolved/260622-albertsons_6-client-sent-export-failure-16/case.md"
+  },
+  {
+    "group_id": "260622-albertsons_6-client-sent-export-failure-17",
+    "state": "resolved",
+    "tags": [
+      "triage:needs_review",
+      "resolved:merged"
+    ],
+    "title": "albertsons_6 client-sent-export-failure",
+    "summary": "Merged into 260622-albertsons_6-bigquery-type-mismatch: Client-sent failure is for the same Albertsons audience as a 2026-06-23 snapshotting alert already classified as BigQuery expression type incompatibility.",
+    "next_action": "Follow target group 260622-albertsons_6-bigquery-type-mismatch.",
+    "incident_ids": [
+      "Q35FXUK3R7EP76"
+    ],
+    "alert_count": 1,
+    "path": "groups/resolved/260622-albertsons_6-client-sent-export-failure-17/case.md"
+  },
+  {
+    "group_id": "260622-albertsons_6-client-sent-export-failure-18",
+    "state": "resolved",
+    "tags": [
+      "triage:needs_review",
+      "resolved:merged"
+    ],
+    "title": "albertsons_6 client-sent-export-failure",
+    "summary": "Merged into 260622-albertsons_6-client-sent-export-failure-04: Targeted preflight for this Albertsons client-sent singleton found the same blocker as the new missing_export_after_alert class: Pizza history exists, but no matching export run after the alert.",
+    "next_action": "Follow target group 260622-albertsons_6-client-sent-export-failure-04.",
+    "incident_ids": [
+      "Q36ENB8WGMYDAW"
+    ],
+    "alert_count": 1,
+    "path": "groups/resolved/260622-albertsons_6-client-sent-export-failure-18/case.md"
+  },
+  {
+    "group_id": "260622-albertsons_6-client-sent-export-failure-19",
+    "state": "resolved",
+    "tags": [
+      "triage:needs_review",
+      "resolved:merged"
+    ],
+    "title": "albertsons_6 client-sent-export-failure",
+    "summary": "Merged into 260622-albertsons_6-client-sent-export-failure-04: Targeted preflight for this Albertsons client-sent singleton found the same blocker as the new missing_export_after_alert class: Pizza history exists, but no matching export run after the alert.",
+    "next_action": "Follow target group 260622-albertsons_6-client-sent-export-failure-04.",
+    "incident_ids": [
+      "Q3AEWETRMJ9LHR"
+    ],
+    "alert_count": 1,
+    "path": "groups/resolved/260622-albertsons_6-client-sent-export-failure-19/case.md"
+  },
+  {
+    "group_id": "260622-albertsons_6-client-sent-export-failure-20",
+    "state": "resolved",
+    "tags": [
+      "triage:needs_review",
+      "resolved:merged"
+    ],
+    "title": "albertsons_6 client-sent-export-failure",
+    "summary": "Merged into 260622-albertsons_6-http-client-errors: Client-sent failure is for the same Albertsons audience as a 2026-06-23 snapshotting HTTP-client alert already classified as the existing Quervice missing Product_Attributes_Product_Group_categoryL validation class.",
+    "next_action": "Follow target group 260622-albertsons_6-http-client-errors.",
+    "incident_ids": [
+      "Q3C6EY1CXX6DTB"
+    ],
+    "alert_count": 1,
+    "path": "groups/resolved/260622-albertsons_6-client-sent-export-failure-20/case.md"
+  },
+  {
+    "group_id": "260622-albertsons_6-client-sent-export-failure-21",
+    "state": "resolved",
+    "tags": [
+      "triage:needs_review",
+      "resolved:merged"
+    ],
+    "title": "albertsons_6 client-sent-export-failure",
+    "summary": "Merged into 260622-albertsons_6-client-sent-export-failure-04: Targeted preflight for this Albertsons client-sent singleton found the same blocker as the new missing_export_after_alert class: Pizza history exists, but no matching export run after the alert.",
+    "next_action": "Follow target group 260622-albertsons_6-client-sent-export-failure-04.",
+    "incident_ids": [
+      "Q3D07SXX5MT8PD"
+    ],
+    "alert_count": 1,
+    "path": "groups/resolved/260622-albertsons_6-client-sent-export-failure-21/case.md"
+  },
+  {
+    "group_id": "260622-albertsons_6-client-sent-export-failure-22",
+    "state": "resolved",
+    "tags": [
+      "triage:needs_review",
+      "resolved:merged"
+    ],
+    "title": "albertsons_6 client-sent-export-failure",
+    "summary": "Merged into 260622-albertsons_6-bigquery-type-mismatch: Client-sent failure is for the same Albertsons audience as a 2026-06-23 snapshotting alert already classified as BigQuery expression type incompatibility.",
+    "next_action": "Follow target group 260622-albertsons_6-bigquery-type-mismatch.",
+    "incident_ids": [
+      "Q3D5BM8QKKHA3E"
+    ],
+    "alert_count": 1,
+    "path": "groups/resolved/260622-albertsons_6-client-sent-export-failure-22/case.md"
+  },
+  {
+    "group_id": "260622-albertsons_6-client-sent-export-failure-23",
+    "state": "resolved",
+    "tags": [
+      "triage:needs_review",
+      "resolved:merged"
+    ],
+    "title": "albertsons_6 client-sent-export-failure",
+    "summary": "Merged into 260622-albertsons_6-client-sent-export-failure-04: Targeted preflight for this Albertsons client-sent singleton found the same blocker as the new missing_export_after_alert class: Pizza history exists, but no matching export run after the alert.",
+    "next_action": "Follow target group 260622-albertsons_6-client-sent-export-failure-04.",
+    "incident_ids": [
+      "Q3DJKJ88F7961S"
+    ],
+    "alert_count": 1,
+    "path": "groups/resolved/260622-albertsons_6-client-sent-export-failure-23/case.md"
+  },
+  {
+    "group_id": "260622-albertsons_6-client-sent-export-failure-24",
+    "state": "resolved",
+    "tags": [
+      "triage:needs_review",
+      "resolved:merged"
+    ],
+    "title": "albertsons_6 client-sent-export-failure",
+    "summary": "Merged into 260622-albertsons_6-client-sent-export-failure-04: Targeted preflight for this Albertsons client-sent singleton found the same blocker as the new missing_export_after_alert class: Pizza history exists, but no matching export run after the alert.",
+    "next_action": "Follow target group 260622-albertsons_6-client-sent-export-failure-04.",
+    "incident_ids": [
+      "Q3F2J2NZQGCBA8"
+    ],
+    "alert_count": 1,
+    "path": "groups/resolved/260622-albertsons_6-client-sent-export-failure-24/case.md"
+  },
+  {
+    "group_id": "260622-albertsons_6-client-sent-export-failure-25",
+    "state": "resolved",
+    "tags": [
+      "triage:needs_review",
+      "resolved:merged"
+    ],
+    "title": "albertsons_6 client-sent-export-failure",
+    "summary": "Merged into 260622-albertsons_6-http-client-errors: Client-sent failure is for the same Albertsons audience as a 2026-06-23 snapshotting HTTP-client alert already classified as the existing Quervice missing Product_Attributes_Product_Group_categoryL validation class.",
+    "next_action": "Follow target group 260622-albertsons_6-http-client-errors.",
+    "incident_ids": [
+      "Q3PZTO9L0YMZJ9"
+    ],
+    "alert_count": 1,
+    "path": "groups/resolved/260622-albertsons_6-client-sent-export-failure-25/case.md"
+  },
+  {
     "group_id": "260622-albertsons_6-snapshotting-error",
     "state": "resolved",
     "tags": [
@@ -5850,6 +5832,102 @@
     ],
     "alert_count": 1,
     "path": "groups/resolved/260622-trumanshow_336-no-batches/case.md"
+  },
+  {
+    "group_id": "260623-albertsons_6-client-sent-export-failure",
+    "state": "resolved",
+    "tags": [
+      "triage:needs_review",
+      "resolved:merged"
+    ],
+    "title": "albertsons_6 client-sent-export-failure",
+    "summary": "Merged into 260622-albertsons_6-client-sent-export-failure-04: Targeted preflight for this Albertsons client-sent singleton found the same blocker as the new missing_export_after_alert class: Pizza history exists, but no matching export run after the alert.",
+    "next_action": "Follow target group 260622-albertsons_6-client-sent-export-failure-04.",
+    "incident_ids": [
+      "Q09FHOR4ZDMTUL"
+    ],
+    "alert_count": 1,
+    "path": "groups/resolved/260623-albertsons_6-client-sent-export-failure/case.md"
+  },
+  {
+    "group_id": "260623-albertsons_6-client-sent-export-failure-02",
+    "state": "resolved",
+    "tags": [
+      "triage:needs_review",
+      "resolved:merged"
+    ],
+    "title": "albertsons_6 client-sent-export-failure",
+    "summary": "Merged into 260622-albertsons_6-client-sent-export-failure-04: Targeted preflight for this Albertsons client-sent singleton found the same blocker as the new missing_export_after_alert class: Pizza history exists, but no matching export run after the alert.",
+    "next_action": "Follow target group 260622-albertsons_6-client-sent-export-failure-04.",
+    "incident_ids": [
+      "Q1UEOA2CBT90GM"
+    ],
+    "alert_count": 1,
+    "path": "groups/resolved/260623-albertsons_6-client-sent-export-failure-02/case.md"
+  },
+  {
+    "group_id": "260623-albertsons_6-client-sent-export-failure-03",
+    "state": "resolved",
+    "tags": [
+      "triage:needs_review",
+      "resolved:merged"
+    ],
+    "title": "albertsons_6 client-sent-export-failure",
+    "summary": "Merged into 260622-albertsons_6-http-client-errors: Client-sent failure is for the same Albertsons audience as a 2026-06-23 snapshotting HTTP-client alert already classified as the existing Quervice missing Product_Attributes_Product_Group_categoryL validation class.",
+    "next_action": "Follow target group 260622-albertsons_6-http-client-errors.",
+    "incident_ids": [
+      "Q2W8MBXYOAXD3J"
+    ],
+    "alert_count": 1,
+    "path": "groups/resolved/260623-albertsons_6-client-sent-export-failure-03/case.md"
+  },
+  {
+    "group_id": "260623-albertsons_6-client-sent-export-failure-04",
+    "state": "resolved",
+    "tags": [
+      "triage:needs_review",
+      "resolved:merged"
+    ],
+    "title": "albertsons_6 client-sent-export-failure",
+    "summary": "Merged into 260622-albertsons_6-client-sent-export-failure-04: Targeted preflight for this Albertsons client-sent singleton found the same blocker as the new missing_export_after_alert class: Pizza history exists, but no matching export run after the alert.",
+    "next_action": "Follow target group 260622-albertsons_6-client-sent-export-failure-04.",
+    "incident_ids": [
+      "Q30P00WNLHRK9W"
+    ],
+    "alert_count": 1,
+    "path": "groups/resolved/260623-albertsons_6-client-sent-export-failure-04/case.md"
+  },
+  {
+    "group_id": "260623-albertsons_6-client-sent-export-failure-05",
+    "state": "resolved",
+    "tags": [
+      "triage:needs_review",
+      "resolved:merged"
+    ],
+    "title": "albertsons_6 client-sent-export-failure",
+    "summary": "Merged into 260622-albertsons_6-client-sent-export-failure-04: Targeted preflight for this Albertsons client-sent singleton found the same blocker as the new missing_export_after_alert class: Pizza history exists, but no matching export run after the alert.",
+    "next_action": "Follow target group 260622-albertsons_6-client-sent-export-failure-04.",
+    "incident_ids": [
+      "Q3T8YVL0VO05SK"
+    ],
+    "alert_count": 1,
+    "path": "groups/resolved/260623-albertsons_6-client-sent-export-failure-05/case.md"
+  },
+  {
+    "group_id": "260623-albertsons_6-client-sent-export-failure-06",
+    "state": "resolved",
+    "tags": [
+      "triage:needs_review",
+      "resolved:merged"
+    ],
+    "title": "albertsons_6 client-sent-export-failure",
+    "summary": "Merged into 260622-albertsons_6-client-sent-export-failure-04: Targeted preflight for this Albertsons client-sent singleton found the same blocker as the new missing_export_after_alert class: Pizza history exists, but no matching export run after the alert.",
+    "next_action": "Follow target group 260622-albertsons_6-client-sent-export-failure-04.",
+    "incident_ids": [
+      "Q3VC2EL90AOSKX"
+    ],
+    "alert_count": 1,
+    "path": "groups/resolved/260623-albertsons_6-client-sent-export-failure-06/case.md"
   },
   {
     "group_id": "260623-albertsons_6-no-batches",

@@ -19,7 +19,7 @@ Triage is an evidence loop, not a one-shot grouping pass:
 
 1. Refresh the workspace so the agent is looking at current facts. Today that
    usually means `sync-pd`, any relevant evidence refresh such as
-   `check-exports`, then `index`. A future `refresh` command should wrap the
+   `preflight`, then `index`. A future `refresh` command should wrap the
    common version of this sequence.
 2. Open `cases/index.md` and take the highest-priority non-resolved group. Start
    with the top `New` group unless there is a stronger operational reason to
@@ -39,9 +39,11 @@ Triage is an evidence loop, not a one-shot grouping pass:
    processing. To run that operation across a queue, use
    `--filter group.state=new` or another state. If it resolves or moves a case
    to monitoring, move on to the next group. If it records `blocked` evidence,
-   continue investigation from
-   that generated evidence. Environments listed as unavailable in
-   `cases/env_availability.json` are skipped instead of probed.
+   continue investigation from that generated evidence. Environments listed as
+   unavailable in `cases/env_availability.json` are skipped instead of probed.
+   When you have a hand-picked list of groups, run one batched command with
+   `--filter "group.id in id1,id2,id3"` instead of looping over one
+   `group.id=<id>` command per group.
 4. Ask the agent to decide what to do with that group. The agent should inspect
    alert facts, prior annotations, case notes, and external evidence; explain
    the likely situation; and guide the next action.
@@ -55,9 +57,11 @@ Triage is an evidence loop, not a one-shot grouping pass:
    agent benefits.
 8. Repeat.
 
-The important habit is to work one group at a time while keeping alerts
-queryable across group boundaries. Groups are a work queue and coordination
-surface; evidence tags explain why any alert belongs in a remediation path.
+The important habit is to investigate and decide one group at a time while
+keeping alerts queryable across group boundaries. Evidence refresh commands may
+cover a state queue or selected group list in one batched run; groups are still
+the work queue and coordination surface, and evidence tags explain why any alert
+belongs in a remediation path.
 
 ## Mental Model
 
@@ -140,7 +144,8 @@ bun run oncall-triage group cases
 bun run oncall-triage tag cases --script ./tagger.ts --filter alert.org=acme_123 --limit 5 --test
 bun run oncall-triage group cases --tag evidence:example --title "Example issue" --summary "..." --rationale "..." --test
 bun run oncall-triage preflight cases --filter group.state=new
-bun run oncall-triage check-exports cases --filter group.id=<group-id> --apply --auto-resolve
+bun run oncall-triage preflight cases --filter "group.id in group-a,group-b,group-c"
+bun run oncall-triage check-exports cases --filter group.id=<group-id> --apply --auto-resolve  # lower-level escape hatch; prefer preflight for normal triage
 bun run oncall-triage evidence cases --group <group-id> --kind triage --source "gcloud scoped logs" --summary "..." --link "Scoped logs=https://console.cloud.google.com/logs/query;query=...?...project=..."
 bun run oncall-triage index cases
 bun run oncall-triage sync-pd cases --incident Q123ABC
@@ -152,6 +157,8 @@ should report what they are checking and what state they wrote instead of
 remaining silent until completion.
 
 Use repeatable namespaced `--filter key=value` arguments for command selection.
+For selected ID lists, use the quoted `in` operator, for example
+`--filter "group.id in group-a,group-b,group-c"`.
 Supported alert filters are `alert.incident`, `alert.org`, `alert.audience`,
 `alert.destination`, and `alert.state`. Supported group filters are `group.id`,
 `group.state`, `group.tag`, and `group.incident`. Selector aliases such as
@@ -161,16 +168,20 @@ instead. Command arguments with distinct meanings, such as
 `import-pd --incident`, `sync-pd --incident`, `transition --state`, and
 `group --state`, are still valid.
 
-`check-exports` keeps one live Bifrost proxy open per environment for the
-duration of a command run, reuses it across checks, and closes it before exit.
-With `--filter group.id=<group-id> --apply --auto-resolve`, it acts as the first
-investigation preflight for a case: first check Google auth freshness and
-refresh credentials with `gcloud auth login --update-adc` when needed, then run
-Pizza for the group's alert facts, write export-check evidence, and resolve the
-group when every alert-scoped check is `healthy_closed`.
-`preflight --filter group.id=<group-id>` runs that case-scoped operation for one group.
-Without `group.id`, `preflight` runs it across every group in a
-selected state, defaulting to `new`.
+`preflight` is the normal export evidence refresh command. It checks Google auth
+freshness, refreshes credentials with `gcloud auth login --update-adc` when
+needed, runs Pizza for selected alert facts, writes export-check evidence, and
+resolves or monitors groups when the checks prove a terminal or in-flight state.
+The lower-level `check-exports` command is still available when you need to
+evaluate checks without group auto-transition behavior or when using
+`--pizza-rows-file`.
+`preflight --filter group.id=<group-id>` runs that case-scoped operation for one
+group. `preflight --filter "group.id in id1,id2,id3"` runs selected groups in
+one command. Prefer that over shell loops: one preflight command derives selected
+checks once, batches Pizza requests by environment and org, keeps one live
+Bifrost proxy per environment, and regenerates workspace indexes once at the
+end. Without `group.id`, `preflight` runs it across every group in a selected
+state, defaulting to `new`.
 
 `cases/env_availability.json` records local environment reachability. Mark an
 environment `unavailable` there when the current machine cannot access its
@@ -222,8 +233,12 @@ Group correction primitives:
 
 ```bash
 bun run oncall-triage merge cases --source <group-id> --target <group-id> --rationale "Same root cause."
+bun run oncall-triage merge cases --source <group-id> --source <group-id> --target <group-id> --rationale "Same root cause."
 bun run oncall-triage split cases --group <group-id> --alerts <alert-id,alert-id> --rationale "Different root cause."
 ```
+
+Use repeated `--source` flags when several groups merge into the same target;
+do not loop one merge command per source.
 
 Evidence-tagged grouping:
 
@@ -262,7 +277,8 @@ for scripts that are intentionally general and maintained across incidents.
 Common export triage pattern:
 
 1. Query a broad cohort, such as one org and destination.
-2. Run `check-exports` to collect scoped per-alert evidence.
+2. Run `preflight` for the selected group, group list, or state queue to collect
+   scoped export evidence in one batched pass.
 3. Run a classifier tagger with `--test` first.
 4. Before tagging a later successful run as recovered, check whether the failed
    export was a delta export. If scoped logs or batch messages show

@@ -11,6 +11,7 @@ describe("shared filters", () => {
         "alert.audience=12873",
         "alert.destination=live_ramp_activation",
         "alert.state=snapshotting_finished/export_processing",
+        "group.id in g2,g1",
         "group.state=open",
         "group.tag=triage:needs_review",
         "group.incident=Q123",
@@ -24,6 +25,7 @@ describe("shared filters", () => {
         state: "snapshotting_finished/export_processing",
       },
       group: {
+        ids: ["g1", "g2"],
         state: "open",
         tags: ["triage:needs_review"],
         incidentId: "Q123",
@@ -36,6 +38,7 @@ describe("shared filters", () => {
     expect(() => parseFilterValues(["alert.org="])).toThrow(/must not be empty/);
     expect(() => parseFilterValues(["state=open"])).toThrow(/Unknown --filter key/);
     expect(() => parseFilterValues(["group.state=bogus"])).toThrow(/Invalid group.state/);
+    expect(() => parseFilterValues(["alert.org in one_1,two_2"])).toThrow(/Unsupported --filter in operator/);
   });
 
   test("rejects conflicting scalar filters", () => {
@@ -83,6 +86,8 @@ describe("shared filters", () => {
     };
 
     expect(matchesGroupFilter(group, { id: "g1", state: "open", tags: ["triage:needs_review"], incidentId: "Q1" })).toBe(true);
+    expect(matchesGroupFilter(group, { ids: ["g1", "g2"] })).toBe(true);
+    expect(matchesGroupFilter(group, { ids: ["g2", "g3"] })).toBe(false);
     expect(matchesGroupFilter(group, { tags: ["missing"] })).toBe(false);
     expect(matchesGroupFilter(group, { state: "new" })).toBe(false);
   });

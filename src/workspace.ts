@@ -31,11 +31,15 @@ const execFileAsync = promisify(execFile);
 const GROUP_STATE_DIRS: GroupState["state"][] = ["new", "open", "monitoring", "waiting", "resolved"];
 
 export async function initWorkspace(workspaceDir: string): Promise<void> {
+  await ensureWorkspaceDirs(workspaceDir);
+  await regenerateIndex(workspaceDir);
+}
+
+async function ensureWorkspaceDirs(workspaceDir: string): Promise<void> {
   await ensureDir(path.join(workspaceDir, "incidents"));
   await ensureDir(path.join(workspaceDir, "groups"));
   await ensureDir(path.join(workspaceDir, "artifacts"));
   await ensureDir(path.join(workspaceDir, "indexes"));
-  await regenerateIndex(workspaceDir);
 }
 
 export async function importPagerDutyIncident(options: {
@@ -397,59 +401,83 @@ export async function mergeGroups(options: {
   rationale: string;
   actor?: string;
 }): Promise<{ source: GroupState; target: GroupState }> {
-  await initWorkspace(options.workspaceDir);
-  if (options.sourceGroupId === options.targetGroupId) throw new Error("Source and target groups must differ.");
+  const result = await mergeManyGroups({
+    workspaceDir: options.workspaceDir,
+    sourceGroupIds: [options.sourceGroupId],
+    targetGroupId: options.targetGroupId,
+    rationale: options.rationale,
+    ...(options.actor ? { actor: options.actor } : {}),
+  });
+  return { source: result.sources[0]!, target: result.target };
+}
+
+export async function mergeManyGroups(options: {
+  workspaceDir: string;
+  sourceGroupIds: string[];
+  targetGroupId: string;
+  rationale: string;
+  actor?: string;
+}): Promise<{ sources: GroupState[]; target: GroupState }> {
+  await ensureWorkspaceDirs(options.workspaceDir);
+  if (options.sourceGroupIds.length === 0) throw new Error("At least one source group is required.");
+  const sourceIds = sortedUnique(options.sourceGroupIds);
+  if (sourceIds.length !== options.sourceGroupIds.length) throw new Error("Source groups must be unique.");
+  if (sourceIds.includes(options.targetGroupId)) throw new Error("Source and target groups must differ.");
 
   const now = new Date().toISOString();
-  const source = await readGroupState(options.workspaceDir, options.sourceGroupId);
+  const sources: GroupState[] = [];
   const target = await readGroupState(options.workspaceDir, options.targetGroupId);
   const actor = options.actor ?? "agent";
-
-  source.state = "resolved";
-  if (!source.tags.includes("resolved:merged")) source.tags.push("resolved:merged");
-  source.summary = `Merged into ${target.group_id}: ${options.rationale}`;
-  source.next_action = `Follow target group ${target.group_id}.`;
-  source.updated_at = now;
-  source.related_group_ids = sortedUnique([...source.related_group_ids, target.group_id]);
-
-  target.alert_refs = sortedUniqueRefs([...target.alert_refs, ...source.alert_refs]);
-  target.incident_ids = sortedUnique([...target.incident_ids, ...source.incident_ids]);
-  target.updated_at = now;
-  target.related_group_ids = sortedUnique([...target.related_group_ids, source.group_id]);
-
-  await writeGroupState(options.workspaceDir, source);
-  await writeGroupState(options.workspaceDir, target);
   const matchRules = await loadMatchRules(options.workspaceDir);
   let changedRules = false;
-  for (const rule of matchRules) {
-    if (rule.status !== "active" || rule.target_group_id !== source.group_id) continue;
-    rule.status = "redirect";
-    rule.target_group_id = target.group_id;
-    rule.reason = "merged";
-    rule.rationale = options.rationale;
-    changedRules = true;
+
+  for (const sourceGroupId of sourceIds) {
+    const source = await readGroupState(options.workspaceDir, sourceGroupId);
+
+    source.state = "resolved";
+    if (!source.tags.includes("resolved:merged")) source.tags.push("resolved:merged");
+    source.summary = `Merged into ${target.group_id}: ${options.rationale}`;
+    source.next_action = `Follow target group ${target.group_id}.`;
+    source.updated_at = now;
+    source.related_group_ids = sortedUnique([...source.related_group_ids, target.group_id]);
+
+    target.alert_refs = sortedUniqueRefs([...target.alert_refs, ...source.alert_refs]);
+    target.incident_ids = sortedUnique([...target.incident_ids, ...source.incident_ids]);
+    target.related_group_ids = sortedUnique([...target.related_group_ids, source.group_id]);
+
+    await writeGroupState(options.workspaceDir, source);
+    for (const rule of matchRules) {
+      if (rule.status !== "active" || rule.target_group_id !== source.group_id) continue;
+      rule.status = "redirect";
+      rule.target_group_id = target.group_id;
+      rule.reason = "merged";
+      rule.rationale = options.rationale;
+      changedRules = true;
+    }
+    await appendLineage(options.workspaceDir, source.group_id, {
+      ts: now,
+      actor,
+      kind: "merge",
+      related_group_id: target.group_id,
+      summary: `Merged into ${target.group_id}.`,
+      rationale: options.rationale,
+    });
+    await appendLineage(options.workspaceDir, target.group_id, {
+      ts: now,
+      actor,
+      kind: "merge",
+      related_group_id: source.group_id,
+      summary: `Received merge from ${source.group_id}.`,
+      rationale: options.rationale,
+    });
+    sources.push(source);
   }
+
+  target.updated_at = now;
+  await writeGroupState(options.workspaceDir, target);
   if (changedRules) await writeMatchRules(options.workspaceDir, matchRules);
-  await appendLineage(options.workspaceDir, source.group_id, {
-    ts: now,
-    actor,
-    kind: "merge",
-    related_group_id: target.group_id,
-    summary: `Merged into ${target.group_id}.`,
-    rationale: options.rationale,
-  });
-  await appendLineage(options.workspaceDir, target.group_id, {
-    ts: now,
-    actor,
-    kind: "merge",
-    related_group_id: source.group_id,
-    summary: `Received merge from ${source.group_id}.`,
-    rationale: options.rationale,
-  });
-  await writeCaseMarkdown(options.workspaceDir, source);
-  await writeCaseMarkdown(options.workspaceDir, target);
   await regenerateIndex(options.workspaceDir);
-  return { source, target };
+  return { sources, target };
 }
 
 export async function splitGroup(options: {
@@ -724,8 +752,10 @@ export async function regenerateIndex(workspaceDir: string): Promise<WorkspaceIn
   await ensureDir(path.join(workspaceDir, "indexes"));
   await organizeGroupDirectories(workspaceDir);
   const groups = await loadAllGroups(workspaceDir);
-  for (const group of groups) await writeCaseMarkdown(workspaceDir, group);
   const alerts = await loadAllAlerts(workspaceDir);
+  const checks = await loadAllExportChecks(workspaceDir);
+  const renderContext = { alerts, checks };
+  for (const group of groups) await writeCaseMarkdown(workspaceDir, group, renderContext);
   const indexGroups: IndexGroup[] = groups
     .map((group) => ({
       group_id: group.group_id,
@@ -782,6 +812,19 @@ export async function loadAllAlerts(workspaceDir: string): Promise<AlertFact[]> 
     }
   }
   return alerts;
+}
+
+export async function loadAllExportChecks(workspaceDir: string): Promise<ExportCheck[]> {
+  const checkIds = await listDirs(path.join(workspaceDir, "checks"));
+  const checks: ExportCheck[] = [];
+  for (const checkId of checkIds) {
+    try {
+      checks.push(await readJson<ExportCheck>(path.join(workspaceDir, "checks", checkId, "check.json")));
+    } catch (err) {
+      if ((err as NodeJS.ErrnoException).code !== "ENOENT") throw err;
+    }
+  }
+  return checks;
 }
 
 export async function queryAlertFacts(
@@ -1187,10 +1230,10 @@ function stateFailureClass(alert: AlertFact): string | undefined {
   return undefined;
 }
 
-async function writeCaseMarkdown(workspaceDir: string, group: GroupState): Promise<void> {
+async function writeCaseMarkdown(workspaceDir: string, group: GroupState, context?: { alerts: AlertFact[]; checks: ExportCheck[] }): Promise<void> {
   const [alerts, checks, evidence, notes] = await Promise.all([
-    readGroupAlerts(workspaceDir, group),
-    readGroupExportChecks(workspaceDir, group),
+    context ? Promise.resolve(groupAlerts(group, context.alerts)) : readGroupAlerts(workspaceDir, group),
+    context ? Promise.resolve(groupExportChecks(group, context.checks)) : readGroupExportChecks(workspaceDir, group),
     readEvidenceEvents(workspaceDir, group.group_id),
     readGroupNotes(workspaceDir, group.group_id),
   ]);
@@ -1285,26 +1328,27 @@ function isCommunicationEvidenceNote(notes: string | undefined): boolean {
 }
 
 async function readGroupAlerts(workspaceDir: string, group: GroupState): Promise<AlertFact[]> {
-  const selected = new Set(group.alert_refs.map(refKey));
   const alerts = await loadAllAlerts(workspaceDir);
+  return groupAlerts(group, alerts);
+}
+
+async function readGroupExportChecks(workspaceDir: string, group: GroupState): Promise<ExportCheck[]> {
+  const checks = await loadAllExportChecks(workspaceDir);
+  return groupExportChecks(group, checks);
+}
+
+function groupAlerts(group: GroupState, alerts: AlertFact[]): AlertFact[] {
+  const selected = new Set(group.alert_refs.map(refKey));
   return alerts
     .filter((alert) => selected.has(alertKey(alert)))
     .sort((a, b) => a.created_at.localeCompare(b.created_at) || a.incident_id.localeCompare(b.incident_id) || a.alert_id.localeCompare(b.alert_id));
 }
 
-async function readGroupExportChecks(workspaceDir: string, group: GroupState): Promise<ExportCheck[]> {
+function groupExportChecks(group: GroupState, checks: ExportCheck[]): ExportCheck[] {
   const selected = new Set(group.alert_refs.map(refKey));
-  const checkIds = await listDirs(path.join(workspaceDir, "checks"));
-  const checks: ExportCheck[] = [];
-  for (const checkId of checkIds) {
-    try {
-      const check = await readJson<ExportCheck>(path.join(workspaceDir, "checks", checkId, "check.json"));
-      if (selected.has(refKey({ incident_id: check.incident_id, alert_id: check.alert_id }))) checks.push(check);
-    } catch (err) {
-      if ((err as NodeJS.ErrnoException).code !== "ENOENT") throw err;
-    }
-  }
-  return checks.sort((a, b) => a.incident_id.localeCompare(b.incident_id) || a.alert_id.localeCompare(b.alert_id) || a.check_id.localeCompare(b.check_id));
+  return checks
+    .filter((check) => selected.has(refKey({ incident_id: check.incident_id, alert_id: check.alert_id })))
+    .sort((a, b) => a.incident_id.localeCompare(b.incident_id) || a.alert_id.localeCompare(b.alert_id) || a.check_id.localeCompare(b.check_id));
 }
 
 function renderAlertScope(group: GroupState, alerts: AlertFact[]): string[] {

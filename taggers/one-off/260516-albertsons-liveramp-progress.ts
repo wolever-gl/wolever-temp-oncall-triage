@@ -42,7 +42,7 @@ try {
   console.log(JSON.stringify({
     decision: "needs_evidence",
     confidence: "low",
-    summary: `No export check found for ${alert.incident_id}/${alert.alert_id}; run check-exports for this alert first.`,
+    summary: `No export check found for ${alert.incident_id}/${alert.alert_id}; run preflight for this group first.`,
     evidence: [{
       kind: "export_check",
       matched: false,
