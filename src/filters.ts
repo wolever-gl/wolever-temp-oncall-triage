@@ -117,7 +117,7 @@ export function matchesAlertFilter(alert: AlertFact, filters: AlertFilter): bool
   const alertRefKeys = filters.alertRefs ? new Set(filters.alertRefs.map(refKey)) : undefined;
   if (alertRefKeys && !alertRefKeys.has(alertKey(alert))) return false;
   if (filters.incidentId && alert.incident_id !== filters.incidentId) return false;
-  if (filters.orgId && alert.org_id !== filters.orgId) return false;
+  if (filters.orgId && alert.org_id !== filters.orgId && alert.org_id_numeric !== filters.orgId) return false;
   if (filters.audienceId && alert.audience_id !== filters.audienceId) return false;
   if (filters.destination && alert.destination_type !== filters.destination && alert.destination_product !== filters.destination) return false;
   if (filters.state) {

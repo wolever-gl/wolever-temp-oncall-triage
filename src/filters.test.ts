@@ -64,6 +64,17 @@ describe("shared filters", () => {
     ).toEqual(["A"]);
   });
 
+  test("filters alerts by numeric-only org ids", () => {
+    const alerts = [
+      alert({ alert_id: "A", org_id_numeric: "174" }),
+      alert({ alert_id: "B", org_id: "albertsons_6", org_id_numeric: "6" }),
+      alert({ alert_id: "C", org_id_numeric: "310" }),
+    ];
+
+    expect(filterAlertFacts(alerts, { orgId: "174" }).map((item) => item.alert_id)).toEqual(["A"]);
+    expect(filterAlertFacts(alerts, { orgId: "albertsons_6" }).map((item) => item.alert_id)).toEqual(["B"]);
+  });
+
   test("filters alerts by selected refs", () => {
     const alerts = [alert({ alert_id: "A", incident_id: "Q1" }), alert({ alert_id: "B", incident_id: "Q1" })];
     expect(filterAlertFacts(alerts, { alertRefs: [{ incident_id: "Q1", alert_id: "B" }] }).map((item) => item.alert_id)).toEqual(["B"]);
