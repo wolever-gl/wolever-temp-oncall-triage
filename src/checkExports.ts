@@ -11,7 +11,9 @@ export interface CheckExportsOptions {
   apply?: boolean;
   now?: Date;
   filters?: AlertFilter;
-  fetchPizzaRows?: (scope: ExportCheckScope) => Promise<PizzaExportRow[]>;
+  fetchPizzaRows?: ((scope: ExportCheckScope) => Promise<PizzaExportRow[]>) & {
+    prime?: (scopes: ExportCheckScope[]) => Promise<void>;
+  };
   onProgress?: (message: string) => void;
 }
 
@@ -58,6 +60,14 @@ export async function checkExportsWorkspace(options: CheckExportsOptions): Promi
     const check = deriveExportCheck(alert, nowIso, previous);
     if (!previous) derived++;
     checks.push(check);
+  }
+
+  const primeableScopes = checks
+    .filter((check) => checkNeedsPizzaFetch(check, environmentAvailability, nowIso))
+    .map((check) => check.scope);
+  if (primeableScopes.length > 0 && options.fetchPizzaRows?.prime) {
+    options.onProgress?.(`Priming Pizza rows for ${primeableScopes.length} check scope(s).`);
+    await options.fetchPizzaRows.prime(primeableScopes);
   }
 
   let evaluated = 0;
@@ -124,6 +134,14 @@ export async function checkExportsWorkspace(options: CheckExportsOptions): Promi
     blocked: allChecks.filter((check) => check.state === "blocked").length,
     not_applicable: allChecks.filter((check) => check.state === "not_applicable").length,
   };
+}
+
+function checkNeedsPizzaFetch(check: ExportCheck, availability: EnvironmentAvailabilityFile, nowIso: string): boolean {
+  if (!check.scope.env || !check.scope.org_id || !check.scope.audience_id) return false;
+  if (unavailableEnvironmentReason(availability, check.scope.env)) return false;
+  if (check.state === "healthy_closed" || check.state === "not_applicable") return false;
+  if (check.next_check_at && check.next_check_at > nowIso) return false;
+  return true;
 }
 
 interface EnvironmentAvailabilityFile {

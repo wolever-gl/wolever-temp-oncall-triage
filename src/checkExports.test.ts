@@ -4,7 +4,7 @@ import { tmpdir } from "node:os";
 import path from "node:path";
 import { autoMonitorExportGroup, autoResolveHealthyExportGroup, checkExportsWorkspace, loadAllExportChecks } from "./checkExports";
 import { groupImportedAlerts, importPagerDutyIncident, readGroupState } from "./workspace";
-import type { PizzaExportRow } from "./schema";
+import type { ExportCheckScope, PizzaExportRow } from "./schema";
 
 const fixture = path.resolve(import.meta.dir, "..", "fixtures", "pagerduty-alerts.json");
 
@@ -33,6 +33,38 @@ describe("check-exports", () => {
       expect(checks.every((check) => check.proposed_state === "healthy_closed")).toBe(true);
       expect(checks.every((check) => check.state === "open")).toBe(true);
       expect(checks[0]?.run_evaluations[0]?.health).toBe("healthy");
+    } finally {
+      await rm(workspaceDir, { recursive: true, force: true });
+    }
+  });
+
+  test("primes batch-capable Pizza fetchers before evaluating checks", async () => {
+    const workspaceDir = await mkdtemp(path.join(tmpdir(), "oncall-triage-v2-"));
+    try {
+      await importPagerDutyIncident({ workspaceDir, incident: "QTEST123", alertsFile: fixture });
+      const rowsByAudience = new Map<string, PizzaExportRow[]>();
+      const primedAudienceIds: string[] = [];
+      const fetchPizzaRows = (async (scope: ExportCheckScope) => rowsByAudience.get(scope.audience_id ?? "") ?? []) as
+        ((scope: ExportCheckScope) => Promise<PizzaExportRow[]>) & { prime: (scopes: ExportCheckScope[]) => Promise<void> };
+      fetchPizzaRows.prime = async (scopes) => {
+        for (const scope of scopes) {
+          if (!scope.audience_id) continue;
+          primedAudienceIds.push(scope.audience_id);
+          rowsByAudience.set(scope.audience_id, [
+            healthyRow(`${scope.audience_id}-marketing_cloud_10988-scheduled__2026-05-15T16:00:00+00:00`, scope.audience_id),
+          ]);
+        }
+      };
+
+      const result = await checkExportsWorkspace({
+        workspaceDir,
+        apply: true,
+        now: new Date("2026-05-15T17:00:00Z"),
+        fetchPizzaRows,
+      });
+
+      expect(primedAudienceIds.sort()).toEqual(["16985", "16985", "20770"]);
+      expect(result.healthy_closed).toBe(3);
     } finally {
       await rm(workspaceDir, { recursive: true, force: true });
     }

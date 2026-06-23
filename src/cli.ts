@@ -3,7 +3,7 @@ import { autoMonitorExportGroup, autoResolveHealthyExportGroup, checkExportsWork
 import { matchesGroupFilter, mergeAlertFilter, parseFilterValues, type AlertFilter, type CommandFilters, type GroupFilter } from "./filters";
 import { createLivePizzaFetcher } from "./pizza";
 import { appendEvidence, closePagerDutyAlertsForResolvedGroups, groupImportedAlerts, groupTaggedAlerts, importActivePagerDutyIncidents, importPagerDutyIncident, initWorkspace, loadAllGroups, mergeGroups, queryAlertFacts, readGroupState, regenerateIndex, runAlertTagger, splitGroup, syncPagerDutyWorkspace, transitionGroup } from "./workspace";
-import type { GroupState, GroupStateName } from "./schema";
+import type { AlertRef, GroupState, GroupStateName } from "./schema";
 
 async function main(argv: string[]): Promise<void> {
   const [command, workspaceDir, ...rest] = argv;
@@ -210,15 +210,19 @@ async function main(argv: string[]): Promise<void> {
     let monitored = 0;
     try {
       const groups = await resolveGroups(workspaceDir, groupFilter);
-      for (const group of groups) {
-        console.log(`Preflight ${group.group_id}`);
-        const result = await checkExportsWorkspace({
+      const alertRefs = uniqueAlertRefs(groups.flatMap((group) => group.alert_refs));
+      if (groups.length > 0) {
+        console.log(`Preflight selected ${groups.length} group(s), ${alertRefs.length} alert ref(s).`);
+        await checkExportsWorkspace({
           workspaceDir,
           apply: true,
-          filters: { alertRefs: group.alert_refs },
+          filters: { alertRefs },
           fetchPizzaRows: liveFetcher,
           onProgress: progress,
         });
+      }
+      for (const group of groups) {
+        console.log(`Preflight ${group.group_id}`);
         const auto = await autoResolveHealthyExportGroup({ workspaceDir, groupId: group.group_id });
         let monitorReason = "resolved";
         if (!auto.resolved) {
@@ -228,7 +232,7 @@ async function main(argv: string[]): Promise<void> {
         }
         if (auto.resolved) resolved++;
         checked++;
-        console.log(`Preflight ${group.group_id}: evaluated=${result.evaluated} skipped_unavailable=${result.skipped_unavailable} resolved=${auto.resolved} reason=${auto.reason} monitor_reason=${monitorReason}`);
+        console.log(`Preflight ${group.group_id}: resolved=${auto.resolved} reason=${auto.reason} monitor_reason=${monitorReason}`);
       }
     } finally {
       await liveFetcher.close();
@@ -335,6 +339,12 @@ function hasGroupFilter(filter: GroupFilter): boolean {
 
 function hasAlertFilter(filter: AlertFilter): boolean {
   return Boolean(filter.incidentId || filter.orgId || filter.audienceId || filter.destination || filter.state || filter.alertRefs || filter.limit);
+}
+
+function uniqueAlertRefs(refs: AlertRef[]): AlertRef[] {
+  const byKey = new Map<string, AlertRef>();
+  for (const ref of refs) byKey.set(`${ref.incident_id}::${ref.alert_id}`, ref);
+  return [...byKey.values()].sort((a, b) => a.incident_id.localeCompare(b.incident_id) || a.alert_id.localeCompare(b.alert_id));
 }
 
 function groupCloseRowsByIncident<T extends { incident_id: string }>(refs: T[]): Array<[string, T[]]> {

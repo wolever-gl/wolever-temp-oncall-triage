@@ -2,7 +2,7 @@ import { describe, expect, test } from "bun:test";
 import { mkdtemp, rm, writeFile, utimes } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import path from "node:path";
-import { googleAuthCacheAgeMs, rowsFromPizzaResponse } from "./pizza";
+import { googleAuthCacheAgeMs, groupRowsByAudience, rowsFromPizzaResponse } from "./pizza";
 
 describe("pizza response parsing", () => {
   test("normalizes Bifrost export metrics rows", () => {
@@ -41,6 +41,29 @@ describe("pizza response parsing", () => {
           failed_export_count: 0,
         },
       },
+    ]);
+  });
+
+  test("groups rows by explicit or run-derived audience id", () => {
+    const grouped = groupRowsByAudience([
+      {
+        export_run_id: "16985-marketing_cloud_10988-scheduled__2026-05-15T16:00:00+00:00",
+        audience_id: "16985",
+      },
+      {
+        export_run_id: "16985-live_ramp_activation_10989-scheduled__2026-05-15T16:00:00+00:00",
+      },
+      {
+        export_run_id: "731-dv360_123-scheduled__2026-05-15T16:00:00+00:00",
+      },
+    ]);
+
+    expect(grouped.get("16985")?.map((row) => row.export_run_id)).toEqual([
+      "16985-marketing_cloud_10988-scheduled__2026-05-15T16:00:00+00:00",
+      "16985-live_ramp_activation_10989-scheduled__2026-05-15T16:00:00+00:00",
+    ]);
+    expect(grouped.get("731")?.map((row) => row.export_run_id)).toEqual([
+      "731-dv360_123-scheduled__2026-05-15T16:00:00+00:00",
     ]);
   });
 });

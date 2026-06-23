@@ -12,6 +12,7 @@ export interface LivePizzaFetchOptions {
 }
 
 export type LivePizzaFetcher = ((scope: ExportCheckScope) => Promise<PizzaExportRow[]>) & {
+  prime: (scopes: ExportCheckScope[]) => Promise<void>;
   close: () => Promise<void>;
 };
 
@@ -24,13 +25,18 @@ interface BifrostProxy {
 }
 
 const DEFAULT_AUTH_MAX_AGE_MS = 12 * 60 * 60 * 1000;
+const MAX_AUDIENCES_PER_EXPORTS_REQUEST = 25;
 
 export function createLivePizzaFetcher(options: LivePizzaFetchOptions = {}): LivePizzaFetcher {
   let nextPort = options.portBase ?? 29000 + Math.floor(Math.random() * 1000);
   const proxies = new Map<string, BifrostProxy>();
+  const rowsByScope = new Map<string, PizzaExportRow[]>();
   let authReady: Promise<void> | undefined;
   const fetcher = (async (scope) => {
     if (!scope.env || !scope.org_id || !scope.audience_id) return [];
+    const key = pizzaScopeKey(scope.env, scope.org_id, scope.audience_id);
+    const cached = rowsByScope.get(key);
+    if (cached) return cached;
     authReady ??= ensureFreshGoogleAuth({
       gcloudBin: options.gcloudBin ?? Bun.env.GCLOUD_BIN ?? "gcloud",
       maxAgeMs: options.authMaxAgeMs ?? DEFAULT_AUTH_MAX_AGE_MS,
@@ -47,11 +53,59 @@ export function createLivePizzaFetcher(options: LivePizzaFetchOptions = {}): Liv
       });
       proxies.set(scope.env, proxy);
     }
-    return fetchPizzaRowsViaProxy(scope, proxy, options.onProgress);
+    const rows = await fetchPizzaRowsViaProxy(scope, proxy, [scope.audience_id], options.onProgress);
+    rowsByScope.set(key, rows);
+    return rows;
   }) as LivePizzaFetcher;
+  fetcher.prime = async (scopes) => {
+    const batchScopes = new Map<string, { env: string; org_id: string; audienceIds: Set<string> }>();
+    for (const scope of scopes) {
+      if (!scope.env || !scope.org_id || !scope.audience_id) continue;
+      const scopeKey = pizzaScopeKey(scope.env, scope.org_id, scope.audience_id);
+      if (rowsByScope.has(scopeKey)) continue;
+      const batchKey = `${scope.env}|${scope.org_id}`;
+      const batch = batchScopes.get(batchKey) ?? { env: scope.env, org_id: scope.org_id, audienceIds: new Set<string>() };
+      batch.audienceIds.add(scope.audience_id);
+      batchScopes.set(batchKey, batch);
+    }
+    for (const batch of batchScopes.values()) {
+      const allAudienceIds = [...batch.audienceIds].sort();
+      if (allAudienceIds.length === 0) continue;
+      for (const audienceIds of chunks(allAudienceIds, MAX_AUDIENCES_PER_EXPORTS_REQUEST)) {
+        if (audienceIds.length === 0) continue;
+        authReady ??= ensureFreshGoogleAuth({
+          gcloudBin: options.gcloudBin ?? Bun.env.GCLOUD_BIN ?? "gcloud",
+          maxAgeMs: options.authMaxAgeMs ?? DEFAULT_AUTH_MAX_AGE_MS,
+          ...(options.onProgress ? { onProgress: options.onProgress } : {}),
+        });
+        await authReady;
+        let proxy = proxies.get(batch.env);
+        if (!proxy) {
+          nextPort += 1;
+          proxy = await startBifrostProxy(batch.env, {
+            port: nextPort,
+            glcliBin: options.glcliBin ?? Bun.env.GLCLI_BIN ?? "glcli",
+            ...(options.onProgress ? { onProgress: options.onProgress } : {}),
+          });
+          proxies.set(batch.env, proxy);
+        }
+        const rows = await fetchPizzaRowsViaProxy(
+          { env: batch.env, org_id: batch.org_id, checked_export_run_ids: [] },
+          proxy,
+          audienceIds,
+          options.onProgress,
+        );
+        const rowsByAudience = groupRowsByAudience(rows);
+        for (const audienceId of audienceIds) {
+          rowsByScope.set(pizzaScopeKey(batch.env, batch.org_id, audienceId), rowsByAudience.get(audienceId) ?? []);
+        }
+      }
+    }
+  };
   fetcher.close = async () => {
     for (const proxy of proxies.values()) await stopBifrostProxy(proxy, options.onProgress);
     proxies.clear();
+    rowsByScope.clear();
   };
   return fetcher;
 }
@@ -148,20 +202,21 @@ async function startBifrostProxy(
 async function fetchPizzaRowsViaProxy(
   scope: ExportCheckScope,
   proxy: BifrostProxy,
+  audienceIds: string[],
   onProgress?: (message: string) => void,
 ): Promise<PizzaExportRow[]> {
-  if (!scope.env || !scope.org_id || !scope.audience_id) return [];
+  if (!scope.env || !scope.org_id || audienceIds.length === 0) return [];
   let lastError: unknown;
   for (let attempt = 0; attempt < 4; attempt++) {
     try {
-      onProgress?.(`pizza: fetching /v1/exports env=${scope.env} org=${scope.org_id} audience=${scope.audience_id} attempt=${attempt + 1}.`);
+      onProgress?.(`pizza: fetching /v1/exports env=${scope.env} org=${scope.org_id} audiences=${audienceIds.length} attempt=${attempt + 1}.`);
       const response = await fetch(`http://127.0.0.1:${proxy.port}/v1/exports?environment=${encodeURIComponent(cloudForEnv(scope.env))}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           org_id: scope.org_id,
-          internal_ids: [scope.audience_id],
-          limit: 100,
+          internal_ids: audienceIds,
+          limit: 100 * audienceIds.length,
           target_types: ["audience", "signal"],
         }),
         signal: AbortSignal.timeout(120_000),
@@ -170,7 +225,7 @@ async function fetchPizzaRowsViaProxy(
         throw new Error(`pizza fetch failed (${response.status} ${response.statusText}): ${await response.text()}`);
       }
       const rows = rowsFromPizzaResponse(await response.json());
-      onProgress?.(`pizza: received ${rows.length} row(s) for audience=${scope.audience_id}.`);
+      onProgress?.(`pizza: received ${rows.length} row(s) for audiences=${audienceIds.length}.`);
       return rows;
     } catch (err) {
       lastError = err;
@@ -179,6 +234,22 @@ async function fetchPizzaRowsViaProxy(
     }
   }
   throw lastError instanceof Error ? lastError : new Error(String(lastError));
+}
+
+function pizzaScopeKey(env: string, orgId: string, audienceId: string): string {
+  return `${env}|${orgId}|${audienceId}`;
+}
+
+export function groupRowsByAudience(rows: PizzaExportRow[]): Map<string, PizzaExportRow[]> {
+  const grouped = new Map<string, PizzaExportRow[]>();
+  for (const row of rows) {
+    const audienceId = row.audience_id ?? audienceFromRun(row.export_run_id);
+    if (!audienceId) continue;
+    const existing = grouped.get(audienceId) ?? [];
+    existing.push(row);
+    grouped.set(audienceId, existing);
+  }
+  return grouped;
 }
 
 async function stopBifrostProxy(proxy: BifrostProxy, onProgress?: (message: string) => void): Promise<void> {
@@ -228,6 +299,16 @@ function cloudForEnv(env: string): "aws" | "gcp" {
 
 function destinationFromRun(runId: string): string | undefined {
   return runId.match(/^\d+-(.+)_\d+-[a-z]+__/)?.[1];
+}
+
+function audienceFromRun(runId: string): string | undefined {
+  return runId.match(/^(\d+)-/)?.[1];
+}
+
+function chunks<T>(values: T[], size: number): T[][] {
+  const result: T[][] = [];
+  for (let idx = 0; idx < values.length; idx += size) result.push(values.slice(idx, idx + size));
+  return result;
 }
 
 function arrayField(obj: Record<string, unknown>, key: string): unknown[] | undefined {
