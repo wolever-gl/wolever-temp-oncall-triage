@@ -1,0 +1,48 @@
+{
+  "group_id": "grp_grp_260622_albertsons_6_albertsons_albertsons_media_no_exports_for_audie_split_0323_split_0407",
+  "state": "resolved",
+  "tags": [
+    "triage:needs_review",
+    "resolved:merged"
+  ],
+  "title": "albertsons_6 albertsons-albertsons-media-no-exports-for-audie split split",
+  "summary": "Merged into 260622-albertsons_6-bigquery-type-mismatch: Existing split evidence classifies these no-export alerts as latest snapshotting_error/no_batches with BigQuery incompatible expression types, matching the Albertsons BigQuery type mismatch case.",
+  "deterministic_key": "v3|incident:Q01RMY4QJ0EDMW|org:albertsons_6|class:albertsons-albertsons-media-no-exports-for-audie|split|Q0QM073YDZVAC4,Q0VZ60NZVSYJU0,Q1DQEGHV9I3BKB,Q242WOR3SSY0CB,Q2JTQO1QPYNXR5,Q33CABFZE6WJLU|split|Q0VZ60NZVSYJU0,Q1DQEGHV9I3BKB,Q242WOR3SSY0CB,Q2JTQO1QPYNXR5,Q33CABFZE6WJLU",
+  "grouping_version": 3,
+  "created_at": "2026-06-23T16:06:02.681Z",
+  "updated_at": "2026-06-23T16:06:07.800Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q07WN7B40A87BL",
+      "alert_id": "Q2JTQO1QPYNXR5"
+    },
+    {
+      "incident_id": "Q0FGJPZCXZLXHR",
+      "alert_id": "Q33CABFZE6WJLU"
+    },
+    {
+      "incident_id": "Q0P2NAYBB0ZKX9",
+      "alert_id": "Q242WOR3SSY0CB"
+    },
+    {
+      "incident_id": "Q2W5HQOV4HP3EU",
+      "alert_id": "Q0VZ60NZVSYJU0"
+    },
+    {
+      "incident_id": "Q2Y616K4SJRW9K",
+      "alert_id": "Q1DQEGHV9I3BKB"
+    }
+  ],
+  "incident_ids": [
+    "Q07WN7B40A87BL",
+    "Q0FGJPZCXZLXHR",
+    "Q0P2NAYBB0ZKX9",
+    "Q2W5HQOV4HP3EU",
+    "Q2Y616K4SJRW9K"
+  ],
+  "related_group_ids": [
+    "260622-albertsons_6-bigquery-type-mismatch",
+    "grp_260622_albertsons_6_albertsons_albertsons_media_no_exports_for_audie_split_0323"
+  ],
+  "next_action": "Follow target group 260622-albertsons_6-bigquery-type-mismatch."
+}

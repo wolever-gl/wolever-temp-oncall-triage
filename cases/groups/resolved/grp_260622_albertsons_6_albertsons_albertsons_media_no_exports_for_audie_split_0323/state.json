@@ -1,0 +1,29 @@
+{
+  "group_id": "grp_260622_albertsons_6_albertsons_albertsons_media_no_exports_for_audie_split_0323",
+  "state": "resolved",
+  "tags": [
+    "triage:needs_review",
+    "resolved:merged"
+  ],
+  "title": "albertsons_6 albertsons-albertsons-media-no-exports-for-audie split",
+  "summary": "Merged into 260622-albertsons_6-http-client-errors: After splitting the BigQuery no-export alerts out, the remaining audience 10075 alert has existing evidence of latest snapshotting_error/no_batches with pre_snapshotting_check HTTP client error, matching the Albertsons HTTP-client validation case.",
+  "deterministic_key": "v3|incident:Q01RMY4QJ0EDMW|org:albertsons_6|class:albertsons-albertsons-media-no-exports-for-audie|split|Q0QM073YDZVAC4,Q0VZ60NZVSYJU0,Q1DQEGHV9I3BKB,Q242WOR3SSY0CB,Q2JTQO1QPYNXR5,Q33CABFZE6WJLU",
+  "grouping_version": 3,
+  "created_at": "2026-06-22T22:35:57.865Z",
+  "updated_at": "2026-06-23T16:06:19.739Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q0V8KAU4ZZ4R4J",
+      "alert_id": "Q0QM073YDZVAC4"
+    }
+  ],
+  "incident_ids": [
+    "Q0V8KAU4ZZ4R4J"
+  ],
+  "related_group_ids": [
+    "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie",
+    "260622-albertsons_6-http-client-errors",
+    "grp_grp_260622_albertsons_6_albertsons_albertsons_media_no_exports_for_audie_split_0323_split_0407"
+  ],
+  "next_action": "Follow target group 260622-albertsons_6-http-client-errors."
+}

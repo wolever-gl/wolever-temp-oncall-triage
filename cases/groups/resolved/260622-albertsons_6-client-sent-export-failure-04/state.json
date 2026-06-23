@@ -1,0 +1,42 @@
+{
+  "group_id": "260622-albertsons_6-client-sent-export-failure-04",
+  "state": "resolved",
+  "tags": [
+    "triage:needs_review",
+    "resolved:merged"
+  ],
+  "title": "albertsons_6 client-sent-export-failure",
+  "summary": "Merged into 260622-albertsons_6-live-ramp-export-error: After splitting the mixed client-sent singleton cohort, the remaining audience 12865 alert has latest Pizza row snapshotting_finished/export_error for 2026-06-23, matching the existing Albertsons LiveRamp export_error case.",
+  "deterministic_key": "v3|incident:Q0LBNI4LMZSL99|org:albertsons_6|class:client-sent-export-failure",
+  "grouping_version": 3,
+  "created_at": "2026-06-23T13:54:15.733Z",
+  "updated_at": "2026-06-23T16:05:38.074Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q3AEWETRMJ9LHR",
+      "alert_id": "Q38LA4RYLYTPNT"
+    }
+  ],
+  "incident_ids": [
+    "Q3AEWETRMJ9LHR"
+  ],
+  "related_group_ids": [
+    "260622-albertsons_6-client-sent-export-failure-09",
+    "260622-albertsons_6-client-sent-export-failure-11",
+    "260622-albertsons_6-client-sent-export-failure-15",
+    "260622-albertsons_6-client-sent-export-failure-18",
+    "260622-albertsons_6-client-sent-export-failure-19",
+    "260622-albertsons_6-client-sent-export-failure-21",
+    "260622-albertsons_6-client-sent-export-failure-23",
+    "260622-albertsons_6-client-sent-export-failure-24",
+    "260622-albertsons_6-live-ramp-export-error",
+    "260623-albertsons_6-client-sent-export-failure",
+    "260623-albertsons_6-client-sent-export-failure-02",
+    "260623-albertsons_6-client-sent-export-failure-04",
+    "260623-albertsons_6-client-sent-export-failure-05",
+    "260623-albertsons_6-client-sent-export-failure-06",
+    "grp_260622_albertsons_6_client_sent_export_failure_04_split_0405",
+    "grp_260622_albertsons_6_client_sent_export_failure_04_split_0406"
+  ],
+  "next_action": "Follow target group 260622-albertsons_6-live-ramp-export-error."
+}

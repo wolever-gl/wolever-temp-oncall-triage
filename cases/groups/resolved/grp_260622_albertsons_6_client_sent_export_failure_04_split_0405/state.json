@@ -1,0 +1,63 @@
+{
+  "group_id": "grp_260622_albertsons_6_client_sent_export_failure_04_split_0405",
+  "state": "resolved",
+  "tags": [
+    "triage:needs_review",
+    "resolved:merged"
+  ],
+  "title": "albertsons_6 client-sent-export-failure split",
+  "summary": "Merged into 260622-albertsons_6-bigquery-type-mismatch: Direct latest Pizza rows for these client-sent alerts show 2026-06-23 snapshotting_error/no_batches with BigQuery expression type incompatibility, matching the existing Albertsons BigQuery type mismatch case.",
+  "deterministic_key": "v3|incident:Q0LBNI4LMZSL99|org:albertsons_6|class:client-sent-export-failure|split|Q006NOHXUQU5B2,Q018C1J4RA2SH3,Q0IY038GFO7TJU,Q0T7GVQKHEAEO7,Q12WSM8W1Z42F8,Q1H4VUHM7XYAY8,Q1TYLG4M1RSOKJ,Q33SWUVXWDER0M",
+  "grouping_version": 3,
+  "created_at": "2026-06-23T16:04:57.235Z",
+  "updated_at": "2026-06-23T16:05:02.798Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q0LBNI4LMZSL99",
+      "alert_id": "Q0T7GVQKHEAEO7"
+    },
+    {
+      "incident_id": "Q16DX9IDPC15VD",
+      "alert_id": "Q12WSM8W1Z42F8"
+    },
+    {
+      "incident_id": "Q2DZPMOJTWNQ11",
+      "alert_id": "Q33SWUVXWDER0M"
+    },
+    {
+      "incident_id": "Q3D07SXX5MT8PD",
+      "alert_id": "Q1TYLG4M1RSOKJ"
+    },
+    {
+      "incident_id": "Q3DJKJ88F7961S",
+      "alert_id": "Q006NOHXUQU5B2"
+    },
+    {
+      "incident_id": "Q3F2J2NZQGCBA8",
+      "alert_id": "Q018C1J4RA2SH3"
+    },
+    {
+      "incident_id": "Q3T8YVL0VO05SK",
+      "alert_id": "Q0IY038GFO7TJU"
+    },
+    {
+      "incident_id": "Q3VC2EL90AOSKX",
+      "alert_id": "Q1H4VUHM7XYAY8"
+    }
+  ],
+  "incident_ids": [
+    "Q0LBNI4LMZSL99",
+    "Q16DX9IDPC15VD",
+    "Q2DZPMOJTWNQ11",
+    "Q3D07SXX5MT8PD",
+    "Q3DJKJ88F7961S",
+    "Q3F2J2NZQGCBA8",
+    "Q3T8YVL0VO05SK",
+    "Q3VC2EL90AOSKX"
+  ],
+  "related_group_ids": [
+    "260622-albertsons_6-bigquery-type-mismatch",
+    "260622-albertsons_6-client-sent-export-failure-04"
+  ],
+  "next_action": "Follow target group 260622-albertsons_6-bigquery-type-mismatch."
+}

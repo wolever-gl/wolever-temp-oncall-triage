@@ -10,7 +10,7 @@
   "deterministic_key": "v3|incident:Q1S0Q38FOEN2XY|org:albertsons_6|dest:live-ramp|class:export-error",
   "grouping_version": 3,
   "created_at": "2026-06-22T18:54:54.145Z",
-  "updated_at": "2026-06-22T22:25:37.348Z",
+  "updated_at": "2026-06-23T16:05:38.074Z",
   "alert_refs": [
     {
       "incident_id": "Q19MJO5XIF1NHB",
@@ -57,6 +57,10 @@
       "alert_id": "Q2X0TI1MPFASVB"
     },
     {
+      "incident_id": "Q3AEWETRMJ9LHR",
+      "alert_id": "Q38LA4RYLYTPNT"
+    },
+    {
       "incident_id": "Q3BN6VB0TPVXNF",
       "alert_id": "Q0AHQNO4EY83ML"
     }
@@ -68,6 +72,7 @@
     "Q1S0Q38FOEN2XY",
     "Q2CD9OGM7RSCXU",
     "Q30L4PHDKA6R4P",
+    "Q3AEWETRMJ9LHR",
     "Q3BN6VB0TPVXNF"
   ],
   "related_group_ids": [
@@ -76,6 +81,7 @@
     "260615-albertsons_6-live-ramp-export-error-02",
     "260618-albertsons_6-live-ramp-export-error",
     "260618-albertsons_6-live-ramp-export-error-02",
-    "260619-albertsons_6-live-ramp-export-error"
+    "260619-albertsons_6-live-ramp-export-error",
+    "260622-albertsons_6-client-sent-export-failure-04"
   ]
 }

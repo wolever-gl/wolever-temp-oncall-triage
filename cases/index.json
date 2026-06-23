@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-23T15:57:48.712Z",
-  "open_count": 245,
+  "generated_at": "2026-06-23T16:06:27.945Z",
+  "open_count": 243,
   "groups": [
     {
       "group_id": "260603-unknown_org-eversana-taiho-prod-lonsurf-prod-journey-n-journ",
@@ -2484,13 +2484,18 @@
       "title": "Albertsons BigQuery type mismatch failures",
       "summary": "Added 9 SE05 snapshotting alerts whose Pizza/log evidence shows BigQuery expression type mismatch during pre_snapshotting_check.",
       "incident_ids": [
+        "Q07WN7B40A87BL",
         "Q0B75DL9CGNBG0",
         "Q0EQCF34RA3FHN",
+        "Q0FGJPZCXZLXHR",
+        "Q0LBNI4LMZSL99",
+        "Q0P2NAYBB0ZKX9",
         "Q0P4ONJOGF8NUI",
         "Q0YS1762L6N8Z7",
         "Q13AGUZO2RZY3E",
         "Q140U7GG9RCAQU",
         "Q14QMYQC78PXAR",
+        "Q16DX9IDPC15VD",
         "Q18OLT4XU8V6Z5",
         "Q18RUDPFI5PNR0",
         "Q1ADWD3D2HKZOL",
@@ -2504,47 +2509,28 @@
         "Q25HOZVKOE3XJP",
         "Q28Z0B0GA51K35",
         "Q2DET6AW1NICU7",
+        "Q2DZPMOJTWNQ11",
         "Q2J49L2EK3Q237",
         "Q2RVKX275SCHT7",
+        "Q2W5HQOV4HP3EU",
+        "Q2Y616K4SJRW9K",
         "Q2YTLIYU53UIVU",
         "Q33XKCHKMWQNOF",
         "Q35FXUK3R7EP76",
         "Q368INPJJF6K5Y",
+        "Q3D07SXX5MT8PD",
         "Q3D5BM8QKKHA3E",
+        "Q3DJKJ88F7961S",
+        "Q3F2J2NZQGCBA8",
         "Q3IROJH5XM5T4U",
         "Q3O313HUCTB2WD",
         "Q3QCKCZMRUR8MC",
-        "Q3QEKPH9YZV412"
-      ],
-      "alert_count": 39,
-      "path": "groups/open/260622-albertsons_6-bigquery-type-mismatch/case.md"
-    },
-    {
-      "group_id": "260622-albertsons_6-client-sent-export-failure-04",
-      "state": "open",
-      "tags": [
-        "triage:needs_review"
-      ],
-      "title": "albertsons_6 client-sent-export-failure",
-      "summary": "albertsons (Albertsons Media) - Audience 13072: Audience Export failure for 13072 sent to client.",
-      "incident_ids": [
-        "Q09FHOR4ZDMTUL",
-        "Q0LBNI4LMZSL99",
-        "Q16DX9IDPC15VD",
-        "Q1QQT96DKTRQSZ",
-        "Q1UEOA2CBT90GM",
-        "Q2DZPMOJTWNQ11",
-        "Q30P00WNLHRK9W",
-        "Q36ENB8WGMYDAW",
-        "Q3AEWETRMJ9LHR",
-        "Q3D07SXX5MT8PD",
-        "Q3DJKJ88F7961S",
-        "Q3F2J2NZQGCBA8",
+        "Q3QEKPH9YZV412",
         "Q3T8YVL0VO05SK",
         "Q3VC2EL90AOSKX"
       ],
-      "alert_count": 14,
-      "path": "groups/open/260622-albertsons_6-client-sent-export-failure-04/case.md"
+      "alert_count": 52,
+      "path": "groups/open/260622-albertsons_6-bigquery-type-mismatch/case.md"
     },
     {
       "group_id": "260622-albertsons_6-export-error-blank",
@@ -2596,9 +2582,10 @@
         "Q1S0Q38FOEN2XY",
         "Q2CD9OGM7RSCXU",
         "Q30L4PHDKA6R4P",
+        "Q3AEWETRMJ9LHR",
         "Q3BN6VB0TPVXNF"
       ],
-      "alert_count": 12,
+      "alert_count": 13,
       "path": "groups/open/260622-albertsons_6-live-ramp-export-error/case.md"
     },
     {
@@ -3302,25 +3289,6 @@
       "path": "groups/open/grp_260617_albertsons_6_client_sent_export_failure_split_0322/case.md"
     },
     {
-      "group_id": "grp_260622_albertsons_6_albertsons_albertsons_media_no_exports_for_audie_split_0323",
-      "state": "open",
-      "tags": [
-        "triage:needs_review"
-      ],
-      "title": "albertsons_6 albertsons-albertsons-media-no-exports-for-audie split",
-      "summary": "Split the six audiences whose latest 2026-06-22 scheduled LiveRamp activation run is snapshotting_error/no_batches from the delayed/progressing cohort. Affected audiences: 9668,9671,9696,9737,9738,10075.",
-      "incident_ids": [
-        "Q07WN7B40A87BL",
-        "Q0FGJPZCXZLXHR",
-        "Q0P2NAYBB0ZKX9",
-        "Q0V8KAU4ZZ4R4J",
-        "Q2W5HQOV4HP3EU",
-        "Q2Y616K4SJRW9K"
-      ],
-      "alert_count": 6,
-      "path": "groups/open/grp_260622_albertsons_6_albertsons_albertsons_media_no_exports_for_audie_split_0323/case.md"
-    },
-    {
       "group_id": "260603-fanatics_502-magnite-id-graph-export-processing",
       "state": "monitoring",
       "tags": [
@@ -3674,10 +3642,12 @@
       "summary": "Added SE05 audience 11349, whose pre_snapshotting_check failed because a referenced Product_Attributes_Product_Group_categoryL column is missing.",
       "incident_ids": [
         "Q054DZZ6GFL4FT",
+        "Q09FHOR4ZDMTUL",
         "Q0KT9MIUIF06VD",
         "Q0LRG7LC17QHC0",
         "Q0NEGMFU9SDRIP",
         "Q0ONUAJ6HJ075M",
+        "Q0V8KAU4ZZ4R4J",
         "Q0YMC0G8MBU3S7",
         "Q0YXEG844L38X5",
         "Q18PJFCK0IYHAO",
@@ -3686,7 +3656,9 @@
         "Q1GVCKXSEM4VIF",
         "Q1LJB8EJA6JZEB",
         "Q1O1OOB7GJ8P4A",
+        "Q1QQT96DKTRQSZ",
         "Q1S0Q38FOEN2XY",
+        "Q1UEOA2CBT90GM",
         "Q26H5N9E0O7N0Z",
         "Q281IJMKYIYEHV",
         "Q29WSKI7IBRPVW",
@@ -3697,13 +3669,15 @@
         "Q2IIOBNUV6BSPG",
         "Q2M9PQ0VIYN9Q7",
         "Q2W8MBXYOAXD3J",
+        "Q30P00WNLHRK9W",
         "Q337ZKYTMRUI8M",
+        "Q36ENB8WGMYDAW",
         "Q38JIFOCY2F0AO",
         "Q3C6EY1CXX6DTB",
         "Q3PZTO9L0YMZJ9",
         "Q3X51HMAYEMKHO"
       ],
-      "alert_count": 29,
+      "alert_count": 35,
       "path": "groups/waiting/260622-albertsons_6-http-client-errors/case.md"
     },
     {
@@ -5254,6 +5228,22 @@
       "path": "groups/resolved/260622-albertsons_6-client-sent-export-failure-03/case.md"
     },
     {
+      "group_id": "260622-albertsons_6-client-sent-export-failure-04",
+      "state": "resolved",
+      "tags": [
+        "triage:needs_review",
+        "resolved:merged"
+      ],
+      "title": "albertsons_6 client-sent-export-failure",
+      "summary": "Merged into 260622-albertsons_6-live-ramp-export-error: After splitting the mixed client-sent singleton cohort, the remaining audience 12865 alert has latest Pizza row snapshotting_finished/export_error for 2026-06-23, matching the existing Albertsons LiveRamp export_error case.",
+      "next_action": "Follow target group 260622-albertsons_6-live-ramp-export-error.",
+      "incident_ids": [
+        "Q3AEWETRMJ9LHR"
+      ],
+      "alert_count": 1,
+      "path": "groups/resolved/260622-albertsons_6-client-sent-export-failure-04/case.md"
+    },
+    {
       "group_id": "260622-albertsons_6-client-sent-export-failure-05",
       "state": "resolved",
       "tags": [
@@ -6202,6 +6192,85 @@
       ],
       "alert_count": 1,
       "path": "groups/resolved/260623-albertsons_6-snapshotting-error-16/case.md"
+    },
+    {
+      "group_id": "grp_260622_albertsons_6_albertsons_albertsons_media_no_exports_for_audie_split_0323",
+      "state": "resolved",
+      "tags": [
+        "triage:needs_review",
+        "resolved:merged"
+      ],
+      "title": "albertsons_6 albertsons-albertsons-media-no-exports-for-audie split",
+      "summary": "Merged into 260622-albertsons_6-http-client-errors: After splitting the BigQuery no-export alerts out, the remaining audience 10075 alert has existing evidence of latest snapshotting_error/no_batches with pre_snapshotting_check HTTP client error, matching the Albertsons HTTP-client validation case.",
+      "next_action": "Follow target group 260622-albertsons_6-http-client-errors.",
+      "incident_ids": [
+        "Q0V8KAU4ZZ4R4J"
+      ],
+      "alert_count": 1,
+      "path": "groups/resolved/grp_260622_albertsons_6_albertsons_albertsons_media_no_exports_for_audie_split_0323/case.md"
+    },
+    {
+      "group_id": "grp_260622_albertsons_6_client_sent_export_failure_04_split_0405",
+      "state": "resolved",
+      "tags": [
+        "triage:needs_review",
+        "resolved:merged"
+      ],
+      "title": "albertsons_6 client-sent-export-failure split",
+      "summary": "Merged into 260622-albertsons_6-bigquery-type-mismatch: Direct latest Pizza rows for these client-sent alerts show 2026-06-23 snapshotting_error/no_batches with BigQuery expression type incompatibility, matching the existing Albertsons BigQuery type mismatch case.",
+      "next_action": "Follow target group 260622-albertsons_6-bigquery-type-mismatch.",
+      "incident_ids": [
+        "Q0LBNI4LMZSL99",
+        "Q16DX9IDPC15VD",
+        "Q2DZPMOJTWNQ11",
+        "Q3D07SXX5MT8PD",
+        "Q3DJKJ88F7961S",
+        "Q3F2J2NZQGCBA8",
+        "Q3T8YVL0VO05SK",
+        "Q3VC2EL90AOSKX"
+      ],
+      "alert_count": 8,
+      "path": "groups/resolved/grp_260622_albertsons_6_client_sent_export_failure_04_split_0405/case.md"
+    },
+    {
+      "group_id": "grp_260622_albertsons_6_client_sent_export_failure_04_split_0406",
+      "state": "resolved",
+      "tags": [
+        "triage:needs_review",
+        "resolved:merged"
+      ],
+      "title": "albertsons_6 client-sent-export-failure split",
+      "summary": "Merged into 260622-albertsons_6-http-client-errors: Direct latest Pizza rows for these client-sent alerts show 2026-06-23 snapshotting_error/no_batches with pre_snapshotting_check HTTP client error, matching the existing Albertsons Quervice HTTP-client missing-column validation case.",
+      "next_action": "Follow target group 260622-albertsons_6-http-client-errors.",
+      "incident_ids": [
+        "Q09FHOR4ZDMTUL",
+        "Q1QQT96DKTRQSZ",
+        "Q1UEOA2CBT90GM",
+        "Q30P00WNLHRK9W",
+        "Q36ENB8WGMYDAW"
+      ],
+      "alert_count": 5,
+      "path": "groups/resolved/grp_260622_albertsons_6_client_sent_export_failure_04_split_0406/case.md"
+    },
+    {
+      "group_id": "grp_grp_260622_albertsons_6_albertsons_albertsons_media_no_exports_for_audie_split_0323_split_0407",
+      "state": "resolved",
+      "tags": [
+        "triage:needs_review",
+        "resolved:merged"
+      ],
+      "title": "albertsons_6 albertsons-albertsons-media-no-exports-for-audie split split",
+      "summary": "Merged into 260622-albertsons_6-bigquery-type-mismatch: Existing split evidence classifies these no-export alerts as latest snapshotting_error/no_batches with BigQuery incompatible expression types, matching the Albertsons BigQuery type mismatch case.",
+      "next_action": "Follow target group 260622-albertsons_6-bigquery-type-mismatch.",
+      "incident_ids": [
+        "Q07WN7B40A87BL",
+        "Q0FGJPZCXZLXHR",
+        "Q0P2NAYBB0ZKX9",
+        "Q2W5HQOV4HP3EU",
+        "Q2Y616K4SJRW9K"
+      ],
+      "alert_count": 5,
+      "path": "groups/resolved/grp_grp_260622_albertsons_6_albertsons_albertsons_media_no_exports_for_audie_split_0323_split_0407/case.md"
     }
   ],
   "alert_count": 638

@@ -1,0 +1,48 @@
+{
+  "group_id": "grp_260622_albertsons_6_client_sent_export_failure_04_split_0406",
+  "state": "resolved",
+  "tags": [
+    "triage:needs_review",
+    "resolved:merged"
+  ],
+  "title": "albertsons_6 client-sent-export-failure split",
+  "summary": "Merged into 260622-albertsons_6-http-client-errors: Direct latest Pizza rows for these client-sent alerts show 2026-06-23 snapshotting_error/no_batches with pre_snapshotting_check HTTP client error, matching the existing Albertsons Quervice HTTP-client missing-column validation case.",
+  "deterministic_key": "v3|incident:Q0LBNI4LMZSL99|org:albertsons_6|class:client-sent-export-failure|split|Q01YTIVWYE60TI,Q0J8Z3B3E1AQKE,Q15RZGRDXMEDXL,Q18DE0VWXEPBDV,Q1A0XR0WZLCIBX",
+  "grouping_version": 3,
+  "created_at": "2026-06-23T16:05:08.929Z",
+  "updated_at": "2026-06-23T16:05:14.358Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q09FHOR4ZDMTUL",
+      "alert_id": "Q01YTIVWYE60TI"
+    },
+    {
+      "incident_id": "Q1QQT96DKTRQSZ",
+      "alert_id": "Q15RZGRDXMEDXL"
+    },
+    {
+      "incident_id": "Q1UEOA2CBT90GM",
+      "alert_id": "Q1A0XR0WZLCIBX"
+    },
+    {
+      "incident_id": "Q30P00WNLHRK9W",
+      "alert_id": "Q18DE0VWXEPBDV"
+    },
+    {
+      "incident_id": "Q36ENB8WGMYDAW",
+      "alert_id": "Q0J8Z3B3E1AQKE"
+    }
+  ],
+  "incident_ids": [
+    "Q09FHOR4ZDMTUL",
+    "Q1QQT96DKTRQSZ",
+    "Q1UEOA2CBT90GM",
+    "Q30P00WNLHRK9W",
+    "Q36ENB8WGMYDAW"
+  ],
+  "related_group_ids": [
+    "260622-albertsons_6-client-sent-export-failure-04",
+    "260622-albertsons_6-http-client-errors"
+  ],
+  "next_action": "Follow target group 260622-albertsons_6-http-client-errors."
+}

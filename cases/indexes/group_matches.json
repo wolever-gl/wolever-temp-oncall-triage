@@ -649,12 +649,12 @@
   },
   {
     "match_key": "v3|incident:Q0LBNI4LMZSL99|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-client-sent-export-failure-04",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-live-ramp-export-error",
+    "reason": "merged",
     "created_at": "2026-06-23T13:54:15.733Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-client-sent-export-failure-04."
+    "rationale": "After splitting the mixed client-sent singleton cohort, the remaining audience 12865 alert has latest Pizza row snapshotting_finished/export_error for 2026-06-23, matching the existing Albertsons LiveRamp export_error case."
   },
   {
     "match_key": "v3|incident:Q0LRG7LC17QHC0|org:albertsons_6|class:client-sent-export-failure",

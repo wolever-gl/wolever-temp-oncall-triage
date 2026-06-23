@@ -6,8 +6,8 @@
 
 State: `open`
 Tags: `triage:needs_review`, `triage:bucket-consolidated`
-Incidents: [Q19MJO5XIF1NHB](https://growthloop.pagerduty.com/incidents/Q19MJO5XIF1NHB), [Q1E4EUPF9HDZNA](https://growthloop.pagerduty.com/incidents/Q1E4EUPF9HDZNA), [Q1R7D9HWJFBV7D](https://growthloop.pagerduty.com/incidents/Q1R7D9HWJFBV7D), [Q1S0Q38FOEN2XY](https://growthloop.pagerduty.com/incidents/Q1S0Q38FOEN2XY), [Q2CD9OGM7RSCXU](https://growthloop.pagerduty.com/incidents/Q2CD9OGM7RSCXU), [Q30L4PHDKA6R4P](https://growthloop.pagerduty.com/incidents/Q30L4PHDKA6R4P), [Q3BN6VB0TPVXNF](https://growthloop.pagerduty.com/incidents/Q3BN6VB0TPVXNF)
-Alerts: 12
+Incidents: [Q19MJO5XIF1NHB](https://growthloop.pagerduty.com/incidents/Q19MJO5XIF1NHB), [Q1E4EUPF9HDZNA](https://growthloop.pagerduty.com/incidents/Q1E4EUPF9HDZNA), [Q1R7D9HWJFBV7D](https://growthloop.pagerduty.com/incidents/Q1R7D9HWJFBV7D), [Q1S0Q38FOEN2XY](https://growthloop.pagerduty.com/incidents/Q1S0Q38FOEN2XY), [Q2CD9OGM7RSCXU](https://growthloop.pagerduty.com/incidents/Q2CD9OGM7RSCXU), [Q30L4PHDKA6R4P](https://growthloop.pagerduty.com/incidents/Q30L4PHDKA6R4P), [Q3AEWETRMJ9LHR](https://growthloop.pagerduty.com/incidents/Q3AEWETRMJ9LHR), [Q3BN6VB0TPVXNF](https://growthloop.pagerduty.com/incidents/Q3BN6VB0TPVXNF)
+Alerts: 13
 
 ## Current Summary
 
@@ -15,7 +15,7 @@ Consolidated Albertsons LiveRamp export_error investigation case for Other open 
 
 ## Alert Scope
 
-- Alert facts: 12 imported, 12 linked to this group.
+- Alert facts: 13 imported, 13 linked to this group.
 - Orgs: `albertsons_6`
 - Audiences: `11579`, `12214`, `12399`, `12468`, `12495`, `12506`, `12535`, `12537`, and 4 more
 - Destinations: `live_ramp_activation`
@@ -43,13 +43,13 @@ Representative alerts:
   Runs: `12808-live_ramp_activation_4615-scheduled__2026-06-12T00:00:00+00:00`, `12808-live_ramp_activation_4615-scheduled__2026-06-19T00:00:00+00:00`
 - Q1S0Q38FOEN2XY/Q0QLGOOH2BMW5P: 2026-06-22T07:42:25-07:00; albertsons_6; audience 12468; live_ramp_activation; snapshotting_finished/export_error. albertsons (Albertsons Media): Exports for audience 12468 failed with states: <(snapshotting_finished,export_error)>
   Runs: `12468-live_ramp_activation_4242-scheduled__2026-06-14T00:00:00+00:00`, `12468-live_ramp_activation_4242-scheduled__2026-06-21T00:00:00+00:00`
-- Showing 10 of 12 alert facts; see `indexes/alert_facts.json` for the full imported set.
+- Showing 10 of 13 alert facts; see `indexes/alert_facts.json` for the full imported set.
 
 ## Export Checks
 
-- Checks: 12.
-- States: `blocked`=12
-- Blockers seen: `export_error`
+- Checks: 13.
+- States: `blocked`=13
+- Blockers seen: `export_error`, `missing_export_after_alert`
 
 Check evidence:
 - chk_q19mjo5xif1nhb_q1ijllegnnkso5 (Q19MJO5XIF1NHB/Q1IJLLEGNNKSO5): state=`blocked`.
@@ -120,7 +120,7 @@ Check evidence:
   Command: `glcli --env albertsons bifrost pizza --audience-id 11579 --org-id 6`
   Blockers: `export_error`
   Run 11579-live_ramp_activation_3543-scheduled__2026-06-15T00:00:00+00:00: health=`blocked`; blockers=export_error; created=2026-06-15T08:47:36.477211+00:00; snapshotting=snapshotting_finished; export=export_error; failed=0.
-- Showing 10 of 12 checks; see `indexes/checks.json` and `checks/*/check.json` for the full evidence set.
+- Showing 10 of 13 checks; see `indexes/checks.json` and `checks/*/check.json` for the full evidence set.
 
 ## Recent Evidence
 
