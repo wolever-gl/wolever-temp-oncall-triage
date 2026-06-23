@@ -1,0 +1,24 @@
+{
+  "group_id": "260604-albertsons_6-live-ramp-export-processing",
+  "state": "monitoring",
+  "tags": [
+    "triage:needs_review",
+    "monitoring:export-processing"
+  ],
+  "title": "albertsons_6 live-ramp export-processing",
+  "summary": "Auto-monitored from Pizza export checks: 1 alert-scoped export check(s) are still processing and 0 are already healthy.",
+  "deterministic_key": "v3|incident:Q1E4EUPF9HDZNA|org:albertsons_6|dest:live-ramp|class:export-processing",
+  "grouping_version": 3,
+  "created_at": "2026-06-22T18:54:54.145Z",
+  "updated_at": "2026-06-22T21:13:53.021Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q1E4EUPF9HDZNA",
+      "alert_id": "Q2WAJ28HX2P4SY"
+    }
+  ],
+  "incident_ids": [
+    "Q1E4EUPF9HDZNA"
+  ],
+  "related_group_ids": []
+}

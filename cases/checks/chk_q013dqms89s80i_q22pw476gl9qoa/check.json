@@ -1,0 +1,205 @@
+{
+  "check_id": "chk_q013dqms89s80i_q22pw476gl9qoa",
+  "source": "pagerduty",
+  "incident_id": "Q013DQMS89S80I",
+  "alert_id": "Q22PW476GL9QOA",
+  "state": "blocked",
+  "scope": {
+    "env": "prod",
+    "org_id": "336",
+    "audience_id": "37376",
+    "destination_type": "iterable",
+    "match_strategy": "checked_export_run_ids",
+    "alert_created_at": "2026-06-22T07:53:51-07:00",
+    "checked_export_run_ids": [
+      "37376-iterable_22434-webapp__2026-06-01T21:26:26+00:00",
+      "37376-iterable_22434-webapp__2026-06-01T21:36:38+00:00",
+      "37376-iterable_22434-webapp__2026-06-01T21:43:02+00:00",
+      "37376-iterable_22434-webapp__2026-06-01T21:57:18+00:00"
+    ],
+    "glcli": "glcli --env prod bifrost pizza --audience-id 37376 --org-id 336"
+  },
+  "scope_key": "prod|336|37376|iterable|unknown_endpoint|37376-iterable_22434-webapp__2026-06-01T21:26:26+00:00,37376-iterable_22434-webapp__2026-06-01T21:36:38+00:00,37376-iterable_22434-webapp__2026-06-01T21:43:02+00:00,37376-iterable_22434-webapp__2026-06-01T21:57:18+00:00",
+  "run_evaluations": [
+    {
+      "export_run_id": "37376-iterable_22434-webapp__2026-06-01T21:26:26+00:00",
+      "health": "healthy",
+      "match_basis": "checked_export_run_id",
+      "blockers": [],
+      "selected_row": {
+        "export_run_id": "37376-iterable_22434-webapp__2026-06-01T21:26:26+00:00",
+        "audience_id": "37376",
+        "destination_type": "iterable",
+        "created_at": "2026-06-01T21:26:29.111200+00:00",
+        "snapshotting_state": "snapshotting_finished_no_deltas",
+        "export_state": "no_batches",
+        "failed_export_count": 0,
+        "raw": {
+          "export_state": "no_batches",
+          "successful_add_count": 0,
+          "successful_remove_count": 0,
+          "failed_export_count": 0,
+          "rejected_row_count": 0,
+          "total_row_count": 0,
+          "successful_expanded_add_count": 0,
+          "successful_expanded_remove_count": 0,
+          "failed_expanded_export_count": 0,
+          "rejected_expanded_row_count": 0,
+          "total_expanded_row_count": 0,
+          "enhanced_match_count": 0,
+          "enhanced_row_count": 0,
+          "enhanced_total_records": 0,
+          "total_batch_count": 0,
+          "completed_batch_count": 0,
+          "successful_batch_count": 0,
+          "failed_batch_count": 0,
+          "failure_reason": null,
+          "info": {
+            "internal_audience_id": "37376",
+            "export_run_id": "37376-iterable_22434-webapp__2026-06-01T21:26:26+00:00",
+            "export_timestamp": "2026-06-01 21:26:29",
+            "created_at": "2026-06-01T21:26:29.111200+00:00"
+          },
+          "snapshotting_state": "snapshotting_finished_no_deltas"
+        }
+      }
+    },
+    {
+      "export_run_id": "37376-iterable_22434-webapp__2026-06-01T21:36:38+00:00",
+      "health": "healthy",
+      "match_basis": "checked_export_run_id",
+      "blockers": [],
+      "selected_row": {
+        "export_run_id": "37376-iterable_22434-webapp__2026-06-01T21:36:38+00:00",
+        "audience_id": "37376",
+        "destination_type": "iterable",
+        "created_at": "2026-06-01T21:36:39.906601+00:00",
+        "snapshotting_state": "snapshotting_finished_no_deltas",
+        "export_state": "no_batches",
+        "failed_export_count": 0,
+        "raw": {
+          "export_state": "no_batches",
+          "successful_add_count": 0,
+          "successful_remove_count": 0,
+          "failed_export_count": 0,
+          "rejected_row_count": 0,
+          "total_row_count": 0,
+          "successful_expanded_add_count": 0,
+          "successful_expanded_remove_count": 0,
+          "failed_expanded_export_count": 0,
+          "rejected_expanded_row_count": 0,
+          "total_expanded_row_count": 0,
+          "enhanced_match_count": 0,
+          "enhanced_row_count": 0,
+          "enhanced_total_records": 0,
+          "total_batch_count": 0,
+          "completed_batch_count": 0,
+          "successful_batch_count": 0,
+          "failed_batch_count": 0,
+          "failure_reason": null,
+          "info": {
+            "internal_audience_id": "37376",
+            "export_run_id": "37376-iterable_22434-webapp__2026-06-01T21:36:38+00:00",
+            "export_timestamp": "2026-06-01 21:36:39",
+            "created_at": "2026-06-01T21:36:39.906601+00:00"
+          },
+          "snapshotting_state": "snapshotting_finished_no_deltas"
+        }
+      }
+    },
+    {
+      "export_run_id": "37376-iterable_22434-webapp__2026-06-01T21:43:02+00:00",
+      "health": "healthy",
+      "match_basis": "checked_export_run_id",
+      "blockers": [],
+      "selected_row": {
+        "export_run_id": "37376-iterable_22434-webapp__2026-06-01T21:43:02+00:00",
+        "audience_id": "37376",
+        "destination_type": "iterable",
+        "created_at": "2026-06-01T21:43:03.491182+00:00",
+        "snapshotting_state": "snapshotting_finished_no_deltas",
+        "export_state": "no_batches",
+        "failed_export_count": 0,
+        "raw": {
+          "export_state": "no_batches",
+          "successful_add_count": 0,
+          "successful_remove_count": 0,
+          "failed_export_count": 0,
+          "rejected_row_count": 0,
+          "total_row_count": 0,
+          "successful_expanded_add_count": 0,
+          "successful_expanded_remove_count": 0,
+          "failed_expanded_export_count": 0,
+          "rejected_expanded_row_count": 0,
+          "total_expanded_row_count": 0,
+          "enhanced_match_count": 0,
+          "enhanced_row_count": 0,
+          "enhanced_total_records": 0,
+          "total_batch_count": 0,
+          "completed_batch_count": 0,
+          "successful_batch_count": 0,
+          "failed_batch_count": 0,
+          "failure_reason": null,
+          "info": {
+            "internal_audience_id": "37376",
+            "export_run_id": "37376-iterable_22434-webapp__2026-06-01T21:43:02+00:00",
+            "export_timestamp": "2026-06-01 21:43:03",
+            "created_at": "2026-06-01T21:43:03.491182+00:00"
+          },
+          "snapshotting_state": "snapshotting_finished_no_deltas"
+        }
+      }
+    },
+    {
+      "export_run_id": "37376-iterable_22434-webapp__2026-06-01T21:57:18+00:00",
+      "health": "blocked",
+      "match_basis": "checked_export_run_id",
+      "blockers": [
+        "snapshotting_error_requires_review"
+      ],
+      "selected_row": {
+        "export_run_id": "37376-iterable_22434-webapp__2026-06-01T21:57:18+00:00",
+        "audience_id": "37376",
+        "destination_type": "iterable",
+        "created_at": "2026-06-01T21:57:19.868209+00:00",
+        "snapshotting_state": "snapshotting_error",
+        "export_state": "no_batches",
+        "failed_export_count": 0,
+        "raw": {
+          "export_state": "no_batches",
+          "successful_add_count": 0,
+          "successful_remove_count": 0,
+          "failed_export_count": 0,
+          "rejected_row_count": 0,
+          "total_row_count": 0,
+          "successful_expanded_add_count": 0,
+          "successful_expanded_remove_count": 0,
+          "failed_expanded_export_count": 0,
+          "rejected_expanded_row_count": 0,
+          "total_expanded_row_count": 0,
+          "enhanced_match_count": 0,
+          "enhanced_row_count": 0,
+          "enhanced_total_records": 0,
+          "total_batch_count": 0,
+          "completed_batch_count": 0,
+          "successful_batch_count": 0,
+          "failed_batch_count": 0,
+          "failure_reason": "Pre Snapshotting Failed: Check \"Missing Field future_appointments_next_five\" failed with a value of (1)",
+          "info": {
+            "internal_audience_id": "37376",
+            "export_run_id": "37376-iterable_22434-webapp__2026-06-01T21:57:18+00:00",
+            "export_timestamp": "2026-06-01 21:57:19",
+            "created_at": "2026-06-01T21:57:19.868209+00:00"
+          },
+          "snapshotting_state": "snapshotting_error"
+        }
+      }
+    }
+  ],
+  "blockers": [
+    "snapshotting_error_requires_review"
+  ],
+  "evidence_artifacts": [],
+  "created_at": "2026-06-22T22:12:51.881Z",
+  "updated_at": "2026-06-22T22:12:51.881Z"
+}

@@ -1,0 +1,34 @@
+audience_id	created_at	snapshotting_state	export_state	total_row_count	successful_add_count	successful_remove_count	failed_export_count	rejected_row_count	export_run_id	failure_reason
+2159	2026-06-22T16:55:49.677289+00:00	snapshotting_finished	export_finished	8	8	0	0	0	2159-live_ramp_activation_659-scheduled__2026-06-22T00:00:00+00:00	
+9665	2026-06-22T19:12:40.409230+00:00	snapshotting_finished	export_finished	707444	325743	0	0	381701	9665-live_ramp_activation_1940-scheduled__2026-06-22T00:00:00+00:00	
+9666	2026-06-22T19:52:16.530155+00:00	snapshotting_finished	export_finished	655528	446577	0	0	208951	9666-live_ramp_activation_1941-scheduled__2026-06-22T00:00:00+00:00	
+9668	2026-06-22T19:49:40.618035+00:00	snapshotting_error	no_batches	0	0	0	0	0	9668-live_ramp_activation_1943-scheduled__2026-06-22T00:00:00+00:00	Snapshotting failed while running pre_snapshotting_check: BigQuery query failed because expression types were incompatible
+9671	2026-06-22T19:50:03.009965+00:00	snapshotting_error	no_batches	0	0	0	0	0	9671-live_ramp_activation_1946-scheduled__2026-06-22T00:00:00+00:00	Snapshotting failed while running pre_snapshotting_check: BigQuery query failed because expression types were incompatible
+9696	2026-06-22T19:49:57.713832+00:00	snapshotting_error	no_batches	0	0	0	0	0	9696-live_ramp_activation_1959-scheduled__2026-06-22T00:00:00+00:00	Snapshotting failed while running pre_snapshotting_check: BigQuery query failed because expression types were incompatible
+9703	2026-06-22T19:30:21.044189+00:00	snapshotting_finished	export_finished	18699	10440	0	0	8259	9703-live_ramp_activation_1963-scheduled__2026-06-22T00:00:00+00:00	
+9704	2026-06-22T19:17:12.451096+00:00	snapshotting_finished	export_finished	6941	6911	0	0	30	9704-live_ramp_activation_1965-scheduled__2026-06-22T00:00:00+00:00	
+9705	2026-06-22T19:22:29.712725+00:00	snapshotting_finished	export_finished	805823	395992	0	0	409831	9705-live_ramp_activation_1966-scheduled__2026-06-22T00:00:00+00:00	
+9737	2026-06-22T19:54:52.257084+00:00	snapshotting_error	no_batches	0	0	0	0	0	9737-live_ramp_activation_1960-scheduled__2026-06-22T00:00:00+00:00	Snapshotting failed while running pre_snapshotting_check: BigQuery query failed because expression types were incompatible
+9738	2026-06-22T19:54:24.487901+00:00	snapshotting_error	no_batches	0	0	0	0	0	9738-live_ramp_activation_1961-scheduled__2026-06-22T00:00:00+00:00	Snapshotting failed while running pre_snapshotting_check: BigQuery query failed because expression types were incompatible
+9739	2026-06-22T19:25:09.277955+00:00	snapshotting_finished	export_finished	72866	39789	0	0	33077	9739-live_ramp_activation_1964-scheduled__2026-06-22T00:00:00+00:00	
+10013	2026-06-22T20:25:42.281581+00:00	snapshotting_finished	export_processing	40577	38249	0	0	2328	10013-live_ramp_activation_2072-scheduled__2026-06-22T00:00:00+00:00	
+10015	2026-06-22T20:30:46.626337+00:00	snapshotting_finished	export_processing	48941	27480	0	0	21461	10015-live_ramp_activation_2071-scheduled__2026-06-22T00:00:00+00:00	
+10026	2026-06-22T20:31:02.391986+00:00	snapshotting_finished	export_finished	7976	4678	0	0	3298	10026-live_ramp_activation_2167-scheduled__2026-06-22T00:00:00+00:00	
+10027	2026-06-22T16:43:53.783683+00:00	snapshotting_finished	export_finished	6164	3570	0	0	2594	10027-live_ramp_activation_2166-scheduled__2026-06-22T00:00:00+00:00	
+10042	2026-06-22T18:04:22.043944+00:00	snapshotting_finished	export_finished	298901	127108	0	0	171793	10042-live_ramp_activation_2165-scheduled__2026-06-22T00:00:00+00:00	
+10046	2026-06-22T19:56:04.652540+00:00	snapshotting_finished	export_finished	192178	109860	0	0	82318	10046-live_ramp_activation_2163-scheduled__2026-06-22T00:00:00+00:00	
+10048	2026-06-22T20:31:18.507799+00:00	snapshotting_finished	export_finished	215660	103923	0	0	111737	10048-live_ramp_activation_2162-scheduled__2026-06-22T00:00:00+00:00	
+10075	2026-06-22T20:38:11.245700+00:00	snapshotting_error	no_batches	0	0	0	0	0	10075-live_ramp_activation_3093-scheduled__2026-06-22T00:00:00+00:00	Snapshotting failed while running pre_snapshotting_check: HTTP client error
+10260	2026-06-22T20:40:57.529370+00:00	snapshotting_finished	export_finished	35609	20865	0	0	14744	10260-live_ramp_activation_2296-scheduled__2026-06-22T00:00:00+00:00	
+10304	2026-06-22T19:52:01.524782+00:00	snapshotting_finished	export_finished	376202	229778	0	0	146424	10304-live_ramp_activation_2265-scheduled__2026-06-22T00:00:00+00:00	
+10612	2026-06-22T18:24:08.097993+00:00	snapshotting_finished	export_processing	15660	15608	0	0	52	10612-live_ramp_activation_3476-scheduled__2026-06-22T00:00:00+00:00	
+10613	2026-06-22T18:18:11.038483+00:00	snapshotting_finished	export_processing	25041	24879	0	0	162	10613-live_ramp_activation_3475-scheduled__2026-06-22T00:00:00+00:00	
+10688	2026-06-22T18:01:10.780197+00:00	snapshotting_finished	export_finished	409925	222044	0	0	187881	10688-live_ramp_activation_2376-scheduled__2026-06-22T00:00:00+00:00	
+10689	2026-06-22T17:58:34.115563+00:00	snapshotting_finished	export_finished	19252	17270	0	0	1982	10689-live_ramp_activation_2375-scheduled__2026-06-22T00:00:00+00:00	
+10692	2026-06-22T18:00:58.755317+00:00	snapshotting_finished	export_processing	12992	12884	0	0	108	10692-live_ramp_activation_3453-scheduled__2026-06-22T00:00:00+00:00	
+10693	2026-06-22T17:49:05.877627+00:00	snapshotting_finished	export_processing	7351	7305	0	0	46	10693-live_ramp_activation_3454-scheduled__2026-06-22T00:00:00+00:00	
+10742	2026-06-22T17:05:15.325563+00:00	snapshotting_finished	export_processing	5254	5226	0	0	28	10742-live_ramp_activation_3452-scheduled__2026-06-22T00:00:00+00:00	
+10746	2026-06-22T16:53:18.001285+00:00	snapshotting_finished	export_finished	25145	24426	0	0	719	10746-live_ramp_activation_3466-scheduled__2026-06-22T00:00:00+00:00	
+10768	2026-06-22T16:49:53.445438+00:00	snapshotting_finished	export_finished	139076	70844	0	0	68232	10768-live_ramp_activation_2478-scheduled__2026-06-22T00:00:00+00:00	
+10779	2026-06-22T16:38:07.684006+00:00	snapshotting_finished	export_processing	71079	34691	0	0	36388	10779-live_ramp_activation_3467-scheduled__2026-06-22T00:00:00+00:00	
+10792	2026-06-22T16:29:22.997791+00:00	snapshotting_finished	export_finished	796333	0	0	0	796333	10792-live_ramp_activation_2554-scheduled__2026-06-22T00:00:00+00:00	

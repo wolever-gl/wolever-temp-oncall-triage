@@ -1,0 +1,3 @@
+{"ts":"2026-06-22T18:54:54.145Z","actor":"oncall-triage","decision":"created_group","rationale":"Conservative deterministic grouping created a new group for v3|incident:Q252C2NNBIQ8WP|org:fanatics_502|dest:magnite-id-graph|class:export-processing."}
+{"ts":"2026-06-22T21:12:19.303Z","actor":"check-exports","decision":"started_work","rationale":"Export evidence check evaluated alert facts for this group."}
+{"ts":"2026-06-22T21:12:35.633Z","actor":"check-exports","decision":"transitioned_to_monitoring","rationale":"Auto-monitored from Pizza export checks: 1 alert-scoped export check(s) are still processing and 0 are already healthy."}

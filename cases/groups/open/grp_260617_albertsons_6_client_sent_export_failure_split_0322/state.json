@@ -1,0 +1,25 @@
+{
+  "group_id": "grp_260617_albertsons_6_client_sent_export_failure_split_0322",
+  "state": "open",
+  "tags": [
+    "triage:needs_review"
+  ],
+  "title": "albertsons_6 client-sent-export-failure split",
+  "summary": "Audience 13176 has a distinct run family and failure mode: a 2026-06-11 webapp delta LiveRamp activation run with destination validation/SFTP errors, while the remaining six alerts share stale 2026-06-05 scheduled LiveRamp activation runs stuck in Batch Tracker retries until retry 1000.",
+  "deterministic_key": "v3|incident:Q3BP8RE86R1HC0|org:albertsons_6|class:client-sent-export-failure|split|Q2PMGVTPJ7WKIH",
+  "grouping_version": 3,
+  "created_at": "2026-06-22T22:31:52.166Z",
+  "updated_at": "2026-06-22T22:31:52.166Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q1NCQUL11TZXWI",
+      "alert_id": "Q2PMGVTPJ7WKIH"
+    }
+  ],
+  "incident_ids": [
+    "Q1NCQUL11TZXWI"
+  ],
+  "related_group_ids": [
+    "260617-albertsons_6-client-sent-export-failure"
+  ]
+}

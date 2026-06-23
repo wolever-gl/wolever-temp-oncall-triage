@@ -1,0 +1,27 @@
+{
+  "group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-11",
+  "state": "resolved",
+  "tags": [
+    "triage:needs_review",
+    "resolved:merged"
+  ],
+  "title": "albertsons_6 albertsons-albertsons-media-no-exports-for-audie",
+  "summary": "Merged into 260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie: Consolidate Albertsons no-exports-for-audience scheduled interval alerts from the Other open buckets list into a single investigation case.",
+  "deterministic_key": "v3|incident:Q0QCK7WWM8CB9Y|org:albertsons_6|class:albertsons-albertsons-media-no-exports-for-audie",
+  "grouping_version": 3,
+  "created_at": "2026-06-22T18:54:54.145Z",
+  "updated_at": "2026-06-22T22:21:01.248Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q0QCK7WWM8CB9Y",
+      "alert_id": "Q2TP35R456NEBI"
+    }
+  ],
+  "incident_ids": [
+    "Q0QCK7WWM8CB9Y"
+  ],
+  "related_group_ids": [
+    "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie"
+  ],
+  "next_action": "Follow target group 260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie."
+}

@@ -1,0 +1,24 @@
+{
+  "annotation": {
+    "ts": "2026-06-22T20:35:43.968Z",
+    "alert_ref": {
+      "incident_id": "Q1S0Q38FOEN2XY",
+      "alert_id": "Q16JWD96F28MID"
+    },
+    "tags": [],
+    "decision": "skip",
+    "confidence": "high",
+    "summary": "Alert Q1S0Q38FOEN2XY/Q16JWD96F28MID is not one of the SE05 classified alerts being moved.",
+    "source": {
+      "kind": "tagger",
+      "run_id": "tagrun_20260622203543_260622_se05_classified_alerts_tagger",
+      "script_sha256": "decb6770eb35e94316d61dce8320ab03956b3ed7c7845da378b08f9f5070a411",
+      "script_path": "cases/assets/taggers/tagrun_20260622203543_260622_se05_classified_alerts_tagger/260622-se05-classified-alerts-tagger.ts"
+    }
+  },
+  "process": {
+    "stdout": "{\"decision\":\"skip\",\"confidence\":\"high\",\"summary\":\"Alert Q1S0Q38FOEN2XY/Q16JWD96F28MID is not one of the SE05 classified alerts being moved.\"}\n",
+    "stderr": "",
+    "exit_code": 0
+  }
+}

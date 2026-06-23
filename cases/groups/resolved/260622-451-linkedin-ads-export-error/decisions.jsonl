@@ -1,0 +1,3 @@
+{"ts":"2026-06-22T18:54:54.145Z","actor":"oncall-triage","decision":"created_group","rationale":"Conservative deterministic grouping created a new group for v3|incident:Q06WSHYZJD9EKK|org:451|dest:linkedin-ads|class:export-error."}
+{"ts":"2026-06-22T22:01:46.643Z","actor":"check-exports","decision":"started_work","rationale":"Export evidence check evaluated alert facts for this group."}
+{"ts":"2026-06-22T23:32:28.777Z","actor":"agent","decision":"transitioned_to_resolved","rationale":"Resolved as retry/false alarm: same-scope LinkedIn Ads replacement run finished healthy with matching row count after the failed run."}

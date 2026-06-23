@@ -1,0 +1,135 @@
+{
+  "group_id": "260622-albertsons_6-http-client-errors",
+  "state": "waiting",
+  "tags": [
+    "triage:albertsons-client-sent",
+    "triage:http-client-error",
+    "triage:quervice-validation",
+    "triage:tag_grouped",
+    "waiting:client"
+  ],
+  "title": "Albertsons Quervice missing-column pre-snapshotting failures",
+  "summary": "Added SE05 audience 11349, whose pre_snapshotting_check failed because a referenced Product_Attributes_Product_Group_categoryL column is missing.",
+  "deterministic_key": "tag|260622-albertsons_6-http-client-errors",
+  "grouping_version": 3,
+  "created_at": "2026-06-22T19:24:22.642Z",
+  "updated_at": "2026-06-23T15:32:27.464Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q054DZZ6GFL4FT",
+      "alert_id": "Q1QZ9JCZZESMEY"
+    },
+    {
+      "incident_id": "Q0KT9MIUIF06VD",
+      "alert_id": "Q2DLF16GB8QVJD"
+    },
+    {
+      "incident_id": "Q0LRG7LC17QHC0",
+      "alert_id": "Q2L67OM5WJOTID"
+    },
+    {
+      "incident_id": "Q0NEGMFU9SDRIP",
+      "alert_id": "Q0SHHB9EYNWUBZ"
+    },
+    {
+      "incident_id": "Q0YMC0G8MBU3S7",
+      "alert_id": "Q07N6LY7XHCHXK"
+    },
+    {
+      "incident_id": "Q18PJFCK0IYHAO",
+      "alert_id": "Q2TVHR26NUJHQC"
+    },
+    {
+      "incident_id": "Q1C6Q8ZS6DLVIH",
+      "alert_id": "Q1HTH8YSKV9L1N"
+    },
+    {
+      "incident_id": "Q1CEIF2TYUZHSP",
+      "alert_id": "Q3BU9634N1483Q"
+    },
+    {
+      "incident_id": "Q1LJB8EJA6JZEB",
+      "alert_id": "Q091WB9L3W1ETP"
+    },
+    {
+      "incident_id": "Q1O1OOB7GJ8P4A",
+      "alert_id": "Q27L5RANB68KU4"
+    },
+    {
+      "incident_id": "Q1S0Q38FOEN2XY",
+      "alert_id": "Q2SA2EL0F19V60"
+    },
+    {
+      "incident_id": "Q281IJMKYIYEHV",
+      "alert_id": "Q13Q3LOCI8HZBB"
+    },
+    {
+      "incident_id": "Q29WSKI7IBRPVW",
+      "alert_id": "Q1VMCJ57UJQR3J"
+    },
+    {
+      "incident_id": "Q2ECAALJOOO1R6",
+      "alert_id": "Q1RO4KL8SVVGTF"
+    },
+    {
+      "incident_id": "Q2IIOBNUV6BSPG",
+      "alert_id": "Q0WKXBFD1QCPXD"
+    },
+    {
+      "incident_id": "Q2M9PQ0VIYN9Q7",
+      "alert_id": "Q0VURTPY524L7X"
+    },
+    {
+      "incident_id": "Q337ZKYTMRUI8M",
+      "alert_id": "Q1MJO784QBCSKX"
+    },
+    {
+      "incident_id": "Q38JIFOCY2F0AO",
+      "alert_id": "Q30GIKI5S5ODZQ"
+    },
+    {
+      "incident_id": "Q3X51HMAYEMKHO",
+      "alert_id": "Q1OC1CLFCGII8C"
+    }
+  ],
+  "incident_ids": [
+    "Q054DZZ6GFL4FT",
+    "Q0KT9MIUIF06VD",
+    "Q0LRG7LC17QHC0",
+    "Q0NEGMFU9SDRIP",
+    "Q0YMC0G8MBU3S7",
+    "Q18PJFCK0IYHAO",
+    "Q1C6Q8ZS6DLVIH",
+    "Q1CEIF2TYUZHSP",
+    "Q1LJB8EJA6JZEB",
+    "Q1O1OOB7GJ8P4A",
+    "Q1S0Q38FOEN2XY",
+    "Q281IJMKYIYEHV",
+    "Q29WSKI7IBRPVW",
+    "Q2ECAALJOOO1R6",
+    "Q2IIOBNUV6BSPG",
+    "Q2M9PQ0VIYN9Q7",
+    "Q337ZKYTMRUI8M",
+    "Q38JIFOCY2F0AO",
+    "Q3X51HMAYEMKHO"
+  ],
+  "related_group_ids": [
+    "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "260622-albertsons_6-client-sent-export-failure-05",
+    "260622-albertsons_6-snapshotting-error-05",
+    "260622-albertsons_6-snapshotting-error-07",
+    "260623-albertsons_6-snapshotting-error",
+    "260623-albertsons_6-snapshotting-error-02",
+    "260623-albertsons_6-snapshotting-error-03",
+    "260623-albertsons_6-snapshotting-error-04",
+    "260623-albertsons_6-snapshotting-error-05",
+    "260623-albertsons_6-snapshotting-error-06",
+    "260623-albertsons_6-snapshotting-error-07",
+    "260623-albertsons_6-snapshotting-error-08",
+    "260623-albertsons_6-snapshotting-error-10",
+    "260623-albertsons_6-snapshotting-error-11",
+    "260623-albertsons_6-snapshotting-error-13",
+    "260623-albertsons_6-snapshotting-error-15",
+    "260623-albertsons_6-snapshotting-error-16"
+  ]
+}

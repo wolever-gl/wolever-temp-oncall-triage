@@ -1,0 +1,80 @@
+{
+  "check_id": "chk_q2ttdnd3r51rwh_q0ibjj98jsjm2x",
+  "source": "pagerduty",
+  "incident_id": "Q2TTDND3R51RWH",
+  "alert_id": "Q0IBJJ98JSJM2X",
+  "state": "blocked",
+  "scope": {
+    "env": "prod",
+    "org_id": "502",
+    "audience_id": "36234",
+    "match_strategy": "any_export_after_alert",
+    "alert_created_at": "2026-06-22T19:10:57-07:00",
+    "checked_export_run_ids": [],
+    "glcli": "glcli --env prod bifrost pizza --audience-id 36234 --org-id 502"
+  },
+  "scope_key": "prod|502|36234|unknown_destination|unknown_endpoint|unknown_run",
+  "run_evaluations": [
+    {
+      "export_run_id": "36234-magnite_id_graph_22111-scheduled__2026-06-23T00:00:00+00:00",
+      "health": "blocked",
+      "match_basis": "any_export_after_alert",
+      "blockers": [
+        "snapshotting_error_requires_review"
+      ],
+      "selected_row": {
+        "export_run_id": "36234-magnite_id_graph_22111-scheduled__2026-06-23T00:00:00+00:00",
+        "audience_id": "36234",
+        "endpoint_id": "app_magnite_id_graph_1920",
+        "destination_type": "magnite_id_graph",
+        "created_at": "2026-06-23T04:33:15.701185+00:00",
+        "snapshotting_state": "snapshotting_error",
+        "export_state": "export_finished",
+        "failed_export_count": 0,
+        "raw": {
+          "export_state": "export_finished",
+          "successful_add_count": 61584676,
+          "successful_remove_count": 0,
+          "failed_export_count": 0,
+          "rejected_row_count": 138506,
+          "total_row_count": 61723182,
+          "successful_expanded_add_count": 61584676,
+          "successful_expanded_remove_count": 0,
+          "failed_expanded_export_count": 0,
+          "rejected_expanded_row_count": 138506,
+          "total_expanded_row_count": 61723182,
+          "enhanced_match_count": 0,
+          "enhanced_row_count": 0,
+          "enhanced_total_records": 0,
+          "total_batch_count": 836,
+          "completed_batch_count": 836,
+          "successful_batch_count": 836,
+          "failed_batch_count": 0,
+          "failure_reason": null,
+          "info": {
+            "internal_export_id": "36234-magnite_id_graph_22111-scheduled__2026-06-23T00:00:00+00:00-20260623020855",
+            "export_run_id": "36234-magnite_id_graph_22111-scheduled__2026-06-23T00:00:00+00:00",
+            "audience_id": null,
+            "internal_audience_id": "36234",
+            "audience_name": "FAN_A18-49_Tentpole_MultiSport",
+            "organization_id": "502",
+            "organization_name": "fanatics",
+            "platform": "magnite_id_graph",
+            "endpoint_id": "app_magnite_id_graph_1920",
+            "export_timestamp": "2026-06-23 04:30:42",
+            "error_file_uri": "gs://flywheel-prod-328213-temporary/batch_errors/3e230ce3-883e-4e33-bf0d-842e3e36d91d.csv",
+            "created_at": "2026-06-23T04:33:15.701185+00:00",
+            "export_complete_response": null
+          },
+          "snapshotting_state": "snapshotting_error"
+        }
+      }
+    }
+  ],
+  "blockers": [
+    "snapshotting_error_requires_review"
+  ],
+  "evidence_artifacts": [],
+  "created_at": "2026-06-23T14:11:39.718Z",
+  "updated_at": "2026-06-23T14:11:39.718Z"
+}

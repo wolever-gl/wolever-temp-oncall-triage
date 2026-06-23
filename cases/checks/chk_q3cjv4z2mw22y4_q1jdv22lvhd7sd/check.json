@@ -1,0 +1,81 @@
+{
+  "check_id": "chk_q3cjv4z2mw22y4_q1jdv22lvhd7sd",
+  "source": "pagerduty",
+  "incident_id": "Q3CJV4Z2MW22Y4",
+  "alert_id": "Q1JDV22LVHD7SD",
+  "state": "monitoring",
+  "scope": {
+    "env": "prod",
+    "org_id": "502",
+    "audience_id": "31238",
+    "endpoint_id": "app_magnite_id_graph_1920",
+    "destination_type": "magnite_id_graph",
+    "match_strategy": "checked_export_run_ids",
+    "alert_created_at": "2026-06-16T08:12:54-07:00",
+    "checked_export_run_ids": [
+      "31238-magnite_id_graph_19146-scheduled__2026-06-16T00:00:00+00:00"
+    ],
+    "glcli": "glcli --env prod bifrost pizza --audience-id 31238 --org-id 502"
+  },
+  "scope_key": "prod|502|31238|magnite_id_graph|app_magnite_id_graph_1920|31238-magnite_id_graph_19146-scheduled__2026-06-16T00:00:00+00:00",
+  "run_evaluations": [
+    {
+      "export_run_id": "31238-magnite_id_graph_19146-scheduled__2026-06-16T00:00:00+00:00",
+      "health": "monitoring",
+      "match_basis": "checked_export_run_id",
+      "blockers": [],
+      "selected_row": {
+        "export_run_id": "31238-magnite_id_graph_19146-scheduled__2026-06-16T00:00:00+00:00",
+        "audience_id": "31238",
+        "endpoint_id": "app_magnite_id_graph_1920",
+        "destination_type": "magnite_id_graph",
+        "created_at": "2026-06-16T01:09:03.872315+00:00",
+        "snapshotting_state": "snapshotting_finished",
+        "export_state": "export_processing",
+        "failed_export_count": 0,
+        "raw": {
+          "export_state": "export_processing",
+          "successful_add_count": 21891165,
+          "successful_remove_count": 0,
+          "failed_export_count": 0,
+          "rejected_row_count": 11323055,
+          "total_row_count": 33348419,
+          "successful_expanded_add_count": 49049311,
+          "successful_expanded_remove_count": 0,
+          "failed_expanded_export_count": 0,
+          "rejected_expanded_row_count": 11323055,
+          "total_expanded_row_count": 33348419,
+          "enhanced_match_count": 0,
+          "enhanced_row_count": 0,
+          "enhanced_total_records": 0,
+          "total_batch_count": 448,
+          "completed_batch_count": 446,
+          "successful_batch_count": 446,
+          "failed_batch_count": 0,
+          "failure_reason": null,
+          "info": {
+            "internal_export_id": "31238-magnite_id_graph_19146-scheduled__2026-06-16T00:00:00+00:00-20260616004447",
+            "export_run_id": "31238-magnite_id_graph_19146-scheduled__2026-06-16T00:00:00+00:00",
+            "audience_id": null,
+            "internal_audience_id": "31238",
+            "audience_name": "FAN_League_NFL_T3",
+            "organization_id": "502",
+            "organization_name": "fanatics",
+            "platform": "magnite_id_graph",
+            "endpoint_id": "app_magnite_id_graph_1920",
+            "export_timestamp": "2026-06-16 00:58:17",
+            "error_file_uri": "gs://flywheel-prod-328213-temporary/batch_errors/8a55abaa-d70c-41cb-8ad4-a8125921aae3.csv",
+            "created_at": "2026-06-16T01:09:03.872315+00:00",
+            "export_complete_response": null
+          },
+          "snapshotting_state": "snapshotting_finished"
+        }
+      }
+    }
+  ],
+  "blockers": [],
+  "evidence_artifacts": [],
+  "created_at": "2026-06-22T21:32:21.171Z",
+  "updated_at": "2026-06-22T21:32:21.171Z",
+  "next_check_at": "2026-06-22T21:47:21.171Z"
+}

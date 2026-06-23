@@ -1,0 +1,24 @@
+{
+  "group_id": "260620-chghealthcare_395-client-sent-export-failure-04",
+  "state": "resolved",
+  "tags": [
+    "triage:needs_review",
+    "resolved:export-healthy"
+  ],
+  "title": "chghealthcare_395 client-sent-export-failure",
+  "summary": "Auto-resolved from Pizza export checks: all 1 alert-scoped export check(s) are healthy_closed with no blockers.",
+  "deterministic_key": "v3|incident:Q1X467GY84NHLS|org:chghealthcare_395|class:client-sent-export-failure",
+  "grouping_version": 3,
+  "created_at": "2026-06-22T18:54:54.145Z",
+  "updated_at": "2026-06-22T21:57:56.210Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q1X467GY84NHLS",
+      "alert_id": "Q3F1J2F6LHW5X4"
+    }
+  ],
+  "incident_ids": [
+    "Q1X467GY84NHLS"
+  ],
+  "related_group_ids": []
+}

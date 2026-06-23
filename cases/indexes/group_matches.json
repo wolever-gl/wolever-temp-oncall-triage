@@ -81,6 +81,24 @@
     "rationale": "Initial deterministic grouping for 260618-costco_4-costco-default-no-data-found-for-active-audience."
   },
   {
+    "match_key": "v3|incident:Q02ZCWAAL8YUWW|org:chghealthcare_395|class:client-sent-export-failure",
+    "status": "active",
+    "target_group_id": "260622-chghealthcare_395-client-sent-export-failure",
+    "reason": "created",
+    "created_at": "2026-06-23T13:54:15.733Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260622-chghealthcare_395-client-sent-export-failure."
+  },
+  {
+    "match_key": "v3|incident:Q03QXQ0W6LAQDC|org:chghealthcare_395|class:client-sent-export-failure",
+    "status": "active",
+    "target_group_id": "260622-chghealthcare_395-client-sent-export-failure-02",
+    "reason": "created",
+    "created_at": "2026-06-23T13:54:15.733Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260622-chghealthcare_395-client-sent-export-failure-02."
+  },
+  {
     "match_key": "v3|incident:Q040Y5OHNXE3KP|org:allegro_3|dest:dv360|class:export-processing",
     "status": "active",
     "target_group_id": "260619-allegro_3-dv360-export-processing-02",
@@ -153,6 +171,15 @@
     "rationale": "Initial deterministic grouping for 260618-costco_4-costco-default-no-data-found-for-active-audience-02."
   },
   {
+    "match_key": "v3|incident:Q04X8LNR4I5BWZ|org:chghealthcare_395|class:client-sent-export-failure",
+    "status": "active",
+    "target_group_id": "260622-chghealthcare_395-client-sent-export-failure-03",
+    "reason": "created",
+    "created_at": "2026-06-23T13:54:15.733Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260622-chghealthcare_395-client-sent-export-failure-03."
+  },
+  {
     "match_key": "v3|incident:Q04YXL91LDM3WS|org:chghealthcare_395|dest:pulse-point|class:export-error",
     "status": "active",
     "target_group_id": "260618-chghealthcare_395-pulse-point-export-error",
@@ -181,12 +208,12 @@
   },
   {
     "match_key": "v3|incident:Q05QT2VUY5NLIC|org:albertsons_6|class:snapshotting-error",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-snapshotting-error",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-quervice-timeouts",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-snapshotting-error."
+    "rationale": "Audience 3283 has documented Quervice pre_snapshotting_check timeouts/lock-expiry behavior; track with Quervice timeout remediation."
   },
   {
     "match_key": "v3|incident:Q05TNQMJXCI19W|org:chghealthcare_395|dest:pulse-point|class:export-error",
@@ -216,6 +243,15 @@
     "rationale": "Initial deterministic grouping for 260618-priceline_370-client-sent-export-failure-02."
   },
   {
+    "match_key": "v3|incident:Q06CJCGSNKMQ9V|org:3|class:client-sent-export-failure",
+    "status": "active",
+    "target_group_id": "260622-3-client-sent-export-failure",
+    "reason": "created",
+    "created_at": "2026-06-23T13:54:15.733Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260622-3-client-sent-export-failure."
+  },
+  {
     "match_key": "v3|incident:Q06WSHYZJD9EKK|org:451|dest:linkedin-ads|class:export-error",
     "status": "active",
     "target_group_id": "260622-451-linkedin-ads-export-error",
@@ -243,6 +279,15 @@
     "rationale": "Initial deterministic grouping for 260616-chghealthcare_395-pulse-point-export-error-02."
   },
   {
+    "match_key": "v3|incident:Q07JFPJF1Z5MSB|org:3|class:zero-success",
+    "status": "active",
+    "target_group_id": "260622-3-zero-success",
+    "reason": "created",
+    "created_at": "2026-06-23T13:54:15.733Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260622-3-zero-success."
+  },
+  {
     "match_key": "v3|incident:Q07KCK500NPR21|org:costco_4|class:costco-default-no-data-found-for-active-audience",
     "status": "active",
     "target_group_id": "260618-costco_4-costco-default-no-data-found-for-active-audience-03",
@@ -253,12 +298,12 @@
   },
   {
     "match_key": "v3|incident:Q07WN7B40A87BL|org:albertsons_6|class:albertsons-albertsons-media-no-exports-for-audie",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-02",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-02."
+    "rationale": "Consolidate Albertsons no-exports-for-audience scheduled interval alerts from the Other open buckets list into a single investigation case."
   },
   {
     "match_key": "v3|incident:Q08JZJLDOM5LPT|org:albertsons_6|class:client-sent-export-failure",
@@ -286,6 +331,15 @@
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
     "rationale": "Initial deterministic grouping for 260618-costco_4-costco-default-no-data-found-for-active-audience-04."
+  },
+  {
+    "match_key": "v3|incident:Q09FHOR4ZDMTUL|org:albertsons_6|class:client-sent-export-failure",
+    "status": "active",
+    "target_group_id": "260623-albertsons_6-client-sent-export-failure",
+    "reason": "created",
+    "created_at": "2026-06-23T13:54:15.733Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260623-albertsons_6-client-sent-export-failure."
   },
   {
     "match_key": "v3|incident:Q09VNZ6WUTJ8HM|org:faraday_273|dest:facebook|class:export-error",
@@ -325,21 +379,21 @@
   },
   {
     "match_key": "v3|incident:Q0B75DL9CGNBG0|org:albertsons_6|class:snapshotting-error",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-snapshotting-error-02",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-bigquery-type-mismatch",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-snapshotting-error-02."
+    "rationale": "Audience 9670 is in the BigQuery IN UNNEST NUMERIC vs ARRAY<STRING> type-mismatch cohort."
   },
   {
     "match_key": "v3|incident:Q0BSIBMDIB33PB|org:albertsons_6|class:snapshotting-error",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-snapshotting-error-03",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-quervice-timeouts",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-snapshotting-error-03."
+    "rationale": "Audience 1972 is in the Quervice pre-snapshotting timeout/error-response cohort."
   },
   {
     "match_key": "v3|incident:Q0BWK21VGZ7RL7|org:allegro_3|class:client-sent-export-failure",
@@ -352,12 +406,12 @@
   },
   {
     "match_key": "v3|incident:Q0C71WMFRHZ86M|org:albertsons_6|class:albertsons-albertsons-media-no-exports-for-audie",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-03",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-03."
+    "rationale": "Consolidate Albertsons no-exports-for-audience scheduled interval alerts from the Other open buckets list into a single investigation case."
   },
   {
     "match_key": "v3|incident:Q0CE4Y0BVKY7HI|org:451|dest:linkedin-ads|class:export-error",
@@ -459,22 +513,31 @@
     "rationale": "Initial deterministic grouping for 260618-costco_4-costco-default-no-data-found-for-active-audience-07."
   },
   {
-    "match_key": "v3|incident:Q0FGJPZCXZLXHR|org:albertsons_6|class:albertsons-albertsons-media-no-exports-for-audie",
+    "match_key": "v3|incident:Q0FDT9XRY0M4F2|org:3|class:client-sent-export-failure",
     "status": "active",
-    "target_group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-04",
+    "target_group_id": "260623-3-client-sent-export-failure",
     "reason": "created",
+    "created_at": "2026-06-23T13:54:15.733Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260623-3-client-sent-export-failure."
+  },
+  {
+    "match_key": "v3|incident:Q0FGJPZCXZLXHR|org:albertsons_6|class:albertsons-albertsons-media-no-exports-for-audie",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-04."
+    "rationale": "Consolidate Albertsons no-exports-for-audience scheduled interval alerts from the Other open buckets list into a single investigation case."
   },
   {
     "match_key": "v3|incident:Q0GE0XGKVCGEZA|org:albertsons_6|class:albertsons-albertsons-media-no-exports-for-audie",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-05",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-05."
+    "rationale": "Consolidate Albertsons no-exports-for-audience scheduled interval alerts from the Other open buckets list into a single investigation case."
   },
   {
     "match_key": "v3|incident:Q0HFO3KTKSKQUS|org:albertsons_6|class:client-sent-export-failure",
@@ -550,12 +613,12 @@
   },
   {
     "match_key": "v3|incident:Q0J2QIB5T4ACAP|org:albertsons_6|class:albertsons-albertsons-media-no-exports-for-audie",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-06",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-06."
+    "rationale": "Consolidate Albertsons no-exports-for-audience scheduled interval alerts from the Other open buckets list into a single investigation case."
   },
   {
     "match_key": "v3|incident:Q0JHNJP2ZLQPBQ|org:albertsons_6|class:client-sent-export-failure",
@@ -576,13 +639,40 @@
     "rationale": "Initial deterministic grouping for 260618-pirates_3-snapshotting-error-03."
   },
   {
-    "match_key": "v3|incident:Q0LWNP6LITRPIU|org:albertsons_6|class:albertsons-albertsons-media-no-exports-for-audie",
+    "match_key": "v3|incident:Q0KT9MIUIF06VD|org:albertsons_6|class:snapshotting-error",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-http-client-errors",
+    "reason": "merged",
+    "created_at": "2026-06-23T14:41:01.019Z",
+    "created_by": "oncall-triage",
+    "rationale": "2026-06-23 Albertsons snapshotting alert has pre_snapshotting_check HTTP client error; scoped logs show this is the existing Quervice missing Product_Attributes_Product_Group_categoryL validation class."
+  },
+  {
+    "match_key": "v3|incident:Q0LBNI4LMZSL99|org:albertsons_6|class:client-sent-export-failure",
     "status": "active",
-    "target_group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-07",
+    "target_group_id": "260622-albertsons_6-client-sent-export-failure-04",
     "reason": "created",
+    "created_at": "2026-06-23T13:54:15.733Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260622-albertsons_6-client-sent-export-failure-04."
+  },
+  {
+    "match_key": "v3|incident:Q0LRG7LC17QHC0|org:albertsons_6|class:client-sent-export-failure",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-http-client-errors",
+    "reason": "merged",
+    "created_at": "2026-06-23T13:54:15.733Z",
+    "created_by": "oncall-triage",
+    "rationale": "Client-sent failure is for the same Albertsons audience as a 2026-06-23 snapshotting HTTP-client alert already classified as the existing Quervice missing Product_Attributes_Product_Group_categoryL validation class."
+  },
+  {
+    "match_key": "v3|incident:Q0LWNP6LITRPIU|org:albertsons_6|class:albertsons-albertsons-media-no-exports-for-audie",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-07."
+    "rationale": "Consolidate Albertsons no-exports-for-audience scheduled interval alerts from the Other open buckets list into a single investigation case."
   },
   {
     "match_key": "v3|incident:Q0MR7PH8DONVEW|org:costco_4|class:costco-default-no-data-found-for-active-audience",
@@ -604,12 +694,12 @@
   },
   {
     "match_key": "v3|incident:Q0NB1XLBBBB6OG|org:albertsons_6|class:albertsons-albertsons-media-no-exports-for-audie",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-08",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-08."
+    "rationale": "Consolidate Albertsons no-exports-for-audience scheduled interval alerts from the Other open buckets list into a single investigation case."
   },
   {
     "match_key": "v3|incident:Q0NEBXDVQH33N7|org:costco_4|class:costco-default-no-data-found-for-active-audience",
@@ -619,6 +709,15 @@
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
     "rationale": "Initial deterministic grouping for 260618-costco_4-costco-default-no-data-found-for-active-audience-09."
+  },
+  {
+    "match_key": "v3|incident:Q0NEGMFU9SDRIP|org:albertsons_6|class:snapshotting-error",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-http-client-errors",
+    "reason": "merged",
+    "created_at": "2026-06-23T14:41:01.019Z",
+    "created_by": "oncall-triage",
+    "rationale": "2026-06-23 Albertsons snapshotting alert has pre_snapshotting_check HTTP client error; scoped logs show this is the existing Quervice missing Product_Attributes_Product_Group_categoryL validation class."
   },
   {
     "match_key": "v3|incident:Q0NLD4FPPASOA5|org:451|dest:linkedin-ads|class:export-error",
@@ -684,22 +783,31 @@
     "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
-    "match_key": "v3|incident:Q0OZ0872TDR2Y2|org:albertsons_6|class:albertsons-albertsons-media-no-exports-for-audie",
+    "match_key": "v3|incident:Q0ONUAJ6HJ075M|org:albertsons_6|class:client-sent-export-failure",
     "status": "active",
-    "target_group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-09",
+    "target_group_id": "260622-albertsons_6-client-sent-export-failure-06",
     "reason": "created",
+    "created_at": "2026-06-23T13:54:15.733Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260622-albertsons_6-client-sent-export-failure-06."
+  },
+  {
+    "match_key": "v3|incident:Q0OZ0872TDR2Y2|org:albertsons_6|class:albertsons-albertsons-media-no-exports-for-audie",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-09."
+    "rationale": "Consolidate Albertsons no-exports-for-audience scheduled interval alerts from the Other open buckets list into a single investigation case."
   },
   {
     "match_key": "v3|incident:Q0P2NAYBB0ZKX9|org:albertsons_6|class:albertsons-albertsons-media-no-exports-for-audie",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-10",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-10."
+    "rationale": "Consolidate Albertsons no-exports-for-audience scheduled interval alerts from the Other open buckets list into a single investigation case."
   },
   {
     "match_key": "v3|incident:Q0P4NVD737BB3A|org:faraday_273|class:client-sent-export-failure",
@@ -730,12 +838,12 @@
   },
   {
     "match_key": "v3|incident:Q0QCK7WWM8CB9Y|org:albertsons_6|class:albertsons-albertsons-media-no-exports-for-audie",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-11",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-11."
+    "rationale": "Consolidate Albertsons no-exports-for-audience scheduled interval alerts from the Other open buckets list into a single investigation case."
   },
   {
     "match_key": "v3|incident:Q0QM7VIQFGMRVF|org:costco_4|class:costco-default-no-data-found-for-active-audience",
@@ -763,6 +871,15 @@
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
     "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
+  },
+  {
+    "match_key": "v3|incident:Q0RFJ7B7DZOM35|org:3|class:client-sent-export-failure",
+    "status": "active",
+    "target_group_id": "260622-3-client-sent-export-failure-02",
+    "reason": "created",
+    "created_at": "2026-06-23T13:54:15.733Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260622-3-client-sent-export-failure-02."
   },
   {
     "match_key": "v3|incident:Q0RGK12D17FKM7|org:chghealthcare_395|class:client-sent-export-failure",
@@ -802,12 +919,12 @@
   },
   {
     "match_key": "v3|incident:Q0T293NPQ5PSHA|org:albertsons_6|class:snapshotting-error",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-snapshotting-error-04",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-quervice-timeouts",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-snapshotting-error-04."
+    "rationale": "Audience 10583 is in the Quervice pre-snapshotting timeout/error-response cohort."
   },
   {
     "match_key": "v3|incident:Q0T2N36CUQTNDO|org:costco_4|class:costco-default-no-data-found-for-active-audience",
@@ -829,12 +946,12 @@
   },
   {
     "match_key": "v3|incident:Q0V8KAU4ZZ4R4J|org:albertsons_6|class:albertsons-albertsons-media-no-exports-for-audie",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-12",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-12."
+    "rationale": "Consolidate Albertsons no-exports-for-audience scheduled interval alerts from the Other open buckets list into a single investigation case."
   },
   {
     "match_key": "v3|incident:Q0VTHKLLN3XASC|org:chghealthcare_395|dest:pulse-point|class:export-error",
@@ -900,6 +1017,15 @@
     "rationale": "Initial deterministic grouping for 260617-444-zero-success."
   },
   {
+    "match_key": "v3|incident:Q0YMC0G8MBU3S7|org:albertsons_6|class:snapshotting-error",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-http-client-errors",
+    "reason": "merged",
+    "created_at": "2026-06-23T14:41:01.019Z",
+    "created_by": "oncall-triage",
+    "rationale": "2026-06-23 Albertsons snapshotting alert has pre_snapshotting_check HTTP client error; scoped logs show this is the existing Quervice missing Product_Attributes_Product_Group_categoryL validation class."
+  },
+  {
     "match_key": "v3|incident:Q0YOTQ8CZO888Z|org:royals_4|class:snapshotting-error",
     "status": "active",
     "target_group_id": "260618-royals_4-snapshotting-error-04",
@@ -927,6 +1053,15 @@
     "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
+    "match_key": "v3|incident:Q0YXEG844L38X5|org:albertsons_6|class:client-sent-export-failure",
+    "status": "active",
+    "target_group_id": "260622-albertsons_6-client-sent-export-failure-07",
+    "reason": "created",
+    "created_at": "2026-06-23T13:54:15.733Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260622-albertsons_6-client-sent-export-failure-07."
+  },
+  {
     "match_key": "v3|incident:Q100B615QUQZXD|org:chghealthcare_395|class:client-sent-export-failure",
     "status": "active",
     "target_group_id": "260615-chghealthcare_395-client-sent-export-failure-02",
@@ -937,12 +1072,12 @@
   },
   {
     "match_key": "v3|incident:Q10A7OWTQLCLX0|org:albertsons_6|class:albertsons-albertsons-media-no-exports-for-audie",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-13",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-13."
+    "rationale": "Consolidate Albertsons no-exports-for-audience scheduled interval alerts from the Other open buckets list into a single investigation case."
   },
   {
     "match_key": "v3|incident:Q10NGEYDK847U7|org:albertsons_6|class:client-sent-export-failure",
@@ -1036,21 +1171,21 @@
   },
   {
     "match_key": "v3|incident:Q13B8W35HWJE0F|org:albertsons_6|class:albertsons-albertsons-media-no-exports-for-audie",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-14",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-14."
+    "rationale": "Consolidate Albertsons no-exports-for-audience scheduled interval alerts from the Other open buckets list into a single investigation case."
   },
   {
     "match_key": "v3|incident:Q13ELBH1205K6I|org:albertsons_6|class:albertsons-albertsons-media-no-exports-for-audie",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-15",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-15."
+    "rationale": "Consolidate Albertsons no-exports-for-audience scheduled interval alerts from the Other open buckets list into a single investigation case."
   },
   {
     "match_key": "v3|incident:Q13Q0C2ETC8SKY|org:chghealthcare_395|class:client-sent-export-failure",
@@ -1060,6 +1195,15 @@
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
     "rationale": "Initial deterministic grouping for 260617-chghealthcare_395-client-sent-export-failure-03."
+  },
+  {
+    "match_key": "v3|incident:Q140U7GG9RCAQU|org:albertsons_6|class:client-sent-export-failure",
+    "status": "active",
+    "target_group_id": "260622-albertsons_6-client-sent-export-failure-08",
+    "reason": "created",
+    "created_at": "2026-06-23T13:54:15.733Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260622-albertsons_6-client-sent-export-failure-08."
   },
   {
     "match_key": "v3|incident:Q14JSSBF3DF275|org:allegro_3|dest:dv360|class:export-processing",
@@ -1117,12 +1261,12 @@
   },
   {
     "match_key": "v3|incident:Q15MYGKQELDC1U|org:albertsons_6|class:albertsons-albertsons-media-no-exports-for-audie",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-16",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-16."
+    "rationale": "Consolidate Albertsons no-exports-for-audience scheduled interval alerts from the Other open buckets list into a single investigation case."
   },
   {
     "match_key": "v3|incident:Q15YEUA7XN7C9Y|org:costco_4|class:costco-default-no-data-found-for-active-audience",
@@ -1141,6 +1285,15 @@
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
     "rationale": "Initial deterministic grouping for 260618-costco_4-costco-default-no-data-found-for-active-audience-17."
+  },
+  {
+    "match_key": "v3|incident:Q16DX9IDPC15VD|org:albertsons_6|class:client-sent-export-failure",
+    "status": "active",
+    "target_group_id": "260622-albertsons_6-client-sent-export-failure-09",
+    "reason": "created",
+    "created_at": "2026-06-23T13:54:15.733Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260622-albertsons_6-client-sent-export-failure-09."
   },
   {
     "match_key": "v3|incident:Q16EPVNTSF0RPY|org:fanatics_502|dest:snowflake|class:export-error",
@@ -1170,6 +1323,15 @@
     "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
+    "match_key": "v3|incident:Q17FNLVCCRINO4|org:chghealthcare_395|class:client-sent-export-failure",
+    "status": "active",
+    "target_group_id": "260622-chghealthcare_395-client-sent-export-failure-04",
+    "reason": "created",
+    "created_at": "2026-06-23T13:54:15.733Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260622-chghealthcare_395-client-sent-export-failure-04."
+  },
+  {
     "match_key": "v3|incident:Q17HQGEWPTMD9O|org:albertsons_6|class:client-sent-export-failure",
     "status": "redirect",
     "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
@@ -1177,6 +1339,15 @@
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
     "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
+  },
+  {
+    "match_key": "v3|incident:Q17ZTE6KK1UPTW|org:chghealthcare_395|class:client-sent-export-failure",
+    "status": "active",
+    "target_group_id": "260622-chghealthcare_395-client-sent-export-failure-05",
+    "reason": "created",
+    "created_at": "2026-06-23T13:54:15.733Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260622-chghealthcare_395-client-sent-export-failure-05."
   },
   {
     "match_key": "v3|incident:Q18KSG1W3CFWRE|org:royals_4|class:snapshotting-error",
@@ -1252,12 +1423,12 @@
   },
   {
     "match_key": "v3|incident:Q19MJO5XIF1NHB|org:albertsons_6|dest:live-ramp|class:export-error",
-    "status": "active",
-    "target_group_id": "260618-albertsons_6-live-ramp-export-error",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-live-ramp-export-error",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260618-albertsons_6-live-ramp-export-error."
+    "rationale": "Consolidate Albertsons LiveRamp export_error alerts from the Other open buckets list into a single investigation case."
   },
   {
     "match_key": "v3|incident:Q19ZVR1G9PYYK1|org:chghealthcare_395|dest:pulse-point|class:export-error",
@@ -1314,6 +1485,15 @@
     "rationale": "Initial deterministic grouping for 260618-costco_4-costco-default-no-data-found-for-active-audience-18."
   },
   {
+    "match_key": "v3|incident:Q1C6Q8ZS6DLVIH|org:albertsons_6|class:snapshotting-error",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-http-client-errors",
+    "reason": "merged",
+    "created_at": "2026-06-23T14:41:01.019Z",
+    "created_by": "oncall-triage",
+    "rationale": "2026-06-23 Albertsons snapshotting alert has pre_snapshotting_check HTTP client error; scoped logs show this is the existing Quervice missing Product_Attributes_Product_Group_categoryL validation class."
+  },
+  {
     "match_key": "v3|incident:Q1CBO8JFFJ7YO9|org:costco_4|class:costco-default-no-data-found-for-active-audience",
     "status": "active",
     "target_group_id": "260618-costco_4-costco-default-no-data-found-for-active-audience-19",
@@ -1323,13 +1503,22 @@
     "rationale": "Initial deterministic grouping for 260618-costco_4-costco-default-no-data-found-for-active-audience-19."
   },
   {
+    "match_key": "v3|incident:Q1CEIF2TYUZHSP|org:albertsons_6|class:snapshotting-error",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-http-client-errors",
+    "reason": "merged",
+    "created_at": "2026-06-23T14:41:01.019Z",
+    "created_by": "oncall-triage",
+    "rationale": "2026-06-23 Albertsons snapshotting alert has pre_snapshotting_check HTTP client error; scoped logs show this is the existing Quervice missing Product_Attributes_Product_Group_categoryL validation class."
+  },
+  {
     "match_key": "v3|incident:Q1DEY65ANC77PV|org:albertsons_6|class:albertsons-albertsons-media-no-exports-for-audie",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-17",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-17."
+    "rationale": "Consolidate Albertsons no-exports-for-audience scheduled interval alerts from the Other open buckets list into a single investigation case."
   },
   {
     "match_key": "v3|incident:Q1DGAIPDFK6TU8|org:albertsons_6|class:client-sent-export-failure",
@@ -1339,6 +1528,15 @@
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
     "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
+  },
+  {
+    "match_key": "v3|incident:Q1DU3XX8K2JFO9|org:chghealthcare_395|class:client-sent-export-failure",
+    "status": "active",
+    "target_group_id": "260622-chghealthcare_395-client-sent-export-failure-06",
+    "reason": "created",
+    "created_at": "2026-06-23T13:54:15.733Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260622-chghealthcare_395-client-sent-export-failure-06."
   },
   {
     "match_key": "v3|incident:Q1E4EUPF9HDZNA|org:albertsons_6|class:client-sent-export-failure",
@@ -1360,12 +1558,12 @@
   },
   {
     "match_key": "v3|incident:Q1E4EUPF9HDZNA|org:albertsons_6|dest:live-ramp|class:export-error",
-    "status": "active",
-    "target_group_id": "260605-albertsons_6-live-ramp-export-error",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-live-ramp-export-error",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260605-albertsons_6-live-ramp-export-error."
+    "rationale": "Consolidate Albertsons LiveRamp export_error alerts from the Other open buckets list into a single investigation case."
   },
   {
     "match_key": "v3|incident:Q1E4EUPF9HDZNA|org:albertsons_6|dest:live-ramp|class:export-processing",
@@ -1413,6 +1611,15 @@
     "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
+    "match_key": "v3|incident:Q1GVCKXSEM4VIF|org:albertsons_6|class:client-sent-export-failure",
+    "status": "active",
+    "target_group_id": "260622-albertsons_6-client-sent-export-failure-10",
+    "reason": "created",
+    "created_at": "2026-06-23T13:54:15.733Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260622-albertsons_6-client-sent-export-failure-10."
+  },
+  {
     "match_key": "v3|incident:Q1H2G1LPQBKYIZ|org:174|class:client-sent-export-failure",
     "status": "active",
     "target_group_id": "260606-174-client-sent-export-failure",
@@ -1441,12 +1648,12 @@
   },
   {
     "match_key": "v3|incident:Q1HXGWVOFQNLBQ|org:albertsons_6|class:albertsons-albertsons-media-no-exports-for-audie",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-18",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-18."
+    "rationale": "Consolidate Albertsons no-exports-for-audience scheduled interval alerts from the Other open buckets list into a single investigation case."
   },
   {
     "match_key": "v3|incident:Q1IGP4ZN4LXARO|org:royals_4|class:snapshotting-error",
@@ -1459,12 +1666,12 @@
   },
   {
     "match_key": "v3|incident:Q1IKQF303EXNLG|org:albertsons_6|class:albertsons-albertsons-media-no-exports-for-audie",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-19",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-19."
+    "rationale": "Consolidate Albertsons no-exports-for-audience scheduled interval alerts from the Other open buckets list into a single investigation case."
   },
   {
     "match_key": "v3|incident:Q1ILC7ZME4R6FU|org:ford_310|dest:dv360|class:export-error",
@@ -1566,6 +1773,15 @@
     "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
+    "match_key": "v3|incident:Q1LJB8EJA6JZEB|org:albertsons_6|class:snapshotting-error",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-http-client-errors",
+    "reason": "merged",
+    "created_at": "2026-06-23T14:41:01.019Z",
+    "created_by": "oncall-triage",
+    "rationale": "2026-06-23 Albertsons snapshotting alert has pre_snapshotting_check HTTP client error; scoped logs show this is the existing Quervice missing Product_Attributes_Product_Group_categoryL validation class."
+  },
+  {
     "match_key": "v3|incident:Q1LPO13841C1IC|org:albertsons_6|class:client-sent-export-failure",
     "status": "redirect",
     "target_group_id": "260622-albertsons_6-bigquery-type-mismatch",
@@ -1594,12 +1810,12 @@
   },
   {
     "match_key": "v3|incident:Q1NCQUL11TZXWI|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260616-albertsons_6-client-sent-export-failure-02",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260617-albertsons_6-client-sent-export-failure",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260616-albertsons_6-client-sent-export-failure-02."
+    "rationale": "Consolidate Albertsons client-sent export failure alerts from the Other open buckets list into a single investigation case."
   },
   {
     "match_key": "v3|incident:Q1NDIBCXZOIFE8|org:unknown_org|class:eversana-taiho-prod-lonsurf-prod-journey-n-journ",
@@ -1618,6 +1834,15 @@
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
     "rationale": "Initial deterministic grouping for 260618-royals_4-snapshotting-error-08."
+  },
+  {
+    "match_key": "v3|incident:Q1O1OOB7GJ8P4A|org:albertsons_6|class:snapshotting-error",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-http-client-errors",
+    "reason": "merged",
+    "created_at": "2026-06-23T14:41:01.019Z",
+    "created_by": "oncall-triage",
+    "rationale": "2026-06-23 Albertsons snapshotting alert has pre_snapshotting_check HTTP client error; scoped logs show this is the existing Quervice missing Product_Attributes_Product_Group_categoryL validation class."
   },
   {
     "match_key": "v3|incident:Q1OYMJJW2EGJN4|org:albertsons_6|class:client-sent-export-failure",
@@ -1665,13 +1890,22 @@
     "rationale": "Initial deterministic grouping for 260620-allegro_3-client-sent-export-failure."
   },
   {
-    "match_key": "v3|incident:Q1R7D9HWJFBV7D|org:albertsons_6|dest:live-ramp|class:export-error",
+    "match_key": "v3|incident:Q1QQT96DKTRQSZ|org:albertsons_6|class:client-sent-export-failure",
     "status": "active",
-    "target_group_id": "260618-albertsons_6-live-ramp-export-error-02",
+    "target_group_id": "260622-albertsons_6-client-sent-export-failure-11",
     "reason": "created",
+    "created_at": "2026-06-23T13:54:15.733Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260622-albertsons_6-client-sent-export-failure-11."
+  },
+  {
+    "match_key": "v3|incident:Q1R7D9HWJFBV7D|org:albertsons_6|dest:live-ramp|class:export-error",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-live-ramp-export-error",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260618-albertsons_6-live-ramp-export-error-02."
+    "rationale": "Consolidate Albertsons LiveRamp export_error alerts from the Other open buckets list into a single investigation case."
   },
   {
     "match_key": "v3|incident:Q1RFCSJYF0MPKQ|org:chghealthcare_395|dest:pulse-point|class:export-error",
@@ -1681,6 +1915,15 @@
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
     "rationale": "Initial deterministic grouping for 260618-chghealthcare_395-pulse-point-export-error-05."
+  },
+  {
+    "match_key": "v3|incident:Q1RLFOTZEKO6ZF|org:chghealthcare_395|class:client-sent-export-failure",
+    "status": "active",
+    "target_group_id": "260622-chghealthcare_395-client-sent-export-failure-07",
+    "reason": "created",
+    "created_at": "2026-06-23T13:54:15.733Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260622-chghealthcare_395-client-sent-export-failure-07."
   },
   {
     "match_key": "v3|incident:Q1RQVSTI7426IF|org:ford_310|class:client-sent-export-failure",
@@ -1702,12 +1945,12 @@
   },
   {
     "match_key": "v3|incident:Q1S0Q38FOEN2XY|org:albertsons_6|class:snapshotting-error",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-snapshotting-error-05",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-quervice-timeouts",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-snapshotting-error-05."
+    "rationale": "Move SE05 alerts with log-confirmed Quervice timeout/error-response evidence into the existing Albertsons Quervice timeout case."
   },
   {
     "match_key": "v3|incident:Q1S0Q38FOEN2XY|org:albertsons_6|dest:live-ramp|class:export-error",
@@ -1738,12 +1981,12 @@
   },
   {
     "match_key": "v3|incident:Q1TBCJPRHS9RAX|org:albertsons_6|class:snapshotting-error",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-snapshotting-error-06",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-bigquery-type-mismatch",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-snapshotting-error-06."
+    "rationale": "Audience 9373 export check shows pre_snapshotting_check BigQuery expression type incompatibility."
   },
   {
     "match_key": "v3|incident:Q1THTKC54UG3NT|org:pirates_3|class:snapshotting-error",
@@ -1771,6 +2014,15 @@
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
     "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
+  },
+  {
+    "match_key": "v3|incident:Q1UEOA2CBT90GM|org:albertsons_6|class:client-sent-export-failure",
+    "status": "active",
+    "target_group_id": "260623-albertsons_6-client-sent-export-failure-02",
+    "reason": "created",
+    "created_at": "2026-06-23T13:54:15.733Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260623-albertsons_6-client-sent-export-failure-02."
   },
   {
     "match_key": "v3|incident:Q1UNEJEBO3VF43|org:albertsons_6|class:client-sent-export-failure",
@@ -1807,6 +2059,15 @@
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
     "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
+  },
+  {
+    "match_key": "v3|incident:Q1W9HVUW2076M0|org:chghealthcare_395|class:client-sent-export-failure",
+    "status": "active",
+    "target_group_id": "260622-chghealthcare_395-client-sent-export-failure-08",
+    "reason": "created",
+    "created_at": "2026-06-23T13:54:15.733Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260622-chghealthcare_395-client-sent-export-failure-08."
   },
   {
     "match_key": "v3|incident:Q1W9XRN89PJ7U8|org:royals_4|class:snapshotting-error",
@@ -1864,12 +2125,12 @@
   },
   {
     "match_key": "v3|incident:Q1XG43NWEJBMVJ|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260615-albertsons_6-client-sent-export-failure-02",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260617-albertsons_6-client-sent-export-failure",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260615-albertsons_6-client-sent-export-failure-02."
+    "rationale": "Consolidate Albertsons client-sent export failure alerts from the Other open buckets list into a single investigation case."
   },
   {
     "match_key": "v3|incident:Q1XN54NBKWPTCA|org:albertsons_6|class:client-sent-export-failure",
@@ -1972,12 +2233,12 @@
   },
   {
     "match_key": "v3|incident:Q21GFIZRJV32YX|org:albertsons_6|class:albertsons-albertsons-media-no-exports-for-audie",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-21",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-21."
+    "rationale": "Consolidate Albertsons no-exports-for-audience scheduled interval alerts from the Other open buckets list into a single investigation case."
   },
   {
     "match_key": "v3|incident:Q21OLEK8F16EAR|org:costco_4|class:costco-default-no-data-found-for-active-audience",
@@ -2034,6 +2295,15 @@
     "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
+    "match_key": "v3|incident:Q249NXETIDR0MT|org:3|class:zero-success",
+    "status": "active",
+    "target_group_id": "260623-3-zero-success",
+    "reason": "created",
+    "created_at": "2026-06-23T13:54:15.733Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260623-3-zero-success."
+  },
+  {
     "match_key": "v3|incident:Q24B1M4BAXAHKN|org:albertsons_6|class:client-sent-export-failure",
     "status": "redirect",
     "target_group_id": "260622-albertsons_6-bigquery-type-mismatch",
@@ -2061,6 +2331,15 @@
     "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
+    "match_key": "v3|incident:Q25DTSW9KXJQ6B|org:chghealthcare_395|class:client-sent-export-failure",
+    "status": "active",
+    "target_group_id": "260622-chghealthcare_395-client-sent-export-failure-09",
+    "reason": "created",
+    "created_at": "2026-06-23T13:54:15.733Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260622-chghealthcare_395-client-sent-export-failure-09."
+  },
+  {
     "match_key": "v3|incident:Q25HOZVKOE3XJP|org:albertsons_6|class:client-sent-export-failure",
     "status": "redirect",
     "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
@@ -2077,6 +2356,15 @@
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
     "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
+  },
+  {
+    "match_key": "v3|incident:Q26H5N9E0O7N0Z|org:albertsons_6|class:client-sent-export-failure",
+    "status": "active",
+    "target_group_id": "260622-albertsons_6-client-sent-export-failure-12",
+    "reason": "created",
+    "created_at": "2026-06-23T13:54:15.733Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260622-albertsons_6-client-sent-export-failure-12."
   },
   {
     "match_key": "v3|incident:Q26Q12V4KYA7TN|org:allegro_3|class:client-sent-export-failure",
@@ -2106,6 +2394,15 @@
     "rationale": "Initial deterministic grouping for 260618-unknown_org-prefect-flow-run-notification-flow-run-journey-p."
   },
   {
+    "match_key": "v3|incident:Q281IJMKYIYEHV|org:albertsons_6|class:snapshotting-error",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-http-client-errors",
+    "reason": "merged",
+    "created_at": "2026-06-23T14:41:01.019Z",
+    "created_by": "oncall-triage",
+    "rationale": "2026-06-23 Albertsons snapshotting alert has pre_snapshotting_check HTTP client error; scoped logs show this is the existing Quervice missing Product_Attributes_Product_Group_categoryL validation class."
+  },
+  {
     "match_key": "v3|incident:Q28QJOBN0UKUBT|org:chghealthcare_395|dest:pulse-point|class:export-error",
     "status": "active",
     "target_group_id": "260616-chghealthcare_395-pulse-point-export-error-09",
@@ -2115,6 +2412,15 @@
     "rationale": "Initial deterministic grouping for 260616-chghealthcare_395-pulse-point-export-error-09."
   },
   {
+    "match_key": "v3|incident:Q28Z0B0GA51K35|org:albertsons_6|class:snapshotting-error",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-bigquery-type-mismatch",
+    "reason": "merged",
+    "created_at": "2026-06-23T14:41:01.019Z",
+    "created_by": "oncall-triage",
+    "rationale": "2026-06-23 Albertsons snapshotting alert failed pre_snapshotting_check with BigQuery expression type incompatibility; same remediation path as existing BigQuery type mismatch cohort."
+  },
+  {
     "match_key": "v3|incident:Q29K2JM784UPYK|org:albertsons_6|class:client-sent-export-failure",
     "status": "redirect",
     "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
@@ -2122,6 +2428,15 @@
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
     "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
+  },
+  {
+    "match_key": "v3|incident:Q29WSKI7IBRPVW|org:albertsons_6|class:snapshotting-error",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-http-client-errors",
+    "reason": "merged",
+    "created_at": "2026-06-23T14:41:01.019Z",
+    "created_by": "oncall-triage",
+    "rationale": "2026-06-23 Albertsons snapshotting alert has pre_snapshotting_check HTTP client error; scoped logs show this is the existing Quervice missing Product_Attributes_Product_Group_categoryL validation class."
   },
   {
     "match_key": "v3|incident:Q2A4A4EPMJW7D8|org:priceline_370|class:client-sent-export-failure",
@@ -2151,6 +2466,15 @@
     "rationale": "Initial deterministic grouping for 260618-priceline_370-client-sent-export-failure-08."
   },
   {
+    "match_key": "v3|incident:Q2APMS8W1488NB|org:chghealthcare_395|class:client-sent-export-failure",
+    "status": "active",
+    "target_group_id": "260622-chghealthcare_395-client-sent-export-failure-10",
+    "reason": "created",
+    "created_at": "2026-06-23T13:54:15.733Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260622-chghealthcare_395-client-sent-export-failure-10."
+  },
+  {
     "match_key": "v3|incident:Q2AUKUD4JDAL43|org:albertsons_6|class:client-sent-export-failure",
     "status": "redirect",
     "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
@@ -2158,6 +2482,15 @@
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
     "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
+  },
+  {
+    "match_key": "v3|incident:Q2B59NKI3YD7Z6|org:174|class:zero-success",
+    "status": "active",
+    "target_group_id": "260622-174-zero-success-02",
+    "reason": "created",
+    "created_at": "2026-06-23T13:54:15.733Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260622-174-zero-success-02."
   },
   {
     "match_key": "v3|incident:Q2B6XFXPBXDS4M|org:chghealthcare_395|dest:pulse-point|class:export-error",
@@ -2178,6 +2511,24 @@
     "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
+    "match_key": "v3|incident:Q2C0F360LV1E6D|org:albertsons_6|class:client-sent-export-failure",
+    "status": "active",
+    "target_group_id": "260622-albertsons_6-client-sent-export-failure-13",
+    "reason": "created",
+    "created_at": "2026-06-23T13:54:15.733Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260622-albertsons_6-client-sent-export-failure-13."
+  },
+  {
+    "match_key": "v3|incident:Q2C59EMLGBSSWK|org:albertsons_6|class:client-sent-export-failure",
+    "status": "active",
+    "target_group_id": "260622-albertsons_6-client-sent-export-failure-14",
+    "reason": "created",
+    "created_at": "2026-06-23T13:54:15.733Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260622-albertsons_6-client-sent-export-failure-14."
+  },
+  {
     "match_key": "v3|incident:Q2C6TN3RA4JUKE|org:verizon_309|class:snapshotting-error",
     "status": "active",
     "target_group_id": "260622-verizon_309-snapshotting-error",
@@ -2188,21 +2539,21 @@
   },
   {
     "match_key": "v3|incident:Q2CD9OGM7RSCXU|org:albertsons_6|dest:live-ramp|class:export-error",
-    "status": "active",
-    "target_group_id": "260615-albertsons_6-live-ramp-export-error",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-live-ramp-export-error",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260615-albertsons_6-live-ramp-export-error."
+    "rationale": "Consolidate Albertsons LiveRamp export_error alerts from the Other open buckets list into a single investigation case."
   },
   {
     "match_key": "v3|incident:Q2CJ2DGHY6J8DJ|org:albertsons_6|class:albertsons-albertsons-media-no-exports-for-audie",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-22",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-22."
+    "rationale": "Consolidate Albertsons no-exports-for-audience scheduled interval alerts from the Other open buckets list into a single investigation case."
   },
   {
     "match_key": "v3|incident:Q2CT8J2QXFDLQB|org:chghealthcare_395|class:client-sent-export-failure",
@@ -2232,6 +2583,24 @@
     "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
+    "match_key": "v3|incident:Q2DG1SA3L1QGW5|org:chghealthcare_395|class:client-sent-export-failure",
+    "status": "active",
+    "target_group_id": "260622-chghealthcare_395-client-sent-export-failure-11",
+    "reason": "created",
+    "created_at": "2026-06-23T13:54:15.733Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260622-chghealthcare_395-client-sent-export-failure-11."
+  },
+  {
+    "match_key": "v3|incident:Q2DZPMOJTWNQ11|org:albertsons_6|class:client-sent-export-failure",
+    "status": "active",
+    "target_group_id": "260622-albertsons_6-client-sent-export-failure-15",
+    "reason": "created",
+    "created_at": "2026-06-23T13:54:15.733Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260622-albertsons_6-client-sent-export-failure-15."
+  },
+  {
     "match_key": "v3|incident:Q2E7MG6P1H0D3P|org:allegro_3|dest:dv360|class:export-processing",
     "status": "active",
     "target_group_id": "260619-allegro_3-dv360-export-processing-06",
@@ -2242,12 +2611,21 @@
   },
   {
     "match_key": "v3|incident:Q2ECAALJOOO1R6|org:albertsons_6|class:snapshotting-error",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-snapshotting-error-07",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-http-client-errors",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-snapshotting-error-07."
+    "rationale": "Audience 6999 export check shows pre_snapshotting_check requested field missing from the source schema, matching the client/schema-validation remediation path."
+  },
+  {
+    "match_key": "v3|incident:Q2EEZBO0CVUEW3|org:albertsons_6|class:client-sent-export-failure",
+    "status": "active",
+    "target_group_id": "260622-albertsons_6-client-sent-export-failure-16",
+    "reason": "created",
+    "created_at": "2026-06-23T13:54:15.733Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260622-albertsons_6-client-sent-export-failure-16."
   },
   {
     "match_key": "v3|incident:Q2EICDLFIHOLB7|org:76ers_131|class:zero-success",
@@ -2278,12 +2656,12 @@
   },
   {
     "match_key": "v3|incident:Q2EX4VNNGRRP6D|org:albertsons_6|class:albertsons-albertsons-media-no-exports-for-audie",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-23",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-23."
+    "rationale": "Consolidate Albertsons no-exports-for-audience scheduled interval alerts from the Other open buckets list into a single investigation case."
   },
   {
     "match_key": "v3|incident:Q2FAMW1B9VZV5J|org:ford_310|class:client-sent-export-failure",
@@ -2293,6 +2671,15 @@
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
     "rationale": "Initial deterministic grouping for 260607-ford_310-client-sent-export-failure."
+  },
+  {
+    "match_key": "v3|incident:Q2FSP5N1IS120M|org:3|class:zero-success",
+    "status": "active",
+    "target_group_id": "260622-3-zero-success-02",
+    "reason": "created",
+    "created_at": "2026-06-23T13:54:15.733Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260622-3-zero-success-02."
   },
   {
     "match_key": "v3|incident:Q2FTM4GR255QLF|org:fanatics_502|dest:snowflake|class:export-error",
@@ -2314,12 +2701,12 @@
   },
   {
     "match_key": "v3|incident:Q2GHXX0EGGT253|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260616-albertsons_6-client-sent-export-failure-03",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260617-albertsons_6-client-sent-export-failure",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260616-albertsons_6-client-sent-export-failure-03."
+    "rationale": "Consolidate Albertsons client-sent export failure alerts from the Other open buckets list into a single investigation case."
   },
   {
     "match_key": "v3|incident:Q2GR6SL6PJFO6B|org:ford_310|dest:dv360|class:export-error",
@@ -2377,12 +2764,12 @@
   },
   {
     "match_key": "v3|incident:Q2I0P8BOG77FWF|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260615-albertsons_6-client-sent-export-failure-04",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260617-albertsons_6-client-sent-export-failure",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260615-albertsons_6-client-sent-export-failure-04."
+    "rationale": "Consolidate Albertsons client-sent export failure alerts from the Other open buckets list into a single investigation case."
   },
   {
     "match_key": "v3|incident:Q2I8GXY9IW8UBR|org:albertsons_6|class:client-sent-export-failure",
@@ -2403,6 +2790,15 @@
     "rationale": "Initial deterministic grouping for 260615-chghealthcare_395-client-sent-export-failure-06."
   },
   {
+    "match_key": "v3|incident:Q2IIOBNUV6BSPG|org:albertsons_6|class:snapshotting-error",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-http-client-errors",
+    "reason": "merged",
+    "created_at": "2026-06-23T14:41:01.019Z",
+    "created_by": "oncall-triage",
+    "rationale": "2026-06-23 Albertsons snapshotting alert has pre_snapshotting_check HTTP client error; scoped logs show this is the existing Quervice missing Product_Attributes_Product_Group_categoryL validation class."
+  },
+  {
     "match_key": "v3|incident:Q2IUDXA8BX2HYJ|org:chghealthcare_395|dest:pulse-point|class:export-error",
     "status": "active",
     "target_group_id": "260622-chghealthcare_395-pulse-point-export-error-05",
@@ -2410,6 +2806,24 @@
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
     "rationale": "Initial deterministic grouping for 260622-chghealthcare_395-pulse-point-export-error-05."
+  },
+  {
+    "match_key": "v3|incident:Q2IVN0UCHUQK62|org:chghealthcare_395|class:client-sent-export-failure",
+    "status": "active",
+    "target_group_id": "260622-chghealthcare_395-client-sent-export-failure-12",
+    "reason": "created",
+    "created_at": "2026-06-23T13:54:15.733Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260622-chghealthcare_395-client-sent-export-failure-12."
+  },
+  {
+    "match_key": "v3|incident:Q2J49L2EK3Q237|org:albertsons_6|class:snapshotting-error",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-bigquery-type-mismatch",
+    "reason": "merged",
+    "created_at": "2026-06-23T14:41:01.019Z",
+    "created_by": "oncall-triage",
+    "rationale": "2026-06-23 Albertsons snapshotting alert failed pre_snapshotting_check with BigQuery expression type incompatibility; same remediation path as existing BigQuery type mismatch cohort."
   },
   {
     "match_key": "v3|incident:Q2JK0DVCT58MAZ|org:priceline_370|class:client-sent-export-failure",
@@ -2475,6 +2889,24 @@
     "rationale": "Initial deterministic grouping for 260615-chghealthcare_395-client-sent-export-failure-07."
   },
   {
+    "match_key": "v3|incident:Q2M9PQ0VIYN9Q7|org:albertsons_6|class:snapshotting-error",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-http-client-errors",
+    "reason": "merged",
+    "created_at": "2026-06-23T14:41:01.019Z",
+    "created_by": "oncall-triage",
+    "rationale": "2026-06-23 Albertsons snapshotting alert has pre_snapshotting_check HTTP client error; scoped logs show this is the existing Quervice missing Product_Attributes_Product_Group_categoryL validation class."
+  },
+  {
+    "match_key": "v3|incident:Q2NW5RRJ7NJO60|org:chghealthcare_395|class:client-sent-export-failure",
+    "status": "active",
+    "target_group_id": "260622-chghealthcare_395-client-sent-export-failure-13",
+    "reason": "created",
+    "created_at": "2026-06-23T13:54:15.733Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260622-chghealthcare_395-client-sent-export-failure-13."
+  },
+  {
     "match_key": "v3|incident:Q2O4YGBMUXZEFB|org:trumanshow_336|class:zero-success",
     "status": "active",
     "target_group_id": "260622-trumanshow_336-zero-success",
@@ -2482,6 +2914,33 @@
     "created_at": "2026-06-22T19:46:10.094Z",
     "created_by": "oncall-triage",
     "rationale": "Initial deterministic grouping for 260622-trumanshow_336-zero-success."
+  },
+  {
+    "match_key": "v3|incident:Q2PLLXIG936TK5|org:albertsons_6|class:no-batches",
+    "status": "active",
+    "target_group_id": "260623-albertsons_6-no-batches",
+    "reason": "created",
+    "created_at": "2026-06-23T14:41:01.019Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260623-albertsons_6-no-batches."
+  },
+  {
+    "match_key": "v3|incident:Q2PPG1TNLGJ49C|org:chghealthcare_395|class:client-sent-export-failure",
+    "status": "active",
+    "target_group_id": "260622-chghealthcare_395-client-sent-export-failure-14",
+    "reason": "created",
+    "created_at": "2026-06-23T13:54:15.733Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260622-chghealthcare_395-client-sent-export-failure-14."
+  },
+  {
+    "match_key": "v3|incident:Q2PX830CKT6WFR|org:evgo_402|class:client-sent-export-failure",
+    "status": "active",
+    "target_group_id": "260622-evgo_402-client-sent-export-failure",
+    "reason": "created",
+    "created_at": "2026-06-23T13:54:15.733Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260622-evgo_402-client-sent-export-failure."
   },
   {
     "match_key": "v3|incident:Q2Q14Q7TLRO3V3|org:unknown_org|class:prefect-flow-run-notification-flow-run-journey-p",
@@ -2538,6 +2997,15 @@
     "rationale": "Initial deterministic grouping for 260622-chghealthcare_395-pulse-point-export-error-06."
   },
   {
+    "match_key": "v3|incident:Q2RRHNLC5TM6TT|org:chghealthcare_395|class:client-sent-export-failure",
+    "status": "active",
+    "target_group_id": "260622-chghealthcare_395-client-sent-export-failure-15",
+    "reason": "created",
+    "created_at": "2026-06-23T13:54:15.733Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260622-chghealthcare_395-client-sent-export-failure-15."
+  },
+  {
     "match_key": "v3|incident:Q2RVKX275SCHT7|org:albertsons_6|class:client-sent-export-failure",
     "status": "redirect",
     "target_group_id": "260622-albertsons_6-bigquery-type-mismatch",
@@ -2545,6 +3013,15 @@
     "created_at": "2026-06-22T19:46:10.094Z",
     "created_by": "oncall-triage",
     "rationale": "New Albertsons sent-to-client alert for audience 10678 has latest Pizza row snapshotting_error/no_batches with pre_snapshotting_check BigQuery expression type incompatibility; same remediation path as the existing BigQuery type mismatch cohort."
+  },
+  {
+    "match_key": "v3|incident:Q2S5EH7KSYZ341|org:chghealthcare_395|class:client-sent-export-failure",
+    "status": "active",
+    "target_group_id": "260622-chghealthcare_395-client-sent-export-failure-16",
+    "reason": "created",
+    "created_at": "2026-06-23T13:54:15.733Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260622-chghealthcare_395-client-sent-export-failure-16."
   },
   {
     "match_key": "v3|incident:Q2SD1O3BRD8DHQ|org:evgo_402|class:client-sent-export-failure",
@@ -2566,12 +3043,12 @@
   },
   {
     "match_key": "v3|incident:Q2ST7MHN83WRVP|org:albertsons_6|class:albertsons-albertsons-media-no-exports-for-audie",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-24",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-24."
+    "rationale": "Consolidate Albertsons no-exports-for-audience scheduled interval alerts from the Other open buckets list into a single investigation case."
   },
   {
     "match_key": "v3|incident:Q2SZB0ST9OEECR|org:costco_4|class:costco-default-no-data-found-for-active-audience",
@@ -2610,6 +3087,15 @@
     "rationale": "Initial deterministic grouping for 260619-ford_310-dv360-export-error-04."
   },
   {
+    "match_key": "v3|incident:Q2TTDND3R51RWH|org:fanatics_502|class:client-sent-export-failure",
+    "status": "active",
+    "target_group_id": "260622-fanatics_502-client-sent-export-failure",
+    "reason": "created",
+    "created_at": "2026-06-23T13:54:15.733Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260622-fanatics_502-client-sent-export-failure."
+  },
+  {
     "match_key": "v3|incident:Q2U45YSOGF3QHG|org:allegro_3|dest:dv360|class:export-error",
     "status": "active",
     "target_group_id": "260622-allegro_3-dv360-export-error-02",
@@ -2628,13 +3114,22 @@
     "rationale": "Initial deterministic grouping for 260615-chghealthcare_395-client-sent-export-failure-09."
   },
   {
-    "match_key": "v3|incident:Q2VMABQVTJ3GZG|org:albertsons_6|class:snapshotting-error",
+    "match_key": "v3|incident:Q2URZR3H9ZOU65|org:3|class:zero-success",
     "status": "active",
-    "target_group_id": "260622-albertsons_6-snapshotting-error-08",
+    "target_group_id": "260622-3-zero-success-03",
     "reason": "created",
+    "created_at": "2026-06-23T13:54:15.733Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260622-3-zero-success-03."
+  },
+  {
+    "match_key": "v3|incident:Q2VMABQVTJ3GZG|org:albertsons_6|class:snapshotting-error",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-quervice-timeouts",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-snapshotting-error-08."
+    "rationale": "Audience 1954 is in the Quervice pre-snapshotting timeout/error-response cohort."
   },
   {
     "match_key": "v3|incident:Q2W124RXHVEH5G|org:3|class:zero-success",
@@ -2647,12 +3142,21 @@
   },
   {
     "match_key": "v3|incident:Q2W5HQOV4HP3EU|org:albertsons_6|class:albertsons-albertsons-media-no-exports-for-audie",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-25",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-25."
+    "rationale": "Consolidate Albertsons no-exports-for-audience scheduled interval alerts from the Other open buckets list into a single investigation case."
+  },
+  {
+    "match_key": "v3|incident:Q2W8MBXYOAXD3J|org:albertsons_6|class:client-sent-export-failure",
+    "status": "active",
+    "target_group_id": "260623-albertsons_6-client-sent-export-failure-03",
+    "reason": "created",
+    "created_at": "2026-06-23T13:54:15.733Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260623-albertsons_6-client-sent-export-failure-03."
   },
   {
     "match_key": "v3|incident:Q2WQIV69BQY0XT|org:costco_4|class:costco-default-no-data-found-for-active-audience",
@@ -2683,12 +3187,12 @@
   },
   {
     "match_key": "v3|incident:Q2Y616K4SJRW9K|org:albertsons_6|class:albertsons-albertsons-media-no-exports-for-audie",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-26",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-26."
+    "rationale": "Consolidate Albertsons no-exports-for-audience scheduled interval alerts from the Other open buckets list into a single investigation case."
   },
   {
     "match_key": "v3|incident:Q2Y7I6E7HY5K6L|org:chghealthcare_395|dest:pulse-point|class:export-error",
@@ -2701,21 +3205,30 @@
   },
   {
     "match_key": "v3|incident:Q2YP3CMCUOBCO8|org:albertsons_6|class:albertsons-albertsons-media-no-exports-for-audie",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-27",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-27."
+    "rationale": "Consolidate Albertsons no-exports-for-audience scheduled interval alerts from the Other open buckets list into a single investigation case."
   },
   {
     "match_key": "v3|incident:Q2YQUVRHHFJIZ3|org:albertsons_6|class:albertsons-albertsons-media-no-exports-for-audie",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-28",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-28."
+    "rationale": "Consolidate Albertsons no-exports-for-audience scheduled interval alerts from the Other open buckets list into a single investigation case."
+  },
+  {
+    "match_key": "v3|incident:Q2YTLIYU53UIVU|org:albertsons_6|class:snapshotting-error",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-bigquery-type-mismatch",
+    "reason": "merged",
+    "created_at": "2026-06-23T14:41:01.019Z",
+    "created_by": "oncall-triage",
+    "rationale": "2026-06-23 Albertsons snapshotting alert failed pre_snapshotting_check with BigQuery expression type incompatibility; same remediation path as existing BigQuery type mismatch cohort."
   },
   {
     "match_key": "v3|incident:Q2YZT6X3ORSHC5|org:chghealthcare_395|class:client-sent-export-failure",
@@ -2728,12 +3241,12 @@
   },
   {
     "match_key": "v3|incident:Q2Z35S4PQM9D26|org:albertsons_6|class:albertsons-albertsons-media-no-exports-for-audie",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-29",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-29."
+    "rationale": "Consolidate Albertsons no-exports-for-audience scheduled interval alerts from the Other open buckets list into a single investigation case."
   },
   {
     "match_key": "v3|incident:Q2ZC003K7RW54U|org:costco_4|class:costco-default-no-data-found-for-active-audience",
@@ -2764,12 +3277,21 @@
   },
   {
     "match_key": "v3|incident:Q30L4PHDKA6R4P|org:albertsons_6|dest:live-ramp|class:export-error",
-    "status": "active",
-    "target_group_id": "260615-albertsons_6-live-ramp-export-error-02",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-live-ramp-export-error",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260615-albertsons_6-live-ramp-export-error-02."
+    "rationale": "Consolidate Albertsons LiveRamp export_error alerts from the Other open buckets list into a single investigation case."
+  },
+  {
+    "match_key": "v3|incident:Q30P00WNLHRK9W|org:albertsons_6|class:client-sent-export-failure",
+    "status": "active",
+    "target_group_id": "260623-albertsons_6-client-sent-export-failure-04",
+    "reason": "created",
+    "created_at": "2026-06-23T13:54:15.733Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260623-albertsons_6-client-sent-export-failure-04."
   },
   {
     "match_key": "v3|incident:Q30WK6C4JC4J5U|org:chghealthcare_395|dest:pulse-point|class:export-error",
@@ -2790,6 +3312,15 @@
     "rationale": "Initial deterministic grouping for 260618-priceline_370-client-sent-export-failure-11."
   },
   {
+    "match_key": "v3|incident:Q318F0E9BYFWBP|org:chghealthcare_395|class:client-sent-export-failure",
+    "status": "active",
+    "target_group_id": "260622-chghealthcare_395-client-sent-export-failure-17",
+    "reason": "created",
+    "created_at": "2026-06-23T13:54:15.733Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260622-chghealthcare_395-client-sent-export-failure-17."
+  },
+  {
     "match_key": "v3|incident:Q31ZXXXLPBJF56|org:chghealthcare_395|dest:pulse-point|class:export-error",
     "status": "active",
     "target_group_id": "260622-chghealthcare_395-pulse-point-export-error-08",
@@ -2797,6 +3328,15 @@
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
     "rationale": "Initial deterministic grouping for 260622-chghealthcare_395-pulse-point-export-error-08."
+  },
+  {
+    "match_key": "v3|incident:Q321DIC1V8M7X0|org:chghealthcare_395|class:client-sent-export-failure",
+    "status": "active",
+    "target_group_id": "260622-chghealthcare_395-client-sent-export-failure-18",
+    "reason": "created",
+    "created_at": "2026-06-23T13:54:15.733Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260622-chghealthcare_395-client-sent-export-failure-18."
   },
   {
     "match_key": "v3|incident:Q322R4KUP86DWS|org:priceline_370|class:client-sent-export-failure",
@@ -2809,12 +3349,12 @@
   },
   {
     "match_key": "v3|incident:Q323CS0DQL0PYQ|org:albertsons_6|class:albertsons-albertsons-media-no-exports-for-audie",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-30",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-30."
+    "rationale": "Consolidate Albertsons no-exports-for-audience scheduled interval alerts from the Other open buckets list into a single investigation case."
   },
   {
     "match_key": "v3|incident:Q32AE02XJJZ8ZO|org:costco_4|class:costco-default-no-data-found-for-active-audience",
@@ -2860,6 +3400,15 @@
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
     "rationale": "Initial deterministic grouping for 260618-priceline_370-iterable-export-processing."
+  },
+  {
+    "match_key": "v3|incident:Q33STDMF2JCBF2|org:ford_310|class:client-sent-export-failure",
+    "status": "active",
+    "target_group_id": "260622-ford_310-client-sent-export-failure",
+    "reason": "created",
+    "created_at": "2026-06-23T13:54:15.733Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260622-ford_310-client-sent-export-failure."
   },
   {
     "match_key": "v3|incident:Q33XKCHKMWQNOF|org:albertsons_6|class:client-sent-export-failure",
@@ -2908,12 +3457,21 @@
   },
   {
     "match_key": "v3|incident:Q358IMGILLIALD|org:albertsons_6|class:albertsons-albertsons-media-no-exports-for-audie",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-31",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-31."
+    "rationale": "Consolidate Albertsons no-exports-for-audience scheduled interval alerts from the Other open buckets list into a single investigation case."
+  },
+  {
+    "match_key": "v3|incident:Q35FXUK3R7EP76|org:albertsons_6|class:client-sent-export-failure",
+    "status": "active",
+    "target_group_id": "260622-albertsons_6-client-sent-export-failure-17",
+    "reason": "created",
+    "created_at": "2026-06-23T13:54:15.733Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260622-albertsons_6-client-sent-export-failure-17."
   },
   {
     "match_key": "v3|incident:Q35YEO4G99PYRM|org:cmegroup_3|class:snapshotting-error",
@@ -2941,6 +3499,24 @@
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
     "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
+  },
+  {
+    "match_key": "v3|incident:Q369XHR0W9ZRK2|org:chghealthcare_395|class:client-sent-export-failure",
+    "status": "active",
+    "target_group_id": "260622-chghealthcare_395-client-sent-export-failure-19",
+    "reason": "created",
+    "created_at": "2026-06-23T13:54:15.733Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260622-chghealthcare_395-client-sent-export-failure-19."
+  },
+  {
+    "match_key": "v3|incident:Q36ENB8WGMYDAW|org:albertsons_6|class:client-sent-export-failure",
+    "status": "active",
+    "target_group_id": "260622-albertsons_6-client-sent-export-failure-18",
+    "reason": "created",
+    "created_at": "2026-06-23T13:54:15.733Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260622-albertsons_6-client-sent-export-failure-18."
   },
   {
     "match_key": "v3|incident:Q36KG67I5QPOE8|org:chghealthcare_395|dest:pulse-point|class:export-error",
@@ -2986,6 +3562,15 @@
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
     "rationale": "Initial deterministic grouping for 260618-royals_4-snapshotting-error-13."
+  },
+  {
+    "match_key": "v3|incident:Q38JIFOCY2F0AO|org:albertsons_6|class:snapshotting-error",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-http-client-errors",
+    "reason": "merged",
+    "created_at": "2026-06-23T14:41:01.019Z",
+    "created_by": "oncall-triage",
+    "rationale": "2026-06-23 Albertsons snapshotting alert has pre_snapshotting_check HTTP client error; scoped logs show this is the existing Quervice missing Product_Attributes_Product_Group_categoryL validation class."
   },
   {
     "match_key": "v3|incident:Q38PBYM679MM76|org:albertsons_6|class:client-sent-export-failure",
@@ -3042,13 +3627,22 @@
     "rationale": "Initial deterministic grouping for 260620-chghealthcare_395-client-sent-export-failure-07."
   },
   {
-    "match_key": "v3|incident:Q3BE6H76WFUNBR|org:albertsons_6|class:snapshotting-error",
+    "match_key": "v3|incident:Q3AEWETRMJ9LHR|org:albertsons_6|class:client-sent-export-failure",
     "status": "active",
-    "target_group_id": "260622-albertsons_6-snapshotting-error-09",
+    "target_group_id": "260622-albertsons_6-client-sent-export-failure-19",
     "reason": "created",
+    "created_at": "2026-06-23T13:54:15.733Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260622-albertsons_6-client-sent-export-failure-19."
+  },
+  {
+    "match_key": "v3|incident:Q3BE6H76WFUNBR|org:albertsons_6|class:snapshotting-error",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-quervice-timeouts",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-snapshotting-error-09."
+    "rationale": "Audience 8938 has scoped Pizza and Cloud Logging evidence of Quervice pre_snapshotting_check 600s timeout plus lock-expiry behavior, matching the existing Albertsons Quervice timeout remediation case."
   },
   {
     "match_key": "v3|incident:Q3BJLPQPULFKR9|org:fanatics_502|dest:the-trade-desk-crm|class:export-error",
@@ -3061,12 +3655,12 @@
   },
   {
     "match_key": "v3|incident:Q3BN6VB0TPVXNF|org:albertsons_6|dest:live-ramp|class:export-error",
-    "status": "active",
-    "target_group_id": "260619-albertsons_6-live-ramp-export-error",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-live-ramp-export-error",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260619-albertsons_6-live-ramp-export-error."
+    "rationale": "Consolidate Albertsons LiveRamp export_error alerts from the Other open buckets list into a single investigation case."
   },
   {
     "match_key": "v3|incident:Q3BP8RE86R1HC0|org:albertsons_6|class:client-sent-export-failure",
@@ -3087,6 +3681,15 @@
     "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
+    "match_key": "v3|incident:Q3C6EY1CXX6DTB|org:albertsons_6|class:client-sent-export-failure",
+    "status": "active",
+    "target_group_id": "260622-albertsons_6-client-sent-export-failure-20",
+    "reason": "created",
+    "created_at": "2026-06-23T13:54:15.733Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260622-albertsons_6-client-sent-export-failure-20."
+  },
+  {
     "match_key": "v3|incident:Q3C7ZSQXUGF4ZZ|org:costco_4|class:costco-default-no-data-found-for-active-audience",
     "status": "active",
     "target_group_id": "260618-costco_4-costco-default-no-data-found-for-active-audience-31",
@@ -3094,6 +3697,15 @@
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
     "rationale": "Initial deterministic grouping for 260618-costco_4-costco-default-no-data-found-for-active-audience-31."
+  },
+  {
+    "match_key": "v3|incident:Q3CG224EW47WXW|org:costco_4|class:costco-default-no-data-found-for-active-audience",
+    "status": "active",
+    "target_group_id": "260623-costco_4-costco-default-no-data-found-for-active-audience",
+    "reason": "created",
+    "created_at": "2026-06-23T14:41:01.019Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260623-costco_4-costco-default-no-data-found-for-active-audience."
   },
   {
     "match_key": "v3|incident:Q3CJV4Z2MW22Y4|org:fanatics_502|dest:magnite-id-graph|class:export-processing",
@@ -3112,6 +3724,33 @@
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
     "rationale": "Initial deterministic grouping for 260607-albertsons_6-client-sent-export-failure-02."
+  },
+  {
+    "match_key": "v3|incident:Q3D07SXX5MT8PD|org:albertsons_6|class:client-sent-export-failure",
+    "status": "active",
+    "target_group_id": "260622-albertsons_6-client-sent-export-failure-21",
+    "reason": "created",
+    "created_at": "2026-06-23T13:54:15.733Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260622-albertsons_6-client-sent-export-failure-21."
+  },
+  {
+    "match_key": "v3|incident:Q3D5BM8QKKHA3E|org:albertsons_6|class:client-sent-export-failure",
+    "status": "active",
+    "target_group_id": "260622-albertsons_6-client-sent-export-failure-22",
+    "reason": "created",
+    "created_at": "2026-06-23T13:54:15.733Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260622-albertsons_6-client-sent-export-failure-22."
+  },
+  {
+    "match_key": "v3|incident:Q3DJKJ88F7961S|org:albertsons_6|class:client-sent-export-failure",
+    "status": "active",
+    "target_group_id": "260622-albertsons_6-client-sent-export-failure-23",
+    "reason": "created",
+    "created_at": "2026-06-23T13:54:15.733Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260622-albertsons_6-client-sent-export-failure-23."
   },
   {
     "match_key": "v3|incident:Q3DL1BM2K2NN9L|org:chghealthcare_395|class:client-sent-export-failure",
@@ -3159,6 +3798,24 @@
     "rationale": "Initial deterministic grouping for 260615-chghealthcare_395-client-sent-export-failure-12."
   },
   {
+    "match_key": "v3|incident:Q3EI9TEW7KOQNI|org:ford_310|class:client-sent-export-failure",
+    "status": "active",
+    "target_group_id": "260622-ford_310-client-sent-export-failure-02",
+    "reason": "created",
+    "created_at": "2026-06-23T13:54:15.733Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260622-ford_310-client-sent-export-failure-02."
+  },
+  {
+    "match_key": "v3|incident:Q3EPPJOPPUF6ZF|org:chghealthcare_395|class:client-sent-export-failure",
+    "status": "active",
+    "target_group_id": "260622-chghealthcare_395-client-sent-export-failure-20",
+    "reason": "created",
+    "created_at": "2026-06-23T13:54:15.733Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260622-chghealthcare_395-client-sent-export-failure-20."
+  },
+  {
     "match_key": "v3|incident:Q3EQ5JV7UPWEGC|org:albertsons_6|class:client-sent-export-failure",
     "status": "redirect",
     "target_group_id": "260618-albertsons_6-client-sent-export-failures-since-260618",
@@ -3169,12 +3826,21 @@
   },
   {
     "match_key": "v3|incident:Q3EWG5PY4MPK8A|org:albertsons_6|class:albertsons-albertsons-media-no-exports-for-audie",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-32",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-32."
+    "rationale": "Consolidate Albertsons no-exports-for-audience scheduled interval alerts from the Other open buckets list into a single investigation case."
+  },
+  {
+    "match_key": "v3|incident:Q3F2J2NZQGCBA8|org:albertsons_6|class:client-sent-export-failure",
+    "status": "active",
+    "target_group_id": "260622-albertsons_6-client-sent-export-failure-24",
+    "reason": "created",
+    "created_at": "2026-06-23T13:54:15.733Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260622-albertsons_6-client-sent-export-failure-24."
   },
   {
     "match_key": "v3|incident:Q3F3T8YUI45U70|org:albertsons_6|class:client-sent-export-failure",
@@ -3358,12 +4024,12 @@
   },
   {
     "match_key": "v3|incident:Q3NL9MR59FOSMG|org:albertsons_6|class:snapshotting-error",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-snapshotting-error-10",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-quervice-timeouts",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-snapshotting-error-10."
+    "rationale": "Audience 10107 has documented Quervice 503/timeout behavior; track with Quervice timeout remediation."
   },
   {
     "match_key": "v3|incident:Q3NV6UZFGARR8L|org:378|class:client-sent-export-failure",
@@ -3391,6 +4057,15 @@
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
     "rationale": "Initial deterministic grouping for 260618-pirates_3-snapshotting-error-09."
+  },
+  {
+    "match_key": "v3|incident:Q3OXKN6IQYTM0C|org:3|class:client-sent-export-failure",
+    "status": "active",
+    "target_group_id": "260622-3-client-sent-export-failure-03",
+    "reason": "created",
+    "created_at": "2026-06-23T13:54:15.733Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260622-3-client-sent-export-failure-03."
   },
   {
     "match_key": "v3|incident:Q3OYVZGGFDK3NF|org:albertsons_6|class:client-sent-export-failure",
@@ -3447,6 +4122,15 @@
     "rationale": "Initial deterministic grouping for 260620-chghealthcare_395-client-sent-export-failure-09."
   },
   {
+    "match_key": "v3|incident:Q3PZTO9L0YMZJ9|org:albertsons_6|class:client-sent-export-failure",
+    "status": "active",
+    "target_group_id": "260622-albertsons_6-client-sent-export-failure-25",
+    "reason": "created",
+    "created_at": "2026-06-23T13:54:15.733Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260622-albertsons_6-client-sent-export-failure-25."
+  },
+  {
     "match_key": "v3|incident:Q3Q6GO065O9UWX|org:chghealthcare_395|dest:pulse-point|class:export-error",
     "status": "active",
     "target_group_id": "260616-chghealthcare_395-pulse-point-export-error-13",
@@ -3475,12 +4159,12 @@
   },
   {
     "match_key": "v3|incident:Q3QCKCZMRUR8MC|org:albertsons_6|class:snapshotting-error",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-snapshotting-error-11",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-bigquery-type-mismatch",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-snapshotting-error-11."
+    "rationale": "Audience 9929 export check shows pre_snapshotting_check BigQuery expression type incompatibility."
   },
   {
     "match_key": "v3|incident:Q3QEKPH9YZV412|org:albertsons_6|class:client-sent-export-failure",
@@ -3490,6 +4174,15 @@
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
     "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
+  },
+  {
+    "match_key": "v3|incident:Q3R5I6YL230GYH|org:costco_4|class:costco-default-no-data-found-for-active-audience",
+    "status": "active",
+    "target_group_id": "260623-costco_4-costco-default-no-data-found-for-active-audience-02",
+    "reason": "created",
+    "created_at": "2026-06-23T14:41:01.019Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260623-costco_4-costco-default-no-data-found-for-active-audience-02."
   },
   {
     "match_key": "v3|incident:Q3R9IKKO33UMAF|org:ford_310|dest:dv360|class:export-error",
@@ -3502,12 +4195,12 @@
   },
   {
     "match_key": "v3|incident:Q3RBHKEKA0JLGO|org:albertsons_6|class:albertsons-albertsons-media-no-exports-for-audie",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-33",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-33."
+    "rationale": "Consolidate Albertsons no-exports-for-audience scheduled interval alerts from the Other open buckets list into a single investigation case."
   },
   {
     "match_key": "v3|incident:Q3RVF74IILTPXV|org:priceline_370|class:client-sent-export-failure",
@@ -3546,6 +4239,15 @@
     "rationale": "User requested one triage case for Albertsons errors from 2026-06-18 onward, specifically alerts with sent to client in the imported PagerDuty alert text."
   },
   {
+    "match_key": "v3|incident:Q3T8YVL0VO05SK|org:albertsons_6|class:client-sent-export-failure",
+    "status": "active",
+    "target_group_id": "260623-albertsons_6-client-sent-export-failure-05",
+    "reason": "created",
+    "created_at": "2026-06-23T13:54:15.733Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260623-albertsons_6-client-sent-export-failure-05."
+  },
+  {
     "match_key": "v3|incident:Q3TADUNNJQ5F9G|org:priceline_370|class:client-sent-export-failure",
     "status": "active",
     "target_group_id": "260618-priceline_370-client-sent-export-failure-14",
@@ -3565,12 +4267,12 @@
   },
   {
     "match_key": "v3|incident:Q3TT7ATB5C8IBD|org:albertsons_6|class:albertsons-albertsons-media-no-exports-for-audie",
-    "status": "active",
-    "target_group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-34",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-34."
+    "rationale": "Consolidate Albertsons no-exports-for-audience scheduled interval alerts from the Other open buckets list into a single investigation case."
   },
   {
     "match_key": "v3|incident:Q3VA13F9VAD11Q|org:174|class:zero-success",
@@ -3580,6 +4282,15 @@
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
     "rationale": "Initial deterministic grouping for 260618-174-zero-success-02."
+  },
+  {
+    "match_key": "v3|incident:Q3VC2EL90AOSKX|org:albertsons_6|class:client-sent-export-failure",
+    "status": "active",
+    "target_group_id": "260623-albertsons_6-client-sent-export-failure-06",
+    "reason": "created",
+    "created_at": "2026-06-23T13:54:15.733Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260623-albertsons_6-client-sent-export-failure-06."
   },
   {
     "match_key": "v3|incident:Q3VN9Y4WC7ZHBB|org:ford_310|dest:dv360|class:export-error",
@@ -3598,6 +4309,24 @@
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
     "rationale": "Initial deterministic grouping for 260615-chghealthcare_395-client-sent-export-failure-13."
+  },
+  {
+    "match_key": "v3|incident:Q3WTQ2TAGZ5TEI|org:chghealthcare_395|class:client-sent-export-failure",
+    "status": "active",
+    "target_group_id": "260622-chghealthcare_395-client-sent-export-failure-21",
+    "reason": "created",
+    "created_at": "2026-06-23T13:54:15.733Z",
+    "created_by": "oncall-triage",
+    "rationale": "Initial deterministic grouping for 260622-chghealthcare_395-client-sent-export-failure-21."
+  },
+  {
+    "match_key": "v3|incident:Q3X51HMAYEMKHO|org:albertsons_6|class:snapshotting-error",
+    "status": "redirect",
+    "target_group_id": "260622-albertsons_6-http-client-errors",
+    "reason": "merged",
+    "created_at": "2026-06-23T14:41:01.019Z",
+    "created_by": "oncall-triage",
+    "rationale": "2026-06-23 Albertsons snapshotting alert has pre_snapshotting_check HTTP client error; scoped logs show this is the existing Quervice missing Product_Attributes_Product_Group_categoryL validation class."
   },
   {
     "match_key": "v3|incident:Q3XGYEDYFHJA4J|org:chghealthcare_395|dest:pulse-point|class:export-error",
@@ -3637,12 +4366,12 @@
   },
   {
     "match_key": "v3|incident:Q3YXYZP98NJXIA|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260617-albertsons_6-client-sent-export-failure-02",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260617-albertsons_6-client-sent-export-failure",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260617-albertsons_6-client-sent-export-failure-02."
+    "rationale": "Consolidate Albertsons client-sent export failure alerts from the Other open buckets list into a single investigation case."
   },
   {
     "match_key": "v3|incident:Q3Z6IKEXDGWU77|org:174|class:zero-success",
@@ -3664,12 +4393,12 @@
   },
   {
     "match_key": "v3|incident:Q3ZWQM35XX8FLX|org:albertsons_6|class:client-sent-export-failure",
-    "status": "active",
-    "target_group_id": "260616-albertsons_6-client-sent-export-failure-04",
-    "reason": "created",
+    "status": "redirect",
+    "target_group_id": "260617-albertsons_6-client-sent-export-failure",
+    "reason": "merged",
     "created_at": "2026-06-22T18:54:54.145Z",
     "created_by": "oncall-triage",
-    "rationale": "Initial deterministic grouping for 260616-albertsons_6-client-sent-export-failure-04."
+    "rationale": "Consolidate Albertsons client-sent export failure alerts from the Other open buckets list into a single investigation case."
   },
   {
     "match_key": "v3|incident:Q3ZYD6X543V90J|org:costco_4|class:costco-default-no-data-found-for-active-audience",

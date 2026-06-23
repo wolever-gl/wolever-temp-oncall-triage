@@ -1,0 +1,24 @@
+{
+  "group_id": "260622-trumanshow_336-no-batches",
+  "state": "resolved",
+  "tags": [
+    "triage:needs_review",
+    "resolved:export-healthy"
+  ],
+  "title": "trumanshow_336 no-batches",
+  "summary": "Auto-resolved from Pizza export checks: all 1 alert-scoped export check(s) are healthy_closed with no blockers.",
+  "deterministic_key": "v3|incident:Q34AH3IU2OMFFB|org:trumanshow_336|class:no-batches",
+  "grouping_version": 3,
+  "created_at": "2026-06-22T18:54:54.145Z",
+  "updated_at": "2026-06-22T22:12:44.986Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q34AH3IU2OMFFB",
+      "alert_id": "Q37PU7V8TBBPFS"
+    }
+  ],
+  "incident_ids": [
+    "Q34AH3IU2OMFFB"
+  ],
+  "related_group_ids": []
+}

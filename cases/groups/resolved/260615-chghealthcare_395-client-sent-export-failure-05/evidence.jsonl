@@ -1,0 +1,1 @@
+{"ts":"2026-06-22T21:21:43.427Z","kind":"export_check","source":"check-exports","summary":"Auto-resolved from Pizza export checks: all 1 alert-scoped export check(s) are healthy_closed with no blockers.","data":{"healthy_check_ids":["chk_q18ns66lydc2mh_q3diwrbawyig4v"],"checked_export_run_ids":["31806-snowflake_19528-scheduled__2026-06-21T23:00:00+00:00"]}}

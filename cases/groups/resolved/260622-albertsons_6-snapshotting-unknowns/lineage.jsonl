@@ -1,0 +1,1 @@
+{"ts":"2026-06-22T22:06:11.862Z","actor":"agent","kind":"merge","related_group_id":"260622-albertsons_6-quervice-timeouts","summary":"Merged into 260622-albertsons_6-quervice-timeouts.","rationale":"Unknown/blank snapshotting failures were classified by scoped logs as Quervice timeout, 503, or lock-expiry behavior; track them with the Quervice timeout remediation case."}

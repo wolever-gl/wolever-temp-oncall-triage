@@ -1,0 +1,23 @@
+{
+  "group_id": "260618-pirates_3-snapshotting-error-05",
+  "state": "open",
+  "tags": [
+    "triage:needs_review"
+  ],
+  "title": "pirates_3 snapshotting-error",
+  "summary": "pirates (default): Exports for audience 1650 failed with states: <(snapshotting_error,no_batches)>",
+  "deterministic_key": "v3|incident:Q1THTKC54UG3NT|org:pirates_3|class:snapshotting-error",
+  "grouping_version": 3,
+  "created_at": "2026-06-22T18:54:54.145Z",
+  "updated_at": "2026-06-22T21:44:38.794Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q1THTKC54UG3NT",
+      "alert_id": "Q1VOPGZ27WLC8S"
+    }
+  ],
+  "incident_ids": [
+    "Q1THTKC54UG3NT"
+  ],
+  "related_group_ids": []
+}

@@ -1,0 +1,23 @@
+{
+  "group_id": "260622-fanatics_502-client-sent-export-failure",
+  "state": "open",
+  "tags": [
+    "triage:needs_review"
+  ],
+  "title": "fanatics_502 client-sent-export-failure",
+  "summary": "fanatics (default) - Audience 36234: Audience Export failure for 36234 sent to client.",
+  "deterministic_key": "v3|incident:Q2TTDND3R51RWH|org:fanatics_502|class:client-sent-export-failure",
+  "grouping_version": 3,
+  "created_at": "2026-06-23T13:54:15.733Z",
+  "updated_at": "2026-06-23T14:11:39.718Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q2TTDND3R51RWH",
+      "alert_id": "Q0IBJJ98JSJM2X"
+    }
+  ],
+  "incident_ids": [
+    "Q2TTDND3R51RWH"
+  ],
+  "related_group_ids": []
+}

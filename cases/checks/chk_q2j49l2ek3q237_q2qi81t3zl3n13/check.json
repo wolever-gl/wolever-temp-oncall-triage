@@ -1,0 +1,73 @@
+{
+  "check_id": "chk_q2j49l2ek3q237_q2qi81t3zl3n13",
+  "source": "pagerduty",
+  "incident_id": "Q2J49L2EK3Q237",
+  "alert_id": "Q2QI81T3ZL3N13",
+  "state": "blocked",
+  "scope": {
+    "env": "albertsons",
+    "org_id": "6",
+    "audience_id": "9879",
+    "destination_type": "live_ramp_activation",
+    "match_strategy": "checked_export_run_ids",
+    "alert_created_at": "2026-06-23T07:36:27-07:00",
+    "checked_export_run_ids": [
+      "9879-live_ramp_activation_2009-scheduled__2026-06-23T00:00:00+00:00"
+    ],
+    "glcli": "glcli --env albertsons bifrost pizza --audience-id 9879 --org-id 6"
+  },
+  "scope_key": "albertsons|6|9879|live_ramp_activation|unknown_endpoint|9879-live_ramp_activation_2009-scheduled__2026-06-23T00:00:00+00:00",
+  "run_evaluations": [
+    {
+      "export_run_id": "9879-live_ramp_activation_2009-scheduled__2026-06-23T00:00:00+00:00",
+      "health": "blocked",
+      "match_basis": "checked_export_run_id",
+      "blockers": [
+        "snapshotting_error_requires_review"
+      ],
+      "selected_row": {
+        "export_run_id": "9879-live_ramp_activation_2009-scheduled__2026-06-23T00:00:00+00:00",
+        "audience_id": "9879",
+        "destination_type": "live_ramp_activation",
+        "created_at": "2026-06-23T02:05:39.595289+00:00",
+        "snapshotting_state": "snapshotting_error",
+        "export_state": "no_batches",
+        "failed_export_count": 0,
+        "raw": {
+          "export_state": "no_batches",
+          "successful_add_count": 0,
+          "successful_remove_count": 0,
+          "failed_export_count": 0,
+          "rejected_row_count": 0,
+          "total_row_count": 0,
+          "successful_expanded_add_count": 0,
+          "successful_expanded_remove_count": 0,
+          "failed_expanded_export_count": 0,
+          "rejected_expanded_row_count": 0,
+          "total_expanded_row_count": 0,
+          "enhanced_match_count": 0,
+          "enhanced_row_count": 0,
+          "enhanced_total_records": 0,
+          "total_batch_count": 0,
+          "completed_batch_count": 0,
+          "successful_batch_count": 0,
+          "failed_batch_count": 0,
+          "failure_reason": "Snapshotting failed while running pre_snapshotting_check: BigQuery query failed because expression types were incompatible",
+          "info": {
+            "internal_audience_id": "9879",
+            "export_run_id": "9879-live_ramp_activation_2009-scheduled__2026-06-23T00:00:00+00:00",
+            "export_timestamp": "2026-06-23 02:05:39",
+            "created_at": "2026-06-23T02:05:39.595289+00:00"
+          },
+          "snapshotting_state": "snapshotting_error"
+        }
+      }
+    }
+  ],
+  "blockers": [
+    "snapshotting_error_requires_review"
+  ],
+  "evidence_artifacts": [],
+  "created_at": "2026-06-23T14:45:59.890Z",
+  "updated_at": "2026-06-23T14:45:59.890Z"
+}

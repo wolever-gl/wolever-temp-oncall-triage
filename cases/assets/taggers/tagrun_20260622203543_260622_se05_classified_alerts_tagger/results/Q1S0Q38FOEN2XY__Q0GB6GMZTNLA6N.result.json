@@ -1,0 +1,26 @@
+{
+  "annotation": {
+    "ts": "2026-06-22T20:35:43.866Z",
+    "alert_ref": {
+      "incident_id": "Q1S0Q38FOEN2XY",
+      "alert_id": "Q0GB6GMZTNLA6N"
+    },
+    "tags": [
+      "evidence:260622-se05-bigquery-type-mismatch"
+    ],
+    "decision": "tag",
+    "confidence": "high",
+    "summary": "SE05 alert belongs with Albertsons BigQuery type mismatch failures. Audience 12258, alert Q1S0Q38FOEN2XY/Q0GB6GMZTNLA6N.",
+    "source": {
+      "kind": "tagger",
+      "run_id": "tagrun_20260622203543_260622_se05_classified_alerts_tagger",
+      "script_sha256": "decb6770eb35e94316d61dce8320ab03956b3ed7c7845da378b08f9f5070a411",
+      "script_path": "cases/assets/taggers/tagrun_20260622203543_260622_se05_classified_alerts_tagger/260622-se05-classified-alerts-tagger.ts"
+    }
+  },
+  "process": {
+    "stdout": "{\"decision\":\"tag\",\"tags\":[\"evidence:260622-se05-bigquery-type-mismatch\"],\"confidence\":\"high\",\"summary\":\"SE05 alert belongs with Albertsons BigQuery type mismatch failures. Audience 12258, alert Q1S0Q38FOEN2XY/Q0GB6GMZTNLA6N.\"}\n",
+    "stderr": "",
+    "exit_code": 0
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "check_id": "chk_q2dbopyi7r6o8k_q38ka88moremw6",
+  "source": "pagerduty",
+  "incident_id": "Q2DBOPYI7R6O8K",
+  "alert_id": "Q38KA88MOREMW6",
+  "state": "blocked",
+  "scope": {
+    "env": "prod",
+    "org_id": "524",
+    "audience_id": "37296",
+    "endpoint_id": "app_salesforce_audience_1885",
+    "destination_type": "salesforce_audience",
+    "match_strategy": "checked_export_run_ids",
+    "alert_created_at": "2026-06-22T07:51:33-07:00",
+    "checked_export_run_ids": [
+      "37296-salesforce_audience_22399-scheduled__2026-06-22T00:00:00+00:00"
+    ],
+    "glcli": "glcli --env prod bifrost pizza --audience-id 37296 --org-id 524"
+  },
+  "scope_key": "prod|524|37296|salesforce_audience|app_salesforce_audience_1885|37296-salesforce_audience_22399-scheduled__2026-06-22T00:00:00+00:00",
+  "run_evaluations": [
+    {
+      "export_run_id": "37296-salesforce_audience_22399-scheduled__2026-06-22T00:00:00+00:00",
+      "health": "blocked",
+      "match_basis": "checked_export_run_id",
+      "blockers": [
+        "export_error"
+      ],
+      "selected_row": {
+        "export_run_id": "37296-salesforce_audience_22399-scheduled__2026-06-22T00:00:00+00:00",
+        "audience_id": "37296",
+        "endpoint_id": "app_salesforce_audience_1885",
+        "destination_type": "salesforce_audience",
+        "created_at": "2026-06-22T00:19:35.296789+00:00",
+        "snapshotting_state": "snapshotting_finished",
+        "export_state": "export_error",
+        "failed_export_count": 0,
+        "raw": {
+          "export_state": "export_error",
+          "successful_add_count": 0,
+          "successful_remove_count": 0,
+          "failed_export_count": 0,
+          "rejected_row_count": 0,
+          "total_row_count": 1,
+          "successful_expanded_add_count": 0,
+          "successful_expanded_remove_count": 0,
+          "failed_expanded_export_count": 0,
+          "rejected_expanded_row_count": 0,
+          "total_expanded_row_count": 1,
+          "enhanced_match_count": 0,
+          "enhanced_row_count": 0,
+          "enhanced_total_records": 0,
+          "total_batch_count": 1,
+          "completed_batch_count": 1,
+          "successful_batch_count": 0,
+          "failed_batch_count": 1,
+          "failure_reason": null,
+          "info": {
+            "internal_export_id": "37296-salesforce_audience_22399-scheduled__2026-06-22T00:00:00+00:00-20260622001858",
+            "export_run_id": "37296-salesforce_audience_22399-scheduled__2026-06-22T00:00:00+00:00",
+            "audience_id": null,
+            "internal_audience_id": "37296",
+            "audience_name": "Copy - 26_Flex_26ALLFlexBuyers",
+            "organization_id": "524",
+            "organization_name": "braves",
+            "platform": "salesforce_audience",
+            "endpoint_id": "app_salesforce_audience_1885",
+            "export_timestamp": "2026-06-22 00:19:33",
+            "error_file_uri": "gs://flywheel-prod-328213-temporary/batch_errors/785858cb-7af4-4cb0-a1ad-4e869cbed972.csv",
+            "created_at": "2026-06-22T00:19:35.296789+00:00",
+            "export_complete_response": null
+          },
+          "snapshotting_state": "snapshotting_finished"
+        }
+      }
+    }
+  ],
+  "blockers": [
+    "export_error"
+  ],
+  "evidence_artifacts": [],
+  "created_at": "2026-06-22T22:06:29.046Z",
+  "updated_at": "2026-06-22T22:06:29.046Z"
+}

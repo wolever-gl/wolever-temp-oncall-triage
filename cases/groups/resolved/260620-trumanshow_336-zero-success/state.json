@@ -1,0 +1,24 @@
+{
+  "group_id": "260620-trumanshow_336-zero-success",
+  "state": "resolved",
+  "tags": [
+    "triage:needs_review",
+    "resolved:export-healthy"
+  ],
+  "title": "trumanshow_336 zero-success",
+  "summary": "Auto-resolved from Pizza export checks: all 1 alert-scoped export check(s) are healthy_closed with no blockers.",
+  "deterministic_key": "v3|incident:Q305SOPXQQALTL|org:trumanshow_336|class:zero-success",
+  "grouping_version": 3,
+  "created_at": "2026-06-22T18:54:54.145Z",
+  "updated_at": "2026-06-22T22:00:49.249Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q305SOPXQQALTL",
+      "alert_id": "Q0HYE13XBPN90K"
+    }
+  ],
+  "incident_ids": [
+    "Q305SOPXQQALTL"
+  ],
+  "related_group_ids": []
+}

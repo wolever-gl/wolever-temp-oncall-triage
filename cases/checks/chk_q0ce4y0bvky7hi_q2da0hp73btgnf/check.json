@@ -1,0 +1,86 @@
+{
+  "check_id": "chk_q0ce4y0bvky7hi_q2da0hp73btgnf",
+  "source": "pagerduty",
+  "incident_id": "Q0CE4Y0BVKY7HI",
+  "alert_id": "Q2DA0HP73BTGNF",
+  "state": "blocked",
+  "scope": {
+    "env": "prod",
+    "org_id": "451",
+    "audience_id": "25885",
+    "endpoint_id": "app_linkedin_ads_1761",
+    "destination_type": "linkedin_ads",
+    "match_strategy": "checked_export_run_ids",
+    "alert_created_at": "2026-06-18T08:06:02-07:00",
+    "checked_export_run_ids": [
+      "25885-linkedin_ads_16095-scheduled__2026-06-18T00:00:00+00:00"
+    ],
+    "glcli": "glcli --env prod bifrost pizza --audience-id 25885 --org-id 451"
+  },
+  "scope_key": "prod|451|25885|linkedin_ads|app_linkedin_ads_1761|25885-linkedin_ads_16095-scheduled__2026-06-18T00:00:00+00:00",
+  "run_evaluations": [
+    {
+      "export_run_id": "25885-linkedin_ads_16095-scheduled__2026-06-18T00:00:00+00:00",
+      "health": "blocked",
+      "match_basis": "checked_export_run_id",
+      "blockers": [
+        "failed_export_count",
+        "export_error"
+      ],
+      "selected_row": {
+        "export_run_id": "25885-linkedin_ads_16095-scheduled__2026-06-18T00:00:00+00:00",
+        "audience_id": "25885",
+        "endpoint_id": "app_linkedin_ads_1761",
+        "destination_type": "linkedin_ads",
+        "created_at": "2026-06-18T01:19:20.148077+00:00",
+        "snapshotting_state": "snapshotting_finished",
+        "export_state": "export_error",
+        "failed_export_count": 15,
+        "raw": {
+          "export_state": "export_error",
+          "successful_add_count": 0,
+          "successful_remove_count": 0,
+          "failed_export_count": 15,
+          "rejected_row_count": 1,
+          "total_row_count": 16,
+          "successful_expanded_add_count": 0,
+          "successful_expanded_remove_count": 0,
+          "failed_expanded_export_count": 15,
+          "rejected_expanded_row_count": 1,
+          "total_expanded_row_count": 16,
+          "enhanced_match_count": 0,
+          "enhanced_row_count": 0,
+          "enhanced_total_records": 0,
+          "total_batch_count": 1,
+          "completed_batch_count": 1,
+          "successful_batch_count": 0,
+          "failed_batch_count": 1,
+          "failure_reason": null,
+          "info": {
+            "internal_export_id": "25885-linkedin_ads_16095-scheduled__2026-06-18T00:00:00+00:00-20260618011512",
+            "export_run_id": "25885-linkedin_ads_16095-scheduled__2026-06-18T00:00:00+00:00",
+            "audience_id": "40502552",
+            "internal_audience_id": "25885",
+            "audience_name": "Alumni - Graduate",
+            "organization_id": "451",
+            "organization_name": "asuenterprisepartners",
+            "platform": "linkedin_ads",
+            "endpoint_id": "app_linkedin_ads_1761",
+            "export_timestamp": "2026-06-18 01:19:07",
+            "error_file_uri": "gs://flywheel-prod-328213-temporary/batch_errors/64ecaaa2-5c2c-4634-b32a-16309de34bda.csv",
+            "created_at": "2026-06-18T01:19:20.148077+00:00",
+            "export_complete_response": null
+          },
+          "snapshotting_state": "snapshotting_finished"
+        }
+      }
+    }
+  ],
+  "blockers": [
+    "failed_export_count",
+    "export_error"
+  ],
+  "evidence_artifacts": [],
+  "created_at": "2026-06-22T21:38:37.704Z",
+  "updated_at": "2026-06-22T21:38:37.704Z"
+}

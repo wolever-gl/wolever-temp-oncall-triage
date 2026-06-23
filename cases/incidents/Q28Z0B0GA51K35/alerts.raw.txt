@@ -1,0 +1,13 @@
+Alerts (1)
+----------------
+1. Q0JVLWNDWVV6MR | triggered | 2026-06-23T07:36:17-07:00
+   untrusted_message: "albertsons (Albertsons Media): Exports for audience 9718 failed with states: <(snapshotting_error,no_batches)>"
+   audience_id: "9718"
+   checked_export_run_ids: "9718-live_ramp_activation_2022-scheduled__2026-06-23T00:00:00+00:00"
+   glcli: glcli --env albertsons bifrost pizza --audience-id 9718 --org-id 6
+   logs: "https://console.cloud.google.com/logs/query;query=resource.type%3D%22k8s_container%22%0A%0AjsonPayload.organization_id%3D%22albertsons_6%22%0AjsonPayload.internal_audience_id%3D%229718%22%0A%0A;summaryFields=jsonPayload%252Fbatch_id:false:32:beginning;timeRange=2026-06-23T14:26:17Z%2F2026-06-23T14:46:17Z?project=gl-client-albertsons"
+
+Deduped glcli commands by audience
+-----------------------------------
+audience_id 9718:
+  glcli --env albertsons bifrost pizza --audience-id 9718 --org-id 6

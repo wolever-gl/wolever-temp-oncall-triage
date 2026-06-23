@@ -1,0 +1,82 @@
+{
+  "check_id": "chk_q2h4vbzl5v5s9o_q29huuhu8qvyya",
+  "source": "pagerduty",
+  "incident_id": "Q2H4VBZL5V5S9O",
+  "alert_id": "Q29HUUHU8QVYYA",
+  "state": "blocked",
+  "scope": {
+    "env": "prod",
+    "org_id": "378",
+    "audience_id": "38500",
+    "match_strategy": "any_export_after_alert",
+    "alert_created_at": "2026-06-16T12:56:35-07:00",
+    "checked_export_run_ids": [],
+    "glcli": "glcli --env prod bifrost pizza --audience-id 38500 --org-id 378"
+  },
+  "scope_key": "prod|378|38500|unknown_destination|unknown_endpoint|unknown_run",
+  "run_evaluations": [
+    {
+      "export_run_id": "38500-dynamics_22736-webapp__2026-06-16T20:00:54+00:00",
+      "health": "blocked",
+      "match_basis": "any_export_after_alert",
+      "blockers": [
+        "failed_export_count",
+        "export_error"
+      ],
+      "selected_row": {
+        "export_run_id": "38500-dynamics_22736-webapp__2026-06-16T20:00:54+00:00",
+        "audience_id": "38500",
+        "endpoint_id": "app_dynamics_2372",
+        "destination_type": "dynamics",
+        "created_at": "2026-06-16T20:01:39.259461+00:00",
+        "snapshotting_state": "snapshotting_finished",
+        "export_state": "export_error",
+        "failed_export_count": 7,
+        "raw": {
+          "export_state": "export_error",
+          "successful_add_count": 0,
+          "successful_remove_count": 0,
+          "failed_export_count": 7,
+          "rejected_row_count": 0,
+          "total_row_count": 7,
+          "successful_expanded_add_count": 0,
+          "successful_expanded_remove_count": 0,
+          "failed_expanded_export_count": 7,
+          "rejected_expanded_row_count": 0,
+          "total_expanded_row_count": 7,
+          "enhanced_match_count": 0,
+          "enhanced_row_count": 0,
+          "enhanced_total_records": 0,
+          "total_batch_count": 1,
+          "completed_batch_count": 1,
+          "successful_batch_count": 0,
+          "failed_batch_count": 1,
+          "failure_reason": null,
+          "info": {
+            "internal_export_id": "38500-dynamics_22736-webapp__2026-06-16T20:00:54+00:00-20260616200055",
+            "export_run_id": "38500-dynamics_22736-webapp__2026-06-16T20:00:54+00:00",
+            "audience_id": null,
+            "internal_audience_id": "38500",
+            "audience_name": "Group Ticket Interest v2",
+            "organization_id": "378",
+            "organization_name": "cincinnatireds",
+            "platform": "dynamics",
+            "endpoint_id": "app_dynamics_2372",
+            "export_timestamp": "2026-06-16 20:01:30",
+            "error_file_uri": "gs://flywheel-prod-328213-temporary/batch_errors/79c97083-1c3a-4418-ac62-9814ff45a580.csv",
+            "created_at": "2026-06-16T20:01:39.259461+00:00",
+            "export_complete_response": null
+          },
+          "snapshotting_state": "snapshotting_finished"
+        }
+      }
+    }
+  ],
+  "blockers": [
+    "failed_export_count",
+    "export_error"
+  ],
+  "evidence_artifacts": [],
+  "created_at": "2026-06-22T21:25:32.749Z",
+  "updated_at": "2026-06-22T21:25:32.749Z"
+}

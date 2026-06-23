@@ -1,0 +1,2 @@
+{"ts":"2026-06-23T14:41:01.019Z","actor":"oncall-triage","decision":"created_group","rationale":"Conservative deterministic grouping created a new group for v3|incident:Q0NEGMFU9SDRIP|org:albertsons_6|class:snapshotting-error."}
+{"ts":"2026-06-23T14:42:30.587Z","actor":"check-exports","decision":"started_work","rationale":"Export evidence check evaluated alert facts for this group."}

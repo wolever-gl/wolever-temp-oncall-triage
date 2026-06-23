@@ -1,0 +1,2 @@
+{"ts":"2026-06-23T13:54:15.733Z","actor":"oncall-triage","decision":"created_group","rationale":"Conservative deterministic grouping created a new group for v3|incident:Q04X8LNR4I5BWZ|org:chghealthcare_395|class:client-sent-export-failure."}
+{"ts":"2026-06-23T14:03:27.275Z","actor":"check-exports","decision":"started_work","rationale":"Export evidence check evaluated alert facts for this group."}

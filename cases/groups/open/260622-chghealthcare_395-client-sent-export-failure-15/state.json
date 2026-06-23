@@ -1,0 +1,23 @@
+{
+  "group_id": "260622-chghealthcare_395-client-sent-export-failure-15",
+  "state": "open",
+  "tags": [
+    "triage:needs_review"
+  ],
+  "title": "chghealthcare_395 client-sent-export-failure",
+  "summary": "chghealthcare (Weatherby Healthcare) - Audience 31806: Audience Export failure for 31806 sent to client.",
+  "deterministic_key": "v3|incident:Q2RRHNLC5TM6TT|org:chghealthcare_395|class:client-sent-export-failure",
+  "grouping_version": 3,
+  "created_at": "2026-06-23T13:54:15.733Z",
+  "updated_at": "2026-06-23T14:08:28.060Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q2RRHNLC5TM6TT",
+      "alert_id": "Q2B2CJS2JNUY67"
+    }
+  ],
+  "incident_ids": [
+    "Q2RRHNLC5TM6TT"
+  ],
+  "related_group_ids": []
+}

@@ -1,0 +1,11 @@
+Alerts (1)
+----------------
+1. Q3IZI4H9YX49R2 | triggered | 2026-06-22T20:30:16-07:00
+   untrusted_message: "Costco Non Prod (default) - Audience 6296: Audience Export failure for 6296 sent to client."
+   audience_id: "6296"
+   glcli: glcli --env costco bifrost pizza --audience-id 6296 --org-id 3
+
+Deduped glcli commands by audience
+-----------------------------------
+audience_id 6296:
+  glcli --env costco bifrost pizza --audience-id 6296 --org-id 3

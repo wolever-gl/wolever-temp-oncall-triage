@@ -1,0 +1,32 @@
+{
+  "check_id": "chk_q2zgp954medfxh_q1rvsujx0pp6wc",
+  "source": "pagerduty",
+  "incident_id": "Q2ZGP954MEDFXH",
+  "alert_id": "Q1RVSUJX0PP6WC",
+  "state": "open",
+  "scope": {
+    "env": "pirates",
+    "org_id": "3",
+    "audience_id": "20",
+    "destination_type": "dynamics_object",
+    "match_strategy": "checked_export_run_ids",
+    "alert_created_at": "2026-06-18T07:30:08-07:00",
+    "checked_export_run_ids": [
+      "20-dynamics_object_20-scheduled__2026-06-18T11:00:00+00:00",
+      "20-dynamics_object_20-scheduled__2026-06-18T12:00:00+00:00",
+      "20-dynamics_object_20-scheduled__2026-06-18T13:00:00+00:00"
+    ],
+    "glcli": "glcli --env pirates bifrost pizza --audience-id 20 --org-id 3"
+  },
+  "scope_key": "pirates|3|20|dynamics_object|unknown_endpoint|20-dynamics_object_20-scheduled__2026-06-18T11:00:00+00:00,20-dynamics_object_20-scheduled__2026-06-18T12:00:00+00:00,20-dynamics_object_20-scheduled__2026-06-18T13:00:00+00:00",
+  "run_evaluations": [],
+  "blockers": [
+    "evidence_unavailable"
+  ],
+  "evidence_artifacts": [
+    "pizza_fetch_error:Unable to connect. Is the computer able to access the url?"
+  ],
+  "created_at": "2026-06-22T21:46:19.620Z",
+  "updated_at": "2026-06-22T21:46:19.620Z",
+  "next_check_at": "2026-06-22T22:01:19.620Z"
+}

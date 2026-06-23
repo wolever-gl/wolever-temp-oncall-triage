@@ -1,0 +1,77 @@
+{
+  "check_id": "chk_q2famw1b9vzv5j_q2932gtm81fibb",
+  "source": "pagerduty",
+  "incident_id": "Q2FAMW1B9VZV5J",
+  "alert_id": "Q2932GTM81FIBB",
+  "state": "healthy_closed",
+  "scope": {
+    "env": "prod",
+    "org_id": "310",
+    "audience_id": "33347",
+    "match_strategy": "any_export_after_alert",
+    "alert_created_at": "2026-06-07T10:28:21-07:00",
+    "checked_export_run_ids": [],
+    "glcli": "glcli --env prod bifrost pizza --audience-id 33347 --org-id 310"
+  },
+  "scope_key": "prod|310|33347|unknown_destination|unknown_endpoint|unknown_run",
+  "run_evaluations": [
+    {
+      "export_run_id": "33347-the_trade_desk_crm_20850-scheduled__2026-06-22T00:00:00+00:00",
+      "health": "healthy",
+      "match_basis": "any_export_after_alert",
+      "blockers": [],
+      "selected_row": {
+        "export_run_id": "33347-the_trade_desk_crm_20850-scheduled__2026-06-22T00:00:00+00:00",
+        "audience_id": "33347",
+        "endpoint_id": "app_thetradedesk_crm_1910",
+        "destination_type": "the_trade_desk_crm",
+        "created_at": "2026-06-22T00:34:41.937978+00:00",
+        "snapshotting_state": "snapshotting_finished",
+        "export_state": "export_finished",
+        "failed_export_count": 0,
+        "raw": {
+          "export_state": "export_finished",
+          "successful_add_count": 52070,
+          "successful_remove_count": 24,
+          "failed_export_count": 0,
+          "rejected_row_count": 230,
+          "total_row_count": 52324,
+          "successful_expanded_add_count": 0,
+          "successful_expanded_remove_count": 0,
+          "failed_expanded_export_count": 0,
+          "rejected_expanded_row_count": 230,
+          "total_expanded_row_count": 52324,
+          "enhanced_match_count": 0,
+          "enhanced_row_count": 0,
+          "enhanced_total_records": 0,
+          "total_batch_count": 1,
+          "completed_batch_count": 1,
+          "successful_batch_count": 1,
+          "failed_batch_count": 0,
+          "failure_reason": null,
+          "info": {
+            "internal_export_id": "33347-the_trade_desk_crm_20850-scheduled__2026-06-22T00:00:00+00:00-20260622003200",
+            "export_run_id": "33347-the_trade_desk_crm_20850-scheduled__2026-06-22T00:00:00+00:00",
+            "audience_id": "syn04od",
+            "internal_audience_id": "33347",
+            "audience_name": "",
+            "organization_id": "310",
+            "organization_name": "ford",
+            "platform": "the_trade_desk_crm",
+            "endpoint_id": "app_thetradedesk_crm_1910",
+            "export_timestamp": "2026-06-22 00:32:00",
+            "error_file_uri": "gs://bkt-tfstate-cdmgl-ext-p/batch_errors/9c351a51-ee19-4642-86eb-1cf4a5f21be1.csv",
+            "created_at": "2026-06-22T00:34:41.937978+00:00",
+            "export_complete_response": null
+          },
+          "snapshotting_state": "snapshotting_finished"
+        }
+      }
+    }
+  ],
+  "blockers": [],
+  "evidence_artifacts": [],
+  "created_at": "2026-06-22T21:18:00.373Z",
+  "updated_at": "2026-06-22T21:18:00.373Z",
+  "closed_at": "2026-06-22T21:18:00.373Z"
+}

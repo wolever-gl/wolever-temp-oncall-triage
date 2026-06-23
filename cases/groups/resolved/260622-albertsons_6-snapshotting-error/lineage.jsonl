@@ -1,0 +1,1 @@
+{"ts":"2026-06-22T22:06:28.260Z","actor":"agent","kind":"merge","related_group_id":"260622-albertsons_6-quervice-timeouts","summary":"Merged into 260622-albertsons_6-quervice-timeouts.","rationale":"Audience 3283 has documented Quervice pre_snapshotting_check timeouts/lock-expiry behavior; track with Quervice timeout remediation."}

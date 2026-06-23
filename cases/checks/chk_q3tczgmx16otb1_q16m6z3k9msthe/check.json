@@ -1,0 +1,24 @@
+{
+  "check_id": "chk_q3tczgmx16otb1_q16m6z3k9msthe",
+  "source": "pagerduty",
+  "incident_id": "Q3TCZGMX16OTB1",
+  "alert_id": "Q16M6Z3K9MSTHE",
+  "state": "blocked",
+  "scope": {
+    "env": "prod",
+    "org_id": "502",
+    "audience_id": "35291",
+    "match_strategy": "any_export_after_alert",
+    "alert_created_at": "2026-06-17T18:30:44-07:00",
+    "checked_export_run_ids": [],
+    "glcli": "glcli --env prod bifrost pizza --audience-id 35291 --org-id 502"
+  },
+  "scope_key": "prod|502|35291|unknown_destination|unknown_endpoint|unknown_run",
+  "run_evaluations": [],
+  "blockers": [
+    "missing_export_after_alert"
+  ],
+  "evidence_artifacts": [],
+  "created_at": "2026-06-22T21:37:18.820Z",
+  "updated_at": "2026-06-22T21:37:18.820Z"
+}

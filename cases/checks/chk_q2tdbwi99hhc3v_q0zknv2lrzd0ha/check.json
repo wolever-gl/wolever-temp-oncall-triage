@@ -1,0 +1,86 @@
+{
+  "check_id": "chk_q2tdbwi99hhc3v_q0zknv2lrzd0ha",
+  "source": "pagerduty",
+  "incident_id": "Q2TDBWI99HHC3V",
+  "alert_id": "Q0ZKNV2LRZD0HA",
+  "state": "blocked",
+  "scope": {
+    "env": "prod",
+    "org_id": "310",
+    "audience_id": "33346",
+    "endpoint_id": "app_dv360_1807",
+    "destination_type": "dv360",
+    "match_strategy": "checked_export_run_ids",
+    "alert_created_at": "2026-06-19T07:51:02-07:00",
+    "checked_export_run_ids": [
+      "33346-dv360_20845-scheduled__2026-06-19T00:00:00+00:00"
+    ],
+    "glcli": "glcli --env prod bifrost pizza --audience-id 33346 --org-id 310"
+  },
+  "scope_key": "prod|310|33346|dv360|app_dv360_1807|33346-dv360_20845-scheduled__2026-06-19T00:00:00+00:00",
+  "run_evaluations": [
+    {
+      "export_run_id": "33346-dv360_20845-scheduled__2026-06-19T00:00:00+00:00",
+      "health": "blocked",
+      "match_basis": "checked_export_run_id",
+      "blockers": [
+        "failed_export_count",
+        "export_error"
+      ],
+      "selected_row": {
+        "export_run_id": "33346-dv360_20845-scheduled__2026-06-19T00:00:00+00:00",
+        "audience_id": "33346",
+        "endpoint_id": "app_dv360_1807",
+        "destination_type": "dv360",
+        "created_at": "2026-06-19T00:43:56.542624+00:00",
+        "snapshotting_state": "snapshotting_finished",
+        "export_state": "export_error",
+        "failed_export_count": 14473,
+        "raw": {
+          "export_state": "export_error",
+          "successful_add_count": 0,
+          "successful_remove_count": 0,
+          "failed_export_count": 14473,
+          "rejected_row_count": 82,
+          "total_row_count": 14555,
+          "successful_expanded_add_count": 0,
+          "successful_expanded_remove_count": 0,
+          "failed_expanded_export_count": 14473,
+          "rejected_expanded_row_count": 82,
+          "total_expanded_row_count": 14555,
+          "enhanced_match_count": 0,
+          "enhanced_row_count": 0,
+          "enhanced_total_records": 0,
+          "total_batch_count": 1,
+          "completed_batch_count": 1,
+          "successful_batch_count": 0,
+          "failed_batch_count": 1,
+          "failure_reason": "HTTP rate limit exceeded",
+          "info": {
+            "internal_export_id": "33346-dv360_20845-scheduled__2026-06-19T00:00:00+00:00-20260619004026",
+            "export_run_id": "33346-dv360_20845-scheduled__2026-06-19T00:00:00+00:00",
+            "audience_id": "9348768646",
+            "internal_audience_id": "33346",
+            "audience_name": "",
+            "organization_id": "310",
+            "organization_name": "ford",
+            "platform": "dv360",
+            "endpoint_id": "app_dv360_1807",
+            "export_timestamp": "2026-06-19 00:40:26",
+            "error_file_uri": "gs://bkt-tfstate-cdmgl-ext-p/batch_errors/d94cf0d5-182c-4b35-b02c-79218e4feb16.csv",
+            "created_at": "2026-06-19T00:43:56.542624+00:00",
+            "export_complete_response": null
+          },
+          "snapshotting_state": "snapshotting_finished"
+        }
+      }
+    }
+  ],
+  "blockers": [
+    "failed_export_count",
+    "export_error"
+  ],
+  "evidence_artifacts": [],
+  "created_at": "2026-06-22T21:55:46.221Z",
+  "updated_at": "2026-06-22T21:55:46.221Z"
+}

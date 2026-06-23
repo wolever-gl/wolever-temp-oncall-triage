@@ -1,0 +1,77 @@
+{
+  "check_id": "chk_q1h2g1lpqbkyiz_q0anxdz22b4jyd",
+  "source": "pagerduty",
+  "incident_id": "Q1H2G1LPQBKYIZ",
+  "alert_id": "Q0ANXDZ22B4JYD",
+  "state": "healthy_closed",
+  "scope": {
+    "env": "prod",
+    "org_id": "174",
+    "audience_id": "28188",
+    "match_strategy": "any_export_after_alert",
+    "alert_created_at": "2026-06-04T17:19:08-07:00",
+    "checked_export_run_ids": [],
+    "glcli": "glcli --env prod bifrost pizza --audience-id 28188 --org-id 174"
+  },
+  "scope_key": "prod|174|28188|unknown_destination|unknown_endpoint|unknown_run",
+  "run_evaluations": [
+    {
+      "export_run_id": "28188-linkedin_ads_17259-scheduled__2026-06-19T00:00:00+00:00",
+      "health": "healthy",
+      "match_basis": "any_export_after_alert",
+      "blockers": [],
+      "selected_row": {
+        "export_run_id": "28188-linkedin_ads_17259-scheduled__2026-06-19T00:00:00+00:00",
+        "audience_id": "28188",
+        "endpoint_id": "app_linkedin_ads_1303",
+        "destination_type": "linkedin_ads",
+        "created_at": "2026-06-19T00:23:47.570339+00:00",
+        "snapshotting_state": "snapshotting_finished",
+        "export_state": "export_finished",
+        "failed_export_count": 0,
+        "raw": {
+          "export_state": "export_finished",
+          "successful_add_count": 17,
+          "successful_remove_count": 15,
+          "failed_export_count": 0,
+          "rejected_row_count": 0,
+          "total_row_count": 32,
+          "successful_expanded_add_count": 0,
+          "successful_expanded_remove_count": 0,
+          "failed_expanded_export_count": 0,
+          "rejected_expanded_row_count": 0,
+          "total_expanded_row_count": 32,
+          "enhanced_match_count": 0,
+          "enhanced_row_count": 0,
+          "enhanced_total_records": 0,
+          "total_batch_count": 1,
+          "completed_batch_count": 1,
+          "successful_batch_count": 1,
+          "failed_batch_count": 0,
+          "failure_reason": null,
+          "info": {
+            "internal_export_id": "28188-linkedin_ads_17259-scheduled__2026-06-19T00:00:00+00:00-20260619002140",
+            "export_run_id": "28188-linkedin_ads_17259-scheduled__2026-06-19T00:00:00+00:00",
+            "audience_id": "41204850",
+            "internal_audience_id": "28188",
+            "audience_name": "PRU-Premium-AllEmailSenders",
+            "organization_id": "174",
+            "organization_name": "njdevils",
+            "platform": "linkedin_ads",
+            "endpoint_id": "app_linkedin_ads_1303",
+            "export_timestamp": "2026-06-19 00:23:42",
+            "error_file_uri": "gs://flywheel-prod-328213-temporary/batch_errors/538bafb1-e516-488e-a6a2-27c62419534a.csv",
+            "created_at": "2026-06-19T00:23:47.570339+00:00",
+            "export_complete_response": null
+          },
+          "snapshotting_state": "snapshotting_finished"
+        }
+      }
+    }
+  ],
+  "blockers": [],
+  "evidence_artifacts": [],
+  "created_at": "2026-06-22T21:15:30.792Z",
+  "updated_at": "2026-06-22T21:15:30.792Z",
+  "closed_at": "2026-06-22T21:15:30.792Z"
+}

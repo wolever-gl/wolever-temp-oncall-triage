@@ -7,12 +7,16 @@
     "triage:tag_grouped"
   ],
   "title": "Albertsons BigQuery type mismatch failures",
-  "summary": "Albertsons export failures whose latest evidence points to BigQuery query/type mismatch during pre_snapshotting_check, including IN UNNEST NUMERIC vs ARRAY<STRING> failures.",
+  "summary": "Added 9 SE05 snapshotting alerts whose Pizza/log evidence shows BigQuery expression type mismatch during pre_snapshotting_check.",
   "deterministic_key": "tag|260622-albertsons_6-bigquery-type-mismatch",
   "grouping_version": 3,
   "created_at": "2026-06-22T19:23:46.004Z",
-  "updated_at": "2026-06-22T20:12:03.008Z",
+  "updated_at": "2026-06-23T15:31:28.836Z",
   "alert_refs": [
+    {
+      "incident_id": "Q0B75DL9CGNBG0",
+      "alert_id": "Q36FUJN2V8R8TZ"
+    },
     {
       "incident_id": "Q0EQCF34RA3FHN",
       "alert_id": "Q1JE1OJKDOIKK2"
@@ -50,6 +54,46 @@
       "alert_id": "Q3FKTK3G0YZ8PQ"
     },
     {
+      "incident_id": "Q1S0Q38FOEN2XY",
+      "alert_id": "Q0710TTPXJLKDR"
+    },
+    {
+      "incident_id": "Q1S0Q38FOEN2XY",
+      "alert_id": "Q0GB6GMZTNLA6N"
+    },
+    {
+      "incident_id": "Q1S0Q38FOEN2XY",
+      "alert_id": "Q0U1LXTT47O3NZ"
+    },
+    {
+      "incident_id": "Q1S0Q38FOEN2XY",
+      "alert_id": "Q13KHJ175T37N6"
+    },
+    {
+      "incident_id": "Q1S0Q38FOEN2XY",
+      "alert_id": "Q2I7PPSFXCE9D0"
+    },
+    {
+      "incident_id": "Q1S0Q38FOEN2XY",
+      "alert_id": "Q2RB5WG2WUDFPR"
+    },
+    {
+      "incident_id": "Q1S0Q38FOEN2XY",
+      "alert_id": "Q31KXCL512ORCS"
+    },
+    {
+      "incident_id": "Q1S0Q38FOEN2XY",
+      "alert_id": "Q3N3SLVZH82U85"
+    },
+    {
+      "incident_id": "Q1S0Q38FOEN2XY",
+      "alert_id": "Q3QSPYAEZCWWX1"
+    },
+    {
+      "incident_id": "Q1TBCJPRHS9RAX",
+      "alert_id": "Q1ZKREFE2UTI22"
+    },
+    {
       "incident_id": "Q1U4985AOBV356",
       "alert_id": "Q149635IJ2130E"
     },
@@ -70,12 +114,24 @@
       "alert_id": "Q2ZY9H1DQEHORZ"
     },
     {
+      "incident_id": "Q28Z0B0GA51K35",
+      "alert_id": "Q0JVLWNDWVV6MR"
+    },
+    {
       "incident_id": "Q2DET6AW1NICU7",
       "alert_id": "Q3HG1SDRVACMZR"
     },
     {
+      "incident_id": "Q2J49L2EK3Q237",
+      "alert_id": "Q2QI81T3ZL3N13"
+    },
+    {
       "incident_id": "Q2RVKX275SCHT7",
       "alert_id": "Q05OJ6D50KFC6Z"
+    },
+    {
+      "incident_id": "Q2YTLIYU53UIVU",
+      "alert_id": "Q3Q3SEI64J1UYX"
     },
     {
       "incident_id": "Q33XKCHKMWQNOF",
@@ -94,11 +150,16 @@
       "alert_id": "Q2JS9D0EYQGBA2"
     },
     {
+      "incident_id": "Q3QCKCZMRUR8MC",
+      "alert_id": "Q0J23QKOIZPCYM"
+    },
+    {
       "incident_id": "Q3QEKPH9YZV412",
       "alert_id": "Q309D51601M72I"
     }
   ],
   "incident_ids": [
+    "Q0B75DL9CGNBG0",
     "Q0EQCF34RA3FHN",
     "Q0P4ONJOGF8NUI",
     "Q0YS1762L6N8Z7",
@@ -108,23 +169,36 @@
     "Q18RUDPFI5PNR0",
     "Q1ADWD3D2HKZOL",
     "Q1LPO13841C1IC",
+    "Q1S0Q38FOEN2XY",
+    "Q1TBCJPRHS9RAX",
     "Q1U4985AOBV356",
     "Q1VZ0A4IVOZMGM",
     "Q245CIL2A3XI32",
     "Q24B1M4BAXAHKN",
     "Q25HOZVKOE3XJP",
+    "Q28Z0B0GA51K35",
     "Q2DET6AW1NICU7",
+    "Q2J49L2EK3Q237",
     "Q2RVKX275SCHT7",
+    "Q2YTLIYU53UIVU",
     "Q33XKCHKMWQNOF",
     "Q368INPJJF6K5Y",
     "Q3IROJH5XM5T4U",
     "Q3O313HUCTB2WD",
+    "Q3QCKCZMRUR8MC",
     "Q3QEKPH9YZV412"
   ],
   "related_group_ids": [
     "260618-albertsons_6-client-sent-export-failures-since-260618",
     "260622-albertsons_6-client-sent-export-failure",
     "260622-albertsons_6-client-sent-export-failure-02",
-    "260622-albertsons_6-client-sent-export-failure-03"
+    "260622-albertsons_6-client-sent-export-failure-03",
+    "260622-albertsons_6-snapshotting-error-02",
+    "260622-albertsons_6-snapshotting-error-05",
+    "260622-albertsons_6-snapshotting-error-06",
+    "260622-albertsons_6-snapshotting-error-11",
+    "260623-albertsons_6-snapshotting-error-09",
+    "260623-albertsons_6-snapshotting-error-12",
+    "260623-albertsons_6-snapshotting-error-14"
   ]
 }

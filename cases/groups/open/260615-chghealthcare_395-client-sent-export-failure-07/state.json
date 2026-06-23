@@ -1,0 +1,23 @@
+{
+  "group_id": "260615-chghealthcare_395-client-sent-export-failure-07",
+  "state": "open",
+  "tags": [
+    "triage:needs_review"
+  ],
+  "title": "chghealthcare_395 client-sent-export-failure",
+  "summary": "chghealthcare (Omni-Division) - Audience 27542: Audience Export failure for 27542 sent to client.",
+  "deterministic_key": "v3|incident:Q2LW94S8WREK14|org:chghealthcare_395|class:client-sent-export-failure",
+  "grouping_version": 3,
+  "created_at": "2026-06-22T18:54:54.145Z",
+  "updated_at": "2026-06-22T21:22:13.472Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q2LW94S8WREK14",
+      "alert_id": "Q0M14QSI3PBM3T"
+    }
+  ],
+  "incident_ids": [
+    "Q2LW94S8WREK14"
+  ],
+  "related_group_ids": []
+}

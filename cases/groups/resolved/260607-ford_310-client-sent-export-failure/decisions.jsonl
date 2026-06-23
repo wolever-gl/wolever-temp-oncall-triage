@@ -1,0 +1,5 @@
+{"ts":"2026-06-22T18:54:54.145Z","actor":"oncall-triage","decision":"created_group","rationale":"Conservative deterministic grouping created a new group for v3|incident:Q2FAMW1B9VZV5J|org:ford_310|class:client-sent-export-failure."}
+{"ts":"2026-06-22T18:54:54.145Z","actor":"oncall-triage","decision":"attached_alert_to_existing_group","rationale":"Alert matched deterministic key v3|incident:Q2FAMW1B9VZV5J|org:ford_310|class:client-sent-export-failure."}
+{"ts":"2026-06-22T18:54:54.145Z","actor":"oncall-triage","decision":"attached_alert_to_existing_group","rationale":"Alert matched deterministic key v3|incident:Q2FAMW1B9VZV5J|org:ford_310|class:client-sent-export-failure."}
+{"ts":"2026-06-22T21:18:00.373Z","actor":"check-exports","decision":"started_work","rationale":"Export evidence check evaluated alert facts for this group."}
+{"ts":"2026-06-22T21:18:23.849Z","actor":"check-exports","decision":"transitioned_to_resolved","rationale":"Auto-resolved from Pizza export checks: all 3 alert-scoped export check(s) are healthy_closed with no blockers."}

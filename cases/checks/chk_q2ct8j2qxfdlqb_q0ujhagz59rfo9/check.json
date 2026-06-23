@@ -1,0 +1,77 @@
+{
+  "check_id": "chk_q2ct8j2qxfdlqb_q0ujhagz59rfo9",
+  "source": "pagerduty",
+  "incident_id": "Q2CT8J2QXFDLQB",
+  "alert_id": "Q0UJHAGZ59RFO9",
+  "state": "healthy_closed",
+  "scope": {
+    "env": "prod",
+    "org_id": "395",
+    "audience_id": "21184",
+    "match_strategy": "any_export_after_alert",
+    "alert_created_at": "2026-06-17T16:17:40-07:00",
+    "checked_export_run_ids": [],
+    "glcli": "glcli --env prod bifrost pizza --audience-id 21184 --org-id 395"
+  },
+  "scope_key": "prod|395|21184|unknown_destination|unknown_endpoint|unknown_run",
+  "run_evaluations": [
+    {
+      "export_run_id": "21184-google_adwords_13456-scheduled__2026-06-21T23:00:00+00:00",
+      "health": "healthy",
+      "match_basis": "any_export_after_alert",
+      "blockers": [],
+      "selected_row": {
+        "export_run_id": "21184-google_adwords_13456-scheduled__2026-06-21T23:00:00+00:00",
+        "audience_id": "21184",
+        "endpoint_id": "app_google_adwords_1140",
+        "destination_type": "google_adwords",
+        "created_at": "2026-06-22T00:12:06.698439+00:00",
+        "snapshotting_state": "snapshotting_finished",
+        "export_state": "export_finished",
+        "failed_export_count": 0,
+        "raw": {
+          "export_state": "export_finished",
+          "successful_add_count": 18,
+          "successful_remove_count": 13,
+          "failed_export_count": 0,
+          "rejected_row_count": 3,
+          "total_row_count": 34,
+          "successful_expanded_add_count": 18,
+          "successful_expanded_remove_count": 13,
+          "failed_expanded_export_count": 0,
+          "rejected_expanded_row_count": 3,
+          "total_expanded_row_count": 34,
+          "enhanced_match_count": 0,
+          "enhanced_row_count": 0,
+          "enhanced_total_records": 0,
+          "total_batch_count": 1,
+          "completed_batch_count": 1,
+          "successful_batch_count": 1,
+          "failed_batch_count": 0,
+          "failure_reason": null,
+          "info": {
+            "internal_export_id": "21184-google_adwords_13456-scheduled__2026-06-21T23:00:00+00:00-20260622001148",
+            "export_run_id": "21184-google_adwords_13456-scheduled__2026-06-21T23:00:00+00:00",
+            "audience_id": "9018734467",
+            "internal_audience_id": "21184",
+            "audience_name": "",
+            "organization_id": "395",
+            "organization_name": "chghealthcare",
+            "platform": "google_adwords",
+            "endpoint_id": "app_google_adwords_1140",
+            "export_timestamp": "2026-06-22 00:11:48",
+            "error_file_uri": "gs://flywheel-prod-328213-temporary/batch_errors/f653ab25-85bd-486d-a2c8-11c30d32228a.csv",
+            "created_at": "2026-06-22T00:12:06.698439+00:00",
+            "export_complete_response": null
+          },
+          "snapshotting_state": "snapshotting_finished"
+        }
+      }
+    }
+  ],
+  "blockers": [],
+  "evidence_artifacts": [],
+  "created_at": "2026-06-22T21:35:48.180Z",
+  "updated_at": "2026-06-22T21:35:48.180Z",
+  "closed_at": "2026-06-22T21:35:48.180Z"
+}

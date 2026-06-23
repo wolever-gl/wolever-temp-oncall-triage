@@ -1,0 +1,77 @@
+{
+  "check_id": "chk_q3h4v02msu117k_q0bkkbbfh5cinn",
+  "source": "pagerduty",
+  "incident_id": "Q3H4V02MSU117K",
+  "alert_id": "Q0BKKBBFH5CINN",
+  "state": "healthy_closed",
+  "scope": {
+    "env": "prod",
+    "org_id": "451",
+    "audience_id": "26037",
+    "match_strategy": "any_export_after_alert",
+    "alert_created_at": "2026-06-03T19:28:52-07:00",
+    "checked_export_run_ids": [],
+    "glcli": "glcli --env prod bifrost pizza --audience-id 26037 --org-id 451"
+  },
+  "scope_key": "prod|451|26037|unknown_destination|unknown_endpoint|unknown_run",
+  "run_evaluations": [
+    {
+      "export_run_id": "26037-reddit_ads_16102-scheduled__2026-06-22T00:00:00+00:00",
+      "health": "healthy",
+      "match_basis": "any_export_after_alert",
+      "blockers": [],
+      "selected_row": {
+        "export_run_id": "26037-reddit_ads_16102-scheduled__2026-06-22T00:00:00+00:00",
+        "audience_id": "26037",
+        "endpoint_id": "app_reddit_ads_1659",
+        "destination_type": "reddit_ads",
+        "created_at": "2026-06-22T01:32:58.760774+00:00",
+        "snapshotting_state": "snapshotting_finished",
+        "export_state": "export_finished",
+        "failed_export_count": 0,
+        "raw": {
+          "export_state": "export_finished",
+          "successful_add_count": 160,
+          "successful_remove_count": 1,
+          "failed_export_count": 0,
+          "rejected_row_count": 33,
+          "total_row_count": 194,
+          "successful_expanded_add_count": 0,
+          "successful_expanded_remove_count": 0,
+          "failed_expanded_export_count": 0,
+          "rejected_expanded_row_count": 33,
+          "total_expanded_row_count": 194,
+          "enhanced_match_count": 0,
+          "enhanced_row_count": 0,
+          "enhanced_total_records": 0,
+          "total_batch_count": 1,
+          "completed_batch_count": 1,
+          "successful_batch_count": 1,
+          "failed_batch_count": 0,
+          "failure_reason": null,
+          "info": {
+            "internal_export_id": "26037-reddit_ads_16102-scheduled__2026-06-22T00:00:00+00:00-20260622012254",
+            "export_run_id": "26037-reddit_ads_16102-scheduled__2026-06-22T00:00:00+00:00",
+            "audience_id": "ca.2296865363907072002",
+            "internal_audience_id": "26037",
+            "audience_name": "AE - RFI Submit - Immersion 07302025",
+            "organization_id": "451",
+            "organization_name": "asuenterprisepartners",
+            "platform": "reddit_ads",
+            "endpoint_id": "app_reddit_ads_1659",
+            "export_timestamp": "2026-06-22 01:32:39",
+            "error_file_uri": "gs://flywheel-prod-328213-temporary/batch_errors/77110975-45b7-4a81-b683-054401eba020.csv",
+            "created_at": "2026-06-22T01:32:58.760774+00:00",
+            "export_complete_response": null
+          },
+          "snapshotting_state": "snapshotting_finished"
+        }
+      }
+    }
+  ],
+  "blockers": [],
+  "evidence_artifacts": [],
+  "created_at": "2026-06-22T21:16:12.755Z",
+  "updated_at": "2026-06-22T21:16:12.755Z",
+  "closed_at": "2026-06-22T21:16:12.755Z"
+}

@@ -1,0 +1,73 @@
+{
+  "check_id": "chk_q1h2g1lpqbkyiz_q3q0cazma3uqdx",
+  "source": "pagerduty",
+  "incident_id": "Q1H2G1LPQBKYIZ",
+  "alert_id": "Q3Q0CAZMA3UQDX",
+  "state": "blocked",
+  "scope": {
+    "env": "prod",
+    "org_id": "174",
+    "audience_id": "3866",
+    "destination_type": "snapchat",
+    "match_strategy": "checked_export_run_ids",
+    "alert_created_at": "2026-06-03T08:03:11-07:00",
+    "checked_export_run_ids": [
+      "3866-snapchat_22454-webapp__2026-06-02T13:49:55+00:00"
+    ],
+    "glcli": "glcli --env prod bifrost pizza --audience-id 3866 --org-id 174"
+  },
+  "scope_key": "prod|174|3866|snapchat|unknown_endpoint|3866-snapchat_22454-webapp__2026-06-02T13:49:55+00:00",
+  "run_evaluations": [
+    {
+      "export_run_id": "3866-snapchat_22454-webapp__2026-06-02T13:49:55+00:00",
+      "health": "blocked",
+      "match_basis": "checked_export_run_id",
+      "blockers": [
+        "snapshotting_error_requires_review"
+      ],
+      "selected_row": {
+        "export_run_id": "3866-snapchat_22454-webapp__2026-06-02T13:49:55+00:00",
+        "audience_id": "3866",
+        "destination_type": "snapchat",
+        "created_at": "2026-06-02T13:50:54.362284+00:00",
+        "snapshotting_state": "snapshotting_error",
+        "export_state": "no_batches",
+        "failed_export_count": 0,
+        "raw": {
+          "export_state": "no_batches",
+          "successful_add_count": 0,
+          "successful_remove_count": 0,
+          "failed_export_count": 0,
+          "rejected_row_count": 0,
+          "total_row_count": 0,
+          "successful_expanded_add_count": 0,
+          "successful_expanded_remove_count": 0,
+          "failed_expanded_export_count": 0,
+          "rejected_expanded_row_count": 0,
+          "total_expanded_row_count": 0,
+          "enhanced_match_count": 0,
+          "enhanced_row_count": 0,
+          "enhanced_total_records": 0,
+          "total_batch_count": 0,
+          "completed_batch_count": 0,
+          "successful_batch_count": 0,
+          "failed_batch_count": 0,
+          "failure_reason": null,
+          "info": {
+            "internal_audience_id": "3866",
+            "export_run_id": "3866-snapchat_22454-webapp__2026-06-02T13:49:55+00:00",
+            "export_timestamp": "2026-06-02 13:50:54",
+            "created_at": "2026-06-02T13:50:54.362284+00:00"
+          },
+          "snapshotting_state": "snapshotting_error"
+        }
+      }
+    }
+  ],
+  "blockers": [
+    "snapshotting_error_requires_review"
+  ],
+  "evidence_artifacts": [],
+  "created_at": "2026-06-22T21:11:58.332Z",
+  "updated_at": "2026-06-23T14:47:57.766Z"
+}

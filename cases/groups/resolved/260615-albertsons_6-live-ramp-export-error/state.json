@@ -1,0 +1,27 @@
+{
+  "group_id": "260615-albertsons_6-live-ramp-export-error",
+  "state": "resolved",
+  "tags": [
+    "triage:needs_review",
+    "resolved:merged"
+  ],
+  "title": "albertsons_6 live-ramp export-error",
+  "summary": "Merged into 260622-albertsons_6-live-ramp-export-error: Consolidate Albertsons LiveRamp export_error alerts from the Other open buckets list into a single investigation case.",
+  "deterministic_key": "v3|incident:Q2CD9OGM7RSCXU|org:albertsons_6|dest:live-ramp|class:export-error",
+  "grouping_version": 3,
+  "created_at": "2026-06-22T18:54:54.145Z",
+  "updated_at": "2026-06-22T22:16:27.163Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q2CD9OGM7RSCXU",
+      "alert_id": "Q16XDBUY1UMK8S"
+    }
+  ],
+  "incident_ids": [
+    "Q2CD9OGM7RSCXU"
+  ],
+  "related_group_ids": [
+    "260622-albertsons_6-live-ramp-export-error"
+  ],
+  "next_action": "Follow target group 260622-albertsons_6-live-ramp-export-error."
+}

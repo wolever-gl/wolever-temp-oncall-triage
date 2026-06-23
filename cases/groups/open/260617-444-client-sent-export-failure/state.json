@@ -1,0 +1,23 @@
+{
+  "group_id": "260617-444-client-sent-export-failure",
+  "state": "open",
+  "tags": [
+    "triage:needs_review"
+  ],
+  "title": "444 client-sent-export-failure",
+  "summary": "GrowthLoop 4 GrowthLoop (GrowthLoop) - Audience 38541: Audience Export failure for 38541 sent to client.",
+  "deterministic_key": "v3|incident:Q3A6N68PLPADPJ|org:444|class:client-sent-export-failure",
+  "grouping_version": 3,
+  "created_at": "2026-06-22T18:54:54.145Z",
+  "updated_at": "2026-06-22T21:33:15.277Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q3A6N68PLPADPJ",
+      "alert_id": "Q03WQ6N7QAFBQA"
+    }
+  ],
+  "incident_ids": [
+    "Q3A6N68PLPADPJ"
+  ],
+  "related_group_ids": []
+}

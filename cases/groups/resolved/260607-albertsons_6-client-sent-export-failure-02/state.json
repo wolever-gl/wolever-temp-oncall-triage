@@ -1,0 +1,24 @@
+{
+  "group_id": "260607-albertsons_6-client-sent-export-failure-02",
+  "state": "resolved",
+  "tags": [
+    "triage:needs_review",
+    "resolved:export-healthy"
+  ],
+  "title": "albertsons_6 client-sent-export-failure",
+  "summary": "Auto-resolved from Pizza export checks: all 1 alert-scoped export check(s) are healthy_closed with no blockers.",
+  "deterministic_key": "v3|incident:Q3CWG9E03UQD92|org:albertsons_6|class:client-sent-export-failure",
+  "grouping_version": 3,
+  "created_at": "2026-06-22T18:54:54.145Z",
+  "updated_at": "2026-06-22T21:03:18.206Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q3CWG9E03UQD92",
+      "alert_id": "Q16V9SWYNTRKIN"
+    }
+  ],
+  "incident_ids": [
+    "Q3CWG9E03UQD92"
+  ],
+  "related_group_ids": []
+}

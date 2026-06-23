@@ -1,0 +1,73 @@
+{
+  "check_id": "chk_q1j117kv9g8tbu_q1oquxxjszj1cu",
+  "source": "pagerduty",
+  "incident_id": "Q1J117KV9G8TBU",
+  "alert_id": "Q1OQUXXJSZJ1CU",
+  "state": "blocked",
+  "scope": {
+    "env": "prod",
+    "org_id": "305",
+    "audience_id": "30251",
+    "destination_type": "the_trade_desk",
+    "match_strategy": "checked_export_run_ids",
+    "alert_created_at": "2026-06-22T07:54:28-07:00",
+    "checked_export_run_ids": [
+      "30251-the_trade_desk_19860-scheduled__2026-06-22T00:00:00+00:00"
+    ],
+    "glcli": "glcli --env prod bifrost pizza --audience-id 30251 --org-id 305"
+  },
+  "scope_key": "prod|305|30251|the_trade_desk|unknown_endpoint|30251-the_trade_desk_19860-scheduled__2026-06-22T00:00:00+00:00",
+  "run_evaluations": [
+    {
+      "export_run_id": "30251-the_trade_desk_19860-scheduled__2026-06-22T00:00:00+00:00",
+      "health": "blocked",
+      "match_basis": "checked_export_run_id",
+      "blockers": [
+        "snapshotting_error_requires_review"
+      ],
+      "selected_row": {
+        "export_run_id": "30251-the_trade_desk_19860-scheduled__2026-06-22T00:00:00+00:00",
+        "audience_id": "30251",
+        "destination_type": "the_trade_desk",
+        "created_at": "2026-06-22T00:16:31.643941+00:00",
+        "snapshotting_state": "snapshotting_error",
+        "export_state": "no_batches",
+        "failed_export_count": 0,
+        "raw": {
+          "export_state": "no_batches",
+          "successful_add_count": 0,
+          "successful_remove_count": 0,
+          "failed_export_count": 0,
+          "rejected_row_count": 0,
+          "total_row_count": 0,
+          "successful_expanded_add_count": 0,
+          "successful_expanded_remove_count": 0,
+          "failed_expanded_export_count": 0,
+          "rejected_expanded_row_count": 0,
+          "total_expanded_row_count": 0,
+          "enhanced_match_count": 0,
+          "enhanced_row_count": 0,
+          "enhanced_total_records": 0,
+          "total_batch_count": 0,
+          "completed_batch_count": 0,
+          "successful_batch_count": 0,
+          "failed_batch_count": 0,
+          "failure_reason": "duplicates_check_failed",
+          "info": {
+            "internal_audience_id": "30251",
+            "export_run_id": "30251-the_trade_desk_19860-scheduled__2026-06-22T00:00:00+00:00",
+            "export_timestamp": "2026-06-22 00:16:31",
+            "created_at": "2026-06-22T00:16:31.643941+00:00"
+          },
+          "snapshotting_state": "snapshotting_error"
+        }
+      }
+    }
+  ],
+  "blockers": [
+    "snapshotting_error_requires_review"
+  ],
+  "evidence_artifacts": [],
+  "created_at": "2026-06-22T22:11:03.120Z",
+  "updated_at": "2026-06-22T22:11:03.120Z"
+}

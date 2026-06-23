@@ -1,0 +1,81 @@
+{
+  "check_id": "chk_q252c2nnbiq8wp_q02daolt6hymg0",
+  "source": "pagerduty",
+  "incident_id": "Q252C2NNBIQ8WP",
+  "alert_id": "Q02DAOLT6HYMG0",
+  "state": "monitoring",
+  "scope": {
+    "env": "prod",
+    "org_id": "502",
+    "audience_id": "35085",
+    "endpoint_id": "app_magnite_id_graph_1920",
+    "destination_type": "magnite_id_graph",
+    "match_strategy": "checked_export_run_ids",
+    "alert_created_at": "2026-06-03T08:17:40-07:00",
+    "checked_export_run_ids": [
+      "35085-magnite_id_graph_21319-scheduled__2026-06-03T00:00:00+00:00"
+    ],
+    "glcli": "glcli --env prod bifrost pizza --audience-id 35085 --org-id 502"
+  },
+  "scope_key": "prod|502|35085|magnite_id_graph|app_magnite_id_graph_1920|35085-magnite_id_graph_21319-scheduled__2026-06-03T00:00:00+00:00",
+  "run_evaluations": [
+    {
+      "export_run_id": "35085-magnite_id_graph_21319-scheduled__2026-06-03T00:00:00+00:00",
+      "health": "monitoring",
+      "match_basis": "checked_export_run_id",
+      "blockers": [],
+      "selected_row": {
+        "export_run_id": "35085-magnite_id_graph_21319-scheduled__2026-06-03T00:00:00+00:00",
+        "audience_id": "35085",
+        "endpoint_id": "app_magnite_id_graph_1920",
+        "destination_type": "magnite_id_graph",
+        "created_at": "2026-06-03T02:14:08.618709+00:00",
+        "snapshotting_state": "snapshotting_finished",
+        "export_state": "export_processing",
+        "failed_export_count": 0,
+        "raw": {
+          "export_state": "export_processing",
+          "successful_add_count": 34025567,
+          "successful_remove_count": 0,
+          "failed_export_count": 0,
+          "rejected_row_count": 430135,
+          "total_row_count": 34476182,
+          "successful_expanded_add_count": 34025567,
+          "successful_expanded_remove_count": 0,
+          "failed_expanded_export_count": 0,
+          "rejected_expanded_row_count": 430135,
+          "total_expanded_row_count": 34476182,
+          "enhanced_match_count": 0,
+          "enhanced_row_count": 0,
+          "enhanced_total_records": 0,
+          "total_batch_count": 516,
+          "completed_batch_count": 515,
+          "successful_batch_count": 515,
+          "failed_batch_count": 0,
+          "failure_reason": null,
+          "info": {
+            "internal_export_id": "35085-magnite_id_graph_21319-scheduled__2026-06-03T00:00:00+00:00-20260603020537",
+            "export_run_id": "35085-magnite_id_graph_21319-scheduled__2026-06-03T00:00:00+00:00",
+            "audience_id": null,
+            "internal_audience_id": "35085",
+            "audience_name": "FAN_Demo_Parents_T1",
+            "organization_id": "502",
+            "organization_name": "fanatics",
+            "platform": "magnite_id_graph",
+            "endpoint_id": "app_magnite_id_graph_1920",
+            "export_timestamp": "2026-06-03 02:14:01",
+            "error_file_uri": "gs://flywheel-prod-328213-temporary/batch_errors/0a26dc84-11b2-4887-8860-a3d5a4720f7e.csv",
+            "created_at": "2026-06-03T02:14:08.618709+00:00",
+            "export_complete_response": null
+          },
+          "snapshotting_state": "snapshotting_finished"
+        }
+      }
+    }
+  ],
+  "blockers": [],
+  "evidence_artifacts": [],
+  "created_at": "2026-06-22T21:12:19.303Z",
+  "updated_at": "2026-06-22T21:12:19.303Z",
+  "next_check_at": "2026-06-22T21:27:19.303Z"
+}

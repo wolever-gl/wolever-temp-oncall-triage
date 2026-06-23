@@ -1,0 +1,82 @@
+{
+  "check_id": "chk_q3f9ldxg6uj2nc_q2a8l9esvaz9je",
+  "source": "pagerduty",
+  "incident_id": "Q3F9LDXG6UJ2NC",
+  "alert_id": "Q2A8L9ESVAZ9JE",
+  "state": "blocked",
+  "scope": {
+    "env": "prod",
+    "org_id": "444",
+    "audience_id": "38540",
+    "match_strategy": "any_export_after_alert",
+    "alert_created_at": "2026-06-17T14:26:29-07:00",
+    "checked_export_run_ids": [],
+    "glcli": "glcli --env prod bifrost pizza --audience-id 38540 --org-id 444"
+  },
+  "scope_key": "prod|444|38540|unknown_destination|unknown_endpoint|unknown_run",
+  "run_evaluations": [
+    {
+      "export_run_id": "38540-linkedin_ads_22763-webapp__2026-06-17T21:29:20+00:00",
+      "health": "blocked",
+      "match_basis": "any_export_after_alert",
+      "blockers": [
+        "failed_export_count",
+        "export_error"
+      ],
+      "selected_row": {
+        "export_run_id": "38540-linkedin_ads_22763-webapp__2026-06-17T21:29:20+00:00",
+        "audience_id": "38540",
+        "endpoint_id": "app_linkedin_ads_2389",
+        "destination_type": "linkedin_ads",
+        "created_at": "2026-06-17T21:29:56.293571+00:00",
+        "snapshotting_state": "snapshotting_finished",
+        "export_state": "export_error",
+        "failed_export_count": 2107,
+        "raw": {
+          "export_state": "export_error",
+          "successful_add_count": 0,
+          "successful_remove_count": 0,
+          "failed_export_count": 2107,
+          "rejected_row_count": 2,
+          "total_row_count": 2109,
+          "successful_expanded_add_count": 0,
+          "successful_expanded_remove_count": 0,
+          "failed_expanded_export_count": 2107,
+          "rejected_expanded_row_count": 2,
+          "total_expanded_row_count": 2109,
+          "enhanced_match_count": 0,
+          "enhanced_row_count": 0,
+          "enhanced_total_records": 0,
+          "total_batch_count": 1,
+          "completed_batch_count": 1,
+          "successful_batch_count": 0,
+          "failed_batch_count": 1,
+          "failure_reason": null,
+          "info": {
+            "internal_export_id": "38540-linkedin_ads_22763-webapp__2026-06-17T21:29:20+00:00-20260617212921",
+            "export_run_id": "38540-linkedin_ads_22763-webapp__2026-06-17T21:29:20+00:00",
+            "audience_id": "62720720",
+            "internal_audience_id": "38540",
+            "audience_name": "Customer Accounts",
+            "organization_id": "444",
+            "organization_name": "growthloop4growthloop",
+            "platform": "linkedin_ads",
+            "endpoint_id": "app_linkedin_ads_2389",
+            "export_timestamp": "2026-06-17 21:29:50",
+            "error_file_uri": "gs://flywheel-prod-328213-temporary/batch_errors/fd0eb728-c6f6-433b-b34c-822af2beb5e9.csv",
+            "created_at": "2026-06-17T21:29:56.293571+00:00",
+            "export_complete_response": null
+          },
+          "snapshotting_state": "snapshotting_finished"
+        }
+      }
+    }
+  ],
+  "blockers": [
+    "failed_export_count",
+    "export_error"
+  ],
+  "evidence_artifacts": [],
+  "created_at": "2026-06-22T21:34:00.858Z",
+  "updated_at": "2026-06-22T21:34:00.858Z"
+}

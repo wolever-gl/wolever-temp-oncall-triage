@@ -1,0 +1,23 @@
+{
+  "group_id": "260622-pgatourhq_219-snapshotting-error",
+  "state": "open",
+  "tags": [
+    "triage:needs_review"
+  ],
+  "title": "pgatourhq_219 snapshotting-error",
+  "summary": "pgatourhq (New World Order): Exports for audience 38588 failed with states: <(snapshotting_error,no_batches)>",
+  "deterministic_key": "v3|incident:Q0RI5NUJV9RFO8|org:pgatourhq_219|class:snapshotting-error",
+  "grouping_version": 3,
+  "created_at": "2026-06-22T18:54:54.145Z",
+  "updated_at": "2026-06-22T22:11:42.001Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q0RI5NUJV9RFO8",
+      "alert_id": "Q2UDK1R59503R4"
+    }
+  ],
+  "incident_ids": [
+    "Q0RI5NUJV9RFO8"
+  ],
+  "related_group_ids": []
+}

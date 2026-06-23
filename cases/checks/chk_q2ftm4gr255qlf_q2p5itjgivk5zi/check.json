@@ -1,0 +1,86 @@
+{
+  "check_id": "chk_q2ftm4gr255qlf_q2p5itjgivk5zi",
+  "source": "pagerduty",
+  "incident_id": "Q2FTM4GR255QLF",
+  "alert_id": "Q2P5ITJGIVK5ZI",
+  "state": "blocked",
+  "scope": {
+    "env": "prod",
+    "org_id": "502",
+    "audience_id": "30899",
+    "endpoint_id": "app_snowflake_1746",
+    "destination_type": "snowflake",
+    "match_strategy": "checked_export_run_ids",
+    "alert_created_at": "2026-06-22T08:08:14-07:00",
+    "checked_export_run_ids": [
+      "30899-snowflake_21612-scheduled__2026-06-18T00:00:00+00:00"
+    ],
+    "glcli": "glcli --env prod bifrost pizza --audience-id 30899 --org-id 502"
+  },
+  "scope_key": "prod|502|30899|snowflake|app_snowflake_1746|30899-snowflake_21612-scheduled__2026-06-18T00:00:00+00:00",
+  "run_evaluations": [
+    {
+      "export_run_id": "30899-snowflake_21612-scheduled__2026-06-18T00:00:00+00:00",
+      "health": "blocked",
+      "match_basis": "checked_export_run_id",
+      "blockers": [
+        "failed_export_count",
+        "export_error"
+      ],
+      "selected_row": {
+        "export_run_id": "30899-snowflake_21612-scheduled__2026-06-18T00:00:00+00:00",
+        "audience_id": "30899",
+        "endpoint_id": "app_snowflake_1746",
+        "destination_type": "snowflake",
+        "created_at": "2026-06-18T03:34:48.569281+00:00",
+        "snapshotting_state": "snapshotting_finished",
+        "export_state": "export_error",
+        "failed_export_count": 12677,
+        "raw": {
+          "export_state": "export_error",
+          "successful_add_count": 782564,
+          "successful_remove_count": 0,
+          "failed_export_count": 12677,
+          "rejected_row_count": 0,
+          "total_row_count": 795241,
+          "successful_expanded_add_count": 0,
+          "successful_expanded_remove_count": 0,
+          "failed_expanded_export_count": 12677,
+          "rejected_expanded_row_count": 0,
+          "total_expanded_row_count": 795241,
+          "enhanced_match_count": 0,
+          "enhanced_row_count": 0,
+          "enhanced_total_records": 0,
+          "total_batch_count": 53,
+          "completed_batch_count": 53,
+          "successful_batch_count": 52,
+          "failed_batch_count": 1,
+          "failure_reason": null,
+          "info": {
+            "internal_export_id": "30899-snowflake_21612-scheduled__2026-06-18T00:00:00+00:00-20260618032929",
+            "export_run_id": "30899-snowflake_21612-scheduled__2026-06-18T00:00:00+00:00",
+            "audience_id": null,
+            "internal_audience_id": "30899",
+            "audience_name": "FAN_league_NBA_team_Raptors_T2",
+            "organization_id": "502",
+            "organization_name": "fanatics",
+            "platform": "snowflake",
+            "endpoint_id": "app_snowflake_1746",
+            "export_timestamp": "2026-06-18 03:34:35",
+            "error_file_uri": "gs://flywheel-prod-328213-temporary/batch_errors/9d552240-2d28-4e69-a14e-b5b685a97da9.csv",
+            "created_at": "2026-06-18T03:34:48.569281+00:00",
+            "export_complete_response": null
+          },
+          "snapshotting_state": "snapshotting_finished"
+        }
+      }
+    }
+  ],
+  "blockers": [
+    "failed_export_count",
+    "export_error"
+  ],
+  "evidence_artifacts": [],
+  "created_at": "2026-06-22T22:10:47.286Z",
+  "updated_at": "2026-06-22T22:10:47.286Z"
+}

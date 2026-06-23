@@ -1,0 +1,159 @@
+{
+  "case_id": "260622-albertsons_6-snapshotting-error-05",
+  "generated_at": "2026-06-22T20:30:00-04:00",
+  "scope": {
+    "incident_id": "Q1S0Q38FOEN2XY",
+    "alert_count": 28,
+    "org": "albertsons_6",
+    "state_tuple": "snapshotting_error/no_batches"
+  },
+  "classification_basis": [
+    "Refreshed export preflight against Pizza on 2026-06-22; all 28 alert-scoped runs remained blocked with snapshotting_error_requires_review.",
+    "Pizza selected rows provide the per-run snapshotting_state, export_state, created_at, and failure_reason.",
+    "Scoped Google Cloud Logging queries confirmed representative underlying errors."
+  ],
+  "buckets": [
+    {
+      "bucket": "bigquery_type_mismatch",
+      "count": 9,
+      "audiences": ["13102", "12258", "11631", "11474", "11473", "11148", "11147", "11120", "11117"],
+      "pizza_failure_reason": "Snapshotting failed while running pre_snapshotting_check: BigQuery query failed because expression types were incompatible",
+      "representative": {
+        "audience_id": "13102",
+        "export_run_id": "13102-live_ramp_activation_5004-scheduled__2026-06-22T00:00:00+00:00",
+        "created_at": "2026-06-22T08:02:12.443310+00:00",
+        "request_id": "064884f7-f002-4d1a-905f-d626eb1a181a",
+        "snapshot_run_id": "dae422d6-b0fd-4bcb-8bae-9647311a9b4e",
+        "log_summary": "Quervice BigQuery 400: No matching signature for operator IN UNNEST for argument types NUMERIC, ARRAY<STRING>; glerror internal_summary=BigQuery query failed because expression types were incompatible."
+      }
+    },
+    {
+      "bucket": "quervice_timeout_pre_snapshotting_check",
+      "count": 9,
+      "audiences": ["12609", "12592", "12514", "12499", "12498", "12265", "11390", "11290", "12606"],
+      "pizza_failure_reason": "Seven Pizza rows explicitly say Quervice request timed out after 600 seconds for pre_snapshotting_check; Pizza had blank failure_reason for 12499 and 12606, but scoped logs show the same timeout/503 pattern.",
+      "representatives": [
+        {
+          "audience_id": "12499",
+          "export_run_id": "12499-live_ramp_activation_4273-scheduled__2026-06-21T00:00:00+00:00",
+          "created_at": "2026-06-21T02:34:57.627745+00:00",
+          "request_id": "18403c3b-bd65-4f57-8b67-70c63317e8d6",
+          "snapshot_run_id": "cc515558-bc9b-40b3-9f75-3b21b898584f",
+          "log_summary": "snapshotting.quervice_client_async error: Quervice request timed out after 600 seconds for report pre_snapshotting_check; subsequent retries received nginx 503 responses."
+        },
+        {
+          "audience_id": "12606",
+          "export_run_id": "12606-live_ramp_activation_4377-scheduled__2026-06-22T00:00:00+00:00",
+          "created_at": "2026-06-22T10:59:12.801429+00:00",
+          "request_id": "3cc178d5-f8da-41c2-b26c-e37488a5579d",
+          "snapshot_run_id": "7c4fb54b-18e5-4448-8afb-12e1b5bdb8e6",
+          "log_summary": "Pizza failure_reason was null, but logs show pre_snapshotting_check timeout after 600 seconds followed by repeated nginx 503 responses from Quervice."
+        }
+      ]
+    },
+    {
+      "bucket": "quervice_timeout_metadata_write_up",
+      "count": 1,
+      "audiences": ["11293"],
+      "pizza_failure_reason": "Quervice request timed out after 600 seconds for report 'metadata_write_up'.",
+      "representative": {
+        "audience_id": "11293",
+        "export_run_id": "11293-live_ramp_sftp_3788-scheduled__2026-06-19T00:00:00+00:00",
+        "created_at": "2026-06-19T06:31:07.337935+00:00"
+      }
+    },
+    {
+      "bucket": "missing_source_schema_field",
+      "count": 1,
+      "audiences": ["11349"],
+      "pizza_failure_reason": "Snapshotting failed while running pre_snapshotting_check: Requested field was not found in the source schema",
+      "representative": {
+        "audience_id": "11349",
+        "export_run_id": "11349-live_ramp_activation_3389-scheduled__2026-06-19T00:00:00+00:00",
+        "created_at": "2026-06-19T07:47:30.333221+00:00",
+        "request_id": "722e3621-656b-493b-88a8-427578441017",
+        "snapshot_run_id": "3f1543e2-40db-40ca-aece-3413cdd1251b",
+        "log_summary": "BigQuery 400: Name Purchase_Group_Category_SeasonalContinuityPromotion_EasterSeasonal7950_L52W not found inside Product_Attributes_Product_Group_categoryL; glerror internal_summary=Requested field was not found in the source schema."
+      }
+    },
+    {
+      "bucket": "quervice_timeout_or_error_unknown_stage",
+      "count": 8,
+      "audiences": ["12991", "12591", "12477", "11379", "11375", "11374", "11366", "10935"],
+      "pizza_failure_reasons": [
+        "Snapshotting failed while running base_table_not_empty: unknown error",
+        "Snapshotting failed while running pre_snapshotting_check: unknown error",
+        "Snapshotting failed while running snapshot_history_write_up: unknown error",
+        "Snapshotting failed while running snapshot_history_delete_old_rows: unknown error"
+      ],
+      "classification": "Scoped logs classify all 8 as Quervice timeout/error-response failures hidden behind Pizza unknown-error text.",
+      "representatives": [
+        {
+          "audience_id": "12991",
+          "export_run_id": "12991-live_ramp_activation_4875-scheduled__2026-06-22T00:00:00+00:00",
+          "created_at": "2026-06-22T04:36:16.385104+00:00",
+          "request_id": "7c4a7026-c880-4ecb-9e29-dd1bfa3e8570",
+          "snapshot_run_id": "0443ed3a-1f25-4188-b33b-479b37ca7a9f",
+          "log_summary": "Pizza says base_table_not_empty unknown error; scoped logs show the same run had pre_snapshotting_check timeout/503 activity before the terminal unknown state, including an unhandled Quervice API exception at 2026-06-22T04:48:43Z."
+        },
+        {
+          "audience_id": "12591",
+          "export_run_id": "12591-live_ramp_activation_4362-scheduled__2026-06-22T00:00:00+00:00",
+          "created_at": "2026-06-22T05:43:23.381255+00:00",
+          "request_id": "b7d8f69b-342d-40c7-823d-f6e23703fcd3",
+          "snapshot_run_id": "493dbf0a-19f9-4516-a6cb-7c58763cefc4",
+          "log_summary": "Pizza says pre_snapshotting_check unknown error; logs show repeated Quervice request timeouts after 600 seconds for pre_snapshotting_check, then terminal QuerviceClientError."
+        },
+        {
+          "audience_id": "12477",
+          "export_run_id": "12477-live_ramp_activation_4251-scheduled__2026-06-21T00:00:00+00:00",
+          "created_at": "2026-06-21T05:10:19.157425+00:00",
+          "request_id": "f3b346f7-7f36-49f1-94d9-d9c786805d2c",
+          "snapshot_run_id": "8fe211b1-bc2a-4eb1-ab93-48a67e59c82d",
+          "log_summary": "Pizza says base_table_not_empty unknown error; logs show repeated base_table_not_empty Quervice timeouts after 600 seconds and Quervice error responses."
+        },
+        {
+          "audience_id": "11379",
+          "export_run_id": "11379-live_ramp_activation_3409-scheduled__2026-06-22T00:00:00+00:00",
+          "created_at": "2026-06-22T04:52:23.966754+00:00",
+          "request_id": "814859ae-ed64-4e1c-8555-aa966081b4bf",
+          "snapshot_run_id": "b093026c-6624-4e4a-9d4b-248db303a03a",
+          "log_summary": "Pizza says snapshot_history_delete_old_rows unknown error; logs show Quervice timeouts after 600 seconds for snapshot_history_delete_old_rows and terminal QuerviceClientError."
+        },
+        {
+          "audience_id": "11375",
+          "export_run_id": "11375-live_ramp_activation_3407-scheduled__2026-06-22T00:00:00+00:00",
+          "created_at": "2026-06-22T04:53:11.211747+00:00",
+          "request_id": "3da025f6-2b78-4ffc-9e2b-8cf7232ad01d",
+          "snapshot_run_id": "0fdf1ac7-a883-43cb-8cf3-16647c9a2471",
+          "log_summary": "snapshotting.quervice_client_async error: Quervice request timed out after 600 seconds for report snapshot_history_write_up."
+        },
+        {
+          "audience_id": "11374",
+          "export_run_id": "11374-live_ramp_activation_3406-scheduled__2026-06-22T00:00:00+00:00",
+          "created_at": "2026-06-22T04:53:27.606386+00:00",
+          "request_id": "ca61e080-9acf-4115-b3f3-c11afdff8be5",
+          "snapshot_run_id": "712c6a1f-3e2c-49ae-89af-aed22236aa27",
+          "log_summary": "Pizza says pre_snapshotting_check unknown error; logs show repeated pre_snapshotting_check Quervice timeouts after 600 seconds and error responses."
+        },
+        {
+          "audience_id": "11366",
+          "export_run_id": "11366-live_ramp_activation_3401-scheduled__2026-06-22T00:00:00+00:00",
+          "created_at": "2026-06-22T04:53:45.027696+00:00",
+          "request_id": "19949642-ed1d-4fdd-ba76-2166b763df1b",
+          "snapshot_run_id": "68ca82a6-5504-4952-8749-620fb1a3b225",
+          "log_summary": "Pizza says base_table_not_empty unknown error; logs show base_table_not_empty Quervice timeouts after 600 seconds and repeated error responses."
+        },
+        {
+          "audience_id": "10935",
+          "export_run_id": "10935-live_ramp_activation_4988-scheduled__2026-06-20T00:00:00+00:00",
+          "created_at": "2026-06-20T03:00:16.763131+00:00",
+          "request_id": "b436d488-20bd-4cf5-8ff5-90fe66840210",
+          "snapshot_run_id": "7f1d5ec0-b95f-49eb-97c1-a7debefbf4fc",
+          "log_summary": "Pizza says pre_snapshotting_check unknown error; logs show repeated pre_snapshotting_check Quervice timeouts after 600 seconds, lock expiry warnings, and terminal QuerviceClientError."
+        }
+      ]
+    }
+  ],
+  "inference": "This is not one root cause. It is a PagerDuty incident-level accumulation of multiple snapshotting blockers across Albertsons LiveRamp exports. After log review, 18 of 28 alerts belong with Quervice timeout/error-response behavior, 9 with BigQuery type mismatch, and 1 with missing source schema. Several failures involve delta exports/unload_deltas, so later successful scheduled runs should not be used as sole closure evidence without applying snapshotting-delta-recovery."
+}

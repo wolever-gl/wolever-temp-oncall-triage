@@ -1,0 +1,23 @@
+{
+  "group_id": "260617-chghealthcare_395-pulse-point-export-error",
+  "state": "open",
+  "tags": [
+    "triage:needs_review"
+  ],
+  "title": "chghealthcare_395 pulse-point export-error",
+  "summary": "chghealthcare (Omni-Division): Exports for audience 29870 failed with states: <(snapshotting_finished,export_error)>",
+  "deterministic_key": "v3|incident:Q05TNQMJXCI19W|org:chghealthcare_395|dest:pulse-point|class:export-error",
+  "grouping_version": 3,
+  "created_at": "2026-06-22T18:54:54.145Z",
+  "updated_at": "2026-06-22T21:36:31.659Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q05TNQMJXCI19W",
+      "alert_id": "Q26YSYOBHDLV2Y"
+    }
+  ],
+  "incident_ids": [
+    "Q05TNQMJXCI19W"
+  ],
+  "related_group_ids": []
+}

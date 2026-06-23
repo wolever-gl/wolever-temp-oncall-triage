@@ -1,0 +1,86 @@
+{
+  "check_id": "chk_q1b3hv678ysrr6_q0g4u86yqzr17f",
+  "source": "pagerduty",
+  "incident_id": "Q1B3HV678YSRR6",
+  "alert_id": "Q0G4U86YQZR17F",
+  "state": "blocked",
+  "scope": {
+    "env": "prod",
+    "org_id": "310",
+    "audience_id": "33347",
+    "endpoint_id": "app_thetradedesk_crm_1910",
+    "destination_type": "the_trade_desk_crm",
+    "match_strategy": "checked_export_run_ids",
+    "alert_created_at": "2026-06-17T07:50:53-07:00",
+    "checked_export_run_ids": [
+      "33347-the_trade_desk_crm_20850-scheduled__2026-06-17T00:00:00+00:00"
+    ],
+    "glcli": "glcli --env prod bifrost pizza --audience-id 33347 --org-id 310"
+  },
+  "scope_key": "prod|310|33347|the_trade_desk_crm|app_thetradedesk_crm_1910|33347-the_trade_desk_crm_20850-scheduled__2026-06-17T00:00:00+00:00",
+  "run_evaluations": [
+    {
+      "export_run_id": "33347-the_trade_desk_crm_20850-scheduled__2026-06-17T00:00:00+00:00",
+      "health": "blocked",
+      "match_basis": "checked_export_run_id",
+      "blockers": [
+        "failed_export_count",
+        "export_error"
+      ],
+      "selected_row": {
+        "export_run_id": "33347-the_trade_desk_crm_20850-scheduled__2026-06-17T00:00:00+00:00",
+        "audience_id": "33347",
+        "endpoint_id": "app_thetradedesk_crm_1910",
+        "destination_type": "the_trade_desk_crm",
+        "created_at": "2026-06-17T00:48:23.079111+00:00",
+        "snapshotting_state": "snapshotting_finished",
+        "export_state": "export_error",
+        "failed_export_count": 9922,
+        "raw": {
+          "export_state": "export_error",
+          "successful_add_count": 41228,
+          "successful_remove_count": 1470,
+          "failed_export_count": 9922,
+          "rejected_row_count": 353,
+          "total_row_count": 52973,
+          "successful_expanded_add_count": 0,
+          "successful_expanded_remove_count": 0,
+          "failed_expanded_export_count": 9922,
+          "rejected_expanded_row_count": 353,
+          "total_expanded_row_count": 52973,
+          "enhanced_match_count": 0,
+          "enhanced_row_count": 0,
+          "enhanced_total_records": 0,
+          "total_batch_count": 1,
+          "completed_batch_count": 1,
+          "successful_batch_count": 0,
+          "failed_batch_count": 1,
+          "failure_reason": "Trade Desk CRM request was rate limited",
+          "info": {
+            "internal_export_id": "33347-the_trade_desk_crm_20850-scheduled__2026-06-17T00:00:00+00:00-20260617004454",
+            "export_run_id": "33347-the_trade_desk_crm_20850-scheduled__2026-06-17T00:00:00+00:00",
+            "audience_id": "syn04od",
+            "internal_audience_id": "33347",
+            "audience_name": "",
+            "organization_id": "310",
+            "organization_name": "ford",
+            "platform": "the_trade_desk_crm",
+            "endpoint_id": "app_thetradedesk_crm_1910",
+            "export_timestamp": "2026-06-17 00:44:54",
+            "error_file_uri": "gs://bkt-tfstate-cdmgl-ext-p/batch_errors/5daec175-1088-48ec-9b52-462aa1068335.csv",
+            "created_at": "2026-06-17T00:48:23.079111+00:00",
+            "export_complete_response": null
+          },
+          "snapshotting_state": "snapshotting_finished"
+        }
+      }
+    }
+  ],
+  "blockers": [
+    "failed_export_count",
+    "export_error"
+  ],
+  "evidence_artifacts": [],
+  "created_at": "2026-06-22T21:37:52.234Z",
+  "updated_at": "2026-06-22T21:37:52.234Z"
+}

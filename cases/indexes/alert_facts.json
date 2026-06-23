@@ -6716,5 +6716,878 @@
     "org_id": "trumanshow_336",
     "audience_id": "34403",
     "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q2B59NKI3YD7Z6",
+    "alert_id": "Q2YEP9URC7Q9VX",
+    "created_at": "2026-06-22T16:03:10-07:00",
+    "summary": "NJ Devils (default) - Audience 38727: 0 successfull_exports from pizza tracker found 10 minutes after new export",
+    "audience_id": "38727",
+    "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q1RLFOTZEKO6ZF",
+    "alert_id": "Q14MUN2FU7UAW6",
+    "created_at": "2026-06-22T16:20:25-07:00",
+    "summary": "chghealthcare (Weatherby Healthcare) - Audience 31575: Audience Export failure for 31575 sent to client.",
+    "org_id": "chghealthcare_395",
+    "audience_id": "31575",
+    "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q2APMS8W1488NB",
+    "alert_id": "Q1M9R61N63L7TT",
+    "created_at": "2026-06-22T16:32:42-07:00",
+    "summary": "chghealthcare (CompHealth) - Audience 21184: Audience Export failure for 21184 sent to client.",
+    "org_id": "chghealthcare_395",
+    "audience_id": "21184",
+    "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q1DU3XX8K2JFO9",
+    "alert_id": "Q0TI0AR366LC8K",
+    "created_at": "2026-06-22T16:34:29-07:00",
+    "summary": "chghealthcare (CompHealth) - Audience 22843: Audience Export failure for 22843 sent to client.",
+    "org_id": "chghealthcare_395",
+    "audience_id": "22843",
+    "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q318F0E9BYFWBP",
+    "alert_id": "Q1F2XOU580ALHC",
+    "created_at": "2026-06-22T16:35:33-07:00",
+    "summary": "chghealthcare (Weatherby Healthcare) - Audience 22844: Audience Export failure for 22844 sent to client.",
+    "org_id": "chghealthcare_395",
+    "audience_id": "22844",
+    "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q321DIC1V8M7X0",
+    "alert_id": "Q0RU43TQDIXZG8",
+    "created_at": "2026-06-22T16:40:31-07:00",
+    "summary": "chghealthcare (Weatherby Healthcare) - Audience 26083: Audience Export failure for 26083 sent to client.",
+    "org_id": "chghealthcare_395",
+    "audience_id": "26083",
+    "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q369XHR0W9ZRK2",
+    "alert_id": "Q32E656BL4Z4LK",
+    "created_at": "2026-06-22T16:40:31-07:00",
+    "summary": "chghealthcare (Weatherby Healthcare) - Audience 26105: Audience Export failure for 26105 sent to client.",
+    "org_id": "chghealthcare_395",
+    "audience_id": "26105",
+    "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q2DG1SA3L1QGW5",
+    "alert_id": "Q0F96W896JIF0G",
+    "created_at": "2026-06-22T16:41:47-07:00",
+    "summary": "chghealthcare (Weatherby Healthcare) - Audience 26145: Audience Export failure for 26145 sent to client.",
+    "org_id": "chghealthcare_395",
+    "audience_id": "26145",
+    "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q02ZCWAAL8YUWW",
+    "alert_id": "Q0UK1KMX19F3LP",
+    "created_at": "2026-06-22T16:41:48-07:00",
+    "summary": "chghealthcare (Weatherby Healthcare) - Audience 26157: Audience Export failure for 26157 sent to client.",
+    "org_id": "chghealthcare_395",
+    "audience_id": "26157",
+    "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q2PPG1TNLGJ49C",
+    "alert_id": "Q2YVHG8TK8Z9M3",
+    "created_at": "2026-06-22T16:41:53-07:00",
+    "summary": "chghealthcare (CompHealth) - Audience 26379: Audience Export failure for 26379 sent to client.",
+    "org_id": "chghealthcare_395",
+    "audience_id": "26379",
+    "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q1W9HVUW2076M0",
+    "alert_id": "Q0WKF4M5IH80NA",
+    "created_at": "2026-06-22T16:43:23-07:00",
+    "summary": "chghealthcare (CompHealth) - Audience 27244: Audience Export failure for 27244 sent to client.",
+    "org_id": "chghealthcare_395",
+    "audience_id": "27244",
+    "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q17FNLVCCRINO4",
+    "alert_id": "Q0HPFTKXRLD527",
+    "created_at": "2026-06-22T16:45:16-07:00",
+    "summary": "chghealthcare (Omni-Division) - Audience 27539: Audience Export failure for 27539 sent to client.",
+    "org_id": "chghealthcare_395",
+    "audience_id": "27539",
+    "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q04X8LNR4I5BWZ",
+    "alert_id": "Q3O6EPB9LEOW8Z",
+    "created_at": "2026-06-22T16:49:42-07:00",
+    "summary": "chghealthcare (Omni-Division) - Audience 29545: Audience Export failure for 29545 sent to client.",
+    "org_id": "chghealthcare_395",
+    "audience_id": "29545",
+    "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q3WTQ2TAGZ5TEI",
+    "alert_id": "Q2ZPYQO1WT2ZIP",
+    "created_at": "2026-06-22T16:51:08-07:00",
+    "summary": "chghealthcare (Omni-Division) - Audience 29661: Audience Export failure for 29661 sent to client.",
+    "org_id": "chghealthcare_395",
+    "audience_id": "29661",
+    "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q17ZTE6KK1UPTW",
+    "alert_id": "Q0TDRFBDBUZJFQ",
+    "created_at": "2026-06-22T16:57:47-07:00",
+    "summary": "chghealthcare (CompHealth) - Audience 31437: Audience Export failure for 31437 sent to client.",
+    "org_id": "chghealthcare_395",
+    "audience_id": "31437",
+    "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q03QXQ0W6LAQDC",
+    "alert_id": "Q0KAAG9ECWGQQO",
+    "created_at": "2026-06-22T16:59:10-07:00",
+    "summary": "chghealthcare (Weatherby Healthcare) - Audience 31696: Audience Export failure for 31696 sent to client.",
+    "org_id": "chghealthcare_395",
+    "audience_id": "31696",
+    "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q2S5EH7KSYZ341",
+    "alert_id": "Q162243M0ZGCIK",
+    "created_at": "2026-06-22T17:01:35-07:00",
+    "summary": "chghealthcare (Weatherby Healthcare) - Audience 31726: Audience Export failure for 31726 sent to client.",
+    "org_id": "chghealthcare_395",
+    "audience_id": "31726",
+    "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q2RRHNLC5TM6TT",
+    "alert_id": "Q2B2CJS2JNUY67",
+    "created_at": "2026-06-22T17:05:05-07:00",
+    "summary": "chghealthcare (Weatherby Healthcare) - Audience 31806: Audience Export failure for 31806 sent to client.",
+    "org_id": "chghealthcare_395",
+    "audience_id": "31806",
+    "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q2NW5RRJ7NJO60",
+    "alert_id": "Q2AOFQ5HZ5HBVZ",
+    "created_at": "2026-06-22T17:06:26-07:00",
+    "summary": "chghealthcare (Omni-Division) - Audience 31808: Audience Export failure for 31808 sent to client.",
+    "org_id": "chghealthcare_395",
+    "audience_id": "31808",
+    "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q3EPPJOPPUF6ZF",
+    "alert_id": "Q2P5LAGZSSAE6H",
+    "created_at": "2026-06-22T17:08:34-07:00",
+    "summary": "chghealthcare (CompHealth) - Audience 31904: Audience Export failure for 31904 sent to client.",
+    "org_id": "chghealthcare_395",
+    "audience_id": "31904",
+    "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q25DTSW9KXJQ6B",
+    "alert_id": "Q0VFBQKL46Z75H",
+    "created_at": "2026-06-22T17:10:47-07:00",
+    "summary": "chghealthcare (CompHealth) - Audience 32373: Audience Export failure for 32373 sent to client.",
+    "org_id": "chghealthcare_395",
+    "audience_id": "32373",
+    "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q2IVN0UCHUQK62",
+    "alert_id": "Q0AYYBXQZLVQOJ",
+    "created_at": "2026-06-22T17:13:33-07:00",
+    "summary": "chghealthcare (Omni-Division) - Audience 34238: Audience Export failure for 34238 sent to client.",
+    "org_id": "chghealthcare_395",
+    "audience_id": "34238",
+    "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q2PX830CKT6WFR",
+    "alert_id": "Q09O21JZQO8Y07",
+    "created_at": "2026-06-22T17:25:23-07:00",
+    "summary": "EVgo (EVgo Prod) - Audience 14107: Audience Export failure for 14107 sent to client.",
+    "org_id": "evgo_402",
+    "audience_id": "14107",
+    "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q33STDMF2JCBF2",
+    "alert_id": "Q0PXEKXUWTMI76",
+    "created_at": "2026-06-22T17:42:52-07:00",
+    "summary": "ford (Marketing Production) - Audience 33346: Audience Export failure for 33346 sent to client.",
+    "org_id": "ford_310",
+    "audience_id": "33346",
+    "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q3EI9TEW7KOQNI",
+    "alert_id": "Q0D0CO76JADBP5",
+    "created_at": "2026-06-22T17:43:17-07:00",
+    "summary": "ford (Marketing Production) - Audience 33347: Audience Export failure for 33347 sent to client.",
+    "org_id": "ford_310",
+    "audience_id": "33347",
+    "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q26H5N9E0O7N0Z",
+    "alert_id": "Q1UHFURH997VC0",
+    "created_at": "2026-06-22T18:00:09-07:00",
+    "summary": "albertsons (Albertsons Media) - Audience 2237: Audience Export failure for 2237 sent to client.",
+    "org_id": "albertsons_6",
+    "audience_id": "2237",
+    "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q2DZPMOJTWNQ11",
+    "alert_id": "Q33SWUVXWDER0M",
+    "created_at": "2026-06-22T18:03:50-07:00",
+    "summary": "albertsons (Albertsons Media) - Audience 11017: Audience Export failure for 11017 sent to client.",
+    "org_id": "albertsons_6",
+    "audience_id": "11017",
+    "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q36ENB8WGMYDAW",
+    "alert_id": "Q0J8Z3B3E1AQKE",
+    "created_at": "2026-06-22T18:11:06-07:00",
+    "summary": "albertsons (Albertsons Media) - Audience 11948: Audience Export failure for 11948 sent to client.",
+    "org_id": "albertsons_6",
+    "audience_id": "11948",
+    "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q0YXEG844L38X5",
+    "alert_id": "Q21NUVH0SYG7PD",
+    "created_at": "2026-06-22T18:44:13-07:00",
+    "summary": "albertsons (Albertsons Media) - Audience 2126: Audience Export failure for 2126 sent to client.",
+    "org_id": "albertsons_6",
+    "audience_id": "2126",
+    "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q0ONUAJ6HJ075M",
+    "alert_id": "Q1731P4QP1TL7V",
+    "created_at": "2026-06-22T19:06:41-07:00",
+    "summary": "albertsons (Albertsons Media) - Audience 2173: Audience Export failure for 2173 sent to client.",
+    "org_id": "albertsons_6",
+    "audience_id": "2173",
+    "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q35FXUK3R7EP76",
+    "alert_id": "Q2MKFM548X6EUT",
+    "created_at": "2026-06-22T19:06:41-07:00",
+    "summary": "albertsons (Albertsons Media) - Audience 9879: Audience Export failure for 9879 sent to client.",
+    "org_id": "albertsons_6",
+    "audience_id": "9879",
+    "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q2TTDND3R51RWH",
+    "alert_id": "Q0IBJJ98JSJM2X",
+    "created_at": "2026-06-22T19:10:57-07:00",
+    "summary": "fanatics (default) - Audience 36234: Audience Export failure for 36234 sent to client.",
+    "org_id": "fanatics_502",
+    "audience_id": "36234",
+    "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q1GVCKXSEM4VIF",
+    "alert_id": "Q1OROHJ2I696DT",
+    "created_at": "2026-06-22T19:21:27-07:00",
+    "summary": "albertsons (Albertsons Media) - Audience 2175: Audience Export failure for 2175 sent to client.",
+    "org_id": "albertsons_6",
+    "audience_id": "2175",
+    "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q3PZTO9L0YMZJ9",
+    "alert_id": "Q2Q02QCOTXW7A2",
+    "created_at": "2026-06-22T19:28:34-07:00",
+    "summary": "albertsons (Albertsons Media) - Audience 2125: Audience Export failure for 2125 sent to client.",
+    "org_id": "albertsons_6",
+    "audience_id": "2125",
+    "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q3AEWETRMJ9LHR",
+    "alert_id": "Q38LA4RYLYTPNT",
+    "created_at": "2026-06-22T19:33:08-07:00",
+    "summary": "albertsons (Albertsons Media) - Audience 12865: Audience Export failure for 12865 sent to client.",
+    "org_id": "albertsons_6",
+    "audience_id": "12865",
+    "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q2C59EMLGBSSWK",
+    "alert_id": "Q18DM3E52X64QT",
+    "created_at": "2026-06-22T19:35:44-07:00",
+    "summary": "albertsons (Albertsons Media) - Audience 2174: Audience Export failure for 2174 sent to client.",
+    "org_id": "albertsons_6",
+    "audience_id": "2174",
+    "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q2EEZBO0CVUEW3",
+    "alert_id": "Q1VCDT9LMVFUFE",
+    "created_at": "2026-06-22T19:49:13-07:00",
+    "summary": "albertsons (Albertsons Media) - Audience 2218: Audience Export failure for 2218 sent to client.",
+    "org_id": "albertsons_6",
+    "audience_id": "2218",
+    "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q0RFJ7B7DZOM35",
+    "alert_id": "Q36DWAK307QUCP",
+    "created_at": "2026-06-22T20:24:53-07:00",
+    "summary": "Costco Non Prod (default) - Audience 6295: Audience Export failure for 6295 sent to client.",
+    "audience_id": "6295",
+    "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q2C0F360LV1E6D",
+    "alert_id": "Q17OHV7QKG9KB0",
+    "created_at": "2026-06-22T20:29:42-07:00",
+    "summary": "albertsons (Albertsons Media) - Audience 7053: Audience Export failure for 7053 sent to client.",
+    "org_id": "albertsons_6",
+    "audience_id": "7053",
+    "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q06CJCGSNKMQ9V",
+    "alert_id": "Q3IZI4H9YX49R2",
+    "created_at": "2026-06-22T20:30:16-07:00",
+    "summary": "Costco Non Prod (default) - Audience 6296: Audience Export failure for 6296 sent to client.",
+    "audience_id": "6296",
+    "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q2FSP5N1IS120M",
+    "alert_id": "Q1UPUXXO6A4HY3",
+    "created_at": "2026-06-22T20:33:09-07:00",
+    "summary": "Costco Non Prod (default) - Audience 6295: 0 successfull_exports from pizza tracker found 10 minutes after new export",
+    "audience_id": "6295",
+    "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q2URZR3H9ZOU65",
+    "alert_id": "Q0XXMRJNT3R5BM",
+    "created_at": "2026-06-22T20:38:25-07:00",
+    "summary": "Costco Non Prod (default) - Audience 6296: 0 successfull_exports from pizza tracker found 10 minutes after new export",
+    "audience_id": "6296",
+    "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q3C6EY1CXX6DTB",
+    "alert_id": "Q2PPFZR1Z5HHP3",
+    "created_at": "2026-06-22T20:42:06-07:00",
+    "summary": "albertsons (Albertsons Media) - Audience 2176: Audience Export failure for 2176 sent to client.",
+    "org_id": "albertsons_6",
+    "audience_id": "2176",
+    "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q3OXKN6IQYTM0C",
+    "alert_id": "Q3CZ846EEGU57F",
+    "created_at": "2026-06-22T21:11:24-07:00",
+    "summary": "Costco Non Prod (default) - Audience 6297: Audience Export failure for 6297 sent to client.",
+    "audience_id": "6297",
+    "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q07JFPJF1Z5MSB",
+    "alert_id": "Q2P9NLSCFYA367",
+    "created_at": "2026-06-22T21:19:23-07:00",
+    "summary": "Costco Non Prod (default) - Audience 6297: 0 successfull_exports from pizza tracker found 10 minutes after new export",
+    "audience_id": "6297",
+    "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q0LRG7LC17QHC0",
+    "alert_id": "Q2L67OM5WJOTID",
+    "created_at": "2026-06-22T21:28:44-07:00",
+    "summary": "albertsons (Albertsons Media) - Audience 8944: Audience Export failure for 8944 sent to client.",
+    "org_id": "albertsons_6",
+    "audience_id": "8944",
+    "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q0LBNI4LMZSL99",
+    "alert_id": "Q0T7GVQKHEAEO7",
+    "created_at": "2026-06-22T21:37:57-07:00",
+    "summary": "albertsons (Albertsons Media) - Audience 13072: Audience Export failure for 13072 sent to client.",
+    "org_id": "albertsons_6",
+    "audience_id": "13072",
+    "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q3D5BM8QKKHA3E",
+    "alert_id": "Q2EKH842U2JBWZ",
+    "created_at": "2026-06-22T21:53:04-07:00",
+    "summary": "albertsons (Albertsons Media) - Audience 9718: Audience Export failure for 9718 sent to client.",
+    "org_id": "albertsons_6",
+    "audience_id": "9718",
+    "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q1QQT96DKTRQSZ",
+    "alert_id": "Q15RZGRDXMEDXL",
+    "created_at": "2026-06-22T22:27:38-07:00",
+    "summary": "albertsons (Albertsons Media) - Audience 13149: Audience Export failure for 13149 sent to client.",
+    "org_id": "albertsons_6",
+    "audience_id": "13149",
+    "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q140U7GG9RCAQU",
+    "alert_id": "Q2AU0IE7CCV4T6",
+    "created_at": "2026-06-22T22:39:15-07:00",
+    "summary": "albertsons (Albertsons Media) - Audience 9792: Audience Export failure for 9792 sent to client.",
+    "org_id": "albertsons_6",
+    "audience_id": "9792",
+    "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q3F2J2NZQGCBA8",
+    "alert_id": "Q018C1J4RA2SH3",
+    "created_at": "2026-06-22T22:53:38-07:00",
+    "summary": "albertsons (Albertsons Media) - Audience 10679: Audience Export failure for 10679 sent to client.",
+    "org_id": "albertsons_6",
+    "audience_id": "10679",
+    "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q16DX9IDPC15VD",
+    "alert_id": "Q12WSM8W1Z42F8",
+    "created_at": "2026-06-22T22:53:59-07:00",
+    "summary": "albertsons (Albertsons Media) - Audience 10680: Audience Export failure for 10680 sent to client.",
+    "org_id": "albertsons_6",
+    "audience_id": "10680",
+    "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q3D07SXX5MT8PD",
+    "alert_id": "Q1TYLG4M1RSOKJ",
+    "created_at": "2026-06-22T23:28:13-07:00",
+    "summary": "albertsons (Albertsons Media) - Audience 11014: Audience Export failure for 11014 sent to client.",
+    "org_id": "albertsons_6",
+    "audience_id": "11014",
+    "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q3DJKJ88F7961S",
+    "alert_id": "Q006NOHXUQU5B2",
+    "created_at": "2026-06-22T23:56:02-07:00",
+    "summary": "albertsons (Albertsons Media) - Audience 11280: Audience Export failure for 11280 sent to client.",
+    "org_id": "albertsons_6",
+    "audience_id": "11280",
+    "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q3VC2EL90AOSKX",
+    "alert_id": "Q1H4VUHM7XYAY8",
+    "created_at": "2026-06-23T00:11:20-07:00",
+    "summary": "albertsons (Albertsons Media) - Audience 11489: Audience Export failure for 11489 sent to client.",
+    "org_id": "albertsons_6",
+    "audience_id": "11489",
+    "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q3T8YVL0VO05SK",
+    "alert_id": "Q0IY038GFO7TJU",
+    "created_at": "2026-06-23T00:11:47-07:00",
+    "summary": "albertsons (Albertsons Media) - Audience 11488: Audience Export failure for 11488 sent to client.",
+    "org_id": "albertsons_6",
+    "audience_id": "11488",
+    "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q1UEOA2CBT90GM",
+    "alert_id": "Q1A0XR0WZLCIBX",
+    "created_at": "2026-06-23T00:15:45-07:00",
+    "summary": "albertsons (Albertsons Media) - Audience 11572: Audience Export failure for 11572 sent to client.",
+    "org_id": "albertsons_6",
+    "audience_id": "11572",
+    "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q30P00WNLHRK9W",
+    "alert_id": "Q18DE0VWXEPBDV",
+    "created_at": "2026-06-23T00:23:25-07:00",
+    "summary": "albertsons (Albertsons Media) - Audience 11596: Audience Export failure for 11596 sent to client.",
+    "org_id": "albertsons_6",
+    "audience_id": "11596",
+    "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q09FHOR4ZDMTUL",
+    "alert_id": "Q01YTIVWYE60TI",
+    "created_at": "2026-06-23T00:42:11-07:00",
+    "summary": "albertsons (Albertsons Media) - Audience 11996: Audience Export failure for 11996 sent to client.",
+    "org_id": "albertsons_6",
+    "audience_id": "11996",
+    "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q2W8MBXYOAXD3J",
+    "alert_id": "Q0EEU0PS9HJHXS",
+    "created_at": "2026-06-23T01:16:34-07:00",
+    "summary": "albertsons (Albertsons Media) - Audience 2158: Audience Export failure for 2158 sent to client.",
+    "org_id": "albertsons_6",
+    "audience_id": "2158",
+    "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q0FDT9XRY0M4F2",
+    "alert_id": "Q3IKG97O2HCXPD",
+    "created_at": "2026-06-23T04:31:16-07:00",
+    "summary": "Costco Non Prod (default) - Audience 6298: Audience Export failure for 6298 sent to client.",
+    "audience_id": "6298",
+    "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q249NXETIDR0MT",
+    "alert_id": "Q23R5QVFEN694Z",
+    "created_at": "2026-06-23T04:39:17-07:00",
+    "summary": "Costco Non Prod (default) - Audience 6298: 0 successfull_exports from pizza tracker found 10 minutes after new export",
+    "audience_id": "6298",
+    "export_check_strategy": "any_export_after_alert"
+  },
+  {
+    "incident_id": "Q3R5I6YL230GYH",
+    "alert_id": "Q0BIJM8PSWX3HI",
+    "created_at": "2026-06-23T07:30:57-07:00",
+    "summary": "Costco (default): No data found for active audience 5309",
+    "org_id": "costco_4",
+    "audience_id": "5309",
+    "export_check_strategy": "checked_export_run_ids"
+  },
+  {
+    "incident_id": "Q29WSKI7IBRPVW",
+    "alert_id": "Q1VMCJ57UJQR3J",
+    "created_at": "2026-06-23T07:31:19-07:00",
+    "summary": "albertsons (Albertsons Media): Exports for audience 2125 failed with states: <(snapshotting_error,no_batches)>",
+    "org_id": "albertsons_6",
+    "audience_id": "2125",
+    "destination_type": "live_ramp_activation",
+    "destination_product": "live-ramp",
+    "state_tuple": {
+      "snapshotting": "snapshotting_error",
+      "export": "no_batches"
+    },
+    "checked_export_run_ids": [
+      "2125-live_ramp_activation_628-scheduled__2026-06-23T00:00:00+00:00"
+    ],
+    "export_check_strategy": "checked_export_run_ids"
+  },
+  {
+    "incident_id": "Q0KT9MIUIF06VD",
+    "alert_id": "Q2DLF16GB8QVJD",
+    "created_at": "2026-06-23T07:31:20-07:00",
+    "summary": "albertsons (Albertsons Media): Exports for audience 2126 failed with states: <(snapshotting_error,no_batches)>",
+    "org_id": "albertsons_6",
+    "audience_id": "2126",
+    "destination_type": "live_ramp_activation",
+    "destination_product": "live-ramp",
+    "state_tuple": {
+      "snapshotting": "snapshotting_error",
+      "export": "no_batches"
+    },
+    "checked_export_run_ids": [
+      "2126-live_ramp_activation_629-scheduled__2026-06-23T00:00:00+00:00"
+    ],
+    "export_check_strategy": "checked_export_run_ids"
+  },
+  {
+    "incident_id": "Q0NEGMFU9SDRIP",
+    "alert_id": "Q0SHHB9EYNWUBZ",
+    "created_at": "2026-06-23T07:31:25-07:00",
+    "summary": "albertsons (Albertsons Media): Exports for audience 2158 failed with states: <(snapshotting_error,no_batches)>",
+    "org_id": "albertsons_6",
+    "audience_id": "2158",
+    "destination_type": "live_ramp_activation",
+    "destination_product": "live-ramp",
+    "state_tuple": {
+      "snapshotting": "snapshotting_error",
+      "export": "no_batches"
+    },
+    "checked_export_run_ids": [
+      "2158-live_ramp_activation_657-scheduled__2026-06-23T00:00:00+00:00"
+    ],
+    "export_check_strategy": "checked_export_run_ids"
+  },
+  {
+    "incident_id": "Q1C6Q8ZS6DLVIH",
+    "alert_id": "Q1HTH8YSKV9L1N",
+    "created_at": "2026-06-23T07:31:28-07:00",
+    "summary": "albertsons (Albertsons Media): Exports for audience 2173 failed with states: <(snapshotting_error,no_batches)>",
+    "org_id": "albertsons_6",
+    "audience_id": "2173",
+    "destination_type": "live_ramp_activation",
+    "destination_product": "live-ramp",
+    "state_tuple": {
+      "snapshotting": "snapshotting_error",
+      "export": "no_batches"
+    },
+    "checked_export_run_ids": [
+      "2173-live_ramp_activation_658-scheduled__2026-06-23T00:00:00+00:00"
+    ],
+    "export_check_strategy": "checked_export_run_ids"
+  },
+  {
+    "incident_id": "Q281IJMKYIYEHV",
+    "alert_id": "Q13Q3LOCI8HZBB",
+    "created_at": "2026-06-23T07:31:29-07:00",
+    "summary": "albertsons (Albertsons Media): Exports for audience 2175 failed with states: <(snapshotting_error,no_batches)>",
+    "org_id": "albertsons_6",
+    "audience_id": "2175",
+    "destination_type": "live_ramp_activation",
+    "destination_product": "live-ramp",
+    "state_tuple": {
+      "snapshotting": "snapshotting_error",
+      "export": "no_batches"
+    },
+    "checked_export_run_ids": [
+      "2175-live_ramp_activation_669-scheduled__2026-06-23T00:00:00+00:00"
+    ],
+    "export_check_strategy": "checked_export_run_ids"
+  },
+  {
+    "incident_id": "Q2M9PQ0VIYN9Q7",
+    "alert_id": "Q0VURTPY524L7X",
+    "created_at": "2026-06-23T07:31:29-07:00",
+    "summary": "albertsons (Albertsons Media): Exports for audience 2176 failed with states: <(snapshotting_error,no_batches)>",
+    "org_id": "albertsons_6",
+    "audience_id": "2176",
+    "destination_type": "live_ramp_activation",
+    "destination_product": "live-ramp",
+    "state_tuple": {
+      "snapshotting": "snapshotting_error",
+      "export": "no_batches"
+    },
+    "checked_export_run_ids": [
+      "2176-live_ramp_activation_670-scheduled__2026-06-23T00:00:00+00:00"
+    ],
+    "export_check_strategy": "checked_export_run_ids"
+  },
+  {
+    "incident_id": "Q3X51HMAYEMKHO",
+    "alert_id": "Q1OC1CLFCGII8C",
+    "created_at": "2026-06-23T07:31:29-07:00",
+    "summary": "albertsons (Albertsons Media): Exports for audience 2174 failed with states: <(snapshotting_error,no_batches)>",
+    "org_id": "albertsons_6",
+    "audience_id": "2174",
+    "destination_type": "live_ramp_activation",
+    "destination_product": "live-ramp",
+    "state_tuple": {
+      "snapshotting": "snapshotting_error",
+      "export": "no_batches"
+    },
+    "checked_export_run_ids": [
+      "2174-live_ramp_activation_665-scheduled__2026-06-23T00:00:00+00:00"
+    ],
+    "export_check_strategy": "checked_export_run_ids"
+  },
+  {
+    "incident_id": "Q1O1OOB7GJ8P4A",
+    "alert_id": "Q27L5RANB68KU4",
+    "created_at": "2026-06-23T07:31:37-07:00",
+    "summary": "albertsons (Albertsons Media): Exports for audience 2218 failed with states: <(snapshotting_error,no_batches)>",
+    "org_id": "albertsons_6",
+    "audience_id": "2218",
+    "destination_type": "live_ramp_activation",
+    "destination_product": "live-ramp",
+    "state_tuple": {
+      "snapshotting": "snapshotting_error",
+      "export": "no_batches"
+    },
+    "checked_export_run_ids": [
+      "2218-live_ramp_activation_697-scheduled__2026-06-23T00:00:00+00:00"
+    ],
+    "export_check_strategy": "checked_export_run_ids"
+  },
+  {
+    "incident_id": "Q2IIOBNUV6BSPG",
+    "alert_id": "Q0WKXBFD1QCPXD",
+    "created_at": "2026-06-23T07:31:43-07:00",
+    "summary": "albertsons (Albertsons Media): Exports for audience 2237 failed with states: <(snapshotting_error,no_batches)>",
+    "org_id": "albertsons_6",
+    "audience_id": "2237",
+    "destination_type": "live_ramp_activation",
+    "destination_product": "live-ramp",
+    "state_tuple": {
+      "snapshotting": "snapshotting_error",
+      "export": "no_batches"
+    },
+    "checked_export_run_ids": [
+      "2237-live_ramp_activation_717-scheduled__2026-06-23T00:00:00+00:00"
+    ],
+    "export_check_strategy": "checked_export_run_ids"
+  },
+  {
+    "incident_id": "Q3CG224EW47WXW",
+    "alert_id": "Q11H651N7LGICF",
+    "created_at": "2026-06-23T07:31:53-07:00",
+    "summary": "Costco (default): No data found for active audience 5313",
+    "org_id": "costco_4",
+    "audience_id": "5313",
+    "export_check_strategy": "checked_export_run_ids"
+  },
+  {
+    "incident_id": "Q0YMC0G8MBU3S7",
+    "alert_id": "Q07N6LY7XHCHXK",
+    "created_at": "2026-06-23T07:34:11-07:00",
+    "summary": "albertsons (Albertsons Media): Exports for audience 3391 failed with states: <(snapshotting_error,no_batches)>",
+    "org_id": "albertsons_6",
+    "audience_id": "3391",
+    "destination_type": "live_ramp_activation",
+    "destination_product": "live-ramp",
+    "state_tuple": {
+      "snapshotting": "snapshotting_error",
+      "export": "no_batches"
+    },
+    "checked_export_run_ids": [
+      "3391-live_ramp_activation_1321-scheduled__2026-06-22T00:00:00+00:00"
+    ],
+    "export_check_strategy": "checked_export_run_ids"
+  },
+  {
+    "incident_id": "Q1LJB8EJA6JZEB",
+    "alert_id": "Q091WB9L3W1ETP",
+    "created_at": "2026-06-23T07:34:25-07:00",
+    "summary": "albertsons (Albertsons Media): Exports for audience 7053 failed with states: <(snapshotting_error,no_batches)>",
+    "org_id": "albertsons_6",
+    "audience_id": "7053",
+    "destination_type": "live_ramp_activation",
+    "destination_product": "live-ramp",
+    "state_tuple": {
+      "snapshotting": "snapshotting_error",
+      "export": "no_batches"
+    },
+    "checked_export_run_ids": [
+      "7053-live_ramp_activation_1463-scheduled__2026-06-23T00:00:00+00:00"
+    ],
+    "export_check_strategy": "checked_export_run_ids"
+  },
+  {
+    "incident_id": "Q1CEIF2TYUZHSP",
+    "alert_id": "Q3BU9634N1483Q",
+    "created_at": "2026-06-23T07:35:34-07:00",
+    "summary": "albertsons (Albertsons Media): Exports for audience 8944 failed with states: <(snapshotting_error,no_batches)>",
+    "org_id": "albertsons_6",
+    "audience_id": "8944",
+    "destination_type": "live_ramp_activation",
+    "destination_product": "live-ramp",
+    "state_tuple": {
+      "snapshotting": "snapshotting_error",
+      "export": "no_batches"
+    },
+    "checked_export_run_ids": [
+      "8944-live_ramp_activation_2488-scheduled__2026-06-23T00:00:00+00:00"
+    ],
+    "export_check_strategy": "checked_export_run_ids"
+  },
+  {
+    "incident_id": "Q2PLLXIG936TK5",
+    "alert_id": "Q3RTO230DDF2W5",
+    "created_at": "2026-06-23T07:35:39-07:00",
+    "summary": "albertsons (Albertsons Media): Exports for audience 9095 failed with states: <(snapshotting_finished,no_batches)>",
+    "org_id": "albertsons_6",
+    "audience_id": "9095",
+    "destination_type": "live_ramp_activation",
+    "destination_product": "live-ramp",
+    "state_tuple": {
+      "snapshotting": "snapshotting_finished",
+      "export": "no_batches"
+    },
+    "checked_export_run_ids": [
+      "9095-live_ramp_activation_1737-scheduled__2026-06-22T00:00:00+00:00"
+    ],
+    "export_check_strategy": "checked_export_run_ids"
+  },
+  {
+    "incident_id": "Q38JIFOCY2F0AO",
+    "alert_id": "Q30GIKI5S5ODZQ",
+    "created_at": "2026-06-23T07:35:50-07:00",
+    "summary": "albertsons (Albertsons Media): Exports for audience 9323 failed with states: <(snapshotting_error,no_batches)>",
+    "org_id": "albertsons_6",
+    "audience_id": "9323",
+    "destination_type": "live_ramp_activation",
+    "destination_product": "live-ramp",
+    "state_tuple": {
+      "snapshotting": "snapshotting_error",
+      "export": "no_batches"
+    },
+    "checked_export_run_ids": [
+      "9323-live_ramp_activation_1824-scheduled__2026-06-22T00:00:00+00:00"
+    ],
+    "export_check_strategy": "checked_export_run_ids"
+  },
+  {
+    "incident_id": "Q28Z0B0GA51K35",
+    "alert_id": "Q0JVLWNDWVV6MR",
+    "created_at": "2026-06-23T07:36:17-07:00",
+    "summary": "albertsons (Albertsons Media): Exports for audience 9718 failed with states: <(snapshotting_error,no_batches)>",
+    "org_id": "albertsons_6",
+    "audience_id": "9718",
+    "destination_type": "live_ramp_activation",
+    "destination_product": "live-ramp",
+    "state_tuple": {
+      "snapshotting": "snapshotting_error",
+      "export": "no_batches"
+    },
+    "checked_export_run_ids": [
+      "9718-live_ramp_activation_2022-scheduled__2026-06-23T00:00:00+00:00"
+    ],
+    "export_check_strategy": "checked_export_run_ids"
+  },
+  {
+    "incident_id": "Q2YTLIYU53UIVU",
+    "alert_id": "Q3Q3SEI64J1UYX",
+    "created_at": "2026-06-23T07:36:24-07:00",
+    "summary": "albertsons (Albertsons Media): Exports for audience 9792 failed with states: <(snapshotting_error,no_batches)>",
+    "org_id": "albertsons_6",
+    "audience_id": "9792",
+    "destination_type": "live_ramp_activation",
+    "destination_product": "live-ramp",
+    "state_tuple": {
+      "snapshotting": "snapshotting_error",
+      "export": "no_batches"
+    },
+    "checked_export_run_ids": [
+      "9792-live_ramp_activation_2027-scheduled__2026-06-23T00:00:00+00:00"
+    ],
+    "export_check_strategy": "checked_export_run_ids"
+  },
+  {
+    "incident_id": "Q2J49L2EK3Q237",
+    "alert_id": "Q2QI81T3ZL3N13",
+    "created_at": "2026-06-23T07:36:27-07:00",
+    "summary": "albertsons (Albertsons Media): Exports for audience 9879 failed with states: <(snapshotting_error,no_batches)>",
+    "org_id": "albertsons_6",
+    "audience_id": "9879",
+    "destination_type": "live_ramp_activation",
+    "destination_product": "live-ramp",
+    "state_tuple": {
+      "snapshotting": "snapshotting_error",
+      "export": "no_batches"
+    },
+    "checked_export_run_ids": [
+      "9879-live_ramp_activation_2009-scheduled__2026-06-23T00:00:00+00:00"
+    ],
+    "export_check_strategy": "checked_export_run_ids"
   }
 ]

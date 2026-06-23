@@ -1,0 +1,140 @@
+{
+  "check_id": "chk_q1h2g1lpqbkyiz_q360qwb0arjajz",
+  "source": "pagerduty",
+  "incident_id": "Q1H2G1LPQBKYIZ",
+  "alert_id": "Q360QWB0ARJAJZ",
+  "state": "blocked",
+  "scope": {
+    "env": "prod",
+    "org_id": "174",
+    "audience_id": "27576",
+    "endpoint_id": "app_facebook_263",
+    "destination_type": "facebook",
+    "match_strategy": "checked_export_run_ids",
+    "alert_created_at": "2026-06-03T08:05:10-07:00",
+    "checked_export_run_ids": [
+      "27576-facebook_16836-scheduled__2026-05-27T00:00:00+00:00",
+      "27576-facebook_16836-scheduled__2026-06-03T00:00:00+00:00"
+    ],
+    "glcli": "glcli --env prod bifrost pizza --audience-id 27576 --org-id 174"
+  },
+  "scope_key": "prod|174|27576|facebook|app_facebook_263|27576-facebook_16836-scheduled__2026-05-27T00:00:00+00:00,27576-facebook_16836-scheduled__2026-06-03T00:00:00+00:00",
+  "run_evaluations": [
+    {
+      "export_run_id": "27576-facebook_16836-scheduled__2026-05-27T00:00:00+00:00",
+      "health": "healthy",
+      "match_basis": "checked_export_run_id",
+      "blockers": [],
+      "selected_row": {
+        "export_run_id": "27576-facebook_16836-scheduled__2026-05-27T00:00:00+00:00",
+        "audience_id": "27576",
+        "endpoint_id": "app_facebook_263",
+        "destination_type": "facebook",
+        "created_at": "2026-05-27T00:23:21.593768+00:00",
+        "snapshotting_state": "snapshotting_finished",
+        "export_state": "export_finished",
+        "failed_export_count": 0,
+        "raw": {
+          "export_state": "export_finished",
+          "successful_add_count": 2,
+          "successful_remove_count": 0,
+          "failed_export_count": 0,
+          "rejected_row_count": 0,
+          "total_row_count": 2,
+          "successful_expanded_add_count": 0,
+          "successful_expanded_remove_count": 0,
+          "failed_expanded_export_count": 0,
+          "rejected_expanded_row_count": 0,
+          "total_expanded_row_count": 2,
+          "enhanced_match_count": 0,
+          "enhanced_row_count": 0,
+          "enhanced_total_records": 0,
+          "total_batch_count": 1,
+          "completed_batch_count": 1,
+          "successful_batch_count": 1,
+          "failed_batch_count": 0,
+          "failure_reason": null,
+          "info": {
+            "internal_export_id": "27576-facebook_16836-scheduled__2026-05-27T00:00:00+00:00-20260527002037",
+            "export_run_id": "27576-facebook_16836-scheduled__2026-05-27T00:00:00+00:00",
+            "audience_id": "120233963776760036",
+            "internal_audience_id": "27576",
+            "audience_name": "Devils_Paid_2526_Exclusion",
+            "organization_id": "174",
+            "organization_name": "njdevils",
+            "platform": "facebook",
+            "endpoint_id": "app_facebook_263",
+            "export_timestamp": "2026-05-27 00:23:19",
+            "error_file_uri": "gs://flywheel-prod-328213-temporary/batch_errors/98e136ff-d65c-44eb-927d-69eb0d65b913.csv",
+            "created_at": "2026-05-27T00:23:21.593768+00:00",
+            "export_complete_response": null
+          },
+          "snapshotting_state": "snapshotting_finished"
+        }
+      }
+    },
+    {
+      "export_run_id": "27576-facebook_16836-scheduled__2026-06-03T00:00:00+00:00",
+      "health": "blocked",
+      "match_basis": "checked_export_run_id",
+      "blockers": [
+        "failed_export_count",
+        "export_error"
+      ],
+      "selected_row": {
+        "export_run_id": "27576-facebook_16836-scheduled__2026-06-03T00:00:00+00:00",
+        "audience_id": "27576",
+        "endpoint_id": "app_facebook_263",
+        "destination_type": "facebook",
+        "created_at": "2026-06-03T01:37:36.670220+00:00",
+        "snapshotting_state": "snapshotting_finished",
+        "export_state": "export_error",
+        "failed_export_count": 3,
+        "raw": {
+          "export_state": "export_error",
+          "successful_add_count": 0,
+          "successful_remove_count": 0,
+          "failed_export_count": 3,
+          "rejected_row_count": 0,
+          "total_row_count": 3,
+          "successful_expanded_add_count": 0,
+          "successful_expanded_remove_count": 0,
+          "failed_expanded_export_count": 3,
+          "rejected_expanded_row_count": 0,
+          "total_expanded_row_count": 3,
+          "enhanced_match_count": 0,
+          "enhanced_row_count": 0,
+          "enhanced_total_records": 0,
+          "total_batch_count": 1,
+          "completed_batch_count": 1,
+          "successful_batch_count": 0,
+          "failed_batch_count": 1,
+          "failure_reason": null,
+          "info": {
+            "internal_export_id": "27576-facebook_16836-scheduled__2026-06-03T00:00:00+00:00-20260603002409",
+            "export_run_id": "27576-facebook_16836-scheduled__2026-06-03T00:00:00+00:00",
+            "audience_id": "120233963776760036",
+            "internal_audience_id": "27576",
+            "audience_name": "Devils_Paid_2526_Exclusion",
+            "organization_id": "174",
+            "organization_name": "njdevils",
+            "platform": "facebook",
+            "endpoint_id": "app_facebook_263",
+            "export_timestamp": "2026-06-03 01:37:32",
+            "error_file_uri": "gs://flywheel-prod-328213-temporary/batch_errors/6f6ab5ed-123e-4a8c-bb2e-f4aaee862d16.csv",
+            "created_at": "2026-06-03T01:37:36.670220+00:00",
+            "export_complete_response": null
+          },
+          "snapshotting_state": "snapshotting_finished"
+        }
+      }
+    }
+  ],
+  "blockers": [
+    "failed_export_count",
+    "export_error"
+  ],
+  "evidence_artifacts": [],
+  "created_at": "2026-06-22T21:14:55.027Z",
+  "updated_at": "2026-06-22T21:14:55.027Z"
+}

@@ -1,0 +1,77 @@
+{
+  "check_id": "chk_q2sd1o3brd8dhq_q26g9li7kyfv9l",
+  "source": "pagerduty",
+  "incident_id": "Q2SD1O3BRD8DHQ",
+  "alert_id": "Q26G9LI7KYFV9L",
+  "state": "healthy_closed",
+  "scope": {
+    "env": "prod",
+    "org_id": "402",
+    "audience_id": "14107",
+    "match_strategy": "any_export_after_alert",
+    "alert_created_at": "2026-06-03T17:28:44-07:00",
+    "checked_export_run_ids": [],
+    "glcli": "glcli --env prod bifrost pizza --audience-id 14107 --org-id 402"
+  },
+  "scope_key": "prod|402|14107|unknown_destination|unknown_endpoint|unknown_run",
+  "run_evaluations": [
+    {
+      "export_run_id": "14107-braze_17445-scheduled__2026-06-22T00:00:00+00:00",
+      "health": "healthy",
+      "match_basis": "any_export_after_alert",
+      "blockers": [],
+      "selected_row": {
+        "export_run_id": "14107-braze_17445-scheduled__2026-06-22T00:00:00+00:00",
+        "audience_id": "14107",
+        "endpoint_id": "app_braze_1229",
+        "destination_type": "braze",
+        "created_at": "2026-06-22T00:32:27.454006+00:00",
+        "snapshotting_state": "snapshotting_finished",
+        "export_state": "export_finished",
+        "failed_export_count": 0,
+        "raw": {
+          "export_state": "export_finished",
+          "successful_add_count": 78,
+          "successful_remove_count": 72,
+          "failed_export_count": 0,
+          "rejected_row_count": 2,
+          "total_row_count": 152,
+          "successful_expanded_add_count": 0,
+          "successful_expanded_remove_count": 0,
+          "failed_expanded_export_count": 0,
+          "rejected_expanded_row_count": 2,
+          "total_expanded_row_count": 152,
+          "enhanced_match_count": 0,
+          "enhanced_row_count": 0,
+          "enhanced_total_records": 0,
+          "total_batch_count": 1,
+          "completed_batch_count": 1,
+          "successful_batch_count": 1,
+          "failed_batch_count": 0,
+          "failure_reason": null,
+          "info": {
+            "internal_export_id": "14107-braze_17445-scheduled__2026-06-22T00:00:00+00:00-20260622002511",
+            "export_run_id": "14107-braze_17445-scheduled__2026-06-22T00:00:00+00:00",
+            "audience_id": null,
+            "internal_audience_id": "14107",
+            "audience_name": "",
+            "organization_id": "402",
+            "organization_name": "evgo",
+            "platform": "braze",
+            "endpoint_id": "app_braze_1229",
+            "export_timestamp": "2026-06-22 00:25:11",
+            "error_file_uri": "s3://evgo-growthloop/batch_errors/98449143-01f4-44cb-a6cb-15d274ab950f.csv",
+            "created_at": "2026-06-22T00:32:27.454006+00:00",
+            "export_complete_response": null
+          },
+          "snapshotting_state": "snapshotting_finished"
+        }
+      }
+    }
+  ],
+  "blockers": [],
+  "evidence_artifacts": [],
+  "created_at": "2026-06-22T21:17:12.513Z",
+  "updated_at": "2026-06-22T21:17:12.513Z",
+  "closed_at": "2026-06-22T21:17:12.513Z"
+}

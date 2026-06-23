@@ -1,0 +1,84 @@
+{
+  "check_id": "chk_q2cd9ogm7rscxu_q16xdbuy1umk8s",
+  "source": "pagerduty",
+  "incident_id": "Q2CD9OGM7RSCXU",
+  "alert_id": "Q16XDBUY1UMK8S",
+  "state": "blocked",
+  "scope": {
+    "env": "albertsons",
+    "org_id": "6",
+    "audience_id": "11579",
+    "endpoint_id": "app_liveramp_activation_26",
+    "destination_type": "live_ramp_activation",
+    "match_strategy": "checked_export_run_ids",
+    "alert_created_at": "2026-06-15T07:38:45-07:00",
+    "checked_export_run_ids": [
+      "11579-live_ramp_activation_3543-scheduled__2026-06-15T00:00:00+00:00"
+    ],
+    "glcli": "glcli --env albertsons bifrost pizza --audience-id 11579 --org-id 6"
+  },
+  "scope_key": "albertsons|6|11579|live_ramp_activation|app_liveramp_activation_26|11579-live_ramp_activation_3543-scheduled__2026-06-15T00:00:00+00:00",
+  "run_evaluations": [
+    {
+      "export_run_id": "11579-live_ramp_activation_3543-scheduled__2026-06-15T00:00:00+00:00",
+      "health": "blocked",
+      "match_basis": "checked_export_run_id",
+      "blockers": [
+        "export_error"
+      ],
+      "selected_row": {
+        "export_run_id": "11579-live_ramp_activation_3543-scheduled__2026-06-15T00:00:00+00:00",
+        "audience_id": "11579",
+        "endpoint_id": "app_liveramp_activation_26",
+        "destination_type": "live_ramp_activation",
+        "created_at": "2026-06-15T08:47:36.477211+00:00",
+        "snapshotting_state": "snapshotting_finished",
+        "export_state": "export_error",
+        "failed_export_count": 0,
+        "raw": {
+          "export_state": "export_error",
+          "successful_add_count": 0,
+          "successful_remove_count": 0,
+          "failed_export_count": 0,
+          "rejected_row_count": 0,
+          "total_row_count": 0,
+          "successful_expanded_add_count": 0,
+          "successful_expanded_remove_count": 0,
+          "failed_expanded_export_count": 0,
+          "rejected_expanded_row_count": 0,
+          "total_expanded_row_count": 0,
+          "enhanced_match_count": 0,
+          "enhanced_row_count": 0,
+          "enhanced_total_records": 0,
+          "total_batch_count": 1,
+          "completed_batch_count": 1,
+          "successful_batch_count": 0,
+          "failed_batch_count": 1,
+          "failure_reason": null,
+          "info": {
+            "internal_export_id": "11579-live_ramp_activation_3543-scheduled__2026-06-15T00:00:00+00:00-20260615084619",
+            "export_run_id": "11579-live_ramp_activation_3543-scheduled__2026-06-15T00:00:00+00:00",
+            "audience_id": "242793891",
+            "internal_audience_id": "11579",
+            "audience_name": "",
+            "organization_id": "6",
+            "organization_name": "albertsons",
+            "platform": "live_ramp_activation",
+            "endpoint_id": "app_liveramp_activation_26",
+            "export_timestamp": "2026-06-15 08:46:19",
+            "error_file_uri": "gs://emgi-outbound-prod-bkt-01/batch_errors/cc5777bd-df61-4ae0-a6d1-d95fa8d2d050.csv",
+            "created_at": "2026-06-15T08:47:36.477211+00:00",
+            "export_complete_response": null
+          },
+          "snapshotting_state": "snapshotting_finished"
+        }
+      }
+    }
+  ],
+  "blockers": [
+    "export_error"
+  ],
+  "evidence_artifacts": [],
+  "created_at": "2026-06-22T21:19:34.408Z",
+  "updated_at": "2026-06-22T22:34:28.115Z"
+}

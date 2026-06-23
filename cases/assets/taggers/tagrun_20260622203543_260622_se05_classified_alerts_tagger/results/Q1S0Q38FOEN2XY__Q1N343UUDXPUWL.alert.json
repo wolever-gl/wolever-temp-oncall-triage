@@ -1,0 +1,38 @@
+{
+  "alert_id": "Q1N343UUDXPUWL",
+  "incident_id": "Q1S0Q38FOEN2XY",
+  "incident_url": "https://growthloop.pagerduty.com/incidents/Q1S0Q38FOEN2XY",
+  "alert_status": "triggered",
+  "created_at": "2026-06-22T07:39:41-07:00",
+  "summary": "albertsons (Albertsons Media): Exports for audience 11366 failed with states: <(snapshotting_error,no_batches)>",
+  "parser_version": 2,
+  "org_id": "albertsons_6",
+  "org_slug": "albertsons",
+  "org_id_numeric": "6",
+  "audience_kind": "audience",
+  "audience_id": "11366",
+  "checked_export_run_ids": [
+    "11366-live_ramp_activation_3401-scheduled__2026-06-22T00:00:00+00:00"
+  ],
+  "export_check_strategy": "checked_export_run_ids",
+  "parsed_run_ids": [
+    {
+      "raw": "11366-live_ramp_activation_3401-scheduled__2026-06-22T00:00:00+00:00",
+      "audience_id": "11366",
+      "destination_type": "live_ramp_activation",
+      "endpoint_id": "3401",
+      "trigger_type": "scheduled",
+      "scheduled_at": "2026-06-22T00:00:00+00:00"
+    }
+  ],
+  "destination_type": "live_ramp_activation",
+  "destination_product": "live-ramp",
+  "state_tuple": {
+    "snapshotting": "snapshotting_error",
+    "export": "no_batches"
+  },
+  "source_glcli": "glcli --env albertsons bifrost pizza --audience-id 11366 --org-id 6",
+  "logs_url": "https://console.cloud.google.com/logs/query;query=resource.type%3D%22k8s_container%22%0A%0AjsonPayload.organization_id%3D%22albertsons_6%22%0AjsonPayload.internal_audience_id%3D%2211366%22%0A%0A;summaryFields=jsonPayload%252Fbatch_id:false:32:beginning;timeRange=2026-06-22T14:29:40Z%2F2026-06-22T14:49:40Z?project=gl-client-albertsons",
+  "error_signature": "albertsons (albertsons media): exports for audience <n> failed with states: <(snapshotting_error,no_batches)>",
+  "raw": "47. Q1N343UUDXPUWL | triggered | 2026-06-22T07:39:41-07:00\n   untrusted_message: \"albertsons (Albertsons Media): Exports for audience 11366 failed with states: <(snapshotting_error,no_batches)>\"\n   audience_id: \"11366\"\n   checked_export_run_ids: \"11366-live_ramp_activation_3401-scheduled__2026-06-22T00:00:00+00:00\"\n   glcli: glcli --env albertsons bifrost pizza --audience-id 11366 --org-id 6\n   logs: \"https://console.cloud.google.com/logs/query;query=resource.type%3D%22k8s_container%22%0A%0AjsonPayload.organization_id%3D%22albertsons_6%22%0AjsonPayload.internal_audience_id%3D%2211366%22%0A%0A;summaryFields=jsonPayload%252Fbatch_id:false:32:beginning;timeRange=2026-06-22T14:29:40Z%2F2026-06-22T14:49:40Z?project=gl-client-albertsons\""
+}

@@ -1,0 +1,27 @@
+{
+  "group_id": "260623-albertsons_6-snapshotting-error-09",
+  "state": "resolved",
+  "tags": [
+    "triage:needs_review",
+    "resolved:merged"
+  ],
+  "title": "albertsons_6 snapshotting-error",
+  "summary": "Merged into 260622-albertsons_6-bigquery-type-mismatch: 2026-06-23 Albertsons snapshotting alert failed pre_snapshotting_check with BigQuery expression type incompatibility; same remediation path as existing BigQuery type mismatch cohort.",
+  "deterministic_key": "v3|incident:Q28Z0B0GA51K35|org:albertsons_6|class:snapshotting-error",
+  "grouping_version": 3,
+  "created_at": "2026-06-23T14:41:01.019Z",
+  "updated_at": "2026-06-23T15:30:49.726Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q28Z0B0GA51K35",
+      "alert_id": "Q0JVLWNDWVV6MR"
+    }
+  ],
+  "incident_ids": [
+    "Q28Z0B0GA51K35"
+  ],
+  "related_group_ids": [
+    "260622-albertsons_6-bigquery-type-mismatch"
+  ],
+  "next_action": "Follow target group 260622-albertsons_6-bigquery-type-mismatch."
+}

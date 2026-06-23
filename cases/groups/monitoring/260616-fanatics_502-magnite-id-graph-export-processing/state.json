@@ -1,0 +1,24 @@
+{
+  "group_id": "260616-fanatics_502-magnite-id-graph-export-processing",
+  "state": "monitoring",
+  "tags": [
+    "triage:needs_review",
+    "monitoring:export-processing"
+  ],
+  "title": "fanatics_502 magnite-id-graph export-processing",
+  "summary": "Auto-monitored from Pizza export checks: 1 alert-scoped export check(s) are still processing and 0 are already healthy.",
+  "deterministic_key": "v3|incident:Q16PUZFUKXV9JR|org:fanatics_502|dest:magnite-id-graph|class:export-processing",
+  "grouping_version": 3,
+  "created_at": "2026-06-22T18:54:54.145Z",
+  "updated_at": "2026-06-22T21:32:15.419Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q16PUZFUKXV9JR",
+      "alert_id": "Q1KA72EYWL61UU"
+    }
+  ],
+  "incident_ids": [
+    "Q16PUZFUKXV9JR"
+  ],
+  "related_group_ids": []
+}

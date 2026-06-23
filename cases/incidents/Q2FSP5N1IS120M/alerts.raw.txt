@@ -1,0 +1,11 @@
+Alerts (1)
+----------------
+1. Q1UPUXXO6A4HY3 | triggered | 2026-06-22T20:33:09-07:00
+   untrusted_message: "Costco Non Prod (default) - Audience 6295: 0 successfull_exports from pizza tracker found 10 minutes after new export"
+   audience_id: "6295"
+   glcli: glcli --env costco bifrost pizza --audience-id 6295 --org-id 3
+
+Deduped glcli commands by audience
+-----------------------------------
+audience_id 6295:
+  glcli --env costco bifrost pizza --audience-id 6295 --org-id 3

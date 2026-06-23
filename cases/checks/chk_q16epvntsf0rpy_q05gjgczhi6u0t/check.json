@@ -1,0 +1,86 @@
+{
+  "check_id": "chk_q16epvntsf0rpy_q05gjgczhi6u0t",
+  "source": "pagerduty",
+  "incident_id": "Q16EPVNTSF0RPY",
+  "alert_id": "Q05GJGCZHI6U0T",
+  "state": "blocked",
+  "scope": {
+    "env": "prod",
+    "org_id": "502",
+    "audience_id": "35291",
+    "endpoint_id": "app_snowflake_1746",
+    "destination_type": "snowflake",
+    "match_strategy": "checked_export_run_ids",
+    "alert_created_at": "2026-06-22T08:10:17-07:00",
+    "checked_export_run_ids": [
+      "35291-snowflake_21624-scheduled__2026-06-18T00:00:00+00:00"
+    ],
+    "glcli": "glcli --env prod bifrost pizza --audience-id 35291 --org-id 502"
+  },
+  "scope_key": "prod|502|35291|snowflake|app_snowflake_1746|35291-snowflake_21624-scheduled__2026-06-18T00:00:00+00:00",
+  "run_evaluations": [
+    {
+      "export_run_id": "35291-snowflake_21624-scheduled__2026-06-18T00:00:00+00:00",
+      "health": "blocked",
+      "match_basis": "checked_export_run_id",
+      "blockers": [
+        "failed_export_count",
+        "export_error"
+      ],
+      "selected_row": {
+        "export_run_id": "35291-snowflake_21624-scheduled__2026-06-18T00:00:00+00:00",
+        "audience_id": "35291",
+        "endpoint_id": "app_snowflake_1746",
+        "destination_type": "snowflake",
+        "created_at": "2026-06-18T01:29:17.481207+00:00",
+        "snapshotting_state": "snapshotting_finished",
+        "export_state": "export_error",
+        "failed_export_count": 12235,
+        "raw": {
+          "export_state": "export_error",
+          "successful_add_count": 790223,
+          "successful_remove_count": 0,
+          "failed_export_count": 12235,
+          "rejected_row_count": 0,
+          "total_row_count": 802458,
+          "successful_expanded_add_count": 0,
+          "successful_expanded_remove_count": 0,
+          "failed_expanded_export_count": 12235,
+          "rejected_expanded_row_count": 0,
+          "total_expanded_row_count": 802458,
+          "enhanced_match_count": 0,
+          "enhanced_row_count": 0,
+          "enhanced_total_records": 0,
+          "total_batch_count": 51,
+          "completed_batch_count": 51,
+          "successful_batch_count": 50,
+          "failed_batch_count": 1,
+          "failure_reason": null,
+          "info": {
+            "internal_export_id": "35291-snowflake_21624-scheduled__2026-06-18T00:00:00+00:00-20260618012329",
+            "export_run_id": "35291-snowflake_21624-scheduled__2026-06-18T00:00:00+00:00",
+            "audience_id": null,
+            "internal_audience_id": "35291",
+            "audience_name": "FAN_league_NBA_team_Celtics_T2",
+            "organization_id": "502",
+            "organization_name": "fanatics",
+            "platform": "snowflake",
+            "endpoint_id": "app_snowflake_1746",
+            "export_timestamp": "2026-06-18 01:28:59",
+            "error_file_uri": "gs://flywheel-prod-328213-temporary/batch_errors/35df8c92-bf3c-44dc-a18b-e739c5934282.csv",
+            "created_at": "2026-06-18T01:29:17.481207+00:00",
+            "export_complete_response": null
+          },
+          "snapshotting_state": "snapshotting_finished"
+        }
+      }
+    }
+  ],
+  "blockers": [
+    "failed_export_count",
+    "export_error"
+  ],
+  "evidence_artifacts": [],
+  "created_at": "2026-06-22T22:10:30.821Z",
+  "updated_at": "2026-06-22T22:10:30.821Z"
+}

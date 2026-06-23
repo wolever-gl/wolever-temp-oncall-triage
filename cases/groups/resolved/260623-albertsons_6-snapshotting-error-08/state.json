@@ -1,0 +1,27 @@
+{
+  "group_id": "260623-albertsons_6-snapshotting-error-08",
+  "state": "resolved",
+  "tags": [
+    "triage:needs_review",
+    "resolved:merged"
+  ],
+  "title": "albertsons_6 snapshotting-error",
+  "summary": "Merged into 260622-albertsons_6-http-client-errors: 2026-06-23 Albertsons snapshotting alert has pre_snapshotting_check HTTP client error; scoped logs show this is the existing Quervice missing Product_Attributes_Product_Group_categoryL validation class.",
+  "deterministic_key": "v3|incident:Q281IJMKYIYEHV|org:albertsons_6|class:snapshotting-error",
+  "grouping_version": 3,
+  "created_at": "2026-06-23T14:41:01.019Z",
+  "updated_at": "2026-06-23T14:54:50.825Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q281IJMKYIYEHV",
+      "alert_id": "Q13Q3LOCI8HZBB"
+    }
+  ],
+  "incident_ids": [
+    "Q281IJMKYIYEHV"
+  ],
+  "related_group_ids": [
+    "260622-albertsons_6-http-client-errors"
+  ],
+  "next_action": "Follow target group 260622-albertsons_6-http-client-errors."
+}

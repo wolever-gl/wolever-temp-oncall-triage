@@ -1,0 +1,67 @@
+{
+  "check_id": "chk_q2b59nki3yd7z6_q2yep9urc7q9vx",
+  "source": "pagerduty",
+  "incident_id": "Q2B59NKI3YD7Z6",
+  "alert_id": "Q2YEP9URC7Q9VX",
+  "state": "healthy_closed",
+  "scope": {
+    "env": "prod",
+    "org_id": "174",
+    "audience_id": "38727",
+    "match_strategy": "any_export_after_alert",
+    "alert_created_at": "2026-06-22T16:03:10-07:00",
+    "checked_export_run_ids": [],
+    "glcli": "glcli --env prod bifrost pizza --audience-id 38727 --org-id 174"
+  },
+  "scope_key": "prod|174|38727|unknown_destination|unknown_endpoint|unknown_run",
+  "run_evaluations": [
+    {
+      "export_run_id": "38727-marketing_cloud_22833-scheduled__2026-06-23T10:00:00+00:00",
+      "health": "healthy",
+      "match_basis": "any_export_after_alert",
+      "blockers": [],
+      "selected_row": {
+        "export_run_id": "38727-marketing_cloud_22833-scheduled__2026-06-23T10:00:00+00:00",
+        "audience_id": "38727",
+        "destination_type": "marketing_cloud",
+        "created_at": "2026-06-23T11:35:10.286241+00:00",
+        "snapshotting_state": "snapshotting_finished_no_deltas",
+        "export_state": "no_batches",
+        "failed_export_count": 0,
+        "raw": {
+          "export_state": "no_batches",
+          "successful_add_count": 0,
+          "successful_remove_count": 0,
+          "failed_export_count": 0,
+          "rejected_row_count": 0,
+          "total_row_count": 0,
+          "successful_expanded_add_count": 0,
+          "successful_expanded_remove_count": 0,
+          "failed_expanded_export_count": 0,
+          "rejected_expanded_row_count": 0,
+          "total_expanded_row_count": 0,
+          "enhanced_match_count": 0,
+          "enhanced_row_count": 0,
+          "enhanced_total_records": 0,
+          "total_batch_count": 0,
+          "completed_batch_count": 0,
+          "successful_batch_count": 0,
+          "failed_batch_count": 0,
+          "failure_reason": null,
+          "info": {
+            "internal_audience_id": "38727",
+            "export_run_id": "38727-marketing_cloud_22833-scheduled__2026-06-23T10:00:00+00:00",
+            "export_timestamp": "2026-06-23 11:35:10",
+            "created_at": "2026-06-23T11:35:10.286241+00:00"
+          },
+          "snapshotting_state": "snapshotting_finished_no_deltas"
+        }
+      }
+    }
+  ],
+  "blockers": [],
+  "evidence_artifacts": [],
+  "created_at": "2026-06-23T13:54:45.219Z",
+  "updated_at": "2026-06-23T13:54:45.219Z",
+  "closed_at": "2026-06-23T13:54:45.219Z"
+}

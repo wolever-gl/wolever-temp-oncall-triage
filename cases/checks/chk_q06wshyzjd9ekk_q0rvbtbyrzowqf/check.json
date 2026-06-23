@@ -1,0 +1,140 @@
+{
+  "check_id": "chk_q06wshyzjd9ekk_q0rvbtbyrzowqf",
+  "source": "pagerduty",
+  "incident_id": "Q06WSHYZJD9EKK",
+  "alert_id": "Q0RVBTBYRZOWQF",
+  "state": "blocked",
+  "scope": {
+    "env": "prod",
+    "org_id": "451",
+    "audience_id": "24855",
+    "endpoint_id": "app_linkedin_ads_1600",
+    "destination_type": "linkedin_ads",
+    "match_strategy": "checked_export_run_ids",
+    "alert_created_at": "2026-06-22T07:58:07-07:00",
+    "checked_export_run_ids": [
+      "24855-linkedin_ads_22541-scheduled__2026-06-22T00:00:00+00:00",
+      "24855-linkedin_ads_22542-scheduled__2026-06-22T00:00:00+00:00"
+    ],
+    "glcli": "glcli --env prod bifrost pizza --audience-id 24855 --org-id 451"
+  },
+  "scope_key": "prod|451|24855|linkedin_ads|app_linkedin_ads_1600|24855-linkedin_ads_22541-scheduled__2026-06-22T00:00:00+00:00,24855-linkedin_ads_22542-scheduled__2026-06-22T00:00:00+00:00",
+  "run_evaluations": [
+    {
+      "export_run_id": "24855-linkedin_ads_22541-scheduled__2026-06-22T00:00:00+00:00",
+      "health": "blocked",
+      "match_basis": "checked_export_run_id",
+      "blockers": [
+        "failed_export_count",
+        "export_error"
+      ],
+      "selected_row": {
+        "export_run_id": "24855-linkedin_ads_22541-scheduled__2026-06-22T00:00:00+00:00",
+        "audience_id": "24855",
+        "endpoint_id": "app_linkedin_ads_1600",
+        "destination_type": "linkedin_ads",
+        "created_at": "2026-06-22T00:57:14.898662+00:00",
+        "snapshotting_state": "snapshotting_finished",
+        "export_state": "export_error",
+        "failed_export_count": 851,
+        "raw": {
+          "export_state": "export_error",
+          "successful_add_count": 0,
+          "successful_remove_count": 0,
+          "failed_export_count": 851,
+          "rejected_row_count": 0,
+          "total_row_count": 851,
+          "successful_expanded_add_count": 0,
+          "successful_expanded_remove_count": 0,
+          "failed_expanded_export_count": 851,
+          "rejected_expanded_row_count": 0,
+          "total_expanded_row_count": 851,
+          "enhanced_match_count": 0,
+          "enhanced_row_count": 0,
+          "enhanced_total_records": 0,
+          "total_batch_count": 1,
+          "completed_batch_count": 1,
+          "successful_batch_count": 0,
+          "failed_batch_count": 1,
+          "failure_reason": null,
+          "info": {
+            "internal_export_id": "24855-linkedin_ads_22541-scheduled__2026-06-22T00:00:00+00:00-20260622005022",
+            "export_run_id": "24855-linkedin_ads_22541-scheduled__2026-06-22T00:00:00+00:00",
+            "audience_id": "60860232",
+            "internal_audience_id": "24855",
+            "audience_name": "AE - RFI Submit - Online ",
+            "organization_id": "451",
+            "organization_name": "asuenterprisepartners",
+            "platform": "linkedin_ads",
+            "endpoint_id": "app_linkedin_ads_1600",
+            "export_timestamp": "2026-06-22 00:57:13",
+            "error_file_uri": "gs://flywheel-prod-328213-temporary/batch_errors/35d3eb47-cace-4f76-a9da-90d31b965fdf.csv",
+            "created_at": "2026-06-22T00:57:14.898662+00:00",
+            "export_complete_response": null
+          },
+          "snapshotting_state": "snapshotting_finished"
+        }
+      }
+    },
+    {
+      "export_run_id": "24855-linkedin_ads_22542-scheduled__2026-06-22T00:00:00+00:00",
+      "health": "healthy",
+      "match_basis": "checked_export_run_id",
+      "blockers": [],
+      "selected_row": {
+        "export_run_id": "24855-linkedin_ads_22542-scheduled__2026-06-22T00:00:00+00:00",
+        "audience_id": "24855",
+        "endpoint_id": "app_linkedin_ads_1600",
+        "destination_type": "linkedin_ads",
+        "created_at": "2026-06-22T01:07:19.505067+00:00",
+        "snapshotting_state": "snapshotting_finished",
+        "export_state": "export_finished",
+        "failed_export_count": 0,
+        "raw": {
+          "export_state": "export_finished",
+          "successful_add_count": 851,
+          "successful_remove_count": 0,
+          "failed_export_count": 0,
+          "rejected_row_count": 0,
+          "total_row_count": 851,
+          "successful_expanded_add_count": 0,
+          "successful_expanded_remove_count": 0,
+          "failed_expanded_export_count": 0,
+          "rejected_expanded_row_count": 0,
+          "total_expanded_row_count": 851,
+          "enhanced_match_count": 0,
+          "enhanced_row_count": 0,
+          "enhanced_total_records": 0,
+          "total_batch_count": 1,
+          "completed_batch_count": 1,
+          "successful_batch_count": 1,
+          "failed_batch_count": 0,
+          "failure_reason": null,
+          "info": {
+            "internal_export_id": "24855-linkedin_ads_22542-scheduled__2026-06-22T00:00:00+00:00-20260622010018",
+            "export_run_id": "24855-linkedin_ads_22542-scheduled__2026-06-22T00:00:00+00:00",
+            "audience_id": "60880239",
+            "internal_audience_id": "24855",
+            "audience_name": "AE - RFI Submit - Online ",
+            "organization_id": "451",
+            "organization_name": "asuenterprisepartners",
+            "platform": "linkedin_ads",
+            "endpoint_id": "app_linkedin_ads_1600",
+            "export_timestamp": "2026-06-22 01:07:13",
+            "error_file_uri": "gs://flywheel-prod-328213-temporary/batch_errors/5ce4520c-a7a3-4f8e-abd2-4bfdb4a971f2.csv",
+            "created_at": "2026-06-22T01:07:19.505067+00:00",
+            "export_complete_response": null
+          },
+          "snapshotting_state": "snapshotting_finished"
+        }
+      }
+    }
+  ],
+  "blockers": [
+    "failed_export_count",
+    "export_error"
+  ],
+  "evidence_artifacts": [],
+  "created_at": "2026-06-22T22:01:46.643Z",
+  "updated_at": "2026-06-22T23:25:22.708Z"
+}

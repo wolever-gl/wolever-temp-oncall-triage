@@ -1,0 +1,100 @@
+{
+  "group_id": "260607-albertsons_6-client-sent-export-failure",
+  "state": "resolved",
+  "tags": [
+    "triage:needs_review",
+    "resolved:stale_one_off_webapp_exports"
+  ],
+  "title": "albertsons_6 client-sent-export-failure",
+  "summary": "Closed as stale one-off May 22 webapp exports; blocked audiences are not expected to self-heal on a recurring schedule.",
+  "deterministic_key": "v3|incident:Q1E4EUPF9HDZNA|org:albertsons_6|class:client-sent-export-failure",
+  "grouping_version": 3,
+  "created_at": "2026-06-22T18:54:54.145Z",
+  "updated_at": "2026-06-22T21:01:42.756Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q1E4EUPF9HDZNA",
+      "alert_id": "Q34RH0AKYBP4BS"
+    },
+    {
+      "incident_id": "Q1E4EUPF9HDZNA",
+      "alert_id": "Q16ZD1ZBD6MIYP"
+    },
+    {
+      "incident_id": "Q1E4EUPF9HDZNA",
+      "alert_id": "Q3SDYIGIP22NE8"
+    },
+    {
+      "incident_id": "Q1E4EUPF9HDZNA",
+      "alert_id": "Q12NGOFR9OAKBQ"
+    },
+    {
+      "incident_id": "Q1E4EUPF9HDZNA",
+      "alert_id": "Q0Z73DMLSNOJJ4"
+    },
+    {
+      "incident_id": "Q1E4EUPF9HDZNA",
+      "alert_id": "Q3W6MNJGHCIHZ2"
+    },
+    {
+      "incident_id": "Q1E4EUPF9HDZNA",
+      "alert_id": "Q24CCE5JZDSNGO"
+    },
+    {
+      "incident_id": "Q1E4EUPF9HDZNA",
+      "alert_id": "Q27DZFH7TFAM6D"
+    },
+    {
+      "incident_id": "Q1E4EUPF9HDZNA",
+      "alert_id": "Q2KR6HAFZDVJ66"
+    },
+    {
+      "incident_id": "Q1E4EUPF9HDZNA",
+      "alert_id": "Q0UKDFROHGMAHX"
+    },
+    {
+      "incident_id": "Q1E4EUPF9HDZNA",
+      "alert_id": "Q304J002NKFIYC"
+    },
+    {
+      "incident_id": "Q1E4EUPF9HDZNA",
+      "alert_id": "Q0AILIITL15LVB"
+    },
+    {
+      "incident_id": "Q1E4EUPF9HDZNA",
+      "alert_id": "Q16TO30QDG1BM3"
+    },
+    {
+      "incident_id": "Q1E4EUPF9HDZNA",
+      "alert_id": "Q2V756BRVPWMSB"
+    },
+    {
+      "incident_id": "Q1E4EUPF9HDZNA",
+      "alert_id": "Q00QZ6RVPK1SRI"
+    },
+    {
+      "incident_id": "Q1E4EUPF9HDZNA",
+      "alert_id": "Q03DGVA8UR7AXG"
+    },
+    {
+      "incident_id": "Q1E4EUPF9HDZNA",
+      "alert_id": "Q0S6CCAVA6U8NV"
+    },
+    {
+      "incident_id": "Q1E4EUPF9HDZNA",
+      "alert_id": "Q2QGT8UVLQM7GG"
+    },
+    {
+      "incident_id": "Q1E4EUPF9HDZNA",
+      "alert_id": "Q0XLBYTF1I9RWI"
+    },
+    {
+      "incident_id": "Q1E4EUPF9HDZNA",
+      "alert_id": "Q3UQ83PSBFGFKS"
+    }
+  ],
+  "incident_ids": [
+    "Q1E4EUPF9HDZNA"
+  ],
+  "related_group_ids": []
+}

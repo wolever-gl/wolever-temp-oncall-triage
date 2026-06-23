@@ -1,0 +1,67 @@
+{
+  "check_id": "chk_q1h2g1lpqbkyiz_q0bu4zpyrd89th",
+  "source": "pagerduty",
+  "incident_id": "Q1H2G1LPQBKYIZ",
+  "alert_id": "Q0BU4ZPYRD89TH",
+  "state": "healthy_closed",
+  "scope": {
+    "env": "prod",
+    "org_id": "174",
+    "audience_id": "27534",
+    "match_strategy": "any_export_after_alert",
+    "alert_created_at": "2026-06-03T03:42:31-07:00",
+    "checked_export_run_ids": [],
+    "glcli": "glcli --env prod bifrost pizza --audience-id 27534 --org-id 174"
+  },
+  "scope_key": "prod|174|27534|unknown_destination|unknown_endpoint|unknown_run",
+  "run_evaluations": [
+    {
+      "export_run_id": "27534-facebook_16810-scheduled__2026-06-22T10:00:00+00:00",
+      "health": "healthy",
+      "match_basis": "any_export_after_alert",
+      "blockers": [],
+      "selected_row": {
+        "export_run_id": "27534-facebook_16810-scheduled__2026-06-22T10:00:00+00:00",
+        "audience_id": "27534",
+        "destination_type": "facebook",
+        "created_at": "2026-06-22T11:27:25.940216+00:00",
+        "snapshotting_state": "snapshotting_finished_no_deltas",
+        "export_state": "no_batches",
+        "failed_export_count": 0,
+        "raw": {
+          "export_state": "no_batches",
+          "successful_add_count": 0,
+          "successful_remove_count": 0,
+          "failed_export_count": 0,
+          "rejected_row_count": 0,
+          "total_row_count": 0,
+          "successful_expanded_add_count": 0,
+          "successful_expanded_remove_count": 0,
+          "failed_expanded_export_count": 0,
+          "rejected_expanded_row_count": 0,
+          "total_expanded_row_count": 0,
+          "enhanced_match_count": 0,
+          "enhanced_row_count": 0,
+          "enhanced_total_records": 0,
+          "total_batch_count": 0,
+          "completed_batch_count": 0,
+          "successful_batch_count": 0,
+          "failed_batch_count": 0,
+          "failure_reason": null,
+          "info": {
+            "internal_audience_id": "27534",
+            "export_run_id": "27534-facebook_16810-scheduled__2026-06-22T10:00:00+00:00",
+            "export_timestamp": "2026-06-22 11:27:25",
+            "created_at": "2026-06-22T11:27:25.940216+00:00"
+          },
+          "snapshotting_state": "snapshotting_finished_no_deltas"
+        }
+      }
+    }
+  ],
+  "blockers": [],
+  "evidence_artifacts": [],
+  "created_at": "2026-06-22T21:15:30.792Z",
+  "updated_at": "2026-06-22T21:15:30.792Z",
+  "closed_at": "2026-06-22T21:15:30.792Z"
+}

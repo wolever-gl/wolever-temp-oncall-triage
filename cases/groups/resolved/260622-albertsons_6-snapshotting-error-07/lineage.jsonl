@@ -1,0 +1,1 @@
+{"ts":"2026-06-22T22:08:18.374Z","actor":"agent","kind":"merge","related_group_id":"260622-albertsons_6-http-client-errors","summary":"Merged into 260622-albertsons_6-http-client-errors.","rationale":"Audience 6999 export check shows pre_snapshotting_check requested field missing from the source schema, matching the client/schema-validation remediation path."}

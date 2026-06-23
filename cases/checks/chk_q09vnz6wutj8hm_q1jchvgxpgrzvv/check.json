@@ -1,0 +1,86 @@
+{
+  "check_id": "chk_q09vnz6wutj8hm_q1jchvgxpgrzvv",
+  "source": "pagerduty",
+  "incident_id": "Q09VNZ6WUTJ8HM",
+  "alert_id": "Q1JCHVGXPGRZVV",
+  "state": "blocked",
+  "scope": {
+    "env": "prod",
+    "org_id": "273",
+    "audience_id": "21403",
+    "endpoint_id": "app_facebook_1606",
+    "destination_type": "facebook",
+    "match_strategy": "checked_export_run_ids",
+    "alert_created_at": "2026-06-16T08:08:55-07:00",
+    "checked_export_run_ids": [
+      "21403-facebook_13599-scheduled__2026-06-11T00:00:00+00:00"
+    ],
+    "glcli": "glcli --env prod bifrost pizza --audience-id 21403 --org-id 273"
+  },
+  "scope_key": "prod|273|21403|facebook|app_facebook_1606|21403-facebook_13599-scheduled__2026-06-11T00:00:00+00:00",
+  "run_evaluations": [
+    {
+      "export_run_id": "21403-facebook_13599-scheduled__2026-06-11T00:00:00+00:00",
+      "health": "blocked",
+      "match_basis": "checked_export_run_id",
+      "blockers": [
+        "failed_export_count",
+        "export_error"
+      ],
+      "selected_row": {
+        "export_run_id": "21403-facebook_13599-scheduled__2026-06-11T00:00:00+00:00",
+        "audience_id": "21403",
+        "endpoint_id": "app_facebook_1606",
+        "destination_type": "facebook",
+        "created_at": "2026-06-11T00:16:21.295644+00:00",
+        "snapshotting_state": "snapshotting_finished",
+        "export_state": "export_error",
+        "failed_export_count": 4107,
+        "raw": {
+          "export_state": "export_error",
+          "successful_add_count": 0,
+          "successful_remove_count": 0,
+          "failed_export_count": 4107,
+          "rejected_row_count": 4649,
+          "total_row_count": 8756,
+          "successful_expanded_add_count": 0,
+          "successful_expanded_remove_count": 0,
+          "failed_expanded_export_count": 4107,
+          "rejected_expanded_row_count": 4649,
+          "total_expanded_row_count": 8756,
+          "enhanced_match_count": 0,
+          "enhanced_row_count": 0,
+          "enhanced_total_records": 0,
+          "total_batch_count": 1,
+          "completed_batch_count": 1,
+          "successful_batch_count": 0,
+          "failed_batch_count": 1,
+          "failure_reason": null,
+          "info": {
+            "internal_export_id": "21403-facebook_13599-scheduled__2026-06-11T00:00:00+00:00-20260611001531",
+            "export_run_id": "21403-facebook_13599-scheduled__2026-06-11T00:00:00+00:00",
+            "audience_id": "120221562947690721",
+            "internal_audience_id": "21403",
+            "audience_name": "fdy_Acquisition Home Equity_top30p",
+            "organization_id": "273",
+            "organization_name": "faraday",
+            "platform": "facebook",
+            "endpoint_id": "app_facebook_1606",
+            "export_timestamp": "2026-06-11 00:16:10",
+            "error_file_uri": "gs://flywheel-prod-328213-temporary/batch_errors/ec0bae22-7b13-4ee5-ae82-f8d11ee1de62.csv",
+            "created_at": "2026-06-11T00:16:21.295644+00:00",
+            "export_complete_response": null
+          },
+          "snapshotting_state": "snapshotting_finished"
+        }
+      }
+    }
+  ],
+  "blockers": [
+    "failed_export_count",
+    "export_error"
+  ],
+  "evidence_artifacts": [],
+  "created_at": "2026-06-22T21:33:00.473Z",
+  "updated_at": "2026-06-22T21:33:00.473Z"
+}

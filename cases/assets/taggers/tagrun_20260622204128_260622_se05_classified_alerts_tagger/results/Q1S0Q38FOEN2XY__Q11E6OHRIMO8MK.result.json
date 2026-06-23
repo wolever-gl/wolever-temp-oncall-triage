@@ -1,0 +1,26 @@
+{
+  "annotation": {
+    "ts": "2026-06-22T20:41:28.581Z",
+    "alert_ref": {
+      "incident_id": "Q1S0Q38FOEN2XY",
+      "alert_id": "Q11E6OHRIMO8MK"
+    },
+    "tags": [
+      "evidence:260622-se05-quervice-timeout"
+    ],
+    "decision": "tag",
+    "confidence": "high",
+    "summary": "SE05 alert belongs with Albertsons Quervice timeout/503 failures. Audience 11374, alert Q1S0Q38FOEN2XY/Q11E6OHRIMO8MK.",
+    "source": {
+      "kind": "tagger",
+      "run_id": "tagrun_20260622204128_260622_se05_classified_alerts_tagger",
+      "script_sha256": "8fd0ba93718c730d3dcd76a4f69935bf58a7e5416276eb654c85f8d6942cad98",
+      "script_path": "cases/assets/taggers/tagrun_20260622204128_260622_se05_classified_alerts_tagger/260622-se05-classified-alerts-tagger.ts"
+    }
+  },
+  "process": {
+    "stdout": "{\"decision\":\"tag\",\"tags\":[\"evidence:260622-se05-quervice-timeout\"],\"confidence\":\"high\",\"summary\":\"SE05 alert belongs with Albertsons Quervice timeout/503 failures. Audience 11374, alert Q1S0Q38FOEN2XY/Q11E6OHRIMO8MK.\"}\n",
+    "stderr": "",
+    "exit_code": 0
+  }
+}

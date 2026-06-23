@@ -1,0 +1,24 @@
+{
+  "group_id": "260618-priceline_370-client-sent-export-failure-12",
+  "state": "resolved",
+  "tags": [
+    "triage:needs_review",
+    "resolved:export-healthy"
+  ],
+  "title": "priceline_370 client-sent-export-failure",
+  "summary": "Auto-resolved from Pizza export checks: all 1 alert-scoped export check(s) are healthy_closed with no blockers.",
+  "deterministic_key": "v3|incident:Q322R4KUP86DWS|org:priceline_370|class:client-sent-export-failure",
+  "grouping_version": 3,
+  "created_at": "2026-06-22T18:54:54.145Z",
+  "updated_at": "2026-06-22T21:52:29.351Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q322R4KUP86DWS",
+      "alert_id": "Q1V2SPKAXGD18W"
+    }
+  ],
+  "incident_ids": [
+    "Q322R4KUP86DWS"
+  ],
+  "related_group_ids": []
+}

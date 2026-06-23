@@ -1,0 +1,1 @@
+{"ts":"2026-06-22T22:07:47.357Z","actor":"agent","kind":"merge","related_group_id":"260622-albertsons_6-quervice-timeouts","summary":"Merged into 260622-albertsons_6-quervice-timeouts.","rationale":"Audience 10107 has documented Quervice 503/timeout behavior; track with Quervice timeout remediation."}

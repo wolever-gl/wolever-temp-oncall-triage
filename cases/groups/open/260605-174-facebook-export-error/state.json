@@ -1,0 +1,27 @@
+{
+  "group_id": "260605-174-facebook-export-error",
+  "state": "open",
+  "tags": [
+    "triage:needs_review"
+  ],
+  "title": "174 facebook export-error",
+  "summary": "NJ Devils (default): Exports for audience 25474 failed with states: <(snapshotting_finished,export_error)>",
+  "deterministic_key": "v3|incident:Q1H2G1LPQBKYIZ|org:174|dest:facebook|class:export-error",
+  "grouping_version": 3,
+  "created_at": "2026-06-22T18:54:54.145Z",
+  "updated_at": "2026-06-22T21:14:55.027Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q1H2G1LPQBKYIZ",
+      "alert_id": "Q3UWOJDOIO35GQ"
+    },
+    {
+      "incident_id": "Q1H2G1LPQBKYIZ",
+      "alert_id": "Q360QWB0ARJAJZ"
+    }
+  ],
+  "incident_ids": [
+    "Q1H2G1LPQBKYIZ"
+  ],
+  "related_group_ids": []
+}

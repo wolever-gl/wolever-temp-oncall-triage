@@ -4,6 +4,7 @@
   "imported_at": "2026-06-22T18:53:51.956Z",
   "source": "pagerduty",
   "alert_count": 1,
-  "status": "unknown",
-  "refreshed_at": "2026-06-22T18:53:51.956Z"
+  "status": "resolved",
+  "refreshed_at": "2026-06-22T22:19:33.160Z",
+  "resolved_at": "2026-06-22T22:18:14Z"
 }

@@ -1,0 +1,219 @@
+{
+  "group_id": "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie",
+  "state": "monitoring",
+  "tags": [
+    "triage:needs_review",
+    "triage:bucket-consolidated",
+    "monitoring:export-recheck"
+  ],
+  "title": "albertsons_6 albertsons-albertsons-media-no-exports-for-audie",
+  "summary": "After splitting six snapshotting_error/no_batches alerts, the remaining 27 Albertsons no-export alerts all have a 2026-06-22 scheduled LiveRamp activation run after the alert window: 19 export_finished and 8 export_processing. Monitor pending processing completions rather than continue root-cause investigation in this group.",
+  "deterministic_key": "v3|incident:Q01RMY4QJ0EDMW|org:albertsons_6|class:albertsons-albertsons-media-no-exports-for-audie",
+  "grouping_version": 3,
+  "created_at": "2026-06-22T18:54:54.145Z",
+  "updated_at": "2026-06-23T13:54:15.733Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q01RMY4QJ0EDMW",
+      "alert_id": "Q188P9C2NJ8A5Y"
+    },
+    {
+      "incident_id": "Q0C71WMFRHZ86M",
+      "alert_id": "Q16S6X2YUE978G"
+    },
+    {
+      "incident_id": "Q0GE0XGKVCGEZA",
+      "alert_id": "Q1VTHI2NIZ195P"
+    },
+    {
+      "incident_id": "Q0J2QIB5T4ACAP",
+      "alert_id": "Q0L0202ZM8P9PX"
+    },
+    {
+      "incident_id": "Q0LWNP6LITRPIU",
+      "alert_id": "Q20CJS37SV7Q05"
+    },
+    {
+      "incident_id": "Q0NB1XLBBBB6OG",
+      "alert_id": "Q1Z6210KIQRYAM"
+    },
+    {
+      "incident_id": "Q0OZ0872TDR2Y2",
+      "alert_id": "Q2M3IB0EPHBHUT"
+    },
+    {
+      "incident_id": "Q0QCK7WWM8CB9Y",
+      "alert_id": "Q2TP35R456NEBI"
+    },
+    {
+      "incident_id": "Q10A7OWTQLCLX0",
+      "alert_id": "Q271AQ4AM1661D"
+    },
+    {
+      "incident_id": "Q13B8W35HWJE0F",
+      "alert_id": "Q26SRXVIPHY94Y"
+    },
+    {
+      "incident_id": "Q13ELBH1205K6I",
+      "alert_id": "Q0UMK7BGJ90MWI"
+    },
+    {
+      "incident_id": "Q15MYGKQELDC1U",
+      "alert_id": "Q01WUMJRYMTHEM"
+    },
+    {
+      "incident_id": "Q1DEY65ANC77PV",
+      "alert_id": "Q22S0KOZDDTR3C"
+    },
+    {
+      "incident_id": "Q1HXGWVOFQNLBQ",
+      "alert_id": "Q3CJZPGATBIEIY"
+    },
+    {
+      "incident_id": "Q1IKQF303EXNLG",
+      "alert_id": "Q219UFD3K9N1RK"
+    },
+    {
+      "incident_id": "Q21GFIZRJV32YX",
+      "alert_id": "Q2FENNL4MPIOLI"
+    },
+    {
+      "incident_id": "Q2CJ2DGHY6J8DJ",
+      "alert_id": "Q2X9N08U3PWKQW"
+    },
+    {
+      "incident_id": "Q2EX4VNNGRRP6D",
+      "alert_id": "Q0O503W1ELRHH0"
+    },
+    {
+      "incident_id": "Q2ST7MHN83WRVP",
+      "alert_id": "Q1BKCE9F02URAI"
+    },
+    {
+      "incident_id": "Q2YP3CMCUOBCO8",
+      "alert_id": "Q1GAA5O3VH101U"
+    },
+    {
+      "incident_id": "Q2YQUVRHHFJIZ3",
+      "alert_id": "Q2JAGZW3EUFJDO"
+    },
+    {
+      "incident_id": "Q2Z35S4PQM9D26",
+      "alert_id": "Q09TW4X0ZEURAB"
+    },
+    {
+      "incident_id": "Q323CS0DQL0PYQ",
+      "alert_id": "Q0SXNQCE7IXRW8"
+    },
+    {
+      "incident_id": "Q358IMGILLIALD",
+      "alert_id": "Q0HNOTD0SLYT02"
+    },
+    {
+      "incident_id": "Q3EWG5PY4MPK8A",
+      "alert_id": "Q10VETW6C0DSZ2"
+    },
+    {
+      "incident_id": "Q3RBHKEKA0JLGO",
+      "alert_id": "Q13JF5982SP9ZT"
+    },
+    {
+      "incident_id": "Q3TT7ATB5C8IBD",
+      "alert_id": "Q1N5EVTQHMHD2O"
+    },
+    {
+      "incident_id": "Q07WN7B40A87BL",
+      "alert_id": "Q2JTQO1QPYNXR5"
+    },
+    {
+      "incident_id": "Q0FGJPZCXZLXHR",
+      "alert_id": "Q33CABFZE6WJLU"
+    },
+    {
+      "incident_id": "Q0P2NAYBB0ZKX9",
+      "alert_id": "Q242WOR3SSY0CB"
+    },
+    {
+      "incident_id": "Q0V8KAU4ZZ4R4J",
+      "alert_id": "Q0QM073YDZVAC4"
+    },
+    {
+      "incident_id": "Q2W5HQOV4HP3EU",
+      "alert_id": "Q0VZ60NZVSYJU0"
+    },
+    {
+      "incident_id": "Q2Y616K4SJRW9K",
+      "alert_id": "Q1DQEGHV9I3BKB"
+    }
+  ],
+  "incident_ids": [
+    "Q01RMY4QJ0EDMW",
+    "Q07WN7B40A87BL",
+    "Q0C71WMFRHZ86M",
+    "Q0FGJPZCXZLXHR",
+    "Q0GE0XGKVCGEZA",
+    "Q0J2QIB5T4ACAP",
+    "Q0LWNP6LITRPIU",
+    "Q0NB1XLBBBB6OG",
+    "Q0OZ0872TDR2Y2",
+    "Q0P2NAYBB0ZKX9",
+    "Q0QCK7WWM8CB9Y",
+    "Q0V8KAU4ZZ4R4J",
+    "Q10A7OWTQLCLX0",
+    "Q13B8W35HWJE0F",
+    "Q13ELBH1205K6I",
+    "Q15MYGKQELDC1U",
+    "Q1DEY65ANC77PV",
+    "Q1HXGWVOFQNLBQ",
+    "Q1IKQF303EXNLG",
+    "Q21GFIZRJV32YX",
+    "Q2CJ2DGHY6J8DJ",
+    "Q2EX4VNNGRRP6D",
+    "Q2ST7MHN83WRVP",
+    "Q2W5HQOV4HP3EU",
+    "Q2Y616K4SJRW9K",
+    "Q2YP3CMCUOBCO8",
+    "Q2YQUVRHHFJIZ3",
+    "Q2Z35S4PQM9D26",
+    "Q323CS0DQL0PYQ",
+    "Q358IMGILLIALD",
+    "Q3EWG5PY4MPK8A",
+    "Q3RBHKEKA0JLGO",
+    "Q3TT7ATB5C8IBD"
+  ],
+  "related_group_ids": [
+    "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-02",
+    "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-03",
+    "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-04",
+    "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-05",
+    "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-06",
+    "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-07",
+    "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-08",
+    "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-09",
+    "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-10",
+    "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-11",
+    "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-12",
+    "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-13",
+    "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-14",
+    "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-15",
+    "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-16",
+    "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-17",
+    "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-18",
+    "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-19",
+    "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-21",
+    "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-22",
+    "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-23",
+    "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-24",
+    "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-25",
+    "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-26",
+    "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-27",
+    "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-28",
+    "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-29",
+    "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-30",
+    "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-31",
+    "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-32",
+    "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-33",
+    "260622-albertsons_6-albertsons-albertsons-media-no-exports-for-audie-34",
+    "grp_260622_albertsons_6_albertsons_albertsons_media_no_exports_for_audie_split_0323"
+  ]
+}

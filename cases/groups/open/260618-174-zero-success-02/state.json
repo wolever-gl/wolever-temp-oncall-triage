@@ -1,0 +1,23 @@
+{
+  "group_id": "260618-174-zero-success-02",
+  "state": "open",
+  "tags": [
+    "triage:needs_review"
+  ],
+  "title": "174 zero-success",
+  "summary": "NJ Devils (default) - Audience 38598: 0 successfull_exports from pizza tracker found 10 minutes after new export",
+  "deterministic_key": "v3|incident:Q3VA13F9VAD11Q|org:174|class:zero-success",
+  "grouping_version": 3,
+  "created_at": "2026-06-22T18:54:54.145Z",
+  "updated_at": "2026-06-22T21:38:22.514Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q3VA13F9VAD11Q",
+      "alert_id": "Q2HSB75QSIRGMV"
+    }
+  ],
+  "incident_ids": [
+    "Q3VA13F9VAD11Q"
+  ],
+  "related_group_ids": []
+}

@@ -2,22 +2,61 @@
   "group_id": "260617-albertsons_6-client-sent-export-failure",
   "state": "open",
   "tags": [
-    "triage:needs_review"
+    "triage:needs_review",
+    "triage:bucket-consolidated"
   ],
   "title": "albertsons_6 client-sent-export-failure",
-  "summary": "albertsons (Albertsons Media) - Audience 11674: Audience Export failure for 11674 sent to client.",
+  "summary": "Consolidated Albertsons client-sent export failure investigation case for Other open bucket follow-up.",
   "deterministic_key": "v3|incident:Q3BP8RE86R1HC0|org:albertsons_6|class:client-sent-export-failure",
   "grouping_version": 3,
   "created_at": "2026-06-22T18:54:54.145Z",
-  "updated_at": "2026-06-22T19:44:30.603Z",
+  "updated_at": "2026-06-23T13:54:15.733Z",
   "alert_refs": [
+    {
+      "incident_id": "Q1XG43NWEJBMVJ",
+      "alert_id": "Q17YHV22EW38QU"
+    },
+    {
+      "incident_id": "Q2GHXX0EGGT253",
+      "alert_id": "Q2XBL0829AX2BI"
+    },
+    {
+      "incident_id": "Q2I0P8BOG77FWF",
+      "alert_id": "Q1LBPIR2O7LQ26"
+    },
     {
       "incident_id": "Q3BP8RE86R1HC0",
       "alert_id": "Q14G8QWQHQUCBT"
+    },
+    {
+      "incident_id": "Q3YXYZP98NJXIA",
+      "alert_id": "Q0ZLA8C0RN1FHA"
+    },
+    {
+      "incident_id": "Q3ZWQM35XX8FLX",
+      "alert_id": "Q2UZX44FE17GK8"
+    },
+    {
+      "incident_id": "Q1NCQUL11TZXWI",
+      "alert_id": "Q2PMGVTPJ7WKIH"
     }
   ],
   "incident_ids": [
-    "Q3BP8RE86R1HC0"
+    "Q1NCQUL11TZXWI",
+    "Q1XG43NWEJBMVJ",
+    "Q2GHXX0EGGT253",
+    "Q2I0P8BOG77FWF",
+    "Q3BP8RE86R1HC0",
+    "Q3YXYZP98NJXIA",
+    "Q3ZWQM35XX8FLX"
   ],
-  "related_group_ids": []
+  "related_group_ids": [
+    "260615-albertsons_6-client-sent-export-failure-02",
+    "260615-albertsons_6-client-sent-export-failure-04",
+    "260616-albertsons_6-client-sent-export-failure-02",
+    "260616-albertsons_6-client-sent-export-failure-03",
+    "260616-albertsons_6-client-sent-export-failure-04",
+    "260617-albertsons_6-client-sent-export-failure-02",
+    "grp_260617_albertsons_6_client_sent_export_failure_split_0322"
+  ]
 }

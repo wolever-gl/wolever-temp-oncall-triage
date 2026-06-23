@@ -1,0 +1,7 @@
+{
+  "query_window": "2026-06-22T14:20:00Z/2026-06-22T15:00:00Z",
+  "unique_delayed_audiences": 131,
+  "target_delayed_audiences": ["10027", "10042", "2159"],
+  "target_hit_count": 3,
+  "reason": "Airflow scheduler logs repeatedly reported albertsons_6_audience_snapshotting at 6/6 running and queued tasks and did not execute queued task instances because the DAG hit max_active_tasks=6."
+}

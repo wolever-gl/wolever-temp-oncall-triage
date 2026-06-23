@@ -24,6 +24,14 @@ eversana_master (Shionogi) - Journey 2967: Journey Export failure for 2967 sent 
 Representative alerts:
 - Q0N2V4SWNWY0KU/Q2QV2WH5T056AN: 2026-06-17T10:35:22-07:00. eversana_master (Shionogi) - Journey 2967: Journey Export failure for 2967 sent to client.
 
+## Export Checks
+
+- Checks: 1.
+- States: `not_applicable`=1
+
+Check evidence:
+- chk_q0n2v4swnwy0ku_q2qv2wh5t056an (Q0N2V4SWNWY0KU/Q2QV2WH5T056AN): state=`not_applicable`.
+
 ## Next Action
 
 Agent should gather evidence, choose/apply a runbook when appropriate, and update this case.

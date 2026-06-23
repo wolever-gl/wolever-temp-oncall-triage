@@ -1,0 +1,284 @@
+{
+  "group_id": "260622-albertsons_6-quervice-timeouts",
+  "state": "monitoring",
+  "tags": [
+    "monitoring:recheck-tomorrow",
+    "triage:albertsons-client-sent",
+    "triage:quervice-timeout",
+    "triage:tag_grouped"
+  ],
+  "title": "Albertsons Quervice pre-snapshotting timeouts",
+  "summary": "Added the final 8 SE05 snapshotting alerts whose unknown Pizza failure reasons were classified by scoped logs as Quervice timeout/error-response failures.",
+  "deterministic_key": "tag|260622-albertsons_6-quervice-timeouts",
+  "grouping_version": 3,
+  "created_at": "2026-06-22T19:23:57.895Z",
+  "updated_at": "2026-06-23T13:54:15.733Z",
+  "alert_refs": [
+    {
+      "incident_id": "Q05QT2VUY5NLIC",
+      "alert_id": "Q083HD3KBH9L9I"
+    },
+    {
+      "incident_id": "Q0BSIBMDIB33PB",
+      "alert_id": "Q34QYOTE1NH8GZ"
+    },
+    {
+      "incident_id": "Q0EAB0NW8E0E1B",
+      "alert_id": "Q0BPE188K88NC7"
+    },
+    {
+      "incident_id": "Q0HFO3KTKSKQUS",
+      "alert_id": "Q3QH573GWZPRWI"
+    },
+    {
+      "incident_id": "Q0JHNJP2ZLQPBQ",
+      "alert_id": "Q22I09XP2E6E1D"
+    },
+    {
+      "incident_id": "Q0RD55JHSF7WN4",
+      "alert_id": "Q2MC7F4U2LHCVM"
+    },
+    {
+      "incident_id": "Q0T293NPQ5PSHA",
+      "alert_id": "Q2H2EFDH7DQDYY"
+    },
+    {
+      "incident_id": "Q10NGEYDK847U7",
+      "alert_id": "Q2QB6VD0RWRB1Y"
+    },
+    {
+      "incident_id": "Q12ZI7SEKYJILC",
+      "alert_id": "Q3AO34JQ925FQ8"
+    },
+    {
+      "incident_id": "Q17HQGEWPTMD9O",
+      "alert_id": "Q0T2U13A5WUQTZ"
+    },
+    {
+      "incident_id": "Q1DGAIPDFK6TU8",
+      "alert_id": "Q23P64UTESW3SP"
+    },
+    {
+      "incident_id": "Q1GCO98PUY1PWA",
+      "alert_id": "Q201XQSRUQFD39"
+    },
+    {
+      "incident_id": "Q1JYMIHQDW3DKC",
+      "alert_id": "Q3YYTSZ1P6WZ64"
+    },
+    {
+      "incident_id": "Q1OYMJJW2EGJN4",
+      "alert_id": "Q2RYEDVO4RPBH8"
+    },
+    {
+      "incident_id": "Q1QN8ACMUP2CPJ",
+      "alert_id": "Q2H4EQUZFTWMJA"
+    },
+    {
+      "incident_id": "Q1S0Q38FOEN2XY",
+      "alert_id": "Q04PEHO7Q7B29T"
+    },
+    {
+      "incident_id": "Q1S0Q38FOEN2XY",
+      "alert_id": "Q04S47ZK76C24B"
+    },
+    {
+      "incident_id": "Q1S0Q38FOEN2XY",
+      "alert_id": "Q07L8HVM5VF8Z0"
+    },
+    {
+      "incident_id": "Q1S0Q38FOEN2XY",
+      "alert_id": "Q07PS9SETOZBSQ"
+    },
+    {
+      "incident_id": "Q1S0Q38FOEN2XY",
+      "alert_id": "Q0IX8NOFZKPWF5"
+    },
+    {
+      "incident_id": "Q1S0Q38FOEN2XY",
+      "alert_id": "Q0NMC9Y9W3RQGN"
+    },
+    {
+      "incident_id": "Q1S0Q38FOEN2XY",
+      "alert_id": "Q0UL47E3YFQTVV"
+    },
+    {
+      "incident_id": "Q1S0Q38FOEN2XY",
+      "alert_id": "Q11E6OHRIMO8MK"
+    },
+    {
+      "incident_id": "Q1S0Q38FOEN2XY",
+      "alert_id": "Q1N343UUDXPUWL"
+    },
+    {
+      "incident_id": "Q1S0Q38FOEN2XY",
+      "alert_id": "Q213WSVKVPKMTM"
+    },
+    {
+      "incident_id": "Q1S0Q38FOEN2XY",
+      "alert_id": "Q25LG3U2I3I5V9"
+    },
+    {
+      "incident_id": "Q1S0Q38FOEN2XY",
+      "alert_id": "Q2DYXOAK6QJ78M"
+    },
+    {
+      "incident_id": "Q1S0Q38FOEN2XY",
+      "alert_id": "Q2FYE59WUSLZES"
+    },
+    {
+      "incident_id": "Q1S0Q38FOEN2XY",
+      "alert_id": "Q2IST76K5AY6MR"
+    },
+    {
+      "incident_id": "Q1S0Q38FOEN2XY",
+      "alert_id": "Q2OH5T8VXGZMUN"
+    },
+    {
+      "incident_id": "Q1S0Q38FOEN2XY",
+      "alert_id": "Q3005U6GTLCOFC"
+    },
+    {
+      "incident_id": "Q1S0Q38FOEN2XY",
+      "alert_id": "Q311410O90EFHR"
+    },
+    {
+      "incident_id": "Q1S0Q38FOEN2XY",
+      "alert_id": "Q3DANNRE1URWVM"
+    },
+    {
+      "incident_id": "Q1SE40Q7Y7DZY1",
+      "alert_id": "Q3SR79ME6962XJ"
+    },
+    {
+      "incident_id": "Q1XN54NBKWPTCA",
+      "alert_id": "Q0DUU5NY4ZSS03"
+    },
+    {
+      "incident_id": "Q244V4I2RLF881",
+      "alert_id": "Q38XBMN8SB5LRS"
+    },
+    {
+      "incident_id": "Q2HCCF9I2UIFGY",
+      "alert_id": "Q1JSLQ3YRQ0UWM"
+    },
+    {
+      "incident_id": "Q2QPIOCASCVFH7",
+      "alert_id": "Q0SJVYSM487CFQ"
+    },
+    {
+      "incident_id": "Q2QS141O50ASS5",
+      "alert_id": "Q16FIG79941Z1K"
+    },
+    {
+      "incident_id": "Q2VMABQVTJ3GZG",
+      "alert_id": "Q12TFFXHH1NMG2"
+    },
+    {
+      "incident_id": "Q38RZMT4FW9XSA",
+      "alert_id": "Q0RUP2JDIHFHPS"
+    },
+    {
+      "incident_id": "Q3BE6H76WFUNBR",
+      "alert_id": "Q2NZ5FSINHUVGK"
+    },
+    {
+      "incident_id": "Q3FGTTIU517U3C",
+      "alert_id": "Q2QEBIMMATU5H8"
+    },
+    {
+      "incident_id": "Q3G9BPSTSE0VSL",
+      "alert_id": "Q3AC16M9ZQQAU7"
+    },
+    {
+      "incident_id": "Q3I4EBBUGMQWXS",
+      "alert_id": "Q02BJK3F84AGMQ"
+    },
+    {
+      "incident_id": "Q3NL9MR59FOSMG",
+      "alert_id": "Q3J32TKOEPH3JT"
+    },
+    {
+      "incident_id": "Q1S0Q38FOEN2XY",
+      "alert_id": "Q3QSPYAEZCWWX1"
+    },
+    {
+      "incident_id": "Q1S0Q38FOEN2XY",
+      "alert_id": "Q0GB6GMZTNLA6N"
+    },
+    {
+      "incident_id": "Q1S0Q38FOEN2XY",
+      "alert_id": "Q31KXCL512ORCS"
+    },
+    {
+      "incident_id": "Q1S0Q38FOEN2XY",
+      "alert_id": "Q3N3SLVZH82U85"
+    },
+    {
+      "incident_id": "Q1S0Q38FOEN2XY",
+      "alert_id": "Q2RB5WG2WUDFPR"
+    },
+    {
+      "incident_id": "Q1S0Q38FOEN2XY",
+      "alert_id": "Q2SA2EL0F19V60"
+    },
+    {
+      "incident_id": "Q1S0Q38FOEN2XY",
+      "alert_id": "Q0710TTPXJLKDR"
+    },
+    {
+      "incident_id": "Q1S0Q38FOEN2XY",
+      "alert_id": "Q2I7PPSFXCE9D0"
+    },
+    {
+      "incident_id": "Q1S0Q38FOEN2XY",
+      "alert_id": "Q0U1LXTT47O3NZ"
+    },
+    {
+      "incident_id": "Q1S0Q38FOEN2XY",
+      "alert_id": "Q13KHJ175T37N6"
+    }
+  ],
+  "incident_ids": [
+    "Q05QT2VUY5NLIC",
+    "Q0BSIBMDIB33PB",
+    "Q0EAB0NW8E0E1B",
+    "Q0HFO3KTKSKQUS",
+    "Q0JHNJP2ZLQPBQ",
+    "Q0RD55JHSF7WN4",
+    "Q0T293NPQ5PSHA",
+    "Q10NGEYDK847U7",
+    "Q12ZI7SEKYJILC",
+    "Q17HQGEWPTMD9O",
+    "Q1DGAIPDFK6TU8",
+    "Q1GCO98PUY1PWA",
+    "Q1JYMIHQDW3DKC",
+    "Q1OYMJJW2EGJN4",
+    "Q1QN8ACMUP2CPJ",
+    "Q1S0Q38FOEN2XY",
+    "Q1SE40Q7Y7DZY1",
+    "Q1XN54NBKWPTCA",
+    "Q244V4I2RLF881",
+    "Q2HCCF9I2UIFGY",
+    "Q2QPIOCASCVFH7",
+    "Q2QS141O50ASS5",
+    "Q2VMABQVTJ3GZG",
+    "Q38RZMT4FW9XSA",
+    "Q3BE6H76WFUNBR",
+    "Q3FGTTIU517U3C",
+    "Q3G9BPSTSE0VSL",
+    "Q3I4EBBUGMQWXS",
+    "Q3NL9MR59FOSMG"
+  ],
+  "related_group_ids": [
+    "260618-albertsons_6-client-sent-export-failures-since-260618",
+    "260622-albertsons_6-snapshotting-error",
+    "260622-albertsons_6-snapshotting-error-03",
+    "260622-albertsons_6-snapshotting-error-04",
+    "260622-albertsons_6-snapshotting-error-05",
+    "260622-albertsons_6-snapshotting-error-08",
+    "260622-albertsons_6-snapshotting-error-09",
+    "260622-albertsons_6-snapshotting-error-10",
+    "260622-albertsons_6-snapshotting-unknowns"
+  ]
+}

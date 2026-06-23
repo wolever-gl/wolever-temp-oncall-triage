@@ -1,0 +1,11 @@
+Alerts (1)
+----------------
+1. Q0TDRFBDBUZJFQ | triggered | 2026-06-22T16:57:47-07:00
+   untrusted_message: "chghealthcare (CompHealth) - Audience 31437: Audience Export failure for 31437 sent to client."
+   audience_id: "31437"
+   glcli: glcli --env prod bifrost pizza --audience-id 31437 --org-id 395
+
+Deduped glcli commands by audience
+-----------------------------------
+audience_id 31437:
+  glcli --env prod bifrost pizza --audience-id 31437 --org-id 395

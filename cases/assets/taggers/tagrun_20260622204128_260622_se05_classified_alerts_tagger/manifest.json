@@ -1,0 +1,45 @@
+{
+  "run_id": "tagrun_20260622204128_260622_se05_classified_alerts_tagger",
+  "created_at": "2026-06-22T20:41:28.513Z",
+  "script_path": "cases/assets/taggers/tagrun_20260622204128_260622_se05_classified_alerts_tagger/260622-se05-classified-alerts-tagger.ts",
+  "script_sha256": "8fd0ba93718c730d3dcd76a4f69935bf58a7e5416276eb654c85f8d6942cad98",
+  "filters": {
+    "alertRefs": [
+      {
+        "incident_id": "Q1S0Q38FOEN2XY",
+        "alert_id": "Q07PS9SETOZBSQ"
+      },
+      {
+        "incident_id": "Q1S0Q38FOEN2XY",
+        "alert_id": "Q04S47ZK76C24B"
+      },
+      {
+        "incident_id": "Q1S0Q38FOEN2XY",
+        "alert_id": "Q07L8HVM5VF8Z0"
+      },
+      {
+        "incident_id": "Q1S0Q38FOEN2XY",
+        "alert_id": "Q2FYE59WUSLZES"
+      },
+      {
+        "incident_id": "Q1S0Q38FOEN2XY",
+        "alert_id": "Q2OH5T8VXGZMUN"
+      },
+      {
+        "incident_id": "Q1S0Q38FOEN2XY",
+        "alert_id": "Q11E6OHRIMO8MK"
+      },
+      {
+        "incident_id": "Q1S0Q38FOEN2XY",
+        "alert_id": "Q1N343UUDXPUWL"
+      },
+      {
+        "incident_id": "Q1S0Q38FOEN2XY",
+        "alert_id": "Q213WSVKVPKMTM"
+      }
+    ]
+  },
+  "requested_tags": [],
+  "candidate_count": 8,
+  "processed_count": 8
+}
